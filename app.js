@@ -9,6 +9,7 @@ const state = {
   recentOnly: false,
   networkAipHighOnly: false,
   networkExternal: true,
+  networkPersonId: "",
   metricTrendKey: "pubRate",
   search: "",
   aipFilter: "all",
@@ -21,7 +22,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1226";
+const DATA_VERSION = "20260608-1238";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -223,6 +224,7 @@ function cacheElements() {
   els.aipFilter = document.getElementById("aip-filter");
   els.fteToggle = document.getElementById("fte-toggle");
   els.recentToggle = document.getElementById("recent-toggle");
+  els.networkPersonSelect = document.getElementById("network-person-select");
   els.networkAipToggle = document.getElementById("network-aip-toggle");
   els.networkExternalToggle = document.getElementById("network-external-toggle");
   els.networkSvg = document.getElementById("network-svg");
@@ -264,10 +266,18 @@ function attachEvents() {
       renderNetwork();
     });
   }
-  els.networkExternalToggle.addEventListener("change", () => {
-    state.networkExternal = els.networkExternalToggle.checked;
-    renderNetwork();
-  });
+  if (els.networkPersonSelect) {
+    els.networkPersonSelect.addEventListener("change", () => {
+      state.networkPersonId = els.networkPersonSelect.value;
+      renderNetwork();
+    });
+  }
+  if (els.networkExternalToggle) {
+    els.networkExternalToggle.addEventListener("change", () => {
+      state.networkExternal = els.networkExternalToggle.checked;
+      renderNetwork();
+    });
+  }
   els.benchmarkTrendToggle.addEventListener("click", (event) => {
     const button = event.target.closest("[data-metric-trend]");
     if (!button) return;
@@ -2741,10 +2751,25 @@ function shortFacultyName(name) {
   return trimmed.slice(0, 14);
 }
 
+function renderNetworkPersonSelect(people) {
+  if (!els.networkPersonSelect) return;
+  const activeIds = new Set(people.map((person) => person.id));
+  if (state.networkPersonId && !activeIds.has(state.networkPersonId)) {
+    state.networkPersonId = "";
+  }
+  const options = people.slice()
+    .sort((a, b) => a.display.localeCompare(b.display))
+    .map((person) => `<option value="${escapeHtml(person.id)}">${escapeHtml(person.display)}</option>`);
+  els.networkPersonSelect.innerHTML = `<option value="">All department members</option>${options.join("")}`;
+  els.networkPersonSelect.value = state.networkPersonId;
+}
+
 function renderNetwork() {
   if (!state.data || !els.networkSvg) return;
   const people = activePeople();
+  renderNetworkPersonSelect(people);
   const activeIds = new Set(people.map((person) => person.id));
+  const selectedPersonId = state.networkPersonId;
   let pubs = activePublications();
   if (state.networkAipHighOnly) pubs = pubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95);
 
@@ -2788,18 +2813,34 @@ function renderNetwork() {
     count: nodeStats.get(person.id)?.count || 0,
     degree: nodeStats.get(person.id)?.degree || 0,
     strength: nodeStats.get(person.id)?.strength || 0,
+    focus: person.id === selectedPersonId,
   }));
+  let visibleEdges = edges;
+  let visibleNodes = nodes;
+  let collaborationPubs = pubs;
+  let collaborationActiveIds = activeIds;
+  if (selectedPersonId) {
+    const visibleIds = new Set([selectedPersonId]);
+    visibleEdges = edges.filter((edge) => edge.source === selectedPersonId || edge.target === selectedPersonId);
+    visibleEdges.forEach((edge) => {
+      visibleIds.add(edge.source);
+      visibleIds.add(edge.target);
+    });
+    visibleNodes = nodes.filter((node) => visibleIds.has(node.id));
+    collaborationPubs = pubs.filter((pub) => pub.matchedPeople.includes(selectedPersonId));
+    collaborationActiveIds = new Set([selectedPersonId]);
+  }
   const faculty = state.networkExternal
-    ? buildFacultyCollaboration(pubs, activeIds)
+    ? buildFacultyCollaboration(collaborationPubs, collaborationActiveIds)
     : { nodes: [], edges: [] };
   const external = state.networkExternal
-    ? buildExternalCollaboration(pubs, activeIds)
+    ? buildExternalCollaboration(collaborationPubs, collaborationActiveIds)
     : { nodes: [], edges: [] };
   const collaboratorNodes = [...faculty.nodes, ...external.nodes];
   const collaboratorEdges = [...faculty.edges, ...external.edges];
-  els.networkEmpty.hidden = edges.length > 0 || collaboratorEdges.length > 0;
-  drawNetwork(nodes, edges, collaboratorNodes, collaboratorEdges);
-  renderNetworkTable(edges, pubs);
+  els.networkEmpty.hidden = Boolean(selectedPersonId) || visibleEdges.length > 0 || collaboratorEdges.length > 0;
+  drawNetwork(visibleNodes, visibleEdges, collaboratorNodes, collaboratorEdges);
+  renderNetworkTable(visibleEdges, collaborationPubs);
 }
 
 function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = []) {
@@ -2902,7 +2943,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius));
-    circle.setAttribute("class", `node${node.count ? "" : " low"}`);
+    circle.setAttribute("class", `node${node.count ? "" : " low"}${node.focus ? " focus" : ""}`);
     circle.appendChild(svgTitle(`${node.label}: ${node.count} publications, FTE ${node.fte}`));
     group.appendChild(circle);
 
@@ -2937,6 +2978,7 @@ function layoutNetwork(nodes, edges, width, height) {
     ...node,
     layoutCentrality: centrality.get(node.id) || 0,
   })).sort((a, b) => {
+    if (a.focus !== b.focus) return a.focus ? -1 : 1;
     if (b.layoutCentrality !== a.layoutCentrality) return b.layoutCentrality - a.layoutCentrality;
     if (b.degree !== a.degree) return b.degree - a.degree;
     if (b.strength !== a.strength) return b.strength - a.strength;

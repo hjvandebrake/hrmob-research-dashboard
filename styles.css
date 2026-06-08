@@ -948,6 +948,12 @@ td.muted { color: var(--ink-400); }
   display: flex;
   flex: 0 0 auto;
   gap: 16px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.network-toggle-row .switch {
+  align-items: center;
+  max-width: none;
 }
 .network-aip-toggle,
 .network-external-toggle { height: 38px; }
@@ -1380,6 +1386,7 @@ button.word-cloud-item {
   opacity: .64;
 }
 .node { fill: var(--white); stroke: var(--red); stroke-width: 3.25; }
+.node.focus { stroke-width: 4.2; }
 .node.low { stroke: var(--ink-400); }
 .node-count {
   fill: var(--ink-900);
