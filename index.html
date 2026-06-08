@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260608-1204">
+  <link rel="stylesheet" href="styles.css?v=20260608-1215">
 </head>
 <body>
   <nav class="nav">
@@ -25,14 +25,21 @@
         <button class="nav-tab" data-tab="network">Collaboration network</button>
         <button class="nav-tab" data-tab="metrics">Metrics</button>
         <button class="nav-tab" data-tab="resources">Resources</button>
+        <button class="nav-tab contact-tab" data-tab="contact">Contact</button>
       </div>
       <label class="switch">
         <input id="recent-toggle" type="checkbox">
-        <span>Last 5 years</span>
+        <span class="switch-copy">
+          <span>Last 5 years</span>
+          <small>Limits records and metrics to the current 5-year window.</small>
+        </span>
       </label>
       <label class="switch" title="Excludes 0-hour or one-day-per-week contracts">
         <input id="fte-toggle" type="checkbox">
-        <span>Full staff members</span>
+        <span class="switch-copy">
+          <span>Full staff members</span>
+          <small>Excludes 0-hour and one-day-per-week contracts.</small>
+        </span>
       </label>
     </div>
   </nav>
@@ -104,7 +111,7 @@
         <div class="overview-contact">
           <span>Contact</span>
           <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>
-          <a href="#resources">Suggest a correction</a>
+          <a href="#contact">Suggest a correction</a>
         </div>
       </div>
     </section>
@@ -179,35 +186,8 @@
                 <h3 class="overview-h3">Corrections and suggestions</h3>
               </div>
             </div>
-            <form id="feedback-form" class="feedback-form compact-feedback">
-              <div class="feedback-fields">
-                <label>
-                  <span>Your name</span>
-                  <input id="feedback-name" type="text" autocomplete="name" placeholder="Name">
-                </label>
-                <label>
-                  <span>Area</span>
-                  <select id="feedback-area">
-                    <option value="General">General</option>
-                    <option value="Publication record">Publication record</option>
-                    <option value="AIP match">AIP match</option>
-                    <option value="Expertise area">Expertise area</option>
-                    <option value="Network">Network</option>
-                    <option value="Grants or PhDs">Grants or PhDs</option>
-                    <option value="Benchmark metrics">Benchmark metrics</option>
-                  </select>
-                </label>
-              </div>
-              <label class="feedback-comment">
-                <span>Comment</span>
-                <textarea id="feedback-comment" rows="4" placeholder="What should be corrected or added?"></textarea>
-              </label>
-              <div class="feedback-actions">
-                <button class="primary-action" type="submit">Save as suggestion</button>
-                <a id="feedback-email-link" class="section-link" href="mailto:h.j.van.de.brake@rug.nl">Email Joost</a>
-              </div>
-              <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
-            </form>
+            <p class="quiet-contact-copy">For corrections, missing records, or suggestions, use the contact page.</p>
+            <a class="section-link" href="#contact">Open contact page</a>
           </section>
         </div>
       </div>
@@ -418,6 +398,55 @@
       </div>
     </section>
 
+    <section id="view-contact" class="sec" hidden>
+      <div class="wrap contact-wrap">
+        <div class="sec-head compact contact-head">
+          <div>
+            <p class="eye">Contact</p>
+            <h2 class="h2">Corrections and suggestions</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <section class="overview-panel contact-main-panel">
+            <form id="feedback-form" class="feedback-form">
+              <div class="feedback-fields">
+                <label>
+                  <span>Your name</span>
+                  <input id="feedback-name" type="text" autocomplete="name" placeholder="Name">
+                </label>
+                <label>
+                  <span>Area</span>
+                  <select id="feedback-area">
+                    <option value="General">General</option>
+                    <option value="Publication record">Publication record</option>
+                    <option value="AIP match">AIP match</option>
+                    <option value="Expertise area">Expertise area</option>
+                    <option value="Network">Network</option>
+                    <option value="Grants or PhDs">Grants or PhDs</option>
+                    <option value="Benchmark metrics">Benchmark metrics</option>
+                  </select>
+                </label>
+              </div>
+              <label class="feedback-comment">
+                <span>Comment</span>
+                <textarea id="feedback-comment" rows="5" placeholder="What should be corrected or added?"></textarea>
+              </label>
+              <div class="feedback-actions">
+                <button class="primary-action" type="submit">Save as suggestion</button>
+                <a id="feedback-email-link" class="section-link" href="mailto:h.j.van.de.brake@rug.nl">Email Joost</a>
+              </div>
+              <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+            </form>
+          </section>
+          <aside class="overview-panel contact-side-panel">
+            <p class="eye">Email</p>
+            <p class="contact-line"><a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a></p>
+            <p class="quiet-contact-copy">Suggestions are saved as GitHub issues and reviewed before any dashboard change is made.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="topic-overlay" class="topic-overlay" hidden>
@@ -446,6 +475,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260608-1204"></script>
+  <script src="app.js?v=20260608-1215"></script>
 </body>
 </html>

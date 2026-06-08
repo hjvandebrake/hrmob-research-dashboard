@@ -21,7 +21,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1204";
+const DATA_VERSION = "20260608-1215";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -419,7 +419,7 @@ async function loadData() {
 }
 
 function setTab(tab) {
-  state.tab = ["overview", "staff", "expertise", "publications", "network", "resources", "metrics"].includes(tab) ? tab : "overview";
+  state.tab = ["overview", "staff", "expertise", "publications", "network", "metrics", "resources", "contact"].includes(tab) ? tab : "overview";
   document.querySelectorAll(".nav-tab").forEach((btn) => btn.classList.toggle("on", btn.dataset.tab === state.tab));
   document.querySelectorAll("main > section").forEach((section) => {
     section.hidden = section.id !== `view-${state.tab}`;
