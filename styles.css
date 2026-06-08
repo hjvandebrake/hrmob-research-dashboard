@@ -414,30 +414,6 @@ td.muted { color: var(--ink-400); }
   height: 3px;
   width: 22px;
 }
-.metric-bar-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 2px;
-}
-.metric-bar-row {
-  display: grid;
-  grid-template-columns: minmax(86px, .8fr) 48px minmax(120px, 1.4fr);
-  align-items: center;
-  gap: 10px;
-}
-.metric-bar-row span {
-  color: var(--ink-700);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-.metric-bar-row b {
-  color: var(--ink-900);
-  font-size: 0.82rem;
-  font-variant-numeric: tabular-nums;
-  text-align: right;
-}
-.metric-bar-row i,
 .variety-row i {
   background: var(--ink-100);
   border: 1px solid var(--ink-200);
@@ -445,13 +421,11 @@ td.muted { color: var(--ink-400); }
   height: 10px;
   overflow: hidden;
 }
-.metric-bar-row em,
 .variety-row em {
   background: var(--teal);
   display: block;
   height: 100%;
 }
-.metric-bar-row.primary em,
 .variety-row.primary em { background: var(--red); }
 .variety-list {
   display: flex;
@@ -1593,8 +1567,6 @@ footer {
   .grant-stage-grid,
   .resource-card-grid { grid-template-columns: 1fr; }
   .resource-panel-wide { grid-column: auto; }
-  .metric-bar-row { grid-template-columns: 1fr 44px; }
-  .metric-bar-row i { grid-column: 1 / -1; }
   .method-grid { grid-template-columns: 1fr; }
   .variety-row { grid-template-columns: 1fr; }
   .variety-row b { text-align: left; }

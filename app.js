@@ -22,7 +22,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1238";
+const DATA_VERSION = "20260608-1314";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -192,8 +192,6 @@ function cacheElements() {
   els.benchmarkTrendTitle = document.getElementById("benchmark-trend-title");
   els.benchmarkTrendToggle = document.getElementById("benchmark-trend-toggle");
   els.benchmarkMethodNote = document.getElementById("benchmark-method-note");
-  els.benchmarkPublicationBars = document.getElementById("benchmark-publication-bars");
-  els.benchmarkAipBars = document.getElementById("benchmark-aip-bars");
   els.benchmarkVariety = document.getElementById("benchmark-variety");
   els.overviewTopicCloud = document.getElementById("overview-topic-cloud");
   els.overviewJournalList = document.getElementById("overview-journal-list");
@@ -1559,8 +1557,6 @@ function renderMetrics() {
   const trendKey = state.metricTrendKey === "highAipRate" ? "highAipRate" : "pubRate";
   renderMetricTrendControls(trendKey);
   renderMetricLineChart(els.benchmarkPublicationTrend, comparisonGroups, trendKey);
-  renderMetricComparisonBars(els.benchmarkPublicationBars, comparisonGroups, "avgPubs");
-  renderMetricComparisonBars(els.benchmarkAipBars, comparisonGroups, "avgHighAip");
   renderMetricVariety(els.benchmarkVariety, comparisonGroups);
   renderMetricMethodNote(els.benchmarkMethodNote, hrm, null);
 }
@@ -1568,8 +1564,8 @@ function renderMetrics() {
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
     els.benchmarkTrendTitle.textContent = trendKey === "highAipRate"
-      ? "Average AIP >= 95 publications per person per year"
-      : "Average counted publications per person per year";
+      ? "Average AIP >= 95 publications per person per year by group"
+      : "Average counted publications per person per year by group";
   }
   if (!els.benchmarkTrendToggle) return;
   els.benchmarkTrendToggle.querySelectorAll("[data-metric-trend]").forEach((button) => {
@@ -1785,12 +1781,13 @@ function outputCentralization(values) {
 function renderMetricLineChart(container, groups, key) {
   if (!container) return;
   const years = metricYears();
-  const values = groups.flatMap((group) => group.yearly.map((row) => row[key]).filter(isNumber));
+  const rows = groups.flatMap((group) => group.yearly.map((row) => ({ ...row, groupKey: group.key })));
+  const values = rows.map((row) => row[key]).filter(isNumber);
   if (!years.length || !values.length) {
     container.innerHTML = `<p class="small-muted">No benchmark trend data for this filter.</p>`;
     return;
   }
-  const yMax = Math.max(0.25, Math.max(...values) * 1.12);
+  const yMax = metricLineChartMax(rows, key);
   const width = 760;
   const height = 260;
   const pad = { left: 44, right: 118, top: 18, bottom: 34 };
@@ -1798,9 +1795,13 @@ function renderMetricLineChart(container, groups, key) {
     if (years.length === 1) return pad.left;
     return pad.left + ((year - years[0]) / (years[years.length - 1] - years[0])) * (width - pad.left - pad.right);
   };
-  const yForValue = (value) => height - pad.bottom - (value / yMax) * (height - pad.top - pad.bottom);
+  const yForValue = (value) => clamp(
+    height - pad.bottom - (value / yMax) * (height - pad.top - pad.bottom),
+    pad.top,
+    height - pad.bottom,
+  );
   const xLabels = years.filter((year) => year === years[0] || year === years[years.length - 1] || year % 5 === 0);
-  const yTicks = [0, yMax / 2, yMax];
+  const yTicks = key === "highAipRate" ? [0, yMax / 3, (yMax * 2) / 3, yMax] : [0, yMax / 2, yMax];
   const endpointLabels = metricEndpointLabels(groups, key, xForYear, yForValue, years, pad, height);
   const paths = groups.map((group, idx) => {
     const points = group.yearly
@@ -1826,6 +1827,33 @@ function renderMetricLineChart(container, groups, key) {
       ${groups.map((group, idx) => `<span class="${idx === 0 ? "legend-hrmob" : ""}"><i style="background:${metricTrendColor(group)}"></i>${escapeHtml(group.label)}</span>`).join("")}
     </div>
   `;
+}
+
+function metricLineChartMax(rows, key) {
+  const values = rows.map((row) => row[key]).filter(isNumber);
+  const stableRows = key === "highAipRate"
+    ? rows.filter((row) => (row.activePeople || 0) >= 5)
+    : rows;
+  const scaleValues = stableRows.map((row) => row[key]).filter(isNumber);
+  let rawMax = Math.max(...(scaleValues.length ? scaleValues : values));
+  if (key === "highAipRate" && scaleValues.length >= 8) {
+    const latestYear = Math.max(...rows.map((row) => row.year).filter(Number.isFinite));
+    const latestValues = rows
+      .filter((row) => row.year === latestYear)
+      .map((row) => row[key])
+      .filter(isNumber);
+    rawMax = Math.max(percentileValue(scaleValues, 0.95) || rawMax, ...latestValues);
+  }
+  const floor = key === "highAipRate" ? 0.12 : 0.25;
+  return niceMetricCeiling(Math.max(floor, rawMax * 1.1));
+}
+
+function niceMetricCeiling(value) {
+  if (!isNumber(value) || value <= 0) return 1;
+  const magnitude = 10 ** Math.floor(Math.log10(value));
+  const normalized = value / magnitude;
+  const step = normalized <= 1 ? 1 : normalized <= 1.2 ? 1.2 : normalized <= 1.5 ? 1.5 : normalized <= 2 ? 2 : normalized <= 2.5 ? 2.5 : normalized <= 3 ? 3 : normalized <= 4 ? 4 : normalized <= 5 ? 5 : 10;
+  return step * magnitude;
 }
 
 function metricEndpointLabels(groups, key, xForYear, yForValue, years, pad, height) {
@@ -1859,23 +1887,6 @@ function metricEndpointLabels(groups, key, xForYear, yForValue, years, pad, heig
 
 function metricTrendColor(group) {
   return METRIC_TREND_COLORS[group.key] || METRIC_TREND_COLORS[group.label] || "#7f8c8d";
-}
-
-function renderMetricComparisonBars(container, groups, key) {
-  if (!container) return;
-  const max = Math.max(0.01, ...groups.map((group) => group[key]).filter(isNumber));
-  const scaleMax = max * 1.12;
-  container.innerHTML = groups.map((group) => {
-    const value = group[key];
-    const width = isNumber(value) ? Math.max(2, (value / scaleMax) * 100) : 0;
-    return `
-      <div class="metric-bar-row ${group.primary ? "primary" : ""}">
-        <span>${escapeHtml(group.label)}</span>
-        <b>${formatMetricValue(value)}</b>
-        <i><em style="width:${width}%"></em></i>
-      </div>
-    `;
-  }).join("");
 }
 
 function renderMetricMethodNote(container, hrm, rest) {
