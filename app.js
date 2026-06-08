@@ -20,7 +20,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-10";
+const DATA_VERSION = "20260608-1023";
 const OVERVIEW_START_YEAR = 2005;
 const METRICS_START_YEAR = 2005;
 const METRIC_TREND_COLORS = {
@@ -547,10 +547,6 @@ function renderStaff() {
 function renderExpertise() {
   if (!state.data || !els.expertiseWordcloud) return;
   const signals = globalTopicSignals(activePublications()).slice(0, 90);
-  if (!state.expertiseTopic && signals.length) {
-    state.expertiseTopic = signals[0].label;
-    state.expertiseMode = signals[0].semantic ? "family" : "phrase";
-  }
   renderWordCloud(els.expertiseWordcloud, signals, {
     selected: state.expertiseTopic,
     clickable: true,
