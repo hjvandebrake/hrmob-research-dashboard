@@ -22,7 +22,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1617";
+const DATA_VERSION = "20260608-1623";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -1596,12 +1596,17 @@ function buildMetricGroups() {
 
 function metricYears() {
   const [fromYear, toYear] = activeWindowYears();
-  const latestCompletedYear = new Date().getFullYear() - 1;
+  const currentYear = new Date().getFullYear();
   const start = Math.max(METRICS_START_YEAR, Number.isFinite(fromYear) ? fromYear : METRICS_START_YEAR);
-  const rawEnd = Number.isFinite(toYear) ? toYear : latestCompletedYear;
-  const end = Math.min(rawEnd, latestCompletedYear);
+  const rawEnd = Number.isFinite(toYear) ? toYear : currentYear;
+  const end = Math.min(rawEnd, currentYear);
   if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) return [];
   return Array.from({ length: end - start + 1 }, (_, idx) => start + idx);
+}
+
+function completedMetricYears(years) {
+  const latestCompletedYear = new Date().getFullYear() - 1;
+  return years.filter((year) => year <= latestCompletedYear);
 }
 
 function buildHrmMetricGroup(years) {
@@ -1680,6 +1685,9 @@ function benchmarkPublicationsForPeople(people, years) {
 }
 
 function computeMetricGroup(label, key, people, pubs, years, primary) {
+  const summaryYears = completedMetricYears(years);
+  const summaryYearSet = new Set(summaryYears);
+  const summaryPubs = pubs.filter((pub) => summaryYearSet.has(pub.year));
   const firstYearByPerson = new Map();
   people.forEach((person) => {
     if (Number.isFinite(person.firstYear)) {
@@ -1718,18 +1726,18 @@ function computeMetricGroup(label, key, people, pubs, years, primary) {
     };
   });
 
-  const lastMetricYear = Math.max(...years);
+  const lastCompletedMetricYear = summaryYears.length ? Math.max(...summaryYears) : null;
   const activePeople = people.filter((person) => {
     const firstYear = firstYearByPerson.get(person.id);
-    return Number.isFinite(firstYear) && firstYear <= lastMetricYear;
+    return Number.isFinite(firstYear) && Number.isFinite(lastCompletedMetricYear) && firstYear <= lastCompletedMetricYear;
   });
   const personRates = [];
   const personHighRates = [];
   activePeople.forEach((person) => {
     const firstYear = firstYearByPerson.get(person.id);
-    const activeYears = years.filter((year) => Number.isFinite(firstYear) && year >= firstYear);
+    const activeYears = summaryYears.filter((year) => Number.isFinite(firstYear) && year >= firstYear);
     if (!activeYears.length) return;
-    const personPubs = pubsByPerson.get(person.id) || [];
+    const personPubs = (pubsByPerson.get(person.id) || []).filter((pub) => summaryYearSet.has(pub.year));
     personRates.push(personPubs.length / activeYears.length);
     personHighRates.push(personPubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length / activeYears.length);
   });
@@ -1740,9 +1748,9 @@ function computeMetricGroup(label, key, people, pubs, years, primary) {
     primary,
     people: people.length,
     activePeople: activePeople.length,
-    publications: pubs.length,
-    highAipPublications: pubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length,
-    highAipShare: pubs.length ? pubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length / pubs.length : null,
+    publications: summaryPubs.length,
+    highAipPublications: summaryPubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length,
+    highAipShare: summaryPubs.length ? summaryPubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length / summaryPubs.length : null,
     avgPubs: mean(personRates),
     avgPubsSd: standardDeviation(personRates),
     avgHighAip: mean(personHighRates),
@@ -1811,7 +1819,12 @@ function renderMetricLineChart(container, groups, key) {
     pad.top,
     height - pad.bottom,
   );
-  const xLabels = years.filter((year) => year === years[0] || year === years[years.length - 1] || year % 5 === 0);
+  const lastYear = years[years.length - 1];
+  const xLabels = years.filter((year) => (
+    year === years[0]
+    || year === lastYear
+    || (year % 5 === 0 && year <= lastYear - 2)
+  ));
   const yTicks = key === "highAipRate" ? [0, yMax / 3, (yMax * 2) / 3, yMax] : [0, yMax / 2, yMax];
   const endpointLabels = metricEndpointLabels(groups, key, xForYear, yForValue, years, pad, height);
   const paths = groups.map((group, idx) => {
@@ -1828,7 +1841,7 @@ function renderMetricLineChart(container, groups, key) {
         <line class="metric-grid-line" x1="${pad.left}" x2="${width - pad.right}" y1="${yForValue(tick).toFixed(1)}" y2="${yForValue(tick).toFixed(1)}"></line>
         <text class="metric-axis-label" x="${pad.left - 8}" y="${(yForValue(tick) + 4).toFixed(1)}" text-anchor="end">${formatMetricValue(tick)}</text>
       `).join("")}
-      ${xLabels.map((year) => `<text class="metric-axis-label" x="${xForYear(year).toFixed(1)}" y="${height - 10}" text-anchor="middle">${year}</text>`).join("")}
+      ${xLabels.map((year) => `<text class="metric-axis-label" x="${xForYear(year).toFixed(1)}" y="${height - 10}" text-anchor="middle">${metricYearLabel(year)}</text>`).join("")}
       ${paths}
       ${endpointLabels.map((label) => `
         <text class="metric-line-end-label" x="${label.x.toFixed(1)}" y="${label.y.toFixed(1)}" style="fill:${label.color}">${escapeHtml(label.text)}</text>
@@ -1900,17 +1913,24 @@ function metricTrendColor(group) {
   return METRIC_TREND_COLORS[group.key] || METRIC_TREND_COLORS[group.label] || "#7f8c8d";
 }
 
+function metricYearLabel(year) {
+  return year === new Date().getFullYear() ? `${year} YTD` : String(year);
+}
+
 function renderMetricMethodNote(container, hrm, rest) {
   if (!container) return;
   const quality = state.benchmarkData?.qualitySummary || {};
   const aipGaps = isNumber(quality.rankableAipGapRows) ? quality.rankableAipGapRows : null;
   const aipNotInSource = isNumber(quality.aipNotInSourceRows) ? quality.aipNotInSourceRows : null;
   const usablePeople = (state.benchmarkData?.people || []).filter((person) => person.includedInDenominator && person.department !== "HRM&OB").length;
+  const trendYears = metricYears();
+  const currentYear = new Date().getFullYear();
+  const currentYearNote = trendYears.includes(currentYear) ? ` Cards use completed years; trend lines include ${currentYear} so far.` : "";
   container.innerHTML = `
     <div class="method-grid">
       <div>
         <strong>Pubs/person/year</strong>
-        <p>Mean counted journal publications per active person-year. People enter the denominator from their first counted publication year.</p>
+        <p>Mean counted journal publications per active person-year. People enter from their first counted publication year.${currentYearNote}</p>
       </div>
       <div>
         <strong>AIP &ge; 95 pubs/person/year</strong>
