@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260608-1023">
+  <link rel="stylesheet" href="styles.css?v=20260608-1137">
 </head>
 <body>
   <nav class="nav">
@@ -23,6 +23,7 @@
         <button class="nav-tab" data-tab="staff">Staff</button>
         <button class="nav-tab" data-tab="publications">Publications</button>
         <button class="nav-tab" data-tab="network">Collaboration network</button>
+        <button class="nav-tab" data-tab="resources">Resources</button>
         <button class="nav-tab" data-tab="metrics">Metrics</button>
       </div>
       <label class="switch">
@@ -98,6 +99,127 @@
               </div>
             </div>
             <div id="grant-list" class="grant-list"></div>
+          </section>
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Contact</p>
+                <h3 class="overview-h3">Corrections and suggestions</h3>
+              </div>
+              <a class="section-link" href="#resources">Open</a>
+            </div>
+            <p class="contact-line"><a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-resources" class="sec" hidden>
+      <div class="wrap">
+        <div class="sec-head compact">
+          <div>
+            <p class="eye">Resources</p>
+            <h2 class="h2">Resources</h2>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <section class="overview-panel resource-panel-wide">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Contact</p>
+                <h3 class="overview-h3">Comment on the dashboard</h3>
+              </div>
+            </div>
+            <form id="feedback-form" class="feedback-form">
+              <div class="feedback-fields">
+                <label>
+                  <span>Your name</span>
+                  <input id="feedback-name" type="text" autocomplete="name" placeholder="Name">
+                </label>
+                <label>
+                  <span>Area</span>
+                  <select id="feedback-area">
+                    <option value="General">General</option>
+                    <option value="Publication record">Publication record</option>
+                    <option value="AIP match">AIP match</option>
+                    <option value="Expertise area">Expertise area</option>
+                    <option value="Network">Network</option>
+                    <option value="Grants or PhDs">Grants or PhDs</option>
+                    <option value="Benchmark metrics">Benchmark metrics</option>
+                  </select>
+                </label>
+              </div>
+              <label class="feedback-comment">
+                <span>Comment</span>
+                <textarea id="feedback-comment" rows="5" placeholder="What should be corrected or added?"></textarea>
+              </label>
+              <div class="feedback-actions">
+                <button class="primary-action" type="submit">Save as suggestion</button>
+                <a id="feedback-email-link" class="section-link" href="mailto:h.j.van.de.brake@rug.nl">Email Joost</a>
+              </div>
+              <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Downloads</p>
+                <h3 class="overview-h3">Reference files</h3>
+              </div>
+            </div>
+            <div class="download-list">
+              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
+                <strong>AIP workbook</strong>
+                <span>Average AIP scores, 2020-2024.</span>
+              </a>
+              <a class="download-card" href="assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx" download>
+                <strong>Grant opportunities workbook</strong>
+                <span>HRM&OB grant opportunities for 2026-2027.</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="overview-panel resource-panel-wide">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Grants</p>
+                <h3 class="overview-h3">Opportunities from the workbook</h3>
+              </div>
+            </div>
+            <div class="resource-card-grid">
+              <div class="resource-card">
+                <strong>Early career</strong>
+                <p>NWO Veni SSH, ERC Starting Grant, MSCA Postdoctoral Fellowship, KNAW early-career schemes.</p>
+              </div>
+              <div class="resource-card">
+                <strong>Mid-career</strong>
+                <p>NWO Vidi SSH, ERC Consolidator Grant, NWO SSH Open Competition M.</p>
+              </div>
+              <div class="resource-card">
+                <strong>Senior</strong>
+                <p>NWO Vici SSH, ERC Advanced Grant, NWO SSH Open Competition L, ERC Proof of Concept.</p>
+              </div>
+              <div class="resource-card">
+                <strong>Consortium and watch list</strong>
+                <p>NWA-ORC, KIC demand-driven consortia, Horizon Europe, COST Actions, KIEM seed funding.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Links</p>
+                <h3 class="overview-h3">Useful funding pages</h3>
+              </div>
+            </div>
+            <div class="resource-links">
+              <a href="https://www.nwo.nl/en/calls/nwo-talent-programme" target="_blank" rel="noopener">NWO Talent Programme</a>
+              <a href="https://erc.europa.eu/apply-grant" target="_blank" rel="noopener">ERC grants</a>
+              <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener">MSCA Postdoctoral Fellowships</a>
+              <a href="https://www.rug.nl/research/research-support-portal/before/funding/?lang=en" target="_blank" rel="noopener">UG external funding support</a>
+            </div>
           </section>
         </div>
       </div>
@@ -336,6 +458,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260608-1023"></script>
+  <script src="app.js?v=20260608-1137"></script>
 </body>
 </html>

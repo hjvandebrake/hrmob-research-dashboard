@@ -20,7 +20,9 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1023";
+const DATA_VERSION = "20260608-1137";
+const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
+const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
 const METRICS_START_YEAR = 2005;
 const METRIC_TREND_COLORS = {
@@ -225,6 +227,12 @@ function cacheElements() {
   els.networkSvg = document.getElementById("network-svg");
   els.networkEmpty = document.getElementById("network-empty");
   els.networkTableWrap = document.getElementById("network-table-wrap");
+  els.feedbackForm = document.getElementById("feedback-form");
+  els.feedbackName = document.getElementById("feedback-name");
+  els.feedbackArea = document.getElementById("feedback-area");
+  els.feedbackComment = document.getElementById("feedback-comment");
+  els.feedbackStatus = document.getElementById("feedback-status");
+  els.feedbackEmailLink = document.getElementById("feedback-email-link");
 }
 
 function attachEvents() {
@@ -271,6 +279,14 @@ function attachEvents() {
     state.aipFilter = els.aipFilter.value;
     renderPublications();
   });
+  if (els.feedbackForm) {
+    els.feedbackForm.addEventListener("submit", handleFeedbackSubmit);
+  }
+  if (els.feedbackEmailLink) {
+    els.feedbackEmailLink.addEventListener("click", () => {
+      els.feedbackEmailLink.href = feedbackMailtoHref();
+    });
+  }
   els.expertiseSearch.addEventListener("input", () => {
     state.expertiseSearch = els.expertiseSearch.value.trim();
     state.expertiseTopic = state.expertiseSearch;
@@ -328,6 +344,52 @@ function attachEvents() {
   });
 }
 
+function handleFeedbackSubmit(event) {
+  event.preventDefault();
+  const name = (els.feedbackName?.value || "").trim();
+  const area = (els.feedbackArea?.value || "General").trim();
+  const comment = (els.feedbackComment?.value || "").trim();
+  if (!comment) {
+    if (els.feedbackStatus) els.feedbackStatus.textContent = "Add a comment first.";
+    els.feedbackComment?.focus();
+    return;
+  }
+  const title = `[Dashboard feedback] ${area}`;
+  const body = [
+    `Name: ${name || "Not provided"}`,
+    `Area: ${area}`,
+    `Dashboard URL: ${window.location.href}`,
+    "",
+    "Comment:",
+    comment,
+  ].join("\n");
+  const params = new URLSearchParams({
+    template: "dashboard-feedback.md",
+    title,
+    body,
+    labels: "dashboard-feedback",
+  });
+  const url = `${FEEDBACK_ISSUE_URL}?${params.toString()}`;
+  window.open(url, "_blank", "noopener");
+  if (els.feedbackStatus) {
+    els.feedbackStatus.textContent = "A GitHub issue draft opened. Submit it there to save the suggestion.";
+  }
+}
+
+function feedbackMailtoHref() {
+  const name = (els.feedbackName?.value || "").trim();
+  const area = (els.feedbackArea?.value || "General").trim();
+  const comment = (els.feedbackComment?.value || "").trim();
+  const body = [
+    `Name: ${name || "Not provided"}`,
+    `Area: ${area}`,
+    `Dashboard URL: ${window.location.href}`,
+    "",
+    comment,
+  ].join("\n");
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Dashboard feedback: ${area}`)}&body=${encodeURIComponent(body)}`;
+}
+
 async function loadData() {
   try {
     const [response, benchmarkResponse, grantsResponse, phdsResponse] = await Promise.all([
@@ -352,7 +414,7 @@ async function loadData() {
 }
 
 function setTab(tab) {
-  state.tab = ["overview", "staff", "expertise", "publications", "network", "metrics"].includes(tab) ? tab : "overview";
+  state.tab = ["overview", "staff", "expertise", "publications", "network", "resources", "metrics"].includes(tab) ? tab : "overview";
   document.querySelectorAll(".nav-tab").forEach((btn) => btn.classList.toggle("on", btn.dataset.tab === state.tab));
   document.querySelectorAll("main > section").forEach((section) => {
     section.hidden = section.id !== `view-${state.tab}`;
