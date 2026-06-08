@@ -51,11 +51,11 @@
       "includedInDenominator": true
     },
     {
-      "id": "hrmob-hj-van-de-brake",
-      "name": "Joost van de Brake",
-      "display": "Brake, dr. H.J. (Joost) van de",
-      "family": "van de Brake",
-      "given": "Joost",
+      "id": "hrmob-ta-de-vries",
+      "name": "Thom de Vries",
+      "display": "Vries, dr. T.A. (Thom) de",
+      "family": "de Vries",
+      "given": "Thom",
       "department": "HRM&OB",
       "rank": "associate_professor",
       "decision": "include",
@@ -183,6 +183,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "hrmob-hj-van-de-brake",
+      "name": "Joost van de Brake",
+      "display": "Brake, dr. H.J. (Joost) van de",
+      "family": "van de Brake",
+      "given": "Joost",
+      "department": "HRM&OB",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "hrmob-gs-van-der-vegt",
       "name": "Gerben van der Vegt",
       "display": "Vegt, prof. dr. G.S. (Gerben) van der",
@@ -194,17 +205,6 @@
       "includedInDenominator": true
     },
     {
-      "id": "hrmob-ta-de-vries",
-      "name": "Thom de Vries",
-      "display": "Vries, dr. T.A. (Thom) de",
-      "family": "de Vries",
-      "given": "Thom",
-      "department": "HRM&OB",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "hrmob-y-yuan",
       "name": "Yingjie Yuan",
       "display": "Yuan, Y. (Yingjie), Dr",
@@ -212,149 +212,6 @@
       "given": "Yingjie",
       "department": "HRM&OB",
       "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-tha-bijmolt",
-      "name": "Tammo Bijmolt",
-      "display": "Bijmolt, prof. dr. T.H.A.",
-      "family": "Bijmolt",
-      "given": "Tammo",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-j-van-doorn",
-      "name": "Jenny van Doorn",
-      "display": "Doorn, prof dr. J. van",
-      "family": "van Doorn",
-      "given": "Jenny",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-bm-fennis",
-      "name": "Bob Fennis",
-      "display": "Fennis, prof. dr. B.M.",
-      "family": "Fennis",
-      "given": "Bob",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-mj-gijsenberg",
-      "name": "Maarten Gijsenberg",
-      "display": "Gijsenberg, prof.dr. M.J.",
-      "family": "Gijsenberg",
-      "given": "Maarten",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-k-van-ittersum",
-      "name": "Koert van Ittersum",
-      "display": "Ittersum, prof. dr. ir. K. van",
-      "family": "van Ittersum",
-      "given": "Koert",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-e-shehu",
-      "name": "Edlira Shehu",
-      "display": "Shehu, prof. dr. E.",
-      "family": "Shehu",
-      "given": "Edlira",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-pc-verhoef",
-      "name": "Peter Verhoef",
-      "display": "Verhoef, prof. dr. P.C.",
-      "family": "Verhoef",
-      "given": "Peter",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-je-wieringa",
-      "name": "Jaap Wieringa",
-      "display": "Wieringa, prof. dr. J.E.",
-      "family": "Wieringa",
-      "given": "Jaap",
-      "department": "Marketing",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-jw-bolderdijk",
-      "name": "Jan Willem Bolderdijk",
-      "display": "Bolderdijk, dr. J.W.",
-      "family": "Bolderdijk",
-      "given": "Jan Willem",
-      "department": "Marketing",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-e-van-haan",
-      "name": "Evert de Haan",
-      "display": "Haan, dr. E. van",
-      "family": "de Haan",
-      "given": "Evert",
-      "department": "Marketing",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-h-risselada",
-      "name": "Hans Risselada",
-      "display": "Risselada, dr. H",
-      "family": "Risselada",
-      "given": "Hans",
-      "department": "Marketing",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-mc-leliveld",
-      "name": "Marijke Leliveld",
-      "display": "Leliveld, dr. M.C.",
-      "family": "Leliveld",
-      "given": "Marijke",
-      "department": "Marketing",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "mkt-m-moeini-jazani",
-      "name": "Mehrad Moeini-Jazani",
-      "display": "Moeini-Jazani, dr. M.",
-      "family": "Moeini-Jazani",
-      "given": "Mehrad",
-      "department": "Marketing",
-      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -392,6 +249,28 @@
       "includedInDenominator": false
     },
     {
+      "id": "mkt-tha-bijmolt",
+      "name": "Tammo Bijmolt",
+      "display": "Bijmolt, prof. dr. T.H.A.",
+      "family": "Bijmolt",
+      "given": "Tammo",
+      "department": "Marketing",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-jw-bolderdijk",
+      "name": "Jan Willem Bolderdijk",
+      "display": "Bolderdijk, dr. J.W.",
+      "family": "Bolderdijk",
+      "given": "Jan Willem",
+      "department": "Marketing",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "mkt-c-calmasini",
       "name": "C Calmasini",
       "display": "Calmasini, dr. C.",
@@ -403,17 +282,6 @@
       "includedInDenominator": false
     },
     {
-      "id": "mkt-ps-van-eck",
-      "name": "Peter van Eck",
-      "display": "Eck, dr. P.S. van",
-      "family": "van Eck",
-      "given": "Peter",
-      "department": "Marketing",
-      "rank": "assistant_professor",
-      "decision": "include_with_caution",
-      "includedInDenominator": true
-    },
-    {
       "id": "mkt-jim-de-groot",
       "name": "Judith de Groot",
       "display": "Groot, dr. J.I.M. de",
@@ -421,6 +289,39 @@
       "given": "Judith",
       "department": "Marketing",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-e-van-haan",
+      "name": "Evert de Haan",
+      "display": "Haan, dr. E. van",
+      "family": "de Haan",
+      "given": "Evert",
+      "department": "Marketing",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-bm-fennis",
+      "name": "Bob Fennis",
+      "display": "Fennis, prof. dr. B.M.",
+      "family": "Fennis",
+      "given": "Bob",
+      "department": "Marketing",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-mj-gijsenberg",
+      "name": "Maarten Gijsenberg",
+      "display": "Gijsenberg, prof.dr. M.J.",
+      "family": "Gijsenberg",
+      "given": "Maarten",
+      "department": "Marketing",
+      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -458,6 +359,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "mkt-mc-leliveld",
+      "name": "Marijke Leliveld",
+      "display": "Leliveld, dr. M.C.",
+      "family": "Leliveld",
+      "given": "Marijke",
+      "department": "Marketing",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "mkt-xs-luo",
       "name": "Siria Xiyueyao Luo",
       "display": "Luo, X.S. dr.",
@@ -480,13 +392,13 @@
       "includedInDenominator": true
     },
     {
-      "id": "mkt-jem-van-nierop",
-      "name": "Erjen van Nierop",
-      "display": "Nierop, dr. J.E.M. van",
-      "family": "van Nierop",
-      "given": "Erjen",
+      "id": "mkt-m-moeini-jazani",
+      "name": "Mehrad Moeini-Jazani",
+      "display": "Moeini-Jazani, dr. M.",
+      "family": "Moeini-Jazani",
+      "given": "Mehrad",
       "department": "Marketing",
-      "rank": "assistant_professor",
+      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -513,6 +425,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "mkt-h-risselada",
+      "name": "Hans Risselada",
+      "display": "Risselada, dr. H",
+      "family": "Risselada",
+      "given": "Hans",
+      "department": "Marketing",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "mkt-sm-rizio",
       "name": "Stephanie Rizio",
       "display": "Rizio, dr. S.M.",
@@ -520,6 +443,17 @@
       "given": "Stephanie",
       "department": "Marketing",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-e-shehu",
+      "name": "Edlira Shehu",
+      "display": "Shehu, prof. dr. E.",
+      "family": "Shehu",
+      "given": "Edlira",
+      "department": "Marketing",
+      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -546,189 +480,68 @@
       "includedInDenominator": true
     },
     {
-      "id": "ims-pmm-de-faria",
-      "name": "Pedro de Faria",
-      "display": "Faria, prof. dr. de P.M.M.",
-      "family": "de Faria",
-      "given": "Pedro",
-      "department": "IM&S",
+      "id": "mkt-j-van-doorn",
+      "name": "Jenny van Doorn",
+      "display": "Doorn, prof dr. J. van",
+      "family": "van Doorn",
+      "given": "Jenny",
+      "department": "Marketing",
       "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
     {
-      "id": "ims-a-boonstra",
-      "name": "Albert Boonstra",
-      "display": "Boonstra, prof. dr. A.",
-      "family": "Boonstra",
-      "given": "Albert",
-      "department": "IM&S",
+      "id": "mkt-ps-van-eck",
+      "name": "Peter van Eck",
+      "display": "Eck, dr. P.S. van",
+      "family": "van Eck",
+      "given": "Peter",
+      "department": "Marketing",
+      "rank": "assistant_professor",
+      "decision": "include_with_caution",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-k-van-ittersum",
+      "name": "Koert van Ittersum",
+      "display": "Ittersum, prof. dr. ir. K. van",
+      "family": "van Ittersum",
+      "given": "Koert",
+      "department": "Marketing",
       "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
     {
-      "id": "ims-dj-langley",
-      "name": "David Langley",
-      "display": "Langley, prof. dr. D.J.",
-      "family": "Langley",
-      "given": "David",
-      "department": "IM&S",
+      "id": "mkt-jem-van-nierop",
+      "name": "Erjen van Nierop",
+      "display": "Nierop, dr. J.E.M. van",
+      "family": "van Nierop",
+      "given": "Erjen",
+      "department": "Marketing",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "mkt-pc-verhoef",
+      "name": "Peter Verhoef",
+      "display": "Verhoef, prof. dr. P.C.",
+      "family": "Verhoef",
+      "given": "Peter",
+      "department": "Marketing",
       "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
     {
-      "id": "ims-f-noseleit",
-      "name": "Florian Noseleit",
-      "display": "Noseleit, prof. dr. F.",
-      "family": "Noseleit",
-      "given": "Florian",
-      "department": "IM&S",
+      "id": "mkt-je-wieringa",
+      "name": "Jaap Wieringa",
+      "display": "Wieringa, prof. dr. J.E.",
+      "family": "Wieringa",
+      "given": "Jaap",
+      "department": "Marketing",
       "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-u-schultze",
-      "name": "Ulrike Schultze",
-      "display": "Schultze, prof. dr. U.",
-      "family": "Schultze",
-      "given": "Ulrike",
-      "department": "IM&S",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-m-wyrwich",
-      "name": "Michael Wyrwich",
-      "display": "Wyrwich, prof. M.",
-      "family": "Wyrwich",
-      "given": "Michael",
-      "department": "IM&S",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-wg-biemans",
-      "name": "Wim Biemans",
-      "display": "Biemans, dr. W.G.",
-      "family": "Biemans",
-      "given": "Wim",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-jd-van-der-bij",
-      "name": "J D van der Bij",
-      "display": "Bij, dr. J.D. van der",
-      "family": "van der Bij",
-      "given": "",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "exclude_for_now",
-      "includedInDenominator": false
-    },
-    {
-      "id": "ims-mj-brand",
-      "name": "Maryse Brand",
-      "display": "Brand, dr. M.J.",
-      "family": "Brand",
-      "given": "Maryse",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-tlj-broekhuizen",
-      "name": "Thijs Broekhuizen",
-      "display": "Broekhuizen, dr. T.L.J.",
-      "family": "Broekhuizen",
-      "given": "Thijs",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-i-estrada-vaquero",
-      "name": "Isabel Estrada Vaquero",
-      "display": "Estrada Vaquero, dr I.",
-      "family": "Estrada Vaquero",
-      "given": "Isabel",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-m-hanisch",
-      "name": "Marvin Hanisch",
-      "display": "Hanisch, dr. M.",
-      "family": "Hanisch",
-      "given": "Marvin",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-kre-huizingh",
-      "name": "Eelko Huizingh",
-      "display": "Huizingh, dr. K.R.E.",
-      "family": "Huizingh",
-      "given": "Eelko",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-mitzinneck",
-      "name": "Björn Mitzinneck",
-      "display": "Mitzinneck, dr. b.c.",
-      "family": "Mitzinneck",
-      "given": "Björn",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-mag-van-offenbeek",
-      "name": "Marjolein van Offenbeek",
-      "display": "Offenbeek, dr. M.A.G. van",
-      "family": "van Offenbeek",
-      "given": "Marjolein",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-op-roemeling",
-      "name": "Oskar Roemeling",
-      "display": "Roemeling, dr. O.P.",
-      "family": "Roemeling",
-      "given": "Oskar",
-      "department": "IM&S",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ims-pj-steinberg",
-      "name": "Philip Steinberg",
-      "display": "Steinberg, dr. P.J.",
-      "family": "Steinberg",
-      "given": "Philip",
-      "department": "IM&S",
-      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -766,6 +579,50 @@
       "includedInDenominator": true
     },
     {
+      "id": "ims-wg-biemans",
+      "name": "Wim Biemans",
+      "display": "Biemans, dr. W.G.",
+      "family": "Biemans",
+      "given": "Wim",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-a-boonstra",
+      "name": "Albert Boonstra",
+      "display": "Boonstra, prof. dr. A.",
+      "family": "Boonstra",
+      "given": "Albert",
+      "department": "IM&S",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-mj-brand",
+      "name": "Maryse Brand",
+      "display": "Brand, dr. M.J.",
+      "family": "Brand",
+      "given": "Maryse",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-tlj-broekhuizen",
+      "name": "Thijs Broekhuizen",
+      "display": "Broekhuizen, dr. T.L.J.",
+      "family": "Broekhuizen",
+      "given": "Thijs",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "ims-c-carroll",
       "name": "Charlie Carroll",
       "display": "Carroll, dr. C.",
@@ -799,6 +656,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "ims-pmm-de-faria",
+      "name": "Pedro de Faria",
+      "display": "Faria, prof. dr. de P.M.M.",
+      "family": "de Faria",
+      "given": "Pedro",
+      "department": "IM&S",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "ims-j-duijsters",
       "name": "Jitse Duijsters",
       "display": "Duijsters, J.",
@@ -808,6 +676,17 @@
       "rank": "assistant_professor",
       "decision": "exclude_for_now",
       "includedInDenominator": false
+    },
+    {
+      "id": "ims-i-estrada-vaquero",
+      "name": "Isabel Estrada Vaquero",
+      "display": "Estrada Vaquero, dr I.",
+      "family": "Estrada Vaquero",
+      "given": "Isabel",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
     },
     {
       "id": "ims-ne-fabian",
@@ -865,6 +744,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "ims-m-hanisch",
+      "name": "Marvin Hanisch",
+      "display": "Hanisch, dr. M.",
+      "family": "Hanisch",
+      "given": "Marvin",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "ims-ks-heucher",
       "name": "Katrin Heucher",
       "display": "Heucher, dr K.S.",
@@ -872,6 +762,17 @@
       "given": "Katrin",
       "department": "IM&S",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-kre-huizingh",
+      "name": "Eelko Huizingh",
+      "display": "Huizingh, dr. K.R.E.",
+      "family": "Huizingh",
+      "given": "Eelko",
+      "department": "IM&S",
+      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -920,11 +821,22 @@
       "includedInDenominator": true
     },
     {
-      "id": "ims-cj-van-land",
-      "name": "C J van Land",
-      "display": "Land, dr. C.J. van 't",
-      "family": "van Land",
-      "given": "",
+      "id": "ims-dj-langley",
+      "name": "David Langley",
+      "display": "Langley, prof. dr. D.J.",
+      "family": "Langley",
+      "given": "David",
+      "department": "IM&S",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-i-maris-de-bresser",
+      "name": "Ileana Maris-de Bresser",
+      "display": "Maris-de Bresser, dr. I.",
+      "family": "Maris-de Bresser",
+      "given": "Ileana",
       "department": "IM&S",
       "rank": "assistant_professor",
       "decision": "exclude_for_now",
@@ -942,15 +854,26 @@
       "includedInDenominator": false
     },
     {
-      "id": "ims-i-maris-de-bresser",
-      "name": "Ileana Maris-de Bresser",
-      "display": "Maris-de Bresser, dr. I.",
-      "family": "Maris-de Bresser",
-      "given": "Ileana",
+      "id": "ims-mitzinneck",
+      "name": "Björn Mitzinneck",
+      "display": "Mitzinneck, dr. b.c.",
+      "family": "Mitzinneck",
+      "given": "Björn",
       "department": "IM&S",
-      "rank": "assistant_professor",
-      "decision": "exclude_for_now",
-      "includedInDenominator": false
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-f-noseleit",
+      "name": "Florian Noseleit",
+      "display": "Noseleit, prof. dr. F.",
+      "family": "Noseleit",
+      "given": "Florian",
+      "department": "IM&S",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
     },
     {
       "id": "ims-m-ortiz",
@@ -961,6 +884,28 @@
       "department": "IM&S",
       "rank": "assistant_professor",
       "decision": "include_with_caution",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-op-roemeling",
+      "name": "Oskar Roemeling",
+      "display": "Roemeling, dr. O.P.",
+      "family": "Roemeling",
+      "given": "Oskar",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-u-schultze",
+      "name": "Ulrike Schultze",
+      "display": "Schultze, prof. dr. U.",
+      "family": "Schultze",
+      "given": "Ulrike",
+      "department": "IM&S",
+      "rank": "full_professor",
+      "decision": "include",
       "includedInDenominator": true
     },
     {
@@ -993,6 +938,61 @@
       "given": "Daniël",
       "department": "IM&S",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-pj-steinberg",
+      "name": "Philip Steinberg",
+      "display": "Steinberg, dr. P.J.",
+      "family": "Steinberg",
+      "given": "Philip",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-jd-van-der-bij",
+      "name": "J D van der Bij",
+      "display": "Bij, dr. J.D. van der",
+      "family": "van der Bij",
+      "given": "",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "exclude_for_now",
+      "includedInDenominator": false
+    },
+    {
+      "id": "ims-cj-van-land",
+      "name": "C J van Land",
+      "display": "Land, dr. C.J. van 't",
+      "family": "van Land",
+      "given": "",
+      "department": "IM&S",
+      "rank": "assistant_professor",
+      "decision": "exclude_for_now",
+      "includedInDenominator": false
+    },
+    {
+      "id": "ims-mag-van-offenbeek",
+      "name": "Marjolein van Offenbeek",
+      "display": "Offenbeek, dr. M.A.G. van",
+      "family": "van Offenbeek",
+      "given": "Marjolein",
+      "department": "IM&S",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ims-m-wyrwich",
+      "name": "Michael Wyrwich",
+      "display": "Wyrwich, prof. M.",
+      "family": "Wyrwich",
+      "given": "Michael",
+      "department": "IM&S",
+      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -1063,6 +1063,28 @@
       "includedInDenominator": true
     },
     {
+      "id": "ops-b-de-jonge",
+      "name": "Bram de Jonge",
+      "display": "Jonge, dr. B. de",
+      "family": "de Jonge",
+      "given": "Bram",
+      "department": "Operations",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ops-j-de-vries",
+      "name": "Jan de Vries",
+      "display": "Vries, prof. dr. J. de",
+      "family": "de Vries",
+      "given": "Jan",
+      "department": "Operations",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "ops-m-dienstknecht",
       "name": "Michael Dienstknecht",
       "display": "Dienstknecht, M., Dr",
@@ -1070,17 +1092,6 @@
       "given": "Michael",
       "department": "Operations",
       "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ops-dp-van-donk",
-      "name": "Dirk Pieter van Donk",
-      "display": "Donk, prof. dr. D.P. van",
-      "family": "van Donk",
-      "given": "Dirk Pieter",
-      "department": "Operations",
-      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -1107,17 +1118,6 @@
       "includedInDenominator": true
     },
     {
-      "id": "ops-nd-van-foreest",
-      "name": "Nicky van Foreest",
-      "display": "Foreest, dr. N.D. van",
-      "family": "van Foreest",
-      "given": "Nicky",
-      "department": "Operations",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "ops-lm-gelsomino",
       "name": "Luca Gelsomino",
       "display": "Gelsomino, dr. ir. L.M.",
@@ -1136,17 +1136,6 @@
       "given": "George",
       "department": "Operations",
       "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ops-b-de-jonge",
-      "name": "Bram de Jonge",
-      "display": "Jonge, dr. B. de",
-      "family": "de Jonge",
-      "given": "Bram",
-      "department": "Operations",
-      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -1360,6 +1349,50 @@
       "includedInDenominator": true
     },
     {
+      "id": "ops-dj-van-der-zee",
+      "name": "Durk-Jouke van der Zee",
+      "display": "Zee, dr. ir. D.J. van der",
+      "family": "van der Zee",
+      "given": "Durk-Jouke",
+      "department": "Operations",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ops-dp-van-donk",
+      "name": "Dirk Pieter van Donk",
+      "display": "Donk, prof. dr. D.P. van",
+      "family": "van Donk",
+      "given": "Dirk Pieter",
+      "department": "Operations",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ops-nd-van-foreest",
+      "name": "Nicky van Foreest",
+      "display": "Foreest, dr. N.D. van",
+      "family": "van Foreest",
+      "given": "Nicky",
+      "department": "Operations",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "ops-wmc-van-wezel",
+      "name": "Wout van Wezel",
+      "display": "Wezel, dr. W.M.C. van",
+      "family": "van Wezel",
+      "given": "Wout",
+      "department": "Operations",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "ops-j-veldman",
       "name": "Jasper Veldman",
       "display": "Veldman, prof. dr. J.",
@@ -1382,33 +1415,11 @@
       "includedInDenominator": true
     },
     {
-      "id": "ops-j-de-vries",
-      "name": "Jan de Vries",
-      "display": "Vries, prof. dr. J. de",
-      "family": "de Vries",
-      "given": "Jan",
-      "department": "Operations",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "ops-s-waschull",
       "name": "Sabine Waschull",
       "display": "Waschull, S., Dr",
       "family": "Waschull",
       "given": "Sabine",
-      "department": "Operations",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "ops-wmc-van-wezel",
-      "name": "Wout van Wezel",
-      "display": "Wezel, dr. W.M.C. van",
-      "family": "van Wezel",
-      "given": "Wout",
       "department": "Operations",
       "rank": "assistant_professor",
       "decision": "include",
@@ -1426,155 +1437,12 @@
       "includedInDenominator": true
     },
     {
-      "id": "ops-dj-van-der-zee",
-      "name": "Durk-Jouke van der Zee",
-      "display": "Zee, dr. ir. D.J. van der",
-      "family": "van der Zee",
-      "given": "Durk-Jouke",
-      "department": "Operations",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "ops-x-zhu",
       "name": "Xiang Zhu",
       "display": "Zhu, X., Dr",
       "family": "Zhu",
       "given": "Xiang",
       "department": "Operations",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-p-rao-sahib",
-      "name": "Padma Rao Sahib",
-      "display": "Rao Sahib, P., Dr",
-      "family": "Rao Sahib",
-      "given": "Padma",
-      "department": "GEM",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-t-kohl",
-      "name": "Tristan Kohl",
-      "display": "Kohl, dr. T.",
-      "family": "Kohl",
-      "given": "Tristan",
-      "department": "GEM",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-mj-klasing",
-      "name": "Mariko Klasing",
-      "display": "Klasing, dr. M.J.",
-      "family": "Klasing",
-      "given": "Mariko",
-      "department": "GEM",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-md-lameris",
-      "name": "Maite Laméris",
-      "display": "Laméris, dr. M.D.",
-      "family": "Laméris",
-      "given": "Maite",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-mj-gerritse",
-      "name": "Michiel Gerritse",
-      "display": "Gerritse, M.J.",
-      "family": "Gerritse",
-      "given": "Michiel",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include_with_caution",
-      "includedInDenominator": false
-    },
-    {
-      "id": "gem-x-ye",
-      "name": "X Ye",
-      "display": "Ye, X., Dr",
-      "family": "Ye",
-      "given": "",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-hj-drogendijk",
-      "name": "Rian Drogendijk",
-      "display": "Drogendijk, prof. dr. H.J.",
-      "family": "Drogendijk",
-      "given": "Rian",
-      "department": "GEM",
-      "rank": "full_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-s-choi",
-      "name": "Sunkung Choi",
-      "display": "Choi, S., Dr",
-      "family": "Choi",
-      "given": "Sunkung",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include_with_caution",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-jr-de-wit",
-      "name": "Juliette de Wit",
-      "display": "Wit, J.R. de, PhD",
-      "family": "de Wit",
-      "given": "Juliette",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-mhf-ridder-de-van-der-schueren",
-      "name": "Maurice Ridder de van der Schueren",
-      "display": "Ridder de van der Schueren, dr. M.H.F.",
-      "family": "Ridder de van der Schueren",
-      "given": "Maurice",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "exclude_for_now",
-      "includedInDenominator": false
-    },
-    {
-      "id": "gem-l-ge",
-      "name": "Lipeng Gary Ge",
-      "display": "Ge, L.",
-      "family": "Ge",
-      "given": "Lipeng Gary",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-a-minasyan",
-      "name": "Anna Minasyan",
-      "display": "Minasyan, A., Dr",
-      "family": "Minasyan",
-      "given": "Anna",
-      "department": "GEM",
       "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true
@@ -1602,11 +1470,99 @@
       "includedInDenominator": true
     },
     {
-      "id": "gem-km-wacker",
-      "name": "Konstantin Wacker",
-      "display": "Wacker, K.M., PhD",
-      "family": "Wacker",
-      "given": "Konstantin",
+      "id": "gem-s-choi",
+      "name": "Sunkung Choi",
+      "display": "Choi, S., Dr",
+      "family": "Choi",
+      "given": "Sunkung",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include_with_caution",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-jr-de-wit",
+      "name": "Juliette de Wit",
+      "display": "Wit, J.R. de, PhD",
+      "family": "de Wit",
+      "given": "Juliette",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-hj-drogendijk",
+      "name": "Rian Drogendijk",
+      "display": "Drogendijk, prof. dr. H.J.",
+      "family": "Drogendijk",
+      "given": "Rian",
+      "department": "GEM",
+      "rank": "full_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-l-ge",
+      "name": "Lipeng Gary Ge",
+      "display": "Ge, L.",
+      "family": "Ge",
+      "given": "Lipeng Gary",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-mj-gerritse",
+      "name": "Michiel Gerritse",
+      "display": "Gerritse, M.J.",
+      "family": "Gerritse",
+      "given": "Michiel",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include_with_caution",
+      "includedInDenominator": false
+    },
+    {
+      "id": "gem-r-kashyap",
+      "name": "Rishiraj Kashyap",
+      "display": "Kashyap, R., PhD",
+      "family": "Kashyap",
+      "given": "Rishiraj",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include_with_caution",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-a-kellers",
+      "name": "Anne Kellers",
+      "display": "Kellers, A., PhD",
+      "family": "Kellers",
+      "given": "Anne",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include_with_caution",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-mj-klasing",
+      "name": "Mariko Klasing",
+      "display": "Klasing, dr. M.J.",
+      "family": "Klasing",
+      "given": "Mariko",
+      "department": "GEM",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-t-kohl",
+      "name": "Tristan Kohl",
+      "display": "Kohl, dr. T.",
+      "family": "Kohl",
+      "given": "Tristan",
       "department": "GEM",
       "rank": "associate_professor",
       "decision": "include",
@@ -1618,6 +1574,94 @@
       "display": "Kuiken-Soetevent, A., PhD",
       "family": "Kuiken-Soetevent",
       "given": "Andrea",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-md-lameris",
+      "name": "Maite Laméris",
+      "display": "Laméris, dr. M.D.",
+      "family": "Laméris",
+      "given": "Maite",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-a-minasyan",
+      "name": "Anna Minasyan",
+      "display": "Minasyan, A., Dr",
+      "family": "Minasyan",
+      "given": "Anna",
+      "department": "GEM",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-e-onoz",
+      "name": "Ergun Onoz",
+      "display": "Onoz, E., PhD",
+      "family": "Onoz",
+      "given": "Ergun",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-sm-perez-alvarez",
+      "name": "Marcello Perez Alvarez",
+      "display": "Perez Alvarez, S.M., Dr",
+      "family": "Perez Alvarez",
+      "given": "Marcello",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-p-rao-sahib",
+      "name": "Padma Rao Sahib",
+      "display": "Rao Sahib, P., Dr",
+      "family": "Rao Sahib",
+      "given": "Padma",
+      "department": "GEM",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-mhf-ridder-de-van-der-schueren",
+      "name": "Maurice Ridder de van der Schueren",
+      "display": "Ridder de van der Schueren, dr. M.H.F.",
+      "family": "Ridder de van der Schueren",
+      "given": "Maurice",
+      "department": "GEM",
+      "rank": "assistant_professor",
+      "decision": "exclude_for_now",
+      "includedInDenominator": false
+    },
+    {
+      "id": "gem-j-ross",
+      "name": "Jan Ross",
+      "display": "Ross, J., PhD",
+      "family": "Ross",
+      "given": "Jan",
+      "department": "GEM",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-mp-schwan",
+      "name": "Michael Schwan",
+      "display": "Schwan, dr. M.P.",
+      "family": "Schwan",
+      "given": "Michael",
       "department": "GEM",
       "rank": "assistant_professor",
       "decision": "include",
@@ -1646,28 +1690,6 @@
       "includedInDenominator": true
     },
     {
-      "id": "gem-f-wang",
-      "name": "Feicheng Wang",
-      "display": "Wang, F., PhD",
-      "family": "Wang",
-      "given": "Feicheng",
-      "department": "GEM",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-sm-perez-alvarez",
-      "name": "Marcello Perez Alvarez",
-      "display": "Perez Alvarez, S.M., Dr",
-      "family": "Perez Alvarez",
-      "given": "Marcello",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "gem-d-tusha",
       "name": "Dea Tusha",
       "display": "Tusha, dr. D.",
@@ -1679,46 +1701,35 @@
       "includedInDenominator": true
     },
     {
-      "id": "gem-a-kellers",
-      "name": "Anne Kellers",
-      "display": "Kellers, A., PhD",
-      "family": "Kellers",
-      "given": "Anne",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include_with_caution",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-mp-schwan",
-      "name": "Michael Schwan",
-      "display": "Schwan, dr. M.P.",
-      "family": "Schwan",
-      "given": "Michael",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-e-onoz",
-      "name": "Ergun Onoz",
-      "display": "Onoz, E., PhD",
-      "family": "Onoz",
-      "given": "Ergun",
-      "department": "GEM",
-      "rank": "assistant_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "gem-j-ross",
-      "name": "Jan Ross",
-      "display": "Ross, J., PhD",
-      "family": "Ross",
-      "given": "Jan",
+      "id": "gem-km-wacker",
+      "name": "Konstantin Wacker",
+      "display": "Wacker, K.M., PhD",
+      "family": "Wacker",
+      "given": "Konstantin",
       "department": "GEM",
       "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-f-wang",
+      "name": "Feicheng Wang",
+      "display": "Wang, F., PhD",
+      "family": "Wang",
+      "given": "Feicheng",
+      "department": "GEM",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "gem-x-ye",
+      "name": "X Ye",
+      "display": "Ye, X., Dr",
+      "family": "Ye",
+      "given": "",
+      "department": "GEM",
+      "rank": "assistant_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -1763,6 +1774,17 @@
       "given": "Ben",
       "department": "Accounting",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "acc-da-de-waard",
+      "name": "Dick de Waard",
+      "display": "Waard, prof. dr. D.A. de",
+      "family": "de Waard",
+      "given": "Dick",
+      "department": "Accounting",
+      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -1840,17 +1862,6 @@
       "given": "Jan",
       "department": "Accounting",
       "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "acc-rl-ter-hoeven",
-      "name": "Ralph ter Hoeven",
-      "display": "Hoeven, prof. dr. R.L. ter",
-      "family": "ter Hoeven",
-      "given": "Ralph",
-      "department": "Accounting",
-      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -2020,17 +2031,6 @@
       "includedInDenominator": true
     },
     {
-      "id": "acc-mp-van-der-steen",
-      "name": "Martijn van der Steen",
-      "display": "Steen, dr. M.P. van der",
-      "family": "van der Steen",
-      "given": "Martijn",
-      "department": "Accounting",
-      "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
       "id": "acc-ak-tank",
       "name": "Ann Tank",
       "display": "Tank, A.K., Dr",
@@ -2038,6 +2038,17 @@
       "given": "Ann",
       "department": "Accounting",
       "rank": "assistant_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
+      "id": "acc-rl-ter-hoeven",
+      "name": "Ralph ter Hoeven",
+      "display": "Hoeven, prof. dr. R.L. ter",
+      "family": "ter Hoeven",
+      "given": "Ralph",
+      "department": "Accounting",
+      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     },
@@ -2053,6 +2064,17 @@
       "includedInDenominator": true
     },
     {
+      "id": "acc-mp-van-der-steen",
+      "name": "Martijn van der Steen",
+      "display": "Steen, dr. M.P. van der",
+      "family": "van der Steen",
+      "given": "Martijn",
+      "department": "Accounting",
+      "rank": "associate_professor",
+      "decision": "include",
+      "includedInDenominator": true
+    },
+    {
       "id": "acc-db-veltrop",
       "name": "Dennis Veltrop",
       "display": "Veltrop, dr. D.B.",
@@ -2060,17 +2082,6 @@
       "given": "Dennis",
       "department": "Accounting",
       "rank": "associate_professor",
-      "decision": "include",
-      "includedInDenominator": true
-    },
-    {
-      "id": "acc-da-de-waard",
-      "name": "Dick de Waard",
-      "display": "Waard, prof. dr. D.A. de",
-      "family": "de Waard",
-      "given": "Dick",
-      "department": "Accounting",
-      "rank": "full_professor",
       "decision": "include",
       "includedInDenominator": true
     }
@@ -2161,27 +2172,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.intfin.2026.102339",
-      "year": 2026,
-      "title": "When do foreign regulatory interventions trigger market disciplinary effects? Evidence from anti-money laundering regulation violations",
-      "doi": "10.1016/j.intfin.2026.102339",
-      "aip": 76.218,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-s-tillema"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-s-tillema"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1002/tie.70138",
       "year": 2026,
       "title": "When Local Partner Knowledge Is Embedded: The Choice Between Greenfield and Acquisitive International Joint Ventures",
@@ -2200,6 +2190,27 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.intfin.2026.102339",
+      "year": 2026,
+      "title": "When do foreign regulatory interventions trigger market disciplinary effects? Evidence from anti-money laundering regulation violations",
+      "doi": "10.1016/j.intfin.2026.102339",
+      "aip": 76.218,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-s-tillema"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-s-tillema"
+      ],
+      "allDepartments": [
+        "Accounting"
       ]
     },
     {
@@ -2245,27 +2256,6 @@
       ]
     },
     {
-      "id": "doi:10.1371/journal.pone.0348115",
-      "year": 2026,
-      "title": "Variation in mental health-related sickness absence duration: The role of occupational health professionals",
-      "doi": "10.1371/journal.pone.0348115",
-      "aip": 77.22,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-nd-van-foreest"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-nd-van-foreest"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.inffus.2025.104092",
       "year": 2026,
       "title": "VLDBench Evaluating multimodal disinformation with regulatory alignment",
@@ -2287,6 +2277,27 @@
       ]
     },
     {
+      "id": "doi:10.1371/journal.pone.0348115",
+      "year": 2026,
+      "title": "Variation in mental health-related sickness absence duration: The role of occupational health professionals",
+      "doi": "10.1371/journal.pone.0348115",
+      "aip": 77.22,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-nd-van-foreest"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-nd-van-foreest"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.tifs.2026.105633",
       "year": 2026,
       "title": "Unveiling hidden costs in agrifood systems: A systematic review of true cost accounting",
@@ -2302,6 +2313,27 @@
       ],
       "allPeople": [
         "ops-e-rosca"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.aiopen.2026.02.006",
+      "year": 2026,
+      "title": "TRiSM for Agentic AI: A review of Trust, Risk, and Security Management in LLM-based Agentic Multi-Agent Systems",
+      "doi": "10.1016/j.aiopen.2026.02.006",
+      "aip": 99.197,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-c-emmanouilidis"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-c-emmanouilidis"
       ],
       "allDepartments": [
         "Operations"
@@ -2398,6 +2430,29 @@
       ]
     },
     {
+      "id": "doi:10.1002/joom.70017",
+      "year": 2026,
+      "title": "The Role of Public and Buyer‐Driven Governance for Supplier Sustainability Development in China",
+      "doi": "10.1002/joom.70017",
+      "aip": 96.377,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-c-xiao",
+        "ops-jt-van-der-vaart"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-c-xiao",
+        "ops-jt-van-der-vaart"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1002/smj.70019",
       "year": 2026,
       "title": "The role of CEO integrity in M&A decision‐making",
@@ -2413,6 +2468,29 @@
       ],
       "allPeople": [
         "acc-jc-hennig"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
+      "id": "doi:10.1111/joms.70122",
+      "year": 2026,
+      "title": "The Price of Prominence: How CEO Extraversion Influences Board Attributions and the Dismissal‐Performance Sensitivity",
+      "doi": "10.1111/joms.70122",
+      "aip": 97.77,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-jc-hennig",
+        "acc-s-firk"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-jc-hennig",
+        "acc-s-firk"
       ],
       "allDepartments": [
         "Accounting"
@@ -2526,94 +2604,6 @@
       ]
     },
     {
-      "id": "rug:afc6b2c723089b4c",
-      "year": 2026,
-      "title": "The effects of tokenization on ride-hailing blockchain platforms",
-      "doi": "",
-      "aip": 91.428,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-rh-teunter"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-rh-teunter"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "rug:5e35514e78484893",
-      "year": 2026,
-      "title": "The beauty premium in politics? Perceptions and political behavior",
-      "doi": "",
-      "aip": 82.425,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-a-skalli"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-a-skalli"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1002/joom.70017",
-      "year": 2026,
-      "title": "The Role of Public and Buyer‐Driven Governance for Supplier Sustainability Development in China",
-      "doi": "10.1002/joom.70017",
-      "aip": 96.377,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-c-xiao",
-        "ops-jt-van-der-vaart"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-c-xiao",
-        "ops-jt-van-der-vaart"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1111/joms.70122",
-      "year": 2026,
-      "title": "The Price of Prominence: How CEO Extraversion Influences Board Attributions and the Dismissal‐Performance Sensitivity",
-      "doi": "10.1111/joms.70122",
-      "aip": 97.77,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-jc-hennig",
-        "acc-s-firk"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-jc-hennig",
-        "acc-s-firk"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.2308/tar-2021-0569",
       "year": 2026,
       "title": "The Evolution of Performance Measurement, Career Development, and Compensation for Audit Partners in the Context of Public Scrutiny",
@@ -2653,6 +2643,27 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "rug:afc6b2c723089b4c",
+      "year": 2026,
+      "title": "The effects of tokenization on ride-hailing blockchain platforms",
+      "doi": "",
+      "aip": 91.428,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-rh-teunter"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-rh-teunter"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -2752,24 +2763,24 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.aiopen.2026.02.006",
+      "id": "rug:5e35514e78484893",
       "year": 2026,
-      "title": "TRiSM for Agentic AI: A review of Trust, Risk, and Security Management in LLM-based Agentic Multi-Agent Systems",
-      "doi": "10.1016/j.aiopen.2026.02.006",
-      "aip": 99.197,
+      "title": "The beauty premium in politics? Perceptions and political behavior",
+      "doi": "",
+      "aip": 82.425,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "ops-c-emmanouilidis"
+        "gem-a-skalli"
       ],
       "departments": [
-        "Operations"
+        "GEM"
       ],
       "allPeople": [
-        "ops-c-emmanouilidis"
+        "gem-a-skalli"
       ],
       "allDepartments": [
-        "Operations"
+        "GEM"
       ]
     },
     {
@@ -3108,6 +3119,27 @@
       ]
     },
     {
+      "id": "rug:3a311290051ee3b9",
+      "year": 2026,
+      "title": "Management Disclosure and Media Coverage",
+      "doi": "",
+      "aip": 96.832,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-s-mansouri"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-s-mansouri"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "rug:59df146f5654fc46",
       "year": 2026,
       "title": "Management accountants’ personalities and their involvement in business partnering: A job crafting perspective",
@@ -3125,27 +3157,6 @@
       "allPeople": [
         "acc-pmg-dirks",
         "acc-s-tillema"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "rug:3a311290051ee3b9",
-      "year": 2026,
-      "title": "Management Disclosure and Media Coverage",
-      "doi": "",
-      "aip": 96.832,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-s-mansouri"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-s-mansouri"
       ],
       "allDepartments": [
         "Accounting"
@@ -3364,27 +3375,6 @@
       ]
     },
     {
-      "id": "rug:cb5dbe3076d5e573",
-      "year": 2026,
-      "title": "If Only I Had Not Fallen Down the Rabbit Hole: Counterfactual Thinking Reduces Engagement With Conspiracy Theories.",
-      "doi": "",
-      "aip": 94.22,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-bm-fennis"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-bm-fennis"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1108/jaee-09-2024-0400",
       "year": 2026,
       "title": "IFRS adoption strategies in emerging markets and economic outcomes: evidence from a systematic literature review for the MENA region",
@@ -3403,6 +3393,27 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "rug:cb5dbe3076d5e573",
+      "year": 2026,
+      "title": "If Only I Had Not Fallen Down the Rabbit Hole: Counterfactual Thinking Reduces Engagement With Conspiracy Theories.",
+      "doi": "",
+      "aip": 94.22,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-bm-fennis"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-bm-fennis"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {
@@ -3429,27 +3440,6 @@
       ]
     },
     {
-      "id": "rug:e28838f7593f8133",
-      "year": 2026,
-      "title": "How does FDI transmit into domestic investment? Exploring intra-industry and financial channels",
-      "doi": "",
-      "aip": 90.0,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-km-wacker"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-km-wacker"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
       "id": "doi:10.1111/jscm.70013",
       "year": 2026,
       "title": "How Governmental Policies Shape Supply Chain Learning and Responsiveness: A Service Triad Approach to Higher Education",
@@ -3468,6 +3458,27 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "rug:e28838f7593f8133",
+      "year": 2026,
+      "title": "How does FDI transmit into domestic investment? Exploring intra-industry and financial channels",
+      "doi": "",
+      "aip": 90.0,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-km-wacker"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-km-wacker"
+      ],
+      "allDepartments": [
+        "GEM"
       ]
     },
     {
@@ -3512,6 +3523,27 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "rug:38d5ad0c4cc993cb",
+      "year": 2026,
+      "title": "High involvement–low investment foreign operating mode: considering Indian MNEs in emerging markets",
+      "doi": "10.1057/s41267-026-00842-1",
+      "aip": 97.573,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-r-kashyap"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-r-kashyap"
+      ],
+      "allDepartments": [
+        "GEM"
       ]
     },
     {
@@ -3599,27 +3631,6 @@
       ]
     },
     {
-      "id": "doi:10.1108/ijopm-09-2024-0826",
-      "year": 2026,
-      "title": "From social good to operational good? How women influence sustainable operations",
-      "doi": "10.1108/ijopm-09-2024-0826",
-      "aip": 88.751,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-e-rosca"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-e-rosca"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1177/00076503251329762",
       "year": 2026,
       "title": "From Stabilizer to Enhancer: Effective Engagement Strategies for Secondary Stakeholders in Corporate Social Responsibility",
@@ -3635,6 +3646,27 @@
       ],
       "allPeople": [
         "ops-c-xiao"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1108/ijopm-09-2024-0826",
+      "year": 2026,
+      "title": "From social good to operational good? How women influence sustainable operations",
+      "doi": "10.1108/ijopm-09-2024-0826",
+      "aip": 88.751,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-rosca"
       ],
       "allDepartments": [
         "Operations"
@@ -3833,6 +3865,27 @@
       ]
     },
     {
+      "id": "doi:10.1108/cpoib-09-2024-0101",
+      "year": 2026,
+      "title": "EMNE heterogeneity explored: the uniqueness of Chinese EMNEs’ OFDI",
+      "doi": "10.1108/cpoib-09-2024-0101",
+      "aip": 50.687,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-hj-drogendijk"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-hj-drogendijk"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "doi:10.3389/fdgth.2026.1698339",
       "year": 2026,
       "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
@@ -3874,27 +3927,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1108/cpoib-09-2024-0101",
-      "year": 2026,
-      "title": "EMNE heterogeneity explored: the uniqueness of Chinese EMNEs’ OFDI",
-      "doi": "10.1108/cpoib-09-2024-0101",
-      "aip": 50.687,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-hj-drogendijk"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-hj-drogendijk"
-      ],
-      "allDepartments": [
-        "GEM"
       ]
     },
     {
@@ -4816,6 +4848,27 @@
       ]
     },
     {
+      "id": "doi:10.1002/wcc.70004",
+      "year": 2025,
+      "title": "The Role of Neologisms in the Climate Change Debate: Can New Words Help to Speed Up Social Change?",
+      "doi": "10.1002/wcc.70004",
+      "aip": 97.565,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-jw-bolderdijk"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-jw-bolderdijk"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
       "id": "rug:e4009d05318de862",
       "year": 2025,
       "title": "The role of complementary interregional linkages for functional upgrading and downgrading of global value chains in EU regions",
@@ -4834,6 +4887,50 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "rug:1806fa898ff9d143",
+      "year": 2025,
+      "title": "The Occupation Content of Trade",
+      "doi": "",
+      "aip": 91.566,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-x-ye"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-x-ye"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
+      "id": "rug:7cae2829ddbf6149",
+      "year": 2025,
+      "title": "The Moralization of Women's Bodies",
+      "doi": "",
+      "aip": 90.98,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-m-arnold",
+        "hrmob-mk-ryan"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-m-arnold",
+        "hrmob-mk-ryan"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -4962,71 +5059,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1002/wcc.70004",
-      "year": 2025,
-      "title": "The Role of Neologisms in the Climate Change Debate: Can New Words Help to Speed Up Social Change?",
-      "doi": "10.1002/wcc.70004",
-      "aip": 97.565,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-jw-bolderdijk"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-jw-bolderdijk"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "rug:1806fa898ff9d143",
-      "year": 2025,
-      "title": "The Occupation Content of Trade",
-      "doi": "",
-      "aip": 91.566,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-x-ye"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-x-ye"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "rug:7cae2829ddbf6149",
-      "year": 2025,
-      "title": "The Moralization of Women's Bodies",
-      "doi": "",
-      "aip": 90.98,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-m-arnold",
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-m-arnold",
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -5682,27 +5714,6 @@
       ]
     },
     {
-      "id": "doi:10.1108/ejim-07-2025-0964",
-      "year": 2025,
-      "title": "Navigating publicness in digital innovation: big data and AI adoption in European public sector organisations",
-      "doi": "10.1108/ejim-07-2025-0964",
-      "aip": 66.701,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-ap-seepma"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-ap-seepma"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1111/isj.12574",
       "year": 2025,
       "title": "Navigating Tensions Between Indigeneity and Social Media Participation: A Case Study of the Guarani Community in South America",
@@ -5721,6 +5732,27 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.1108/ejim-07-2025-0964",
+      "year": 2025,
+      "title": "Navigating publicness in digital innovation: big data and AI adoption in European public sector organisations",
+      "doi": "10.1108/ejim-07-2025-0964",
+      "aip": 66.701,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-ap-seepma"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-ap-seepma"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -6001,6 +6033,27 @@
       ]
     },
     {
+      "id": "doi:10.5117/mab.99.149097",
+      "year": 2025,
+      "title": "ISSA 5000: key features of the International Sustainability Assurance Standard",
+      "doi": "10.5117/mab.99.149097",
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "acc-aem-kamp-roelands"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-aem-kamp-roelands"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.1177/13684302241311544",
       "year": 2025,
       "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
@@ -6243,27 +6296,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.5117/mab.99.149097",
-      "year": 2025,
-      "title": "ISSA 5000: key features of the International Sustainability Assurance Standard",
-      "doi": "10.5117/mab.99.149097",
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "acc-aem-kamp-roelands"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-aem-kamp-roelands"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -6533,6 +6565,48 @@
       ]
     },
     {
+      "id": "rug:a30b31d03921bd45",
+      "year": 2025,
+      "title": "From Strengths Mindset to Knowledge Sharing: Roles of Self-Efficacy and Strengths-based Human Resource System",
+      "doi": "",
+      "aip": 94.519,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-o-janssen"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
+      "id": "doi:10.1007/s10508-025-03114-5",
+      "year": 2025,
+      "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
+      "doi": "10.1007/s10508-025-03114-5",
+      "aip": 85.334,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-mk-ryan"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "rug:c7447ed05dbc64bf",
       "year": 2025,
       "title": "From i-level to g-level to s-level change: New methods for a new mindset for consumer researchers",
@@ -6574,94 +6648,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1108/jaee-12-2023-0400",
-      "year": 2025,
-      "title": "From claims to commitments: Does corporate governance help firms walk their talk?",
-      "doi": "10.1108/jaee-12-2023-0400",
-      "aip": 48.291,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-n-hussain"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-n-hussain"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1177/14761270231197995",
-      "year": 2025,
-      "title": "From attention to action: How board environmental expertise influences corporate environmental performance",
-      "doi": "10.1177/14761270231197995",
-      "aip": 95.623,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-jc-hennig",
-        "ims-s-asad"
-      ],
-      "departments": [
-        "Accounting",
-        "IM&S"
-      ],
-      "allPeople": [
-        "acc-jc-hennig",
-        "ims-s-asad"
-      ],
-      "allDepartments": [
-        "Accounting",
-        "IM&S"
-      ]
-    },
-    {
-      "id": "rug:a30b31d03921bd45",
-      "year": 2025,
-      "title": "From Strengths Mindset to Knowledge Sharing: Roles of Self-Efficacy and Strengths-based Human Resource System",
-      "doi": "",
-      "aip": 94.519,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-o-janssen"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10508-025-03114-5",
-      "year": 2025,
-      "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
-      "doi": "10.1007/s10508-025-03114-5",
-      "aip": 85.334,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -6731,6 +6717,52 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1108/jaee-12-2023-0400",
+      "year": 2025,
+      "title": "From claims to commitments: Does corporate governance help firms walk their talk?",
+      "doi": "10.1108/jaee-12-2023-0400",
+      "aip": 48.291,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-n-hussain"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-n-hussain"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
+      "id": "doi:10.1177/14761270231197995",
+      "year": 2025,
+      "title": "From attention to action: How board environmental expertise influences corporate environmental performance",
+      "doi": "10.1177/14761270231197995",
+      "aip": 95.623,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-jc-hennig",
+        "ims-s-asad"
+      ],
+      "departments": [
+        "Accounting",
+        "IM&S"
+      ],
+      "allPeople": [
+        "acc-jc-hennig",
+        "ims-s-asad"
+      ],
+      "allDepartments": [
+        "Accounting",
+        "IM&S"
       ]
     },
     {
@@ -6929,6 +6961,27 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.bar.2025.101704",
+      "year": 2025,
+      "title": "ESG controversies and external assurance: Examining their impact on firm value and image",
+      "doi": "10.1016/j.bar.2025.101704",
+      "aip": 86.478,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-n-hussain"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-n-hussain"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.jii.2025.100962",
       "year": 2025,
       "title": "Enabling interoperable human–AI teaming for automation in construction and manufacturing via Digital Twins and Sliding Work Sharing ontologies",
@@ -6996,27 +7049,6 @@
       ]
     },
     {
-      "id": "rug:20d36d228eb0fbf8",
-      "year": 2025,
-      "title": "Economic or Political Outcomes: Corporate Political Activity in a Populist Setting",
-      "doi": "",
-      "aip": 92.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-a-kuiken-soetevent"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-a-kuiken-soetevent"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
       "id": "doi:10.1002/csr.3102",
       "year": 2025,
       "title": "Economic Policy Uncertainty and Ecological Performance of European Companies: Does the Role of the Board Matter?",
@@ -7038,24 +7070,24 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.bar.2025.101704",
+      "id": "rug:20d36d228eb0fbf8",
       "year": 2025,
-      "title": "ESG controversies and external assurance: Examining their impact on firm value and image",
-      "doi": "10.1016/j.bar.2025.101704",
-      "aip": 86.478,
+      "title": "Economic or Political Outcomes: Corporate Political Activity in a Populist Setting",
+      "doi": "",
+      "aip": 92.135,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "acc-n-hussain"
+        "gem-a-kuiken-soetevent"
       ],
       "departments": [
-        "Accounting"
+        "GEM"
       ],
       "allPeople": [
-        "acc-n-hussain"
+        "gem-a-kuiken-soetevent"
       ],
       "allDepartments": [
-        "Accounting"
+        "GEM"
       ]
     },
     {
@@ -7168,11 +7200,11 @@
       ]
     },
     {
-      "id": "doi:10.1093/cjres/rsae040",
+      "id": "doi:10.1111/roie.12782",
       "year": 2025,
-      "title": "Demography and income in the 21st century: a long-run perspective",
-      "doi": "10.1093/cjres/rsae040",
-      "aip": 95.161,
+      "title": "DemoGravity: World Population and Trade in the 21st Century",
+      "doi": "10.1111/roie.12782",
+      "aip": 54.514,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
@@ -7189,11 +7221,11 @@
       ]
     },
     {
-      "id": "doi:10.1111/roie.12782",
+      "id": "doi:10.1093/cjres/rsae040",
       "year": 2025,
-      "title": "DemoGravity: World Population and Trade in the 21st Century",
-      "doi": "10.1111/roie.12782",
-      "aip": 54.514,
+      "title": "Demography and income in the 21st century: a long-run perspective",
+      "doi": "10.1093/cjres/rsae040",
+      "aip": 95.161,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
@@ -8598,6 +8630,27 @@
       ]
     },
     {
+      "id": "doi:10.1007/s11199-024-01453-6",
+      "year": 2024,
+      "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
+      "doi": "10.1007/s11199-024-01453-6",
+      "aip": 89.967,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-mk-ryan"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "rug:578dba035e70fbe4",
       "year": 2024,
       "title": "The pandemic that shocked managers across the world: The impact of the COVID-19 crisis on leadership behavior",
@@ -8613,6 +8666,27 @@
       ],
       "allPeople": [
         "hrmob-ji-stoker"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
+      "id": "rug:959ae5ed75d456b7",
+      "year": 2024,
+      "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+      "doi": "",
+      "aip": 96.797,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-jm-lees"
       ],
       "allDepartments": [
         "HRM&OB"
@@ -8748,48 +8822,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s11199-024-01453-6",
-      "year": 2024,
-      "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
-      "doi": "10.1007/s11199-024-01453-6",
-      "aip": 89.967,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "rug:959ae5ed75d456b7",
-      "year": 2024,
-      "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-      "doi": "",
-      "aip": 96.797,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-jm-lees"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-jm-lees"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -8986,6 +9018,27 @@
       ]
     },
     {
+      "id": "doi:10.1093/occmed/kqae023.0423",
+      "year": 2024,
+      "title": "SS74-03 NEEDS-BASED CRAFTING: HOW WORKERS’ PROACTIVE SHAPING OF WORK AND LEISURE EXPERIENCES AFFECTS THEIR HEALTH, WELLBEING AND PERFORMANCE",
+      "doi": "10.1093/occmed/kqae023.0423",
+      "aip": 70.791,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-j-de-bloom"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "doi:10.56296/aip00028",
       "year": 2024,
       "title": "Source credibility effects in misinformation research: A review and primer",
@@ -9135,27 +9188,6 @@
       ],
       "allPeople": [
         "hrmob-m-arnold"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1093/occmed/kqae023.0423",
-      "year": 2024,
-      "title": "SS74-03 NEEDS-BASED CRAFTING: HOW WORKERS’ PROACTIVE SHAPING OF WORK AND LEISURE EXPERIENCES AFFECTS THEIR HEALTH, WELLBEING AND PERFORMANCE",
-      "doi": "10.1093/occmed/kqae023.0423",
-      "aip": 70.791,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-j-de-bloom"
       ],
       "allDepartments": [
         "HRM&OB"
@@ -11188,27 +11220,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/annals.2022.0205",
-      "year": 2024,
-      "title": "Catalyzing Action on Social and Environmental Challenges: An Integrative Review of Insider Social Change Agents",
-      "doi": "10.5465/annals.2022.0205",
-      "aip": 99.688,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-ks-heucher"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-ks-heucher"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "rug:b89426a6d8ff1231",
       "year": 2024,
       "title": "CEO International Experience in Advanced Market Economies and Firm Investment Horizon in a Transitioning Economy",
@@ -11230,24 +11241,24 @@
       ]
     },
     {
-      "id": "doi:10.1111/coep.12662",
+      "id": "doi:10.5465/annals.2022.0205",
       "year": 2024,
-      "title": "Business as usual? Unraveling the impact of Brexit on UK‐EU business links",
-      "doi": "10.1111/coep.12662",
-      "aip": 59.257,
+      "title": "Catalyzing Action on Social and Environmental Challenges: An Integrative Review of Insider Social Change Agents",
+      "doi": "10.5465/annals.2022.0205",
+      "aip": 99.688,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "gem-f-wang"
+        "ims-ks-heucher"
       ],
       "departments": [
-        "GEM"
+        "IM&S"
       ],
       "allPeople": [
-        "gem-f-wang"
+        "ims-ks-heucher"
       ],
       "allDepartments": [
-        "GEM"
+        "IM&S"
       ]
     },
     {
@@ -11275,6 +11286,27 @@
       "allDepartments": [
         "IM&S",
         "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.1111/coep.12662",
+      "year": 2024,
+      "title": "Business as usual? Unraveling the impact of Brexit on UK‐EU business links",
+      "doi": "10.1111/coep.12662",
+      "aip": 59.257,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-f-wang"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-f-wang"
+      ],
+      "allDepartments": [
+        "GEM"
       ]
     },
     {
@@ -11429,6 +11461,48 @@
       ]
     },
     {
+      "id": "doi:10.1287/trsc.2023.0252",
+      "year": 2024,
+      "title": "A Unified Branch-Price-and-Cut Algorithm for Multicompartment Pickup and Delivery Problems",
+      "doi": "10.1287/trsc.2023.0252",
+      "aip": 92.77,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-m-aerts-veenstra"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-m-aerts-veenstra"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1109/tpwrs.2023.3242468",
+      "year": 2024,
+      "title": "A Two-Step Approach to Wasserstein Distributionally Robust Chance- and Security-Constrained Dispatch",
+      "doi": "10.1109/tpwrs.2023.3242468",
+      "aip": 93.958,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-ursavas"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-ursavas"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "rug:137eeb36c51215a8",
       "year": 2024,
       "title": "A simple heuristic for computing non-stationary inventory policies based on function approximation",
@@ -11490,48 +11564,6 @@
       "allPeople": [
         "ops-ja-lopez-alvarez",
         "ops-p-buijs"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1287/trsc.2023.0252",
-      "year": 2024,
-      "title": "A Unified Branch-Price-and-Cut Algorithm for Multicompartment Pickup and Delivery Problems",
-      "doi": "10.1287/trsc.2023.0252",
-      "aip": 92.77,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-m-aerts-veenstra"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-m-aerts-veenstra"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1109/tpwrs.2023.3242468",
-      "year": 2024,
-      "title": "A Two-Step Approach to Wasserstein Distributionally Robust Chance- and Security-Constrained Dispatch",
-      "doi": "10.1109/tpwrs.2023.3242468",
-      "aip": 93.958,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-e-ursavas"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-e-ursavas"
       ],
       "allDepartments": [
         "Operations"
@@ -12119,6 +12151,48 @@
       ]
     },
     {
+      "id": "doi:10.1093/pnasnexus/pgad094",
+      "year": 2023,
+      "title": "The Spot the Troll Quiz game increases accuracy in discerning between real and inauthentic social media accounts",
+      "doi": "10.1093/pnasnexus/pgad094",
+      "aip": 83.115,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-jm-lees"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
+      "id": "rug:bb69c6ab5a4a7e6e",
+      "year": 2023,
+      "title": "The Role of Conflict in Sex Discrimination: The Case of Missing Girls",
+      "doi": "",
+      "aip": 88.968,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-a-minasyan"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-a-minasyan"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "doi:10.1002/bse.3347",
       "year": 2023,
       "title": "The power of the CEO and environmental decoupling",
@@ -12137,6 +12211,27 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "doi:10.1287/stsc.2023.0186",
+      "year": 2023,
+      "title": "The Multiple Facets of Corporate Purpose: An Analytical Typology",
+      "doi": "10.1287/stsc.2023.0186",
+      "aip": 97.381,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-mitzinneck"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-mitzinneck"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -12160,6 +12255,48 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.1177/10422587221094498",
+      "year": 2023,
+      "title": "The Long-Run Effects of Communism and Transition to a Market System on Self-Employment: The Case of Germany",
+      "doi": "10.1177/10422587221094498",
+      "aip": 97.78,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-m-wyrwich"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-m-wyrwich"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.1177/01492063221087643",
+      "year": 2023,
+      "title": "The Interplay Between Supplier-Specific Investments and Supplier Dependence: Do Two Pluses Make a Minus?",
+      "doi": "10.1177/01492063221087643",
+      "aip": 98.808,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-j-veldman"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-j-veldman"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -12226,153 +12363,6 @@
       ]
     },
     {
-      "id": "rug:09e10c1e7d185659",
-      "year": 2023,
-      "title": "The cold-start problem in nascent AI strategy: Kickstarting data network effects",
-      "doi": "",
-      "aip": 92.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-mj-gijsenberg"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-mj-gijsenberg"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.techfore.2023.122536",
-      "year": 2023,
-      "title": "The benefits of climate tech: Do institutional investors affect these impacts?",
-      "doi": "10.1016/j.techfore.2023.122536",
-      "aip": 91.601,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-n-hussain"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-n-hussain"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1093/pnasnexus/pgad094",
-      "year": 2023,
-      "title": "The Spot the Troll Quiz game increases accuracy in discerning between real and inauthentic social media accounts",
-      "doi": "10.1093/pnasnexus/pgad094",
-      "aip": 83.115,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-jm-lees"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-jm-lees"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "rug:bb69c6ab5a4a7e6e",
-      "year": 2023,
-      "title": "The Role of Conflict in Sex Discrimination: The Case of Missing Girls",
-      "doi": "",
-      "aip": 88.968,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-a-minasyan"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-a-minasyan"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1287/stsc.2023.0186",
-      "year": 2023,
-      "title": "The Multiple Facets of Corporate Purpose: An Analytical Typology",
-      "doi": "10.1287/stsc.2023.0186",
-      "aip": 97.381,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-mitzinneck"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-mitzinneck"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/10422587221094498",
-      "year": 2023,
-      "title": "The Long-Run Effects of Communism and Transition to a Market System on Self-Employment: The Case of Germany",
-      "doi": "10.1177/10422587221094498",
-      "aip": 97.78,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-m-wyrwich"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-m-wyrwich"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/01492063221087643",
-      "year": 2023,
-      "title": "The Interplay Between Supplier-Specific Investments and Supplier Dependence: Do Two Pluses Make a Minus?",
-      "doi": "10.1177/01492063221087643",
-      "aip": 98.808,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-j-veldman"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-j-veldman"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.16993/sjwop.181",
       "year": 2023,
       "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees&rsquo; Psychological Needs Satisfaction and Well-Being",
@@ -12416,6 +12406,48 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "rug:09e10c1e7d185659",
+      "year": 2023,
+      "title": "The cold-start problem in nascent AI strategy: Kickstarting data network effects",
+      "doi": "",
+      "aip": 92.135,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-mj-gijsenberg"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-mj-gijsenberg"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.techfore.2023.122536",
+      "year": 2023,
+      "title": "The benefits of climate tech: Do institutional investors affect these impacts?",
+      "doi": "10.1016/j.techfore.2023.122536",
+      "aip": 91.601,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-n-hussain"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-n-hussain"
+      ],
+      "allDepartments": [
+        "Accounting"
       ]
     },
     {
@@ -12574,6 +12606,27 @@
       ]
     },
     {
+      "id": "rug:bb40947f94bbdaa9",
+      "year": 2023,
+      "title": "SMEs prefer JVs: why SMEs' equity entry mode choices are different from those of large firms",
+      "doi": "",
+      "aip": 39.732,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-mc-sestu"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-mc-sestu"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "rug:337f7b16ca76400f",
       "year": 2023,
       "title": "Smart workload input-output control of production systems: A proof of concept",
@@ -12655,27 +12708,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "rug:bb40947f94bbdaa9",
-      "year": 2023,
-      "title": "SMEs prefer JVs: why SMEs' equity entry mode choices are different from those of large firms",
-      "doi": "",
-      "aip": 39.732,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-mc-sestu"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-mc-sestu"
-      ],
-      "allDepartments": [
-        "GEM"
       ]
     },
     {
@@ -13853,6 +13885,27 @@
       ]
     },
     {
+      "id": "doi:10.1007/s10645-023-09421-3",
+      "year": 2023,
+      "title": "EXITitis in the UK: Gravity Estimates in the Aftermath of Brexit",
+      "doi": "10.1007/s10645-023-09421-3",
+      "aip": 59.272,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-t-kohl"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-t-kohl"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "doi:10.1108/jsbed-03-2022-0152",
       "year": 2023,
       "title": "Examining entrepreneurial successes and failures during the COVID-19 pandemic (2019–2023)",
@@ -14059,27 +14112,6 @@
       ],
       "allPeople": [
         "gem-d-tusha"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10645-023-09421-3",
-      "year": 2023,
-      "title": "EXITitis in the UK: Gravity Estimates in the Aftermath of Brexit",
-      "doi": "10.1007/s10645-023-09421-3",
-      "aip": 59.272,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-t-kohl"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-t-kohl"
       ],
       "allDepartments": [
         "GEM"
@@ -14306,6 +14338,27 @@
       ]
     },
     {
+      "id": "doi:10.1002/smj.3532",
+      "year": 2023,
+      "title": "CSR decoupling within business groups and the risk of perceived greenwashing",
+      "doi": "10.1002/smj.3532",
+      "aip": 98.625,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-y-karaibrahimoglu"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-y-karaibrahimoglu"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.1037/ocp0000347",
       "year": 2023,
       "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
@@ -14520,27 +14573,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/smj.3532",
-      "year": 2023,
-      "title": "CSR decoupling within business groups and the risk of perceived greenwashing",
-      "doi": "10.1002/smj.3532",
-      "aip": 98.625,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-y-karaibrahimoglu"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-y-karaibrahimoglu"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.resourpol.2023.104283",
       "year": 2023,
       "title": "Barriers to local community participation in mining projects: The eroding role of power imbalance and information asymmetry",
@@ -14648,6 +14680,33 @@
       ]
     },
     {
+      "id": "rug:4c934c464ad625b9",
+      "year": 2023,
+      "title": "AI for managing open innovation: Opportunities, challenges, and a research agenda",
+      "doi": "",
+      "aip": 92.135,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-s-firk",
+        "ims-pmm-de-faria",
+        "ims-tlj-broekhuizen"
+      ],
+      "departments": [
+        "Accounting",
+        "IM&S"
+      ],
+      "allPeople": [
+        "acc-s-firk",
+        "ims-pmm-de-faria",
+        "ims-tlj-broekhuizen"
+      ],
+      "allDepartments": [
+        "Accounting",
+        "IM&S"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.jbusres.2023.114195",
       "year": 2023,
       "title": "Agency in the algorithmic age: The mechanisms and structures of blockchain-based organizing",
@@ -14711,33 +14770,6 @@
       ]
     },
     {
-      "id": "rug:4c934c464ad625b9",
-      "year": 2023,
-      "title": "AI for managing open innovation: Opportunities, challenges, and a research agenda",
-      "doi": "",
-      "aip": 92.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-s-firk",
-        "ims-pmm-de-faria",
-        "ims-tlj-broekhuizen"
-      ],
-      "departments": [
-        "Accounting",
-        "IM&S"
-      ],
-      "allPeople": [
-        "acc-s-firk",
-        "ims-pmm-de-faria",
-        "ims-tlj-broekhuizen"
-      ],
-      "allDepartments": [
-        "Accounting",
-        "IM&S"
-      ]
-    },
-    {
       "id": "rug:6d8bfeb503e907fc",
       "year": 2023,
       "title": "A share-first-plan-second policy for efficient cooperation in a multi-modal transportation corridor",
@@ -14781,6 +14813,27 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1177/00222429231164654",
+      "year": 2023,
+      "title": "A Meta-Analysis of Brand Extension Success: The Effects of Parent Brand Equity and Extension Fit",
+      "doi": "10.1177/00222429231164654",
+      "aip": 98.652,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-tha-bijmolt"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-tha-bijmolt"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {
@@ -14893,48 +14946,6 @@
       ]
     },
     {
-      "id": "rug:fb58382de023c509",
-      "year": 2023,
-      "title": "A branch and bound approach for the tower crane selection and positioning problem with respect to mutual interference",
-      "doi": "",
-      "aip": 65.678,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-m-dienstknecht"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-m-dienstknecht"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1177/00222429231164654",
-      "year": 2023,
-      "title": "A Meta-Analysis of Brand Extension Success: The Effects of Parent Brand Equity and Extension Fit",
-      "doi": "10.1177/00222429231164654",
-      "aip": 98.652,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-tha-bijmolt"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-tha-bijmolt"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1177/87569728221142229",
       "year": 2023,
       "title": "A Complexity Framework for Project Management Strategies",
@@ -14953,6 +14964,27 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "rug:fb58382de023c509",
+      "year": 2023,
+      "title": "A branch and bound approach for the tower crane selection and positioning problem with respect to mutual interference",
+      "doi": "",
+      "aip": 65.678,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-m-dienstknecht"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-m-dienstknecht"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -15102,27 +15134,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1136/bmjopen-2022-062691",
-      "year": 2022,
-      "title": "eHealth tools to assess neurological function: a systematic review protocol for a mapping exercise",
-      "doi": "10.1136/bmjopen-2022-062691",
-      "aip": 80.066,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-ei-metting"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-ei-metting"
-      ],
-      "allDepartments": [
-        "Operations"
       ]
     },
     {
@@ -15476,6 +15487,27 @@
       ]
     },
     {
+      "id": "doi:10.1177/00018392221117996",
+      "year": 2022,
+      "title": "The Two Blades of the Scissors: Performance Feedback and Intrinsic Attributes in Organizational Risk Taking",
+      "doi": "10.1177/00018392221117996",
+      "aip": 99.375,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-pjo-kuusela"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-pjo-kuusela"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
       "id": "rug:137a4c416f24b369",
       "year": 2022,
       "title": "The traveling salesman problem with drone resupply",
@@ -15497,6 +15529,27 @@
       ]
     },
     {
+      "id": "doi:10.1177/10946705211052410",
+      "year": 2022,
+      "title": "The Service-Profit Chain: Reflections, Revisions, and Reimaginations",
+      "doi": "10.1177/10946705211052410",
+      "aip": 96.789,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-kgkw-derfuss"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-kgkw-derfuss"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "rug:09080475e9370813",
       "year": 2022,
       "title": "The sales-marketing interface: A systematic literature review and directions for future research",
@@ -15515,6 +15568,27 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.3390/ijerph19042146",
+      "year": 2022,
+      "title": "The Role of Off-Job Crafting in Burnout Prevention during COVID-19 Crisis: A Longitudinal Study",
+      "doi": "10.3390/ijerph19042146",
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-j-de-bloom"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -15647,6 +15721,27 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "doi:10.1080/15252019.2022.2032492",
+      "year": 2022,
+      "title": "The Personalization Paradox in Facebook Advertising: The Mediating Effect of Relevance on the Personalization–Brand Attitude Relationship and the Moderating Effect of Intrusiveness",
+      "doi": "10.1080/15252019.2022.2032492",
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "mkt-jim-de-groot"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-jim-de-groot"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {
@@ -15843,90 +15938,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/00018392221117996",
-      "year": 2022,
-      "title": "The Two Blades of the Scissors: Performance Feedback and Intrinsic Attributes in Organizational Risk Taking",
-      "doi": "10.1177/00018392221117996",
-      "aip": 99.375,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-pjo-kuusela"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-pjo-kuusela"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/10946705211052410",
-      "year": 2022,
-      "title": "The Service-Profit Chain: Reflections, Revisions, and Reimaginations",
-      "doi": "10.1177/10946705211052410",
-      "aip": 96.789,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-kgkw-derfuss"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-kgkw-derfuss"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.3390/ijerph19042146",
-      "year": 2022,
-      "title": "The Role of Off-Job Crafting in Burnout Prevention during COVID-19 Crisis: A Longitudinal Study",
-      "doi": "10.3390/ijerph19042146",
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-j-de-bloom"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1080/15252019.2022.2032492",
-      "year": 2022,
-      "title": "The Personalization Paradox in Facebook Advertising: The Mediating Effect of Relevance on the Personalization–Brand Attitude Relationship and the Moderating Effect of Intrusiveness",
-      "doi": "10.1080/15252019.2022.2032492",
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "mkt-jim-de-groot"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-jim-de-groot"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1177/1042258720913022",
       "year": 2022,
       "title": "The Changing Role of Social Capital During the Venture Creation Process: A Multilevel Study",
@@ -16094,6 +16105,29 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "rug:ac3a9adc734789e1",
+      "year": 2022,
+      "title": "STAYhealthy: Die Rolle von Führung bei zunehmender Flexibilisierung der Arbeit an Hochschulen",
+      "doi": "",
+      "aip": null,
+      "aipComparable": true,
+      "aipStatus": "unresolved-aip-match",
+      "people": [
+        "hrmob-lb-mulder",
+        "hrmob-m-arnold"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-lb-mulder",
+        "hrmob-m-arnold"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -16272,29 +16306,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "rug:ac3a9adc734789e1",
-      "year": 2022,
-      "title": "STAYhealthy: Die Rolle von Führung bei zunehmender Flexibilisierung der Arbeit an Hochschulen",
-      "doi": "",
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "hrmob-lb-mulder",
-        "hrmob-m-arnold"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-lb-mulder",
-        "hrmob-m-arnold"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -17139,6 +17150,29 @@
       ]
     },
     {
+      "id": "rug:d83c165f1880df93",
+      "year": 2022,
+      "title": "How Urban Consolidation Centres affect distribution networks: An empirical investigation from the perspective of suppliers",
+      "doi": "",
+      "aip": 57.914,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-aj-dreischerf",
+        "ops-p-buijs"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-aj-dreischerf",
+        "ops-p-buijs"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1080/1359432x.2022.2033215",
       "year": 2022,
       "title": "How self-construals relate to employee incremental and radical creativity: A behavioral strategy perspective",
@@ -17175,29 +17209,6 @@
       ],
       "allPeople": [
         "ops-dp-van-donk"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "rug:d83c165f1880df93",
-      "year": 2022,
-      "title": "How Urban Consolidation Centres affect distribution networks: An empirical investigation from the perspective of suppliers",
-      "doi": "",
-      "aip": 57.914,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-aj-dreischerf",
-        "ops-p-buijs"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-aj-dreischerf",
-        "ops-p-buijs"
       ],
       "allDepartments": [
         "Operations"
@@ -17585,6 +17596,27 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "doi:10.1136/bmjopen-2022-062691",
+      "year": 2022,
+      "title": "eHealth tools to assess neurological function: a systematic review protocol for a mapping exercise",
+      "doi": "10.1136/bmjopen-2022-062691",
+      "aip": 80.066,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-ei-metting"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-ei-metting"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -18255,6 +18287,27 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.rser.2022.112744",
+      "year": 2022,
+      "title": "A Green Hydrogen Energy System: Optimal control strategies for integrated hydrogen storage and power generation with wind energy",
+      "doi": "10.1016/j.rser.2022.112744",
+      "aip": 96.245,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-ursavas"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-ursavas"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1002/mar.21733",
       "year": 2022,
       "title": "A good reason to buy: Justification drives the effect of advertising frames on impulsive socially responsible buying",
@@ -18291,27 +18344,6 @@
       ],
       "allPeople": [
         "ops-i-bakir"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.rser.2022.112744",
-      "year": 2022,
-      "title": "A Green Hydrogen Energy System: Optimal control strategies for integrated hydrogen storage and power generation with wind energy",
-      "doi": "10.1016/j.rser.2022.112744",
-      "aip": 96.245,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-e-ursavas"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-e-ursavas"
       ],
       "allDepartments": [
         "Operations"
@@ -18423,27 +18455,6 @@
       ]
     },
     {
-      "id": "doi:10.1098/rstb.2020.0143",
-      "year": 2021,
-      "title": "Understanding and combating misperceived polarization",
-      "doi": "10.1098/rstb.2020.0143",
-      "aip": 95.864,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-jm-lees"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-jm-lees"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1108/ijpdlm-04-2020-0125",
       "year": 2021,
       "title": "Understanding SME suppliers' response to supply chain finance: a transaction cost economics perspective",
@@ -18462,6 +18473,27 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1098/rstb.2020.0143",
+      "year": 2021,
+      "title": "Understanding and combating misperceived polarization",
+      "doi": "10.1098/rstb.2020.0143",
+      "aip": 95.864,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-jm-lees"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -18616,27 +18648,6 @@
       ]
     },
     {
-      "id": "rug:f1d3f96758699bb1",
-      "year": 2021,
-      "title": "The dialectics of technology standardization",
-      "doi": "",
-      "aip": 97.678,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-u-schultze"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-u-schultze"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1111/abac.12220",
       "year": 2021,
       "title": "The Effect of Auditor Style on Reporting Quality: Evidence from Germany",
@@ -18657,6 +18668,27 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "rug:f1d3f96758699bb1",
+      "year": 2021,
+      "title": "The dialectics of technology standardization",
+      "doi": "",
+      "aip": 97.678,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-u-schultze"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-u-schultze"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -19851,6 +19883,27 @@
       ]
     },
     {
+      "id": "doi:10.1080/00130095.2021.1920391",
+      "year": 2021,
+      "title": "Does Successful Innovation Require Large Urban Areas? Germany as a Counterexample",
+      "doi": "10.1080/00130095.2021.1920391",
+      "aip": 97.227,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-m-wyrwich"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-m-wyrwich"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
       "id": "rug:1210eb524208090a",
       "year": 2021,
       "title": "Does ownership type affect environmental disclosure?",
@@ -19893,24 +19946,24 @@
       ]
     },
     {
-      "id": "doi:10.1080/00130095.2021.1920391",
+      "id": "doi:10.1177/0007650319898839",
       "year": 2021,
-      "title": "Does Successful Innovation Require Large Urban Areas? Germany as a Counterexample",
-      "doi": "10.1080/00130095.2021.1920391",
-      "aip": 97.227,
+      "title": "Do Markets Punish or Reward Corporate Social Responsibility Decoupling?",
+      "doi": "10.1177/0007650319898839",
+      "aip": 93.288,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "ims-m-wyrwich"
+        "acc-n-hussain"
       ],
       "departments": [
-        "IM&S"
+        "Accounting"
       ],
       "allPeople": [
-        "ims-m-wyrwich"
+        "acc-n-hussain"
       ],
       "allDepartments": [
-        "IM&S"
+        "Accounting"
       ]
     },
     {
@@ -19929,27 +19982,6 @@
       ],
       "allPeople": [
         "acc-ca-huijgen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1177/0007650319898839",
-      "year": 2021,
-      "title": "Do Markets Punish or Reward Corporate Social Responsibility Decoupling?",
-      "doi": "10.1177/0007650319898839",
-      "aip": 93.288,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-n-hussain"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-n-hussain"
       ],
       "allDepartments": [
         "Accounting"
@@ -20201,6 +20233,27 @@
       ]
     },
     {
+      "id": "rug:b34e47750bcf008a",
+      "year": 2021,
+      "title": "COVID-19 as Industry Forcing Function: Challenges for Entrepreneurship in the Post-Pandemic Future",
+      "doi": "",
+      "aip": 37.382,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-o-belousova"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-o-belousova"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
       "id": "rug:a16b8e608ea47aa0",
       "year": 2021,
       "title": "Corporate culture and banking",
@@ -20353,27 +20406,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "rug:b34e47750bcf008a",
-      "year": 2021,
-      "title": "COVID-19 as Industry Forcing Function: Challenges for Entrepreneurship in the Post-Pandemic Future",
-      "doi": "",
-      "aip": 37.382,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-o-belousova"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-o-belousova"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -20633,27 +20665,6 @@
       ]
     },
     {
-      "id": "rug:fc89b3047b593234",
-      "year": 2021,
-      "title": "A myriad of factors influencing the implementation of transitional care innovations: a scoping review",
-      "doi": "",
-      "aip": 96.647,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-fakha"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-fakha"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1287/trsc.2021.1075",
       "year": 2021,
       "title": "A Special Case of the Multiple Traveling Salesmen Problem in End-of-Aisle Picking Systems",
@@ -20672,6 +20683,27 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "rug:fc89b3047b593234",
+      "year": 2021,
+      "title": "A myriad of factors influencing the implementation of transitional care innovations: a scoping review",
+      "doi": "",
+      "aip": 96.647,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-a-fakha"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-a-fakha"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -20939,6 +20971,27 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.intmar.2020.04.006",
+      "year": 2020,
+      "title": "The Role of Marketing in Digital Business Platforms",
+      "doi": "10.1016/j.intmar.2020.04.006",
+      "aip": 95.135,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-je-wieringa"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-je-wieringa"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.ijresmar.2020.10.004",
       "year": 2020,
       "title": "The risk of programmatic advertising: Effects of website quality on advertising effectiveness",
@@ -20957,6 +21010,48 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "rug:26e8433a253bd982",
+      "year": 2020,
+      "title": "The Relationship Between Sociodemographics and Environmental Values Across Seven European Countries",
+      "doi": "",
+      "aip": 78.713,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-jim-de-groot"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-jim-de-groot"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.2196/23668",
+      "year": 2020,
+      "title": "The Quality of Instructional YouTube Videos for the Administration of Intranasal Spray: Observational Study",
+      "doi": "10.2196/23668",
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "ops-ei-metting"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-ei-metting"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -20981,6 +21076,27 @@
       ]
     },
     {
+      "id": "rug:08818d040bda9991",
+      "year": 2020,
+      "title": "The Link Between Employees' Sense of Vitality and Proactivity: Investigating the Moderating Role of Personal Fear of Invalidity",
+      "doi": "",
+      "aip": 78.713,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-jm-mascareno-apodaca"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-jm-mascareno-apodaca"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "rug:98db98ce0ef849dd",
       "year": 2020,
       "title": "The international epidemiological transition and the education gender gap",
@@ -20999,6 +21115,27 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "rug:45083162d28d8a01",
+      "year": 2020,
+      "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
+      "doi": "",
+      "aip": 91.476,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-y-yuan"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-y-yuan"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -21048,132 +21185,6 @@
       ]
     },
     {
-      "id": "rug:616c135740ad0ab3",
-      "year": 2020,
-      "title": "The benefit of receding horizon control: Near-optimal policies for stochastic inventory control",
-      "doi": "",
-      "aip": 90.869,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-oa-kilic"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-oa-kilic"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.intmar.2020.04.006",
-      "year": 2020,
-      "title": "The Role of Marketing in Digital Business Platforms",
-      "doi": "10.1016/j.intmar.2020.04.006",
-      "aip": 95.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-je-wieringa"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-je-wieringa"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "rug:26e8433a253bd982",
-      "year": 2020,
-      "title": "The Relationship Between Sociodemographics and Environmental Values Across Seven European Countries",
-      "doi": "",
-      "aip": 78.713,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-jim-de-groot"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-jim-de-groot"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.2196/23668",
-      "year": 2020,
-      "title": "The Quality of Instructional YouTube Videos for the Administration of Intranasal Spray: Observational Study",
-      "doi": "10.2196/23668",
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "ops-ei-metting"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-ei-metting"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "rug:08818d040bda9991",
-      "year": 2020,
-      "title": "The Link Between Employees' Sense of Vitality and Proactivity: Investigating the Moderating Role of Personal Fear of Invalidity",
-      "doi": "",
-      "aip": 78.713,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-jm-mascareno-apodaca"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-jm-mascareno-apodaca"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "rug:45083162d28d8a01",
-      "year": 2020,
-      "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
-      "doi": "",
-      "aip": 91.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-y-yuan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-y-yuan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "rug:fb0d29efb902d0ba",
       "year": 2020,
       "title": "The Dark Side of Relational Leadership: Positive and Negative Reciprocity as Fundamental Drivers of Follower's Intended Pro-leader and Pro-self Unethical Behavior",
@@ -21192,6 +21203,27 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "rug:616c135740ad0ab3",
+      "year": 2020,
+      "title": "The benefit of receding horizon control: Near-optimal policies for stochastic inventory control",
+      "doi": "",
+      "aip": 90.869,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-oa-kilic"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-oa-kilic"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -22573,27 +22605,6 @@
       ]
     },
     {
-      "id": "rug:530557577060d70e",
-      "year": 2020,
-      "title": "Condition-based maintenance in the cyclic patrolling repairman problem",
-      "doi": "",
-      "aip": 91.385,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-b-de-jonge"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-b-de-jonge"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "rug:fb70f77518f79954",
       "year": 2020,
       "title": "Condition-Based Production Planning: Adjusting Production Rates to Balance Output and Failure Risk",
@@ -22615,6 +22626,27 @@
         "ops-j-veldman",
         "ops-nd-van-foreest",
         "ops-rh-teunter"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "rug:530557577060d70e",
+      "year": 2020,
+      "title": "Condition-based maintenance in the cyclic patrolling repairman problem",
+      "doi": "",
+      "aip": 91.385,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-b-de-jonge"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-b-de-jonge"
       ],
       "allDepartments": [
         "Operations"
@@ -23225,6 +23257,27 @@
       ]
     },
     {
+      "id": "doi:10.1080/09638180.2018.1553728",
+      "year": 2019,
+      "title": "The Impact of Management Control on Employee Motivation and Performance in the Public Sector",
+      "doi": "10.1080/09638180.2018.1553728",
+      "aip": 78.496,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-pmg-dirks"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-pmg-dirks"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.1177/0018726718806351",
       "year": 2019,
       "title": "The impact of leader‒member exchange on follower performance in light of the larger social network",
@@ -23249,27 +23302,6 @@
       "allDepartments": [
         "HRM&OB",
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1080/09638180.2018.1553728",
-      "year": 2019,
-      "title": "The Impact of Management Control on Employee Motivation and Performance in the Public Sector",
-      "doi": "10.1080/09638180.2018.1553728",
-      "aip": 78.496,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-pmg-dirks"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-pmg-dirks"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -23571,6 +23603,27 @@
       ]
     },
     {
+      "id": "doi:10.1142/s136391961950004x",
+      "year": 2019,
+      "title": "ONE SIZE (DOES NOT) FIT ALL: EVIDENCE OF SIMILARITIES AND DIFFERENCES BETWEEN PRODUCT INNOVATION MANAGEMENT IN HIGH- AND LOW-TECH MANUFACTURING FIRMS",
+      "doi": "10.1142/s136391961950004x",
+      "aip": 40.793,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-kre-huizingh"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-kre-huizingh"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
       "id": "doi:10.1007/s11075-018-0589-9",
       "year": 2019,
       "title": "On the problem of starting points for iterative methods",
@@ -23635,27 +23688,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1142/s136391961950004x",
-      "year": 2019,
-      "title": "ONE SIZE (DOES NOT) FIT ALL: EVIDENCE OF SIMILARITIES AND DIFFERENCES BETWEEN PRODUCT INNOVATION MANAGEMENT IN HIGH- AND LOW-TECH MANUFACTURING FIRMS",
-      "doi": "10.1142/s136391961950004x",
-      "aip": 40.793,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-kre-huizingh"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-kre-huizingh"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -23764,27 +23796,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.ejor.2019.06.026",
-      "year": 2019,
-      "title": "Managing strategic inventories under investment in process improvement",
-      "doi": "10.1016/j.ejor.2019.06.026",
-      "aip": 88.289,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-j-veldman"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-j-veldman"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "rug:542e422af57969df",
       "year": 2019,
       "title": "Managing Value Tensions in Collective Social Entrepreneurship: The Role of Temporal, Structural, and Collaborative Compromise",
@@ -23803,6 +23814,27 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ejor.2019.06.026",
+      "year": 2019,
+      "title": "Managing strategic inventories under investment in process improvement",
+      "doi": "10.1016/j.ejor.2019.06.026",
+      "aip": 88.289,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-j-veldman"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-j-veldman"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -24523,27 +24555,6 @@
       ]
     },
     {
-      "id": "rug:02c8594127f8c4aa",
-      "year": 2018,
-      "title": "Unlocking the value of real options: how firm-specific learning conditions affect R&D investments under uncertainty",
-      "doi": "",
-      "aip": 97.321,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-j-ross"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-j-ross"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
       "id": "rug:548631cf97923048",
       "year": 2018,
       "title": "US aid, US educated leaders and economic ideology",
@@ -24559,6 +24570,27 @@
       ],
       "allPeople": [
         "gem-a-minasyan"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
+      "id": "rug:02c8594127f8c4aa",
+      "year": 2018,
+      "title": "Unlocking the value of real options: how firm-specific learning conditions affect R&D investments under uncertainty",
+      "doi": "",
+      "aip": 97.321,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "gem-j-ross"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-j-ross"
       ],
       "allDepartments": [
         "GEM"
@@ -24583,31 +24615,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1002/job.2260",
-      "year": 2018,
-      "title": "The dynamic relationship between multiple team membership and individual job performance in knowledge‐intensive work",
-      "doi": "10.1002/job.2260",
-      "aip": 97.389,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt",
-        "hrmob-hj-van-de-brake"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt",
-        "hrmob-hj-van-de-brake"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -24656,6 +24663,31 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.1002/job.2260",
+      "year": 2018,
+      "title": "The dynamic relationship between multiple team membership and individual job performance in knowledge‐intensive work",
+      "doi": "10.1002/job.2260",
+      "aip": 97.389,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt",
+        "hrmob-hj-van-de-brake"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt",
+        "hrmob-hj-van-de-brake"
+      ],
+      "allDepartments": [
+        "HRM&OB"
       ]
     },
     {
@@ -25731,27 +25763,6 @@
       ]
     },
     {
-      "id": "doi:10.1108/jepp-d-18-00023",
-      "year": 2018,
-      "title": "An evaluation of German active labour market policies: a review of the empirical evidence",
-      "doi": "10.1108/jepp-d-18-00023",
-      "aip": 38.972,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-m-wyrwich"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-m-wyrwich"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1287/ijoc.2017.0792",
       "year": 2018,
       "title": "An Extended Mixed-Integer Programming Formulation and Dynamic Cut Generation Approach for the Stochastic Lot-Sizing Problem",
@@ -25770,6 +25781,27 @@
       ],
       "allDepartments": [
         "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1108/jepp-d-18-00023",
+      "year": 2018,
+      "title": "An evaluation of German active labour market policies: a review of the empirical evidence",
+      "doi": "10.1108/jepp-d-18-00023",
+      "aip": 38.972,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-m-wyrwich"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-m-wyrwich"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -25997,6 +26029,27 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.intmar.2017.01.003",
+      "year": 2017,
+      "title": "The Showrooming Phenomenon: It's More than Just about Price",
+      "doi": "10.1016/j.intmar.2017.01.003",
+      "aip": 95.135,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-pc-verhoef"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-pc-verhoef"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
       "id": "rug:8bf0d2d2d09f5432",
       "year": 2017,
       "title": "The pickup and delivery traveling salesman problem with handling costs",
@@ -26066,48 +26119,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/00207543.2016.1268729",
-      "year": 2017,
-      "title": "The extent of knowledge of Quick Response Manufacturing principles: an exploratory transnational study",
-      "doi": "10.1080/00207543.2016.1268729",
-      "aip": 84.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-j-riezebos"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-j-riezebos"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.intmar.2017.01.003",
-      "year": 2017,
-      "title": "The Showrooming Phenomenon: It's More than Just about Price",
-      "doi": "10.1016/j.intmar.2017.01.003",
-      "aip": 95.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-pc-verhoef"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-pc-verhoef"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1111/apps.12104",
       "year": 2017,
       "title": "The Hazard of Teetering at the Top and Being Tied to the Bottom: The Interactive Relationship of Power, Stability, and Social Dominance Orientation with Work Stress",
@@ -26126,6 +26137,27 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "doi:10.1080/00207543.2016.1268729",
+      "year": 2017,
+      "title": "The extent of knowledge of Quick Response Manufacturing principles: an exploratory transnational study",
+      "doi": "10.1080/00207543.2016.1268729",
+      "aip": 84.7,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-j-riezebos"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-j-riezebos"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -26683,6 +26715,23 @@
       ]
     },
     {
+      "id": "doi:10.1111/twec.12416",
+      "year": 2017,
+      "title": "Does Institutional Change Spread Across Countries? Explaining Spatial Patterns in Human Rights",
+      "doi": "10.1111/twec.12416",
+      "aip": 58.606,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [],
+      "departments": [],
+      "allPeople": [
+        "gem-mj-gerritse"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "rug:9e7a23d10aa068e5",
       "year": 2017,
       "title": "Does aid effectiveness depend on the quality of donors?",
@@ -26698,23 +26747,6 @@
       ],
       "allPeople": [
         "gem-a-minasyan"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1111/twec.12416",
-      "year": 2017,
-      "title": "Does Institutional Change Spread Across Countries? Explaining Spatial Patterns in Human Rights",
-      "doi": "10.1111/twec.12416",
-      "aip": 58.606,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "gem-mj-gerritse"
       ],
       "allDepartments": [
         "GEM"
@@ -27103,29 +27135,6 @@
       ]
     },
     {
-      "id": "rug:9d5f8bd9d4987396",
-      "year": 2016,
-      "title": "To be entrepreneurial, or not to be entrepreneurial? Explaining differences in franchisee entrepreneurial behavior within a franchise system",
-      "doi": "",
-      "aip": 79.956,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-epm-croonen",
-        "ims-mj-brand"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-epm-croonen",
-        "ims-mj-brand"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "rug:f32e30b74f1e8191",
       "year": 2016,
       "title": "To Keep or Not to Keep: Effects of Online Customer Reviews on Product Returns",
@@ -27169,6 +27178,29 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "rug:9d5f8bd9d4987396",
+      "year": 2016,
+      "title": "To be entrepreneurial, or not to be entrepreneurial? Explaining differences in franchisee entrepreneurial behavior within a franchise system",
+      "doi": "",
+      "aip": 79.956,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-epm-croonen",
+        "ims-mj-brand"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-epm-croonen",
+        "ims-mj-brand"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -27218,52 +27250,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.ijresmar.2015.12.001",
-      "year": 2016,
-      "title": "The effectiveness of different forms of online advertising for purchase conversion in a multiple-channel attribution framework",
-      "doi": "10.1016/j.ijresmar.2015.12.001",
-      "aip": 94.297,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-e-van-haan"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-e-van-haan"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "rug:fb9a7fe79787267d",
-      "year": 2016,
-      "title": "The dual impact of online communication on older adults’ social connectivity",
-      "doi": "",
-      "aip": 72.484,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra",
-        "ims-mag-van-offenbeek",
-        "ims-ml-hage"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra",
-        "ims-mag-van-offenbeek",
-        "ims-ml-hage"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1371/journal.pone.0159950",
       "year": 2016,
       "title": "The Facial Appearance of CEOs: Faces Signal Selection but Not Performance",
@@ -27307,6 +27293,52 @@
       "allDepartments": [
         "IM&S",
         "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ijresmar.2015.12.001",
+      "year": 2016,
+      "title": "The effectiveness of different forms of online advertising for purchase conversion in a multiple-channel attribution framework",
+      "doi": "10.1016/j.ijresmar.2015.12.001",
+      "aip": 94.297,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-e-van-haan"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-e-van-haan"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
+      "id": "rug:fb9a7fe79787267d",
+      "year": 2016,
+      "title": "The dual impact of online communication on older adults’ social connectivity",
+      "doi": "",
+      "aip": 72.484,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-a-boonstra",
+        "ims-mag-van-offenbeek",
+        "ims-ml-hage"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-a-boonstra",
+        "ims-mag-van-offenbeek",
+        "ims-ml-hage"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -27983,6 +28015,27 @@
       ]
     },
     {
+      "id": "doi:10.1080/00343404.2012.708729",
+      "year": 2015,
+      "title": "The Role of Entry and Market Selection for the Dynamics of Regional Diversity and Specialization",
+      "doi": "10.1080/00343404.2012.708729",
+      "aip": 87.305,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-f-noseleit"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-f-noseleit"
+      ],
+      "allDepartments": [
+        "IM&S"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.ijresmar.2015.02.004",
       "year": 2015,
       "title": "The predictive ability of different customer feedback metrics for retention",
@@ -28048,27 +28101,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/00343404.2012.708729",
-      "year": 2015,
-      "title": "The Role of Entry and Market Selection for the Dynamics of Regional Diversity and Specialization",
-      "doi": "10.1080/00343404.2012.708729",
-      "aip": 87.305,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-f-noseleit"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-f-noseleit"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1002/hec.3030",
       "year": 2015,
       "title": "The Effect of Financial and Educational Incentives on Rational Prescribing. A State-Space Approach",
@@ -28090,27 +28122,6 @@
       ]
     },
     {
-      "id": "rug:02b18453f24ebd36",
-      "year": 2015,
-      "title": "Supervisory boards in high growth SMEs and mandated board members: two dilemmas",
-      "doi": "",
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "ims-mj-brand"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-mj-brand"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/0149206312471386",
       "year": 2015,
       "title": "Supervisory Responsiveness and Employee Self-Perceived Status and Voice Behavior",
@@ -28129,6 +28140,27 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "rug:02b18453f24ebd36",
+      "year": 2015,
+      "title": "Supervisory boards in high growth SMEs and mandated board members: two dilemmas",
+      "doi": "",
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "ims-mj-brand"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-mj-brand"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -29483,6 +29515,27 @@
       ]
     },
     {
+      "id": "doi:10.1002/pad.1612",
+      "year": 2013,
+      "title": "THE DESIGN AND USE OF PERFORMANCE INFORMATION IN INDONESIAN LOCAL GOVERNMENTS UNDER DIVERGING STAKEHOLDER PRESSURES",
+      "doi": "10.1002/pad.1612",
+      "aip": 63.411,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-s-tillema"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-s-tillema"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.5465/19416520.2013.766405",
       "year": 2013,
       "title": "Team Receptivity to Newcomers: Five Decades of Evidence and Future Research Themes",
@@ -29503,27 +29556,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1002/pad.1612",
-      "year": 2013,
-      "title": "THE DESIGN AND USE OF PERFORMANCE INFORMATION IN INDONESIAN LOCAL GOVERNMENTS UNDER DIVERGING STAKEHOLDER PRESSURES",
-      "doi": "10.1002/pad.1612",
-      "aip": 63.411,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-s-tillema"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-s-tillema"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -29993,6 +30025,27 @@
       ]
     },
     {
+      "id": "doi:10.1002/bdm.736",
+      "year": 2012,
+      "title": "The Price of a Piece of Cheese: Value from Fit Between Epistemic Needs and a Learning Versus an Outcome Focus",
+      "doi": "10.1002/bdm.736",
+      "aip": 81.891,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-ba-nijstad"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-ba-nijstad"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "doi:10.1080/00140139.2011.638403",
       "year": 2012,
       "title": "The influence of music on mood and performance while driving",
@@ -30036,27 +30089,6 @@
       "allDepartments": [
         "IM&S",
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1002/bdm.736",
-      "year": 2012,
-      "title": "The Price of a Piece of Cheese: Value from Fit Between Epistemic Needs and a Learning Versus an Outcome Focus",
-      "doi": "10.1002/bdm.736",
-      "aip": 81.891,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-ba-nijstad"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-ba-nijstad"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -30532,27 +30564,6 @@
       ]
     },
     {
-      "id": "rug:10670d579dff1585",
-      "year": 2011,
-      "title": "The effect of leadership style on the information receivers' reaction to management accounting change",
-      "doi": "",
-      "aip": 86.868,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-ep-jansen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-ep-jansen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1002/mde.1539",
       "year": 2011,
       "title": "The Effects of Personality Composition and Decision‐making Processes on Change Preferences of Self‐managing Teams",
@@ -30592,6 +30603,27 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "rug:10670d579dff1585",
+      "year": 2011,
+      "title": "The effect of leadership style on the information receivers' reaction to management accounting change",
+      "doi": "",
+      "aip": 86.868,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "acc-ep-jansen"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-ep-jansen"
+      ],
+      "allDepartments": [
+        "Accounting"
       ]
     },
     {
@@ -31346,27 +31378,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/00207540903290282",
-      "year": 2010,
-      "title": "Lean for the process industries–dealing with complexity, by P. L. King",
-      "doi": "10.1080/00207540903290282",
-      "aip": 84.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-dp-van-donk"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-dp-van-donk"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1287/inte.1100.0503",
       "year": 2010,
       "title": "Lean Production Control at a High-Variety, Low-Volume Parts Manufacturer",
@@ -31382,6 +31393,27 @@
       ],
       "allPeople": [
         "ops-jac-bokhorst"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1080/00207540903290282",
+      "year": 2010,
+      "title": "Lean for the process industries–dealing with complexity, by P. L. King",
+      "doi": "10.1080/00207540903290282",
+      "aip": 84.7,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-dp-van-donk"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-dp-van-donk"
       ],
       "allDepartments": [
         "Operations"
@@ -31474,6 +31506,29 @@
       ]
     },
     {
+      "id": "doi:10.1177/1094670510375599",
+      "year": 2010,
+      "title": "Customer Engagement Behavior: Theoretical Foundations and Research Directions",
+      "doi": "10.1177/1094670510375599",
+      "aip": 96.789,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-j-van-doorn",
+        "mkt-pc-verhoef"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-j-van-doorn",
+        "mkt-pc-verhoef"
+      ],
+      "allDepartments": [
+        "Marketing"
+      ]
+    },
+    {
       "id": "doi:10.1177/1094670510375461",
       "year": 2010,
       "title": "Customer Engagement as a New Perspective in Customer Management",
@@ -31495,22 +31550,20 @@
       ]
     },
     {
-      "id": "doi:10.1177/1094670510375599",
+      "id": "doi:10.1016/j.intmar.2010.02.009",
       "year": 2010,
-      "title": "Customer Engagement Behavior: Theoretical Foundations and Research Directions",
-      "doi": "10.1177/1094670510375599",
-      "aip": 96.789,
+      "title": "CRM in Data-Rich Multichannel Retailing Environments: A Review and Future Research Directions",
+      "doi": "10.1016/j.intmar.2010.02.009",
+      "aip": 95.135,
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "mkt-j-van-doorn",
         "mkt-pc-verhoef"
       ],
       "departments": [
         "Marketing"
       ],
       "allPeople": [
-        "mkt-j-van-doorn",
         "mkt-pc-verhoef"
       ],
       "allDepartments": [
@@ -31540,27 +31593,6 @@
       "allDepartments": [
         "HRM&OB",
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.intmar.2010.02.009",
-      "year": 2010,
-      "title": "CRM in Data-Rich Multichannel Retailing Environments: A Review and Future Research Directions",
-      "doi": "10.1016/j.intmar.2010.02.009",
-      "aip": 95.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-pc-verhoef"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-pc-verhoef"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -33108,10 +33140,10 @@
   "qualitySummary": {
     "generatedOn": "2026-06-08",
     "scope": "Benchmark departments excluding HRM&OB",
-    "people": 169,
+    "people": 170,
     "qualityDecisionCounts": {
       "needs_manual_verification": 15,
-      "usable": 153,
+      "usable": 154,
       "usable_with_caution": 1
     },
     "qualityDecisionCountsByDepartment": {
@@ -33121,7 +33153,7 @@
       },
       "GEM": {
         "needs_manual_verification": 1,
-        "usable": 23,
+        "usable": 24,
         "usable_with_caution": 1
       },
       "IM&S": {
@@ -33137,12 +33169,12 @@
       }
     },
     "coverageDecisionCounts": {
-      "include_with_caution": 16,
+      "include_with_caution": 17,
       "exclude_for_now": 11,
       "include": 140,
       "review": 2
     },
-    "denominatorUsablePeople": 153,
+    "denominatorUsablePeople": 154,
     "rankableAipGapRows": 0,
     "aipNotInSourceRows": 148,
     "possibleDuplicateGroups": 0,

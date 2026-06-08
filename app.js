@@ -22,7 +22,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1342";
+const DATA_VERSION = "20260608-1617";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
