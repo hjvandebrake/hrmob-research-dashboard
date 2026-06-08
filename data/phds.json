@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "generatedOn": "2026-06-06",
+    "sourceNote": "Initial source-backed list of defended PhD theses where supplied roster members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
+    "scope": "Completed/defended PhDs only; committee/examiner roles are excluded."
+  },
+  "theses": [
+    {
+      "id": "phd-zhang-2025-objectification",
+      "year": 2025,
+      "defenseDate": "2025-09-12",
+      "candidate": "Jinghao Zhang",
+      "title": "Objectification in the Leader-Follower Relationship",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"},
+        {"personId": "SB", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/objectification-in-the-leader-follower-relationship"
+    },
+    {
+      "id": "phd-chen-2025-team-absorption",
+      "year": 2025,
+      "defenseDate": "2025-05-15",
+      "candidate": "Cheng Chen",
+      "title": "Overcoming Challenges in Team Absorption of External Information",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"},
+        {"personId": "SB", "role": "Co-supervisor"},
+        {"personId": "YY", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/overcoming-challenges-in-team-absorption-of-external-information-"
+    },
+    {
+      "id": "phd-van-hinsberg-2025-cracked-ceilings",
+      "year": 2025,
+      "defenseDate": "2025-06-05",
+      "candidate": "Kyra van Hinsberg",
+      "title": "Cracked Ceilings, Unstable Footing: Persistent Risks in Women's Representation and Retention in Top Leadership",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"},
+        {"personId": "JS", "role": "Supervisor"},
+        {"personId": "JJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/cracked-ceilings-unstable-footing-persistent-risks-in-womens-repr/"
+    },
+    {
+      "id": "phd-de-vries-wout-2025-crisis-leadership",
+      "year": 2025,
+      "defenseDate": "2025-01-09",
+      "candidate": "Wout de Vries",
+      "title": "Taking the Helm in Dire Straits: Leadership in Times of Crisis",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/taking-the-helm-in-dire-straits-leadership-in-times-of-crisis/"
+    },
+    {
+      "id": "phd-pit-2024-beyond-contract",
+      "year": 2024,
+      "defenseDate": "2024-11-11",
+      "candidate": "Martin Pit",
+      "title": "Beyond the Contract: Exploring the Multi-Faceted Nature of Governance and Disruptions in Strategic Alliances",
+      "institution": "University of Groningen",
+      "department": "Innovation & Organisation",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/beyond-the-contract-exploring-the-multi-faceted-nature-of-governa"
+    },
+    {
+      "id": "phd-ahrens-2024-boards",
+      "year": 2024,
+      "defenseDate": "2024-07-11",
+      "candidate": "Fabian Klaus Ahrens",
+      "title": "Synthesizing and Extending Behavioral Research on Boards of Directors",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"},
+        {"personId": "LM", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/synthesizing-and-extending-behavioral-research-on-boards-of-direc"
+    },
+    {
+      "id": "phd-wong-2024-between-cracks",
+      "year": 2024,
+      "defenseDate": "2024-07-04",
+      "candidate": "Edwina Wong",
+      "title": "Between the Cracks: Looking Beyond White Feminism in DEI Interventions for Women",
+      "institution": "University of Groningen",
+      "department": "Economics and Business",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"},
+        {"personId": "MR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG PhD ceremony",
+      "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2024?hfId=122016&lang=en"
+    },
+    {
+      "id": "phd-ivanovic-2024-communication-resilience",
+      "year": 2024,
+      "defenseDate": "2024-03-18",
+      "candidate": "Nevena Ivanovic",
+      "title": "Communication Markers of Resilience: Activity, Timing, and Mechanisms of Effective Communication Amidst Adverse Events",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"},
+        {"personId": "TDV", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/communication-markers-of-resilience-activity-timing-and-mechanism"
+    },
+    {
+      "id": "phd-aral-2024-productivity",
+      "year": 2024,
+      "defenseDate": "2024-02-15",
+      "candidate": "Eda Aral-Kilic",
+      "title": "The Productivity Puzzle, Management Practices and Leadership",
+      "institution": "University of Groningen",
+      "department": "Global Economics & Management",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/the-productivity-puzzle-management-practices-and-leadership/"
+    },
+    {
+      "id": "phd-prompeler-2024-esg-boardroom",
+      "year": 2024,
+      "defenseDate": "2024-01-25",
+      "candidate": "Julia Prompeler",
+      "title": "Environmental, Social, and Governance Demands in the Boardroom",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"},
+        {"personId": "JS", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/environmental-social-and-governance-demands-in-the-boardroom-expl"
+    },
+    {
+      "id": "phd-kosenkranius-2023-needs-crafting",
+      "year": 2023,
+      "defenseDate": "2023-10-19",
+      "candidate": "Merly Kosenkranius",
+      "title": "Needs-Based Crafting: The Antecedents and Outcomes of Employees' Crafting in Different Life Domains",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JDB", "role": "Supervisor"},
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/needs-based-crafting-the-antecedents-and-outcomes-of-employees-cr/"
+    },
+    {
+      "id": "phd-wronska-2023-creative-state",
+      "year": 2023,
+      "defenseDate": "2023-11-09",
+      "candidate": "Marta Wronska",
+      "title": "The Creative State of Mind: Penetrating Creativity in the Here and Now",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/the-creative-state-of-mind-penetrating-creativity-in-the-here-and/"
+    },
+    {
+      "id": "phd-weck-2023-upper-echelon",
+      "year": 2023,
+      "defenseDate": "2023-07-06",
+      "candidate": "Michelle Weck",
+      "title": "Influence at the Upper Echelon: An In-Depth Analysis of Boards and CEOs",
+      "institution": "University of Groningen",
+      "department": "Innovation & Organisation",
+      "roles": [
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/influence-at-the-upper-echelon-an-in-depth-analysis-of-boards-and"
+    },
+    {
+      "id": "phd-tolkamp-2022-creativity",
+      "year": 2022,
+      "defenseDate": "2022-07-04",
+      "candidate": "Gerben Tolkamp",
+      "title": "Understanding Acts of Creativity: An Examination of the Creative Process Through Three Different Conceptual Lenses",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/understanding-acts-of-creativity-an-examination-of-the-creative-p"
+    },
+    {
+      "id": "phd-kujanpaa-2022-leisure",
+      "year": 2022,
+      "defenseDate": "2022-03-03",
+      "candidate": "Miika Kujanpaa",
+      "title": "In Need of Leisure: Investigating the Relationship Between Off-Job Crafting, Psychological Needs Satisfaction and Optimal Functioning",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JDB", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/in-need-of-leisure-investigating-the-relationship-between-off-job"
+    },
+    {
+      "id": "phd-wu-2021-team-creativity",
+      "year": 2021,
+      "defenseDate": "2021-08-25",
+      "candidate": "Suqing Wu",
+      "title": "Exploiting Individual Creative Inputs for Team Creativity: A Role Differentiation Approach",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"},
+        {"personId": "YY", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/exploiting-individual-creative-inputs-for-team-creativity-a-role-"
+    },
+    {
+      "id": "phd-kuilman-2021-ethical-decision-making",
+      "year": 2021,
+      "defenseDate": "2021-05-17",
+      "candidate": "Luppo Kuilman",
+      "title": "Antecedents of Ethical Decision Making by Physician Assistants and Nurse Practitioners: Validation of Instruments and Their Application",
+      "institution": "University of Groningen",
+      "department": "Health professions / ethics",
+      "roles": [
+        {"personId": "LM", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/antecedents-of-ethical-decision-making-by-physician-assistants-an/"
+    },
+    {
+      "id": "phd-de-waal-2020-effective-supervision",
+      "year": 2020,
+      "defenseDate": "2020-10-22",
+      "candidate": "Melanie Mira de Waal",
+      "title": "The Balancing Act of Effective Supervision: Understanding the Relationship Between Internal and External Supervision",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"},
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/the-balancing-act-of-effective-supervision-understanding-the-rela/"
+    },
+    {
+      "id": "phd-oedzes-2020-informal-hierarchy",
+      "year": 2020,
+      "defenseDate": "2020-09-14",
+      "candidate": "Jacoba Oedzes",
+      "title": "Informal Hierarchy: An Investigation Into the Antecedents and Consequences",
+      "institution": "University of Groningen",
+      "department": "Economics and Business",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"},
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG PhD ceremony",
+      "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2020?hfId=117569&lang=en"
+    },
+    {
+      "id": "phd-shao-2020-workplace-tensions",
+      "year": 2020,
+      "defenseDate": "2020-10-15",
+      "candidate": "Yan Shao",
+      "title": "Individual Approaches to Workplace Tensions: Implications for Creativity and Work Engagement",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/individual-approaches-to-workplace-tensions-implications-for-crea/"
+    },
+    {
+      "id": "phd-feenstra-2020-power-organizational-life",
+      "year": 2020,
+      "defenseDate": "2020-02-03",
+      "candidate": "Sanne Feenstra",
+      "title": "Power in Organizational Life: An Investigation of How Stable and Unstable Power Affect Important Organizational and Leadership Outcomes",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"},
+        {"personId": "JJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/power-in-organizational-life-an-investigation-of-how-stable-and-u"
+    },
+    {
+      "id": "phd-van-de-brake-2019-multiple-team-membership",
+      "year": 2019,
+      "defenseDate": "2019-02-28",
+      "candidate": "Hendrik Johan van de Brake",
+      "title": "Individual Employees' Multiple Team Membership: A Double-Edged Sword",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"},
+        {"personId": "FR", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/individual-employees-multiple-team-membership-a-double-edged-swor/"
+    },
+    {
+      "id": "phd-voorn-2018-dependent-leaders",
+      "year": 2018,
+      "defenseDate": "2018-01-11",
+      "candidate": "Bart Voorn",
+      "title": "Dependent Leaders: Role-Specific Challenges for Middle Managers",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/dependent-leaders-role-specific-challenges-for-middle-managers/"
+    },
+    {
+      "id": "phd-zhang-2017-upward-voice",
+      "year": 2017,
+      "defenseDate": "2017-10-12",
+      "candidate": "Ran Zhang",
+      "title": "Upward Voice and Influence",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/upward-voice-and-influence"
+    },
+    {
+      "id": "phd-martinescu-2017-gossip",
+      "year": 2017,
+      "defenseDate": "2017-06-19",
+      "candidate": "Elena Martinescu",
+      "title": "Why We Gossip: A Functional Perspective on the Self-Relevance of Gossip for Senders, Receivers and Targets",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"},
+        {"personId": "BN", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/why-we-gossip-a-functional-perspective-on-the-self-relevance-of-g/"
+    },
+    {
+      "id": "phd-manheim-2017-shared-leadership",
+      "year": 2017,
+      "defenseDate": "2017-06-01",
+      "candidate": "Nele Manheim",
+      "title": "Shared Leadership in Teams: A Theoretical and Empirical Investigation",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"},
+        {"personId": "GVV", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/shared-leadership-in-teams-a-theoretical-and-empirical-investigat"
+    },
+    {
+      "id": "phd-said-2016-leadership-creativity",
+      "year": 2016,
+      "defenseDate": "2016-02-15",
+      "candidate": "Ramzi Said",
+      "title": "Rethinking the Leadership-Employee Creativity Relationship: A Regulatory Focus Approach",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "BN", "role": "Supervisor"},
+        {"personId": "OJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/rethinking-the-leadership-employee-creativity-relationship-a-regu/"
+    },
+    {
+      "id": "phd-de-vries-2015-interteam-coordination",
+      "year": 2015,
+      "defenseDate": "2015-10-29",
+      "candidate": "Thom de Vries",
+      "title": "Managing Interteam Coordination Within and Between Organizations",
+      "institution": "University of Groningen",
+      "department": "Economics and Business",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG PhD ceremony",
+      "sourceUrl": "https://www.rug.nl/about-ug/latest-news/news/archief2015/promoties/promoties-2015?hfId=100884&lang=en"
+    },
+    {
+      "id": "phd-cantimur-2015-bright-side-hierarchies",
+      "year": 2015,
+      "defenseDate": "2015-06-22",
+      "candidate": "Yeliz Cantimur",
+      "title": "The Bright Side of Hierarchies: The Origins and Consequences of Social Stratification in Organizations",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"},
+        {"personId": "FR", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/the-bright-side-of-hierarchies-the-origins-and-consequences-of-so/"
+    },
+    {
+      "id": "phd-ponsioen-2014-contagious-business",
+      "year": 2014,
+      "defenseDate": "2014-04-17",
+      "candidate": "Sanne Ponsioen",
+      "title": "Contagious Business: When We Copy Unethical Behavior",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "LM", "role": "Co-supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/contagious-business-when-we-copy-unethical-behavior/"
+    },
+    {
+      "id": "phd-sijbom-2013-employee-creativity",
+      "year": 2013,
+      "defenseDate": "2013-09-05",
+      "candidate": "Roy Bernard Lukas Sijbom",
+      "title": "Leaders' Reactions to Employee Creativity: An Achievement Goal Approach",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/leaders-reactions-to-employee-creativity-an-achievement-goal-appr"
+    },
+    {
+      "id": "phd-van-der-kam-2012-self-enhancement",
+      "year": 2012,
+      "defenseDate": "2012-06-14",
+      "candidate": "Nicolaas Alexander van der Kam",
+      "title": "Leader Self-Enhancement: An Interpersonal Approach",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"},
+        {"personId": "JS", "role": "Supervisor"},
+        {"personId": "GVV", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/leader-self-enhancement-an-interpersonal-approach"
+    },
+    {
+      "id": "phd-de-poel-2011-change-leadership",
+      "year": 2011,
+      "defenseDate": "2011-07-11",
+      "candidate": "Frouke Margriet de Poel",
+      "title": "Making a Difference: About the Mechanism Underlying Effective Leadership in a Change-Oriented Organizational Context",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "JS", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/making-a-difference-about-the-mechanism-underlying-effective-lead/"
+    },
+    {
+      "id": "phd-de-jong-2008-task-dependence",
+      "year": 2008,
+      "defenseDate": "2008-01-24",
+      "candidate": "Simon Barend de Jong",
+      "title": "Asymmetry in Task Dependence Among Team Members",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {"personId": "GVV", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/asymmetry-in-task-dependence-among-team-members/"
+    },
+    {
+      "id": "phd-poortvliet-2008-information-exchange",
+      "year": 2008,
+      "defenseDate": null,
+      "candidate": "P.M. Poortvliet",
+      "title": "Information Exchange Examined: An Interpersonal Account of Achievement Goals",
+      "institution": "University of Groningen",
+      "department": "Social Psychology",
+      "roles": [
+        {"personId": "OJ", "role": "Supervisor"}
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/information-exchange-examined-an-interpersonal-account-of-achieve/"
+    }
+  ]
+}
