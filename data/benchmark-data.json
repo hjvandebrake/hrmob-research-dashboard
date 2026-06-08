@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-06-07",
+    "generatedOn": "2026-06-08",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "countingRule": "Peer-reviewed journal articles only; excludes commentaries, editorials, acknowledgments, reviewer lists, book reviews, errata, letters, medical false positives, and non-prestigious proceedings.",
     "denominatorDecisions": [
@@ -5051,31 +5051,10 @@
       ]
     },
     {
-      "id": "doi:10.1287/opre.2023.0520",
-      "year": 2025,
-      "title": "Technical Note—Multistage Robust Mixed-Integer Programming",
-      "doi": "10.1287/opre.2023.0520",
-      "aip": 94.664,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-w-romeijnders"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-w-romeijnders"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "rug:a2f580f2a8b5ac21",
       "year": 2025,
       "title": "Technical Note: Multi-Stage Robust Mixed-Integer Programming",
-      "doi": "",
+      "doi": "10.1287/opre.2023.0520",
       "aip": 94.664,
       "aipComparable": true,
       "aipStatus": "matched",
@@ -5416,35 +5395,10 @@
       ]
     },
     {
-      "id": "doi:10.1177/14761270251334044",
-      "year": 2025,
-      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
-      "doi": "10.1177/14761270251334044",
-      "aip": 95.623,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-db-veltrop",
-        "hrmob-fa-rink"
-      ],
-      "departments": [
-        "Accounting",
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "acc-db-veltrop",
-        "hrmob-fa-rink"
-      ],
-      "allDepartments": [
-        "Accounting",
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "rug:a94c577cd8f5bce3",
       "year": 2025,
       "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
-      "doi": "",
+      "doi": "10.1177/14761270251334044",
       "aip": 95.623,
       "aipComparable": true,
       "aipStatus": "matched",
@@ -9578,29 +9532,6 @@
       "id": "rug:53cb1642c8cb15ed",
       "year": 2024,
       "title": "On proportionally consistent solutions for the divorced-parents problem",
-      "doi": "",
-      "aip": 94.664,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-nd-van-foreest",
-        "ops-w-romeijnders"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-nd-van-foreest",
-        "ops-w-romeijnders"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1287/opre.2022.0470",
-      "year": 2024,
-      "title": "On Proportionally Consistent Solutions to the Divorced-Parents Problem",
       "doi": "10.1287/opre.2022.0470",
       "aip": 94.664,
       "aipComparable": true,
@@ -11299,33 +11230,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/0960085x.2023.2167671",
-      "year": 2024,
-      "title": "Business value of SME digitalisation: when does it pay off more?",
-      "doi": "10.1080/0960085x.2023.2167671",
-      "aip": 93.125,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-ne-fabian",
-        "ims-tlj-broekhuizen",
-        "mkt-pc-verhoef"
-      ],
-      "departments": [
-        "IM&S",
-        "Marketing"
-      ],
-      "allPeople": [
-        "ims-ne-fabian",
-        "ims-tlj-broekhuizen",
-        "mkt-pc-verhoef"
-      ],
-      "allDepartments": [
-        "IM&S",
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1111/coep.12662",
       "year": 2024,
       "title": "Business as usual? Unraveling the impact of Brexit on UK‐EU business links",
@@ -11350,7 +11254,7 @@
       "id": "rug:310adb663ec22e73",
       "year": 2024,
       "title": "Business Value of SME Digitalization: When Does It Pay off More?",
-      "doi": "",
+      "doi": "10.1080/0960085x.2023.2167671",
       "aip": 93.125,
       "aipComparable": true,
       "aipStatus": "matched",
@@ -11933,27 +11837,6 @@
       "id": "rug:fc768f4a6becdce3",
       "year": 2023,
       "title": "When Do Evaluators Publicly Express Their Legitimacy Judgments? An Inquiry into the Role of Peer Endorsement and Q:1 Evaluative Mode",
-      "doi": "",
-      "aip": 98.183,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-dj-langley"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-dj-langley"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1287/orsc.2022.1604",
-      "year": 2023,
-      "title": "When Do Evaluators Publicly Express Their Legitimacy Judgments? An Inquiry into the Role of Peer Endorsement and Evaluative Mode",
       "doi": "10.1287/orsc.2022.1604",
       "aip": 98.183,
       "aipComparable": true,
@@ -13052,27 +12935,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2023.4004",
-      "year": 2023,
-      "title": "Publishing Multimethod Research in AMJ: A Review and Best-Practice Recommendations",
-      "doi": "10.5465/amj.2023.4004",
-      "aip": 99.152,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-fa-rink"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "rug:4c222de1ac0a75e2",
       "year": 2023,
       "title": "Prácticas de gestión y desempeño empresarial en España",
@@ -13442,27 +13304,6 @@
       ],
       "allPeople": [
         "hrmob-jm-lees"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.plrev.2023.10.016",
-      "year": 2023,
-      "title": "Meta-control and navigating creative trade-offs: Comment on “A systematic framework of creative metacognition” by Lebuda and Benedek",
-      "doi": "10.1016/j.plrev.2023.10.016",
-      "aip": 97.637,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-ba-nijstad"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-ba-nijstad"
       ],
       "allDepartments": [
         "HRM&OB"
@@ -14724,27 +14565,6 @@
       "id": "rug:fb8929e113cbbdcc",
       "year": 2023,
       "title": "Bank Types, Inclusivity, and Payroll Protection Program Lending During COVID-19",
-      "doi": "",
-      "aip": 54.737,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-mp-schwan"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-mp-schwan"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1177/08912424231163485",
-      "year": 2023,
-      "title": "Bank Types, Inclusivity, and Paycheck Protection Program Lending During COVID-19",
       "doi": "10.1177/08912424231163485",
       "aip": 54.737,
       "aipComparable": true,
@@ -16631,31 +16451,6 @@
       ]
     },
     {
-      "id": "doi:10.1038/s41562-022-01403-w",
-      "year": 2022,
-      "title": "Publisher Correction: Situational factors shape moral judgements in the trolley dilemma in Eastern, Southern and Western countries in a culturally diverse sample",
-      "doi": "10.1038/s41562-022-01403-w",
-      "aip": 99.353,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-m-moeini-jazani",
-        "mkt-mc-leliveld",
-        "mkt-saeg-albalooshi"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-m-moeini-jazani",
-        "mkt-mc-leliveld",
-        "mkt-saeg-albalooshi"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "rug:0999d0be849555a2",
       "year": 2022,
       "title": "Profileren op nationaliteit weinig zinvol tegen uitkeringsfraude",
@@ -17541,27 +17336,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2022.4002",
-      "year": 2022,
-      "title": "From the Editors—Insights on How We Try to Show Empathy, Respect, and Inclusion in AMJ",
-      "doi": "10.5465/amj.2022.4002",
-      "aip": 99.152,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-fa-rink"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1111/joop.12380",
       "year": 2022,
       "title": "From individual creativity to team creativity: A meta‐analytic test of task moderators",
@@ -18288,27 +18062,6 @@
       ]
     },
     {
-      "id": "doi:10.1038/s41467-022-29658-x",
-      "year": 2022,
-      "title": "Author Correction: National identity predicts public health support during a global pandemic",
-      "doi": "10.1038/s41467-022-29658-x",
-      "aip": 98.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "gem-a-skalli"
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "allPeople": [
-        "gem-a-skalli"
-      ],
-      "allDepartments": [
-        "GEM"
-      ]
-    },
-    {
       "id": "rug:36aa4634fa29c85a",
       "year": 2022,
       "title": "Audit Firm Culture: Recent developments and trends in the literature",
@@ -18455,27 +18208,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.5465/amj.2022.4001",
-      "year": 2022,
-      "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
-      "doi": "10.5465/amj.2022.4001",
-      "aip": 99.152,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-fa-rink"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -18862,31 +18594,6 @@
       "id": "rug:06a828d67350b76f",
       "year": 2021,
       "title": "The effects of enabling versus coercive performance measurement systems on procedural fairness and red tape",
-      "doi": "",
-      "aip": 61.775,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-pmg-dirks",
-        "mkt-mc-leliveld"
-      ],
-      "departments": [
-        "Accounting",
-        "Marketing"
-      ],
-      "allPeople": [
-        "acc-pmg-dirks",
-        "mkt-mc-leliveld"
-      ],
-      "allDepartments": [
-        "Accounting",
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s00187-021-00316-5",
-      "year": 2021,
-      "title": "The effect of enabling versus coercive performance measurement systems on procedural fairness and red tape",
       "doi": "10.1007/s00187-021-00316-5",
       "aip": 61.775,
       "aipComparable": true,
@@ -20491,27 +20198,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.intmar.2020.09.002",
-      "year": 2021,
-      "title": "Corrigendum to ‘The Role of Marketing in Digital Business Platforms’ [Journal of Interactive Marketing 51 (2020) p. 72–90]",
-      "doi": "10.1016/j.intmar.2020.09.002",
-      "aip": 95.135,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-je-wieringa"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-je-wieringa"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -28551,27 +28237,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2015.4004",
-      "year": 2015,
-      "title": "Managing Risk and Resilience",
-      "doi": "10.5465/amj.2015.4004",
-      "aip": 99.152,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1111/poms.12318",
       "year": 2015,
       "title": "MRP Planned Orders in a Multiple‐Supplier Environment with Differing Lead Times",
@@ -33441,7 +33106,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-06-07",
+    "generatedOn": "2026-06-08",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 169,
     "qualityDecisionCounts": {

@@ -22,7 +22,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1314";
+const DATA_VERSION = "20260608-1342";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -1345,6 +1345,13 @@ function countedPublication(pub) {
     || title.startsWith("reply to ")
     || title.startsWith("response to ")
     || title.startsWith("author response")
+    || title.startsWith("publisher correction")
+    || title.startsWith("author correction")
+    || title.startsWith("correction to ")
+    || title.startsWith("corrigendum to ")
+    || title.startsWith("addendum to ")
+    || title.startsWith("retraction ")
+    || title.startsWith("expression of concern")
     || title.startsWith("from the editors")
     || title.startsWith("guest editorial")
     || title.includes(" introduction to the special issue")
@@ -1355,10 +1362,14 @@ function countedPublication(pub) {
     || title.startsWith("acknowledgement ")
     || title.includes("ad hoc reviewers")
     || title.includes("reviewers ")
-    || ["commentary", "comment", "editorial", "book review", "erratum", "letter", "reply"].includes(kind)
-    || ["commentary", "comment", "editorial", "book review", "erratum", "letter", "reply"].includes(sourceType)
+    || ["commentary", "comment", "editorial", "book review", "erratum", "correction", "corrigendum", "addendum", "letter", "reply"].includes(kind)
+    || ["commentary", "comment", "editorial", "book review", "erratum", "correction", "corrigendum", "addendum", "letter", "reply"].includes(sourceType)
     || kind.includes("commentary")
     || sourceType.includes("commentary")
+    || kind.includes("correction")
+    || sourceType.includes("correction")
+    || kind.includes("corrigendum")
+    || sourceType.includes("corrigendum")
     || kind.includes("letter")
     || sourceType.includes("letter")
     || kind.includes("out of scope")
