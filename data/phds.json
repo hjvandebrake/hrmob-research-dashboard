@@ -1,7 +1,7 @@
 {
   "meta": {
     "generatedOn": "2026-06-06",
-    "sourceNote": "Initial source-backed list of defended PhD theses where supplied roster members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
+    "sourceNote": "Initial source-backed list of defended PhD theses where supplied department members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
     "scope": "Completed/defended PhDs only; committee/examiner roles are excluded."
   },
   "theses": [
