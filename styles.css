@@ -589,15 +589,28 @@ td.muted { color: var(--ink-400); }
   margin-top: 10px;
   font-size: 0.77rem;
 }
-.contact-line {
-  color: var(--ink-700);
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin: 0;
+.overview-contact {
+  align-items: center;
+  border-top: 1px solid var(--ink-200);
+  color: var(--ink-500);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 28px;
+  padding-top: 12px;
 }
-.contact-line a {
+.overview-contact span {
+  color: var(--ink-400);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.overview-contact a {
   border-bottom: 1px dotted var(--red);
   color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .resource-grid {
@@ -607,6 +620,13 @@ td.muted { color: var(--ink-400); }
   align-items: start;
 }
 .resource-panel-wide { grid-column: span 2; }
+.resource-contact-panel {
+  opacity: .88;
+}
+.resource-contact-panel .overview-h3 {
+  color: var(--ink-700);
+  font-size: 1rem;
+}
 .feedback-form {
   border-top: 1px solid var(--ink-200);
   padding-top: 14px;
@@ -646,6 +666,9 @@ td.muted { color: var(--ink-400); }
 .feedback-form textarea {
   min-height: 132px;
   resize: vertical;
+}
+.compact-feedback textarea {
+  min-height: 96px;
 }
 .feedback-form input:focus,
 .feedback-form select:focus,
@@ -712,6 +735,100 @@ td.muted { color: var(--ink-400); }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+.grant-opportunity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.grant-stage {
+  border-top: 1px solid var(--ink-200);
+  padding-top: 12px;
+}
+.grant-stage:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.grant-stage-head {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.grant-stage-head h4 {
+  color: var(--ink-900);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.grant-stage-head span {
+  color: var(--ink-400);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.grant-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.grant-opportunity-card {
+  border: 1px solid var(--ink-200);
+  padding: 11px 12px;
+}
+.grant-opportunity-card h5 {
+  color: var(--ink-900);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  margin: 0 0 6px;
+}
+.grant-opportunity-card h5 a {
+  border-bottom: 1px dotted var(--red);
+  color: var(--red);
+}
+.grant-opportunity-card p {
+  color: var(--ink-500);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  margin: 6px 0 0;
+}
+.grant-opportunity-card p strong {
+  color: var(--ink-700);
+  font-weight: 800;
+  margin-right: 4px;
+}
+.grant-opportunity-meta {
+  color: var(--ink-700) !important;
+  font-weight: 700;
+}
+.resource-tip-list {
+  border-top: 1px solid var(--ink-200);
+}
+.resource-tip {
+  border-bottom: 1px solid var(--ink-200);
+  padding: 10px 0 11px;
+}
+.resource-tip strong {
+  color: var(--ink-900);
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+.resource-tip span {
+  color: var(--ink-400);
+  display: block;
+  font-size: 0.67rem;
+  font-weight: 700;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+.resource-tip p {
+  color: var(--ink-500);
+  font-size: 0.75rem;
+  line-height: 1.38;
+  margin: 5px 0 0;
 }
 .resource-links a {
   border-top: 1px solid var(--ink-200);
@@ -1402,6 +1519,7 @@ footer {
   .overview-panel-wide { grid-column: auto; }
   .resource-grid,
   .feedback-fields,
+  .grant-stage-grid,
   .resource-card-grid { grid-template-columns: 1fr; }
   .resource-panel-wide { grid-column: auto; }
   .metric-bar-row { grid-template-columns: 1fr 44px; }

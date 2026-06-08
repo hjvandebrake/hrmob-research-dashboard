@@ -3,6 +3,7 @@ const state = {
   benchmarkData: { meta: {}, people: [], publications: [] },
   grantsData: { meta: {}, grants: [] },
   phdsData: { meta: {}, theses: [] },
+  resourceData: { meta: {}, opportunities: [], tips: [] },
   tab: "overview",
   fteOnly: false,
   recentOnly: false,
@@ -20,7 +21,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1137";
+const DATA_VERSION = "20260608-1204";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -233,6 +234,8 @@ function cacheElements() {
   els.feedbackComment = document.getElementById("feedback-comment");
   els.feedbackStatus = document.getElementById("feedback-status");
   els.feedbackEmailLink = document.getElementById("feedback-email-link");
+  els.resourceOpportunities = document.getElementById("resource-opportunities");
+  els.resourceTips = document.getElementById("resource-tips");
 }
 
 function attachEvents() {
@@ -392,17 +395,19 @@ function feedbackMailtoHref() {
 
 async function loadData() {
   try {
-    const [response, benchmarkResponse, grantsResponse, phdsResponse] = await Promise.all([
+    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
       fetch(`data/benchmark-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/grants.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/phds.json?v=${DATA_VERSION}`).catch(() => null),
+      fetch(`data/resource-data.json?v=${DATA_VERSION}`).catch(() => null),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
     if (benchmarkResponse?.ok) state.benchmarkData = await benchmarkResponse.json();
     if (grantsResponse?.ok) state.grantsData = await grantsResponse.json();
     if (phdsResponse?.ok) state.phdsData = await phdsResponse.json();
+    if (resourceResponse?.ok) state.resourceData = await resourceResponse.json();
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     els.footerMeta.textContent = "";
@@ -430,6 +435,7 @@ function renderAll() {
   renderExpertise();
   renderPublications();
   renderNetwork();
+  renderResources();
 }
 
 function activePeople() {
@@ -1413,6 +1419,65 @@ function renderOverview() {
   renderOverviewJournals(journals);
   renderOverviewGrants(grants);
   renderOverviewPhds(theses);
+}
+
+function renderResources() {
+  if (!els.resourceOpportunities || !els.resourceTips) return;
+  const opportunities = state.resourceData?.opportunities || [];
+  if (!opportunities.length) {
+    els.resourceOpportunities.innerHTML = `<div class="staff-empty">No grant opportunity data loaded.</div>`;
+  } else {
+    const stageOrder = ["Early Career", "Mid-Career", "Senior", "Consortium", "Watch List"];
+    els.resourceOpportunities.innerHTML = stageOrder
+      .map((stage) => {
+        const rows = opportunities.filter((item) => item.stage === stage);
+        if (!rows.length) return "";
+        return `<section class="grant-stage">
+          <div class="grant-stage-head">
+            <h4>${escapeHtml(stage)}</h4>
+            <span>${rows.length} option${rows.length === 1 ? "" : "s"}</span>
+          </div>
+          <div class="grant-stage-grid">
+            ${rows.map(resourceOpportunityCard).join("")}
+          </div>
+        </section>`;
+      })
+      .join("");
+  }
+
+  const tips = (state.resourceData?.tips || []).filter((tip) => tip.topic && tip.detail).slice(0, 12);
+  els.resourceTips.innerHTML = tips.length
+    ? tips.map((tip) => `<article class="resource-tip">
+        <strong>${escapeHtml(tip.topic)}</strong>
+        ${tip.appliesTo ? `<span>${escapeHtml(tip.appliesTo)}</span>` : ""}
+        <p>${escapeHtml(clipText(tip.detail, 280))}</p>
+      </article>`).join("")
+    : `<div class="staff-empty">No workbook tips loaded.</div>`;
+}
+
+function resourceOpportunityCard(item) {
+  const title = item.link
+    ? `<a href="${escapeHtml(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.name)}</a>`
+    : escapeHtml(item.name);
+  const facts = [
+    item.funder,
+    item.amount,
+    item.duration,
+    item.deadline ? `Deadline: ${item.deadline}` : "",
+    item.successRate ? `Success: ${item.successRate}` : "",
+  ].filter(Boolean);
+  return `<article class="grant-opportunity-card">
+    <h5>${title}</h5>
+    <p class="grant-opportunity-meta">${escapeHtml(facts.join(" - "))}</p>
+    ${item.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(item.eligibility, 150))}</p>` : ""}
+    ${item.tips ? `<p><strong>Tip</strong> ${escapeHtml(clipText(item.tips, 260))}</p>` : ""}
+  </article>`;
+}
+
+function clipText(value, maxLength) {
+  const text = String(value || "").trim();
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength - 1).trim()}...`;
 }
 
 function overviewPublications() {

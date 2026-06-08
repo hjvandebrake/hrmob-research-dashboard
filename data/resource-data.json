@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "sourceFile": "hrmob-grant-opportunities-2026-2027.xlsx",
+    "updatedLabel": "26 March 2026",
+    "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx"
+  },
+  "opportunities": [
+    {
+      "stage": "Early Career",
+      "name": "NWO Veni SSH",
+      "funder": "NWO",
+      "amount": "€320,000",
+      "duration": "3 years",
+      "eligibility": "PhD obtained max 3 years ago",
+      "successRate": "~14%",
+      "deadline": "Results current round mid-2026. Next round opens ~Sep 2026.",
+      "tips": "Pre-proposal then full proposal. Narrative CV describing 3 to 5 key outputs. Weighted 75% scientific quality, 25% impact. Cannot hire PhD candidates or postdocs from the grant.",
+      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2025"
+    },
+    {
+      "stage": "Early Career",
+      "name": "ERC Starting Grant 2027",
+      "funder": "ERC",
+      "amount": "Up to €1.5M (+€1M equipment)",
+      "duration": "5 years",
+      "eligibility": "0 to 10 yrs post-PhD (widened from 2 to 7 starting 2027)",
+      "successRate": "10-14%",
+      "deadline": "~October 2026",
+      "tips": "Panel SH1 (Individuals, Markets and Organisations: Economics, finance, management) covers HRM, OB, strategy, labour economics. Step 1 assesses vision and PI quality only (5 pages). Methodology assessed at Step 2 only. Must be genuinely groundbreaking.",
+      "link": "https://erc.europa.eu/apply-grant/starting-grant"
+    },
+    {
+      "stage": "Early Career",
+      "name": "MSCA Postdoctoral Fellowship 2026",
+      "funder": "EU/MSCA",
+      "amount": "~€80-90K/year (NL rate)",
+      "duration": "1-2 years",
+      "eligibility": "PhD holders with mobility rule: must not have lived in NL for more than 12 months in past 3 years",
+      "successRate": "~10% (dropped from ~15% in 2024)",
+      "deadline": "9 September 2026",
+      "tips": "European or Global fellowship. Applicant and host supervisor write jointly. Requires a training and career development plan. Note: applications surged 65% in 2025, pushing success rates below 10%.",
+      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
+    },
+    {
+      "stage": "Early Career",
+      "name": "KNAW Van der Gaag Grant",
+      "funder": "KNAW",
+      "amount": "Up to €10,000",
+      "duration": "1 year",
+      "eligibility": "Behavioural or social science researcher, PhD obtained max 4 years ago",
+      "successRate": "Moderate",
+      "deadline": "Annual (check KNAW website)",
+      "tips": "Small grant for conferences, short research visits, or pilot studies. Low administrative burden. Note: biennial cycle. Next application window expected September 2027.",
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-van-der-gaag-grant"
+    },
+    {
+      "stage": "Early Career",
+      "name": "KNAW Early Career Partnerships",
+      "funder": "KNAW",
+      "amount": "€10,000",
+      "duration": "1 year",
+      "eligibility": "Early-career researchers at Dutch institutions",
+      "successRate": "Moderate",
+      "deadline": "Annual (check KNAW website)",
+      "tips": "Funds interdisciplinary workshops and meetings. Useful for building cross-institutional collaborations before larger grant applications.",
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-early-career-partnerships"
+    },
+    {
+      "stage": "Early Career",
+      "name": "NWO SSH Open Competition XS",
+      "funder": "NWO",
+      "amount": "€50,000",
+      "duration": "6-24 months",
+      "eligibility": "PhD obtained at least 5 years ago (no upper limit since 2026)",
+      "successRate": "Variable",
+      "deadline": "Round 2: 7 Apr 2026 Round 3: 15 Sep 2026",
+      "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-xs-2026-round-1"
+    },
+    {
+      "stage": "Mid-Career",
+      "name": "NWO Vidi SSH 2025",
+      "funder": "NWO",
+      "amount": "€850,000",
+      "duration": "5 years",
+      "eligibility": "PhD obtained max 8 years ago",
+      "successRate": "15-20%",
+      "deadline": "Full proposal: 9 April 2026",
+      "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
+      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2025"
+    },
+    {
+      "stage": "Mid-Career",
+      "name": "ERC Consolidator Grant 2027",
+      "funder": "ERC",
+      "amount": "Up to €2M (+€1M equipment)",
+      "duration": "5 years",
+      "eligibility": "5 to 15 yrs post-PhD (widened from 7 to 12 starting 2027)",
+      "successRate": "10-14%",
+      "deadline": "~January 2027",
+      "tips": "Panel SH1 (Economics, finance, management). Must demonstrate strong independent publication record and PhD supervision. The 2027 eligibility widening creates new opportunities for researchers previously caught between Starting and Consolidator windows.",
+      "link": "https://erc.europa.eu/apply-grant/consolidator-grant"
+    },
+    {
+      "stage": "Mid-Career",
+      "name": "NWO SSH Open Competition M",
+      "funder": "NWO",
+      "amount": "€400,000",
+      "duration": "~4 years",
+      "eligibility": "PhD obtained at least 10 years ago",
+      "successRate": "~20%",
+      "deadline": "Expected mid-2026 (alternates with L)",
+      "tips": "Funds one PhD or postdoc position alongside your own research time. Medium-scale independent programme. Alternates annually with the L scheme. Check NWO for call opening.",
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-m-2024"
+    },
+    {
+      "stage": "Senior",
+      "name": "NWO Vici SSH 2026",
+      "funder": "NWO",
+      "amount": "€1,500,000",
+      "duration": "5 years",
+      "eligibility": "PhD obtained max 15 years ago",
+      "successRate": "10-15%",
+      "deadline": "Full proposal: 8 September 2026",
+      "tips": "Funds an entire research group. Pre-proposal stage closed March 2026. Full proposal then interview. The highest-prestige NWO individual grant. Expect intense competition from across all SSH disciplines.",
+      "link": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026"
+    },
+    {
+      "stage": "Senior",
+      "name": "ERC Advanced Grant 2026",
+      "funder": "ERC",
+      "amount": "Up to €2.5M (+€1M equipment)",
+      "duration": "5 years",
+      "eligibility": "Established research leaders, no career stage time limit",
+      "successRate": "~11%",
+      "deadline": "27 August 2026",
+      "tips": "Panel SH1 (Economics, finance, management). Requires field-shaping track record and international recognition. The proposal should articulate a 10-year research vision. The additional equipment budget is €1M (or €2M if relocating from outside Europe). You do not need to be a full professor, but you must demonstrate exceptional scientific leadership.",
+      "link": "https://erc.europa.eu/apply-grant/advanced-grant"
+    },
+    {
+      "stage": "Senior",
+      "name": "NWO SSH Open Competition L",
+      "funder": "NWO",
+      "amount": "€800,000",
+      "duration": "Up to 6 years",
+      "eligibility": "PhD obtained at least 15 years ago",
+      "successRate": "~15%",
+      "deadline": "Next round ~2027 (2025 round in assessment)",
+      "tips": "Largest NWO SSH individual grant. Funds a substantial research programme with multiple positions. Runs biennially. The 2025 round closed Feb 2026 and is now in assessment.",
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-l-2025"
+    },
+    {
+      "stage": "Senior",
+      "name": "ERC Proof of Concept",
+      "funder": "ERC",
+      "amount": "€150,000 lump sum",
+      "duration": "18 months",
+      "eligibility": "Must hold a current or recently completed ERC grant",
+      "successRate": "~31%",
+      "deadline": "17 September 2026 (cut-off 2)",
+      "tips": "Funds societal or commercial valorisation of ERC-funded research. Lump sum with light reporting. The highest success rate of any ERC scheme.",
+      "link": "https://erc.europa.eu/apply-grant/proof-concept"
+    },
+    {
+      "stage": "Watch List",
+      "name": "KIC Human Capital & Digital Innovation",
+      "funder": "NWO/KIC",
+      "amount": "TBA (likely €1.5-2M per project)",
+      "duration": "TBA",
+      "eligibility": "Consortium: researchers + SMEs + public stakeholders",
+      "successRate": "",
+      "deadline": "In preparation. No date yet.",
+      "tips": "HIGHLY RELEVANT. Focuses on labour productivity, strategic HRM in SMEs, and teams working with AI and robotics. Takes an integrated view of the innovation ecosystem, organisational HRM policy, and individual/team adaptation to technology. Start identifying industry partners now.",
+      "link": "https://www.nwo.nl/en/calls/kic-human-capital-and-digital-innovation-in-the-netherlands"
+    },
+    {
+      "stage": "Watch List",
+      "name": "NWO Gravitation (Zwaartekracht) 7th Round",
+      "funder": "NWO",
+      "amount": "€19-23M",
+      "duration": "Up to 10 years",
+      "eligibility": "World-class research consortium",
+      "successRate": "",
+      "deadline": "Call expected 2026. No date yet.",
+      "tips": "Budget €161M for approximately 6 to 7 consortia. Requires absolute world-leading position. SSH-oriented Gravitation projects exist. Extremely competitive but transformative if successful.",
+      "link": "https://www.nwo.nl/en/researchprogrammes/gravitation"
+    },
+    {
+      "stage": "Watch List",
+      "name": "KIEM Arbeidsbesparende AI (Labor-saving AI)",
+      "funder": "NWO/SIA",
+      "amount": "€40,000 max per project",
+      "duration": "1 year",
+      "eligibility": "Min 1 knowledge institution + 1 SME or public org",
+      "successRate": "",
+      "deadline": "Round 2: 15 September 2026",
+      "tips": "Small exploratory grants for testing existing AI applications in organisations. Focus on labour savings and productivity gains. Practice-oriented. Excellent seed funding to prepare a larger KIC Human Capital bid.",
+      "link": "https://www.nwo.nl/en/calls/kiem-arbeidsbesparende-ai"
+    },
+    {
+      "stage": "Watch List",
+      "name": "KIEM MV (Social Earning Capacity)",
+      "funder": "NWO/SIA",
+      "amount": "€40,000 max per project",
+      "duration": "1 year",
+      "eligibility": "Network of knowledge institutions + practice partners",
+      "successRate": "",
+      "deadline": "Two collection dates: 24 Mar and 15 Sep 2026",
+      "tips": "Exploratory applied research under the KIA Social Earning Capacity. Broad scope covering HRM, organisational innovation, and human capital development. Low barrier seed funding.",
+      "link": "https://www.nwo.nl/en/calls/kiem-mv"
+    },
+    {
+      "stage": "Watch List",
+      "name": "COST Actions 2026 Open Call",
+      "funder": "COST",
+      "amount": "~€620K (networking only)",
+      "duration": "4 years",
+      "eligibility": "Pan-European researcher network (proposer + min 7 countries)",
+      "successRate": "",
+      "deadline": "Expected autumn 2026",
+      "tips": "Funds workshops, training schools, short-term scientific missions. Not research itself. COST participants show a 39% success rate in subsequent Horizon Europe applications. Strategic precursor to larger bids.",
+      "link": "https://www.cost.eu/funding/open-call/"
+    },
+    {
+      "stage": "Watch List",
+      "name": "HE Cluster 4: Human/AI Collaboration for Workforce",
+      "funder": "EU/Horizon",
+      "amount": "€4-6M per project (€30M total)",
+      "duration": "3-4 years",
+      "eligibility": "Consortium",
+      "successRate": "",
+      "deadline": "Two-stage: 1st deadline 2 Feb 2027",
+      "tips": "AI-based human-machine interaction, inclusion, well-being, upskilling, and career evolution. Two-stage call opening Sep 2026. Directly relevant for OB researchers studying technology and work.",
+      "link": "https://www.horizon-europe.gouv.fr/new-approaches-humanai-collaboration-workforce-future-ria-made-europe-and-ai-data-and-robotics"
+    },
+    {
+      "stage": "Watch List",
+      "name": "HE Cluster 2: Private Companies & Democracy",
+      "funder": "EU/Horizon",
+      "amount": "€3-4M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium",
+      "successRate": "",
+      "deadline": "~September 2027",
+      "tips": "Corporate governance, CSR, and democratic engagement. Part of the Cluster 2 2027 work programme.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027"
+    },
+    {
+      "stage": "Watch List",
+      "name": "HE Cluster 2: EU Labour Mobility Impact",
+      "funder": "EU/Horizon",
+      "amount": "€3-4M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium",
+      "successRate": "",
+      "deadline": "~September 2027",
+      "tips": "Worker mobility, migration, and labour market integration across the EU.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027"
+    },
+    {
+      "stage": "Watch List",
+      "name": "NWO Veni SSH 2026 Round",
+      "funder": "NWO",
+      "amount": "€320,000",
+      "duration": "3 years",
+      "eligibility": "PhD obtained max 3 years ago",
+      "successRate": "",
+      "deadline": "Expected call opening mid-2026",
+      "tips": "Annual cycle. Watch NWO SSH page for exact dates.",
+      "link": "https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme"
+    },
+    {
+      "stage": "Watch List",
+      "name": "NWO SSH Open Competition M (next round)",
+      "funder": "NWO",
+      "amount": "€400,000",
+      "duration": "~4 years",
+      "eligibility": "PhD obtained at least 10 years ago",
+      "successRate": "",
+      "deadline": "Expected late 2026 or 2027",
+      "tips": "Alternates with L round. Monitor NWO announcements.",
+      "link": "https://www.nwo.nl/en/researchprogrammes/open-competition-ssh"
+    },
+    {
+      "stage": "Watch List",
+      "name": "ZonMw Work & Health programmes",
+      "funder": "ZonMw",
+      "amount": "€200K-800K (varies)",
+      "duration": "2-4 years",
+      "eligibility": "Researchers at the health/work intersection",
+      "successRate": "",
+      "deadline": "Various. Check ZonMw.",
+      "tips": "Relevant when framing OB research around occupational health, burnout prevention, sustainable employability, or healthcare workforce issues.",
+      "link": "https://www.zonmw.nl/en/work"
+    },
+    {
+      "stage": "Watch List",
+      "name": "KNAW Humanities Fund",
+      "funder": "KNAW",
+      "amount": "€2-10K",
+      "duration": "Short-term",
+      "eligibility": "SSH researchers at Dutch institutions",
+      "successRate": "",
+      "deadline": "13 May 2026",
+      "tips": "Funds research visits and small events. Very low barrier.",
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-humanities-fund"
+    },
+    {
+      "stage": "Watch List",
+      "name": "Wellcome Awards (Early-Career Awards, Career Development Awards, Discovery Awards, Mental Health Award)",
+      "funder": "Wellcome Fund",
+      "amount": "up to £8 million (varies)",
+      "duration": "3-5 years",
+      "eligibility": "Different per award",
+      "successRate": "",
+      "deadline": "Various. Check Wellcome.",
+      "tips": "This is a UK-based fund, it seams more promising to collaborate with UK-based colleagues.",
+      "link": "https://wellcome.org/research-funding/schemes"
+    },
+    {
+      "stage": "Watch List",
+      "name": "Volkswagen Stiftung (Societal Transformations, Exploration, Understanding Research)",
+      "funder": "Volkswagen Stiftung",
+      "amount": "largely varies",
+      "duration": "multiple years",
+      "eligibility": "Different per award",
+      "successRate": "",
+      "deadline": "Various. Check Volkswagen Stiftung.",
+      "tips": "This is a German-based fund, it seams more promising to collaborate with colleagues form Germany.",
+      "link": "https://www.volkswagenstiftung.de/en/our-funding-portfolio"
+    },
+    {
+      "stage": "Consortium",
+      "name": "NWA-ORC 'Reinventing Work'",
+      "funder": "NWO/NWA",
+      "amount": "€7.25M (per theme)",
+      "duration": "~5 years",
+      "eligibility": "Transdisciplinary consortium with academic and societal partners",
+      "successRate": "Competitive (12 themes)",
+      "deadline": "6 October 2026",
+      "tips": "Must span the entire knowledge chain: fundamental, applied, and practice-oriented research. The 'Reinventing Work' theme covers digital labour, platform work, autonomy versus control, and solidarity. Mandatory collaborative workshops ran in Feb/Mar 2026. Societal partners required.",
+      "link": "https://www.nwo.nl/en/researchprogrammes/dutch-research-agenda-nwa/research-along-routes-by-consortia-nwa-orc/nwa-orc-2026/themes/reinventing-work-artistic-research-into-labour-in-the-digital-age"
+    },
+    {
+      "stage": "Consortium",
+      "name": "KIC Demand-driven Consortia S 2026",
+      "funder": "NWO/KIC",
+      "amount": "€350K-€1.05M (NWO max 70%)",
+      "duration": "Max 4 years",
+      "eligibility": "Min 2 research organisations + 1 company. Co-funding min 30% (half private).",
+      "successRate": "Variable",
+      "deadline": "22 September 2026",
+      "tips": "Thematically free as long as it aligns with a KIA. The S variant is designed for smaller consortia that want to grow into sustained partnerships. Information meeting 14 April 2026. Good entry point for building industry collaborations around HRM/OB topics.",
+      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-s-2026"
+    },
+    {
+      "stage": "Consortium",
+      "name": "KIC Demand-driven Consortia XL",
+      "funder": "NWO/KIC",
+      "amount": "€1.4M-€7M (NWO 50-70%)",
+      "duration": "Max 6 years",
+      "eligibility": "Min 2 research organisations + 1 company. Co-funding min 30% (half private cash).",
+      "successRate": "Variable",
+      "deadline": "Full proposal: 12 November 2026",
+      "tips": "Thematically free. Large-scale public-private partnerships. Pre-proposal deadline passed (10 Mar 2026). You can still join an existing consortium as co-applicant or wait for the next round.",
+      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-xl"
+    },
+    {
+      "stage": "Consortium",
+      "name": "KIC Adaptivity in Transitions",
+      "funder": "NWO/KIC",
+      "amount": "€1.5M-€2M (NWO max 80%)",
+      "duration": "Max 6 years",
+      "eligibility": "Consortium with co-funders. Mandatory workshop attendance for lead applicant.",
+      "successRate": "~4 projects funded (€7M total)",
+      "deadline": "9 June 2026",
+      "tips": "Focused on food, mobility, and energy transitions, but the core question is about adaptivity of organisations and individuals in change processes. OB researchers can contribute on organisational learning, change management, and human capital.",
+      "link": "https://www.nwo.nl/en/calls/kic-adaptivity-in-transitions"
+    },
+    {
+      "stage": "Consortium",
+      "name": "HE Cluster 2: Productivity",
+      "funder": "EU/Horizon",
+      "amount": "€3-4M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium of min 3 entities from min 3 countries",
+      "successRate": "~15%",
+      "deadline": "23 September 2026",
+      "tips": "Topic: Strengthen Europe's social model through productivity. Research and Innovation Action with 100% funding plus 25% flat rate for indirect costs.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+    },
+    {
+      "stage": "Consortium",
+      "name": "HE Cluster 2: Talent Magnet",
+      "funder": "EU/Horizon",
+      "amount": "€3-3.3M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium of min 3 entities from min 3 countries",
+      "successRate": "~15%",
+      "deadline": "23 September 2026",
+      "tips": "Making Europe a global magnet for talent. Covers attracting and retaining researchers and high-skilled workers. Directly relevant to talent management and international HRM research.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+    },
+    {
+      "stage": "Consortium",
+      "name": "HE Cluster 2: Skills & Green Transition",
+      "funder": "EU/Horizon",
+      "amount": "€3-4M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium of min 3 entities from min 3 countries",
+      "successRate": "~15%",
+      "deadline": "23 September 2026",
+      "tips": "Fostering competencies for the green transition. Covers workforce development, skills anticipation, and training system design.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+    },
+    {
+      "stage": "Consortium",
+      "name": "HE Cluster 2: Government in Transition",
+      "funder": "EU/Horizon",
+      "amount": "€3.5-4M per project",
+      "duration": "3-4 years",
+      "eligibility": "Consortium of min 3 entities from min 3 countries",
+      "successRate": "~15%",
+      "deadline": "23 September 2026",
+      "tips": "How governments prepare the civil service for the future. Strong public sector management and HR angle. Workforce planning, digital skills in government, organisational transformation.",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+    },
+    {
+      "stage": "Consortium",
+      "name": "EU Partnership: Social Transformations",
+      "funder": "EU/Horizon",
+      "amount": "€60M total (7-year programme)",
+      "duration": "2027-2034",
+      "eligibility": "Institutional and national partnership",
+      "successRate": "N/A (partnership call)",
+      "deadline": "13 October 2026",
+      "tips": "Seven-year co-funded partnership covering future of work, social protection, education and skills, and just transitions. Co-funded by national agencies including NWO. Positioning yourself early creates a sustained funding pipeline through 2034.",
+      "link": "https://www.horizon-europe.gouv.fr/co-funded-european-partnership-social-transformations-and-resilience-42672"
+    },
+    {
+      "stage": "Consortium",
+      "name": "MSCA Doctoral Networks 2026",
+      "funder": "EU/MSCA",
+      "amount": "~€333K per doctoral candidate (up to 15)",
+      "duration": "4 years",
+      "eligibility": "Consortium of academic and non-academic partners across countries",
+      "successRate": "~10%",
+      "deadline": "24 November 2026",
+      "tips": "Structured PhD training programme with strong intersectoral and international mobility requirements. Each doctoral candidate must spend time at a non-academic partner.",
+      "link": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-doctoral-networks_en"
+    },
+    {
+      "stage": "Consortium",
+      "name": "MSCA Staff Exchanges 2026",
+      "funder": "EU/MSCA",
+      "amount": "Up to ~€1.86M consortium",
+      "duration": "4 years",
+      "eligibility": "Academic and non-academic partners, international",
+      "successRate": "~22-25% (was ~30% in 2022, declining)",
+      "deadline": "16 April 2026",
+      "tips": "Funds short-term staff secondments between partners for knowledge transfer. Relatively high success rate. Good networking instrument that can lead to larger collaborative bids.",
+      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/staff-exchanges"
+    },
+    {
+      "stage": "Consortium",
+      "name": "ERC Synergy Grant 2027",
+      "funder": "ERC",
+      "amount": "Up to €10M (+€4M equipment)",
+      "duration": "6 years",
+      "eligibility": "2 to 4 PIs at any career stage with complementary expertise",
+      "successRate": "~10%",
+      "deadline": "~November 2026",
+      "tips": "Funds ambitious research that could not be achieved by any single PI alone. Requires genuine intellectual synergy, not just a sum of parts. Cross-disciplinary combinations encouraged.",
+      "link": "https://erc.europa.eu/apply-grant/synergy-grant"
+    }
+  ],
+  "tips": [
+    {
+      "topic": "Narrative CV",
+      "appliesTo": "All tiers",
+      "detail": "NWO uses the Evidence-Based CV format. You describe 3 to 5 key outputs in narrative form, explaining what you uniquely contributed and why it mattered. There is no h-index, no journal impact factor, and no publication count. The story you tell about your trajectory matters more than metrics. Choose outputs that demonstrate independence, leadership, and impact on the field."
+    },
+    {
+      "topic": "Impact section (25% of the assessment)",
+      "appliesTo": "All tiers",
+      "detail": "This is where many strong proposals lose marks. NWO expects concrete stakeholders named by organisation, specific dissemination channels (not just 'we will publish papers'), and a realistic timeline. For HRM/OB research, think about HR professionals, employer organisations like AWVN or VNO-NCW, trade unions, policy bodies like SER or SCP, and practitioner outlets like CHRO or PW. Generic statements like 'we will share findings with practitioners' will not score well."
+    },
+    {
+      "topic": "Panel selection matters",
+      "appliesTo": "All tiers",
+      "detail": "SSH has six disciplinary panels. Organisational psychology and work psychology proposals typically go to the 'Behaviour and Education' panel. Business administration goes to a separate panel. If your research sits between panels (e.g., combining OB theory with economic methodology), contact NWO in advance. Being assessed by the wrong panel can be fatal because reviewers may not appreciate discipline-specific contributions."
+    },
+    {
+      "topic": "Common rejection reasons",
+      "appliesTo": "All tiers",
+      "detail": "The most frequent reasons for rejection are: insufficient innovation (the project advances the field incrementally rather than opening a new direction), vague or underspecified methodology (especially for ESM and diary studies where power analysis and sampling rationale are critical), weak impact plans, and inaccessible writing. Remember that NWO panels are interdisciplinary. An economist and a psychologist will both read your proposal. Minimise jargon and explain why your approach is novel to someone outside your subfield."
+    },
+    {
+      "topic": "Embedding guarantee",
+      "appliesTo": "All grants at our faculty",
+      "detail": "At our faculty, any externally funded project that involves hiring new personnel or changing education load percentages requires an embedding guarantee. This applies to all grants listed in this document, not just NWO Vidi. If unsure whether your project triggers this requirement, ask the research director. Coordinate with the dean well in advance because it is a formal institutional commitment that takes time to arrange."
+    },
+    {
+      "topic": "Resubmission strategy",
+      "appliesTo": "All tiers",
+      "detail": "NWO allows resubmission of revised proposals. If you are rejected, request the full reviewer reports and panel discussion summary. The most successful resubmissions address every specific criticism rather than simply rewriting the introduction. If the panel questioned your methodology, your revision must demonstrate that you heard and responded to that concern."
+    },
+    {
+      "topic": "Panel choice for HRM/OB researchers",
+      "appliesTo": "All ERC",
+      "detail": "SH1 (Individuals, Markets and Organisations: Economics, finance, management) covers labour economics, HRM, organisation studies, strategy, entrepreneurship, management, and behavioural economics. SH1 has its own dedicated budget, so you compete only against other social scientists. Depending on your angle, SH2 (Institutions, Governance), SH3 (The Social World), or SH4 (The Human Mind) may also fit. Read the panel descriptors carefully and choose strategically."
+    },
+    {
+      "topic": "What 'groundbreaking' means in the social sciences",
+      "appliesTo": "All ERC",
+      "detail": "ERC expects proposals that challenge existing paradigms, introduce genuinely novel theoretical frameworks, or develop new methodologies. Applying an existing theory to a new empirical context is not sufficient. You need to articulate what is fundamentally wrong or missing in current understanding and how your project will change the conversation. Think of it as a 5-year programme that redefines how the field thinks about a problem."
+    },
+    {
+      "topic": "Step 1 versus Step 2 structure (from 2026)",
+      "appliesTo": "All ERC",
+      "detail": "The proposal now separates the scientific vision (Part I, 5 pages, assessed at Step 1) from methodology and implementation (Part II, 7 pages, assessed only at Step 2). This means Step 1 evaluators judge the research vision and the PI track record (CV is assessed at Step 1 too). Feasibility comes later. Lead with ambition and vision in Part I. Do not waste space on methodological detail that will only be read at Step 2."
+    },
+    {
+      "topic": "Track record expectations by career stage",
+      "appliesTo": "StG / CoG / AdG",
+      "detail": "Starting Grant: evidence of independence from your PhD supervisor, first steps building your own research line, and early signs of international recognition (invited talks, editorial board membership, small grants). Consolidator Grant: strong independent publication record in top journals, successful PhD supervision, evidence of international collaboration, and a clear emerging reputation. Advanced Grant: field-shaping contributions that have changed how other researchers think, major awards or recognitions, and sustained international leadership."
+    },
+    {
+      "topic": "2027 eligibility widening",
+      "appliesTo": "StG / CoG",
+      "detail": "Starting from 2027, the Starting Grant window widens to 0 to 10 years post-PhD (previously 2 to 7) and the Consolidator window to 5 to 15 years (previously 7 to 12). Identify department members who were previously ineligible because they fell between windows. Someone 9 years post-PhD was too late for Starting and too early for Consolidator under the old rules. They can now apply for either."
+    },
+    {
+      "topic": "Netherlands as ERC host",
+      "appliesTo": "All ERC",
+      "detail": "The Netherlands consistently ranks among the top ERC host countries. In 2024-2025, Dutch institutions received over 40 Starting Grants per year. Evaluators are familiar with Dutch universities as strong research environments. RUG's track record as a host institution is an asset."
+    },
+    {
+      "topic": "Impact section: where most proposals fail",
+      "appliesTo": "Cluster 2",
+      "detail": "Evaluators report that the impact section is the weakest part of most proposals. Be extremely specific. Instead of 'our findings will inform policy', write 'we will deliver a policy brief to DG EMPL by month 24 and present findings at the OECD Future of Work Forum in year 3'. Name stakeholder organisations. Define measurable KPIs for dissemination. Letters of support from stakeholders help."
+    },
+    {
+      "topic": "Consortium composition and partner roles",
+      "appliesTo": "Cluster 2",
+      "detail": "Minimum 3 independent entities from 3 countries (at least 1 EU Member State). Successful Cluster 2 projects typically involve 8 to 15 partners. Every partner must have a clearly justified role with adequate resources. Evaluators penalise 'flag planting' where partners are included for geographical coverage without substantive tasks."
+    },
+    {
+      "topic": "Funding rate and real cost to the university",
+      "appliesTo": "RIA",
+      "detail": "Research and Innovation Actions receive 100% direct cost funding plus a 25% flat rate for indirect costs. The university bears essentially zero cost for participating. This makes consortium participation attractive even in smaller roles. Budget personnel costs realistically using standard Dutch salary scales."
+    },
+    {
+      "topic": "Consortium building strategy",
+      "appliesTo": "All HE",
+      "detail": "Start 12 months before the deadline. Use the Net4SocietyHE Community Platform to find partners. Attend brokerage events (the next major one is planned for late May/June 2026). COST Action membership is one of the best consortium pipelines: build a 4-year network through COST, then convert it into a Horizon Europe consortium."
+    },
+    {
+      "topic": "Submission practicalities",
+      "appliesTo": "All HE",
+      "detail": "Budget 48 hours before the deadline for submission. The EU Funding & Tenders Portal routinely overloads in the final hours. Have all partner data ready weeks in advance: PIC numbers, legal entity validation documents, and signed consortium agreements."
+    },
+    {
+      "topic": "What is KIC and why should we care?",
+      "appliesTo": "All KIC",
+      "detail": "The Knowledge and Innovation Covenant is NWO's largest programmatic investment: ~€138M per year in public-private research consortia (€120M for Mission/Demand/Strategy lines plus €18M for Practice) addressing societal challenges. All KIC research must align with one of 8 Knowledge and Innovation Agendas. For HRM/OB, the most relevant KIAs are Social Earning Capacity, Digitalisation, and Health & Care."
+    },
+    {
+      "topic": "Co-funding requirement",
+      "appliesTo": "All KIC",
+      "detail": "NWO funds 50 to 80% depending on the scheme. The remainder must come from co-funders, and at least one company must participate. Co-funding can be partly in-kind (staff time, data access, facilities). Building industry partnerships is essential. Start conversations with potential partners 6 to 12 months before a call opens."
+    },
+    {
+      "topic": "Matchmaking events are essential",
+      "appliesTo": "All KIC",
+      "detail": "NWO organises matchmaking events for each KIC call. For some calls (e.g., Adaptivity in Transitions), attendance is mandatory for lead applicants. Even when not mandatory, these events are where consortia form and where you meet the industry partners needed for co-funding."
+    },
+    {
+      "topic": "KIEM as stepping stone",
+      "appliesTo": "KIEM",
+      "detail": "KIEM grants (€40K, 1 year) are explicitly designed as seeds for larger KIC bids. They fund exploratory practice-oriented research with at least one industry partner. Use KIEM to establish a working relationship with an SME, generate pilot data, and build the case for a €1-7M KIC Demand-driven Consortia proposal."
+    },
+    {
+      "topic": "KIC Human Capital call: prepare now",
+      "appliesTo": "Human Capital",
+      "detail": "The KIC Human Capital and Digital Innovation call is in preparation and directly targets strategic HRM in SMEs, teams working with AI and robotics, and innovation ecosystems. This is the most relevant upcoming KIC call for our department. Start identifying SME partners who are implementing AI. When the call opens, you want a consortium and a research question already in place."
+    },
+    {
+      "topic": "Build consortium readiness before calls open",
+      "appliesTo": "",
+      "detail": "The most common reason for missing consortium opportunities is starting too late. Use COST Actions, Net4SocietyHE, and NWO matchmaking events to build partnerships continuously. When a call opens, the department should be able to assemble a consortium within weeks, not months."
+    },
+    {
+      "topic": "Ensure every eligible researcher applies to NWO",
+      "appliesTo": "",
+      "detail": "The NWO Talent Scheme remains the backbone of academic career funding in the Netherlands. Every eligible researcher should be actively preparing for the appropriate tier. The department should offer internal mock reviews: having 3 to 4 colleagues read and critique a proposal before submission dramatically improves success rates. Schedule mock reviews at least 6 weeks before the deadline."
+    },
+    {
+      "topic": "Frame research for societal challenges",
+      "appliesTo": "",
+      "detail": "HRM/OB research on topics like multiple team membership, virtual teaming, or identity processes becomes fundable at a completely different scale when framed around societal challenges: future of work, AI and work, sustainable employability, mental health at work, or the green transition workforce. This is not about changing your research. It is about articulating why your research matters to society in language that interdisciplinary panels and policy makers understand."
+    },
+    {
+      "topic": "Use RUG grant support infrastructure",
+      "appliesTo": "",
+      "detail": "The University of Groningen has dedicated faculty funding officers and a Talent Development editorial team that provides proposal review for NWO and ERC applications. Book them 3 to 6 months before your deadline. For Horizon Europe, the central EU liaison office can assist with budget calculations, PIC numbers, and portal submission."
+    },
+    {
+      "topic": "Timing principle",
+      "appliesTo": "",
+      "detail": "Winning researchers prepare 6 to 12 months before deadlines, not 6 to 12 weeks. For ERC: start 9 months out. For Horizon Europe consortia: start 12 months out. For NWO Talent Scheme: start 6 months out. The final month should be for polish and administrative preparation, not developing the core idea."
+    }
+  ]
+}
