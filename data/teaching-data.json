@@ -1,0 +1,1532 @@
+{
+  "meta": {
+    "generatedOn": "2026-06-09T08:43:19Z",
+    "academicYear": "2025-2026",
+    "source": "Public Ocasys course search, programme scheme, and course page API records.",
+    "notes": [
+      "Edges mean two department members are both listed with lecturer/coordinator roles on the same non-thesis course offering.",
+      "Generic thesis supervision listings are retained in the records but excluded from network ties."
+    ],
+    "searchTerms": [
+      "behavior",
+      "behaviour",
+      "business",
+      "collaboration",
+      "decision",
+      "diversity",
+      "ethics",
+      "governance",
+      "group",
+      "hrm",
+      "human resource",
+      "innovation",
+      "leadership",
+      "management",
+      "organization",
+      "organisation",
+      "performance",
+      "staffing",
+      "stress",
+      "team",
+      "work"
+    ],
+    "programmeCodes": [
+      "60645"
+    ],
+    "candidateCourses": 150,
+    "activityRecords": 44,
+    "courses": 26,
+    "networkCourses": 22,
+    "edges": 15,
+    "durationSeconds": 90.8,
+    "errors": []
+  },
+  "records": [
+    {
+      "id": "MA:EBM072A05.2025-2026.1",
+      "personId": "MA",
+      "personDisplay": "Arnold, M.",
+      "code": "EBM072A05",
+      "offeringCode": "EBM072A05.2025-2026.1",
+      "title": "Leadership",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM072A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM072A05"
+    },
+    {
+      "id": "MA:EBP654D05.2025-2026.1",
+      "personId": "MA",
+      "personDisplay": "Arnold, M.",
+      "code": "EBP654D05",
+      "offeringCode": "EBP654D05.2025-2026.1",
+      "title": "Organizational Behaviour for IB",
+      "kind": "Course",
+      "roles": [
+        "CONTACT_PERSON",
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "BSc IB",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBP654D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBP654D05"
+    },
+    {
+      "id": "SB:EBM240A05.2025-2026.1",
+      "personId": "SB",
+      "personDisplay": "Berger, S.",
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.1",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05"
+    },
+    {
+      "id": "SB:EBM240A05.2025-2026.2",
+      "personId": "SB",
+      "personDisplay": "Berger, S.",
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.2",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05"
+    },
+    {
+      "id": "SB:EBM072A05.2025-2026.1",
+      "personId": "SB",
+      "personDisplay": "Berger, S.",
+      "code": "EBM072A05",
+      "offeringCode": "EBM072A05.2025-2026.1",
+      "title": "Leadership",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM072A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM072A05"
+    },
+    {
+      "id": "SB:EBM722B20.2025-2026.1",
+      "personId": "SB",
+      "personDisplay": "Berger, S.",
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.1",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20"
+    },
+    {
+      "id": "SB:EBM722B20.2025-2026.2",
+      "personId": "SB",
+      "personDisplay": "Berger, S.",
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.2",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20"
+    },
+    {
+      "id": "JDB:EBM769D05.2025-2026.1",
+      "personId": "JDB",
+      "personDisplay": "Bloom, J. de",
+      "code": "EBM769D05",
+      "offeringCode": "EBM769D05.2025-2026.1",
+      "title": "Advanced Behavioral Science in Management",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM769D05"
+    },
+    {
+      "id": "JDB:EBM226B05.2025-2026.1",
+      "personId": "JDB",
+      "personDisplay": "Bloom, J. de",
+      "code": "EBM226B05",
+      "offeringCode": "EBM226B05.2025-2026.1",
+      "title": "Challenges for a Healthy Society",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "MSc BA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM226B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM226B05"
+    },
+    {
+      "id": "JDB:EBM203A05.2025-2026.1",
+      "personId": "JDB",
+      "personDisplay": "Bloom, J. de",
+      "code": "EBM203A05",
+      "offeringCode": "EBM203A05.2025-2026.1",
+      "title": "Stress, Health and Sustainable Working Life",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM203A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM203A05"
+    },
+    {
+      "id": "JVB:EBE034A04.2025-2026.1",
+      "personId": "JVB",
+      "personDisplay": "Brake, H.J. van de",
+      "code": "EBE034A04",
+      "offeringCode": "EBE034A04.2025-2026.1",
+      "title": "Org. Beh. & Change Management EMFC",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "EMFC",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBE034A04",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBE034A04"
+    },
+    {
+      "id": "JVB:EBB110A05.2025-2026.1",
+      "personId": "JVB",
+      "personDisplay": "Brake, H.J. van de",
+      "code": "EBB110A05",
+      "offeringCode": "EBB110A05.2025-2026.1",
+      "title": "Teamwork - Theories, Design and Dynamics",
+      "kind": "Course",
+      "roles": [
+        "CONTACT_PERSON",
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB110A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB110A05"
+    },
+    {
+      "id": "OJ:EBM011A05.2025-2026.1",
+      "personId": "OJ",
+      "personDisplay": "Janssen, O.",
+      "code": "EBM011A05",
+      "offeringCode": "EBM011A05.2025-2026.1",
+      "title": "Strategic HRM",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM011A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM011A05"
+    },
+    {
+      "id": "OJ:EBB601B05.2025-2026.1",
+      "personId": "OJ",
+      "personDisplay": "Janssen, O.",
+      "code": "EBB601B05",
+      "offeringCode": "EBB601B05.2025-2026.1",
+      "title": "Work Organization and Job Design",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "BSc BDK-TM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB601B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB601B05"
+    },
+    {
+      "id": "JL:EBM251A05.2025-2026.1",
+      "personId": "JL",
+      "personDisplay": "Lees, J.M.",
+      "code": "EBM251A05",
+      "offeringCode": "EBM251A05.2025-2026.1",
+      "title": "Navigating Grand Challenges through Leadership and Governance",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM251A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM251A05"
+    },
+    {
+      "id": "JMA:EBM244A05.2025-2026.1",
+      "personId": "JMA",
+      "personDisplay": "Mascareño, J.M.",
+      "code": "EBM244A05",
+      "offeringCode": "EBM244A05.2025-2026.1",
+      "title": "Artificial Intelligence: A Multifaceted Perspective",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "MSc Marketing",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM244A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM244A05"
+    },
+    {
+      "id": "JMA:EBM226B05.2025-2026.1",
+      "personId": "JMA",
+      "personDisplay": "Mascareño, J.M.",
+      "code": "EBM226B05",
+      "offeringCode": "EBM226B05.2025-2026.1",
+      "title": "Challenges for a Healthy Society",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "MSc BA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM226B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM226B05"
+    },
+    {
+      "id": "JMA:EBB617B05.2025-2026.1",
+      "personId": "JMA",
+      "personDisplay": "Mascareño, J.M.",
+      "code": "EBB617B05",
+      "offeringCode": "EBB617B05.2025-2026.1",
+      "title": "Human Resource Management B&M",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB617B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB617B05"
+    },
+    {
+      "id": "JMA:EBB065A05.2025-2026.1",
+      "personId": "JMA",
+      "personDisplay": "Mascareño, J.M.",
+      "code": "EBB065A05",
+      "offeringCode": "EBB065A05.2025-2026.1",
+      "title": "Human Resource Management for BE",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "BSc E&BE-BE",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB065A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB065A05"
+    },
+    {
+      "id": "LM:EBM173A05.2025-2026.1",
+      "personId": "LM",
+      "personDisplay": "Mulder, L.B.",
+      "code": "EBM173A05",
+      "offeringCode": "EBM173A05.2025-2026.1",
+      "title": "Behavioural Decision Making for ReMa",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM173A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM173A05"
+    },
+    {
+      "id": "LM:EBM014B05.2025-2026.1",
+      "personId": "LM",
+      "personDisplay": "Mulder, L.B.",
+      "code": "EBM014B05",
+      "offeringCode": "EBM014B05.2025-2026.1",
+      "title": "Evidence-based Staffing",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM014B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM014B05"
+    },
+    {
+      "id": "LM:EBM722B20.2025-2026.1",
+      "personId": "LM",
+      "personDisplay": "Mulder, L.B.",
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.1",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20"
+    },
+    {
+      "id": "LM:EBM722B20.2025-2026.2",
+      "personId": "LM",
+      "personDisplay": "Mulder, L.B.",
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.2",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20"
+    },
+    {
+      "id": "LM:EBE034A04.2025-2026.1",
+      "personId": "LM",
+      "personDisplay": "Mulder, L.B.",
+      "code": "EBE034A04",
+      "offeringCode": "EBE034A04.2025-2026.1",
+      "title": "Org. Beh. & Change Management EMFC",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "EMFC",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBE034A04",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBE034A04"
+    },
+    {
+      "id": "NN:EBM678B05.2025-2026.2",
+      "personId": "NN",
+      "personDisplay": "Nguyen, N.H.",
+      "code": "EBM678B05",
+      "offeringCode": "EBM678B05.2025-2026.2",
+      "title": "Economic Tools for HRM",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM678B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM678B05"
+    },
+    {
+      "id": "NN:EBS013B05.2025-2026.1",
+      "personId": "NN",
+      "personDisplay": "Nguyen, N.H.",
+      "code": "EBS013B05",
+      "offeringCode": "EBS013B05.2025-2026.1",
+      "title": "Research Paper for Pre-MSc HRM",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "Pre-MSc",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBS013B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBS013B05"
+    },
+    {
+      "id": "NN:EBM011A05.2025-2026.1",
+      "personId": "NN",
+      "personDisplay": "Nguyen, N.H.",
+      "code": "EBM011A05",
+      "offeringCode": "EBM011A05.2025-2026.1",
+      "title": "Strategic HRM",
+      "kind": "Course",
+      "roles": [
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM011A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM011A05"
+    },
+    {
+      "id": "BN:EBM173A05.2025-2026.1",
+      "personId": "BN",
+      "personDisplay": "Nijstad, B.A.",
+      "code": "EBM173A05",
+      "offeringCode": "EBM173A05.2025-2026.1",
+      "title": "Behavioural Decision Making for ReMa",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM173A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM173A05"
+    },
+    {
+      "id": "BN:EBE038A05.2025-2026.1",
+      "personId": "BN",
+      "personDisplay": "Nijstad, B.A.",
+      "code": "EBE038A05",
+      "offeringCode": "EBE038A05.2025-2026.1",
+      "title": "Entrepreneurship and Business Ethics",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "EMBA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBE038A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBE038A05"
+    },
+    {
+      "id": "BN:EBB110A05.2025-2026.1",
+      "personId": "BN",
+      "personDisplay": "Nijstad, B.A.",
+      "code": "EBB110A05",
+      "offeringCode": "EBB110A05.2025-2026.1",
+      "title": "Teamwork - Theories, Design and Dynamics",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB110A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB110A05"
+    },
+    {
+      "id": "JO:EBM240A05.2025-2026.1",
+      "personId": "JO",
+      "personDisplay": "Oedzes, J.",
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.1",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05"
+    },
+    {
+      "id": "JO:EBM240A05.2025-2026.2",
+      "personId": "JO",
+      "personDisplay": "Oedzes, J.",
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.2",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 2b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05"
+    },
+    {
+      "id": "JO:EBP654D05.2025-2026.1",
+      "personId": "JO",
+      "personDisplay": "Oedzes, J.",
+      "code": "EBP654D05",
+      "offeringCode": "EBP654D05.2025-2026.1",
+      "title": "Organizational Behaviour for IB",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "BSc IB",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBP654D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBP654D05"
+    },
+    {
+      "id": "JO:EBM239A05.2025-2026.1",
+      "personId": "JO",
+      "personDisplay": "Oedzes, J.",
+      "code": "EBM239A05",
+      "offeringCode": "EBM239A05.2025-2026.1",
+      "title": "Professional Skills for HRM",
+      "kind": "Course",
+      "roles": [
+        "EXAMINATOR"
+      ],
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM239A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM239A05"
+    },
+    {
+      "id": "JO:EBM239A05.2025-2026.2",
+      "personId": "JO",
+      "personDisplay": "Oedzes, J.",
+      "code": "EBM239A05",
+      "offeringCode": "EBM239A05.2025-2026.2",
+      "title": "Professional Skills for HRM",
+      "kind": "Course",
+      "roles": [
+        "EXAMINATOR"
+      ],
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM239A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM239A05"
+    },
+    {
+      "id": "FR:EBM769D05.2025-2026.1",
+      "personId": "FR",
+      "personDisplay": "Rink, F.A.",
+      "code": "EBM769D05",
+      "offeringCode": "EBM769D05.2025-2026.1",
+      "title": "Advanced Behavioral Science in Management",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM769D05"
+    },
+    {
+      "id": "FR:EBM012B05.2025-2026.1",
+      "personId": "FR",
+      "personDisplay": "Rink, F.A.",
+      "code": "EBM012B05",
+      "offeringCode": "EBM012B05.2025-2026.1",
+      "title": "Advanced Organizational Behaviour",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM012B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM012B05"
+    },
+    {
+      "id": "FR:EBP654D05.2025-2026.1",
+      "personId": "FR",
+      "personDisplay": "Rink, F.A.",
+      "code": "EBP654D05",
+      "offeringCode": "EBP654D05.2025-2026.1",
+      "title": "Organizational Behaviour for IB",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "BSc IB",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBP654D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBP654D05"
+    },
+    {
+      "id": "YY:EBM769D05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBM769D05",
+      "offeringCode": "EBM769D05.2025-2026.1",
+      "title": "Advanced Behavioral Science in Management",
+      "kind": "Course",
+      "roles": [
+        "CONTACT_PERSON",
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM769D05"
+    },
+    {
+      "id": "YY:EBM012B05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBM012B05",
+      "offeringCode": "EBM012B05.2025-2026.1",
+      "title": "Advanced Organizational Behaviour",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM012B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM012B05"
+    },
+    {
+      "id": "YY:EBB617B05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBB617B05",
+      "offeringCode": "EBB617B05.2025-2026.1",
+      "title": "Human Resource Management B&M",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB617B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB617B05"
+    },
+    {
+      "id": "YY:EBB065A05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBB065A05",
+      "offeringCode": "EBB065A05.2025-2026.1",
+      "title": "Human Resource Management for BE",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 2a",
+      "department": "BSc E&BE-BE",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB065A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB065A05"
+    },
+    {
+      "id": "YY:EBM182A05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBM182A05",
+      "offeringCode": "EBM182A05.2025-2026.1",
+      "title": "Managing Innovation",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM182A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM182A05"
+    },
+    {
+      "id": "YY:EBS013B05.2025-2026.1",
+      "personId": "YY",
+      "personDisplay": "Yuan, Y.",
+      "code": "EBS013B05",
+      "offeringCode": "EBS013B05.2025-2026.1",
+      "title": "Research Paper for Pre-MSc HRM",
+      "kind": "Course",
+      "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "Pre-MSc",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBS013B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBS013B05"
+    }
+  ],
+  "courses": [
+    {
+      "code": "EBM769D05",
+      "offeringCode": "EBM769D05.2025-2026.1",
+      "title": "Advanced Behavioral Science in Management",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM769D05",
+      "staffIds": [
+        "JDB",
+        "FR",
+        "YY"
+      ],
+      "staffDisplays": [
+        "Bloom, J. de",
+        "Rink, F.A.",
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBM012B05",
+      "offeringCode": "EBM012B05.2025-2026.1",
+      "title": "Advanced Organizational Behaviour",
+      "kind": "Course",
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM012B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM012B05",
+      "staffIds": [
+        "FR",
+        "YY"
+      ],
+      "staffDisplays": [
+        "Rink, F.A.",
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBM244A05",
+      "offeringCode": "EBM244A05.2025-2026.1",
+      "title": "Artificial Intelligence: A Multifaceted Perspective",
+      "kind": "Course",
+      "term": "Semester 2b",
+      "department": "MSc Marketing",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM244A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM244A05",
+      "staffIds": [
+        "JMA"
+      ],
+      "staffDisplays": [
+        "Mascareño, J.M."
+      ]
+    },
+    {
+      "code": "EBM173A05",
+      "offeringCode": "EBM173A05.2025-2026.1",
+      "title": "Behavioural Decision Making for ReMa",
+      "kind": "Course",
+      "term": "Semester 2b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM173A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM173A05",
+      "staffIds": [
+        "LM",
+        "BN"
+      ],
+      "staffDisplays": [
+        "Mulder, L.B.",
+        "Nijstad, B.A."
+      ]
+    },
+    {
+      "code": "EBM226B05",
+      "offeringCode": "EBM226B05.2025-2026.1",
+      "title": "Challenges for a Healthy Society",
+      "kind": "Course",
+      "term": "Semester 2b",
+      "department": "MSc BA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM226B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM226B05",
+      "staffIds": [
+        "JDB",
+        "JMA"
+      ],
+      "staffDisplays": [
+        "Bloom, J. de",
+        "Mascareño, J.M."
+      ]
+    },
+    {
+      "code": "EBM678B05",
+      "offeringCode": "EBM678B05.2025-2026.2",
+      "title": "Economic Tools for HRM",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM678B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM678B05",
+      "staffIds": [
+        "NN"
+      ],
+      "staffDisplays": [
+        "Nguyen, N.H."
+      ]
+    },
+    {
+      "code": "EBE038A05",
+      "offeringCode": "EBE038A05.2025-2026.1",
+      "title": "Entrepreneurship and Business Ethics",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "EMBA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBE038A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBE038A05",
+      "staffIds": [
+        "BN"
+      ],
+      "staffDisplays": [
+        "Nijstad, B.A."
+      ]
+    },
+    {
+      "code": "EBM014B05",
+      "offeringCode": "EBM014B05.2025-2026.1",
+      "title": "Evidence-based Staffing",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM014B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM014B05",
+      "staffIds": [
+        "LM"
+      ],
+      "staffDisplays": [
+        "Mulder, L.B."
+      ]
+    },
+    {
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.1",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05",
+      "staffIds": [
+        "SB",
+        "JO"
+      ],
+      "staffDisplays": [
+        "Berger, S.",
+        "Oedzes, J."
+      ]
+    },
+    {
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2025-2026.2",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "term": "Semester 2b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM240A05",
+      "staffIds": [
+        "SB",
+        "JO"
+      ],
+      "staffDisplays": [
+        "Berger, S.",
+        "Oedzes, J."
+      ]
+    },
+    {
+      "code": "EBB617B05",
+      "offeringCode": "EBB617B05.2025-2026.1",
+      "title": "Human Resource Management B&M",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB617B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB617B05",
+      "staffIds": [
+        "JMA",
+        "YY"
+      ],
+      "staffDisplays": [
+        "Mascareño, J.M.",
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBB065A05",
+      "offeringCode": "EBB065A05.2025-2026.1",
+      "title": "Human Resource Management for BE",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "BSc E&BE-BE",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB065A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB065A05",
+      "staffIds": [
+        "JMA",
+        "YY"
+      ],
+      "staffDisplays": [
+        "Mascareño, J.M.",
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBM072A05",
+      "offeringCode": "EBM072A05.2025-2026.1",
+      "title": "Leadership",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM072A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM072A05",
+      "staffIds": [
+        "MA",
+        "SB"
+      ],
+      "staffDisplays": [
+        "Arnold, M.",
+        "Berger, S."
+      ]
+    },
+    {
+      "code": "EBM182A05",
+      "offeringCode": "EBM182A05.2025-2026.1",
+      "title": "Managing Innovation",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM182A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM182A05",
+      "staffIds": [
+        "YY"
+      ],
+      "staffDisplays": [
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBM251A05",
+      "offeringCode": "EBM251A05.2025-2026.1",
+      "title": "Navigating Grand Challenges through Leadership and Governance",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM251A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM251A05",
+      "staffIds": [
+        "JL"
+      ],
+      "staffDisplays": [
+        "Lees, J.M."
+      ]
+    },
+    {
+      "code": "EBE034A04",
+      "offeringCode": "EBE034A04.2025-2026.1",
+      "title": "Org. Beh. & Change Management EMFC",
+      "kind": "Course",
+      "term": "Semester 1a",
+      "department": "EMFC",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBE034A04",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBE034A04",
+      "staffIds": [
+        "JVB",
+        "LM"
+      ],
+      "staffDisplays": [
+        "Brake, H.J. van de",
+        "Mulder, L.B."
+      ]
+    },
+    {
+      "code": "EBP654D05",
+      "offeringCode": "EBP654D05.2025-2026.1",
+      "title": "Organizational Behaviour for IB",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "BSc IB",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBP654D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBP654D05",
+      "staffIds": [
+        "MA",
+        "JO",
+        "FR"
+      ],
+      "staffDisplays": [
+        "Arnold, M.",
+        "Oedzes, J.",
+        "Rink, F.A."
+      ]
+    },
+    {
+      "code": "EBS013B05",
+      "offeringCode": "EBS013B05.2025-2026.1",
+      "title": "Research Paper for Pre-MSc HRM",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "Pre-MSc",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBS013B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBS013B05",
+      "staffIds": [
+        "NN",
+        "YY"
+      ],
+      "staffDisplays": [
+        "Nguyen, N.H.",
+        "Yuan, Y."
+      ]
+    },
+    {
+      "code": "EBM011A05",
+      "offeringCode": "EBM011A05.2025-2026.1",
+      "title": "Strategic HRM",
+      "kind": "Course",
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM011A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM011A05",
+      "staffIds": [
+        "OJ",
+        "NN"
+      ],
+      "staffDisplays": [
+        "Janssen, O.",
+        "Nguyen, N.H."
+      ]
+    },
+    {
+      "code": "EBM203A05",
+      "offeringCode": "EBM203A05.2025-2026.1",
+      "title": "Stress, Health and Sustainable Working Life",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM203A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM203A05",
+      "staffIds": [
+        "JDB"
+      ],
+      "staffDisplays": [
+        "Bloom, J. de"
+      ]
+    },
+    {
+      "code": "EBB110A05",
+      "offeringCode": "EBB110A05.2025-2026.1",
+      "title": "Teamwork - Theories, Design and Dynamics",
+      "kind": "Course",
+      "term": "Semester 1a",
+      "department": "BSc BDK-B&M",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB110A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB110A05",
+      "staffIds": [
+        "JVB",
+        "BN"
+      ],
+      "staffDisplays": [
+        "Brake, H.J. van de",
+        "Nijstad, B.A."
+      ]
+    },
+    {
+      "code": "EBB601B05",
+      "offeringCode": "EBB601B05.2025-2026.1",
+      "title": "Work Organization and Job Design",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "BSc BDK-TM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBB601B05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBB601B05",
+      "staffIds": [
+        "OJ"
+      ],
+      "staffDisplays": [
+        "Janssen, O."
+      ]
+    },
+    {
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.1",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "term": "Semester 1",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20",
+      "staffIds": [
+        "SB",
+        "LM"
+      ],
+      "staffDisplays": [
+        "Berger, S.",
+        "Mulder, L.B."
+      ]
+    },
+    {
+      "code": "EBM722B20",
+      "offeringCode": "EBM722B20.2025-2026.2",
+      "title": "Master's Thesis HRM",
+      "kind": "Thesis supervision",
+      "term": "Semester 2",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM722B20",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM722B20",
+      "staffIds": [
+        "SB",
+        "LM"
+      ],
+      "staffDisplays": [
+        "Berger, S.",
+        "Mulder, L.B."
+      ]
+    },
+    {
+      "code": "EBM239A05",
+      "offeringCode": "EBM239A05.2025-2026.1",
+      "title": "Professional Skills for HRM",
+      "kind": "Course",
+      "term": "Semester 1a",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM239A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM239A05",
+      "staffIds": [
+        "JO"
+      ],
+      "staffDisplays": [
+        "Oedzes, J."
+      ]
+    },
+    {
+      "code": "EBM239A05",
+      "offeringCode": "EBM239A05.2025-2026.2",
+      "title": "Professional Skills for HRM",
+      "kind": "Course",
+      "term": "Semester 2a",
+      "department": "MSc HRM",
+      "networkEligible": false,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM239A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2025-2026/course/page/EBM239A05",
+      "staffIds": [
+        "JO"
+      ],
+      "staffDisplays": [
+        "Oedzes, J."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "FR",
+      "target": "YY",
+      "count": 2,
+      "courseCodes": [
+        "EBM769D05",
+        "EBM012B05"
+      ],
+      "courseTitles": [
+        "Advanced Behavioral Science in Management",
+        "Advanced Organizational Behaviour"
+      ]
+    },
+    {
+      "source": "JMA",
+      "target": "YY",
+      "count": 2,
+      "courseCodes": [
+        "EBB617B05",
+        "EBB065A05"
+      ],
+      "courseTitles": [
+        "Human Resource Management B&M",
+        "Human Resource Management for BE"
+      ]
+    },
+    {
+      "source": "JO",
+      "target": "SB",
+      "count": 2,
+      "courseCodes": [
+        "EBM240A05",
+        "EBM240A05"
+      ],
+      "courseTitles": [
+        "HR Analytics",
+        "HR Analytics"
+      ]
+    },
+    {
+      "source": "BN",
+      "target": "JVB",
+      "count": 1,
+      "courseCodes": [
+        "EBB110A05"
+      ],
+      "courseTitles": [
+        "Teamwork - Theories, Design and Dynamics"
+      ]
+    },
+    {
+      "source": "BN",
+      "target": "LM",
+      "count": 1,
+      "courseCodes": [
+        "EBM173A05"
+      ],
+      "courseTitles": [
+        "Behavioural Decision Making for ReMa"
+      ]
+    },
+    {
+      "source": "FR",
+      "target": "JDB",
+      "count": 1,
+      "courseCodes": [
+        "EBM769D05"
+      ],
+      "courseTitles": [
+        "Advanced Behavioral Science in Management"
+      ]
+    },
+    {
+      "source": "FR",
+      "target": "JO",
+      "count": 1,
+      "courseCodes": [
+        "EBP654D05"
+      ],
+      "courseTitles": [
+        "Organizational Behaviour for IB"
+      ]
+    },
+    {
+      "source": "FR",
+      "target": "MA",
+      "count": 1,
+      "courseCodes": [
+        "EBP654D05"
+      ],
+      "courseTitles": [
+        "Organizational Behaviour for IB"
+      ]
+    },
+    {
+      "source": "JDB",
+      "target": "JMA",
+      "count": 1,
+      "courseCodes": [
+        "EBM226B05"
+      ],
+      "courseTitles": [
+        "Challenges for a Healthy Society"
+      ]
+    },
+    {
+      "source": "JDB",
+      "target": "YY",
+      "count": 1,
+      "courseCodes": [
+        "EBM769D05"
+      ],
+      "courseTitles": [
+        "Advanced Behavioral Science in Management"
+      ]
+    },
+    {
+      "source": "JO",
+      "target": "MA",
+      "count": 1,
+      "courseCodes": [
+        "EBP654D05"
+      ],
+      "courseTitles": [
+        "Organizational Behaviour for IB"
+      ]
+    },
+    {
+      "source": "JVB",
+      "target": "LM",
+      "count": 1,
+      "courseCodes": [
+        "EBE034A04"
+      ],
+      "courseTitles": [
+        "Org. Beh. & Change Management EMFC"
+      ]
+    },
+    {
+      "source": "MA",
+      "target": "SB",
+      "count": 1,
+      "courseCodes": [
+        "EBM072A05"
+      ],
+      "courseTitles": [
+        "Leadership"
+      ]
+    },
+    {
+      "source": "NN",
+      "target": "OJ",
+      "count": 1,
+      "courseCodes": [
+        "EBM011A05"
+      ],
+      "courseTitles": [
+        "Strategic HRM"
+      ]
+    },
+    {
+      "source": "NN",
+      "target": "YY",
+      "count": 1,
+      "courseCodes": [
+        "EBS013B05"
+      ],
+      "courseTitles": [
+        "Research Paper for Pre-MSc HRM"
+      ]
+    }
+  ],
+  "personCourseCounts": {
+    "NN": 3,
+    "MA": 2,
+    "SB": 5,
+    "JDB": 3,
+    "JVB": 2,
+    "CDD": 0,
+    "OJ": 2,
+    "JL": 1,
+    "LM": 5,
+    "JMA": 4,
+    "BN": 3,
+    "JO": 5,
+    "FR": 3,
+    "MR": 0,
+    "JS": 0,
+    "GVV": 0,
+    "TDV": 0,
+    "YY": 6,
+    "JJ": 0
+  },
+  "personNetworkCourseCounts": {
+    "NN": 3,
+    "MA": 2,
+    "SB": 3,
+    "JDB": 3,
+    "JVB": 2,
+    "CDD": 0,
+    "OJ": 2,
+    "JL": 1,
+    "LM": 3,
+    "JMA": 4,
+    "BN": 3,
+    "JO": 3,
+    "FR": 3,
+    "MR": 0,
+    "JS": 0,
+    "GVV": 0,
+    "TDV": 0,
+    "YY": 6,
+    "JJ": 0
+  }
+}

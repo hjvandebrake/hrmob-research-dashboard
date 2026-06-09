@@ -917,7 +917,6 @@ td.muted { color: var(--ink-400); }
 .search-box { flex: 1 1 340px; }
 .select-box { flex: 0 0 180px; }
 .overview-sort { flex-basis: 190px; }
-.network-select { flex-basis: 190px; }
 .network-toggle-row {
   align-items: center;
   display: flex;
@@ -932,6 +931,19 @@ td.muted { color: var(--ink-400); }
 }
 .network-aip-toggle,
 .network-external-toggle { height: 38px; }
+.network-mode-toggle {
+  height: 32px;
+}
+.network-clear-selection {
+  align-self: center;
+  white-space: nowrap;
+}
+.network-selection-note {
+  color: var(--ink-500);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  margin: -14px 0 14px;
+}
 .search-box input, .select-box select {
   height: 38px;
   border: 1px solid var(--ink-200);
@@ -1425,6 +1437,12 @@ button.word-cloud-item {
 .node { fill: var(--white); stroke: var(--red); stroke-width: 3.25; }
 .node.focus { stroke-width: 4.2; }
 .node.low { stroke: var(--ink-400); }
+.network-person-node {
+  cursor: pointer;
+}
+.network-person-node:hover .node {
+  stroke-width: 4.4;
+}
 .node-count {
   fill: var(--ink-900);
   font-size: 0.78rem;

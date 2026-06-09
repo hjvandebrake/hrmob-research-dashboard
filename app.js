@@ -5,9 +5,11 @@ const state = {
   phdsData: { meta: {}, theses: [] },
   resourceData: { meta: {}, opportunities: [], tips: [] },
   externalPartnersData: { meta: {}, partners: [] },
+  teachingData: { meta: {}, records: [], courses: [], edges: [], personCourseCounts: {}, personNetworkCourseCounts: {} },
   tab: "overview",
   fteOnly: false,
   recentOnly: false,
+  networkMode: "publications",
   networkAipHighOnly: false,
   networkExternal: true,
   networkPersonId: "",
@@ -23,7 +25,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260609-1007";
+const DATA_VERSION = "20260609-1049";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -224,12 +226,16 @@ function cacheElements() {
   els.aipFilter = document.getElementById("aip-filter");
   els.fteToggle = document.getElementById("fte-toggle");
   els.recentToggle = document.getElementById("recent-toggle");
-  els.networkPersonSelect = document.getElementById("network-person-select");
+  els.networkModeToggle = document.getElementById("network-mode-toggle");
+  els.networkClearSelection = document.getElementById("network-clear-selection");
+  els.networkSelectionNote = document.getElementById("network-selection-note");
   els.networkAipToggle = document.getElementById("network-aip-toggle");
   els.networkExternalToggle = document.getElementById("network-external-toggle");
   els.networkSvg = document.getElementById("network-svg");
   els.networkEmpty = document.getElementById("network-empty");
+  els.networkLegend = document.getElementById("network-legend");
   els.networkTableWrap = document.getElementById("network-table-wrap");
+  els.externalPartnerPanel = document.querySelector(".external-partner-panel");
   els.externalPartnerList = document.getElementById("external-partner-list");
   els.feedbackForm = document.getElementById("feedback-form");
   els.feedbackName = document.getElementById("feedback-name");
@@ -250,6 +256,12 @@ function attachEvents() {
         state.staffTopicQuery = "";
         state.staffTopicMode = "query";
       }
+      if (el.dataset.tab === "expertise") {
+        state.expertiseSearch = "";
+        state.expertiseTopic = "";
+        state.expertiseMode = "query";
+        if (els.expertiseSearch) els.expertiseSearch.value = "";
+      }
       setTab(el.dataset.tab);
     });
   });
@@ -267,9 +279,36 @@ function attachEvents() {
       renderNetwork();
     });
   }
-  if (els.networkPersonSelect) {
-    els.networkPersonSelect.addEventListener("change", () => {
-      state.networkPersonId = els.networkPersonSelect.value;
+  if (els.networkModeToggle) {
+    els.networkModeToggle.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-network-mode]");
+      if (!button) return;
+      state.networkMode = button.dataset.networkMode === "teaching" ? "teaching" : "publications";
+      state.networkPersonId = "";
+      renderNetwork();
+    });
+  }
+  if (els.networkClearSelection) {
+    els.networkClearSelection.addEventListener("click", () => {
+      state.networkPersonId = "";
+      renderNetwork();
+    });
+  }
+  if (els.networkSvg) {
+    els.networkSvg.addEventListener("click", (event) => {
+      const node = event.target.closest("[data-network-person-id]");
+      if (!node) return;
+      const id = node.getAttribute("data-network-person-id") || "";
+      state.networkPersonId = state.networkPersonId === id ? "" : id;
+      renderNetwork();
+    });
+    els.networkSvg.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const node = event.target.closest("[data-network-person-id]");
+      if (!node) return;
+      event.preventDefault();
+      const id = node.getAttribute("data-network-person-id") || "";
+      state.networkPersonId = state.networkPersonId === id ? "" : id;
       renderNetwork();
     });
   }
@@ -412,13 +451,14 @@ function feedbackMailtoHref() {
 
 async function loadData() {
   try {
-    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse] = await Promise.all([
+    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse, teachingResponse] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
       fetch(`data/benchmark-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/grants.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/phds.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/resource-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/external-partners.json?v=${DATA_VERSION}`).catch(() => null),
+      fetch(`data/teaching-data.json?v=${DATA_VERSION}`).catch(() => null),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
@@ -427,6 +467,7 @@ async function loadData() {
     if (phdsResponse?.ok) state.phdsData = await phdsResponse.json();
     if (resourceResponse?.ok) state.resourceData = await resourceResponse.json();
     if (externalPartnersResponse?.ok) state.externalPartnersData = await externalPartnersResponse.json();
+    if (teachingResponse?.ok) state.teachingData = await teachingResponse.json();
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     els.footerMeta.textContent = "";
@@ -634,6 +675,9 @@ function renderStaff() {
 
 function renderExpertise() {
   if (!state.data || !els.expertiseWordcloud) return;
+  if (els.expertiseSearch && els.expertiseSearch.value !== state.expertiseSearch) {
+    els.expertiseSearch.value = state.expertiseSearch || "";
+  }
   const signals = globalTopicSignals(activePublications()).slice(0, 90);
   renderWordCloud(els.expertiseWordcloud, signals, {
     selected: state.expertiseTopic,
@@ -2901,23 +2945,52 @@ function shortFacultyName(name) {
   return trimmed.slice(0, 14);
 }
 
-function renderNetworkPersonSelect(people) {
-  if (!els.networkPersonSelect) return;
+function syncNetworkControls(people) {
   const activeIds = new Set(people.map((person) => person.id));
   if (state.networkPersonId && !activeIds.has(state.networkPersonId)) {
     state.networkPersonId = "";
   }
-  const options = people.slice()
-    .sort((a, b) => a.display.localeCompare(b.display))
-    .map((person) => `<option value="${escapeHtml(person.id)}">${escapeHtml(person.display)}</option>`);
-  els.networkPersonSelect.innerHTML = `<option value="">All department members</option>${options.join("")}`;
-  els.networkPersonSelect.value = state.networkPersonId;
+  if (els.networkModeToggle) {
+    els.networkModeToggle.querySelectorAll("[data-network-mode]").forEach((button) => {
+      const on = button.dataset.networkMode === state.networkMode;
+      button.classList.toggle("on", on);
+      button.setAttribute("aria-pressed", String(on));
+    });
+  }
+  document.querySelectorAll(".publication-network-control").forEach((control) => {
+    control.hidden = state.networkMode === "teaching";
+  });
+  if (els.externalPartnerPanel) els.externalPartnerPanel.hidden = state.networkMode === "teaching";
+  const selected = people.find((person) => person.id === state.networkPersonId);
+  if (els.networkClearSelection) els.networkClearSelection.hidden = !selected;
+  if (els.networkSelectionNote) {
+    const base = state.networkMode === "teaching"
+      ? "Click a department member to focus shared-course teaching links."
+      : "Click a department member to focus publication collaborations.";
+    els.networkSelectionNote.textContent = selected
+      ? `Focused on ${selected.display}. Click the same node again or use Show all to reset.`
+      : base;
+  }
+  if (els.networkEmpty) {
+    els.networkEmpty.textContent = state.networkMode === "teaching"
+      ? "No shared teaching-course ties for the current filters."
+      : "No coauthorship edges for the current filters.";
+  }
+  renderNetworkLegend();
 }
 
 function renderNetwork() {
   if (!state.data || !els.networkSvg) return;
   const people = activePeople();
-  renderNetworkPersonSelect(people);
+  syncNetworkControls(people);
+  if (state.networkMode === "teaching") {
+    renderTeachingNetwork(people);
+    return;
+  }
+  renderPublicationNetwork(people);
+}
+
+function renderPublicationNetwork(people) {
   const activeIds = new Set(people.map((person) => person.id));
   const selectedPersonId = state.networkPersonId;
   let pubs = activePublications();
@@ -2963,6 +3036,7 @@ function renderNetwork() {
     count: nodeStats.get(person.id)?.count || 0,
     degree: nodeStats.get(person.id)?.degree || 0,
     strength: nodeStats.get(person.id)?.strength || 0,
+    metricLabel: "publications",
     focus: person.id === selectedPersonId,
   }));
   let visibleEdges = edges;
@@ -2992,6 +3066,87 @@ function renderNetwork() {
   drawNetwork(visibleNodes, visibleEdges, collaboratorNodes, collaboratorEdges);
   renderNetworkTable(visibleEdges, collaborationPubs);
   renderExternalPartners(collaborationPubs, collaborationActiveIds);
+}
+
+function renderTeachingNetwork(people) {
+  const activeIds = new Set(people.map((person) => person.id));
+  const selectedPersonId = state.networkPersonId;
+  const records = (state.teachingData?.records || []).filter((record) => (
+    activeIds.has(record.personId) && record.networkEligible
+  ));
+  const countByPerson = countBy(records, (record) => record.personId);
+  const edgeMap = new Map();
+  (state.teachingData?.edges || []).forEach((edge) => {
+    if (!activeIds.has(edge.source) || !activeIds.has(edge.target)) return;
+    const key = `${edge.source}|${edge.target}`;
+    edgeMap.set(key, {
+      source: edge.source,
+      target: edge.target,
+      count: edge.count || 0,
+      courseCodes: edge.courseCodes || [],
+      courseTitles: edge.courseTitles || [],
+      metricLabel: "shared course offerings",
+    });
+  });
+  const edges = Array.from(edgeMap.values()).sort((a, b) => b.count - a.count);
+  const nodeStats = new Map(people.map((person) => [person.id, { count: countByPerson.get(person.id) || 0, degree: 0, strength: 0 }]));
+  edges.forEach((edge) => {
+    const source = nodeStats.get(edge.source);
+    const target = nodeStats.get(edge.target);
+    if (source) {
+      source.degree += 1;
+      source.strength += edge.count;
+    }
+    if (target) {
+      target.degree += 1;
+      target.strength += edge.count;
+    }
+  });
+  const nodes = people.map((person) => ({
+    id: person.id,
+    label: person.display,
+    name: person.name,
+    fte: person.fte,
+    count: nodeStats.get(person.id)?.count || 0,
+    degree: nodeStats.get(person.id)?.degree || 0,
+    strength: nodeStats.get(person.id)?.strength || 0,
+    metricLabel: "listed courses",
+    focus: person.id === selectedPersonId,
+  }));
+  let visibleEdges = edges;
+  let visibleNodes = nodes;
+  if (selectedPersonId) {
+    const visibleIds = new Set([selectedPersonId]);
+    visibleEdges = edges.filter((edge) => edge.source === selectedPersonId || edge.target === selectedPersonId);
+    visibleEdges.forEach((edge) => {
+      visibleIds.add(edge.source);
+      visibleIds.add(edge.target);
+    });
+    visibleNodes = nodes.filter((node) => visibleIds.has(node.id));
+  }
+  els.networkEmpty.hidden = Boolean(selectedPersonId) || visibleEdges.length > 0;
+  drawNetwork(visibleNodes, visibleEdges, [], []);
+  renderTeachingNetworkTable(visibleEdges);
+  renderExternalPartners([], activeIds);
+}
+
+function renderNetworkLegend() {
+  if (!els.networkLegend) return;
+  if (state.networkMode === "teaching") {
+    els.networkLegend.innerHTML = `
+      <span><i class="legend-node"></i> Node size = listed courses</span>
+      <span><i class="legend-count"></i> Number = listed courses</span>
+      <span><i class="legend-line"></i> Line thickness = shared course offerings</span>
+    `;
+    return;
+  }
+  els.networkLegend.innerHTML = `
+    <span><i class="legend-node"></i> Node size = publications</span>
+    <span><i class="legend-count"></i> Number = publications</span>
+    <span><i class="legend-line"></i> Line thickness = shared publications</span>
+    <span><i class="legend-faculty"></i> Other FEB departments</span>
+    <span><i class="legend-external"></i> Faint outer ties = outside coauthors, capped at 10 per publication</span>
+  `;
 }
 
 function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = []) {
@@ -3080,7 +3235,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     path.setAttribute("d", edgePath(edge, a, b, placed));
     path.setAttribute("class", "edge");
     path.setAttribute("stroke-width", String(staffEdgeWidth(edge).toFixed(2)));
-    path.appendChild(svgTitle(`${a.label} + ${b.label}: ${edge.count} shared publications`));
+    path.appendChild(svgTitle(`${a.label} + ${b.label}: ${edge.count} ${edge.metricLabel || "shared publications"}`));
     svg.appendChild(path);
   });
 
@@ -3089,13 +3244,18 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
 
   placed.forEach((node) => {
     const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    group.setAttribute("class", "network-person-node");
+    group.setAttribute("data-network-person-id", node.id);
+    group.setAttribute("tabindex", "0");
+    group.setAttribute("role", "button");
+    group.setAttribute("aria-label", `Focus ${node.label}`);
     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     const radius = Math.max(10, Math.min(38, 8 + Math.sqrt(node.count || 0) * 3.8));
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius));
     circle.setAttribute("class", `node${node.count ? "" : " low"}${node.focus ? " focus" : ""}`);
-    circle.appendChild(svgTitle(`${node.label}: ${node.count} publications, FTE ${node.fte}`));
+    circle.appendChild(svgTitle(`${node.label}: ${node.count} ${node.metricLabel || "publications"}, FTE ${node.fte}`));
     group.appendChild(circle);
 
     const countLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -3383,6 +3543,21 @@ function renderNetworkTable(edges, pubs) {
   ]);
   els.networkTableWrap.innerHTML = `<table id="network-table"></table>`;
   setTable(document.getElementById("network-table"), ["Pair", "Shared pubs", "Examples"], rows, [false, true, false]);
+}
+
+function renderTeachingNetworkTable(edges) {
+  const people = peopleById();
+  const rows = edges.slice(0, 25).map((edge) => [
+    `${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`,
+    edge.count,
+    (edge.courseTitles || []).slice(0, 5).join("; "),
+  ]);
+  if (!rows.length) {
+    els.networkTableWrap.innerHTML = `<div class="staff-empty">No shared teaching-course ties for the current focus.</div>`;
+    return;
+  }
+  els.networkTableWrap.innerHTML = `<table id="network-table"></table>`;
+  setTable(document.getElementById("network-table"), ["Pair", "Shared course offerings", "Courses"], rows, [false, true, false]);
 }
 
 function renderExternalPartners(pubs, activeIds) {

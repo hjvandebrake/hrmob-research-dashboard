@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260609-1007">
+  <link rel="stylesheet" href="styles.css?v=20260609-1049">
 </head>
 <body>
   <nav class="nav">
@@ -357,27 +357,27 @@
             <h2 class="h2">Department members connected by shared publications</h2>
           </div>
           <div class="network-toggle-row">
-            <label class="select-box network-select">
-              <span>Person</span>
-              <select id="network-person-select">
-                <option value="">All department members</option>
-              </select>
-            </label>
-            <label class="switch network-aip-toggle" title="Show only collaborations from publications in journals with AIP score 95.0 or higher">
+            <div id="network-mode-toggle" class="metric-toggle network-mode-toggle" aria-label="Network type">
+              <button class="on" type="button" data-network-mode="publications" aria-pressed="true">Publications</button>
+              <button type="button" data-network-mode="teaching" aria-pressed="false">Teaching</button>
+            </div>
+            <label class="switch network-aip-toggle publication-network-control" title="Show only collaborations from publications in journals with AIP score 95.0 or higher">
               <input id="network-aip-toggle" type="checkbox">
               <span>AIP &ge; 95 only</span>
             </label>
-            <label class="switch network-external-toggle">
+            <label class="switch network-external-toggle publication-network-control">
               <input id="network-external-toggle" type="checkbox" checked>
               <span>Outer collaborators</span>
             </label>
+            <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Show all</button>
           </div>
         </div>
+        <p id="network-selection-note" class="network-selection-note">Click a department member in the network to focus.</p>
         <div class="network-shell">
           <svg id="network-svg" role="img" aria-label="Collaboration network"></svg>
           <div id="network-empty" class="empty" hidden>No coauthorship edges for the current filters.</div>
         </div>
-        <div class="legend">
+        <div id="network-legend" class="legend">
           <span><i class="legend-node"></i> Node size = publications</span>
           <span><i class="legend-count"></i> Number = publications</span>
           <span><i class="legend-line"></i> Line thickness = shared publications</span>
@@ -474,6 +474,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260609-1007"></script>
+  <script src="app.js?v=20260609-1049"></script>
 </body>
 </html>
