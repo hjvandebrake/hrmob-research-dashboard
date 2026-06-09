@@ -4,6 +4,7 @@ const state = {
   grantsData: { meta: {}, grants: [] },
   phdsData: { meta: {}, theses: [] },
   resourceData: { meta: {}, opportunities: [], tips: [] },
+  externalPartnersData: { meta: {}, partners: [] },
   tab: "overview",
   fteOnly: false,
   recentOnly: false,
@@ -22,7 +23,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260608-1623";
+const DATA_VERSION = "20260609-1007";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -208,6 +209,7 @@ function cacheElements() {
   els.staffList = document.getElementById("staff-list");
   els.staffProfile = document.getElementById("staff-profile");
   els.staffTopics = document.getElementById("staff-topics");
+  els.staffSuggestions = document.getElementById("staff-suggestions");
   els.staffRelated = document.getElementById("staff-related");
   els.staffPublicationEye = document.getElementById("staff-publication-eye");
   els.staffPublicationTitle = document.getElementById("staff-publication-title");
@@ -228,6 +230,7 @@ function cacheElements() {
   els.networkSvg = document.getElementById("network-svg");
   els.networkEmpty = document.getElementById("network-empty");
   els.networkTableWrap = document.getElementById("network-table-wrap");
+  els.externalPartnerList = document.getElementById("external-partner-list");
   els.feedbackForm = document.getElementById("feedback-form");
   els.feedbackName = document.getElementById("feedback-name");
   els.feedbackArea = document.getElementById("feedback-area");
@@ -346,6 +349,12 @@ function attachEvents() {
     state.selectedStaffId = button.dataset.staffId;
     renderStaff();
   });
+  els.staffSuggestions.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-staff-id]");
+    if (!button) return;
+    state.selectedStaffId = button.dataset.staffId;
+    renderStaff();
+  });
   window.addEventListener("resize", debounce(() => {
     if (state.tab === "network") renderNetwork();
   }, 180));
@@ -403,12 +412,13 @@ function feedbackMailtoHref() {
 
 async function loadData() {
   try {
-    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse] = await Promise.all([
+    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
       fetch(`data/benchmark-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/grants.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/phds.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/resource-data.json?v=${DATA_VERSION}`).catch(() => null),
+      fetch(`data/external-partners.json?v=${DATA_VERSION}`).catch(() => null),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
@@ -416,6 +426,7 @@ async function loadData() {
     if (grantsResponse?.ok) state.grantsData = await grantsResponse.json();
     if (phdsResponse?.ok) state.phdsData = await phdsResponse.json();
     if (resourceResponse?.ok) state.resourceData = await resourceResponse.json();
+    if (externalPartnersResponse?.ok) state.externalPartnersData = await externalPartnersResponse.json();
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     els.footerMeta.textContent = "";
@@ -475,6 +486,7 @@ function activePublicationPool({ countedOnly }) {
   const [fromYear, toYear] = activeWindowYears();
   const filtered = state.data.publications.filter((pub) => (
     (!countedOnly || countedPublication(pub))
+    && displayPublication(pub)
     && pub.matchedPeople.some((id) => ids.has(id))
     && (!fromYear || pub.year >= fromYear)
     && (!toYear || pub.year <= toYear)
@@ -778,6 +790,7 @@ function renderStaffProfile(row, bundle) {
   if (!row) {
     els.staffProfile.innerHTML = `<div class="staff-empty">No profile selected.</div>`;
     els.staffTopics.innerHTML = "";
+    if (els.staffSuggestions) els.staffSuggestions.innerHTML = "";
     els.staffRelated.innerHTML = "";
     els.staffPublicationEye.textContent = "Publications";
     els.staffPublicationTitle.textContent = "Selected staff publications";
@@ -810,6 +823,7 @@ function renderStaffProfile(row, bundle) {
     </div>
   `;
   renderStaffTopics(person.id);
+  renderStaffSuggestions(person.id);
   renderStaffRelated(person.id, bundle, row);
   renderStaffPublications(person.id, bundle, row);
 }
@@ -844,6 +858,74 @@ function renderStaffTopics(personId) {
   els.staffTopics.innerHTML = signals.map((signal) => (
     `<button class="topic-chip" type="button" data-topic-query="${escapeHtml(signal.query || signal.label)}" data-topic-kind="${signal.semantic ? "family" : "phrase"}">${escapeHtml(signal.label)} <b>${signal.count}</b></button>`
   )).join("");
+}
+
+function renderStaffSuggestions(personId) {
+  if (!els.staffSuggestions) return;
+  const suggestions = staffCollaborationSuggestions(personId).slice(0, 5);
+  if (!suggestions.length) {
+    els.staffSuggestions.innerHTML = `<p class="small-muted">No strong overlap signals in the current data window.</p>`;
+    return;
+  }
+  els.staffSuggestions.innerHTML = suggestions.map((item) => `
+    <article class="suggestion-card">
+      <button class="person-link suggestion-name" type="button" data-staff-id="${escapeHtml(item.person.id)}">${escapeHtml(item.person.display)}</button>
+      <p>${escapeHtml(item.person.name)}</p>
+      <div class="suggestion-reasons">
+        ${item.reasons.map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
+      </div>
+    </article>
+  `).join("");
+}
+
+function staffCollaborationSuggestions(personId) {
+  const people = activePeople().filter((person) => person.id !== personId);
+  const selectedProfile = staffOverlapProfile(personId);
+  return people.map((person) => {
+    const otherProfile = staffOverlapProfile(person.id);
+    const sharedTopics = intersectSets(selectedProfile.topics, otherProfile.topics).slice(0, 4);
+    const sharedExternal = intersectSets(selectedProfile.externalAuthors, otherProfile.externalAuthors).slice(0, 4);
+    const sharedGrants = intersectSets(selectedProfile.grants, otherProfile.grants);
+    const sharedPartners = intersectSets(selectedProfile.partners, otherProfile.partners).slice(0, 3);
+    const score = sharedTopics.length * 3 + sharedExternal.length * 4 + sharedGrants.length * 6 + sharedPartners.length * 3;
+    const reasons = [];
+    if (sharedTopics.length) reasons.push(`Topics: ${sharedTopics.join(", ")}`);
+    if (sharedExternal.length) reasons.push(`External coauthors: ${sharedExternal.map((id) => selectedProfile.externalAuthorLabels.get(id) || id).join(", ")}`);
+    if (sharedPartners.length) reasons.push(`Institutions: ${sharedPartners.map((id) => selectedProfile.partnerLabels.get(id) || id).join(", ")}`);
+    if (sharedGrants.length) reasons.push(`${sharedGrants.length} shared grant${sharedGrants.length === 1 ? "" : "s"}`);
+    return { person, score, reasons };
+  })
+    .filter((item) => item.score > 0 && item.reasons.length)
+    .sort((a, b) => b.score - a.score || a.person.display.localeCompare(b.person.display));
+}
+
+function staffOverlapProfile(personId) {
+  const topics = new Set(semanticTopicSignals(staffPublicationRecords(personId), { minCount: 1, phraseMinCount: 2 })
+    .slice(0, 18)
+    .map((signal) => signal.query || signal.label));
+  const externalAuthorLabels = new Map();
+  const externalAuthors = new Set();
+  staffPublicationRecords(personId).forEach((pub) => {
+    externalAuthorsForPublication(pub).forEach((author) => {
+      const id = externalAuthorId(author);
+      externalAuthors.add(id);
+      externalAuthorLabels.set(id, externalAuthorLabel(author));
+    });
+  });
+  const grants = new Set(staffGrantRecords(personId).map((grant) => grant.id));
+  const partnerLabels = new Map();
+  const partners = new Set();
+  (state.externalPartnersData?.partners || []).forEach((partner) => {
+    const staffIds = new Set((partner.publications || []).flatMap((pub) => pub.staffIds || []));
+    if (!staffIds.has(personId)) return;
+    partners.add(partner.id);
+    partnerLabels.set(partner.id, partner.institution);
+  });
+  return { topics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels };
+}
+
+function intersectSets(a, b) {
+  return Array.from(a).filter((value) => b.has(value));
 }
 
 function showTopicOverlay(query, mode = "query") {
@@ -1385,6 +1467,24 @@ function countedPublication(pub) {
   ) return false;
   if (pub.rankableJournal !== false) return true;
   return false;
+}
+
+function displayPublication(pub) {
+  return !hiddenProceedingsPublication(pub);
+}
+
+function hiddenProceedingsPublication(pub) {
+  const kind = normalizeSearchText(pub.publicationKind || "");
+  const sourceType = normalizeSearchText(pub.sourceType || "");
+  const source = normalizeSearchText([pub.journal, pub.aipJournal, pub.publisher, pub.publicationKind, pub.sourceType].join(" "));
+  if (isRankableProceedingsJournal(pub)) return false;
+  return source.includes("academy of management proceedings")
+    || source.includes("conference")
+    || kind.includes("conference")
+    || sourceType.includes("conference")
+    || source.includes("proceedings")
+    || kind.includes("proceedings")
+    || sourceType.includes("proceedings");
 }
 
 function editorialLikePublication(pub, title, source) {
@@ -2415,8 +2515,16 @@ function dashboardEraPublications(pubs) {
 
 function publicationCell(pub) {
   const doi = pub.doi ? `<a class="doi" href="https://doi.org/${encodeURIComponent(pub.doi)}" target="_blank" rel="noopener">doi</a>` : "";
-  return `<span class="primary-text">${escapeHtml(pub.title)}</span> ${doi}<br>
+  const status = publicationStatusBadge(pub);
+  return `<span class="primary-text">${escapeHtml(pub.title)}</span> ${doi}${status}<br>
     <span class="small-muted">${escapeHtml(pub.authors.slice(0, 8).join(", "))}${pub.authors.length > 8 ? ", ..." : ""}</span>`;
+}
+
+function publicationStatusBadge(pub) {
+  if (countedPublication(pub)) return "";
+  const kind = String(pub.publicationKind || pub.sourceType || "").trim();
+  const label = kind && !/journal/i.test(kind) ? `${kind} - not counted` : "Not counted";
+  return ` <span class="tag muted">${escapeHtml(label)}</span>`;
 }
 
 function publicationDateValue(pub) {
@@ -2883,6 +2991,7 @@ function renderNetwork() {
   els.networkEmpty.hidden = Boolean(selectedPersonId) || visibleEdges.length > 0 || collaboratorEdges.length > 0;
   drawNetwork(visibleNodes, visibleEdges, collaboratorNodes, collaboratorEdges);
   renderNetworkTable(visibleEdges, collaborationPubs);
+  renderExternalPartners(collaborationPubs, collaborationActiveIds);
 }
 
 function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = []) {
@@ -3274,6 +3383,55 @@ function renderNetworkTable(edges, pubs) {
   ]);
   els.networkTableWrap.innerHTML = `<table id="network-table"></table>`;
   setTable(document.getElementById("network-table"), ["Pair", "Shared pubs", "Examples"], rows, [false, true, false]);
+}
+
+function renderExternalPartners(pubs, activeIds) {
+  if (!els.externalPartnerList) return;
+  const activePubIds = new Set(pubs.map((pub) => pub.id));
+  const people = peopleById();
+  const partners = (state.externalPartnersData?.partners || [])
+    .map((partner) => {
+      const visiblePubs = (partner.publications || []).filter((pub) => (
+        activePubIds.has(pub.id)
+        && (pub.staffIds || []).some((id) => activeIds.has(id))
+      ));
+      if (!visiblePubs.length) return null;
+      const staffIds = new Set(visiblePubs.flatMap((pub) => pub.staffIds || []).filter((id) => activeIds.has(id)));
+      const authorCounts = countBy(visiblePubs.flatMap((pub) => pub.authors || []), (author) => author);
+      const authors = Array.from(authorCounts.entries())
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .slice(0, 5)
+        .map(([author]) => author);
+      return {
+        ...partner,
+        visiblePubs,
+        staffIds,
+        authors,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.visiblePubs.length - a.visiblePubs.length || a.institution.localeCompare(b.institution))
+    .slice(0, 12);
+
+  if (!partners.length) {
+    els.externalPartnerList.innerHTML = `<p class="small-muted">No external institution affiliation data for the current filters.</p>`;
+    return;
+  }
+  els.externalPartnerList.innerHTML = partners.map((partner) => {
+    const staff = Array.from(partner.staffIds)
+      .map((id) => people.get(id)?.display || id)
+      .sort()
+      .join(", ");
+    const years = yearSetLabel(new Set(partner.visiblePubs.map((pub) => pub.year)));
+    return `<article class="partner-card">
+      <div>
+        <p class="partner-name">${escapeHtml(partner.institution)}</p>
+        <p class="partner-meta">${partner.visiblePubs.length} publication${partner.visiblePubs.length === 1 ? "" : "s"} - ${escapeHtml(years)}${partner.country ? ` - ${escapeHtml(partner.country)}` : ""}</p>
+      </div>
+      <p><strong>HRM&OB</strong> ${escapeHtml(staff || "Unknown")}</p>
+      ${partner.authors.length ? `<p><strong>External authors</strong> ${escapeHtml(partner.authors.join(", "))}</p>` : ""}
+    </article>`;
+  }).join("");
 }
 
 function setTable(table, headers, rows, numeric = []) {
