@@ -6,6 +6,8 @@ const state = {
   resourceData: { meta: {}, opportunities: [], tips: [] },
   externalPartnersData: { meta: {}, partners: [] },
   teachingData: { meta: {}, records: [], courses: [], edges: [], personCourseCounts: {}, personNetworkCourseCounts: {} },
+  staffProfileData: { meta: {}, people: [] },
+  staffProfileLookupCache: null,
   tab: "overview",
   includeAffiliatedResearchers: false,
   recentOnly: false,
@@ -25,7 +27,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260610-1954";
+const DATA_VERSION = "20260610-2032";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -454,7 +456,7 @@ function feedbackMailtoHref() {
 
 async function loadData() {
   try {
-    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse, teachingResponse] = await Promise.all([
+    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse, teachingResponse, staffProfileResponse] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
       fetch(`data/benchmark-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/grants.json?v=${DATA_VERSION}`).catch(() => null),
@@ -462,6 +464,7 @@ async function loadData() {
       fetch(`data/resource-data.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/external-partners.json?v=${DATA_VERSION}`).catch(() => null),
       fetch(`data/teaching-data.json?v=${DATA_VERSION}`).catch(() => null),
+      fetch(`data/staff-profile-data.json?v=${DATA_VERSION}`).catch(() => null),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
@@ -471,6 +474,7 @@ async function loadData() {
     if (resourceResponse?.ok) state.resourceData = await resourceResponse.json();
     if (externalPartnersResponse?.ok) state.externalPartnersData = await externalPartnersResponse.json();
     if (teachingResponse?.ok) state.teachingData = await teachingResponse.json();
+    if (staffProfileResponse?.ok) state.staffProfileData = await staffProfileResponse.json();
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     els.footerMeta.textContent = "";
@@ -940,6 +944,7 @@ function renderStaffProfile(row, bundle) {
       <div>
         <p class="eye">${escapeHtml(person.display)}</p>
         <h3>${escapeHtml(person.name)}</h3>
+        ${renderPublicStaffInfo(person.id)}
       </div>
     </div>
     ${queryStrip}
@@ -961,6 +966,34 @@ function renderStaffProfile(row, bundle) {
 function personPhoto(person, className) {
   if (!person?.photo) return "";
   return `<img class="${escapeHtml(className)}" src="${escapeHtml(person.photo)}" alt="" loading="lazy">`;
+}
+
+function staffProfileLookup() {
+  const profiles = state.staffProfileData?.people || [];
+  if (state.staffProfileLookupCache?.source === profiles) {
+    return state.staffProfileLookupCache.lookup;
+  }
+  const lookup = new Map(profiles.map((profile) => [profile.personId, profile]));
+  state.staffProfileLookupCache = { source: profiles, lookup };
+  return lookup;
+}
+
+function staffPublicProfile(personId) {
+  return staffProfileLookup().get(personId) || null;
+}
+
+function renderPublicStaffInfo(personId) {
+  const profile = staffPublicProfile(personId);
+  if (!profile) return "";
+  const parts = [];
+  if (profile.role) parts.push(profile.role);
+  if (profile.phdYear) parts.push(`PhD ${profile.phdYear}`);
+  if (profile.expertise) parts.push(clipText(profile.expertise, 120));
+  const sourceUrl = profile.profileUrl || profile.cvUrl;
+  return `<p class="staff-public-info">
+    ${escapeHtml(parts.join(" · "))}
+    ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">RUG profile</a>` : ""}
+  </p>`;
 }
 
 function staffMetric(label, value) {
@@ -1790,11 +1823,19 @@ function grantFitScore(personId, call) {
   const profile = grantStaffProfile(personId);
   if (!profile.publications) return 0;
   const stage = normalizeSearchText(call.fitStage || call.stage || "");
+  const name = normalizeSearchText(call.name || "");
+  const currentYear = new Date().getFullYear();
+  const phdAge = isNumber(profile.phdYear) ? currentYear - profile.phdYear : null;
+  const firstPublicationAge = isNumber(profile.firstYear) ? currentYear - profile.firstYear : null;
+  if (!grantCareerWindowPossible(profile, name, phdAge, firstPublicationAge)) return 0;
   let score = 0;
-  if (stage.includes("early") && profile.firstYear >= new Date().getFullYear() - 8) score += 5;
-  if (stage.includes("mid") && profile.firstYear >= new Date().getFullYear() - 16 && profile.firstYear <= new Date().getFullYear() - 4) score += 5;
+  if ((stage.includes("early") || name.includes("veni")) && (phdAge !== null ? phdAge <= 5 : firstPublicationAge !== null && firstPublicationAge <= 8)) score += 5;
+  if (name.includes("starting grant") && (phdAge !== null ? phdAge <= 10 : firstPublicationAge !== null && firstPublicationAge <= 10)) score += 4;
+  if ((stage.includes("mid") || name.includes("vidi")) && (phdAge !== null ? phdAge >= 4 && phdAge <= 10 : firstPublicationAge !== null && firstPublicationAge >= 4 && firstPublicationAge <= 16)) score += 5;
+  if (name.includes("consolidator") && (phdAge !== null ? phdAge >= 5 && phdAge <= 15 : firstPublicationAge !== null && firstPublicationAge >= 5 && firstPublicationAge <= 18)) score += 5;
+  if (name.includes("xs") && (phdAge !== null ? phdAge >= 5 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 3;
   if (stage.includes("senior") && (profile.grants > 0 || profile.phds > 0 || profile.highAip >= 6)) score += 5;
-  if (stage.includes("established") && profile.firstYear <= new Date().getFullYear() - 5) score += 4;
+  if (stage.includes("established") && (phdAge !== null ? phdAge >= 10 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 4;
   if (stage.includes("supervisor") && (profile.phds > 0 || profile.publications >= 10)) score += 4;
   const bundle = grantTopicBundle(call);
   const topicScore = Math.min(4, staffPublicationRecords(personId).reduce((total, pub) => (
@@ -1803,6 +1844,35 @@ function grantFitScore(personId, call) {
   score += topicScore;
   if (/erc|vidi|veni/i.test(call.name) && profile.highAip > 0) score += Math.min(3, profile.highAip / 3);
   return score;
+}
+
+function grantCareerWindowPossible(profile, callName, phdAge, firstPublicationAge) {
+  const role = normalizeSearchText(profile.role || "");
+  const clearlySenior = role.includes("professor") && !role.includes("assistant");
+  if (phdAge === null) {
+    if (callName.includes("veni") || callName.includes("van der gaag")) {
+      return !clearlySenior && (firstPublicationAge === null || firstPublicationAge <= 8);
+    }
+    if (callName.includes("vidi") || callName.includes("starting grant")) {
+      return firstPublicationAge === null || firstPublicationAge <= 14;
+    }
+    if (callName.includes("consolidator") || callName.includes("vici")) {
+      return firstPublicationAge === null || firstPublicationAge >= 5;
+    }
+    if (callName.includes("open competition xs")) {
+      return firstPublicationAge === null || firstPublicationAge >= 5;
+    }
+    return true;
+  }
+  if (callName.includes("veni") || callName.includes("van der gaag")) return phdAge <= 4;
+  if (callName.includes("vidi")) return phdAge <= 9;
+  if (callName.includes("vici")) return phdAge <= 16;
+  if (callName.includes("starting grant")) return phdAge <= 10;
+  if (callName.includes("consolidator")) return phdAge >= 5 && phdAge <= 15;
+  if (callName.includes("open competition xs")) return phdAge >= 5;
+  if (callName.includes("open competition m")) return phdAge >= 10;
+  if (callName.includes("open competition l")) return phdAge >= 15;
+  return true;
 }
 
 function grantTopicBundle(call) {
@@ -1816,7 +1886,8 @@ function grantTopicBundle(call) {
 function grantFitReasons(personId, call) {
   const profile = grantStaffProfile(personId);
   const reasons = [];
-  if (profile.firstYear) reasons.push(`First counted publication: ${profile.firstYear}`);
+  if (profile.phdYear) reasons.push(`Public CV/profile: PhD ${profile.phdYear}`);
+  else if (profile.firstYear) reasons.push(`First counted publication proxy: ${profile.firstYear}`);
   if (profile.highAip) reasons.push(`${profile.highAip} AIP >= 95 publication${profile.highAip === 1 ? "" : "s"}`);
   if (profile.grants) reasons.push(`${profile.grants} recorded grant${profile.grants === 1 ? "" : "s"}`);
   if (profile.phds) reasons.push(`${profile.phds} defended PhD supervision record${profile.phds === 1 ? "" : "s"}`);
@@ -1827,9 +1898,13 @@ function grantFitReasons(personId, call) {
 function grantStaffProfile(personId) {
   const pubs = staffPublicationRecords(personId);
   const years = pubs.map((pub) => pub.year).filter(Number.isFinite);
+  const publicProfile = staffPublicProfile(personId);
   return {
     publications: pubs.length,
     firstYear: years.length ? Math.min(...years) : null,
+    phdYear: publicProfile?.phdYear || null,
+    role: publicProfile?.role || "",
+    profileUrl: publicProfile?.profileUrl || "",
     highAip: pubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length,
     grants: staffGrantRecords(personId).length,
     phds: staffThesisRecords(personId).length,

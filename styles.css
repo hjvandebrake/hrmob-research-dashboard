@@ -1144,6 +1144,18 @@ td.muted { color: var(--ink-400); }
   color: var(--ink-500);
   margin: 0;
 }
+.staff-public-info {
+  color: var(--ink-500);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin: 5px 0 0;
+  max-width: 720px;
+}
+.staff-public-info a {
+  border-bottom: 1px dotted var(--red);
+  color: var(--red);
+  margin-left: 7px;
+}
 .query-strip {
   align-items: baseline;
   border-top: 1px solid var(--ink-200);
