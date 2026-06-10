@@ -7,7 +7,7 @@ const state = {
   externalPartnersData: { meta: {}, partners: [] },
   teachingData: { meta: {}, records: [], courses: [], edges: [], personCourseCounts: {}, personNetworkCourseCounts: {} },
   tab: "overview",
-  fteOnly: false,
+  includeAffiliatedResearchers: false,
   recentOnly: false,
   networkMode: "publications",
   networkAipHighOnly: false,
@@ -25,11 +25,12 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260609-1049";
+const DATA_VERSION = "20260610-1659";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
 const METRICS_START_YEAR = 2005;
+const AFFILIATED_RESEARCHER_IDS = new Set(["CDD", "MR", "JJ"]);
 const METRIC_TREND_COLORS = {
   HRMOB: "#9d3138",
   Marketing: "#2f7480",
@@ -266,7 +267,7 @@ function attachEvents() {
     });
   });
   els.fteToggle.addEventListener("change", () => {
-    state.fteOnly = els.fteToggle.checked;
+    state.includeAffiliatedResearchers = els.fteToggle.checked;
     renderAll();
   });
   els.recentToggle.addEventListener("change", () => {
@@ -499,11 +500,13 @@ function renderAll() {
 }
 
 function activePeople() {
-  return state.data.people.filter((person) => !state.fteOnly || person.fte > 0.25);
+  return state.data.people.filter((person) => (
+    state.includeAffiliatedResearchers || !AFFILIATED_RESEARCHER_IDS.has(person.id)
+  ));
 }
 
 function fteLabel() {
-  return state.fteOnly ? "Full staff members" : "All supplied people";
+  return state.includeAffiliatedResearchers ? "Department members + affiliated researchers" : "Department members";
 }
 
 function activePeopleSet() {
@@ -536,13 +539,20 @@ function activePublicationPool({ countedOnly }) {
 }
 
 function dedupePublications(pubs) {
-  const groups = new Map();
+  const groups = [];
   pubs.forEach((pub) => {
     const key = duplicatePublicationKey(pub);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(pub);
+    const group = groups.find((candidate) => (
+      candidate.keys.has(key) || candidate.items.some((existing) => samePublicationWork(existing, pub))
+    ));
+    if (group) {
+      group.keys.add(key);
+      group.items.push(pub);
+      return;
+    }
+    groups.push({ keys: new Set([key]), items: [pub] });
   });
-  return Array.from(groups.values()).map(mergePublicationGroup);
+  return groups.map((group) => mergePublicationGroup(group.items));
 }
 
 function duplicatePublicationKey(pub) {
@@ -551,6 +561,68 @@ function duplicatePublicationKey(pub) {
   const normalizedTitle = normalizeSearchText(pub.title);
   if (normalizedTitle.length > 30) return `title:${normalizedTitle}|year:${pub.year || ""}`;
   return `id:${pub.id}`;
+}
+
+function samePublicationWork(a, b) {
+  const doiA = normalizeDoi(a.doi);
+  const doiB = normalizeDoi(b.doi);
+  if (doiA && doiB) return doiA === doiB;
+  if (nonOriginalPublicationTitle(a.title) || nonOriginalPublicationTitle(b.title)) return false;
+  const titleA = normalizeSearchText(a.title);
+  const titleB = normalizeSearchText(b.title);
+  if (titleA.length < 35 || titleB.length < 35) return false;
+  const yearA = Number(a.year);
+  const yearB = Number(b.year);
+  if (Number.isFinite(yearA) && Number.isFinite(yearB) && Math.abs(yearA - yearB) > 1) return false;
+  const journalA = normalizeSearchText(a.aipJournal || a.journal || "");
+  const journalB = normalizeSearchText(b.aipJournal || b.journal || "");
+  if (journalA && journalB && journalA !== journalB) return false;
+  return titleSimilarity(titleA, titleB) >= 0.92 || tokenOverlap(titleA, titleB) >= 0.82;
+}
+
+function nonOriginalPublicationTitle(title) {
+  const normalized = normalizeSearchText(title);
+  return normalized.startsWith("correction to ")
+    || normalized.startsWith("corrigendum to ")
+    || normalized.startsWith("addendum to ")
+    || normalized.startsWith("retraction ")
+    || normalized.startsWith("publisher correction")
+    || normalized.startsWith("author correction")
+    || normalized.includes(" corrigendum ");
+}
+
+function titleSimilarity(a, b) {
+  if (a === b) return 1;
+  const rows = new Array(b.length + 1).fill(0);
+  for (let j = 0; j <= b.length; j += 1) rows[j] = j;
+  for (let i = 1; i <= a.length; i += 1) {
+    let previous = rows[0];
+    rows[0] = i;
+    for (let j = 1; j <= b.length; j += 1) {
+      const old = rows[j];
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      rows[j] = Math.min(rows[j] + 1, rows[j - 1] + 1, previous + cost);
+      previous = old;
+    }
+  }
+  const distance = rows[b.length];
+  return 1 - distance / Math.max(a.length, b.length, 1);
+}
+
+function tokenOverlap(a, b) {
+  const tokensA = new Set(tokenizePublicationTitle(a));
+  const tokensB = new Set(tokenizePublicationTitle(b));
+  if (!tokensA.size || !tokensB.size) return 0;
+  const intersection = [...tokensA].filter((token) => tokensB.has(token)).length;
+  const union = new Set([...tokensA, ...tokensB]).size;
+  return intersection / union;
+}
+
+function tokenizePublicationTitle(title) {
+  return normalizeSearchText(title)
+    .split(" ")
+    .map(stemToken)
+    .filter((token) => token && token.length > 2 && !STOPWORDS.has(token));
 }
 
 function mergePublicationGroup(group) {

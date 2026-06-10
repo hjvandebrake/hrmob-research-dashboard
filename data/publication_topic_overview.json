@@ -692,27 +692,6 @@
     "doi": "10.1080/02678373.2025.2551498"
   },
   {
-    "id": "doi:10.1177/14761270251334044",
-    "year": 2025,
-    "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
-    "journal": "Strategic Organization",
-    "aip": 95.623,
-    "topicFamilies": [
-      "governance and boards",
-      "careers and employability"
-    ],
-    "matchedPeople": [
-      "FR"
-    ],
-    "authors": [
-      "Michelle Weck",
-      "Dennis Veltrop",
-      "Jana Oehmichen",
-      "Floor Rink"
-    ],
-    "doi": "10.1177/14761270251334044"
-  },
-  {
     "id": "rug:6d1a10f8a234f656",
     "year": 2025,
     "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
@@ -731,7 +710,7 @@
       "Oehmichen, J.",
       "Rink, F."
     ],
-    "doi": ""
+    "doi": "10.1177/14761270251334044"
   },
   {
     "id": "doi:10.1177/19485506251348803",
@@ -6293,31 +6272,6 @@
       "van der Vegt, G. S."
     ],
     "doi": "10.1111/joop.12326"
-  },
-  {
-    "id": "openalex:W3043319934",
-    "year": 2020,
-    "title": "Multiple Team Membership and Individual Job Performance : The Role of Employees' Information-Sharing Networks",
-    "journal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-    "aip": 93.287,
-    "topicFamilies": [
-      "teams and groups",
-      "multiple team membership",
-      "performance management",
-      "social networks"
-    ],
-    "matchedPeople": [
-      "FR",
-      "GVV"
-    ],
-    "authors": [
-      "Hendrik van de Brake",
-      "Frank Walter",
-      "Floor Rink",
-      "Peter Essens",
-      "Gerben S. van der Vegt"
-    ],
-    "doi": ""
   },
   {
     "id": "rug:9848c2617decf303",

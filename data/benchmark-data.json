@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-06-08",
+    "generatedOn": "2026-06-10",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "countingRule": "Peer-reviewed journal articles only; excludes commentaries, editorials, acknowledgments, reviewer lists, book reviews, errata, letters, medical false positives, and non-prestigious proceedings.",
     "denominatorDecisions": [

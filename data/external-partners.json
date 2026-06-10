@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-06-09",
+    "generatedOn": "2026-06-10",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 746,
-    "cacheHits": 746,
-    "fetched": 0,
+    "eligiblePublications": 745,
+    "cacheHits": 744,
+    "fetched": 1,
     "partnerCount": 603
   },
   "partners": [
@@ -16278,9 +16278,9 @@
           ]
         },
         {
-          "id": "doi:10.1177/14761270251334044",
+          "id": "rug:6d1a10f8a234f656",
           "year": 2025,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
           "staffIds": [
             "FR"
           ],
@@ -20396,9 +20396,9 @@
           ]
         },
         {
-          "id": "doi:10.1177/14761270251334044",
+          "id": "rug:6d1a10f8a234f656",
           "year": 2025,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
           "staffIds": [
             "FR"
           ],

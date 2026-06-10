@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-06-08",
+    "generatedOn": "2026-06-10",
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-06-08"
+      "to": "2026-06-10"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-06-08"
+      "to": "2026-06-10"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -1873,54 +1873,8 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1177/14761270251334044",
-      "doi": "10.1177/14761270251334044",
-      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
-      "year": 2025,
-      "yearSource": "crossref-other",
-      "journal": "Strategic Organization",
-      "issns": [
-        "1476-1270",
-        "1741-315X"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W4409345189",
-      "authors": [
-        "Michelle Weck",
-        "Dennis Veltrop",
-        "Jana Oehmichen",
-        "Floor Rink"
-      ],
-      "matchedPeople": [
-        "FR"
-      ],
-      "sourcePeople": [
-        "FR"
-      ],
-      "aip": 95.623,
-      "aipJournal": "Strategic Organization",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Crossref author affiliation mentions Groningen for Rink, F.A."
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "governance and boards",
-        "careers and employability"
-      ],
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "rug:6d1a10f8a234f656",
-      "doi": "",
+      "doi": "10.1177/14761270251334044",
       "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
       "year": 2025,
       "yearSource": "rug-reference",
@@ -1950,7 +1904,9 @@
       "subjects": [],
       "source": "University of Groningen staff publication page",
       "evidence": [
-        "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication."
+        "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication.",
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
       "provisional": true,
       "topicFamilies": [
@@ -15603,57 +15559,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "openalex:W3043319934",
-      "doi": "",
-      "title": "Multiple Team Membership and Individual Job Performance : The Role of Employees' Information-Sharing Networks",
-      "year": 2020,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational and Organizational Psychology",
-      "issns": [
-        "0963-1798",
-        "2044-8325"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W3043319934",
-      "authors": [
-        "Hendrik van de Brake",
-        "Frank Walter",
-        "Floor Rink",
-        "Peter Essens",
-        "Gerben S. van der Vegt"
-      ],
-      "matchedPeople": [
-        "FR",
-        "GVV"
-      ],
-      "sourcePeople": [
-        "FR",
-        "GVV"
-      ],
-      "aip": 93.287,
-      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "teams and groups",
-        "multiple team membership",
-        "performance management",
-        "social networks"
-      ],
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1037/ocp0000269",
       "doi": "10.1037/ocp0000269",
       "title": "Acknowledgment of Ad Hoc Reviewers 2020",
@@ -25204,48 +25109,6 @@
       ],
       "aipComparable": true,
       "aipStatus": "matched"
-    },
-    {
-      "id": "openalex:W2808076832",
-      "doi": "",
-      "title": "Effects of park walks and relaxation exercises during lunch breaks on recovery from work stress: A randomized controlled trial",
-      "year": 2016,
-      "yearSource": "openalex",
-      "journal": "",
-      "issns": [],
-      "sourceType": "",
-      "publicationKind": "Unknown source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2808076832",
-      "authors": [
-        "Jessica de Bloom",
-        "Marjaana Sianoja",
-        "Kalevi Korpela",
-        "Martti T. Tuomisto",
-        "Sabine A. E. Geurts",
-        "Ulla Kinnunen"
-      ],
-      "matchedPeople": [
-        "JDB"
-      ],
-      "sourcePeople": [
-        "JDB"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de"
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "stress and strain",
-        "recovery and leisure"
-      ]
     },
     {
       "id": "openalex:W2807818075",
@@ -49605,12 +49468,12 @@
       "CDD": 245,
       "JDB": 77,
       "BN": 80,
-      "FR": 63,
+      "FR": 61,
       "LM": 29,
       "JL": 17,
       "JVB": 11,
       "TDV": 9,
-      "GVV": 59,
+      "GVV": 58,
       "JMA": 5,
       "JS": 53,
       "JJ": 21,
@@ -50428,7 +50291,7 @@
       },
       {
         "journal": "Strategic Organization",
-        "count": 2,
+        "count": 1,
         "aip": 95.623,
         "category": "MANAGEMENT",
         "rankableJournal": true,
@@ -50855,7 +50718,7 @@
       },
       {
         "journal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-        "count": 14,
+        "count": 13,
         "aip": 93.287,
         "category": "MANAGEMENT",
         "rankableJournal": true,
@@ -53223,8 +53086,8 @@
       },
       {
         "category": "MANAGEMENT",
-        "count": 129,
-        "meanAip": 90.78
+        "count": 127,
+        "meanAip": 90.72
       },
       {
         "category": "PSYCHOLOGY, MULTIDISCIPLINARY",
@@ -53556,7 +53419,7 @@
       },
       {
         "year": 2020,
-        "count": 37
+        "count": 36
       },
       {
         "year": 2021,
@@ -53576,7 +53439,7 @@
       },
       {
         "year": 2025,
-        "count": 33
+        "count": 32
       },
       {
         "year": 2026,
@@ -53628,26 +53491,6 @@
       },
       {
         "source": "FR",
-        "target": "GVV",
-        "count": 12,
-        "highAipCount": 6,
-        "pubIds": [
-          "rug:069dfb1189f76006",
-          "doi:10.1177/13684302221135075",
-          "doi:10.5465/amj.2020.1136",
-          "rug:2c52c57c341ab608",
-          "openalex:W3043319934",
-          "rug:9848c2617decf303",
-          "rug:46c1df0d0a20095e",
-          "rug:47fd2627d2e1ccdd",
-          "doi:10.1002/job.2260",
-          "doi:10.1080/1359432x.2016.1148030",
-          "doi:10.5465/amj.2014.0601",
-          "doi:10.5465/19416520.2013.766405"
-        ]
-      },
-      {
-        "source": "FR",
         "target": "JS",
         "count": 12,
         "highAipCount": 3,
@@ -53684,6 +53527,25 @@
           "doi:10.1002/ejsp.1954",
           "doi:10.1016/j.riob.2012.10.003",
           "doi:10.1177/0956797612453115"
+        ]
+      },
+      {
+        "source": "FR",
+        "target": "GVV",
+        "count": 11,
+        "highAipCount": 6,
+        "pubIds": [
+          "rug:069dfb1189f76006",
+          "doi:10.1177/13684302221135075",
+          "doi:10.5465/amj.2020.1136",
+          "rug:2c52c57c341ab608",
+          "rug:9848c2617decf303",
+          "rug:46c1df0d0a20095e",
+          "rug:47fd2627d2e1ccdd",
+          "doi:10.1002/job.2260",
+          "doi:10.1080/1359432x.2016.1148030",
+          "doi:10.5465/amj.2014.0601",
+          "doi:10.5465/19416520.2013.766405"
         ]
       },
       {
