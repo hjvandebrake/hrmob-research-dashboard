@@ -2,7 +2,8 @@
   "meta": {
     "sourceFile": "hrmob-grant-opportunities-2026-2027.xlsx",
     "updatedLabel": "26 March 2026",
-    "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx"
+    "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
+    "recentCallsChecked": "2026-06-10"
   },
   "opportunities": [
     {
@@ -472,6 +473,98 @@
       "deadline": "~November 2026",
       "tips": "Funds ambitious research that could not be achieved by any single PI alone. Requires genuine intellectual synergy, not just a sum of parts. Cross-disciplinary combinations encouraged.",
       "link": "https://erc.europa.eu/apply-grant/synergy-grant"
+    }
+  ],
+  "recentCalls": [
+    {
+      "name": "NWO Vidi SSH",
+      "funder": "NWO",
+      "stage": "Mid-Career",
+      "amount": "€850,000",
+      "duration": "5 years",
+      "eligibility": "PhD obtained max 8 years ago",
+      "timing": "New round expected later in 2026; monitor NWO.",
+      "why": "Core mid-career personal grant. Start early because embedding and departmental support need coordination.",
+      "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
+      "fitStage": "mid",
+      "fitNote": "Potentially relevant for staff within the Vidi post-PhD window; verify PhD date and extensions.",
+      "sourceLabel": "NWO Talent Programme",
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme"
+    },
+    {
+      "name": "NWO Veni SSH",
+      "funder": "NWO",
+      "stage": "Early Career",
+      "amount": "€320,000",
+      "duration": "3 years",
+      "eligibility": "PhD obtained max 3 years ago",
+      "timing": "Next round expected around September 2026.",
+      "why": "Early-career personal grant for a first independent project line.",
+      "tips": "Pre-proposal then full proposal. Narrative CV describing 3 to 5 key outputs. Weighted 75% scientific quality, 25% impact. Cannot hire PhD candidates or postdocs from the grant.",
+      "fitStage": "early",
+      "fitNote": "Potentially relevant for early-career staff; verify the three-year post-PhD rule and extensions.",
+      "sourceLabel": "NWO Talent Programme",
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme"
+    },
+    {
+      "name": "NWO SSH Open Competition XS",
+      "funder": "NWO",
+      "stage": "Early Career",
+      "amount": "€50,000",
+      "duration": "6-24 months",
+      "eligibility": "PhD obtained at least 5 years ago (no upper limit since 2026)",
+      "timing": "Round 3 deadline listed in the workbook: 15 September 2026.",
+      "why": "Good fit for a compact pilot, method test, or new research direction that can seed a larger proposal.",
+      "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
+      "fitStage": "established",
+      "fitNote": "Potentially relevant for staff at least five years after PhD; verify current call conditions.",
+      "sourceLabel": "NWO SSH Open Competition",
+      "sourceUrl": "https://www.nwo.nl/en/researchprogrammes/open-competition-domain-ssh"
+    },
+    {
+      "name": "MSCA Postdoctoral Fellowship",
+      "funder": "EU/MSCA",
+      "stage": "Early Career",
+      "amount": "~€80-90K/year (NL rate)",
+      "duration": "1-2 years",
+      "eligibility": "PhD holders with mobility rule: must not have lived in NL for more than 12 months in past 3 years",
+      "timing": "Workbook deadline: 9 September 2026.",
+      "why": "Useful when a strong external postdoc candidate wants to come to Groningen with a supervisor.",
+      "tips": "European or Global fellowship. Applicant and host supervisor write jointly. Requires a training and career development plan. Note: applications surged 65% in 2025, pushing success rates below 10%.",
+      "fitStage": "supervisor",
+      "fitNote": "Relevant for staff who can host a mobile postdoc candidate; candidate mobility rule is decisive.",
+      "sourceLabel": "MSCA Postdoctoral Fellowships",
+      "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
+    },
+    {
+      "name": "ERC Starting Grant",
+      "funder": "ERC",
+      "stage": "Early Career",
+      "amount": "Up to €1.5M (+€1M equipment)",
+      "duration": "5 years",
+      "eligibility": "0 to 10 yrs post-PhD (widened from 2 to 7 starting 2027)",
+      "timing": "2027 call expected in the 2026 ERC work programme cycle.",
+      "why": "High-risk, high-gain individual grant for an independent research programme.",
+      "tips": "Panel SH1 (Individuals, Markets and Organisations: Economics, finance, management) covers HRM, OB, strategy, labour economics. Step 1 assesses vision and PI quality only (5 pages). Methodology assessed at Step 2 only. Must be genuinely groundbreaking.",
+      "fitStage": "early-mid",
+      "fitNote": "Potentially relevant for staff in the Starting Grant post-PhD window; verify ERC window and extensions.",
+      "sourceLabel": "ERC Starting Grant",
+      "sourceUrl": "https://erc.europa.eu/apply-grant/starting-grant"
+    },
+    {
+      "name": "ERC Consolidator Grant",
+      "funder": "ERC",
+      "stage": "Mid-Career",
+      "amount": "Up to €2M (+€1M equipment)",
+      "duration": "5 years",
+      "eligibility": "5 to 15 yrs post-PhD (widened from 7 to 12 starting 2027)",
+      "timing": "2027 call expected in the 2026 ERC work programme cycle.",
+      "why": "Large individual grant for consolidating an independent programme and team.",
+      "tips": "Panel SH1 (Economics, finance, management). Must demonstrate strong independent publication record and PhD supervision. The 2027 eligibility widening creates new opportunities for researchers previously caught between Starting and Consolidator windows.",
+      "fitStage": "mid-senior",
+      "fitNote": "Potentially relevant for staff in the Consolidator post-PhD window; verify ERC window and extensions.",
+      "sourceLabel": "ERC Consolidator Grant",
+      "sourceUrl": "https://erc.europa.eu/apply-grant/consolidator-grant"
     }
   ],
   "tips": [

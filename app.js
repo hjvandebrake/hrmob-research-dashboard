@@ -25,7 +25,7 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260610-1659";
+const DATA_VERSION = "20260610-1954";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const OVERVIEW_START_YEAR = 2005;
@@ -213,6 +213,7 @@ function cacheElements() {
   els.staffProfile = document.getElementById("staff-profile");
   els.staffTopics = document.getElementById("staff-topics");
   els.staffSuggestions = document.getElementById("staff-suggestions");
+  els.staffGrantFit = document.getElementById("staff-grant-fit");
   els.staffRelated = document.getElementById("staff-related");
   els.staffPublicationEye = document.getElementById("staff-publication-eye");
   els.staffPublicationTitle = document.getElementById("staff-publication-title");
@@ -245,6 +246,7 @@ function cacheElements() {
   els.feedbackStatus = document.getElementById("feedback-status");
   els.feedbackEmailLink = document.getElementById("feedback-email-link");
   els.resourceOpportunities = document.getElementById("resource-opportunities");
+  els.resourceRecentCalls = document.getElementById("resource-recent-calls");
   els.resourceTips = document.getElementById("resource-tips");
 }
 
@@ -268,11 +270,11 @@ function attachEvents() {
   });
   els.fteToggle.addEventListener("change", () => {
     state.includeAffiliatedResearchers = els.fteToggle.checked;
-    renderAll();
+    renderCurrentView();
   });
   els.recentToggle.addEventListener("change", () => {
     state.recentOnly = els.recentToggle.checked;
-    renderAll();
+    renderCurrentView();
   });
   if (els.networkAipToggle) {
     els.networkAipToggle.addEventListener("change", () => {
@@ -473,7 +475,6 @@ async function loadData() {
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     els.footerMeta.textContent = "";
     setTab(location.hash.replace("#", "") || "overview");
-    renderAll();
   } catch (error) {
     els.subtitle.textContent = `Could not load dashboard data: ${error.message}`;
   }
@@ -486,7 +487,7 @@ function setTab(tab) {
     section.hidden = section.id !== `view-${state.tab}`;
   });
   history.replaceState(null, "", `#${state.tab}`);
-  if (state.data) renderAll();
+  if (state.data) renderCurrentView();
 }
 
 function renderAll() {
@@ -497,6 +498,17 @@ function renderAll() {
   renderPublications();
   renderNetwork();
   renderResources();
+}
+
+function renderCurrentView() {
+  if (!state.data) return;
+  if (state.tab === "overview") renderOverview();
+  else if (state.tab === "metrics") renderMetrics();
+  else if (state.tab === "staff") renderStaff();
+  else if (state.tab === "expertise") renderExpertise();
+  else if (state.tab === "publications") renderPublications();
+  else if (state.tab === "network") renderNetwork();
+  else if (state.tab === "resources") renderResources();
 }
 
 function activePeople() {
@@ -907,6 +919,7 @@ function renderStaffProfile(row, bundle) {
     els.staffProfile.innerHTML = `<div class="staff-empty">No profile selected.</div>`;
     els.staffTopics.innerHTML = "";
     if (els.staffSuggestions) els.staffSuggestions.innerHTML = "";
+    if (els.staffGrantFit) els.staffGrantFit.innerHTML = "";
     els.staffRelated.innerHTML = "";
     els.staffPublicationEye.textContent = "Publications";
     els.staffPublicationTitle.textContent = "Selected staff publications";
@@ -940,6 +953,7 @@ function renderStaffProfile(row, bundle) {
   `;
   renderStaffTopics(person.id);
   renderStaffSuggestions(person.id);
+  renderStaffGrantFit(person.id);
   renderStaffRelated(person.id, bundle, row);
   renderStaffPublications(person.id, bundle, row);
 }
@@ -1658,6 +1672,7 @@ function renderOverview() {
 
 function renderResources() {
   if (!els.resourceOpportunities || !els.resourceTips) return;
+  renderRecentGrantCalls();
   const opportunities = state.resourceData?.opportunities || [];
   if (!opportunities.length) {
     els.resourceOpportunities.innerHTML = `<div class="staff-empty">No grant opportunity data loaded.</div>`;
@@ -1690,6 +1705,27 @@ function renderResources() {
     : `<div class="staff-empty">No workbook tips loaded.</div>`;
 }
 
+function renderRecentGrantCalls() {
+  if (!els.resourceRecentCalls) return;
+  const calls = (state.resourceData?.recentCalls || []).slice(0, 6);
+  if (!calls.length) {
+    els.resourceRecentCalls.innerHTML = `<div class="staff-empty">No recent call data loaded.</div>`;
+    return;
+  }
+  els.resourceRecentCalls.innerHTML = calls.map((call) => {
+    const candidates = grantCallCandidates(call, 4);
+    const title = call.sourceUrl
+      ? `<a href="${escapeHtml(call.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>`
+      : escapeHtml(call.name);
+    return `<article class="recent-call-card">
+      <h4>${title}</h4>
+      <p class="recent-call-meta">${escapeHtml([call.funder, call.timing].filter(Boolean).join(" - "))}</p>
+      <p>${escapeHtml(clipText(call.why || call.fitNote || "", 180))}</p>
+      ${candidates.length ? `<div class="recent-call-fit"><span>Possible fit</span>${candidates.map((item) => `<b>${escapeHtml(item.person.display)}</b>`).join("")}</div>` : ""}
+    </article>`;
+  }).join("");
+}
+
 function resourceOpportunityCard(item) {
   const title = item.link
     ? `<a href="${escapeHtml(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.name)}</a>`
@@ -1713,6 +1749,91 @@ function clipText(value, maxLength) {
   const text = String(value || "").trim();
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength - 1).trim()}...`;
+}
+
+function renderStaffGrantFit(personId) {
+  if (!els.staffGrantFit) return;
+  const calls = (state.resourceData?.recentCalls || [])
+    .map((call) => ({ call, score: grantFitScore(personId, call), reasons: grantFitReasons(personId, call) }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.call.name.localeCompare(b.call.name))
+    .slice(0, 4);
+  if (!calls.length) {
+    els.staffGrantFit.innerHTML = `<p class="small-muted">No clear grant-fit signal from the current dashboard data.</p>`;
+    return;
+  }
+  els.staffGrantFit.innerHTML = calls.map(({ call, reasons }) => {
+    const title = call.sourceUrl
+      ? `<a href="${escapeHtml(call.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>`
+      : escapeHtml(call.name);
+    return `<article class="grant-fit-card">
+      <div>
+        <h4>${title}</h4>
+        <p>${escapeHtml(call.timing || "")}</p>
+      </div>
+      <div class="suggestion-reasons">
+        ${reasons.map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function grantCallCandidates(call, limit = 4) {
+  return activePeople()
+    .map((person) => ({ person, score: grantFitScore(person.id, call) }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.person.display.localeCompare(b.person.display))
+    .slice(0, limit);
+}
+
+function grantFitScore(personId, call) {
+  const profile = grantStaffProfile(personId);
+  if (!profile.publications) return 0;
+  const stage = normalizeSearchText(call.fitStage || call.stage || "");
+  let score = 0;
+  if (stage.includes("early") && profile.firstYear >= new Date().getFullYear() - 8) score += 5;
+  if (stage.includes("mid") && profile.firstYear >= new Date().getFullYear() - 16 && profile.firstYear <= new Date().getFullYear() - 4) score += 5;
+  if (stage.includes("senior") && (profile.grants > 0 || profile.phds > 0 || profile.highAip >= 6)) score += 5;
+  if (stage.includes("established") && profile.firstYear <= new Date().getFullYear() - 5) score += 4;
+  if (stage.includes("supervisor") && (profile.phds > 0 || profile.publications >= 10)) score += 4;
+  const bundle = grantTopicBundle(call);
+  const topicScore = Math.min(4, staffPublicationRecords(personId).reduce((total, pub) => (
+    total + Math.min(1, scorePublicationAgainstBundle(pub, bundle))
+  ), 0));
+  score += topicScore;
+  if (/erc|vidi|veni/i.test(call.name) && profile.highAip > 0) score += Math.min(3, profile.highAip / 3);
+  return score;
+}
+
+function grantTopicBundle(call) {
+  const text = [call.name, call.eligibility, call.why, call.tips].join(" ");
+  const terms = tokenize(text)
+    .filter((term) => DOMAIN_TOPIC_TERMS.has(term) || term.length > 6)
+    .slice(0, 18);
+  return bundleFromTerms(terms);
+}
+
+function grantFitReasons(personId, call) {
+  const profile = grantStaffProfile(personId);
+  const reasons = [];
+  if (profile.firstYear) reasons.push(`First counted publication: ${profile.firstYear}`);
+  if (profile.highAip) reasons.push(`${profile.highAip} AIP >= 95 publication${profile.highAip === 1 ? "" : "s"}`);
+  if (profile.grants) reasons.push(`${profile.grants} recorded grant${profile.grants === 1 ? "" : "s"}`);
+  if (profile.phds) reasons.push(`${profile.phds} defended PhD supervision record${profile.phds === 1 ? "" : "s"}`);
+  if (call.fitNote) reasons.push(call.fitNote);
+  return reasons.slice(0, 4);
+}
+
+function grantStaffProfile(personId) {
+  const pubs = staffPublicationRecords(personId);
+  const years = pubs.map((pub) => pub.year).filter(Number.isFinite);
+  return {
+    publications: pubs.length,
+    firstYear: years.length ? Math.min(...years) : null,
+    highAip: pubs.filter((pub) => isNumber(pub.aip) && pub.aip >= 95).length,
+    grants: staffGrantRecords(personId).length,
+    phds: staffThesisRecords(personId).length,
+  };
 }
 
 function overviewPublications() {

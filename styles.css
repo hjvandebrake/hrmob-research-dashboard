@@ -93,12 +93,12 @@ a { color: inherit; text-decoration: none; }
 
 .switch {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 9px;
   color: var(--ink-700);
   font-size: 0.78rem;
   font-weight: 600;
-  max-width: 150px;
+  max-width: 132px;
   user-select: none;
 }
 .switch-copy {
@@ -106,14 +106,6 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 4px;
   line-height: 1.12;
-}
-.switch-copy small {
-  color: var(--ink-400);
-  font-size: 0.56rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.24;
-  max-width: 138px;
 }
 .switch input {
   appearance: none;
@@ -739,7 +731,8 @@ td.muted { color: var(--ink-400); }
   margin: 9px 0 0;
 }
 .download-list,
-.resource-links {
+.resource-links,
+.recent-call-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -839,6 +832,61 @@ td.muted { color: var(--ink-400); }
 .grant-opportunity-meta {
   color: var(--ink-700) !important;
   font-weight: 700;
+}
+.recent-call-card {
+  border: 1px solid var(--ink-200);
+  padding: 11px 12px;
+}
+.recent-call-card h4,
+.grant-fit-card h4 {
+  font-size: 0.88rem;
+  line-height: 1.25;
+  margin: 0 0 5px;
+}
+.recent-call-card h4 a,
+.grant-fit-card h4 a {
+  border-bottom: 1px dotted var(--red);
+  color: var(--red);
+}
+.recent-call-card p,
+.grant-fit-card p {
+  color: var(--ink-500);
+  font-size: 0.73rem;
+  line-height: 1.34;
+  margin: 5px 0 0;
+}
+.recent-call-meta {
+  color: var(--ink-700) !important;
+  font-weight: 700;
+}
+.recent-call-fit {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 7px;
+  margin-top: 8px;
+}
+.recent-call-fit span {
+  color: var(--ink-400);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.recent-call-fit b {
+  color: var(--ink-900);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.grant-fit-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0 0 24px;
+}
+.grant-fit-card {
+  border: 1px solid var(--ink-200);
+  padding: 11px 12px;
 }
 .resource-tip-list {
   border-top: 1px solid var(--ink-200);
@@ -1639,7 +1687,6 @@ footer {
 @media (max-width: 640px) {
   .nav-in { flex-wrap: wrap; padding: 10px 0; }
   .switch { width: 100%; max-width: none; }
-  .switch-copy small { max-width: none; }
   .metric-grid { grid-template-columns: 1fr; }
   .overview-grid { grid-template-columns: 1fr; }
   .overview-panel-wide { grid-column: auto; }
