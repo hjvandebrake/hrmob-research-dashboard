@@ -10,7 +10,7 @@ const state = {
   staffProfileLookupCache: null,
   tab: "overview",
   includeAffiliatedResearchers: false,
-  recentOnly: false,
+  publicationWindow: "last10",
   networkMode: "publications",
   networkAipHighOnly: false,
   networkExternal: true,
@@ -18,6 +18,9 @@ const state = {
   metricTrendKey: "pubRate",
   search: "",
   aipFilter: "all",
+  publicationPersonFilter: "",
+  publicationSortKey: "date",
+  publicationSortDir: "desc",
   expertiseSearch: "",
   expertiseTopic: "",
   expertiseMode: "query",
@@ -27,12 +30,15 @@ const state = {
 };
 
 const els = {};
-const DATA_VERSION = "20260610-2032";
+const DATA_VERSION = "20260612-1124";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
-const OVERVIEW_START_YEAR = 2005;
+const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
-const AFFILIATED_RESEARCHER_IDS = new Set(["CDD", "MR", "JJ"]);
+const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
+const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "all"]);
+const GRANT_DATA_NOTE = "Grant records are source-backed public records; coverage may miss older, internal, or unpublished funding.";
+const PHD_DATA_NOTE = "PhD counts include defended theses only; current supervision is not included.";
 const METRIC_TREND_COLORS = {
   HRMOB: "#9d3138",
   Marketing: "#2f7480",
@@ -40,6 +46,16 @@ const METRIC_TREND_COLORS = {
   Operations: "#9b742e",
   GEM: "#6773a0",
   Accounting: "#915b76",
+};
+
+let publicationPoolCache = {
+  key: "",
+  counted: null,
+  display: null,
+  staff: {
+    counted: new Map(),
+    display: new Map(),
+  },
 };
 
 const EXPERTISE_FAMILIES = [
@@ -151,38 +167,6 @@ const OPEN_ACCESS_JOURNAL_PATTERNS = [
   /international journal of environmental research and public health/i,
 ];
 
-const MEDICAL_FALSE_POSITIVE_PATTERNS = [
-  /cardio/i,
-  /clinical/i,
-  /clinical chemistry/i,
-  /defibrillator/i,
-  /dialysis/i,
-  /kidney/i,
-  /nephro/i,
-  /nurs/i,
-  /pacemaker/i,
-  /patient/i,
-  /physician/i,
-  /placenta/i,
-  /pulmonary vein/i,
-  /renal/i,
-  /surgery/i,
-  /tacrolimus/i,
-  /transplant/i,
-  /urology/i,
-  /\bckd\b/i,
-];
-
-const MEDICAL_CONTEXT_RESCUE_PATTERNS = [
-  /occupational health/i,
-  /work and stress/i,
-  /work stress/i,
-  /employee/i,
-  /workplace/i,
-  /team/i,
-  /leadership/i,
-];
-
 document.addEventListener("DOMContentLoaded", async () => {
   cacheElements();
   attachEvents();
@@ -228,8 +212,10 @@ function cacheElements() {
   els.publicationTable = document.getElementById("publication-table");
   els.pubSearch = document.getElementById("pub-search");
   els.aipFilter = document.getElementById("aip-filter");
+  els.personFilter = document.getElementById("person-filter");
+  els.publicationDownloadCsv = document.getElementById("publication-download-csv");
   els.fteToggle = document.getElementById("fte-toggle");
-  els.recentToggle = document.getElementById("recent-toggle");
+  els.publicationWindowToggle = document.getElementById("publication-window-toggle");
   els.networkModeToggle = document.getElementById("network-mode-toggle");
   els.networkClearSelection = document.getElementById("network-clear-selection");
   els.networkSelectionNote = document.getElementById("network-selection-note");
@@ -250,6 +236,21 @@ function cacheElements() {
   els.resourceOpportunities = document.getElementById("resource-opportunities");
   els.resourceRecentCalls = document.getElementById("resource-recent-calls");
   els.resourceTips = document.getElementById("resource-tips");
+  const viewContexts = Array.from(document.querySelectorAll("[data-view-context]"));
+  document.querySelectorAll("main > section > .wrap > .sec-head.compact > div:first-child")
+    .forEach((target) => {
+      const existing = target.querySelector("[data-view-context]");
+      if (existing) {
+        viewContexts.push(existing);
+        return;
+      }
+      const context = document.createElement("p");
+      context.className = "view-context";
+      context.dataset.viewContext = "";
+      target.appendChild(context);
+      viewContexts.push(context);
+    });
+  els.viewContexts = viewContexts;
 }
 
 function attachEvents() {
@@ -274,10 +275,15 @@ function attachEvents() {
     state.includeAffiliatedResearchers = els.fteToggle.checked;
     renderCurrentView();
   });
-  els.recentToggle.addEventListener("change", () => {
-    state.recentOnly = els.recentToggle.checked;
-    renderCurrentView();
-  });
+  if (els.publicationWindowToggle) {
+    els.publicationWindowToggle.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-window-mode]");
+      if (!button) return;
+      state.publicationWindow = normalizeWindowMode(button.dataset.windowMode);
+      syncPublicationWindowControls();
+      renderCurrentView();
+    });
+  }
   if (els.networkAipToggle) {
     els.networkAipToggle.addEventListener("change", () => {
       state.networkAipHighOnly = els.networkAipToggle.checked;
@@ -290,12 +296,14 @@ function attachEvents() {
       if (!button) return;
       state.networkMode = button.dataset.networkMode === "teaching" ? "teaching" : "publications";
       state.networkPersonId = "";
+      updateRoute({ replace: true });
       renderNetwork();
     });
   }
   if (els.networkClearSelection) {
     els.networkClearSelection.addEventListener("click", () => {
       state.networkPersonId = "";
+      updateRoute();
       renderNetwork();
     });
   }
@@ -305,6 +313,7 @@ function attachEvents() {
       if (!node) return;
       const id = node.getAttribute("data-network-person-id") || "";
       state.networkPersonId = state.networkPersonId === id ? "" : id;
+      updateRoute();
       renderNetwork();
     });
     els.networkSvg.addEventListener("keydown", (event) => {
@@ -314,6 +323,7 @@ function attachEvents() {
       event.preventDefault();
       const id = node.getAttribute("data-network-person-id") || "";
       state.networkPersonId = state.networkPersonId === id ? "" : id;
+      updateRoute();
       renderNetwork();
     });
   }
@@ -323,20 +333,59 @@ function attachEvents() {
       renderNetwork();
     });
   }
+  if (els.networkSelectionNote) {
+    els.networkSelectionNote.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-network-open-staff]");
+      if (!button) return;
+      state.selectedStaffId = button.dataset.networkOpenStaff || "";
+      setTab("staff");
+    });
+  }
+  if (els.staffProfile) {
+    els.staffProfile.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-open-network-person]");
+      if (!button) return;
+      state.networkPersonId = button.dataset.openNetworkPerson || "";
+      state.networkMode = "publications";
+      setTab("network");
+    });
+  }
   els.benchmarkTrendToggle.addEventListener("click", (event) => {
     const button = event.target.closest("[data-metric-trend]");
     if (!button) return;
     state.metricTrendKey = button.dataset.metricTrend;
     renderMetrics();
   });
-  els.pubSearch.addEventListener("input", () => {
+  els.pubSearch.addEventListener("input", debounce(() => {
     state.search = els.pubSearch.value.trim().toLowerCase();
     renderPublications();
-  });
+  }, 140));
   els.aipFilter.addEventListener("change", () => {
     state.aipFilter = els.aipFilter.value;
     renderPublications();
   });
+  if (els.personFilter) {
+    els.personFilter.addEventListener("change", () => {
+      state.publicationPersonFilter = els.personFilter.value;
+      renderPublications();
+    });
+  }
+  if (els.publicationDownloadCsv) {
+    els.publicationDownloadCsv.addEventListener("click", downloadPublicationCsv);
+  }
+  if (els.publicationTable) {
+    els.publicationTable.addEventListener("click", (event) => {
+      const sortButton = event.target.closest("[data-publication-sort]");
+      if (sortButton) {
+        setPublicationSort(sortButton.dataset.publicationSort);
+        return;
+      }
+      const reportButton = event.target.closest("[data-report-publication-id]");
+      if (reportButton) {
+        openPublicationReport(reportButton.dataset.reportPublicationId || "");
+      }
+    });
+  }
   if (els.feedbackForm) {
     els.feedbackForm.addEventListener("submit", handleFeedbackSubmit);
   }
@@ -391,20 +440,21 @@ function attachEvents() {
     const button = event.target.closest("[data-staff-id]");
     if (!button) return;
     state.selectedStaffId = button.dataset.staffId;
+    updateRoute();
     renderStaff();
   });
   els.staffSuggestions.addEventListener("click", (event) => {
     const button = event.target.closest("[data-staff-id]");
     if (!button) return;
     state.selectedStaffId = button.dataset.staffId;
+    updateRoute();
     renderStaff();
   });
   window.addEventListener("resize", debounce(() => {
     if (state.tab === "network") renderNetwork();
   }, 180));
   window.addEventListener("hashchange", () => {
-    const nextTab = location.hash.replace("#", "") || "overview";
-    if (nextTab !== state.tab) setTab(nextTab);
+    applyRouteFromHash();
   });
 }
 
@@ -477,21 +527,60 @@ async function loadData() {
     if (staffProfileResponse?.ok) state.staffProfileData = await staffProfileResponse.json();
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
-    els.footerMeta.textContent = "";
-    setTab(location.hash.replace("#", "") || "overview");
+    syncFooterMeta(meta);
+    syncPublicationWindowControls();
+    applyRouteFromHash();
   } catch (error) {
     els.subtitle.textContent = `Could not load dashboard data: ${error.message}`;
   }
 }
 
-function setTab(tab) {
-  state.tab = ["overview", "staff", "expertise", "publications", "network", "metrics", "resources", "contact"].includes(tab) ? tab : "overview";
+function validTab(tab) {
+  return ["overview", "staff", "expertise", "publications", "network", "metrics", "resources", "contact"].includes(tab);
+}
+
+function routeFromHash() {
+  const raw = decodeURIComponent((location.hash || "#overview").replace(/^#/, ""));
+  const [tab, detail = ""] = raw.split("/");
+  return { tab: validTab(tab) ? tab : "overview", detail };
+}
+
+function routeHash() {
+  if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}`;
+  if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
+  return `#${state.tab}`;
+}
+
+function updateRoute({ replace = false } = {}) {
+  const next = routeHash();
+  if (location.hash === next) return;
+  history[replace ? "replaceState" : "pushState"](null, "", next);
+}
+
+function applyRouteFromHash() {
+  const route = routeFromHash();
+  if (route.tab === "staff") state.selectedStaffId = route.detail || state.selectedStaffId;
+  if (route.tab === "network") state.networkPersonId = route.detail || "";
+  setTab(route.tab, { updateHistory: false });
+}
+
+function setTab(tab, options = {}) {
+  state.tab = validTab(tab) ? tab : "overview";
   document.querySelectorAll(".nav-tab").forEach((btn) => btn.classList.toggle("on", btn.dataset.tab === state.tab));
   document.querySelectorAll("main > section").forEach((section) => {
     section.hidden = section.id !== `view-${state.tab}`;
   });
-  history.replaceState(null, "", `#${state.tab}`);
+  if (options.updateHistory !== false) updateRoute({ replace: Boolean(options.replace) });
   if (state.data) renderCurrentView();
+}
+
+function syncFooterMeta(meta = {}) {
+  if (!els.footerMeta) return;
+  const generated = meta.generatedOn ? `Data generated ${meta.generatedOn}` : "Data generation date unavailable";
+  els.footerMeta.textContent = `${generated} - provisional public-source scrape - metrics count journal articles only`;
+  if (meta.publicationSource) {
+    els.footerMeta.title = meta.publicationSource;
+  }
 }
 
 function renderAll() {
@@ -506,6 +595,7 @@ function renderAll() {
 
 function renderCurrentView() {
   if (!state.data) return;
+  syncViewContext();
   if (state.tab === "overview") renderOverview();
   else if (state.tab === "metrics") renderMetrics();
   else if (state.tab === "staff") renderStaff();
@@ -517,12 +607,37 @@ function renderCurrentView() {
 
 function activePeople() {
   return state.data.people.filter((person) => (
-    state.includeAffiliatedResearchers || !AFFILIATED_RESEARCHER_IDS.has(person.id)
+    state.includeAffiliatedResearchers || !person.affiliated
   ));
 }
 
 function fteLabel() {
   return state.includeAffiliatedResearchers ? "Department members + affiliated researchers" : "Department members";
+}
+
+function rosterModeLabel() {
+  return state.includeAffiliatedResearchers ? "Department + affiliated researchers" : "Department members";
+}
+
+function normalizeWindowMode(mode) {
+  return PUBLICATION_WINDOW_MODES.has(mode) ? mode : "last10";
+}
+
+function syncPublicationWindowControls() {
+  if (!els.publicationWindowToggle) return;
+  state.publicationWindow = normalizeWindowMode(state.publicationWindow);
+  els.publicationWindowToggle.querySelectorAll("[data-window-mode]").forEach((button) => {
+    const active = button.dataset.windowMode === state.publicationWindow;
+    button.classList.toggle("on", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function syncViewContext() {
+  const text = `${rosterModeLabel()} - Publication window: ${activeWindowLabel()}`;
+  (els.viewContexts || []).forEach((context) => {
+    context.textContent = text;
+  });
 }
 
 function activePeopleSet() {
@@ -542,6 +657,43 @@ function activeDisplayPublications() {
 }
 
 function activePublicationPool({ countedOnly }) {
+  const cache = ensurePublicationPoolCache();
+  const slot = countedOnly ? "counted" : "display";
+  if (!cache[slot]) cache[slot] = computePublicationPool({ countedOnly });
+  return cache[slot];
+}
+
+function ensurePublicationPoolCache() {
+  const key = activePublicationPoolKey();
+  if (publicationPoolCache.key !== key) {
+    publicationPoolCache = {
+      key,
+      counted: null,
+      display: null,
+      staff: {
+        counted: new Map(),
+        display: new Map(),
+      },
+    };
+  }
+  return publicationPoolCache;
+}
+
+function activePublicationPoolKey() {
+  const [fromYear, toYear] = activeWindowYears();
+  const peopleKey = activePeople().map((person) => person.id).sort().join(",");
+  const meta = state.data?.meta || {};
+  return [
+    meta.generatedOn || "",
+    meta.cacheVersion || DATA_VERSION,
+    state.data?.publications?.length || 0,
+    peopleKey,
+    fromYear || "",
+    toYear || "",
+  ].join("|");
+}
+
+function computePublicationPool({ countedOnly }) {
   const ids = activePeopleSet();
   const [fromYear, toYear] = activeWindowYears();
   const filtered = state.data.publications.filter((pub) => (
@@ -709,8 +861,14 @@ function activeTheses() {
 }
 
 function staffPublicationRecords(personId, options = {}) {
-  const pool = options.countedOnly === false ? activeDisplayPublications() : activePublications();
-  return pool.filter((pub) => pub.matchedPeople.includes(personId));
+  const countedOnly = options.countedOnly !== false;
+  const cache = ensurePublicationPoolCache();
+  const slot = countedOnly ? "counted" : "display";
+  if (!cache.staff[slot].has(personId)) {
+    const pool = activePublicationPool({ countedOnly });
+    cache.staff[slot].set(personId, pool.filter((pub) => pub.matchedPeople.includes(personId)));
+  }
+  return cache.staff[slot].get(personId);
 }
 
 function staffGrantRecords(personId) {
@@ -945,6 +1103,9 @@ function renderStaffProfile(row, bundle) {
         <p class="eye">${escapeHtml(person.display)}</p>
         <h3>${escapeHtml(person.name)}</h3>
         ${renderPublicStaffInfo(person.id)}
+        <div class="staff-profile-actions">
+          <button class="section-link" type="button" data-open-network-person="${escapeHtml(person.id)}">View in network</button>
+        </div>
       </div>
     </div>
     ${queryStrip}
@@ -953,7 +1114,7 @@ function renderStaffProfile(row, bundle) {
       ${staffMetric("AIP >= 90", row.high90Aip)}
       ${staffMetric("AIP >= 95", row.highAip)}
       ${staffMetric("Grants", row.grants)}
-      ${staffMetric("PhDs", row.phds)}
+      ${staffMetric("Defended PhDs", row.phds)}
     </div>
   `;
   renderStaffTopics(person.id);
@@ -1050,6 +1211,8 @@ function staffCollaborationSuggestions(personId) {
     const sharedExternal = intersectSets(selectedProfile.externalAuthors, otherProfile.externalAuthors).slice(0, 4);
     const sharedGrants = intersectSets(selectedProfile.grants, otherProfile.grants);
     const sharedPartners = intersectSets(selectedProfile.partners, otherProfile.partners).slice(0, 3);
+    const existingSharedPubs = intersectSets(selectedProfile.publicationIds, otherProfile.publicationIds).length;
+    if (existingSharedPubs > 0) return { person, score: 0, reasons: [] };
     const score = sharedTopics.length * 3 + sharedExternal.length * 4 + sharedGrants.length * 6 + sharedPartners.length * 3;
     const reasons = [];
     if (sharedTopics.length) reasons.push(`Topics: ${sharedTopics.join(", ")}`);
@@ -1063,6 +1226,8 @@ function staffCollaborationSuggestions(personId) {
 }
 
 function staffOverlapProfile(personId) {
+  const publications = staffPublicationRecords(personId);
+  const publicationIds = new Set(publications.map((pub) => pub.id));
   const topics = new Set(semanticTopicSignals(staffPublicationRecords(personId), { minCount: 1, phraseMinCount: 2 })
     .slice(0, 18)
     .map((signal) => signal.query || signal.label));
@@ -1084,7 +1249,7 @@ function staffOverlapProfile(personId) {
     partners.add(partner.id);
     partnerLabels.set(partner.id, partner.institution);
   });
-  return { topics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels };
+  return { topics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels, publicationIds };
 }
 
 function intersectSets(a, b) {
@@ -1573,112 +1738,11 @@ function stemToken(token) {
 }
 
 function countedPublication(pub) {
-  const title = normalizeSearchText(pub.title || "");
-  const kind = normalizeSearchText(pub.publicationKind || "");
-  const sourceType = normalizeSearchText(pub.sourceType || "");
-  const source = normalizeSearchText([pub.journal, pub.aipJournal, pub.publisher, pub.publicationKind, pub.sourceType].join(" "));
-  const titleWords = ` ${title} `;
-  if (
-    title === "editorial"
-    || title === "acknowledgement"
-    || title === "acknowledgment"
-    || title.startsWith("editorial ")
-    || title.startsWith("commentary ")
-    || title.startsWith("commentary on ")
-    || title.startsWith("comment on ")
-    || title.startsWith("comments on ")
-    || title.startsWith("reply to ")
-    || title.startsWith("response to ")
-    || title.startsWith("author response")
-    || title.startsWith("publisher correction")
-    || title.startsWith("author correction")
-    || title.startsWith("correction to ")
-    || title.startsWith("corrigendum to ")
-    || title.startsWith("addendum to ")
-    || title.startsWith("retraction ")
-    || title.startsWith("expression of concern")
-    || title.startsWith("from the editors")
-    || title.startsWith("guest editorial")
-    || title.includes(" introduction to the special issue")
-    || title.includes(" comment on ")
-    || titleWords.includes(" editorial ")
-    || titleWords.includes(" commentary ")
-    || title.startsWith("acknowledgment ")
-    || title.startsWith("acknowledgement ")
-    || title.includes("ad hoc reviewers")
-    || title.includes("reviewers ")
-    || ["commentary", "comment", "editorial", "book review", "erratum", "correction", "corrigendum", "addendum", "letter", "reply"].includes(kind)
-    || ["commentary", "comment", "editorial", "book review", "erratum", "correction", "corrigendum", "addendum", "letter", "reply"].includes(sourceType)
-    || kind.includes("commentary")
-    || sourceType.includes("commentary")
-    || kind.includes("correction")
-    || sourceType.includes("correction")
-    || kind.includes("corrigendum")
-    || sourceType.includes("corrigendum")
-    || kind.includes("letter")
-    || sourceType.includes("letter")
-    || kind.includes("out of scope")
-    || sourceType.includes("out of scope")
-    || editorialLikePublication(pub, title, source)
-  ) return false;
-  if (medicalFalsePositivePublication(pub)) return false;
-  if (
-    source.includes("conference")
-    || kind.includes("conference")
-    || sourceType.includes("conference")
-    || ((source.includes("proceedings") || kind.includes("proceedings")) && !isRankableProceedingsJournal(pub))
-  ) return false;
-  if (pub.rankableJournal !== false) return true;
-  return false;
+  return pub?.counted === true;
 }
 
 function displayPublication(pub) {
-  return !hiddenProceedingsPublication(pub);
-}
-
-function hiddenProceedingsPublication(pub) {
-  const kind = normalizeSearchText(pub.publicationKind || "");
-  const sourceType = normalizeSearchText(pub.sourceType || "");
-  const source = normalizeSearchText([pub.journal, pub.aipJournal, pub.publisher, pub.publicationKind, pub.sourceType].join(" "));
-  if (isRankableProceedingsJournal(pub)) return false;
-  return source.includes("academy of management proceedings")
-    || source.includes("conference")
-    || kind.includes("conference")
-    || sourceType.includes("conference")
-    || source.includes("proceedings")
-    || kind.includes("proceedings")
-    || sourceType.includes("proceedings");
-}
-
-function editorialLikePublication(pub, title, source) {
-  const doi = String(pub.doi || "").toLowerCase().trim();
-  if (source.includes("academy of management journal") && /^10\.5465\/amj\.\d{4}\.400\d/.test(doi)) return true;
-  if (title.includes("review and best practice recommendations") && source.includes("academy of management journal")) return true;
-  return false;
-}
-
-function isRankableProceedingsJournal(pub) {
-  const source = normalizeSearchText([pub.journal, pub.aipJournal].join(" "));
-  return source.includes("proceedings of the national academy of sciences") || source === "pnas" || source.includes(" pnas ");
-}
-
-function medicalFalsePositivePublication(pub) {
-  if (publicationHasVerifiedPersonEvidence(pub)) return false;
-  const text = [
-    pub.title,
-    pub.journal,
-    pub.aipJournal,
-    pub.aipCategory,
-    pub.publisher,
-    (pub.subjects || []).join(" "),
-  ].join(" ");
-  if (!MEDICAL_FALSE_POSITIVE_PATTERNS.some((pattern) => pattern.test(text))) return false;
-  return !MEDICAL_CONTEXT_RESCUE_PATTERNS.some((pattern) => pattern.test(text));
-}
-
-function publicationHasVerifiedPersonEvidence(pub) {
-  const evidence = (pub.evidence || []).join(" ");
-  return evidence.includes("RUG staff publication page") || evidence.includes("Crossref ORCID matched");
+  return pub?.display !== false;
 }
 
 function renderOverview() {
@@ -1827,12 +1891,13 @@ function grantFitScore(personId, call) {
   const currentYear = new Date().getFullYear();
   const phdAge = isNumber(profile.phdYear) ? currentYear - profile.phdYear : null;
   const firstPublicationAge = isNumber(profile.firstYear) ? currentYear - profile.firstYear : null;
-  if (!grantCareerWindowPossible(profile, name, phdAge, firstPublicationAge)) return 0;
+  const window = grantEligibilityWindow(call);
+  if (!grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge)) return 0;
   let score = 0;
-  if ((stage.includes("early") || name.includes("veni")) && (phdAge !== null ? phdAge <= 5 : firstPublicationAge !== null && firstPublicationAge <= 8)) score += 5;
-  if (name.includes("starting grant") && (phdAge !== null ? phdAge <= 10 : firstPublicationAge !== null && firstPublicationAge <= 10)) score += 4;
-  if ((stage.includes("mid") || name.includes("vidi")) && (phdAge !== null ? phdAge >= 4 && phdAge <= 10 : firstPublicationAge !== null && firstPublicationAge >= 4 && firstPublicationAge <= 16)) score += 5;
-  if (name.includes("consolidator") && (phdAge !== null ? phdAge >= 5 && phdAge <= 15 : firstPublicationAge !== null && firstPublicationAge >= 5 && firstPublicationAge <= 18)) score += 5;
+  if ((stage.includes("early") || name.includes("veni")) && (phdAge !== null ? phdAge <= 4 : firstPublicationAge !== null && firstPublicationAge <= 8)) score += 5;
+  if (name.includes("starting grant") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 4;
+  if ((stage.includes("mid") || name.includes("vidi")) && (phdAge !== null ? phdAge >= 4 && phdAge <= 9 : firstPublicationAge !== null && firstPublicationAge >= 4 && firstPublicationAge <= 16)) score += 5;
+  if (name.includes("consolidator") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 5;
   if (name.includes("xs") && (phdAge !== null ? phdAge >= 5 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 3;
   if (stage.includes("senior") && (profile.grants > 0 || profile.phds > 0 || profile.highAip >= 6)) score += 5;
   if (stage.includes("established") && (phdAge !== null ? phdAge >= 10 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 4;
@@ -1846,33 +1911,61 @@ function grantFitScore(personId, call) {
   return score;
 }
 
-function grantCareerWindowPossible(profile, callName, phdAge, firstPublicationAge) {
+function grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge) {
   const role = normalizeSearchText(profile.role || "");
+  const callName = normalizeSearchText(typeof call === "string" ? call : call?.name || "");
   const clearlySenior = role.includes("professor") && !role.includes("assistant");
+  const window = grantEligibilityWindow(call);
+  if (window) {
+    if (phdAge === null) return false;
+    return ageInEligibilityWindow(phdAge, window);
+  }
   if (phdAge === null) {
-    if (callName.includes("veni") || callName.includes("van der gaag")) {
-      return !clearlySenior && (firstPublicationAge === null || firstPublicationAge <= 8);
-    }
-    if (callName.includes("vidi") || callName.includes("starting grant")) {
-      return firstPublicationAge === null || firstPublicationAge <= 14;
-    }
-    if (callName.includes("consolidator") || callName.includes("vici")) {
-      return firstPublicationAge === null || firstPublicationAge >= 5;
-    }
     if (callName.includes("open competition xs")) {
       return firstPublicationAge === null || firstPublicationAge >= 5;
     }
     return true;
   }
-  if (callName.includes("veni") || callName.includes("van der gaag")) return phdAge <= 4;
-  if (callName.includes("vidi")) return phdAge <= 9;
-  if (callName.includes("vici")) return phdAge <= 16;
-  if (callName.includes("starting grant")) return phdAge <= 10;
-  if (callName.includes("consolidator")) return phdAge >= 5 && phdAge <= 15;
   if (callName.includes("open competition xs")) return phdAge >= 5;
   if (callName.includes("open competition m")) return phdAge >= 10;
   if (callName.includes("open competition l")) return phdAge >= 15;
   return true;
+}
+
+function ageInEligibilityWindow(age, window) {
+  return (window.min === null || age >= window.min) && (window.max === null || age <= window.max);
+}
+
+function grantEligibilityWindow(call) {
+  const callName = normalizeSearchText(typeof call === "string" ? call : call?.name || "");
+  const callText = normalizeSearchText(typeof call === "string" ? call : [
+    call?.name,
+    call?.eligibility,
+    call?.timing,
+    call?.tips,
+  ].filter(Boolean).join(" "));
+  if (callName.includes("veni") || callName.includes("van der gaag")) {
+    return { label: "PhD <= 4 years", min: null, max: 4 };
+  }
+  if (callName.includes("vidi")) {
+    return { label: "PhD <= 9 years", min: null, max: 9 };
+  }
+  if (callName.includes("vici")) {
+    return { label: "PhD <= 16 years", min: null, max: 16 };
+  }
+  if (callName.includes("starting grant")) {
+    if (callText.includes("0 to 10") || callText.includes("0 10") || callText.includes("2027")) {
+      return { label: "PhD 0-10 years", min: 0, max: 10 };
+    }
+    return { label: "PhD 2-8 years", min: 2, max: 8 };
+  }
+  if (callName.includes("consolidator")) {
+    if (callText.includes("5 to 15") || callText.includes("5 15") || callText.includes("2027")) {
+      return { label: "PhD 5-15 years", min: 5, max: 15 };
+    }
+    return { label: "PhD 7-13 years", min: 7, max: 13 };
+  }
+  return null;
 }
 
 function grantTopicBundle(call) {
@@ -1886,12 +1979,13 @@ function grantTopicBundle(call) {
 function grantFitReasons(personId, call) {
   const profile = grantStaffProfile(personId);
   const reasons = [];
-  if (profile.phdYear) reasons.push(`Public CV/profile: PhD ${profile.phdYear}`);
+  const window = grantEligibilityWindow(call);
+  if (profile.phdYear) reasons.push(window ? `Assumes PhD ${profile.phdYear}; window ${window.label}` : `Public CV/profile: PhD ${profile.phdYear}`);
   else if (profile.firstYear) reasons.push(`First counted publication proxy: ${profile.firstYear}`);
   if (profile.highAip) reasons.push(`${profile.highAip} AIP >= 95 publication${profile.highAip === 1 ? "" : "s"}`);
   if (profile.grants) reasons.push(`${profile.grants} recorded grant${profile.grants === 1 ? "" : "s"}`);
   if (profile.phds) reasons.push(`${profile.phds} defended PhD supervision record${profile.phds === 1 ? "" : "s"}`);
-  if (call.fitNote) reasons.push(call.fitNote);
+  if (call.fitNote && !window) reasons.push(call.fitNote);
   return reasons.slice(0, 4);
 }
 
@@ -1912,7 +2006,7 @@ function grantStaffProfile(personId) {
 }
 
 function overviewPublications() {
-  return activePublications().filter((pub) => pub.year >= overviewStartYear());
+  return activePublications();
 }
 
 function metric(label, value, sub = "", suffix = "", suffixLabel = "SD") {
@@ -1970,8 +2064,8 @@ function renderMetrics() {
   const hrm = groups.find((group) => group.key === "HRMOB") || groups[0];
 
   els.benchmarkSummary.innerHTML = [
-    metric("Pubs per person per year", formatMetricValue(hrm.avgPubs), "Mean counted journal publications.", isNumber(hrm.avgPubsSd) ? formatMetricValue(hrm.avgPubsSd) : ""),
-    metric("AIP >= 95 pubs per person per year", formatMetricValue(hrm.avgHighAip), "Mean counted publications in AIP >= 95 journals.", isNumber(hrm.avgHighAipSd) ? formatMetricValue(hrm.avgHighAipSd) : ""),
+    metric("Professor-rank pubs/year", formatMetricValue(hrm.avgPubs), "Mean counted journal publications for assistant, associate, and full professors.", isNumber(hrm.avgPubsSd) ? formatMetricValue(hrm.avgPubsSd) : ""),
+    metric("Professor-rank AIP >= 95 pubs/year", formatMetricValue(hrm.avgHighAip), "Mean professor-rank publications in AIP >= 95 journals.", isNumber(hrm.avgHighAipSd) ? formatMetricValue(hrm.avgHighAipSd) : ""),
     metric("AIP >= 95 share", formatPercentValue(hrm.highAipShare), "Share of counted publications in AIP >= 95 journals."),
     metric("Output centralization", formatPercentValue(hrm.outputCentralization, 1), `Gini-style concentration of publication rates across ${hrm.activePeople} active people.`, isNumber(hrm.highAipCentralization) ? formatPercentValue(hrm.highAipCentralization, 1) : "", "AIP >= 95 only"),
   ].join("");
@@ -1987,8 +2081,8 @@ function renderMetrics() {
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
     els.benchmarkTrendTitle.textContent = trendKey === "highAipRate"
-      ? "Average AIP >= 95 publications per person per year by group"
-      : "Average counted publications per person per year by group";
+      ? "Average AIP >= 95 publications per professor-rank person-year by group"
+      : "Average counted publications per professor-rank person-year by group";
   }
   if (!els.benchmarkTrendToggle) return;
   els.benchmarkTrendToggle.querySelectorAll("[data-metric-trend]").forEach((button) => {
@@ -2009,11 +2103,23 @@ function buildMetricGroups() {
 function metricYears() {
   const [fromYear, toYear] = activeWindowYears();
   const currentYear = new Date().getFullYear();
-  const start = Math.max(METRICS_START_YEAR, Number.isFinite(fromYear) ? fromYear : METRICS_START_YEAR);
+  const allYears = metricDataYears();
+  const start = Number.isFinite(fromYear)
+    ? fromYear
+    : allYears.length ? Math.min(...allYears) : METRICS_START_YEAR;
   const rawEnd = Number.isFinite(toYear) ? toYear : currentYear;
   const end = Math.min(rawEnd, currentYear);
   if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) return [];
   return Array.from({ length: end - start + 1 }, (_, idx) => start + idx);
+}
+
+function metricDataYears() {
+  const activeIds = activePeopleSet();
+  const hrmYears = (state.data?.publications || [])
+    .filter((pub) => countedPublication(pub) && pub.matchedPeople?.some((id) => activeIds.has(id)))
+    .map((pub) => pub.year);
+  const benchmarkYears = (state.benchmarkData?.publications || []).map((pub) => pub.year);
+  return [...hrmYears, ...benchmarkYears].filter(Number.isFinite);
 }
 
 function completedMetricYears(years) {
@@ -2022,34 +2128,59 @@ function completedMetricYears(years) {
 }
 
 function buildHrmMetricGroup(years) {
-  const basePeople = activePeople();
+  const basePeople = metricEligibleHrmPeople();
   const firstYears = firstPublicationYearsForHrm(basePeople);
-  const people = basePeople.map((person) => ({ id: person.id, department: "HRM&OB", firstYear: firstYears.get(person.id) }));
+  const people = basePeople.map((person) => ({
+    id: person.id,
+    department: "HRM&OB",
+    firstYear: firstYears.get(person.id) || person.joinedYear,
+    joinedYear: person.joinedYear,
+    rank: person.rank,
+  }));
+  const peopleByMetricId = new Map(basePeople.map((person) => [person.id, person]));
   const ids = new Set(people.map((person) => person.id));
   const yearSet = new Set(years);
   const pubs = dedupePublications(state.data.publications.filter((pub) => (
     countedPublication(pub)
     && yearSet.has(pub.year)
-    && pub.matchedPeople.some((id) => ids.has(id))
-  ))).map((pub) => ({
-    id: pub.id,
-    year: pub.year,
-    aip: pub.aip,
-    people: pub.matchedPeople.filter((id) => ids.has(id)),
-  }));
+    && pub.matchedPeople.some((id) => ids.has(id) && publicationWithinMetricPersonPeriod(pub, peopleByMetricId.get(id)))
+  ))).map((pub) => {
+    const pubPeople = pub.matchedPeople.filter((id) => (
+      ids.has(id) && publicationWithinMetricPersonPeriod(pub, peopleByMetricId.get(id))
+    ));
+    return {
+      id: pub.id,
+      year: pub.year,
+      aip: pub.aip,
+      people: pubPeople,
+    };
+  }).filter((pub) => pub.people.length);
   return computeMetricGroup("HRM&OB", "HRMOB", people, pubs, years, true);
 }
 
+function metricEligibleHrmPeople() {
+  return activePeople().filter((person) => METRIC_ROSTER_RANKS.has(person.rank));
+}
+
+function publicationWithinMetricPersonPeriod(pub, person) {
+  if (!person) return false;
+  if (Number.isFinite(person.joinedYear) && Number.isFinite(pub.year) && pub.year < person.joinedYear) return false;
+  if (Number.isFinite(person.leftYear) && Number.isFinite(pub.year) && pub.year > person.leftYear) return false;
+  return true;
+}
+
 function firstPublicationYearsForHrm(people) {
-  const ids = new Set(people.map((person) => person.id));
+  const peopleByMetricId = new Map(people.map((person) => [person.id, person]));
+  const ids = new Set(peopleByMetricId.keys());
   const firstYears = new Map();
   dedupePublications((state.data?.publications || []).filter((pub) => (
     countedPublication(pub)
-    && pub.matchedPeople.some((id) => ids.has(id))
+    && pub.matchedPeople.some((id) => ids.has(id) && publicationWithinMetricPersonPeriod(pub, peopleByMetricId.get(id)))
   ))).forEach((pub) => {
     if (!Number.isFinite(pub.year)) return;
     pub.matchedPeople.forEach((id) => {
       if (!ids.has(id)) return;
+      if (!publicationWithinMetricPersonPeriod(pub, peopleByMetricId.get(id))) return;
       firstYears.set(id, Math.min(firstYears.get(id) || pub.year, pub.year));
     });
   });
@@ -2338,19 +2469,27 @@ function renderMetricMethodNote(container, hrm, rest) {
   const trendYears = metricYears();
   const currentYear = new Date().getFullYear();
   const currentYearNote = trendYears.includes(currentYear) ? ` Cards use completed years; trend lines include ${currentYear} so far.` : "";
+  const benchmarkSourceMethod = state.benchmarkData?.meta?.benchmarkSourceMethod || "";
+  const benchmarkComparabilityText = benchmarkSourceMethod === "openalex-author-id"
+    ? "Benchmark records now use the same OpenAlex author-profile source family as HRM&OB where a staff identity could be accepted. Treat levels as provisional because this is still a public-source seed, not a Pure export."
+    : "HRM&OB records come from richer sources than the benchmark departments. Treat level differences with caution and read within-group trends first.";
   container.innerHTML = `
     <div class="method-grid">
       <div>
-        <strong>Pubs/person/year</strong>
-        <p>Mean counted journal publications per active person-year. People enter from their first counted publication year.${currentYearNote}</p>
+        <strong>Professor-rank denominator</strong>
+        <p>HRM&amp;OB metrics include roster members marked assistant, associate, or full professor. When a roster joined year is available, earlier publications are omitted; rows without a joined year still enter from their first counted publication year.${currentYearNote}</p>
       </div>
       <div>
         <strong>AIP &ge; 95 pubs/person/year</strong>
         <p>Mean counted publications in journals with AIP score 95.0 or higher per active person-year.</p>
       </div>
       <div>
+        <strong>Benchmark comparability</strong>
+        <p>${escapeHtml(benchmarkComparabilityText)}</p>
+      </div>
+      <div>
         <strong>Benchmark</strong>
-        <p>Assistant, associate, and full professors from Marketing, IM&amp;S, Operations, GEM, and Accounting with usable publication records. Current denominator: ${usablePeople} people.</p>
+        <p>Assistant, associate, and full professors from Marketing, IM&amp;S, Operations, GEM, and Accounting with usable or caution-audited publication records. Current denominator: ${usablePeople} people.</p>
       </div>
       <div>
         <strong>AIP source rule</strong>
@@ -2410,7 +2549,9 @@ function standardDeviation(values) {
 
 function overviewStartYear() {
   const [fromYear] = activeWindowYears();
-  return Math.max(OVERVIEW_START_YEAR, Number.isFinite(fromYear) ? fromYear : OVERVIEW_START_YEAR);
+  if (Number.isFinite(fromYear)) return fromYear;
+  const years = activePublications().map((pub) => pub.year).filter(Number.isFinite);
+  return years.length ? Math.min(...years) : new Date().getFullYear() - DEFAULT_PUBLICATION_WINDOW_YEARS + 1;
 }
 
 function publicationWindowYears() {
@@ -2426,7 +2567,18 @@ function publicationWindowLabel() {
 
 function activeWindow() {
   const meta = state.data?.meta || {};
-  return state.recentOnly ? (meta.recentWindow || meta.publicationWindow || {}) : (meta.publicationWindow || {});
+  const mode = normalizeWindowMode(state.publicationWindow);
+  if (mode === "recent") return meta.recentWindow || meta.publicationWindow || {};
+  if (mode === "last10") {
+    const to = meta.publicationWindow?.to || meta.recentWindow?.to || "";
+    const toYear = Number(String(to).slice(0, 4));
+    const endYear = Number.isFinite(toYear) ? toYear : new Date().getFullYear();
+    return {
+      from: `${endYear - DEFAULT_PUBLICATION_WINDOW_YEARS + 1}-01-01`,
+      to: to || `${endYear}-12-31`,
+    };
+  }
+  return {};
 }
 
 function activeWindowYears() {
@@ -2437,6 +2589,7 @@ function activeWindowYears() {
 }
 
 function activeWindowLabel() {
+  if (normalizeWindowMode(state.publicationWindow) === "all") return "All years";
   const [fromYear, toYear] = activeWindowYears();
   return fromYear && toYear ? `${fromYear}-${toYear}` : "All years";
 }
@@ -2699,7 +2852,7 @@ function renderOverviewGrants(grants) {
   const people = peopleById();
   const rows = grants.slice().sort(sortGrants);
   if (!rows.length) {
-    els.grantList.innerHTML = `<p class="small-muted">No source-backed grant records for the current staff filter.</p>`;
+    els.grantList.innerHTML = `<p class="small-muted">No source-backed grant records for the current staff filter.</p>${dataNote(GRANT_DATA_NOTE)}`;
     return;
   }
   els.grantList.innerHTML = `
@@ -2710,6 +2863,7 @@ function renderOverviewGrants(grants) {
         <p class="grant-meta">${escapeHtml(grantStaff(grant, people))}</p>
       </div>
     `).join("")}
+    ${dataNote(GRANT_DATA_NOTE)}
   `;
 }
 
@@ -2718,7 +2872,7 @@ function renderOverviewPhds(theses) {
   const people = peopleById();
   const rows = theses.slice().sort(sortTheses);
   if (!rows.length) {
-    els.phdList.innerHTML = `<p class="small-muted">No source-backed defended PhD records for the current staff filter.</p>`;
+    els.phdList.innerHTML = `<p class="small-muted">No source-backed defended PhD records for the current staff filter.</p>${dataNote(PHD_DATA_NOTE)}`;
     return;
   }
   els.phdList.innerHTML = `
@@ -2729,7 +2883,12 @@ function renderOverviewPhds(theses) {
         <p class="grant-meta">${escapeHtml(roleSummary(thesis, people))}</p>
       </div>
     `).join("")}
+    ${dataNote(PHD_DATA_NOTE)}
   `;
+}
+
+function dataNote(text) {
+  return `<p class="data-note">${escapeHtml(text)}</p>`;
 }
 
 function roleSummary(thesis, people) {
@@ -2780,8 +2939,42 @@ function formatYear(year) {
 function renderPublications() {
   if (!state.data) return;
   const people = peopleById();
-  let pubs = dashboardEraPublications(activePublications());
-  renderPublicationJournalSummary(pubs);
+  const activePubs = activePublications();
+  renderPublicationJournalSummary(activePubs);
+  syncPublicationPersonFilter();
+  const pubs = filteredPublications();
+
+  const rows = pubs.map((pub) => [
+    pub.year,
+    publicationCell(pub, { report: true }),
+    escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
+    aipBadge(pub.aip, pub),
+    escapeHtml(pub.matchedPeople.map((id) => people.get(id)?.display || id).sort().join(", ")),
+  ]);
+  setPublicationTable(els.publicationTable, rows);
+}
+
+function syncPublicationPersonFilter() {
+  if (!els.personFilter) return;
+  const people = activePeople().slice().sort((a, b) => a.display.localeCompare(b.display));
+  const validIds = new Set(people.map((person) => person.id));
+  if (state.publicationPersonFilter && !validIds.has(state.publicationPersonFilter)) {
+    state.publicationPersonFilter = "";
+  }
+  const current = els.personFilter.value;
+  const options = [`<option value="">All people</option>`].concat(people.map((person) => (
+    `<option value="${escapeHtml(person.id)}"${person.id === state.publicationPersonFilter ? " selected" : ""}>${escapeHtml(person.display)}</option>`
+  )));
+  els.personFilter.innerHTML = options.join("");
+  if (current !== state.publicationPersonFilter) els.personFilter.value = state.publicationPersonFilter;
+}
+
+function filteredPublications() {
+  const people = peopleById();
+  let pubs = activePublications();
+  if (state.publicationPersonFilter) {
+    pubs = pubs.filter((pub) => pub.matchedPeople.includes(state.publicationPersonFilter));
+  }
   if (state.search) {
     pubs = pubs.filter((pub) => {
       const haystack = [
@@ -2789,6 +2982,8 @@ function renderPublications() {
         pub.journal,
         pub.aipJournal,
         pub.authors.join(" "),
+        pub.doi,
+        pub.year,
         pub.matchedPeople.map((id) => people.get(id)?.display || id).join(" "),
       ].join(" ").toLowerCase();
       return haystack.includes(state.search);
@@ -2797,39 +2992,135 @@ function renderPublications() {
   pubs = pubs.filter((pub) => {
     if (state.aipFilter === "gte90") return isNumber(pub.aip) && pub.aip >= 90;
     if (state.aipFilter === "gte95") return isNumber(pub.aip) && pub.aip >= 95;
+    if (state.aipFilter === "noaip") return !isNumber(pub.aip);
     return true;
   });
-  pubs = pubs
-    .map((pub, idx) => ({ pub, idx }))
-    .sort((a, b) => publicationDateValue(b.pub) - publicationDateValue(a.pub) || a.idx - b.idx)
-    .map((row) => row.pub);
+  return sortPublications(pubs);
+}
 
-  const rows = pubs.map((pub) => [
-    pub.year,
-    publicationCell(pub),
-    escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
-    aipBadge(pub.aip, pub),
-    pub.matchedPeople.map((id) => people.get(id)?.display || id).sort().join(", "),
-  ]);
-  setTable(els.publicationTable, ["Year", "Publication", "Journal", "AIP", "HRM&OB authors"], rows, [true, false, false, true, false]);
+function sortPublications(pubs) {
+  const direction = state.publicationSortDir === "asc" ? 1 : -1;
+  return pubs
+    .map((pub, idx) => ({ pub, idx }))
+    .sort((a, b) => {
+      let result = 0;
+      if (state.publicationSortKey === "year" || state.publicationSortKey === "date") {
+        result = publicationDateValue(a.pub) - publicationDateValue(b.pub);
+      } else if (state.publicationSortKey === "aip") {
+        result = numericSortValue(a.pub.aip) - numericSortValue(b.pub.aip);
+      } else if (state.publicationSortKey === "title") {
+        result = String(a.pub.title || "").localeCompare(String(b.pub.title || ""));
+      } else if (state.publicationSortKey === "journal") {
+        result = displayJournalName(a.pub.journal || a.pub.aipJournal || "").localeCompare(displayJournalName(b.pub.journal || b.pub.aipJournal || ""));
+      }
+      return result * direction || publicationDateValue(b.pub) - publicationDateValue(a.pub) || a.idx - b.idx;
+    })
+    .map((row) => row.pub);
+}
+
+function numericSortValue(value) {
+  return isNumber(value) ? value : -Infinity;
+}
+
+function setPublicationSort(key) {
+  if (!key) return;
+  if (state.publicationSortKey === key) {
+    state.publicationSortDir = state.publicationSortDir === "asc" ? "desc" : "asc";
+  } else {
+    state.publicationSortKey = key;
+    state.publicationSortDir = key === "title" || key === "journal" ? "asc" : "desc";
+  }
+  renderPublications();
+}
+
+function sortIndicator(key) {
+  if (state.publicationSortKey !== key) return "";
+  return state.publicationSortDir === "asc" ? " ↑" : " ↓";
+}
+
+function sortableHeader(label, key, numeric = false) {
+  return `<th class="${numeric ? "num" : ""}"><button class="table-sort" type="button" data-publication-sort="${escapeHtml(key)}">${escapeHtml(label)}${sortIndicator(key)}</button></th>`;
+}
+
+function setPublicationTable(table, rows) {
+  table.innerHTML = `
+    <thead><tr>
+      ${sortableHeader("Year", "year", true)}
+      ${sortableHeader("Publication", "title")}
+      ${sortableHeader("Journal", "journal")}
+      ${sortableHeader("AIP", "aip", true)}
+      <th>HRM&OB authors</th>
+    </tr></thead>
+    <tbody>${rows.length ? rows.map((row) => `<tr>${row.map((cell, idx) => `<td class="${idx === 0 || idx === 3 ? "num" : ""}">${cell}</td>`).join("")}</tr>`).join("") : `<tr><td colspan="5">No publication records match the current filters.</td></tr>`}</tbody>
+  `;
+}
+
+function downloadPublicationCsv() {
+  const people = peopleById();
+  const rows = filteredPublications().map((pub) => ({
+    year: pub.year || "",
+    title: pub.title || "",
+    journal: displayJournalName(pub.journal || pub.aipJournal || ""),
+    aip: isNumber(pub.aip) ? pub.aip.toFixed(1) : "",
+    aipStatus: pub.aipStatus || "",
+    authors: (pub.authors || []).join("; "),
+    hrmobAuthors: (pub.matchedPeople || []).map((id) => people.get(id)?.display || id).sort().join("; "),
+    doi: pub.doi || "",
+  }));
+  const csv = rowsToCsv(rows, ["year", "title", "journal", "aip", "aipStatus", "authors", "hrmobAuthors", "doi"]);
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `hrmob-publications-${DATA_VERSION}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  URL.revokeObjectURL(link.href);
+  link.remove();
+}
+
+function rowsToCsv(rows, columns) {
+  return [
+    columns.join(","),
+    ...rows.map((row) => columns.map((column) => csvCell(row[column])).join(",")),
+  ].join("\n");
+}
+
+function csvCell(value) {
+  const text = String(value ?? "");
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, "\"\"")}"` : text;
+}
+
+function openPublicationReport(publicationId) {
+  const pub = activePublications().find((item) => item.id === publicationId);
+  if (!pub) return;
+  state.tab = "contact";
+  setTab("contact");
+  if (els.feedbackArea) els.feedbackArea.value = "Publication correction";
+  if (els.feedbackComment) {
+    els.feedbackComment.value = [
+      `Publication id: ${pub.id}`,
+      `Title: ${pub.title}`,
+      `Year: ${pub.year || ""}`,
+      `DOI: ${pub.doi || ""}`,
+      "",
+      "Correction:",
+    ].join("\n");
+    els.feedbackComment.focus();
+  }
 }
 
 function renderPublicationJournalSummary(pubs) {
-  const journals = aggregateJournals(dashboardEraPublications(pubs));
+  const journals = aggregateJournals(pubs);
   renderJournalPublishedList(journals);
   renderJournalOpenAccessList(journals);
 }
 
-function dashboardEraPublications(pubs) {
-  const start = overviewStartYear();
-  return pubs.filter((pub) => Number.isFinite(pub.year) && pub.year >= start);
-}
-
-function publicationCell(pub) {
+function publicationCell(pub, options = {}) {
   const doi = pub.doi ? `<a class="doi" href="https://doi.org/${encodeURIComponent(pub.doi)}" target="_blank" rel="noopener">doi</a>` : "";
   const status = publicationStatusBadge(pub);
+  const report = options.report ? ` <button class="table-action" type="button" data-report-publication-id="${escapeHtml(pub.id)}">report</button>` : "";
   return `<span class="primary-text">${escapeHtml(pub.title)}</span> ${doi}${status}<br>
-    <span class="small-muted">${escapeHtml(pub.authors.slice(0, 8).join(", "))}${pub.authors.length > 8 ? ", ..." : ""}</span>`;
+    <span class="small-muted">${escapeHtml(pub.authors.slice(0, 8).join(", "))}${pub.authors.length > 8 ? ", ..." : ""}</span>${report}`;
 }
 
 function publicationStatusBadge(pub) {
@@ -3235,9 +3526,9 @@ function syncNetworkControls(people) {
     const base = state.networkMode === "teaching"
       ? "Click a department member to focus shared-course teaching links."
       : "Click a department member to focus publication collaborations.";
-    els.networkSelectionNote.textContent = selected
-      ? `Focused on ${selected.display}. Click the same node again or use Show all to reset.`
-      : base;
+    els.networkSelectionNote.innerHTML = selected
+      ? `Focused on <strong>${escapeHtml(selected.display)}</strong>. <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selected.id)}">Open staff profile</button>`
+      : escapeHtml(base);
   }
   if (els.networkEmpty) {
     els.networkEmpty.textContent = state.networkMode === "teaching"
@@ -3330,7 +3621,12 @@ function renderPublicationNetwork(people) {
     : { nodes: [], edges: [] };
   const collaboratorNodes = [...faculty.nodes, ...external.nodes];
   const collaboratorEdges = [...faculty.edges, ...external.edges];
-  els.networkEmpty.hidden = Boolean(selectedPersonId) || visibleEdges.length > 0 || collaboratorEdges.length > 0;
+  const selectedPerson = selectedPersonId ? people.find((person) => person.id === selectedPersonId) : null;
+  const hasVisibleNetworkContent = visibleEdges.length > 0 || collaboratorEdges.length > 0;
+  if (els.networkEmpty && selectedPerson && !hasVisibleNetworkContent) {
+    els.networkEmpty.textContent = `No shared publications for ${selectedPerson.display} under the current filters.`;
+  }
+  els.networkEmpty.hidden = hasVisibleNetworkContent;
   drawNetwork(visibleNodes, visibleEdges, collaboratorNodes, collaboratorEdges);
   renderNetworkTable(visibleEdges, collaborationPubs);
   renderExternalPartners(collaborationPubs, collaborationActiveIds);
@@ -3392,7 +3688,11 @@ function renderTeachingNetwork(people) {
     });
     visibleNodes = nodes.filter((node) => visibleIds.has(node.id));
   }
-  els.networkEmpty.hidden = Boolean(selectedPersonId) || visibleEdges.length > 0;
+  const selectedPerson = selectedPersonId ? people.find((person) => person.id === selectedPersonId) : null;
+  if (els.networkEmpty && selectedPerson && !visibleEdges.length) {
+    els.networkEmpty.textContent = `No shared teaching-course ties for ${selectedPerson.display} under the current filters.`;
+  }
+  els.networkEmpty.hidden = visibleEdges.length > 0;
   drawNetwork(visibleNodes, visibleEdges, [], []);
   renderTeachingNetworkTable(visibleEdges);
   renderExternalPartners([], activeIds);
@@ -3413,7 +3713,7 @@ function renderNetworkLegend() {
     <span><i class="legend-count"></i> Number = publications</span>
     <span><i class="legend-line"></i> Line thickness = shared publications</span>
     <span><i class="legend-faculty"></i> Other FEB departments</span>
-    <span><i class="legend-external"></i> Faint outer ties = outside coauthors, capped at 10 per publication</span>
+    <span><i class="legend-external"></i> Outer dots = outside coauthors; labels shown only for strongest repeated ties</span>
   `;
 }
 
@@ -3462,7 +3762,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     circle.appendChild(svgTitle(nodeTitle));
     group.appendChild(circle);
 
-    if (!node.aggregate || node.priority) {
+    if (facultyNode || node.priority || node.aggregate) {
       const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
       const labelPlacement = facultyNode
         ? collaboratorLabelPlacement(node, radius, width, height)
@@ -3533,10 +3833,11 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     countLabel.textContent = String(node.count || 0);
     group.appendChild(countLabel);
 
+    const labelPlacement = internalNodeLabelPlacement(node, radius, width, height);
     const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    label.setAttribute("x", node.x);
-    label.setAttribute("y", clamp(node.y + radius + 17, 30, height - 30));
-    label.setAttribute("text-anchor", "middle");
+    label.setAttribute("x", labelPlacement.x);
+    label.setAttribute("y", labelPlacement.y);
+    label.setAttribute("text-anchor", labelPlacement.anchor);
     label.setAttribute("class", "node-label");
     label.textContent = node.label;
     group.appendChild(label);
@@ -3805,9 +4106,9 @@ function renderNetworkTable(edges, pubs) {
   const people = peopleById();
   const pubById = new Map(pubs.map((pub) => [pub.id, pub]));
   const rows = edges.slice(0, 25).map((edge) => [
-    `${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`,
+    escapeHtml(`${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`),
     edge.count,
-    edge.pubIds.slice(0, 4).map((id) => pubById.get(id)?.title).filter(Boolean).join("; "),
+    escapeHtml(edge.pubIds.slice(0, 4).map((id) => pubById.get(id)?.title).filter(Boolean).join("; ")),
   ]);
   els.networkTableWrap.innerHTML = `<table id="network-table"></table>`;
   setTable(document.getElementById("network-table"), ["Pair", "Shared pubs", "Examples"], rows, [false, true, false]);
@@ -3816,9 +4117,9 @@ function renderNetworkTable(edges, pubs) {
 function renderTeachingNetworkTable(edges) {
   const people = peopleById();
   const rows = edges.slice(0, 25).map((edge) => [
-    `${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`,
+    escapeHtml(`${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`),
     edge.count,
-    (edge.courseTitles || []).slice(0, 5).join("; "),
+    escapeHtml((edge.courseTitles || []).slice(0, 5).join("; ")),
   ]);
   if (!rows.length) {
     els.networkTableWrap.innerHTML = `<div class="staff-empty">No shared teaching-course ties for the current focus.</div>`;

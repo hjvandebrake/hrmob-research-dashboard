@@ -3782,6 +3782,26 @@
     "doi": "10.1016/j.shaw.2021.12.936"
   },
   {
+    "id": "doi:10.1108/scm-06-2022-0243",
+    "year": 2022,
+    "title": "Improving cross-functional teams’ effectiveness during supply chain disruptions: the importance of information scouting and internal integration",
+    "journal": "SUPPLY CHAIN MANAGEMENT-AN INTERNATIONAL JOURNAL",
+    "aip": 90.533,
+    "topicFamilies": [
+      "teams and groups",
+      "crisis and resilience"
+    ],
+    "matchedPeople": [
+      "TDV"
+    ],
+    "authors": [
+      "Mitchell J. van den Adel",
+      "Thomas A. de Vries",
+      "Dirk Pieter van Donk"
+    ],
+    "doi": "10.1108/scm-06-2022-0243"
+  },
+  {
     "id": "rug:a79e39a3caa6ad80",
     "year": 2022,
     "title": "The effect of moral appeals on influenza vaccination uptake and support for a vaccination mandate among health care workers",
@@ -4885,6 +4905,27 @@
     "doi": "10.1093/scan/nsab074"
   },
   {
+    "id": "doi:10.1108/scm-03-2021-0136",
+    "year": 2021,
+    "title": "Resilience in interorganizational networks: dealing with day-to-day disruptions in critical infrastructures",
+    "journal": "SUPPLY CHAIN MANAGEMENT-AN INTERNATIONAL JOURNAL",
+    "aip": 90.533,
+    "topicFamilies": [
+      "negotiation and bargaining",
+      "social networks",
+      "crisis and resilience"
+    ],
+    "matchedPeople": [
+      "TDV"
+    ],
+    "authors": [
+      "Mitchell J. van den Adel",
+      "Thomas A. de Vries",
+      "Dirk Pieter van Donk"
+    ],
+    "doi": "10.1108/scm-03-2021-0136"
+  },
+  {
     "id": "doi:10.1002/smi.3041",
     "year": 2021,
     "title": "Drammatic breaks: Break recovery experiences as mediators between job demands and affect in the afternoon and evening",
@@ -5812,6 +5853,28 @@
     "doi": "10.3389/fpsyg.2021.682479"
   },
   {
+    "id": "doi:10.3389/fpsyg.2021.711981",
+    "year": 2021,
+    "title": "Team Coping: Cross-Level Influence of Team Member Coping Activities on Individual Burnout",
+    "journal": "Frontiers in Psychology",
+    "aip": 78.713,
+    "topicFamilies": [
+      "teams and groups",
+      "power and hierarchy",
+      "stress and strain",
+      "crisis and resilience"
+    ],
+    "matchedPeople": [
+      "TDV"
+    ],
+    "authors": [
+      "W. Kamphuis",
+      "Roos Delahaij",
+      "Thomas A. de Vries"
+    ],
+    "doi": "10.3389/fpsyg.2021.711981"
+  },
+  {
     "id": "doi:10.3389/fpsyg.2021.738120",
     "year": 2021,
     "title": "Relating Cultural Distance to Self-Other Agreement of Leader–Observer Dyads: The Role of Hierarchical Position",
@@ -5835,9 +5898,9 @@
     "doi": "10.3389/fpsyg.2021.738120"
   },
   {
-    "id": "doi:10.1080/1359432x.2021.1872544",
+    "id": "rug:5255e7361428d4f5",
     "year": 2021,
-    "title": "Ambidextrous leadership: opening and closing leader behaviours to facilitate idea generation, idea promotion and idea realization",
+    "title": "Ambidextrous leadership: Opening and closing leader behaviours to facilitate idea generation, idea promotion and idea realization",
     "journal": "European Journal of Work and Organizational Psychology",
     "aip": 90.784,
     "topicFamilies": [
@@ -5849,9 +5912,9 @@
       "JMA"
     ],
     "authors": [
-      "Jesús Mascareño",
-      "Eric F. Rietzschel",
-      "Barbara Wisse"
+      "Mascareño Apodaca, J.",
+      "Rietzschel, E.",
+      "Wisse, B."
     ],
     "doi": "10.1080/1359432x.2021.1872544"
   },
@@ -6446,9 +6509,9 @@
     "doi": "10.1111/gwao.12456"
   },
   {
-    "id": "doi:10.3389/fpsyg.2020.02169",
+    "id": "rug:ad723a228032c684",
     "year": 2020,
-    "title": "The Link Between Employees’ Sense of Vitality and Proactivity: Investigating the Moderating Role of Personal Fear of Invalidity",
+    "title": "The Link Between Employees' Sense of Vitality and Proactivity: Investigating the Moderating Role of Personal Fear of Invalidity",
     "journal": "Frontiers in Psychology",
     "aip": 78.713,
     "topicFamilies": [
@@ -6458,10 +6521,10 @@
       "JMA"
     ],
     "authors": [
-      "Burkhard Wörtler",
-      "Nico W. Van Yperen",
-      "Jesús Mascareño",
-      "Dick P. H. Barelds"
+      "Wörtler, B.",
+      "Van Yperen, N. W.",
+      "Mascareno, J.",
+      "Barelds, D. P. H."
     ],
     "doi": "10.3389/fpsyg.2020.02169"
   },
@@ -6597,9 +6660,9 @@
     "doi": "10.1016/j.copsyc.2019.07.019"
   },
   {
-    "id": "doi:10.1111/caim.12390",
+    "id": "rug:7cca8e2b003ab9e5",
     "year": 2020,
-    "title": "Leader‐Member Exchange (LMX) and innovation: A test of competing hypotheses",
+    "title": "Leader-Member Exchange (LMX) and Innovation: A Test of Competing Hypotheses",
     "journal": "Creativity and Innovation Management",
     "aip": 72.068,
     "topicFamilies": [
@@ -6611,14 +6674,14 @@
       "JMA"
     ],
     "authors": [
-      "Jesús Mascareño",
-      "Eric F. Rietzschel",
-      "Barbara Wisse"
+      "Mascareno, J.",
+      "Rietzschel, E.",
+      "Wisse, B."
     ],
     "doi": "10.1111/caim.12390"
   },
   {
-    "id": "doi:10.1111/caim.12341",
+    "id": "rug:1b63f896561dc365",
     "year": 2020,
     "title": "Envisioning innovation: Does visionary leadership engender team innovative performance through goal alignment?",
     "journal": "Creativity and Innovation Management",
@@ -6634,9 +6697,9 @@
       "JMA"
     ],
     "authors": [
-      "Jesús Mascareño",
-      "Eric F. Rietzschel",
-      "Barbara Wisse"
+      "Mascareño, J.",
+      "Rietzschel, E.",
+      "Wisse, B."
     ],
     "doi": "10.1111/caim.12341"
   },
@@ -6785,7 +6848,7 @@
       "Jordan, J.",
       "Fennis, B. M."
     ],
-    "doi": ""
+    "doi": "10.1027/1864-9335/a000395"
   },
   {
     "id": "doi:10.1126/sciadv.aau7296",
@@ -7809,6 +7872,27 @@
     "doi": "10.1080/1359432x.2018.1540467"
   },
   {
+    "id": "openalex:W3162897082",
+    "year": 2018,
+    "title": "The Evil Eye: Eye Gaze and Competitiveness in Social Decision Making",
+    "journal": "EUROPEAN JOURNAL OF SOCIAL PSYCHOLOGY",
+    "aip": 90.98,
+    "topicFamilies": [
+      "decision making"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Mauro Giacomantonio",
+      "Jennifer Jordan",
+      "Francesca Federico",
+      "Martijn J. van den Assem",
+      "Dennie van Dolder"
+    ],
+    "doi": "10.1002/ejsp.2336"
+  },
+  {
     "id": "rug:d99670b279dbd00b",
     "year": 2018,
     "title": "Brexit and the relevance of regional personality traits: more psychological Openness could have swung the regional vote",
@@ -8461,6 +8545,104 @@
     "doi": "10.1093/scan/nsw045"
   },
   {
+    "id": "doi:10.1038/sdata.2016.82",
+    "year": 2016,
+    "title": "Data from a pre-publication independent replication initiative examining ten moral judgement effects",
+    "journal": "Scientific Data",
+    "aip": 96.797,
+    "topicFamilies": [
+      "ethics and morality"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Warren Tierney",
+      "Martin Schweinsberg",
+      "Jennifer Jordan",
+      "Deanna M. Kennedy",
+      "Israr Qureshi",
+      "S. Amy Sommer",
+      "Nico Thornley",
+      "Nikhil Madan",
+      "Michelangelo Vianello",
+      "Eli Awtrey",
+      "Luke Zhu",
+      "Daniel Diermeier",
+      "Justin E. Heinze",
+      "Malavika Srinivasan",
+      "David Tannenbaum",
+      "Eliza Bivolaru",
+      "Jason Dana",
+      "Clintin P. Davis‐Stober",
+      "Christilene du Plessis",
+      "Quentin F. Gronau",
+      "Andrew Hafenbrack",
+      "Eko Yi Liao",
+      "Alexander Ly",
+      "Maarten Marsman",
+      "Toshio Murase",
+      "Michael Schaerer",
+      "Christina M. Tworek",
+      "Eric‐Jan Wagenmakers",
+      "Lynn Wong",
+      "Tabitha Anderson",
+      "Christopher W. Bauman",
+      "Wendy L. Bedwell",
+      "Victoria L. Brescoll",
+      "Andrew Canavan",
+      "Jesse Chandler",
+      "Erik W. Cheries",
+      "Sapna Cheryan",
+      "Felix Cheung",
+      "Andrei Cimpian",
+      "Mark A. Clark",
+      "Diana Cordon",
+      "Fiery Cushman",
+      "Peter H. Ditto",
+      "Alice Amell",
+      "Sarah E. Frick",
+      "Monica Gamez-Djokic",
+      "Rebecca Hofstein Grady",
+      "Jesse Graham",
+      "Jun Gu",
+      "Adam Hahn",
+      "Brittany E. Hanson",
+      "Nicole Hartwich",
+      "Kristie Hein",
+      "Yoel Inbar",
+      "Lily J. Jiang",
+      "Tehlyr Kellogg",
+      "Nicole Legate",
+      "Timo P. Luoma",
+      "Heidi Maibeucher",
+      "Peter Meindl",
+      "Jennifer Miles",
+      "Alexandra Mislin",
+      "Daniel C. Molden",
+      "Matt Motyl",
+      "George Newman",
+      "Hoai Huong Ngo",
+      "Harvey Packham",
+      "P. Scott Ramsay",
+      "Jennifer L. Ray",
+      "Aaron M. Sackett",
+      "Anne-Laure Sellier",
+      "Tatiana Sokolova",
+      "Walter J. Sowden",
+      "Daniel Storage",
+      "Xiaomin Sun",
+      "Jay J. Van Bavel",
+      "Anthony N. Washburn",
+      "Cong Wei",
+      "Erik Wetter",
+      "Carlos T. Wilson",
+      "Sophie-Charlotte Darroux",
+      "Eric Luis Uhlmann"
+    ],
+    "doi": "10.1038/sdata.2016.82"
+  },
+  {
     "id": "doi:10.16993/sjwop.13",
     "year": 2016,
     "title": "Recovery during Lunch Breaks: Testing Long-Term Relations with Energy Levels at Work",
@@ -8775,58 +8957,90 @@
       "JJ"
     ],
     "authors": [
-      "Schweinsberg, M.",
-      "Madan, N.",
-      "Vianello, M.",
-      "Sommer, S. A.",
-      "Jordan, J.",
-      "Tierney, W.",
-      "Awtrey, E.",
-      "Zhu, L. L.",
-      "Diermeier, D.",
-      "Heinze, J. E.",
-      "Srinivasan, M.",
-      "Tannenbaum, D.",
-      "Bivolaru, E.",
-      "Dana, J.",
-      "Davis-Stober, C. P.",
-      "du Plessis, C.",
-      "Gronau, Q. F.",
-      "Hafenbrack, A. C.",
-      "Liao, E. Y.",
-      "Ly, A.",
-      "Marsman, M.",
-      "Murase, T.",
-      "Qureshi, I.",
-      "Schaerer, M.",
-      "Thornley, N.",
-      "Tworek, C. M.",
-      "Wagenmakers, E.",
-      "Wong, L.",
-      "Anderson, T.",
-      "Bauman, C. W.",
-      "Bedwell, W. L.",
-      "Brescoll, V.",
-      "Canavan, A.",
-      "Chandler, J. J.",
-      "Cheries, E.",
-      "Cheryan, S.",
-      "Cheung, F.",
-      "Cimpian, A.",
-      "Clark, M. A.",
-      "Cordon, D.",
-      "Cushman, F.",
-      "Ditto, P. H.",
-      "Donahue, T.",
-      "Frick, S. E.",
-      "Gamez-Djokic, M.",
-      "Grady, R. H.",
-      "Graham, J.",
-      "Gu, J.",
-      "Hahn, A.",
-      "Hanson, B. E."
+      "Martin Schweinsberg",
+      "Nikhil Madan",
+      "Michelangelo Vianello",
+      "S. Amy Sommer",
+      "Jennifer Jordan",
+      "Warren Tierney",
+      "Eli Awtrey",
+      "Luke Zhu",
+      "Daniel Diermeier",
+      "Justin E. Heinze",
+      "Malavika Srinivasan",
+      "David Tannenbaum",
+      "Eliza Bivolaru",
+      "Jason Dana",
+      "Clintin P. Davis‐Stober",
+      "Christilene du Plessis",
+      "Quentin F. Gronau",
+      "Andrew Hafenbrack",
+      "Eko Yi Liao",
+      "Alexander Ly",
+      "Maarten Marsman",
+      "Toshio Murase",
+      "Israr Qureshi",
+      "Michael Schaerer",
+      "Nico Thornley",
+      "Christina M. Tworek",
+      "Eric‐Jan Wagenmakers",
+      "Lynn Wong",
+      "Tabitha Anderson",
+      "Christopher W. Bauman",
+      "Wendy L. Bedwell",
+      "Victoria L. Brescoll",
+      "Andrew Canavan",
+      "Jesse Chandler",
+      "Erik W. Cheries",
+      "Sapna Cheryan",
+      "Felix Cheung",
+      "Andrei Cimpian",
+      "Mark A. Clark",
+      "Diana Cordon",
+      "Fiery Cushman",
+      "Peter H. Ditto",
+      "Thomas J. Donahue",
+      "Sarah E. Frick",
+      "Monica Gamez-Djokic",
+      "Rebecca Hofstein Grady",
+      "Jesse Graham",
+      "Jun Gu",
+      "Adam Hahn",
+      "Brittany E. Hanson",
+      "Nicole Hartwich",
+      "Kristie Hein",
+      "Yoel Inbar",
+      "Lily J. Jiang",
+      "Tehlyr Kellogg",
+      "Deanna M. Kennedy",
+      "Nicole Legate",
+      "Timo P. Luoma",
+      "Heidi Maibuecher",
+      "Peter Meindl",
+      "Jennifer Miles",
+      "Alexandra Mislin",
+      "Daniel C. Molden",
+      "Matt Motyl",
+      "George Newman",
+      "Hoai Huong Ngo",
+      "Harvey Packham",
+      "P. Scott Ramsay",
+      "Jennifer L. Ray",
+      "Aaron M. Sackett",
+      "Anne-Laure Sellier",
+      "Tatiana Sokolova",
+      "Walter J. Sowden",
+      "Daniel Storage",
+      "Xiaomin Sun",
+      "Jay J. Van Bavel",
+      "Anthony N. Washburn",
+      "Cong Wei",
+      "Erik Wetter",
+      "Carlos T. Wilson",
+      "Sophie-Charlotte Darroux",
+      "Eric Luis Uhlmann"
     ],
-    "doi": ""
+    "doi": "10.1016/j.jesp.2015.10.001"
   },
   {
     "id": "doi:10.1111/jan.12906",
@@ -9656,6 +9870,26 @@
     "doi": "10.1007/s10726-014-9426-2"
   },
   {
+    "id": "doi:10.3389/fpsyg.2015.01878",
+    "year": 2015,
+    "title": "The Moral Self-Image Scale: Measuring and Understanding the Malleability of the Moral Self",
+    "journal": "Frontiers in Psychology",
+    "aip": 78.713,
+    "topicFamilies": [
+      "ethics and morality",
+      "identity and belonging"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan",
+      "Marijke C. Leliveld",
+      "Ann E. Tenbrunsel"
+    ],
+    "doi": "10.3389/fpsyg.2015.01878"
+  },
+  {
     "id": "doi:10.3389/fpsyg.2015.01460",
     "year": 2015,
     "title": "Social and relational identification as determinants of care workers’ motivation and well-being",
@@ -9758,6 +9992,27 @@
       "Cohen, T. R."
     ],
     "doi": "10.1002/ejsp.2101"
+  },
+  {
+    "id": "doi:10.1016/j.copsyc.2015.03.029",
+    "year": 2015,
+    "title": "Green consumerism: moral motivations to a sustainable future",
+    "journal": "Current Opinion in Psychology",
+    "aip": 95.855,
+    "topicFamilies": [
+      "ethics and morality",
+      "motivation and goals",
+      "sustainability and csr"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Sonya Sachdeva",
+      "Jennifer Jordan",
+      "Nina Mažar"
+    ],
+    "doi": "10.1016/j.copsyc.2015.03.029"
   },
   {
     "id": "doi:10.1111/bjop.12106",
@@ -10092,6 +10347,24 @@
       "Filip Boen"
     ],
     "doi": "10.1016/j.leaqua.2014.05.002"
+  },
+  {
+    "id": "doi:10.1016/j.jesp.2014.07.009",
+    "year": 2014,
+    "title": "When the motivational consequences of ego depletion collide: Conservation dominates over reward-seeking",
+    "journal": "JOURNAL OF EXPERIMENTAL SOCIAL PSYCHOLOGY",
+    "aip": 94.22,
+    "topicFamilies": [],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Mauro Giacomantonio",
+      "Jennifer Jordan",
+      "Bob M. Fennis",
+      "Angelo Panno"
+    ],
+    "doi": "10.1016/j.jesp.2014.07.009"
   },
   {
     "id": "doi:10.1080/17508975.2014.959461",
@@ -10536,7 +10809,7 @@
     "authors": [
       "Jennifer Jordan",
       "Michael E. Brown",
-      "Linda K. Treviño",
+      "Linda Klebe Treviño",
       "Sydney Finkelstein"
     ],
     "doi": "10.1177/0149206311398136"
@@ -11375,6 +11648,26 @@
     "doi": "10.1111/j.1467-7687.2012.01176.x"
   },
   {
+    "id": "doi:10.5840/beq201222442",
+    "year": 2012,
+    "title": "The Strategic Samaritan: How Effectiveness and Proximity Affect Corporate Responses to External Crises",
+    "journal": "BUSINESS ETHICS QUARTERLY",
+    "aip": 91.778,
+    "topicFamilies": [
+      "ethics and morality",
+      "emotions and affect"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan",
+      "Daniel Diermeier",
+      "Adam D. Galinsky"
+    ],
+    "doi": "10.5840/beq201222442"
+  },
+  {
     "id": "doi:10.1111/j.1464-0597.2012.00484.x",
     "year": 2012,
     "title": "Reciprocal Expertise Affirmation and Shared Expertise Perceptions in Work Teams: Their Implications for Coordinated Action and Team Performance",
@@ -11938,6 +12231,44 @@
     "doi": "10.1080/1359432x.2010.485736"
   },
   {
+    "id": "doi:10.1177/0001839212441928",
+    "year": 2011,
+    "title": "Something to Lose and Nothing to Gain",
+    "journal": "ADMINISTRATIVE SCIENCE QUARTERLY",
+    "aip": 99.375,
+    "topicFamilies": [],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan",
+      "Niro Sivanathan",
+      "Adam D. Galinsky"
+    ],
+    "doi": "10.1177/0001839212441928"
+  },
+  {
+    "id": "openalex:W2541739613",
+    "year": 2011,
+    "title": "Moral Compensation and the Environment: Affecting Individuals’ Moral Intentions Through How They See Themselves As Moral",
+    "journal": "ACR North American Advances",
+    "aip": null,
+    "topicFamilies": [
+      "ethics and morality",
+      "emotions and affect"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan",
+      "Francesca Gino",
+      "Ann E. Tenbrunsel",
+      "Marijke C. Leliveld"
+    ],
+    "doi": ""
+  },
+  {
     "id": "doi:10.1080/02678373.2010.493385",
     "year": 2010,
     "title": "Effects of vacation from work on health and well-being: Lots of fun, quickly gone",
@@ -12297,6 +12628,23 @@
       "Rob M. A. Nelissen"
     ],
     "doi": "10.1007/s10551-011-0795-z"
+  },
+  {
+    "id": "doi:10.1111/j.1559-1816.2009.00580.x",
+    "year": 2010,
+    "title": "Salary and Decision Making: Relationship Between Pay and Focus on Financial Profitability and Prosociality in an Organizational Context",
+    "journal": "JOURNAL OF APPLIED SOCIAL PSYCHOLOGY",
+    "aip": 77.218,
+    "topicFamilies": [
+      "decision making"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan"
+    ],
+    "doi": "10.1111/j.1559-1816.2009.00580.x"
   },
   {
     "id": "doi:10.1037/a0022133",
@@ -13340,6 +13688,23 @@
     "doi": "10.1016/j.jesp.2008.06.007"
   },
   {
+    "id": "doi:10.1007/s10551-008-9706-3",
+    "year": 2008,
+    "title": "A Social Cognition Framework for Examining Moral Awareness in Managers and Academics",
+    "journal": "JOURNAL OF BUSINESS ETHICS",
+    "aip": 91.476,
+    "topicFamilies": [
+      "ethics and morality"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan"
+    ],
+    "doi": "10.1007/s10551-008-9706-3"
+  },
+  {
     "id": "doi:10.1016/j.ijhcs.2008.11.005",
     "year": 2008,
     "title": "Effects of time pressure and communication environment on team processes and outcomes in dyadic planning",
@@ -14104,6 +14469,26 @@
     "doi": "10.1016/j.obhdp.2005.11.004"
   },
   {
+    "id": "doi:10.2202/1940-1639.1242",
+    "year": 2006,
+    "title": "The Effect of Moral Orientation Variables in Counseling College Students",
+    "journal": "Journal of College and Character",
+    "aip": null,
+    "topicFamilies": [
+      "ethics and morality"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan",
+      "Donald Martin",
+      "Magy Martin",
+      "Suzanne Semivan"
+    ],
+    "doi": "10.2202/1940-1639.1242"
+  },
+  {
     "id": "doi:10.1037/0022-3514.91.1.124",
     "year": 2006,
     "title": "Supplication and appeasement in conflict and negotiation: The interpersonal effects of disappointment, worry, guilt, and regret.",
@@ -14456,6 +14841,23 @@
       "Aad Oosterhof"
     ],
     "doi": "10.5465/amj.2006.22798169"
+  },
+  {
+    "id": "doi:10.1177/0146167204271586",
+    "year": 2005,
+    "title": "Positive Affectivity and Lifestyle in Adulthood: Do You Do What You Feel?",
+    "journal": "PERSONALITY AND SOCIAL PSYCHOLOGY BULLETIN",
+    "aip": 94.249,
+    "topicFamilies": [],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Ute Kunzmann",
+      "Antje Stange",
+      "Jennifer Jordan"
+    ],
+    "doi": "10.1177/0146167204271586"
   },
   {
     "id": "doi:10.1111/j.1740-8784.2005.00023.x",
@@ -15278,6 +15680,46 @@
       "Carsten K. W. De Dreu"
     ],
     "doi": "10.1002/ejsp.218"
+  },
+  {
+    "id": "doi:10.1037/004255",
+    "year": 2004,
+    "title": "Fools Rush in Where Wise Men Fear to Tread",
+    "journal": "Contemporary Psychology",
+    "aip": null,
+    "topicFamilies": [
+      "emotions and affect",
+      "gender and leadership"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan"
+    ],
+    "doi": "10.1037/004255"
+  },
+  {
+    "id": "doi:10.1016/j.brat.2004.07.004",
+    "year": 2004,
+    "title": "Memory and interpretation of visual representations of threat in socially anxious and nonanxious individuals",
+    "journal": "BEHAVIOUR RESEARCH AND THERAPY",
+    "aip": 92.844,
+    "topicFamilies": [
+      "stress and strain",
+      "diversity and inclusion",
+      "crisis and resilience"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Amy Wenzel",
+      "Nicholas Finstrom",
+      "Jennifer Jordan",
+      "Jennifer R. Brendle"
+    ],
+    "doi": "10.1016/j.brat.2004.07.004"
   },
   {
     "id": "doi:10.2307/20159587",
@@ -16183,6 +16625,24 @@
     "doi": "10.1002/(sici)1099-0992(200003/04)30:2<255::aid-ejsp991>3.0.co;2-7"
   },
   {
+    "id": "doi:10.1111/0045-3609.00082",
+    "year": 2000,
+    "title": "The Balance Between Employee Privacy And Employer Interests",
+    "journal": "BUSINESS AND SOCIETY REVIEW",
+    "aip": 41.438,
+    "topicFamilies": [],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Kenneth A. Kovach",
+      "Jennifer Jordan",
+      "Karens Tansey",
+      "Eve Framiñan"
+    ],
+    "doi": "10.1111/0045-3609.00082"
+  },
+  {
     "id": "doi:10.1177/0146167299025003007",
     "year": 1999,
     "title": "On the Seizing and Freezing of Negotiator Inferences: Need for Cognitive Closure Moderates the Use of Heuristics in Negotiation",
@@ -16845,5 +17305,22 @@
       "Beverly Wimer"
     ],
     "doi": "10.1123/jsep.12.1.48"
+  },
+  {
+    "id": "doi:10.2307/464063",
+    "year": 1988,
+    "title": "Feminist Fantasies: Zora Neale Hurston's Their Eyes Were Watching God",
+    "journal": "TULSA STUDIES IN WOMENS LITERATURE",
+    "aip": 29.463,
+    "topicFamilies": [
+      "gender and leadership"
+    ],
+    "matchedPeople": [
+      "JJ"
+    ],
+    "authors": [
+      "Jennifer Jordan"
+    ],
+    "doi": "10.2307/464063"
   }
 ]

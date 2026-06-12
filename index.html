@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260610-2032">
+  <link rel="stylesheet" href="styles.css?v=20260612-1124">
 </head>
 <body>
   <nav class="nav">
@@ -27,12 +27,11 @@
         <button class="nav-tab" data-tab="resources">Resources</button>
         <button class="nav-tab contact-tab" data-tab="contact">Contact</button>
       </div>
-      <label class="switch">
-        <input id="recent-toggle" type="checkbox">
-        <span class="switch-copy">
-          <span>Last 5 years</span>
-        </span>
-      </label>
+      <div id="publication-window-toggle" class="metric-toggle window-toggle" aria-label="Publication window">
+        <button type="button" data-window-mode="recent" aria-pressed="false">Last 5</button>
+        <button class="on" type="button" data-window-mode="last10" aria-pressed="true">Last 10</button>
+        <button type="button" data-window-mode="all" aria-pressed="false">All</button>
+      </div>
       <label class="switch" title="Adds affiliated researchers to counts, tables, metrics, and network views">
         <input id="fte-toggle" type="checkbox">
         <span class="switch-copy">
@@ -53,6 +52,7 @@
   <main>
     <section id="view-overview" class="sec">
       <div class="wrap">
+        <p class="view-context overview-view-context" data-view-context></p>
         <div id="metrics" class="metric-grid"></div>
         <div class="overview-grid">
           <section class="overview-panel">
@@ -267,8 +267,16 @@
                   <option value="all">All</option>
                   <option value="gte90">AIP &ge; 90</option>
                   <option value="gte95">AIP &ge; 95</option>
+                  <option value="noaip">No AIP / not ranked</option>
                 </select>
               </label>
+              <label class="select-box">
+                <span>Person</span>
+                <select id="person-filter">
+                  <option value="">All people</option>
+                </select>
+              </label>
+              <button id="publication-download-csv" class="section-link table-download" type="button">Download CSV</button>
             </div>
             <div class="table-wrap">
               <table id="publication-table"></table>
@@ -382,7 +390,7 @@
             <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Show all</button>
           </div>
         </div>
-        <p id="network-selection-note" class="network-selection-note">Click a department member in the network to focus.</p>
+        <div id="network-selection-note" class="network-selection-note">Click a department member in the network to focus.</div>
         <div class="network-shell">
           <svg id="network-svg" role="img" aria-label="Collaboration network"></svg>
           <div id="network-empty" class="empty" hidden>No coauthorship edges for the current filters.</div>
@@ -392,7 +400,7 @@
           <span><i class="legend-count"></i> Number = publications</span>
           <span><i class="legend-line"></i> Line thickness = shared publications</span>
           <span><i class="legend-faculty"></i> Other FEB departments</span>
-          <span><i class="legend-external"></i> Faint outer ties = outside coauthors, capped at 10 per publication</span>
+          <span><i class="legend-external"></i> Outer dots = outside coauthors; labels shown only for strongest repeated ties</span>
         </div>
         <div id="network-table-wrap" class="table-wrap compact-table"></div>
         <section class="external-partner-panel">
@@ -484,6 +492,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260610-2032"></script>
+  <script src="app.js?v=20260612-1124"></script>
 </body>
 </html>
