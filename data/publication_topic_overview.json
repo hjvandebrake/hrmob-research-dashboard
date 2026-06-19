@@ -355,6 +355,26 @@
     "doi": "10.1002/jocb.70097"
   },
   {
+    "id": "doi:10.1002/casp.70286",
+    "year": 2026,
+    "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
+    "journal": "JOURNAL OF COMMUNITY & APPLIED SOCIAL PSYCHOLOGY",
+    "aip": 74.152,
+    "topicFamilies": [
+      "identity and belonging"
+    ],
+    "matchedPeople": [
+      "MR"
+    ],
+    "authors": [
+      "Kate A. B. Western",
+      "Tegan Cruwys",
+      "Olivia Evans",
+      "Michelle K. Ryan"
+    ],
+    "doi": "10.1002/casp.70286"
+  },
+  {
     "id": "rug:ac389c0dfe10d26a",
     "year": 2026,
     "title": "Give Me a Break: Insights From Vacation Research for Football Recovery",
@@ -561,7 +581,7 @@
     "doi": "10.1177/09593535251344621"
   },
   {
-    "id": "doi:10.1016/j.chbr.2026.101054",
+    "id": "rug:790441dfb9dd2c97",
     "year": 2026,
     "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
     "journal": "Computers in Human Behavior Reports",
@@ -575,10 +595,10 @@
       "JMA"
     ],
     "authors": [
-      "Jesús Mascareño",
-      "Burkhard Wörtler",
-      "Aleksandra Przegalinska",
-      "Leon Ciechanowskie"
+      "Mascareño, J.",
+      "Wörtler, B.",
+      "ska, A.",
+      "Ciechanowskie, L."
     ],
     "doi": "10.1016/j.chbr.2026.101054"
   },

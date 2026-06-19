@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedOn": "2026-06-12",
+    "generatedOn": "2026-06-19",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 757,
-    "cacheHits": 757,
+    "eligiblePublications": 758,
+    "cacheHits": 758,
     "fetched": 0,
-    "partnerCount": 633
+    "partnerCount": 635
   },
   "partners": [
     {
@@ -5672,6 +5672,323 @@
       ]
     },
     {
+      "id": "au:australian national university",
+      "institution": "Australian National University",
+      "country": "AU",
+      "type": "education",
+      "publicationCount": 23,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Alexandra N. Fisher",
+        "Barbara Dávid",
+        "Boris Bizumić",
+        "Brooke Franklin-Paddock",
+        "Craig McGarty",
+        "Diana M. Grace",
+        "Elise Stephenson",
+        "Emina Subašić",
+        "Emmaline A. Monteith",
+        "Gosia Mikołajczak",
+        "Jack Hayes",
+        "John Turner",
+        "Kate A. B. Western",
+        "Katherine J. Reynolds",
+        "Kristine E. Veenstra",
+        "Ligia Oliveria‐Silva",
+        "Lígia Carolina Oliveira-Silva",
+        "Michael J. Platow",
+        "Olivia Evans",
+        "Penélope J. Oakes",
+        "S. Alexander Haslam",
+        "Susan Johnson",
+        "Tegan Cruwys",
+        "Veljko Jovanović"
+      ],
+      "publications": [
+        {
+          "id": "rug:cbb06ae3b7537232",
+          "year": 2026,
+          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1111/pops.70084",
+          "year": 2026,
+          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "rug:86b7df65309bd318",
+          "year": 2026,
+          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Gosia Mikołajczak"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70286",
+          "year": 2026,
+          "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys",
+            "Olivia Evans"
+          ]
+        },
+        {
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "rug:fd3cdae1acace359",
+          "year": 2025,
+          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Brooke Franklin-Paddock",
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "rug:455da26bb47411be",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
+          ]
+        },
+        {
+          "id": "rug:28f7eafbd6a7e3e4",
+          "year": 2025,
+          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher"
+          ]
+        },
+        {
+          "id": "doi:10.1177/13563890241284626",
+          "year": 2024,
+          "title": "A framework for evaluating women’s leadership programmes",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Elise Stephenson",
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher",
+            "Jack Hayes"
+          ]
+        },
+        {
+          "id": "doi:10.1080/17512786.2024.2441283",
+          "year": 2024,
+          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra N. Fisher",
+            "Gosia Mikołajczak",
+            "Emmaline A. Monteith"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-024-01453-6",
+          "year": 2024,
+          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra N. Fisher",
+            "Gosia Mikołajczak",
+            "Veljko Jovanović"
+          ]
+        },
+        {
+          "id": "doi:10.1177/08862605211073095",
+          "year": 2022,
+          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430218763272",
+          "year": 2018,
+          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2014.05.002",
+          "year": 2014,
+          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
+          "year": 2008,
+          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Diana M. Grace",
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1348/014466606x153080",
+          "year": 2006,
+          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "Boris Bizumić",
+            "Emina Subašić"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.292",
+          "year": 2005,
+          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.293",
+          "year": 2005,
+          "title": "Non‐instrumental voice and extra‐role behaviour",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow",
+            "Diana M. Grace"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
+          "year": 2004,
+          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid",
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1023/b:sers.0000003342.16137.32",
+          "year": 2003,
+          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430201004003002",
+          "year": 2001,
+          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "John Turner",
+            "Katherine J. Reynolds",
+            "Craig McGarty",
+            "Penélope J. Oakes",
+            "Susan Johnson",
+            "Kristine E. Veenstra"
+          ]
+        },
+        {
+          "id": "doi:10.1006/jesp.2000.1473",
+          "year": 2001,
+          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "S. Alexander Haslam"
+          ]
+        }
+      ]
+    },
+    {
       "id": "nl:erasmus university rotterdam",
       "institution": "Erasmus University Rotterdam",
       "country": "NL",
@@ -5968,309 +6285,6 @@
           "authors": [
             "Daan van Knippenberg",
             "Astrid C. Homan"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "au:australian national university",
-      "institution": "Australian National University",
-      "country": "AU",
-      "type": "education",
-      "publicationCount": 22,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Alexandra N. Fisher",
-        "Barbara Dávid",
-        "Boris Bizumić",
-        "Brooke Franklin-Paddock",
-        "Craig McGarty",
-        "Diana M. Grace",
-        "Elise Stephenson",
-        "Emina Subašić",
-        "Emmaline A. Monteith",
-        "Gosia Mikołajczak",
-        "Jack Hayes",
-        "John Turner",
-        "Kate A. B. Western",
-        "Katherine J. Reynolds",
-        "Kristine E. Veenstra",
-        "Ligia Oliveria‐Silva",
-        "Lígia Carolina Oliveira-Silva",
-        "Michael J. Platow",
-        "Penélope J. Oakes",
-        "S. Alexander Haslam",
-        "Susan Johnson",
-        "Tegan Cruwys",
-        "Veljko Jovanović"
-      ],
-      "publications": [
-        {
-          "id": "rug:cbb06ae3b7537232",
-          "year": 2026,
-          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1111/pops.70084",
-          "year": 2026,
-          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "rug:86b7df65309bd318",
-          "year": 2026,
-          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva",
-            "Gosia Mikołajczak"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "rug:fd3cdae1acace359",
-          "year": 2025,
-          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Brooke Franklin-Paddock",
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "rug:455da26bb47411be",
-          "year": 2025,
-          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Ligia Oliveria‐Silva"
-          ]
-        },
-        {
-          "id": "rug:28f7eafbd6a7e3e4",
-          "year": 2025,
-          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher"
-          ]
-        },
-        {
-          "id": "doi:10.1177/13563890241284626",
-          "year": 2024,
-          "title": "A framework for evaluating women’s leadership programmes",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Elise Stephenson",
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher",
-            "Jack Hayes"
-          ]
-        },
-        {
-          "id": "doi:10.1080/17512786.2024.2441283",
-          "year": 2024,
-          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra N. Fisher",
-            "Gosia Mikołajczak",
-            "Emmaline A. Monteith"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-024-01453-6",
-          "year": 2024,
-          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra N. Fisher",
-            "Gosia Mikołajczak",
-            "Veljko Jovanović"
-          ]
-        },
-        {
-          "id": "doi:10.1177/08862605211073095",
-          "year": 2022,
-          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kate A. B. Western",
-            "Tegan Cruwys"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430218763272",
-          "year": 2018,
-          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2014.05.002",
-          "year": 2014,
-          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
-          "year": 2008,
-          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Diana M. Grace",
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1348/014466606x153080",
-          "year": 2006,
-          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "Boris Bizumić",
-            "Emina Subašić"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.292",
-          "year": 2005,
-          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.293",
-          "year": 2005,
-          "title": "Non‐instrumental voice and extra‐role behaviour",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow",
-            "Diana M. Grace"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
-          "year": 2004,
-          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid",
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1023/b:sers.0000003342.16137.32",
-          "year": 2003,
-          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430201004003002",
-          "year": 2001,
-          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "John Turner",
-            "Katherine J. Reynolds",
-            "Craig McGarty",
-            "Penélope J. Oakes",
-            "Susan Johnson",
-            "Kristine E. Veenstra"
-          ]
-        },
-        {
-          "id": "doi:10.1006/jesp.2000.1473",
-          "year": 2001,
-          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "S. Alexander Haslam"
           ]
         }
       ]
@@ -23380,6 +23394,53 @@
       ]
     },
     {
+      "id": "us:massachusetts institute of technology",
+      "institution": "Massachusetts Institute of Technology",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JL",
+        "JMA"
+      ],
+      "authors": [
+        "David G. Rand",
+        "Dhaval Adjodah",
+        "Erez Yoeli",
+        "Leon Ciechanowskie",
+        "Matthew Cashman",
+        "Michael N. Stagnaro"
+      ],
+      "publications": [
+        {
+          "id": "rug:790441dfb9dd2c97",
+          "year": 2026,
+          "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
+          "staffIds": [
+            "JMA"
+          ],
+          "authors": [
+            "Leon Ciechanowskie"
+          ]
+        },
+        {
+          "id": "rug:a7c6031d5c5222f7",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Michael N. Stagnaro",
+            "Matthew Cashman",
+            "Dhaval Adjodah",
+            "Erez Yoeli",
+            "David G. Rand"
+          ]
+        }
+      ]
+    },
+    {
       "id": "my:monash university malaysia",
       "institution": "Monash University Malaysia",
       "country": "MY",
@@ -26137,6 +26198,32 @@
           ],
           "authors": [
             "Edona Berisha Kida"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:abdul latif jameel poverty action lab",
+      "institution": "Abdul Latif Jameel Poverty Action Lab",
+      "country": "US",
+      "type": "facility",
+      "publicationCount": 1,
+      "staffIds": [
+        "JMA"
+      ],
+      "authors": [
+        "Aleksandra Przegalinska"
+      ],
+      "publications": [
+        {
+          "id": "rug:790441dfb9dd2c97",
+          "year": 2026,
+          "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
+          "staffIds": [
+            "JMA"
+          ],
+          "authors": [
+            "Aleksandra Przegalinska"
           ]
         }
       ]
@@ -29382,6 +29469,34 @@
       ]
     },
     {
+      "id": "pl:kozminski university",
+      "institution": "Kozminski University",
+      "country": "PL",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JMA"
+      ],
+      "authors": [
+        "Aleksandra Przegalinska",
+        "Leon Ciechanowskie"
+      ],
+      "publications": [
+        {
+          "id": "rug:790441dfb9dd2c97",
+          "year": 2026,
+          "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
+          "staffIds": [
+            "JMA"
+          ],
+          "authors": [
+            "Aleksandra Przegalinska",
+            "Leon Ciechanowskie"
+          ]
+        }
+      ]
+    },
+    {
       "id": "it:laboratori guglielmo marconi italy",
       "institution": "Laboratori Guglielmo Marconi (Italy)",
       "country": "IT",
@@ -29837,40 +29952,6 @@
           ],
           "authors": [
             "Simon Piest"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:massachusetts institute of technology",
-      "institution": "Massachusetts Institute of Technology",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "David G. Rand",
-        "Dhaval Adjodah",
-        "Erez Yoeli",
-        "Matthew Cashman",
-        "Michael N. Stagnaro"
-      ],
-      "publications": [
-        {
-          "id": "rug:a7c6031d5c5222f7",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Michael N. Stagnaro",
-            "Matthew Cashman",
-            "Dhaval Adjodah",
-            "Erez Yoeli",
-            "David G. Rand"
           ]
         }
       ]

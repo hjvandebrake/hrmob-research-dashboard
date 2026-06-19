@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-06-12",
+    "generatedOn": "2026-06-19",
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-06-12"
+      "to": "2026-06-19"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-06-12"
+      "to": "2026-06-19"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -1293,6 +1293,52 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1002/casp.70286",
+      "doi": "10.1002/casp.70286",
+      "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
+      "year": 2026,
+      "yearSource": "openalex",
+      "journal": "Journal of Community & Applied Social Psychology",
+      "issns": [
+        "1052-9284",
+        "1099-1298"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W7164376964",
+      "authors": [
+        "Kate A. B. Western",
+        "Tegan Cruwys",
+        "Olivia Evans",
+        "Michelle K. Ryan"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 74.152,
+      "aipJournal": "JOURNAL OF COMMUNITY & APPLIED SOCIAL PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "identity and belonging"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "rug:ac389c0dfe10d26a",
       "doi": "10.1123/ijspp.2025-0533",
       "title": "Give Me a Break: Insights From Vacation Research for Football Recovery",
@@ -1778,25 +1824,23 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1016/j.chbr.2026.101054",
+      "id": "rug:790441dfb9dd2c97",
       "doi": "10.1016/j.chbr.2026.101054",
       "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
       "year": 2026,
-      "yearSource": "crossref-print",
+      "yearSource": "rug-reference",
       "journal": "Computers in Human Behavior Reports",
-      "issns": [
-        "2451-9588"
-      ],
-      "sourceType": "journal",
+      "issns": [],
+      "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W7146986880",
+      "url": "https://research.rug.nl/en/publications/cfa052f1-389b-46e7-9c98-3fd812d778f6",
       "authors": [
-        "Jesús Mascareño",
-        "Burkhard Wörtler",
-        "Aleksandra Przegalinska",
-        "Leon Ciechanowskie"
+        "Mascareño, J.",
+        "Wörtler, B.",
+        "ska, A.",
+        "Ciechanowskie, L."
       ],
       "matchedPeople": [
         "JMA"
@@ -1807,10 +1851,11 @@
       "aip": 89.622,
       "aipJournal": "Computers in Human Behavior Reports",
       "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "University of Groningen staff publication page",
       "evidence": [
+        "RUG staff publication page for Mascareño, J.M. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Mascareño, J.M.",
         "Crossref ORCID matched for Mascareño, J.M."
       ],
@@ -4478,7 +4523,98 @@
         "Niklas K. Steffens",
         "Michelle K. Ryan",
         "Renata Bongiorno",
-        "Alice H. Eagly"
+        "Alice H. Eagly",
+        "Balazs Aczel",
+        "Adeyemi Adetula",
+        "Salvatore M. Aglioti",
+        "Ece Akca",
+        "Emine Akman Direkçi",
+        "Zahra Alizadeh",
+        "Itziar Alonso-Arbiol",
+        "Muhammad Fahizza Amru",
+        "John Andre",
+        "Raquel António",
+        "Uğur Arcagök",
+        "Nwadiogo Chisom Arinze",
+        "Patrícia Arriaga",
+        "Romina Asadollahpour",
+        "Gayane Alberty Asatryan",
+        "Muhammed Sukru Aydin",
+        "Bülent Aykutoğlu",
+        "Parisa Azimisefat",
+        "Soufian Azouaghe",
+        "Sercan Balım",
+        "Gabriel Baník",
+        "Krystian Barzykowski",
+        "Maja Becker",
+        "Nora C. G. Benningstad",
+        "Julia Berenguer",
+        "Monika Bidzan-Wiącek",
+        "Bartosz Błaszczak",
+        "Ricardo Borges Rodrigues",
+        "Islam Borinca",
+        "Leanne Boucher",
+        "Sarah Boukarras",
+        "Mustapha Boulahya",
+        "Olcay Bozkuş-Demir",
+        "Mark J. Brandt",
+        "Fabrice Brodard",
+        "Hilmar Brohmer",
+        "Erin M. Buchanan",
+        "Jacek Buczny",
+        "Mehmet Fatih Bükün",
+        "Moa Bursell",
+        "Andrea Buscemi",
+        "Muhammad Mussaffa Butt",
+        "Angelica Caicedo-Moreno",
+        "Cinzia Calluso",
+        "Selin Metin Camgöz",
+        "Octav Sorin Candel",
+        "Thomas Castelain",
+        "Pablo Castro-Abril",
+        "Müge Cavdan",
+        "Trawin Chaleeraktrakoon",
+        "Abdelilah Charyate",
+        "Jennifer Chavanovanich",
+        "Mohammed Cherradi",
+        "Peilian Chi",
+        "Phatthanakit Chobthamkit",
+        "Shalini Choudhary",
+        "Çağla Çınar",
+        "Heather M. Claypool",
+        "Sharon Coen",
+        "W. Matthew Collins",
+        "Nadia Sarai Corral-Frías",
+        "Cleno Couto",
+        "Mioara Cristea",
+        "Wilson Cyrus-Lai",
+        "Anna Dalla Rosa",
+        "Trac Vu Dang",
+        "Maria Giovanna Devetag",
+        "Bojana M. Dinić",
+        "Terence D. Dores Cruz",
+        "Andrei Dumbravă",
+        "Julia Dykla-Bień",
+        "Clare Ellen Edge",
+        "Sina Eftekhari",
+        "Youssef El Mottaleb",
+        "Christian T. Elbæk",
+        "Cécile Emery",
+        "Simona Epure",
+        "Agustin Espinoza",
+        "Thomas R. Evans",
+        "Zuzanna Farny",
+        "Shameem Fatima",
+        "Mario Muhammad Noer Fauzan",
+        "Katharina Fellnhofer",
+        "Tommaso Feraco",
+        "Angela Fernández Canseco",
+        "Ludovic Ferrand",
+        "Paulo Roberto dos Santos Ferreira",
+        "Silvia Filippi",
+        "Sam Fluit",
+        "Raquel Meister Ko Freitag",
+        "Martha Frias-Armenta"
       ],
       "matchedPeople": [
         "MR"
@@ -7890,7 +8026,7 @@
         "creativity"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -9524,7 +9660,7 @@
         "diversity and inclusion"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -10019,7 +10155,7 @@
       "provisional": true,
       "topicFamilies": [],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -10121,7 +10257,7 @@
         "age and aging"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -12530,7 +12666,7 @@
       "provisional": true,
       "topicFamilies": [],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -12938,7 +13074,7 @@
         "diversity and inclusion"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -12984,7 +13120,7 @@
       "provisional": true,
       "topicFamilies": [],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -15922,7 +16058,7 @@
         "trust and distrust"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -16542,7 +16678,7 @@
         "occupational health"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -19157,7 +19293,7 @@
         "occupational health"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -20263,7 +20399,7 @@
         "creativity"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -20728,7 +20864,7 @@
       "provisional": true,
       "topicFamilies": [],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -26011,7 +26147,7 @@
       "provisional": true,
       "topicFamilies": [],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -28373,7 +28509,7 @@
         "emotions and affect"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -28898,7 +29034,7 @@
         "crisis and resilience"
       ],
       "counted": false,
-      "display": true,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -38633,7 +38769,8 @@
       "authors": [
         "M. Roskes",
         "C.K.W. De Dreu",
-        "Bernard A. Nijstad"
+        "Bernard A. Nijstad",
+        "C.K.W. De Dreu"
       ],
       "matchedPeople": [
         "CDD",
@@ -52925,7 +53062,7 @@
   "summaries": {
     "personCounts": {
       "MA": 9,
-      "MR": 125,
+      "MR": 126,
       "CDD": 245,
       "JDB": 77,
       "BN": 80,
@@ -55538,7 +55675,7 @@
       },
       {
         "journal": "JOURNAL OF COMMUNITY & APPLIED SOCIAL PSYCHOLOGY",
-        "count": 2,
+        "count": 3,
         "aip": 74.152,
         "category": "PSYCHOLOGY, SOCIAL",
         "rankableJournal": true,
@@ -55547,7 +55684,8 @@
         ],
         "years": [
           2021,
-          2025
+          2025,
+          2026
         ]
       },
       {
@@ -56661,8 +56799,8 @@
     "categorySummary": [
       {
         "category": "PSYCHOLOGY, SOCIAL",
-        "count": 246,
-        "meanAip": 81.31
+        "count": 247,
+        "meanAip": 81.28
       },
       {
         "category": "MANAGEMENT",
@@ -57032,7 +57170,7 @@
       },
       {
         "year": 2026,
-        "count": 26
+        "count": 27
       }
     ],
     "edges": [
