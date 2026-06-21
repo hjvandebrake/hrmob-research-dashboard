@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-06-19",
+    "generatedOn": "2026-06-21",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
     "eligiblePublications": 758,
-    "cacheHits": 758,
-    "fetched": 0,
+    "cacheHits": 756,
+    "fetched": 2,
     "partnerCount": 635
   },
   "partners": [
@@ -5719,9 +5719,9 @@
           ]
         },
         {
-          "id": "doi:10.1111/pops.70084",
+          "id": "rug:6bd660442de6d001",
           "year": 2026,
-          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
           "staffIds": [
             "MR"
           ],
@@ -14058,9 +14058,9 @@
           ]
         },
         {
-          "id": "doi:10.1111/pops.70084",
+          "id": "rug:6bd660442de6d001",
           "year": 2026,
-          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
           "staffIds": [
             "MR"
           ],
@@ -19258,9 +19258,9 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1111/pops.70084",
+          "id": "rug:6bd660442de6d001",
           "year": 2026,
-          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
           "staffIds": [
             "MR"
           ],
@@ -21117,9 +21117,9 @@
           ]
         },
         {
-          "id": "rug:688ecda0ed4da419",
+          "id": "doi:10.1037/pspa0000441",
           "year": 2025,
-          "title": "The Strategic Use of Harm-Based Moral Arguments in the Context of Women’s Bodily Autonomy",
+          "title": "The strategic use of harm-based moral arguments in the context of women’s bodily autonomy.",
           "staffIds": [
             "MR"
           ],
@@ -25235,9 +25235,9 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1111/pops.70084",
+          "id": "rug:6bd660442de6d001",
           "year": 2026,
-          "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
           "staffIds": [
             "MR"
           ],

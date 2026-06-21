@@ -29,8 +29,10 @@ const state = {
   selectedStaffId: "",
 };
 
+const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
+
 const els = {};
-const DATA_VERSION = "20260619-1142";
+const DATA_VERSION = "20260621-0833";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -1876,6 +1878,7 @@ function renderStaffGrantFit(personId) {
 }
 
 function grantCallCandidates(call, limit = 4) {
+  if ((call.candidateMode || "") === "none") return [];
   return activePeople()
     .map((person) => ({ person, score: grantFitScore(person.id, call) }))
     .filter((item) => item.score > 0)
@@ -1884,6 +1887,10 @@ function grantCallCandidates(call, limit = 4) {
 }
 
 function grantFitScore(personId, call) {
+  if (GRANT_FIT_EXCLUDED_PEOPLE.has(personId)) return 0;
+  if (Array.isArray(call.includePersonIds) && call.includePersonIds.length && !call.includePersonIds.includes(personId)) return 0;
+  if (Array.isArray(call.excludePersonIds) && call.excludePersonIds.includes(personId)) return 0;
+  if ((call.candidateMode || "") === "none") return 0;
   const profile = grantStaffProfile(personId);
   if (!profile.publications) return 0;
   const stage = normalizeSearchText(call.fitStage || call.stage || "");
@@ -1891,12 +1898,13 @@ function grantFitScore(personId, call) {
   const currentYear = new Date().getFullYear();
   const phdAge = isNumber(profile.phdYear) ? currentYear - profile.phdYear : null;
   const firstPublicationAge = isNumber(profile.firstYear) ? currentYear - profile.firstYear : null;
+  const manualShortlist = Array.isArray(call.includePersonIds) && call.includePersonIds.includes(personId);
   const window = grantEligibilityWindow(call);
-  if (!grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge)) return 0;
+  if (!grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge, manualShortlist)) return 0;
   let score = 0;
-  if ((stage.includes("early") || name.includes("veni")) && (phdAge !== null ? phdAge <= 4 : firstPublicationAge !== null && firstPublicationAge <= 8)) score += 5;
+  if ((stage.includes("early") || name.includes("veni")) && phdAge !== null && phdAge <= 4) score += 5;
   if (name.includes("starting grant") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 4;
-  if ((stage.includes("mid") || name.includes("vidi")) && (phdAge !== null ? phdAge >= 4 && phdAge <= 9 : firstPublicationAge !== null && firstPublicationAge >= 4 && firstPublicationAge <= 16)) score += 5;
+  if ((stage.includes("mid") || name.includes("vidi")) && (manualShortlist || (phdAge !== null && phdAge >= 4 && phdAge <= 9))) score += 5;
   if (name.includes("consolidator") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 5;
   if (name.includes("xs") && (phdAge !== null ? phdAge >= 5 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 3;
   if (stage.includes("senior") && (profile.grants > 0 || profile.phds > 0 || profile.highAip >= 6)) score += 5;
@@ -1907,11 +1915,13 @@ function grantFitScore(personId, call) {
     total + Math.min(1, scorePublicationAgainstBundle(pub, bundle))
   ), 0));
   score += topicScore;
+  if (manualShortlist) score += 8;
   if (/erc|vidi|veni/i.test(call.name) && profile.highAip > 0) score += Math.min(3, profile.highAip / 3);
   return score;
 }
 
-function grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge) {
+function grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge, manualShortlist = false) {
+  if (manualShortlist) return true;
   const role = normalizeSearchText(profile.role || "");
   const callName = normalizeSearchText(typeof call === "string" ? call : call?.name || "");
   const clearlySenior = role.includes("professor") && !role.includes("assistant");
@@ -1980,8 +1990,11 @@ function grantFitReasons(personId, call) {
   const profile = grantStaffProfile(personId);
   const reasons = [];
   const window = grantEligibilityWindow(call);
+  if (call.manualReason && Array.isArray(call.includePersonIds) && call.includePersonIds.includes(personId)) {
+    reasons.push(call.manualReason);
+  }
   if (profile.phdYear) reasons.push(window ? `Assumes PhD ${profile.phdYear}; window ${window.label}` : `Public CV/profile: PhD ${profile.phdYear}`);
-  else if (profile.firstYear) reasons.push(`First counted publication proxy: ${profile.firstYear}`);
+  else if (!window && profile.firstYear) reasons.push(`Weak proxy: first counted publication ${profile.firstYear}`);
   if (profile.highAip) reasons.push(`${profile.highAip} AIP >= 95 publication${profile.highAip === 1 ? "" : "s"}`);
   if (profile.grants) reasons.push(`${profile.grants} recorded grant${profile.grants === 1 ? "" : "s"}`);
   if (profile.phds) reasons.push(`${profile.phds} defended PhD supervision record${profile.phds === 1 ? "" : "s"}`);

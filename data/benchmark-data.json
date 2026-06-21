@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-06-19",
+    "generatedOn": "2026-06-21",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",

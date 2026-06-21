@@ -3,7 +3,7 @@
     "sourceFile": "hrmob-grant-opportunities-2026-2027.xlsx",
     "updatedLabel": "26 March 2026",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "recentCallsChecked": "2026-06-19"
+    "recentCallsChecked": "2026-06-21"
   },
   "opportunities": [
     {
@@ -487,9 +487,16 @@
       "why": "Core mid-career personal grant. Start early because embedding and departmental support need coordination.",
       "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
       "fitStage": "mid",
-      "fitNote": "Potentially relevant for staff within the Vidi post-PhD window; verify PhD date and extensions.",
+      "fitNote": "Department shortlist currently limited to Joost van de Brake and Jeff Lees; verify formal NWO window and any extensions before nomination.",
       "sourceLabel": "NWO Talent Programme",
-      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme"
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme",
+      "includePersonIds": [
+        "JVB",
+        "JL"
+      ],
+      "excludePersonIds": [],
+      "manualReason": "Department shortlist currently limited to Joost van de Brake and Jeff Lees.",
+      "candidateMode": ""
     },
     {
       "name": "NWO Veni SSH",
@@ -504,7 +511,11 @@
       "fitStage": "early",
       "fitNote": "Potentially relevant for early-career staff; verify the three-year post-PhD rule and extensions.",
       "sourceLabel": "NWO Talent Programme",
-      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme"
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": ""
     },
     {
       "name": "NWO SSH Open Competition XS",
@@ -519,7 +530,11 @@
       "fitStage": "established",
       "fitNote": "Potentially relevant for staff at least five years after PhD; verify current call conditions.",
       "sourceLabel": "NWO SSH Open Competition",
-      "sourceUrl": "https://www.nwo.nl/en/researchprogrammes/open-competition-domain-ssh"
+      "sourceUrl": "https://www.nwo.nl/en/researchprogrammes/open-competition-domain-ssh",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": ""
     },
     {
       "name": "MSCA Postdoctoral Fellowship",
@@ -534,7 +549,11 @@
       "fitStage": "supervisor",
       "fitNote": "Relevant for staff who can host a mobile postdoc candidate; candidate mobility rule is decisive.",
       "sourceLabel": "MSCA Postdoctoral Fellowships",
-      "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
+      "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": ""
     },
     {
       "name": "ERC Starting Grant",
@@ -549,22 +568,30 @@
       "fitStage": "early-mid",
       "fitNote": "Potentially relevant for staff in the Starting Grant post-PhD window; verify ERC window and extensions.",
       "sourceLabel": "ERC Starting Grant",
-      "sourceUrl": "https://erc.europa.eu/apply-grant/starting-grant"
+      "sourceUrl": "https://erc.europa.eu/apply-grant/starting-grant",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": ""
     },
     {
-      "name": "ERC Consolidator Grant",
-      "funder": "ERC",
-      "stage": "Mid-Career",
-      "amount": "Up to €2M (+€1M equipment)",
-      "duration": "5 years",
-      "eligibility": "5 to 15 yrs post-PhD (widened from 7 to 12 starting 2027)",
-      "timing": "2027 call expected in the 2026 ERC work programme cycle.",
-      "why": "Large individual grant for consolidating an independent programme and team.",
-      "tips": "Panel SH1 (Economics, finance, management). Must demonstrate strong independent publication record and PhD supervision. The 2027 eligibility widening creates new opportunities for researchers previously caught between Starting and Consolidator windows.",
-      "fitStage": "mid-senior",
-      "fitNote": "Potentially relevant for staff in the Consolidator post-PhD window; verify ERC window and extensions.",
-      "sourceLabel": "ERC Consolidator Grant",
-      "sourceUrl": "https://erc.europa.eu/apply-grant/consolidator-grant"
+      "name": "NWO awards: impact, open science, team science",
+      "funder": "NWO",
+      "stage": "Recognition",
+      "amount": "",
+      "duration": "",
+      "eligibility": "",
+      "timing": "Nomination deadline: 23 June 2026 for the Leo Waaijers Open Science Award and 10 September 2026 for the other awards.",
+      "why": "Useful for recognising strong open science, team science, impact, collaboration, or research-culture contributions rather than funding a new project.",
+      "tips": "",
+      "fitStage": "recognition",
+      "fitNote": "Not a project grant. Treat as an award or recognition lead only when there is clear evidence for the specific contribution.",
+      "sourceLabel": "NWO news",
+      "sourceUrl": "https://www.nwo.nl/en/news/nwo-launches-new-awards-for-impact-open-science-and-team-science",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": "none"
     }
   ],
   "tips": [

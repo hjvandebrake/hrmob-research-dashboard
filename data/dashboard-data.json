@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-06-19",
+    "generatedOn": "2026-06-21",
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-06-19"
+      "to": "2026-06-21"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-06-19"
+      "to": "2026-06-21"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -921,21 +921,18 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1111/pops.70084",
+      "id": "rug:6bd660442de6d001",
       "doi": "10.1111/pops.70084",
-      "title": "Should “sisters” be doing it by themselves? Leadership, allyship, and mobilization for gender equality",
+      "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
       "year": 2026,
-      "yearSource": "crossref-print",
+      "yearSource": "rug-reference",
       "journal": "Political Psychology",
-      "issns": [
-        "0162-895X",
-        "1467-9221"
-      ],
-      "sourceType": "journal",
+      "issns": [],
+      "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W4415621200",
+      "url": "https://research.rug.nl/en/publications/ee4e58e3-7c19-4a86-a783-dcb3c67ac15b",
       "authors": [
         "Emina Subašić",
         "Michelle K. Ryan",
@@ -954,10 +951,11 @@
       "aip": 96.068,
       "aipJournal": "POLITICAL PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "University of Groningen staff publication page",
       "evidence": [
+        "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K.",
         "Crossref author affiliation mentions Groningen for Ryan, M.K."
       ],
@@ -2492,53 +2490,6 @@
       "aipStatus": "reviewed-not-in-aip-source"
     },
     {
-      "id": "rug:688ecda0ed4da419",
-      "doi": "10.1037/pspa0000441",
-      "title": "The Strategic Use of Harm-Based Moral Arguments in the Context of Women’s Bodily Autonomy",
-      "year": 2025,
-      "yearSource": "rug-reference",
-      "journal": "Journal of personality and social psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://research.rug.nl/en/publications/44d8168a-c094-4aa1-b871-aab4e726ce91",
-      "authors": [
-        "Morgenroth, T.",
-        "Ryan, M. K.",
-        "Click, A. S.",
-        "Faber, N. S."
-      ],
-      "matchedPeople": [
-        "MR"
-      ],
-      "sourcePeople": [
-        "MR"
-      ],
-      "aip": 97.976,
-      "aipJournal": "JOURNAL OF PERSONALITY AND SOCIAL PSYCHOLOGY",
-      "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
-      "subjects": [],
-      "source": "University of Groningen staff publication page",
-      "evidence": [
-        "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
-        "Crossref ORCID matched for Ryan, M.K."
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "ethics and morality",
-        "work design",
-        "gender and leadership"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "rug:70bd06a0dcdc6d6f",
       "doi": "10.1111/jscm.12346",
       "title": "Handling Disruption Concurrence: The Importance of Inter- and Intra-Departmental Communication for Critical Infrastructure Resilience",
@@ -2582,6 +2533,55 @@
       "provisional": true,
       "topicFamilies": [
         "crisis and resilience"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1037/pspa0000441",
+      "doi": "10.1037/pspa0000441",
+      "title": "The strategic use of harm-based moral arguments in the context of women’s bodily autonomy.",
+      "year": 2025,
+      "yearSource": "crossref-other",
+      "journal": "Journal of Personality and Social Psychology",
+      "issns": [
+        "0022-3514",
+        "1939-1315"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W4408025806",
+      "authors": [
+        "Thekla Morgenroth",
+        "Michelle K. Ryan",
+        "Abigael S Click",
+        "Nadira S. Faber"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 97.976,
+      "aipJournal": "JOURNAL OF PERSONALITY AND SOCIAL PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Crossref ORCID matched for Ryan, M.K."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "ethics and morality",
+        "work design",
+        "gender and leadership"
       ],
       "counted": true,
       "display": true,
@@ -4523,98 +4523,7 @@
         "Niklas K. Steffens",
         "Michelle K. Ryan",
         "Renata Bongiorno",
-        "Alice H. Eagly",
-        "Balazs Aczel",
-        "Adeyemi Adetula",
-        "Salvatore M. Aglioti",
-        "Ece Akca",
-        "Emine Akman Direkçi",
-        "Zahra Alizadeh",
-        "Itziar Alonso-Arbiol",
-        "Muhammad Fahizza Amru",
-        "John Andre",
-        "Raquel António",
-        "Uğur Arcagök",
-        "Nwadiogo Chisom Arinze",
-        "Patrícia Arriaga",
-        "Romina Asadollahpour",
-        "Gayane Alberty Asatryan",
-        "Muhammed Sukru Aydin",
-        "Bülent Aykutoğlu",
-        "Parisa Azimisefat",
-        "Soufian Azouaghe",
-        "Sercan Balım",
-        "Gabriel Baník",
-        "Krystian Barzykowski",
-        "Maja Becker",
-        "Nora C. G. Benningstad",
-        "Julia Berenguer",
-        "Monika Bidzan-Wiącek",
-        "Bartosz Błaszczak",
-        "Ricardo Borges Rodrigues",
-        "Islam Borinca",
-        "Leanne Boucher",
-        "Sarah Boukarras",
-        "Mustapha Boulahya",
-        "Olcay Bozkuş-Demir",
-        "Mark J. Brandt",
-        "Fabrice Brodard",
-        "Hilmar Brohmer",
-        "Erin M. Buchanan",
-        "Jacek Buczny",
-        "Mehmet Fatih Bükün",
-        "Moa Bursell",
-        "Andrea Buscemi",
-        "Muhammad Mussaffa Butt",
-        "Angelica Caicedo-Moreno",
-        "Cinzia Calluso",
-        "Selin Metin Camgöz",
-        "Octav Sorin Candel",
-        "Thomas Castelain",
-        "Pablo Castro-Abril",
-        "Müge Cavdan",
-        "Trawin Chaleeraktrakoon",
-        "Abdelilah Charyate",
-        "Jennifer Chavanovanich",
-        "Mohammed Cherradi",
-        "Peilian Chi",
-        "Phatthanakit Chobthamkit",
-        "Shalini Choudhary",
-        "Çağla Çınar",
-        "Heather M. Claypool",
-        "Sharon Coen",
-        "W. Matthew Collins",
-        "Nadia Sarai Corral-Frías",
-        "Cleno Couto",
-        "Mioara Cristea",
-        "Wilson Cyrus-Lai",
-        "Anna Dalla Rosa",
-        "Trac Vu Dang",
-        "Maria Giovanna Devetag",
-        "Bojana M. Dinić",
-        "Terence D. Dores Cruz",
-        "Andrei Dumbravă",
-        "Julia Dykla-Bień",
-        "Clare Ellen Edge",
-        "Sina Eftekhari",
-        "Youssef El Mottaleb",
-        "Christian T. Elbæk",
-        "Cécile Emery",
-        "Simona Epure",
-        "Agustin Espinoza",
-        "Thomas R. Evans",
-        "Zuzanna Farny",
-        "Shameem Fatima",
-        "Mario Muhammad Noer Fauzan",
-        "Katharina Fellnhofer",
-        "Tommaso Feraco",
-        "Angela Fernández Canseco",
-        "Ludovic Ferrand",
-        "Paulo Roberto dos Santos Ferreira",
-        "Silvia Filippi",
-        "Sam Fluit",
-        "Raquel Meister Ko Freitag",
-        "Martha Frias-Armenta"
+        "Alice H. Eagly"
       ],
       "matchedPeople": [
         "MR"
@@ -5592,6 +5501,48 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.17605/osf.io/wptcx",
+      "doi": "10.17605/osf.io/wptcx",
+      "title": "Still “A Man’s World”? Gendered Leadership Stereotypes in a Female-Dominated Public Sector",
+      "year": 2024,
+      "yearSource": "openalex",
+      "journal": "Open MIND",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W7165144212",
+      "authors": [
+        "Henrico van Roekel",
+        "Sanne Feenstra",
+        "Janka I. Stoker"
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "leadership",
+        "stereotypes and bias",
+        "gender and leadership"
+      ],
+      "counted": false,
+      "display": true
     },
     {
       "id": "doi:10.1093/occmed/kqae023.0423",
@@ -38769,8 +38720,7 @@
       "authors": [
         "M. Roskes",
         "C.K.W. De Dreu",
-        "Bernard A. Nijstad",
-        "C.K.W. De Dreu"
+        "Bernard A. Nijstad"
       ],
       "matchedPeople": [
         "CDD",
