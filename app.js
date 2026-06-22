@@ -35,7 +35,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260622-collab2";
+const DATA_VERSION = "20260622-collab3";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -43,6 +43,9 @@ const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
 const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "all"]);
 const STAFF_SUBPAGES = new Set(["research", "publications", "opportunities"]);
+const STAFF_OWNED_VISIBLE_ITEMS = 2;
+const COLLABORATION_MIN_SCORE = 3;
+const COLLABORATION_THEME_LIMIT = 7;
 const GRANT_DATA_NOTE = "Grant records are source-backed public records; coverage may miss older, internal, or unpublished funding.";
 const PHD_DATA_NOTE = "PhD counts include defended theses only; current supervision is not included.";
 const METRIC_TREND_COLORS = {
@@ -78,7 +81,7 @@ const EXPERTISE_FAMILIES = [
   ["leadership", ["leader", "leaders", "leadership", "supervisor", "supervision", "managerial leadership", "directive leadership", "leader behavior"]],
   ["shared leadership", ["shared leadership", "distributed leadership", "collective leadership", "team leadership", "leadership sharing"]],
   ["power and hierarchy", ["power", "hierarchy", "dominance", "authority", "control", "influence", "asymmetry", "power distance"]],
-  ["status and prestige", ["status", "prestige", "rank", "standing", "recognition", "reputation", "social status"]],
+  ["status and prestige", ["status", "prestige", "rank", "standing", "recognition", "reputation", "social status", "status characteristics", "status characteristics theory"]],
   ["governance and boards", ["governance", "board", "boards", "director", "directors", "ceo", "top management team", "upper echelon", "supervisory board", "corporate governance"]],
   ["creativity", ["creativity", "creative", "idea generation", "brainstorming", "creative process", "team creativity", "radical creativity"]],
   ["innovation", ["innovation", "innovative", "new product", "research and development", "r&d", "exploration", "exploitation", "knowledge creation"]],
@@ -94,7 +97,7 @@ const EXPERTISE_FAMILIES = [
   ["recovery and leisure", ["recovery", "leisure", "vacation", "break", "detachment", "relaxation", "sleep", "after work", "off job"]],
   ["job crafting", ["job crafting", "crafting", "task crafting", "relational crafting", "cognitive crafting", "resource crafting"]],
   ["work design", ["work design", "job design", "autonomy", "job demands", "job resources", "flexibility", "work arrangement", "workplace design"]],
-  ["remote and hybrid work", ["remote work", "hybrid work", "virtual work", "telework", "distributed work", "online collaboration", "digital work"]],
+  ["remote and hybrid work", ["remote work", "hybrid work", "virtual work", "virtual team", "virtual teams", "remote teams", "telework", "distributed work", "online collaboration", "digital work"]],
   ["motivation and goals", ["motivation", "goal", "goals", "needs", "incentive", "self determination", "achievement", "goal setting"]],
   ["emotions and affect", ["emotion", "emotions", "affect", "mood", "anger", "fear", "anxiety", "emotional", "affective"]],
   ["work-family and roles", ["work family", "work-family", "family work", "role conflict", "multiple roles", "role accumulation", "role strain", "role separation", "role proximity", "role transition", "role ambiguity"]],
@@ -118,6 +121,82 @@ const EXPERTISE_FAMILIES = [
   ["sustainability and csr", ["sustainability", "csr", "corporate social responsibility", "responsible business", "environmental responsibility", "sustainable"]],
   ["age and aging", ["age", "aging", "older worker", "retirement", "lifespan", "age diversity", "elderly"]],
 ];
+
+const COLLABORATION_THEME_DEFINITIONS = [
+  {
+    title: "Teams, teamwork, and modern teaming",
+    sourceLabel: "Shared expertise cluster",
+    description: "Build from submitted interest in teamwork, multiple team membership, virtual teams, boundary spanning, membership change, and team information processing.",
+    terms: ["teams", "teamwork", "multiple team membership", "virtual teams", "fluid teams", "team composition", "team membership changes", "boundary spanning", "team information processing", "self-managing teams", "collaboration within and between teams"],
+    idea: "You could explore how multiple team membership, membership change, boundary spanning, and information processing shape coordination and performance in more fluid team arrangements.",
+    priorityIds: ["JVB", "GVV", "TDV", "JO", "YY", "SB", "JS"],
+  },
+  {
+    title: "Stress, recovery, and changing work arrangements",
+    sourceLabel: "Shared expertise cluster",
+    description: "Connect submitted stress interests with work design, occupational health, recovery, role stress, appraisal, and hybrid or boundaryless work.",
+    terms: ["work stress", "challenge stress", "hindrance stress", "threat appraisal", "role stress", "work design", "occupational health", "recovery", "wellbeing", "job crafting", "remote work", "hybrid work"],
+    idea: "You could explore when changing work arrangements are appraised as challenging, hindering, or threatening, and how recovery, leadership, or work design changes those dynamics.",
+    priorityIds: ["JVB", "MA", "JDB", "SB", "TDV", "JJ"],
+  },
+  {
+    title: "Status, power, identity, and inclusion in groups",
+    sourceLabel: "Shared expertise cluster",
+    description: "Use the submitted status and social identity interests as a bridge to hierarchy, power, diversity, gender, governance, identity, and group settings.",
+    terms: ["status", "status characteristics", "social identity", "identity", "power", "hierarchy", "diversity", "inclusion", "gender and leadership", "groups", "governance", "cooperation"],
+    idea: "You could explore how status, power, diversity, and identity cues shape voice, cooperation, conflict, and inclusion in group or leadership settings.",
+    priorityIds: ["JVB", "JO", "FR", "MR", "JS", "CDD", "JJ"],
+  },
+  {
+    title: "Leadership, creativity, innovation, and networks",
+    sourceLabel: "Shared expertise cluster",
+    description: "A cross-over space for leadership, employee creativity, innovation networks, team information processing, motivation, and star performers.",
+    terms: ["leadership", "creativity", "innovation", "innovation networks", "social networks", "team information processing", "employee creativity", "work motivation", "star performers"],
+    idea: "You could explore how leadership and network position shape creativity, innovation, and information processing from individual to team levels.",
+    priorityIds: ["OJ", "JMA", "YY", "CDD", "BN", "NN", "JS"],
+  },
+  {
+    title: "Cooperation, conflict, ethics, and decision making",
+    sourceLabel: "Shared expertise cluster",
+    description: "A behavioral route that brings together cooperation, conflict, negotiation, morality, rules, sanctions, prosocial behavior, and decisions.",
+    terms: ["cooperation", "conflict", "negotiation", "bargaining", "ethics", "morality", "sanctions", "rules", "decision making", "prosocial behavior", "competition"],
+    idea: "You could explore how rules, norms, conflict, and decision contexts shift cooperation or ethical behavior in teams, organizations, or intergroup settings.",
+    priorityIds: ["CDD", "LM", "BN", "FR", "JJ", "JL"],
+  },
+  {
+    title: "HRM, talent, flexible work, and employability",
+    sourceLabel: "Shared expertise cluster",
+    description: "Link HRM and organizational behavior around highly skilled migrants, global talent, flexible employment, work design, employability, and workforce change.",
+    terms: ["human resource management", "global talent management", "highly skilled migrants", "flexible employment", "employability", "career", "work design", "workforce", "job crafting", "innovation"],
+    idea: "You could explore how flexible employment and talent systems affect innovation, employability, work design, or employee wellbeing.",
+    priorityIds: ["NN", "MA", "JDB", "SB", "JMA"],
+  },
+  {
+    title: "Governance, top management, and organizational change",
+    sourceLabel: "Shared expertise cluster",
+    description: "Combine governance, boards, top management teams, organizational change, leadership development, gender, diversity, and power.",
+    terms: ["governance", "boards", "top management teams", "organizational change", "management development", "gender and leadership", "diversity management", "power", "leadership"],
+    idea: "You could explore how governance structures, top-management dynamics, and leadership development shape change, diversity, or decision quality.",
+    priorityIds: ["FR", "JS", "MR", "JO", "JL", "LM"],
+  },
+  {
+    title: "Sustainability, ideology, and responsible organizing",
+    sourceLabel: "Shared expertise cluster",
+    description: "A smaller but useful route for sustainability, misperceptions, ideology, responsible behavior, leadership, and society-facing organizational behavior.",
+    terms: ["sustainability", "ideology", "misperceptions", "responsible business", "leadership", "ethics", "organizational behavior", "justice", "fairness"],
+    idea: "You could explore how ideology, misperceptions, leadership, and ethical or fairness concerns shape responsible organizing and sustainability-oriented action.",
+    priorityIds: ["JL", "LM", "CDD", "MR", "OJ"],
+  },
+];
+
+const COLLABORATION_LOW_SIGNAL_TERMS = new Set([
+  "group",
+  "groups",
+  "group settings",
+  "collective settings",
+  "organizational behavior",
+  "social",
+]);
 
 const STOPWORDS = new Set([
   "a", "about", "all", "an", "and", "are", "as", "at", "between", "by", "for", "from", "how", "in", "into",
@@ -656,37 +735,67 @@ function populateStaffUpdatePersonSelect() {
   }
 }
 
+async function fetchDataFile(filename) {
+  try {
+    const response = await fetch(`data/${filename}?v=${DATA_VERSION}`);
+    return response?.ok ? response.json() : null;
+  } catch (_) {
+    return null;
+  }
+}
+
 async function loadData() {
   try {
-    const [response, benchmarkResponse, grantsResponse, phdsResponse, resourceResponse, externalPartnersResponse, teachingResponse, staffProfileResponse, staffContributionResponse] = await Promise.all([
+    const [response, grantsData, phdsData, resourceData, staffProfileData, staffContributionData] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
-      fetch(`data/benchmark-data.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/grants.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/phds.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/resource-data.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/external-partners.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/teaching-data.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/staff-profile-data.json?v=${DATA_VERSION}`).catch(() => null),
-      fetch(`data/staff-contributions.json?v=${DATA_VERSION}`).catch(() => null),
+      fetchDataFile("grants.json"),
+      fetchDataFile("phds.json"),
+      fetchDataFile("resource-data.json"),
+      fetchDataFile("staff-profile-data.json"),
+      fetchDataFile("staff-contributions.json"),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
-    if (benchmarkResponse?.ok) state.benchmarkData = await benchmarkResponse.json();
-    if (grantsResponse?.ok) state.grantsData = await grantsResponse.json();
-    if (phdsResponse?.ok) state.phdsData = await phdsResponse.json();
-    if (resourceResponse?.ok) state.resourceData = await resourceResponse.json();
-    if (externalPartnersResponse?.ok) state.externalPartnersData = await externalPartnersResponse.json();
-    if (teachingResponse?.ok) state.teachingData = await teachingResponse.json();
-    if (staffProfileResponse?.ok) state.staffProfileData = await staffProfileResponse.json();
-    if (staffContributionResponse?.ok) state.staffContributionData = await staffContributionResponse.json();
+    if (grantsData) state.grantsData = grantsData;
+    if (phdsData) state.phdsData = phdsData;
+    if (resourceData) state.resourceData = resourceData;
+    if (staffProfileData) state.staffProfileData = staffProfileData;
+    if (staffContributionData) state.staffContributionData = staffContributionData;
     const meta = state.data.meta;
     els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
     syncFooterMeta(meta);
     syncPublicationWindowControls();
     populateStaffUpdatePersonSelect();
     applyRouteFromHash();
+    loadDeferredData();
   } catch (error) {
     els.subtitle.textContent = `Could not load dashboard data: ${error.message}`;
+  }
+}
+
+async function loadDeferredData() {
+  try {
+    const [benchmarkData, externalPartnersData, teachingData] = await Promise.all([
+      fetchDataFile("benchmark-data.json"),
+      fetchDataFile("external-partners.json"),
+      fetchDataFile("teaching-data.json"),
+    ]);
+    let changed = false;
+    if (benchmarkData) {
+      state.benchmarkData = benchmarkData;
+      changed = true;
+    }
+    if (externalPartnersData) {
+      state.externalPartnersData = externalPartnersData;
+      changed = true;
+    }
+    if (teachingData) {
+      state.teachingData = teachingData;
+      changed = true;
+    }
+    if (changed && state.data) renderCurrentView();
+  } catch (_) {
+    // Optional datasets should not block the main dashboard.
   }
 }
 
@@ -1198,7 +1307,7 @@ function renderCollaboration() {
   els.collaborationSummary.innerHTML = `
     <div class="collaboration-summary-grid">
       ${metric("Submitted interests", staffInterestItems().length, `${submittedPeople.size} staff member${submittedPeople.size === 1 ? "" : "s"}`)}
-      ${metric("Interest-led leads", interestOpportunities.length, "Matched to expertise signals")}
+      ${metric("Opportunity clusters", interestOpportunities.length, "Submitted interests plus expertise themes")}
       ${metric("Collaborative grant calls", grantOpportunities.length, "From the grant resources workbook")}
     </div>
     <p class="collaboration-note">Suggestions combine staff-submitted collaboration interests with publication topics, public profile expertise, and the current grant resource data. Treat them as starting points for conversations, not as final eligibility advice.</p>
@@ -1221,63 +1330,183 @@ function staffInterestItems() {
 }
 
 function collaborationInterestOpportunities() {
-  return staffInterestItems()
-    .map((entry) => {
-      const bundle = collaborationInterestBundle(entry.item);
-      const candidates = activePeople()
-        .filter((person) => person.id !== entry.person.id)
-        .map((person) => ({
-          person,
-          score: scorePersonForCollaborationInterest(person.id, bundle),
-        }))
-        .filter((candidate) => candidate.score > 0)
-        .sort((a, b) => b.score - a.score || a.person.display.localeCompare(b.person.display))
-        .slice(0, 5)
-        .map((candidate) => ({
-          ...candidate,
-          reasons: collaborationMatchReasons(candidate.person.id, bundle),
-        }));
+  const interestRows = staffInterestItems()
+    .map(collaborationOpportunityFromInterest)
+    .filter((row) => row.contributors.length || row.grants.length);
+  const themeRows = collaborationThemeOpportunities();
+  return [...interestRows, ...themeRows]
+    .sort((a, b) => {
+      if (a.kind !== b.kind) return a.kind === "staff-interest" ? -1 : 1;
+      return b.contributors.length - a.contributors.length || a.title.localeCompare(b.title);
+    });
+}
+
+function collaborationOpportunityFromInterest(entry) {
+  const bundle = collaborationInterestBundle(entry.item);
+  const owner = {
+    person: entry.person,
+    score: Number.MAX_SAFE_INTEGER,
+    reasons: [`Submitted interest: ${entry.item.title || "Collaboration interest"}`],
+  };
+  const contributors = [
+    owner,
+    ...collaborationContributorsForBundle(bundle, {
+      excludeIds: new Set([entry.person.id]),
+      limit: 5,
+    }),
+  ];
+  return {
+    kind: "staff-interest",
+    sourceLabel: `Staff interest: ${entry.person.display}`,
+    title: entry.item.title || "Collaboration interest",
+    description: entry.item.description || "",
+    primaryPerson: entry.person,
+    bundle,
+    contributors,
+    grants: grantAnglesForBundle(bundle, 3),
+    idea: collaborationIdeaForInterest(entry.item),
+  };
+}
+
+function collaborationThemeOpportunities() {
+  return COLLABORATION_THEME_DEFINITIONS
+    .map((theme) => {
+      const bundle = collaborationBundleFromTerms([
+        theme.title,
+        theme.description,
+        ...(theme.terms || []),
+      ]);
+      const contributors = collaborationContributorsForBundle(bundle, {
+        limit: theme.limit || COLLABORATION_THEME_LIMIT,
+        priorityIds: theme.priorityIds || [],
+      });
       return {
-        ...entry,
+        kind: "theme",
+        sourceLabel: theme.sourceLabel || "Shared expertise cluster",
+        title: theme.title,
+        description: theme.description || "",
         bundle,
-        candidates,
+        contributors,
         grants: grantAnglesForBundle(bundle, 3),
-        idea: collaborationIdeaForInterest(entry.item),
+        idea: theme.idea,
       };
     })
-    .filter((row) => row.candidates.length || row.grants.length)
-    .sort((a, b) => b.candidates.length - a.candidates.length || a.item.title.localeCompare(b.item.title));
+    .filter((row) => row.contributors.length >= 2 || row.grants.length);
 }
 
 function collaborationInterestBundle(item) {
-  return bundleFromTerms([
+  return collaborationBundleFromTerms([
     item?.title || "",
     item?.description || "",
     ...contributionKeywords(item),
   ].filter(Boolean));
 }
 
-function scorePersonForCollaborationInterest(personId, bundle) {
-  return scoreTextAgainstBundle(staffCollaborationEvidenceText(personId), bundle);
+function collaborationBundleFromTerms(sourceTerms) {
+  const terms = sourceTerms
+    .map((term) => String(term || ""))
+    .filter((term) => term && !COLLABORATION_LOW_SIGNAL_TERMS.has(normalizeSearchText(term)));
+  const expandedTerms = [...terms];
+  terms.forEach((term) => {
+    normalizeSearchText(term).split(" ").forEach((rawToken) => {
+      const token = stemToken(rawToken);
+      if (!token || COLLABORATION_LOW_SIGNAL_TERMS.has(rawToken) || COLLABORATION_LOW_SIGNAL_TERMS.has(token)) return;
+      if (DOMAIN_TOPIC_TERMS.has(rawToken) || DOMAIN_TOPIC_TERMS.has(token)) expandedTerms.push(rawToken);
+    });
+  });
+  const familyLabels = new Set();
+  expandedTerms.forEach((term) => {
+    const normalized = normalizeSearchText(term);
+    if (!normalized) return;
+    EXPERTISE_FAMILIES.forEach(([label, familyTerms]) => {
+      if (queryMatchesFamily(normalized, label, familyTerms)) familyLabels.add(label);
+    });
+  });
+  const bundle = bundleFromTerms(expandedTerms);
+  return { ...bundle, families: Array.from(new Set([...(bundle.families || []), ...familyLabels])) };
+}
+
+function collaborationContributorsForBundle(bundle, options = {}) {
+  const excludeIds = options.excludeIds || new Set();
+  const priorityIds = options.priorityIds || [];
+  const priorityIndex = new Map(priorityIds.map((id, index) => [id, priorityIds.length - index]));
+  const limit = options.limit || 6;
+  return activePeople()
+    .filter((person) => !excludeIds.has(person.id))
+    .map((person) => ({
+      person,
+      ...collaborationContributorEvidence(person.id, bundle),
+    }))
+    .filter((candidate) => candidate.score >= COLLABORATION_MIN_SCORE && candidate.reasons.length)
+    .sort((a, b) => {
+      const aPriority = priorityIndex.get(a.person.id) || 0;
+      const bPriority = priorityIndex.get(b.person.id) || 0;
+      return (b.score + bPriority) - (a.score + aPriority) || a.person.display.localeCompare(b.person.display);
+    })
+    .slice(0, limit);
+}
+
+function collaborationContributorEvidence(personId, bundle) {
+  const reasons = [];
+  let score = 0;
+  const contributionHits = staffContributionDocs(personId)
+    .map((doc) => ({ doc, score: scoreTextAgainstBundle(doc.text, bundle) }))
+    .filter((hit) => hit.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 2);
+  if (contributionHits.length) {
+    score += 10 + contributionHits.reduce((total, hit) => total + hit.score, 0);
+    reasons.push(`Submitted note: ${contributionHits.map((hit) => hit.doc.item?.title).filter(Boolean).join(", ")}`);
+  }
+  const profile = staffPublicProfile(personId);
+  const profileText = [profile?.expertise, profile?.role, (profile?.fields || []).join(" ")].filter(Boolean).join(" ");
+  const profileScore = scoreTextAgainstBundle(profileText, bundle);
+  if (profileScore > 0) {
+    score += profileScore * 3;
+    reasons.push("Public profile expertise");
+  }
+  const familyHits = collaborationFamilyHits(personId, bundle);
+  if (familyHits.length) {
+    score += familyHits.reduce((total, hit) => total + Math.min(hit.count, 10), 0);
+    reasons.push(`Publication families: ${familyHits.slice(0, 3).map((hit) => `${hit.label} (${hit.count})`).join(", ")}`);
+  }
+  const grantHits = staffGrantRecords(personId)
+    .filter((grant) => scoreTextAgainstBundle([grant.title, grant.name, grant.projectTitle, grant.funder, grant.scheme, grant.programme].join(" "), bundle) > 0)
+    .slice(0, 2);
+  if (grantHits.length) {
+    score += grantHits.length * 3;
+    reasons.push(`${grantHits.length} recorded grant${grantHits.length === 1 ? "" : "s"}`);
+  }
+  const titleHits = collaborationPublicationTitleHits(personId, bundle);
+  if (!familyHits.length && titleHits.length >= 2) {
+    score += Math.min(titleHits.length, 5);
+    reasons.push(`${titleHits.length} matching publication title${titleHits.length === 1 ? "" : "s"}`);
+  }
+  return { score, reasons: reasons.slice(0, 4) };
+}
+
+function collaborationFamilyHits(personId, bundle) {
+  const families = new Set(bundle.families || []);
+  if (!families.size) return [];
+  const counts = new Map();
+  staffPublicationRecords(personId).forEach((pub) => {
+    (pub.topicFamilies || []).forEach((label) => {
+      if (families.has(label)) counts.set(label, (counts.get(label) || 0) + 1);
+    });
+  });
+  return Array.from(counts.entries())
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+function collaborationPublicationTitleHits(personId, bundle) {
+  return staffPublicationRecords(personId)
+    .filter((pub) => scorePublicationAgainstBundle(pub, bundle) >= 2)
+    .slice(0, 8);
 }
 
 function collaborationMatchReasons(personId, bundle) {
-  const reasons = [];
-  const contributionHits = staffContributionDocs(personId)
-    .filter((doc) => scoreTextAgainstBundle(doc.text, bundle) > 0)
-    .map((doc) => doc.item?.title)
-    .filter(Boolean)
-    .slice(0, 2);
-  contributionHits.forEach((title) => reasons.push(`Interest note: ${title}`));
-  const profile = staffPublicProfile(personId);
-  if (profile?.expertise && scoreTextAgainstBundle(profile.expertise, bundle) > 0) reasons.push("Public profile expertise");
-  const topicHits = topicSignals(personId)
-    .filter((signal) => scoreTextAgainstBundle(signal.label, bundle) > 0)
-    .slice(0, 3)
-    .map((signal) => signal.label);
-  if (topicHits.length) reasons.push(`Publication topics: ${topicHits.join(", ")}`);
-  if (!reasons.length) reasons.push("Publication-title overlap");
-  return reasons.slice(0, 4);
+  return collaborationContributorEvidence(personId, bundle).reasons;
 }
 
 function staffCollaborationEvidenceText(personId) {
@@ -1323,25 +1552,25 @@ function collaborationEvidenceCacheKey() {
 function renderCollaborationInterestOpportunities(opportunities) {
   if (!els.collaborationInterestOpportunities) return;
   if (!opportunities.length) {
-    els.collaborationInterestOpportunities.innerHTML = `<div class="staff-empty">No staff-submitted collaboration interests match the current staff filter yet.</div>`;
+    els.collaborationInterestOpportunities.innerHTML = `<div class="staff-empty">No collaboration clusters match the current staff filter yet.</div>`;
     return;
   }
   els.collaborationInterestOpportunities.innerHTML = opportunities.map((row) => `
     <article class="collaboration-card">
       <div class="collaboration-card-head">
         <div>
-          <p class="eye">${escapeHtml(row.person.display)}</p>
-          <h4>${escapeHtml(row.item.title || "Collaboration interest")}</h4>
+          <p class="eye">${escapeHtml(row.sourceLabel || "Collaboration opportunity")}</p>
+          <h4>${escapeHtml(row.title || "Collaboration opportunity")}</h4>
         </div>
-        <button class="section-link" type="button" data-collaboration-staff="${escapeHtml(row.person.id)}" data-staff-subpage="research">Open profile</button>
+        ${row.primaryPerson ? `<button class="section-link" type="button" data-collaboration-staff="${escapeHtml(row.primaryPerson.id)}" data-staff-subpage="research">Open profile</button>` : ""}
       </div>
-      ${row.item.description ? `<p class="collaboration-card-copy">${escapeHtml(row.item.description)}</p>` : ""}
+      ${row.description ? `<p class="collaboration-card-copy">${escapeHtml(row.description)}</p>` : ""}
       <p class="collaboration-idea">${escapeHtml(row.idea)}</p>
       <div class="collaboration-card-grid">
         <div>
-          <span class="collaboration-label">People to talk to</span>
+          <span class="collaboration-label">Potential contributors</span>
           <div class="collaboration-person-list">
-            ${row.candidates.length ? row.candidates.map(renderCollaborationPerson).join("") : `<span class="small-muted">No strong person match yet.</span>`}
+            ${row.contributors.length ? row.contributors.map(renderCollaborationPerson).join("") : `<span class="small-muted">No strong person match yet.</span>`}
           </div>
         </div>
         <div>
@@ -1356,9 +1585,10 @@ function renderCollaborationInterestOpportunities(opportunities) {
 }
 
 function renderCollaborationPerson(candidate) {
+  const reasons = (candidate.reasons || []).slice(0, 2).join(" - ");
   return `<button class="collaboration-person" type="button" data-collaboration-staff="${escapeHtml(candidate.person.id)}" data-staff-subpage="research">
     <strong>${escapeHtml(candidate.person.display)}</strong>
-    <span>${escapeHtml(candidate.reasons.slice(0, 2).join(" - "))}</span>
+    <span>${escapeHtml(reasons)}</span>
   </button>`;
 }
 
@@ -1440,15 +1670,12 @@ function collaborativeGrantCandidates(call) {
   return activePeople()
     .map((person) => ({
       person,
-      score: scoreTextAgainstBundle(staffCollaborationEvidenceText(person.id), bundle),
+      ...collaborationContributorEvidence(person.id, bundle),
     }))
-    .filter((candidate) => candidate.score > 0)
+    .filter((candidate) => candidate.score >= COLLABORATION_MIN_SCORE && candidate.reasons.length)
     .sort((a, b) => b.score - a.score || a.person.display.localeCompare(b.person.display))
     .slice(0, 8)
-    .map((candidate) => ({
-      ...candidate,
-      reasons: collaborationMatchReasons(candidate.person.id, bundle),
-    }));
+    .map((candidate) => candidate);
 }
 
 function renderCollaborationPairOpportunities(opportunities) {
@@ -1510,26 +1737,26 @@ function collaborationPairOpportunities() {
 function collaborationIdeaForInterest(item) {
   const text = normalizeSearchText(contributionItemText(item));
   if (/multiple team membership|multiple team|multiteam/.test(text)) {
-    return "A realistic project angle is to connect within-person team switching, network load, and boundary transitions across diary, network, and scale-development work.";
+    return "You could explore how within-person team switching, network load, and boundary transitions connect across diary, network, conceptual, and scale-development work.";
   }
   if (/virtual team|remote work|hybrid/.test(text)) {
-    return "A strong collaboration angle is to study how remote and hybrid arrangements change coordination, stress, identity, and team-state dynamics over time.";
+    return "You could explore how remote and hybrid arrangements change coordination, stress, identity, and team-state dynamics over time.";
   }
   if (/stress|challenge|hindrance|threat|role/.test(text)) {
-    return "A useful shared project could connect stress appraisal and role theory to team arrangements, leadership, and changing work-design conditions.";
+    return "You could explore how stress appraisal and role theory travel across team arrangements, leadership situations, and changing work-design conditions.";
   }
   if (/status|social identity|identity|group/.test(text)) {
-    return "A natural collaboration angle is to study how status and identity processes shape coordination, voice, conflict, and inclusion in group settings.";
+    return "You could explore how status and identity processes shape coordination, voice, conflict, and inclusion in group settings.";
   }
-  return "A realistic next step is a compact scoping meeting around shared theory, datasets, and methods, followed by a pilot or grant-outline decision.";
+  return "You could start with a compact scoping meeting around shared theory, datasets, and methods, then decide whether a pilot or grant outline is worth developing.";
 }
 
 function collaborationIdeaFromReasons(reasons) {
   const text = normalizeSearchText(reasons.join(" "));
-  if (/external coauthor|institution/.test(text)) return "Use the shared external network as a low-friction route into a joint paper, symposium, or consortium conversation.";
-  if (/grant/.test(text)) return "Start from the shared grant signal and shape a small pilot or work-package division before choosing a larger call.";
-  if (/topic/.test(text)) return "The publication-topic overlap suggests a focused conceptual bridge or secondary-data paper before a larger project.";
-  return "The overlap is worth a short exploratory meeting to test fit, data access, and grant timing.";
+  if (/external coauthor|institution/.test(text)) return "You could use the shared external network as a route into a joint paper, symposium, or consortium conversation.";
+  if (/grant/.test(text)) return "You could start from the shared grant signal and sketch a small pilot or work-package division before choosing a larger call.";
+  if (/topic|publication/.test(text)) return "You could test whether the topic overlap supports a focused conceptual bridge, secondary-data paper, or grant pilot.";
+  return "You could use a short exploratory meeting to test fit, data access, and grant timing.";
 }
 
 function rankedStaff(bundle) {
@@ -1753,6 +1980,9 @@ function renderStaffOwnedProfile(personId) {
 }
 
 function renderStaffOwnedPanel({ eye, title, items, empty }) {
+  const visibleItems = items.slice(0, STAFF_OWNED_VISIBLE_ITEMS);
+  const extraItems = items.slice(STAFF_OWNED_VISIBLE_ITEMS);
+  const extraLabel = `${extraItems.length} more topic${extraItems.length === 1 ? "" : "s"}`;
   return `
     <div class="overview-panel-head">
       <div>
@@ -1760,7 +1990,13 @@ function renderStaffOwnedPanel({ eye, title, items, empty }) {
         <h3 class="overview-h3">${escapeHtml(title)}</h3>
       </div>
     </div>
-    ${items.length ? `<div class="staff-owned-list">${items.map(renderStaffOwnedItem).join("")}</div>` : `<p class="small-muted">${escapeHtml(empty)}</p>`}
+    ${items.length ? `<div class="staff-owned-list">
+      ${visibleItems.map(renderStaffOwnedItem).join("")}
+      ${extraItems.length ? `<details class="staff-owned-extra">
+        <summary>${escapeHtml(`Show ${extraLabel}`)}</summary>
+        <div class="staff-owned-extra-list">${extraItems.map(renderStaffOwnedItem).join("")}</div>
+      </details>` : ""}
+    </div>` : `<p class="small-muted">${escapeHtml(empty)}</p>`}
   `;
 }
 
@@ -2665,7 +2901,7 @@ function grantTopicBundle(call) {
   const terms = tokenize(text)
     .filter((term) => DOMAIN_TOPIC_TERMS.has(term) || term.length > 6)
     .slice(0, 18);
-  return bundleFromTerms(terms);
+  return collaborationBundleFromTerms(terms);
 }
 
 function grantFitReasons(personId, call) {
