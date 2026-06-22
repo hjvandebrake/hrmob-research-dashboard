@@ -35,7 +35,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260622-collab3";
+const DATA_VERSION = "20260622-collab5";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -46,6 +46,7 @@ const STAFF_SUBPAGES = new Set(["research", "publications", "opportunities"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
 const COLLABORATION_THEME_LIMIT = 7;
+const COLLABORATION_PUBLICATION_WINDOW_YEARS = 5;
 const GRANT_DATA_NOTE = "Grant records are source-backed public records; coverage may miss older, internal, or unpublished funding.";
 const PHD_DATA_NOTE = "PhD counts include defended theses only; current supervision is not included.";
 const METRIC_TREND_COLORS = {
@@ -137,15 +138,23 @@ const COLLABORATION_THEME_DEFINITIONS = [
     description: "Connect submitted stress interests with work design, occupational health, recovery, role stress, appraisal, and hybrid or boundaryless work.",
     terms: ["work stress", "challenge stress", "hindrance stress", "threat appraisal", "role stress", "work design", "occupational health", "recovery", "wellbeing", "job crafting", "remote work", "hybrid work"],
     idea: "You could explore when changing work arrangements are appraised as challenging, hindering, or threatening, and how recovery, leadership, or work design changes those dynamics.",
-    priorityIds: ["JVB", "MA", "JDB", "SB", "TDV", "JJ"],
+    priorityIds: ["JVB", "JDB", "MA", "SB", "TDV", "JJ"],
   },
   {
-    title: "Status, power, identity, and inclusion in groups",
+    title: "Status, hierarchy, and position in teams",
     sourceLabel: "Shared expertise cluster",
-    description: "Use the submitted status and social identity interests as a bridge to hierarchy, power, diversity, gender, governance, identity, and group settings.",
-    terms: ["status", "status characteristics", "social identity", "identity", "power", "hierarchy", "diversity", "inclusion", "gender and leadership", "groups", "governance", "cooperation"],
-    idea: "You could explore how status, power, diversity, and identity cues shape voice, cooperation, conflict, and inclusion in group or leadership settings.",
-    priorityIds: ["JVB", "JO", "FR", "MR", "JS", "CDD", "JJ"],
+    description: "Use submitted status interests and team-status expertise as a bridge to hierarchy, power, leadership, cooperation, and position in group settings.",
+    terms: ["status", "social status", "status characteristics", "team status", "hierarchy", "power", "position", "rank", "standing", "leadership", "teams", "cooperation"],
+    idea: "You could explore how status and hierarchy shape voice, coordination, cooperation, and influence in teams or multi-team settings.",
+    priorityIds: ["JVB", "GVV", "JO", "FR", "JS", "MR", "JJ"],
+  },
+  {
+    title: "Diversity, identity, and inclusion at work",
+    sourceLabel: "Shared expertise cluster",
+    description: "A separate identity-related route for diversity management, gender, inclusion, belonging, justice, and leadership contexts.",
+    terms: ["diversity management", "diversity", "inclusion", "gender and leadership", "justice", "belonging", "identity", "stereotypes", "bias", "leadership"],
+    idea: "You could explore how diversity, identity, and inclusion processes shape leadership, fairness, belonging, and career experiences at work.",
+    priorityIds: ["MR", "FR", "JS", "JL", "LM", "OJ"],
   },
   {
     title: "Leadership, creativity, innovation, and networks",
@@ -197,6 +206,21 @@ const COLLABORATION_LOW_SIGNAL_TERMS = new Set([
   "organizational behavior",
   "social",
 ]);
+
+const COLLABORATION_PERSON_SIGNALS = {
+  GVV: [
+    {
+      label: "status, hierarchy, and team dynamics",
+      terms: ["status", "social status", "team status", "hierarchy", "power", "team dynamics", "teams"],
+    },
+  ],
+  JDB: [
+    {
+      label: "stress, recovery, and occupational health",
+      terms: ["stress", "work stress", "burnout", "role strain", "occupational health", "recovery", "wellbeing"],
+    },
+  ],
+};
 
 const STOPWORDS = new Set([
   "a", "about", "all", "an", "and", "are", "as", "at", "between", "by", "for", "from", "how", "in", "into",
@@ -340,6 +364,8 @@ function cacheElements() {
   els.staffUpdateCurrent = document.getElementById("staff-update-current");
   els.staffUpdateCollaboration = document.getElementById("staff-update-collaboration");
   els.staffUpdateResources = document.getElementById("staff-update-resources");
+  els.staffUpdateFiles = document.getElementById("staff-update-files");
+  els.staffUpdateFileList = document.getElementById("staff-update-file-list");
   els.staffUpdateStatus = document.getElementById("staff-update-status");
   els.resourceOpportunities = document.getElementById("resource-opportunities");
   els.resourceRecentCalls = document.getElementById("resource-recent-calls");
@@ -528,6 +554,9 @@ function attachEvents() {
   if (els.staffUpdateForm) {
     els.staffUpdateForm.addEventListener("submit", handleStaffUpdateSubmit);
   }
+  if (els.staffUpdateFiles) {
+    els.staffUpdateFiles.addEventListener("change", renderStaffUpdateFileList);
+  }
   if (els.feedbackEmailLink) {
     els.feedbackEmailLink.addEventListener("click", () => {
       els.feedbackEmailLink.href = feedbackMailtoHref();
@@ -629,6 +658,29 @@ function handleFeedbackSubmit(event) {
   }
 }
 
+function staffUpdateSelectedFiles() {
+  return Array.from(els.staffUpdateFiles?.files || []).map((file) => ({
+    name: file.name,
+    size: file.size,
+    type: file.type || "",
+  }));
+}
+
+function formatFileSize(bytes) {
+  if (!Number.isFinite(bytes)) return "size unknown";
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function renderStaffUpdateFileList() {
+  if (!els.staffUpdateFileList) return;
+  const files = staffUpdateSelectedFiles();
+  els.staffUpdateFileList.textContent = files.length
+    ? files.map((file) => `${file.name} (${formatFileSize(file.size)})`).join("; ")
+    : "No files selected.";
+}
+
 function handleStaffUpdateSubmit(event) {
   event.preventDefault();
   const submittedBy = (els.staffUpdateName?.value || "").trim();
@@ -636,28 +688,37 @@ function handleStaffUpdateSubmit(event) {
   const currentWork = (els.staffUpdateCurrent?.value || "").trim();
   const collaboration = (els.staffUpdateCollaboration?.value || "").trim();
   const resources = (els.staffUpdateResources?.value || "").trim();
+  const resourceFiles = staffUpdateSelectedFiles();
   if (!personId) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Select a staff member first.";
     els.staffUpdatePerson?.focus();
     return;
   }
-  if (!currentWork && !collaboration && !resources) {
+  if (!currentWork && !collaboration && !resources && !resourceFiles.length) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Add at least one profile update field.";
     els.staffUpdateCurrent?.focus();
     return;
   }
   const person = peopleById().get(personId);
   const personLabel = person ? `${person.display} - ${person.name}` : personId;
+  const resourceLines = [
+    ...parseSubmittedLines(resources),
+    ...resourceFiles.map((file) => `File attachment: ${file.name} - Attachment selected in the staff update form; attach or host the file before publishing it as a dashboard download.`),
+  ];
   const payload = {
     personId,
     staffMember: personLabel,
     submittedBy: submittedBy || "",
     currentWork: parseSubmittedLines(currentWork),
     collaborationInterests: parseSubmittedLines(collaboration),
-    resources: parseSubmittedLines(resources),
+    resources: resourceLines,
+    resourceFiles,
     dashboardUrl: window.location.href,
     submittedAt: new Date().toISOString(),
   };
+  const fileLines = resourceFiles.length
+    ? resourceFiles.map((file) => `- ${file.name} (${formatFileSize(file.size)}${file.type ? `, ${file.type}` : ""})`)
+    : ["Not provided"];
   const body = [
     `Submitted by: ${submittedBy || "Not provided"}`,
     `Staff member: ${personLabel}`,
@@ -673,6 +734,11 @@ function handleStaffUpdateSubmit(event) {
     "## Resources to share",
     resources || "Not provided",
     "",
+    "## Resource files selected",
+    ...fileLines,
+    "",
+    resourceFiles.length ? "Attach the selected file(s) to this GitHub issue before submitting. File contents are not transferred automatically from the dashboard." : "",
+    "",
     "<!-- staff-profile-update-json",
     JSON.stringify(payload, null, 2),
     "-->",
@@ -686,7 +752,9 @@ function handleStaffUpdateSubmit(event) {
   const url = `${FEEDBACK_ISSUE_URL}?${params.toString()}`;
   window.open(url, "_blank", "noopener");
   if (els.staffUpdateStatus) {
-    els.staffUpdateStatus.textContent = "A GitHub issue draft opened. Submit it there to save the profile update.";
+    els.staffUpdateStatus.textContent = resourceFiles.length
+      ? "A GitHub issue draft opened. Attach the selected file(s) there before submitting."
+      : "A GitHub issue draft opened. Submit it there to save the profile update.";
   }
 }
 
@@ -927,6 +995,38 @@ function activePublications() {
 
 function activeDisplayPublications() {
   return activePublicationPool({ countedOnly: false });
+}
+
+function collaborationWindowYears() {
+  const meta = state.data?.meta || {};
+  const metaTo = Number.parseInt(String(meta.recentWindow?.to || meta.publicationWindow?.to || ""), 10);
+  const dataYears = (state.data?.publications || []).map((pub) => pub.year).filter(Number.isFinite);
+  const toYear = Number.isFinite(metaTo) ? metaTo : dataYears.length ? Math.max(...dataYears) : new Date().getFullYear();
+  return [toYear - COLLABORATION_PUBLICATION_WINDOW_YEARS + 1, toYear];
+}
+
+function collaborationWindowLabel() {
+  const [fromYear, toYear] = collaborationWindowYears();
+  return `${fromYear}-${toYear}`;
+}
+
+function collaborationPublicationPool({ countedOnly = true } = {}) {
+  if (!state.data) return [];
+  const ids = activePeopleSet();
+  const [fromYear, toYear] = collaborationWindowYears();
+  return dedupePublications((state.data.publications || []).filter((pub) => (
+    (!countedOnly || countedPublication(pub))
+    && displayPublication(pub)
+    && pub.matchedPeople?.some((id) => ids.has(id))
+    && Number.isFinite(pub.year)
+    && pub.year >= fromYear
+    && pub.year <= toYear
+  )));
+}
+
+function collaborationPublicationRecords(personId, options = {}) {
+  return collaborationPublicationPool({ countedOnly: options.countedOnly !== false })
+    .filter((pub) => pub.matchedPeople.includes(personId));
 }
 
 function activePublicationPool({ countedOnly }) {
@@ -1308,9 +1408,10 @@ function renderCollaboration() {
     <div class="collaboration-summary-grid">
       ${metric("Submitted interests", staffInterestItems().length, `${submittedPeople.size} staff member${submittedPeople.size === 1 ? "" : "s"}`)}
       ${metric("Opportunity clusters", interestOpportunities.length, "Submitted interests plus expertise themes")}
+      ${metric("Recent publication window", collaborationWindowLabel(), `${COLLABORATION_PUBLICATION_WINDOW_YEARS} publication years`)}
       ${metric("Collaborative grant calls", grantOpportunities.length, "From the grant resources workbook")}
     </div>
-    <p class="collaboration-note">Suggestions combine staff-submitted collaboration interests with publication topics, public profile expertise, and the current grant resource data. Treat them as starting points for conversations, not as final eligibility advice.</p>
+    <p class="collaboration-note">Suggestions prioritize staff-submitted interests and public profile signals, then use counted publications from ${escapeHtml(collaborationWindowLabel())} and the grant resources workbook. Treat them as starting points for conversations, not as final eligibility advice.</p>
   `;
   renderCollaborationInterestOpportunities(interestOpportunities);
   renderCollaborationGrantOpportunities(grantOpportunities);
@@ -1353,6 +1454,7 @@ function collaborationOpportunityFromInterest(entry) {
     ...collaborationContributorsForBundle(bundle, {
       excludeIds: new Set([entry.person.id]),
       limit: 5,
+      priorityIds: collaborationPriorityIdsForInterest(entry.item),
     }),
   ];
   return {
@@ -1395,11 +1497,74 @@ function collaborationThemeOpportunities() {
 }
 
 function collaborationInterestBundle(item) {
-  return collaborationBundleFromTerms([
+  const text = contributionItemText(item);
+  const bundle = collaborationBundleFromTerms([
     item?.title || "",
     item?.description || "",
     ...contributionKeywords(item),
   ].filter(Boolean));
+  return specializeCollaborationBundle(bundle, text);
+}
+
+function specializeCollaborationBundle(bundle, text) {
+  const normalized = normalizeSearchText(text);
+  if (/social identity/.test(normalized)) {
+    return {
+      ...bundle,
+      terms: bundle.terms.filter(([term]) => !["identity", "belonging", "self"].includes(term)),
+      families: (bundle.families || []).filter((family) => family !== "identity and belonging"),
+      familyWhitelist: ["intergroup relations", "status and prestige", "power and hierarchy"],
+    };
+  }
+  if (/stress|strain|burnout|challenge stress|hindrance stress|threat appraisal|role stress/.test(normalized)) {
+    return {
+      ...bundle,
+      families: (bundle.families || []).filter((family) => [
+        "stress and strain",
+        "occupational health",
+        "wellbeing",
+        "recovery and leisure",
+        "work-family and roles",
+        "work design",
+        "remote and hybrid work",
+        "crisis and resilience",
+      ].includes(family)),
+      familyWhitelist: [
+        "stress and strain",
+        "occupational health",
+        "wellbeing",
+        "recovery and leisure",
+        "work-family and roles",
+        "work design",
+        "remote and hybrid work",
+        "crisis and resilience",
+      ],
+    };
+  }
+  if (/status|hierarchy|power/.test(normalized)) {
+    return {
+      ...bundle,
+      familyWhitelist: ["status and prestige", "power and hierarchy", "teams and groups", "social networks"],
+    };
+  }
+  return bundle;
+}
+
+function collaborationPriorityIdsForInterest(item) {
+  const text = normalizeSearchText(contributionItemText(item));
+  if (/stress|strain|burnout|challenge stress|hindrance stress|threat appraisal|role stress/.test(text)) {
+    return ["JDB", "MA", "JJ", "GVV", "TDV", "SB"];
+  }
+  if (/status|status characteristics|hierarchy|power/.test(text)) {
+    return ["GVV", "JO", "FR", "JS", "MR", "JJ"];
+  }
+  if (/social identity/.test(text)) {
+    return ["FR", "MR", "CDD", "JO", "JJ"];
+  }
+  if (/team|teamwork|multiple team|virtual team|remote work/.test(text)) {
+    return ["GVV", "TDV", "SB", "FR", "BN", "YY"];
+  }
+  return [];
 }
 
 function collaborationBundleFromTerms(sourceTerms) {
@@ -1441,7 +1606,7 @@ function collaborationContributorsForBundle(bundle, options = {}) {
     .sort((a, b) => {
       const aPriority = priorityIndex.get(a.person.id) || 0;
       const bPriority = priorityIndex.get(b.person.id) || 0;
-      return (b.score + bPriority) - (a.score + aPriority) || a.person.display.localeCompare(b.person.display);
+      return (b.score + bPriority * 2) - (a.score + aPriority * 2) || a.person.display.localeCompare(b.person.display);
     })
     .slice(0, limit);
 }
@@ -1457,6 +1622,11 @@ function collaborationContributorEvidence(personId, bundle) {
   if (contributionHits.length) {
     score += 10 + contributionHits.reduce((total, hit) => total + hit.score, 0);
     reasons.push(`Submitted note: ${contributionHits.map((hit) => hit.doc.item?.title).filter(Boolean).join(", ")}`);
+  }
+  const signalHits = collaborationPersonSignalHits(personId, bundle);
+  if (signalHits.length) {
+    score += 9 + signalHits.reduce((total, hit) => total + hit.score, 0);
+    reasons.push(`Topic signal: ${signalHits.map((hit) => hit.signal.label).join(", ")}`);
   }
   const profile = staffPublicProfile(personId);
   const profileText = [profile?.expertise, profile?.role, (profile?.fields || []).join(" ")].filter(Boolean).join(" ");
@@ -1485,11 +1655,25 @@ function collaborationContributorEvidence(personId, bundle) {
   return { score, reasons: reasons.slice(0, 4) };
 }
 
+function collaborationPersonSignalHits(personId, bundle) {
+  return (COLLABORATION_PERSON_SIGNALS[personId] || [])
+    .map((signal) => ({
+      signal,
+      score: scoreTextAgainstBundle([signal.label, ...(signal.terms || [])].join(" "), bundle),
+    }))
+    .filter((hit) => hit.score > 0)
+    .sort((a, b) => b.score - a.score);
+}
+
 function collaborationFamilyHits(personId, bundle) {
-  const families = new Set(bundle.families || []);
+  let families = new Set(bundle.families || []);
+  if (Array.isArray(bundle.familyWhitelist)) {
+    const whitelist = new Set(bundle.familyWhitelist);
+    families = new Set(Array.from(families).filter((family) => whitelist.has(family)));
+  }
   if (!families.size) return [];
   const counts = new Map();
-  staffPublicationRecords(personId).forEach((pub) => {
+  collaborationPublicationRecords(personId).forEach((pub) => {
     (pub.topicFamilies || []).forEach((label) => {
       if (families.has(label)) counts.set(label, (counts.get(label) || 0) + 1);
     });
@@ -1500,7 +1684,7 @@ function collaborationFamilyHits(personId, bundle) {
 }
 
 function collaborationPublicationTitleHits(personId, bundle) {
-  return staffPublicationRecords(personId)
+  return collaborationPublicationRecords(personId)
     .filter((pub) => scorePublicationAgainstBundle(pub, bundle) >= 2)
     .slice(0, 8);
 }
@@ -1691,10 +1875,12 @@ function renderCollaborationPairOpportunities(opportunities) {
         <span>+</span>
         <button class="person-link suggestion-name" type="button" data-collaboration-staff="${escapeHtml(item.b.id)}" data-staff-subpage="research">${escapeHtml(item.b.display)}</button>
       </div>
+      <p class="collaboration-pair-basis">${escapeHtml(item.basis)}</p>
       <p>${escapeHtml(item.idea)}</p>
       <div class="suggestion-reasons">
         ${item.reasons.slice(0, 3).map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
       </div>
+      <p class="collaboration-pair-next">${escapeHtml(item.nextStep)}</p>
     </article>
   `).join("");
 }
@@ -1712,26 +1898,88 @@ function collaborationPairOpportunities() {
       const existingSharedPubs = intersectSets(aProfile.publicationIds, bProfile.publicationIds).length;
       if (existingSharedPubs > 0) continue;
       const sharedTopics = intersectSets(aProfile.topics, bProfile.topics).slice(0, 4);
+      const sharedSignals = intersectSets(aProfile.signalTopics, bProfile.signalTopics).slice(0, 3);
       const sharedExternal = intersectSets(aProfile.externalAuthors, bProfile.externalAuthors).slice(0, 2);
       const sharedPartners = intersectSets(aProfile.partners, bProfile.partners).slice(0, 2);
       const sharedGrants = intersectSets(aProfile.grants, bProfile.grants);
-      const score = sharedTopics.length * 3 + sharedExternal.length * 4 + sharedPartners.length * 3 + sharedGrants.length * 6;
+      const score = sharedTopics.length * 3 + sharedSignals.length * 5 + sharedExternal.length * 4 + sharedPartners.length * 3 + sharedGrants.length * 6;
       if (!score) continue;
       const reasons = [];
-      if (sharedTopics.length) reasons.push(`Topics: ${sharedTopics.join(", ")}`);
-      if (sharedExternal.length) reasons.push(`External coauthors: ${sharedExternal.map((id) => aProfile.externalAuthorLabels.get(id) || id).join(", ")}`);
-      if (sharedPartners.length) reasons.push(`Institutions: ${sharedPartners.map((id) => aProfile.partnerLabels.get(id) || id).join(", ")}`);
+      if (sharedSignals.length) reasons.push(`Signaled interests/profile themes: ${sharedSignals.join(", ")}`);
+      if (sharedTopics.length) reasons.push(`Recent ${COLLABORATION_PUBLICATION_WINDOW_YEARS}-year publication topics: ${sharedTopics.join(", ")}`);
+      if (sharedExternal.length) reasons.push(`Shared external coauthors: ${sharedExternal.map((id) => aProfile.externalAuthorLabels.get(id) || id).join(", ")}`);
+      if (sharedPartners.length) reasons.push(`Shared institutions: ${sharedPartners.map((id) => aProfile.partnerLabels.get(id) || id).join(", ")}`);
       if (sharedGrants.length) reasons.push(`${sharedGrants.length} shared grant${sharedGrants.length === 1 ? "" : "s"}`);
+      const basis = collaborationPairBasis({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants });
       pairs.push({
         a,
         b,
         score,
+        basis,
         reasons,
-        idea: collaborationIdeaFromReasons(reasons),
+        idea: collaborationIdeaFromPair({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }),
+        nextStep: collaborationPairNextStep({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }),
       });
     }
   }
-  return pairs.sort((a, b) => b.score - a.score || a.a.display.localeCompare(b.a.display));
+  return diversifyCollaborationPairs(pairs.sort((a, b) => b.score - a.score || a.a.display.localeCompare(b.a.display)));
+}
+
+function collaborationPairBasis({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }) {
+  if (sharedGrants.length) return "Grant-record bridge";
+  if (sharedSignals.length) return "Signaled-interest bridge";
+  if (sharedExternal.length) return "External-network bridge";
+  if (sharedPartners.length) return "Institutional-network bridge";
+  if (sharedTopics.length) return "Recent-publication bridge";
+  return "Exploratory bridge";
+}
+
+function collaborationIdeaFromPair({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }) {
+  const text = normalizeSearchText([...sharedSignals, ...sharedTopics].join(" "));
+  if (/stress|strain|burnout|recovery|health|wellbeing/.test(text)) {
+    return "You could explore whether stress, recovery, or wellbeing mechanisms generalize across their recent empirical settings, with a compact diary or secondary-data pilot as a first step.";
+  }
+  if (/team|teams|membership|coordination|boundary|collaboration/.test(text)) {
+    return "You could explore a team-process bridge, for example how membership change, coordination, or boundary work affects performance and strain in fluid team arrangements.";
+  }
+  if (/status|hierarchy|power|gender|diversity|inclusion|identity|justice/.test(text)) {
+    return "You could explore how position, status, identity, or diversity cues shape voice, influence, inclusion, or decision quality in work groups.";
+  }
+  if (/leadership|creativity|innovation|network/.test(text)) {
+    return "You could explore how leadership and network position shape creativity or innovation, potentially combining individual, team, and organizational levels.";
+  }
+  if (/ethics|morality|conflict|cooperation|negotiation|decision/.test(text)) {
+    return "You could explore how conflict, rules, or decision contexts alter cooperation and ethical behavior in organizational settings.";
+  }
+  if (sharedExternal.length || sharedPartners.length) {
+    return "You could use the shared network as a practical entry point for a symposium, visiting-speaker exchange, or small consortium conversation.";
+  }
+  if (sharedGrants.length) {
+    return "You could review the shared funding history and test whether a follow-up work package or smaller pilot is plausible.";
+  }
+  return "You could use a short exploratory meeting to check whether the apparent overlap has enough theory, data, or grant timing to justify a project.";
+}
+
+function collaborationPairNextStep({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }) {
+  const text = normalizeSearchText([...sharedSignals, ...sharedTopics].join(" "));
+  if (sharedGrants.length) return "Grant next step: identify which prior grant output could become a new work package or follow-up call.";
+  if (/stress|team|status|hierarchy|identity|leadership|innovation/.test(text)) return "Grant next step: sketch a two-person seed idea and map it to XS/KIEM, consortium, or workshop-style calls in the grant resources.";
+  if (sharedExternal.length || sharedPartners.length) return "Network next step: invite the shared external contact into a scoped call before choosing a funding route.";
+  return "Next step: compare one recent paper each and decide whether the overlap is conceptual, methodological, or data-driven.";
+}
+
+function diversifyCollaborationPairs(pairs) {
+  const selected = [];
+  const usedBasis = new Set();
+  pairs.forEach((pair) => {
+    if (usedBasis.has(pair.basis)) return;
+    selected.push(pair);
+    usedBasis.add(pair.basis);
+  });
+  pairs.forEach((pair) => {
+    if (!selected.includes(pair)) selected.push(pair);
+  });
+  return selected;
 }
 
 function collaborationIdeaForInterest(item) {
@@ -1745,8 +1993,14 @@ function collaborationIdeaForInterest(item) {
   if (/stress|challenge|hindrance|threat|role/.test(text)) {
     return "You could explore how stress appraisal and role theory travel across team arrangements, leadership situations, and changing work-design conditions.";
   }
-  if (/status|social identity|identity|group/.test(text)) {
-    return "You could explore how status and identity processes shape coordination, voice, conflict, and inclusion in group settings.";
+  if (/status|status characteristics|hierarchy|power/.test(text)) {
+    return "You could explore how status, hierarchy, and position shape coordination, voice, influence, and cooperation in group settings.";
+  }
+  if (/social identity/.test(text)) {
+    return "You could explore where social identity theory can explain group-level coordination, conflict, belonging, or collective action.";
+  }
+  if (/identity|group/.test(text)) {
+    return "You could explore how identity processes shape coordination, voice, conflict, and inclusion in group settings.";
   }
   return "You could start with a compact scoping meeting around shared theory, datasets, and methods, then decide whether a pilot or grant outline is worth developing.";
 }
@@ -2138,22 +2392,37 @@ function staffCollaborationSuggestions(personId) {
 }
 
 function staffOverlapProfile(personId) {
-  const publications = staffPublicationRecords(personId);
+  const publications = collaborationPublicationRecords(personId);
   const publicationIds = new Set(publications.map((pub) => pub.id));
-  const topics = new Set(semanticTopicSignals(staffPublicationRecords(personId), { minCount: 1, phraseMinCount: 2 })
+  const topics = new Set(semanticTopicSignals(publications, { minCount: 1, phraseMinCount: 2 })
     .slice(0, 18)
     .map((signal) => signal.query || signal.label));
+  const signalTopics = new Set();
+  const profile = staffPublicProfile(personId);
+  const profileText = [profile?.expertise, ...(COLLABORATION_PERSON_SIGNALS[personId] || []).flatMap((signal) => [signal.label, ...(signal.terms || [])])].join(" ");
+  EXPERTISE_FAMILIES.forEach(([label, terms]) => {
+    if (scoreTextAgainstBundle(profileText, familyBundle(label, terms)) > 0) {
+      topics.add(label);
+      signalTopics.add(label);
+    }
+  });
   contributionItems(staffContribution(personId), "collaborationInterests").forEach((item) => {
     const title = normalizeSearchText(item.title || "");
-    if (title) topics.add(title);
+    if (title) {
+      topics.add(title);
+      signalTopics.add(title);
+    }
     contributionKeywords(item).forEach((keyword) => {
       const normalized = normalizeSearchText(keyword);
-      if (normalized) topics.add(normalized);
+      if (normalized) {
+        topics.add(normalized);
+        signalTopics.add(normalized);
+      }
     });
   });
   const externalAuthorLabels = new Map();
   const externalAuthors = new Set();
-  staffPublicationRecords(personId).forEach((pub) => {
+  publications.forEach((pub) => {
     externalAuthorsForPublication(pub).forEach((author) => {
       const id = externalAuthorId(author);
       externalAuthors.add(id);
@@ -2169,7 +2438,7 @@ function staffOverlapProfile(personId) {
     partners.add(partner.id);
     partnerLabels.set(partner.id, partner.institution);
   });
-  return { topics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels, publicationIds };
+  return { topics, signalTopics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels, publicationIds, publications };
 }
 
 function intersectSets(a, b) {

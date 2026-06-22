@@ -761,6 +761,52 @@ td.muted { color: var(--ink-400); }
 .staff-update-form textarea {
   min-height: 108px;
 }
+.staff-upload-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.staff-upload-field > span {
+  color: var(--ink-400);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.feedback-form .staff-upload-button {
+  align-items: center;
+  border: 1px solid var(--ink-300);
+  color: var(--red);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.2;
+  min-height: 40px;
+  padding: 9px 12px;
+  width: fit-content;
+}
+.feedback-form .staff-upload-button:hover {
+  border-color: var(--red);
+}
+.feedback-form .staff-upload-button input {
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.staff-upload-list,
+.staff-upload-note {
+  color: var(--ink-500);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  margin: 0;
+}
+.staff-upload-list {
+  color: var(--ink-700);
+}
 .feedback-form input:focus,
 .feedback-form select:focus,
 .feedback-form textarea:focus {
@@ -1554,7 +1600,7 @@ button.word-cloud-item {
 .collaboration-summary-grid {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   margin-bottom: 12px;
 }
 .collaboration-note {
@@ -1671,6 +1717,23 @@ button.word-cloud-item {
 .collaboration-pair-head span {
   color: var(--ink-400);
   font-weight: 700;
+}
+.collaboration-pair-basis {
+  color: var(--red);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  line-height: 1.25;
+  margin: 8px 0 5px;
+  text-transform: uppercase;
+}
+.collaboration-pair-next {
+  border-top: 1px solid var(--ink-200);
+  color: var(--ink-700);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  margin: 9px 0 0;
+  padding-top: 8px;
 }
 
 .journal-layout {
