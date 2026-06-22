@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260622-collab8";
+const DATA_VERSION = "20260622-collab9";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -3979,17 +3979,17 @@ function standardDeviation(values) {
   return Math.sqrt(values.reduce((sum, value) => sum + (value - avg) ** 2, 0) / values.length);
 }
 
-function overviewStartYear() {
+function overviewStartYear(pubs = activePublications()) {
   const [fromYear] = activeWindowYears();
   if (Number.isFinite(fromYear)) return fromYear;
-  const years = activePublications().map((pub) => pub.year).filter(Number.isFinite);
+  const years = pubs.map(publicationChartYear).filter(Number.isFinite);
   return years.length ? Math.min(...years) : new Date().getFullYear() - DEFAULT_PUBLICATION_WINDOW_YEARS + 1;
 }
 
 function publicationWindowYears() {
   const [fromYear, toYear] = activeWindowYears();
   if (Number.isFinite(fromYear) && Number.isFinite(toYear) && toYear >= fromYear) return toYear - fromYear + 1;
-  const years = new Set(activePublications().map((pub) => pub.year));
+  const years = new Set(activePublications().map(publicationChartYear).filter(Number.isFinite));
   return years.size;
 }
 
@@ -4003,7 +4003,7 @@ function activeWindow() {
   if (mode === "recent") return meta.recentWindow || meta.publicationWindow || {};
   if (mode === "last10") {
     const to = meta.publicationWindow?.to || meta.recentWindow?.to || "";
-    const toYear = Number(String(to).slice(0, 4));
+    const toYear = windowBoundaryYear(to);
     const endYear = Number.isFinite(toYear) ? toYear : new Date().getFullYear();
     return {
       from: `${endYear - DEFAULT_PUBLICATION_WINDOW_YEARS + 1}-01-01`,
@@ -4015,9 +4015,12 @@ function activeWindow() {
 
 function activeWindowYears() {
   const window = activeWindow();
-  const fromYear = Number(String(window.from || "").slice(0, 4));
-  const toYear = Number(String(window.to || "").slice(0, 4));
-  return [Number.isFinite(fromYear) ? fromYear : null, Number.isFinite(toYear) ? toYear : null];
+  return [windowBoundaryYear(window.from), windowBoundaryYear(window.to)];
+}
+
+function windowBoundaryYear(value) {
+  const match = String(value || "").match(/^\d{4}/);
+  return match ? Number(match[0]) : null;
 }
 
 function activeWindowLabel() {
@@ -4188,30 +4191,72 @@ function yearSetLabel(years) {
 
 function isRecentPublication(pub) {
   const window = state.data?.meta?.recentWindow || {};
-  const fromYear = Number(String(window.from || "").slice(0, 4));
-  const toYear = Number(String(window.to || "").slice(0, 4));
+  const fromYear = windowBoundaryYear(window.from);
+  const toYear = windowBoundaryYear(window.to);
   if (!Number.isFinite(fromYear) || !Number.isFinite(toYear)) return false;
   return Number.isFinite(pub.year) && pub.year >= fromYear && pub.year <= toYear;
 }
 
 function renderYearBars(pubs) {
-  const counts = countBy(pubs, (pub) => pub.year);
-  const startYear = overviewStartYear();
-  const endYear = Math.max(startYear, ...Array.from(counts.keys()).filter((year) => Number.isFinite(year)));
+  const validYears = pubs.map(publicationChartYear).filter(Number.isFinite);
+  if (!validYears.length) {
+    els.yearBars.innerHTML = `<div class="staff-empty">No publication years available for this window.</div>`;
+    return;
+  }
+  const counts = countBy(validYears, (year) => year);
+  const startYear = overviewStartYear(pubs);
+  const endYear = Math.max(startYear, ...validYears);
   const years = [];
   for (let year = startYear; year <= endYear; year += 1) years.push(year);
   const max = Math.max(1, ...years.map((year) => counts.get(year) || 0));
-  els.yearBars.innerHTML = `<div class="year-histogram">
-    ${years.map((year) => {
+  const total = years.reduce((sum, year) => sum + (counts.get(year) || 0), 0);
+  const density = yearChartDensity(years.length);
+  const peakYears = years.filter((year) => (counts.get(year) || 0) === max);
+  const peakLabel = peakYears.slice(0, 3).join(", ");
+  els.yearBars.innerHTML = `<div class="year-chart">
+    <div class="year-chart-scale" aria-hidden="true">
+      <span>${escapeHtml(String(max))}</span>
+      <span>${escapeHtml(String(Math.round(max / 2)))}</span>
+    </div>
+    <div class="year-histogram year-histogram-${density}" style="--year-count:${years.length}" role="img" aria-label="${escapeHtml(`Publications by year, ${publicationWindowLabel()}. Peak ${max} publication${max === 1 ? "" : "s"} in ${peakLabel}.`)}">
+      ${years.map((year, index) => {
       const count = counts.get(year) || 0;
-      const label = year === startYear || year % 5 === 0 ? year : "";
-      const height = count ? Math.max(8, (count / max) * 100) : 0;
+      const label = yearChartLabel(year, index, years);
+      const height = count ? Math.max(4, (count / max) * 100) : 0;
       return `<span class="year-bar" title="${year}: ${count} publication${count === 1 ? "" : "s"}">
-        <i style="height:${height}%"></i>
-        <b>${escapeHtml(label)}</b>
+        <span class="year-bar-stack">
+          <em>${escapeHtml(String(count))}</em>
+          <i style="height:${height}%"></i>
+        </span>
+        <b class="${label ? "" : "year-label-hidden"}">${escapeHtml(label)}</b>
       </span>`;
     }).join("")}
+    </div>
+    <p class="year-chart-note">${escapeHtml(`${total} publication${total === 1 ? "" : "s"} across ${publicationWindowLabel()}; peak ${max} in ${peakLabel}.`)}</p>
   </div>`;
+}
+
+function yearChartDensity(yearCount) {
+  if (yearCount <= 6) return "short";
+  if (yearCount <= 12) return "medium";
+  return "dense";
+}
+
+function yearChartLabel(year, index, years) {
+  if (years.length <= 12) return String(year);
+  const first = years[0];
+  const last = years[years.length - 1];
+  if (years.length <= 22) {
+    if (year === first || year === last) return String(year);
+    return year % 2 === 0 ? String(year) : "";
+  }
+  return year % 5 === 0 ? String(year) : "";
+}
+
+function publicationChartYear(pub) {
+  const year = Number(pub?.year);
+  const maxReasonableYear = new Date().getFullYear() + 1;
+  return Number.isInteger(year) && year >= 1900 && year <= maxReasonableYear ? year : null;
 }
 
 function renderAipBars(pubs) {
