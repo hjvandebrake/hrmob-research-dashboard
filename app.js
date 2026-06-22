@@ -31,12 +31,13 @@ const state = {
   staffTopicMode: "query",
   selectedStaffId: "",
   staffSubpage: "research",
+  collaborationClustersExpanded: false,
 };
 
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260622-collab7";
+const DATA_VERSION = "20260622-collab8";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -47,6 +48,7 @@ const STAFF_SUBPAGES = new Set(["research", "publications", "opportunities"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
 const COLLABORATION_THEME_LIMIT = 6;
+const COLLABORATION_COLLAPSED_CLUSTER_COUNT = 2;
 const COLLABORATION_PERSON_EXPOSURE_SOFT_LIMIT = 1;
 const COLLABORATION_PERSON_EXPOSURE_HARD_LIMIT = 2;
 const COLLABORATION_PAIR_PERSON_SOFT_LIMIT = 2;
@@ -653,7 +655,10 @@ function attachEvents() {
     });
   }
   if (els.collaborationInterestOpportunities) {
-    els.collaborationInterestOpportunities.addEventListener("click", handleCollaborationStaffClick);
+    els.collaborationInterestOpportunities.addEventListener("click", (event) => {
+      if (handleCollaborationClusterToggle(event)) return;
+      handleCollaborationStaffClick(event);
+    });
   }
   if (els.collaborationPairOpportunities) {
     els.collaborationPairOpportunities.addEventListener("click", handleCollaborationStaffClick);
@@ -874,6 +879,14 @@ function handleCollaborationStaffClick(event) {
   state.selectedStaffId = button.dataset.collaborationStaff || "";
   state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "research");
   setTab("staff");
+}
+
+function handleCollaborationClusterToggle(event) {
+  const button = event.target.closest("[data-collaboration-cluster-toggle]");
+  if (!button) return false;
+  state.collaborationClustersExpanded = !state.collaborationClustersExpanded;
+  renderCollaboration();
+  return true;
 }
 
 function parseSubmittedLines(value) {
@@ -1934,7 +1947,18 @@ function renderCollaborationInterestOpportunities(opportunities) {
     els.collaborationInterestOpportunities.innerHTML = `<div class="staff-empty">No collaboration clusters match the current staff filter yet.</div>`;
     return;
   }
-  els.collaborationInterestOpportunities.innerHTML = opportunities.map((row) => `
+  const expanded = Boolean(state.collaborationClustersExpanded);
+  const visibleRows = expanded ? opportunities : opportunities.slice(0, COLLABORATION_COLLAPSED_CLUSTER_COUNT);
+  const hiddenCount = Math.max(opportunities.length - visibleRows.length, 0);
+  const toggle = opportunities.length > COLLABORATION_COLLAPSED_CLUSTER_COUNT
+    ? `<div class="collaboration-cluster-toggle">
+        <button class="section-link" type="button" data-collaboration-cluster-toggle aria-expanded="${expanded ? "true" : "false"}">
+          ${expanded ? "Show only the first 2 clusters" : `Show all ${opportunities.length} clusters`}
+        </button>
+        <span>${expanded ? "All conversation clusters are visible." : `${hiddenCount} more cluster${hiddenCount === 1 ? "" : "s"} hidden.`}</span>
+      </div>`
+    : "";
+  els.collaborationInterestOpportunities.innerHTML = `${visibleRows.map((row) => `
     <article class="collaboration-card">
       <div class="collaboration-card-head">
         <div>
@@ -1960,7 +1984,7 @@ function renderCollaborationInterestOpportunities(opportunities) {
         </div>
       </div>
     </article>
-  `).join("");
+  `).join("")}${toggle}`;
 }
 
 function renderCollaborationPerson(candidate) {

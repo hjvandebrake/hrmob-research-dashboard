@@ -1587,6 +1587,19 @@ button.word-cloud-item {
   display: grid;
   gap: 14px;
 }
+.collaboration-cluster-toggle {
+  align-items: center;
+  border-top: 1px solid var(--ink-200);
+  color: var(--ink-500);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  gap: 10px;
+  padding-top: 10px;
+}
+.collaboration-cluster-toggle span {
+  line-height: 1.35;
+}
 .collaboration-card,
 .collaboration-grant-card {
   border: 1px solid var(--ink-200);
