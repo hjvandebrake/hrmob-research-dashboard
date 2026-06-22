@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621-0833">
+  <link rel="stylesheet" href="styles.css?v=20260622-collab2">
 </head>
 <body>
   <nav class="nav">
@@ -20,6 +20,7 @@
       <div class="nav-tabs" aria-label="Dashboard sections">
         <button class="nav-tab on" data-tab="overview">Overview</button>
         <button class="nav-tab" data-tab="expertise">Expertise</button>
+        <button class="nav-tab" data-tab="collaboration">Collaboration</button>
         <button class="nav-tab" data-tab="staff">Staff</button>
         <button class="nav-tab" data-tab="publications">Publications</button>
         <button class="nav-tab" data-tab="network">Network</button>
@@ -111,6 +112,47 @@
           <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>
           <a href="#contact">Suggest a correction</a>
         </div>
+      </div>
+    </section>
+
+    <section id="view-collaboration" class="sec" hidden>
+      <div class="wrap">
+        <div class="sec-head compact">
+          <div>
+            <p class="eye">Collaboration opportunities</p>
+            <h2 class="h2">Shared interests, expertise, and grant angles</h2>
+          </div>
+          <a class="section-link" href="#resources">Open grant resources</a>
+        </div>
+        <div id="collaboration-summary" class="collaboration-summary"></div>
+        <section class="collaboration-section">
+          <div class="overview-panel-head">
+            <div>
+              <p class="eye">Staff-submitted interests</p>
+              <h3 class="overview-h3">Concrete collaboration leads</h3>
+            </div>
+          </div>
+          <div id="collaboration-interest-opportunities" class="collaboration-card-list"></div>
+        </section>
+        <section class="collaboration-section">
+          <div class="overview-panel-head">
+            <div>
+              <p class="eye">Grant opportunities</p>
+              <h3 class="overview-h3">Collaborative calls to build around</h3>
+            </div>
+            <a class="section-link" href="#resources">Grant workbook</a>
+          </div>
+          <div id="collaboration-grant-opportunities" class="collaboration-grant-grid"></div>
+        </section>
+        <section class="collaboration-section">
+          <div class="overview-panel-head">
+            <div>
+              <p class="eye">Network suggestions</p>
+              <h3 class="overview-h3">Additional people links</h3>
+            </div>
+          </div>
+          <div id="collaboration-pair-opportunities" class="suggestion-list collaboration-pair-list"></div>
+        </section>
       </div>
     </section>
 
@@ -318,22 +360,34 @@
           </aside>
           <section class="staff-detail">
             <div id="staff-profile"></div>
-            <h3 class="sub-h2">Topic signals</h3>
-            <div id="staff-topics" class="topic-cloud"></div>
-            <h3 class="sub-h2">Potential research links</h3>
-            <div id="staff-suggestions" class="suggestion-list"></div>
-            <h3 class="sub-h2">Grant fit signals</h3>
-            <div id="staff-grant-fit" class="grant-fit-list"></div>
-            <div id="staff-related"></div>
-            <div class="sec-head compact staff-pub-head">
-              <div>
-                <p id="staff-publication-eye" class="eye">Publications</p>
-                <h3 id="staff-publication-title" class="h2 staff-h2">Selected staff publications</h3>
+            <nav id="staff-subnav" class="staff-subnav" aria-label="Staff profile sections"></nav>
+            <section id="staff-subpage-research" class="staff-subpage">
+              <div class="staff-owned-grid">
+                <section id="staff-current-work" class="staff-owned-panel"></section>
+                <section id="staff-collaboration-interests" class="staff-owned-panel"></section>
               </div>
-            </div>
-            <div class="table-wrap">
-              <table id="staff-publication-table"></table>
-            </div>
+              <h3 class="sub-h2">Topic signals</h3>
+              <div id="staff-topics" class="topic-cloud"></div>
+              <h3 class="sub-h2">Potential research links</h3>
+              <div id="staff-suggestions" class="suggestion-list"></div>
+            </section>
+            <section id="staff-subpage-publications" class="staff-subpage">
+              <div id="staff-related"></div>
+              <div class="sec-head compact staff-pub-head">
+                <div>
+                  <p id="staff-publication-eye" class="eye">Publications</p>
+                  <h3 id="staff-publication-title" class="h2 staff-h2">Selected staff publications</h3>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table id="staff-publication-table"></table>
+              </div>
+            </section>
+            <section id="staff-subpage-opportunities" class="staff-subpage">
+              <h3 class="sub-h2">Grant fit signals</h3>
+              <div id="staff-grant-fit" class="grant-fit-list"></div>
+              <div id="staff-owned-resources" class="staff-owned-resources"></div>
+            </section>
           </section>
         </div>
       </div>
@@ -460,6 +514,44 @@
             <p class="contact-line"><a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a></p>
             <p class="quiet-contact-copy">Suggestions are saved as GitHub issues and reviewed before any dashboard change is made.</p>
           </aside>
+          <section class="overview-panel contact-staff-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Staff input</p>
+                <h3 class="overview-h3">Profile fields</h3>
+              </div>
+            </div>
+            <form id="staff-update-form" class="feedback-form staff-update-form">
+              <div class="feedback-fields staff-update-fields">
+                <label>
+                  <span>Your name</span>
+                  <input id="staff-update-name" type="text" autocomplete="name" placeholder="Name">
+                </label>
+                <label>
+                  <span>Staff member</span>
+                  <select id="staff-update-person">
+                    <option value="">Select staff member</option>
+                  </select>
+                </label>
+              </div>
+              <label class="feedback-comment">
+                <span>Currently working on</span>
+                <textarea id="staff-update-current" rows="4" placeholder="Projects, papers, datasets, grants, or themes currently in progress"></textarea>
+              </label>
+              <label class="feedback-comment">
+                <span>Interested in collaborating on</span>
+                <textarea id="staff-update-collaboration" rows="4" placeholder="Keywords, topics, questions, methods, or concrete collaboration ideas"></textarea>
+              </label>
+              <label class="feedback-comment">
+                <span>Resources to share</span>
+                <textarea id="staff-update-resources" rows="4" placeholder="Datasets, slides, workbooks, templates, methods, or links"></textarea>
+              </label>
+              <div class="feedback-actions">
+                <button class="primary-action" type="submit">Save profile update</button>
+              </div>
+              <p id="staff-update-status" class="feedback-status" aria-live="polite"></p>
+            </form>
+          </section>
         </div>
       </div>
     </section>
@@ -492,6 +584,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260621-0833"></script>
+  <script src="app.js?v=20260622-collab2"></script>
 </body>
 </html>

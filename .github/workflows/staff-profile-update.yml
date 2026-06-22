@@ -1,0 +1,54 @@
+name: Staff profile update intake
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  apply-staff-profile-update:
+    if: startsWith(github.event.issue.title, '[Staff profile update]')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out dashboard
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply issue payload
+        id: apply
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/apply_staff_profile_update.py
+
+      - name: Open or update pull request
+        if: steps.apply.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          branch="staff-profile-update-${ISSUE_NUMBER}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add data/staff-contributions.json
+          git commit -m "Apply staff profile update from issue #${ISSUE_NUMBER}"
+          git push --force-with-lease origin "$branch"
+
+          existing_pr="$(gh pr list --head "$branch" --json number --jq '.[0].number')"
+          body="Applies the structured staff profile update submitted in #${ISSUE_NUMBER}."
+          if [ -n "$existing_pr" ]; then
+            gh pr edit "$existing_pr" --body "$body"
+          else
+            gh pr create --title "$ISSUE_TITLE" --body "$body"
+          fi
+
+          gh issue comment "$ISSUE_NUMBER" --body "I created or updated a pull request with this staff profile update."
+
