@@ -35,7 +35,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260622-collab5";
+const DATA_VERSION = "20260622-collab6";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -364,8 +364,6 @@ function cacheElements() {
   els.staffUpdateCurrent = document.getElementById("staff-update-current");
   els.staffUpdateCollaboration = document.getElementById("staff-update-collaboration");
   els.staffUpdateResources = document.getElementById("staff-update-resources");
-  els.staffUpdateFiles = document.getElementById("staff-update-files");
-  els.staffUpdateFileList = document.getElementById("staff-update-file-list");
   els.staffUpdateStatus = document.getElementById("staff-update-status");
   els.resourceOpportunities = document.getElementById("resource-opportunities");
   els.resourceRecentCalls = document.getElementById("resource-recent-calls");
@@ -554,9 +552,6 @@ function attachEvents() {
   if (els.staffUpdateForm) {
     els.staffUpdateForm.addEventListener("submit", handleStaffUpdateSubmit);
   }
-  if (els.staffUpdateFiles) {
-    els.staffUpdateFiles.addEventListener("change", renderStaffUpdateFileList);
-  }
   if (els.feedbackEmailLink) {
     els.feedbackEmailLink.addEventListener("click", () => {
       els.feedbackEmailLink.href = feedbackMailtoHref();
@@ -658,29 +653,6 @@ function handleFeedbackSubmit(event) {
   }
 }
 
-function staffUpdateSelectedFiles() {
-  return Array.from(els.staffUpdateFiles?.files || []).map((file) => ({
-    name: file.name,
-    size: file.size,
-    type: file.type || "",
-  }));
-}
-
-function formatFileSize(bytes) {
-  if (!Number.isFinite(bytes)) return "size unknown";
-  if (bytes < 1024) return `${bytes} B`;
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
-
-function renderStaffUpdateFileList() {
-  if (!els.staffUpdateFileList) return;
-  const files = staffUpdateSelectedFiles();
-  els.staffUpdateFileList.textContent = files.length
-    ? files.map((file) => `${file.name} (${formatFileSize(file.size)})`).join("; ")
-    : "No files selected.";
-}
-
 function handleStaffUpdateSubmit(event) {
   event.preventDefault();
   const submittedBy = (els.staffUpdateName?.value || "").trim();
@@ -688,23 +660,19 @@ function handleStaffUpdateSubmit(event) {
   const currentWork = (els.staffUpdateCurrent?.value || "").trim();
   const collaboration = (els.staffUpdateCollaboration?.value || "").trim();
   const resources = (els.staffUpdateResources?.value || "").trim();
-  const resourceFiles = staffUpdateSelectedFiles();
   if (!personId) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Select a staff member first.";
     els.staffUpdatePerson?.focus();
     return;
   }
-  if (!currentWork && !collaboration && !resources && !resourceFiles.length) {
+  if (!currentWork && !collaboration && !resources) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Add at least one profile update field.";
     els.staffUpdateCurrent?.focus();
     return;
   }
   const person = peopleById().get(personId);
   const personLabel = person ? `${person.display} - ${person.name}` : personId;
-  const resourceLines = [
-    ...parseSubmittedLines(resources),
-    ...resourceFiles.map((file) => `File attachment: ${file.name} - Attachment selected in the staff update form; attach or host the file before publishing it as a dashboard download.`),
-  ];
+  const resourceLines = parseSubmittedLines(resources);
   const payload = {
     personId,
     staffMember: personLabel,
@@ -712,13 +680,9 @@ function handleStaffUpdateSubmit(event) {
     currentWork: parseSubmittedLines(currentWork),
     collaborationInterests: parseSubmittedLines(collaboration),
     resources: resourceLines,
-    resourceFiles,
     dashboardUrl: window.location.href,
     submittedAt: new Date().toISOString(),
   };
-  const fileLines = resourceFiles.length
-    ? resourceFiles.map((file) => `- ${file.name} (${formatFileSize(file.size)}${file.type ? `, ${file.type}` : ""})`)
-    : ["Not provided"];
   const body = [
     `Submitted by: ${submittedBy || "Not provided"}`,
     `Staff member: ${personLabel}`,
@@ -734,10 +698,7 @@ function handleStaffUpdateSubmit(event) {
     "## Resources to share",
     resources || "Not provided",
     "",
-    "## Resource files selected",
-    ...fileLines,
-    "",
-    resourceFiles.length ? "Attach the selected file(s) to this GitHub issue before submitting. File contents are not transferred automatically from the dashboard." : "",
+    "For datasets, slide decks, workbooks, or other files, email Joost directly at h.j.van.de.brake@rug.nl. File uploads are not accepted through the dashboard.",
     "",
     "<!-- staff-profile-update-json",
     JSON.stringify(payload, null, 2),
@@ -752,9 +713,7 @@ function handleStaffUpdateSubmit(event) {
   const url = `${FEEDBACK_ISSUE_URL}?${params.toString()}`;
   window.open(url, "_blank", "noopener");
   if (els.staffUpdateStatus) {
-    els.staffUpdateStatus.textContent = resourceFiles.length
-      ? "A GitHub issue draft opened. Attach the selected file(s) there before submitting."
-      : "A GitHub issue draft opened. Submit it there to save the profile update.";
+    els.staffUpdateStatus.textContent = "A GitHub issue draft opened. Submit it there to save the profile update.";
   }
 }
 
