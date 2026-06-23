@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260623-phds3";
+const DATA_VERSION = "20260623-overview-expertise";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -446,6 +446,8 @@ function cacheElements() {
   els.benchmarkMethodNote = document.getElementById("benchmark-method-note");
   els.benchmarkVariety = document.getElementById("benchmark-variety");
   els.overviewTopicCloud = document.getElementById("overview-topic-cloud");
+  els.overviewExpertiseDetails = document.getElementById("overview-expertise-details");
+  els.overviewExpertiseCollapse = document.getElementById("overview-expertise-collapse");
   els.overviewJournalList = document.getElementById("overview-journal-list");
   els.journalPublishedList = document.getElementById("journal-published-list");
   els.journalOpenAccessList = document.getElementById("journal-open-access-list");
@@ -722,26 +724,38 @@ function attachEvents() {
       els.feedbackEmailLink.href = feedbackMailtoHref();
     });
   }
-  els.expertiseSearch.addEventListener("input", () => {
-    state.expertiseSearch = els.expertiseSearch.value.trim();
-    state.expertiseTopic = state.expertiseSearch;
-    state.expertiseMode = "query";
-    renderExpertise();
-  });
-  els.expertiseWordcloud.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-topic-query]");
-    if (!button) return;
-    state.expertiseTopic = button.dataset.topicQuery;
-    state.expertiseSearch = state.expertiseTopic;
-    state.expertiseMode = button.dataset.topicKind || "phrase";
-    els.expertiseSearch.value = state.expertiseTopic;
-    renderExpertise();
-  });
-  els.overviewTopicCloud.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-topic-query]");
-    if (!button) return;
-    showTopicOverlay(button.dataset.topicQuery, button.dataset.topicKind || "phrase");
-  });
+  if (els.expertiseSearch) {
+    els.expertiseSearch.addEventListener("input", () => {
+      state.expertiseSearch = els.expertiseSearch.value.trim();
+      state.expertiseTopic = state.expertiseSearch;
+      state.expertiseMode = "query";
+      renderExpertise();
+    });
+  }
+  if (els.expertiseWordcloud) {
+    els.expertiseWordcloud.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-topic-query]");
+      if (!button) return;
+      state.expertiseTopic = button.dataset.topicQuery;
+      state.expertiseSearch = state.expertiseTopic;
+      state.expertiseMode = button.dataset.topicKind || "phrase";
+      if (els.expertiseSearch) els.expertiseSearch.value = state.expertiseTopic;
+      renderExpertise();
+    });
+  }
+  if (els.overviewTopicCloud) {
+    els.overviewTopicCloud.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-topic-query]");
+      if (!button) return;
+      setOverviewExpertiseSelection(button.dataset.topicQuery, button.dataset.topicKind || "phrase");
+    });
+  }
+  if (els.overviewExpertiseCollapse) {
+    els.overviewExpertiseCollapse.addEventListener("click", clearOverviewExpertiseSelection);
+  }
+  if (els.overviewExpertiseDetails) {
+    els.overviewExpertiseDetails.addEventListener("click", handleExpertiseStaffClick);
+  }
   if (els.currentPhdList) {
     els.currentPhdList.addEventListener("click", handleInlineStaffLink);
   }
@@ -768,14 +782,9 @@ function attachEvents() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !els.topicOverlay.hidden) closeTopicOverlay();
   });
-  els.expertiseStaffResults.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-expertise-staff-id]");
-    if (!button) return;
-    state.selectedStaffId = button.dataset.expertiseStaffId;
-    state.staffTopicQuery = state.expertiseSearch || state.expertiseTopic || "";
-    state.staffTopicMode = state.expertiseMode || "query";
-    setTab("staff");
-  });
+  if (els.expertiseStaffResults) {
+    els.expertiseStaffResults.addEventListener("click", handleExpertiseStaffClick);
+  }
   els.staffList.addEventListener("click", (event) => {
     const button = event.target.closest("[data-staff-id]");
     if (!button) return;
@@ -804,6 +813,17 @@ function handleInlineStaffLink(event) {
   event.preventDefault();
   state.selectedStaffId = button.dataset.staffId || "";
   state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "phds");
+  setTab("staff");
+}
+
+function handleExpertiseStaffClick(event) {
+  const button = event.target.closest("[data-expertise-staff-id]");
+  if (!button) return;
+  event.preventDefault();
+  state.selectedStaffId = button.dataset.expertiseStaffId || "";
+  state.staffTopicQuery = button.dataset.expertiseQuery || state.expertiseSearch || state.expertiseTopic || "";
+  state.staffTopicMode = button.dataset.expertiseMode || state.expertiseMode || "query";
+  state.staffSubpage = "research";
   setTab("staff");
 }
 
@@ -1063,13 +1083,14 @@ async function loadDeferredData(keys) {
 }
 
 function validTab(tab) {
-  return ["overview", "staff", "phds", "expertise", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
+  return ["overview", "staff", "phds", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
 }
 
 function routeFromHash() {
   const raw = decodeURIComponent((location.hash || "#overview").replace(/^#/, ""));
   const [tab, detail = "", subdetail = ""] = raw.split("/");
-  return { tab: validTab(tab) ? tab : "overview", detail, subdetail };
+  const normalizedTab = validTab(tab) ? tab : "overview";
+  return { tab: normalizedTab, detail, subdetail, invalidTab: normalizedTab !== tab };
 }
 
 function routeHash() {
@@ -1092,6 +1113,7 @@ function applyRouteFromHash() {
   }
   if (route.tab === "network") state.networkPersonId = route.detail || "";
   setTab(route.tab, { updateHistory: false });
+  if (route.invalidTab) updateRoute({ replace: true });
 }
 
 function normalizeStaffSubpage(value) {
@@ -1122,7 +1144,6 @@ function renderAll() {
   renderMetrics();
   renderStaff();
   renderPhds();
-  renderExpertise();
   renderCollaboration();
   renderPublications();
   renderNetwork();
@@ -1136,7 +1157,6 @@ function renderCurrentView() {
   else if (state.tab === "metrics") renderMetrics();
   else if (state.tab === "staff") renderStaff();
   else if (state.tab === "phds") renderPhds();
-  else if (state.tab === "expertise") renderExpertise();
   else if (state.tab === "collaboration") renderCollaboration();
   else if (state.tab === "publications") renderPublications();
   else if (state.tab === "network") renderNetwork();
@@ -4395,7 +4415,69 @@ function renderAipBars(pubs) {
 }
 
 function renderOverviewTopicCloud(pubs) {
-  renderWordCloud(els.overviewTopicCloud, globalTopicSignals(pubs).slice(0, 24), { clickable: true });
+  renderWordCloud(els.overviewTopicCloud, globalTopicSignals(pubs).slice(0, 18), {
+    selected: state.expertiseTopic,
+    clickable: true,
+  });
+  renderOverviewExpertiseDetails();
+}
+
+function setOverviewExpertiseSelection(query, mode = "phrase") {
+  state.expertiseTopic = query || "";
+  state.expertiseSearch = "";
+  state.expertiseMode = mode || "phrase";
+  renderOverviewTopicCloud(overviewPublications());
+}
+
+function clearOverviewExpertiseSelection() {
+  state.expertiseTopic = "";
+  state.expertiseSearch = "";
+  state.expertiseMode = "query";
+  renderOverviewTopicCloud(overviewPublications());
+}
+
+function renderOverviewExpertiseDetails() {
+  if (!els.overviewExpertiseDetails) return;
+  const query = state.expertiseTopic || "";
+  if (!query) {
+    els.overviewExpertiseDetails.hidden = true;
+    els.overviewExpertiseDetails.innerHTML = "";
+    if (els.overviewExpertiseCollapse) els.overviewExpertiseCollapse.hidden = true;
+    return;
+  }
+  const mode = state.expertiseMode || "query";
+  const bundle = expertiseBundle(query, mode);
+  const topicPubs = topicPublicationMatches(bundle);
+  const rows = rankedStaff(bundle)
+    .filter((row) => row.topicPubs > 0 || row.topicContributions > 0)
+    .slice(0, 6);
+  els.overviewExpertiseDetails.hidden = false;
+  if (els.overviewExpertiseCollapse) els.overviewExpertiseCollapse.hidden = false;
+  els.overviewExpertiseDetails.innerHTML = `
+    <div class="overview-expertise-summary">
+      <span>Selected expertise</span>
+      <strong>${escapeHtml(bundle.raw)}</strong>
+      <em>${topicPubs.length} publication${topicPubs.length === 1 ? "" : "s"} - ${rows.length} staff member${rows.length === 1 ? "" : "s"}</em>
+    </div>
+    <div class="overview-expertise-grid">
+      <section class="overview-expertise-column">
+        <h4>People to start with</h4>
+        <div class="overview-expertise-people">
+          ${rows.length ? rows.map((row) => `
+            <article class="overview-expertise-person">
+              <button class="person-link" type="button" data-expertise-staff-id="${escapeHtml(row.person.id)}" data-expertise-query="${escapeHtml(bundle.raw)}" data-expertise-mode="${escapeHtml(mode)}">${escapeHtml(row.person.display)}</button>
+              <p>${escapeHtml(staffEvidenceSummary(row))}${row.topicPubs ? ` - ${escapeHtml(formatPercent(row.topicPubPct))} of counted publications` : ""}</p>
+            </article>
+          `).join("") : `<p class="small-muted">No staff-level matches under the current filters.</p>`}
+        </div>
+      </section>
+      <section class="overview-expertise-column">
+        <h4>Recent matching publications</h4>
+        <div id="overview-expertise-publication-list" class="topic-publication-list overview-expertise-publications"></div>
+      </section>
+    </div>
+  `;
+  renderTopicPublicationList(document.getElementById("overview-expertise-publication-list"), topicPubs.slice(0, 5));
 }
 
 function renderOverviewJournals(journals) {
