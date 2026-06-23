@@ -704,6 +704,64 @@ td.muted { color: var(--ink-400); }
   font-size: 0.75rem;
   line-height: 1.35;
 }
+.current-phd-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.current-phd-items {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.current-phd-card {
+  border: 1px solid var(--ink-200);
+  padding: 11px 12px;
+}
+.current-phd-card-pending {
+  border-style: dashed;
+}
+.current-phd-supervisors {
+  color: var(--ink-500);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  font-size: 0.74rem;
+  line-height: 1.35;
+  margin: 7px 0 0;
+}
+.current-phd-supervisors span {
+  display: inline-flex;
+  gap: 4px;
+}
+.current-phd-supervisors em {
+  color: var(--ink-400);
+  font-style: normal;
+}
+.current-phd-person {
+  font-size: inherit;
+}
+.current-phd-source {
+  margin: 7px 0 0;
+  font-size: 0.72rem;
+}
+.current-phd-source a {
+  border-bottom: 1px dotted var(--red);
+  color: var(--red);
+  font-weight: 700;
+}
+.current-phd-extra {
+  border-top: 1px dashed var(--ink-200);
+  margin-top: 2px;
+  padding-top: 8px;
+}
+.current-phd-extra summary {
+  color: var(--red);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 .grant-link,
 .source-link {
   color: var(--red);
@@ -1394,6 +1452,14 @@ td.muted { color: var(--ink-400); }
 }
 .staff-metrics-bottom {
   margin-bottom: 0;
+}
+.staff-current-phd-projects {
+  border-top: 1px solid var(--ink-200);
+  margin-bottom: 22px;
+  padding-top: 14px;
+}
+.staff-current-phd-list {
+  margin-top: 10px;
 }
 .staff-owned-grid {
   display: grid;

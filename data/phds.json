@@ -2,7 +2,10 @@
   "meta": {
     "generatedOn": "2026-06-06",
     "sourceNote": "Initial source-backed list of defended PhD theses where supplied department members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
-    "scope": "Completed/defended PhDs only; committee/examiner roles are excluded."
+    "scope": "Completed/defended PhDs only; committee/examiner roles are excluded.",
+    "currentProjectsGeneratedOn": "2026-06-23",
+    "currentProjectsSourceNote": "Ongoing OB PhD project titles are taken from the public RUG OB PhD candidates page (last modified 2026-02-05 where listed). Supervisor mappings are taken from the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23.",
+    "currentProjectsScope": "Current/ongoing OB PhD projects; defended theses remain in theses[]."
   },
   "theses": [
     {
@@ -14,8 +17,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"},
-        {"personId": "SB", "role": "Co-supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "SB",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/objectification-in-the-leader-follower-relationship"
@@ -29,9 +38,18 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"},
-        {"personId": "SB", "role": "Co-supervisor"},
-        {"personId": "YY", "role": "Co-supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "SB",
+          "role": "Co-supervisor"
+        },
+        {
+          "personId": "YY",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/overcoming-challenges-in-team-absorption-of-external-information-"
@@ -45,9 +63,18 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"},
-        {"personId": "JS", "role": "Supervisor"},
-        {"personId": "JJ", "role": "Supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "JJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/cracked-ceilings-unstable-footing-persistent-risks-in-womens-repr/"
@@ -61,7 +88,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/taking-the-helm-in-dire-straits-leadership-in-times-of-crisis/"
@@ -75,7 +105,10 @@
       "institution": "University of Groningen",
       "department": "Innovation & Organisation",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/beyond-the-contract-exploring-the-multi-faceted-nature-of-governa"
@@ -89,8 +122,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"},
-        {"personId": "LM", "role": "Co-supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "LM",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/synthesizing-and-extending-behavioral-research-on-boards-of-direc"
@@ -104,8 +143,14 @@
       "institution": "University of Groningen",
       "department": "Economics and Business",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"},
-        {"personId": "MR", "role": "Supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "MR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2024?hfId=122016&lang=en"
@@ -119,8 +164,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"},
-        {"personId": "TDV", "role": "Co-supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "TDV",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/communication-markers-of-resilience-activity-timing-and-mechanism"
@@ -134,7 +185,10 @@
       "institution": "University of Groningen",
       "department": "Global Economics & Management",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-productivity-puzzle-management-practices-and-leadership/"
@@ -148,8 +202,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"},
-        {"personId": "JS", "role": "Supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/environmental-social-and-governance-demands-in-the-boardroom-expl"
@@ -163,8 +223,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JDB", "role": "Supervisor"},
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "JDB",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/needs-based-crafting-the-antecedents-and-outcomes-of-employees-cr/"
@@ -178,7 +244,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-creative-state-of-mind-penetrating-creativity-in-the-here-and/"
@@ -192,7 +261,10 @@
       "institution": "University of Groningen",
       "department": "Innovation & Organisation",
       "roles": [
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/influence-at-the-upper-echelon-an-in-depth-analysis-of-boards-and"
@@ -206,7 +278,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/understanding-acts-of-creativity-an-examination-of-the-creative-p"
@@ -220,7 +295,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JDB", "role": "Supervisor"}
+        {
+          "personId": "JDB",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/in-need-of-leisure-investigating-the-relationship-between-off-job"
@@ -234,8 +312,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"},
-        {"personId": "YY", "role": "Co-supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "YY",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/exploiting-individual-creative-inputs-for-team-creativity-a-role-"
@@ -249,7 +333,10 @@
       "institution": "University of Groningen",
       "department": "Health professions / ethics",
       "roles": [
-        {"personId": "LM", "role": "Co-supervisor"}
+        {
+          "personId": "LM",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/antecedents-of-ethical-decision-making-by-physician-assistants-an/"
@@ -263,8 +350,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"},
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-balancing-act-of-effective-supervision-understanding-the-rela/"
@@ -278,8 +371,14 @@
       "institution": "University of Groningen",
       "department": "Economics and Business",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"},
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2020?hfId=117569&lang=en"
@@ -293,7 +392,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/individual-approaches-to-workplace-tensions-implications-for-crea/"
@@ -307,8 +409,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"},
-        {"personId": "JJ", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "JJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/power-in-organizational-life-an-investigation-of-how-stable-and-u"
@@ -322,8 +430,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"},
-        {"personId": "FR", "role": "Supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "FR",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/individual-employees-multiple-team-membership-a-double-edged-swor/"
@@ -337,7 +451,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/dependent-leaders-role-specific-challenges-for-middle-managers/"
@@ -351,7 +468,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/upward-voice-and-influence"
@@ -365,8 +485,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"},
-        {"personId": "BN", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/why-we-gossip-a-functional-perspective-on-the-self-relevance-of-g/"
@@ -380,8 +506,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"},
-        {"personId": "GVV", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/shared-leadership-in-teams-a-theoretical-and-empirical-investigat"
@@ -395,8 +527,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "BN", "role": "Supervisor"},
-        {"personId": "OJ", "role": "Supervisor"}
+        {
+          "personId": "BN",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/rethinking-the-leadership-employee-creativity-relationship-a-regu/"
@@ -410,7 +548,10 @@
       "institution": "University of Groningen",
       "department": "Economics and Business",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/news/archief2015/promoties/promoties-2015?hfId=100884&lang=en"
@@ -424,8 +565,14 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"},
-        {"personId": "FR", "role": "Co-supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "FR",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-bright-side-of-hierarchies-the-origins-and-consequences-of-so/"
@@ -439,7 +586,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "LM", "role": "Co-supervisor"}
+        {
+          "personId": "LM",
+          "role": "Co-supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/contagious-business-when-we-copy-unethical-behavior/"
@@ -453,7 +603,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/leaders-reactions-to-employee-creativity-an-achievement-goal-appr"
@@ -467,9 +620,18 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"},
-        {"personId": "JS", "role": "Supervisor"},
-        {"personId": "GVV", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        },
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/leader-self-enhancement-an-interpersonal-approach"
@@ -483,7 +645,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "JS", "role": "Supervisor"}
+        {
+          "personId": "JS",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/making-a-difference-about-the-mechanism-underlying-effective-lead/"
@@ -497,7 +662,10 @@
       "institution": "University of Groningen",
       "department": "Organisational Behaviour",
       "roles": [
-        {"personId": "GVV", "role": "Supervisor"}
+        {
+          "personId": "GVV",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/asymmetry-in-task-dependence-among-team-members/"
@@ -511,10 +679,526 @@
       "institution": "University of Groningen",
       "department": "Social Psychology",
       "roles": [
-        {"personId": "OJ", "role": "Supervisor"}
+        {
+          "personId": "OJ",
+          "role": "Supervisor"
+        }
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/information-exchange-examined-an-interpersonal-account-of-achieve/"
+    }
+  ],
+  "currentProjects": [
+    {
+      "id": "current-phd-sabine-van-de-beek",
+      "candidate": "Sabine van de Beek",
+      "displayCandidate": "Beek, Sabine van de",
+      "title": "Autonomy in Context: Understanding Employee Perceptions in Flexible Work Arrangements",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "JDB",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "MA",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://rug.nl/staff/s.van.de.beek/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-helena-bieselt",
+      "candidate": "Helena Bieselt",
+      "displayCandidate": "Bieselt, Helena",
+      "title": "Gender ratio and power dynamics in mixed-gender teams: implications for gender inequality in organizations",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "BN",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "name": "a.c.homan@uva.nl",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2",
+          "kind": "external",
+          "email": "a.c.homan@uva.nl"
+        },
+        {
+          "personId": "JO",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/h.e.bieselt/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-franzisca-fastje",
+      "candidate": "Franzisca Fastje",
+      "displayCandidate": "Fastje, Franzisca",
+      "title": "The antecedents and consequences of hybrid work arangements: a multi-level perspective",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "GVV",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "JVB",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "name": "Peter Essens",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/f.fastje/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-george-fraros",
+      "candidate": "George Fraros",
+      "displayCandidate": "Fraros, George",
+      "title": "Moving towards sustainability: balancing additive and subtractive innovation",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "BN",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "name": "Diana Rus",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2",
+          "kind": "external"
+        },
+        {
+          "name": "Eric Rietzschel",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/g.fraros/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-yezi-kang",
+      "candidate": "Yezi Kang",
+      "displayCandidate": "Kang, Yezi",
+      "title": "How do newcomers get better socialized over time through their interpersonal relationships?",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "FR",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "GVV",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "personId": "NN",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/y.kang/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-tijn-van-lier",
+      "candidate": "Tijn van Lier",
+      "displayCandidate": "Lier, Tijn van",
+      "title": "Who does what teamwork in self-managing teams?",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "OJ",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "TDV",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "name": "k.n.veth@pl.hanze.nl",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external",
+          "email": "k.n.veth@pl.hanze.nl"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://rug.nl/staff/t.van.lier/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-giulio-ockels",
+      "candidate": "Giulio Ockels",
+      "displayCandidate": "Ockels, Giulio",
+      "title": "The importance of legitimacy in disentangling the complex relationship between control, trust, and performance in teams",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "GVV",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "TDV",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-herman-paryono",
+      "candidate": "Herman Paryono",
+      "displayCandidate": "Paryono, Herman",
+      "title": "Toward a theory of multiple-role configurations",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "JDB",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "JVB",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "personId": "TDV",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/h.y.paryono/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-yi-qu",
+      "candidate": "Yi Qu",
+      "displayCandidate": "Qu, Yi",
+      "title": "Blessing or Curse: Work from Home and Gender (In)Equality in Upward Mobility",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "FR",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "JS",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "personId": "YY",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/y.qu/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-bishal-saha",
+      "candidate": "Bishal Saha",
+      "displayCandidate": "Saha, Bishal",
+      "title": "Project title to be confirmed",
+      "titleStatus": "to_be_confirmed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "SB",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "GVV",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "personId": "JVB",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "Local supervisor workbook; RUG staff directory",
+      "sourceUrl": "https://www.rug.nl/about-ug/practical-matters/find-an-expert?discipline=Human+Resource+Management+%26+Organizational+Behaviour&lang=en",
+      "profileUrl": "",
+      "notes": [
+        "Project title not listed on the RUG OB PhD candidates page; supervisor data from local workbook.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-tunahan-sari",
+      "candidate": "Tunahan Sari",
+      "displayCandidate": "Sari, Tunahan",
+      "title": "Navigating Diversity: Exploring social interactions between LGB and heterosexual team members through the meta-stereotype lens",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "LM",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "JVB",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "personId": "NN",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/t.sari/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-xiaowen-tang",
+      "candidate": "Xiaowen Tang",
+      "displayCandidate": "Tang, Xiaowen",
+      "title": "Project title to be announced",
+      "titleStatus": "to_be_confirmed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "FR",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "NN",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "name": "Wendy Smits (cbs)",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/xiaowen.tang/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-gijs-de-vos",
+      "candidate": "Gijs de Vos",
+      "displayCandidate": "Vos, Gijs de",
+      "title": "Project title to be announced",
+      "titleStatus": "to_be_confirmed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "JS",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "name": "Harry Garretsen",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2",
+          "kind": "external"
+        },
+        {
+          "name": "Dennis Veltrop",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/g.h.f.j.de.vos/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-frederik-wermser",
+      "candidate": "Frederik Wermser",
+      "displayCandidate": "Wermser, Frederik",
+      "title": "Effects of identification with multiple subgroups versus superordinate categories on post-integration identification: a longitudinal research of identification processes during organizational integration",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "name": "Eric Molleman",
+          "role": "Promotor",
+          "slot": "Promotor",
+          "kind": "external"
+        },
+        {
+          "name": "Susanne Täuber",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2",
+          "kind": "external"
+        },
+        {
+          "name": "Peter Essens",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/f.l.wermser/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-sylvia-xu",
+      "candidate": "Sylvia Xu",
+      "displayCandidate": "Xu, Sylvia",
+      "title": "Communicating morality: the good, the bad and the ugly",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "LM",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "FR",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/sylvia.xu/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
+    },
+    {
+      "id": "current-phd-tongtong-zhao",
+      "candidate": "Tongtong Zhao",
+      "displayCandidate": "Zhao, Tongtong",
+      "title": "What, how, and when gendered advice relations influence women’s advancement: a meso-level perspective",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "personId": "FR",
+          "role": "Promotor",
+          "slot": "Promotor"
+        },
+        {
+          "personId": "JO",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        },
+        {
+          "name": "Marco Kleine",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3",
+          "kind": "external"
+        }
+      ],
+      "sourceLabel": "RUG OB PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/tongtong.zhao/",
+      "notes": [
+        "Project title from the RUG OB PhD candidates page.",
+        "Supervisor mapping from overzicht OB PhDs_Joost.xlsx."
+      ]
     }
   ]
 }
