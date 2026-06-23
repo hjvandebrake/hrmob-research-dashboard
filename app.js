@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260623-phds2";
+const DATA_VERSION = "20260623-phds3";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -54,7 +54,7 @@ const COLLABORATION_PERSON_EXPOSURE_HARD_LIMIT = 2;
 const COLLABORATION_PAIR_PERSON_SOFT_LIMIT = 2;
 const GRANT_DATA_NOTE = "Grant records are source-backed public records; coverage may miss older, internal, or unpublished funding.";
 const PHD_DATA_NOTE = "PhD counts include defended theses only.";
-const CURRENT_PHD_DATA_NOTE = "Current PhD projects combine public RUG project-title information with supervisor mappings from the local OB PhD supervisor workbook.";
+const CURRENT_PHD_DATA_NOTE = "Current PhD status and supervision come from the local OB PhD supervisor workbook, with explicit completed-candidate corrections. The public RUG PhD page is used only as a project-title source and may be outdated for current status.";
 const METRIC_TREND_COLORS = {
   HRMOB: "#9d3138",
   Marketing: "#2f7480",
@@ -3279,7 +3279,8 @@ function renderPhds() {
   const people = peopleById();
   const currentProjects = currentPhdProjects().slice().sort(sortCurrentPhdProjects);
   const defendedTheses = activeTheses().slice().sort(sortTheses);
-  const supervisorRows = phdSupervisorRows(currentProjects, defendedTheses, people);
+  const supervisorRows = phdSupervisorRows(currentProjects, defendedTheses, people)
+    .filter((row) => row.current.length);
   if (els.phdSummary) {
     els.phdSummary.innerHTML = [
       metric("Current PhD projects", currentProjects.length),
