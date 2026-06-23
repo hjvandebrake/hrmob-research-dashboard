@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260623-phds1">
+  <link rel="stylesheet" href="styles.css?v=20260623-phds2">
 </head>
 <body>
   <nav class="nav">
@@ -19,9 +19,10 @@
       <div class="nav-sep"></div>
       <div class="nav-tabs" aria-label="Dashboard sections">
         <button class="nav-tab on" data-tab="overview">Overview</button>
+        <button class="nav-tab" data-tab="staff">Staff</button>
+        <button class="nav-tab" data-tab="phds">PhD students</button>
         <button class="nav-tab" data-tab="expertise">Expertise</button>
         <button class="nav-tab" data-tab="collaboration">Collaboration</button>
-        <button class="nav-tab" data-tab="staff">Staff</button>
         <button class="nav-tab" data-tab="publications">Publications</button>
         <button class="nav-tab" data-tab="network">Network</button>
         <button class="nav-tab" data-tab="metrics">Metrics</button>
@@ -94,6 +95,7 @@
                 <p class="eye">PhDs</p>
                 <h3 class="overview-h3">Defended theses</h3>
               </div>
+              <a class="section-link" href="#phds">Open</a>
             </div>
             <div id="phd-list" class="grant-list"></div>
           </section>
@@ -103,7 +105,7 @@
                 <p class="eye">PhD pipeline</p>
                 <h3 class="overview-h3">Ongoing PhD projects</h3>
               </div>
-              <a class="section-link" href="https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en" target="_blank" rel="noopener">Source</a>
+              <a class="section-link" href="#phds">Open page</a>
             </div>
             <div id="current-phd-list" class="current-phd-list"></div>
           </section>
@@ -113,6 +115,7 @@
                 <p class="eye">Grants</p>
                 <h3 class="overview-h3">Competitive funding</h3>
               </div>
+              <a class="section-link" href="#resources">Open</a>
             </div>
             <div id="grant-list" class="grant-list"></div>
           </section>
@@ -121,6 +124,48 @@
           <span>Contact</span>
           <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>
           <a href="#contact">Suggest a correction</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-phds" class="sec" hidden>
+      <div class="wrap">
+        <div class="sec-head compact">
+          <div>
+            <p class="eye">PhD students</p>
+            <h2 class="h2">Current PhD projects and supervision</h2>
+          </div>
+          <a class="section-link" href="https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en" target="_blank" rel="noopener">RUG source</a>
+        </div>
+        <div id="phd-summary" class="metric-grid"></div>
+        <div class="phd-page-grid">
+          <section class="overview-panel phd-panel-wide">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Current cohort</p>
+                <h3 class="overview-h3">Ongoing PhD projects</h3>
+              </div>
+            </div>
+            <div id="phd-current-projects" class="current-phd-list phd-current-projects"></div>
+          </section>
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Supervisors</p>
+                <h3 class="overview-h3">Current supervision load</h3>
+              </div>
+            </div>
+            <div id="phd-supervisor-summary" class="phd-supervisor-summary"></div>
+          </section>
+          <section class="overview-panel phd-panel-wide">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Completed</p>
+                <h3 class="overview-h3">Defended dissertations</h3>
+              </div>
+            </div>
+            <div id="phd-defended-list" class="grant-list"></div>
+          </section>
         </div>
       </div>
     </section>
@@ -382,7 +427,6 @@
               <div id="staff-suggestions" class="suggestion-list"></div>
             </section>
             <section id="staff-subpage-publications" class="staff-subpage">
-              <section id="staff-current-phd-projects" class="staff-current-phd-projects"></section>
               <div id="staff-related"></div>
               <div class="sec-head compact staff-pub-head">
                 <div>
@@ -393,6 +437,10 @@
               <div class="table-wrap">
                 <table id="staff-publication-table"></table>
               </div>
+            </section>
+            <section id="staff-subpage-phds" class="staff-subpage">
+              <section id="staff-current-phd-projects" class="staff-current-phd-projects"></section>
+              <section id="staff-defended-phds" class="staff-defended-phds"></section>
             </section>
             <section id="staff-subpage-opportunities" class="staff-subpage">
               <h3 class="sub-h2">Grant fit signals</h3>
@@ -596,6 +644,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260623-phds1"></script>
+  <script src="app.js?v=20260623-phds2"></script>
 </body>
 </html>

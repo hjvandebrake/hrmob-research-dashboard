@@ -2,7 +2,7 @@ const state = {
   data: null,
   benchmarkData: { meta: {}, people: [], publications: [] },
   grantsData: { meta: {}, grants: [] },
-  phdsData: { meta: {}, theses: [] },
+  phdsData: { meta: {}, theses: [], currentProjects: [] },
   resourceData: { meta: {}, opportunities: [], tips: [] },
   externalPartnersData: { meta: {}, partners: [] },
   teachingData: { meta: {}, records: [], courses: [], edges: [], personCourseCounts: {}, personNetworkCourseCounts: {} },
@@ -37,14 +37,14 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260623-phds1";
+const DATA_VERSION = "20260623-phds2";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
 const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "all"]);
-const STAFF_SUBPAGES = new Set(["research", "publications", "opportunities"]);
+const STAFF_SUBPAGES = new Set(["research", "publications", "phds", "opportunities"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
 const COLLABORATION_THEME_LIMIT = 6;
@@ -454,6 +454,10 @@ function cacheElements() {
   els.grantList = document.getElementById("grant-list");
   els.phdList = document.getElementById("phd-list");
   els.currentPhdList = document.getElementById("current-phd-list");
+  els.phdSummary = document.getElementById("phd-summary");
+  els.phdCurrentProjects = document.getElementById("phd-current-projects");
+  els.phdSupervisorSummary = document.getElementById("phd-supervisor-summary");
+  els.phdDefendedList = document.getElementById("phd-defended-list");
   els.expertiseSearch = document.getElementById("expertise-search");
   els.expertiseWordcloud = document.getElementById("expertise-wordcloud");
   els.expertiseSelectedTopic = document.getElementById("expertise-selected-topic");
@@ -467,6 +471,7 @@ function cacheElements() {
   els.staffSubnav = document.getElementById("staff-subnav");
   els.staffResearchPage = document.getElementById("staff-subpage-research");
   els.staffPublicationsPage = document.getElementById("staff-subpage-publications");
+  els.staffPhdsPage = document.getElementById("staff-subpage-phds");
   els.staffOpportunitiesPage = document.getElementById("staff-subpage-opportunities");
   els.staffCurrentWork = document.getElementById("staff-current-work");
   els.staffCollaborationInterests = document.getElementById("staff-collaboration-interests");
@@ -478,6 +483,7 @@ function cacheElements() {
   els.staffPublicationTitle = document.getElementById("staff-publication-title");
   els.staffPublicationTable = document.getElementById("staff-publication-table");
   els.staffCurrentPhdProjects = document.getElementById("staff-current-phd-projects");
+  els.staffDefendedPhds = document.getElementById("staff-defended-phds");
   els.staffOwnedResources = document.getElementById("staff-owned-resources");
   els.topicOverlay = document.getElementById("topic-overlay");
   els.topicOverlayTitle = document.getElementById("topic-overlay-title");
@@ -739,6 +745,12 @@ function attachEvents() {
   if (els.currentPhdList) {
     els.currentPhdList.addEventListener("click", handleInlineStaffLink);
   }
+  if (els.phdCurrentProjects) {
+    els.phdCurrentProjects.addEventListener("click", handleInlineStaffLink);
+  }
+  if (els.phdSupervisorSummary) {
+    els.phdSupervisorSummary.addEventListener("click", handleInlineStaffLink);
+  }
   if (els.staffCurrentPhdProjects) {
     els.staffCurrentPhdProjects.addEventListener("click", handleInlineStaffLink);
   }
@@ -791,7 +803,7 @@ function handleInlineStaffLink(event) {
   if (!button) return;
   event.preventDefault();
   state.selectedStaffId = button.dataset.staffId || "";
-  state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "publications");
+  state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "phds");
   setTab("staff");
 }
 
@@ -1051,7 +1063,7 @@ async function loadDeferredData(keys) {
 }
 
 function validTab(tab) {
-  return ["overview", "staff", "expertise", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
+  return ["overview", "staff", "phds", "expertise", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
 }
 
 function routeFromHash() {
@@ -1109,6 +1121,7 @@ function renderAll() {
   renderOverview();
   renderMetrics();
   renderStaff();
+  renderPhds();
   renderExpertise();
   renderCollaboration();
   renderPublications();
@@ -1122,6 +1135,7 @@ function renderCurrentView() {
   if (state.tab === "overview") renderOverview();
   else if (state.tab === "metrics") renderMetrics();
   else if (state.tab === "staff") renderStaff();
+  else if (state.tab === "phds") renderPhds();
   else if (state.tab === "expertise") renderExpertise();
   else if (state.tab === "collaboration") renderCollaboration();
   else if (state.tab === "publications") renderPublications();
@@ -2389,6 +2403,7 @@ function renderStaffProfile(row, bundle) {
     if (els.staffGrantFit) els.staffGrantFit.innerHTML = "";
     els.staffRelated.innerHTML = "";
     if (els.staffCurrentPhdProjects) els.staffCurrentPhdProjects.innerHTML = "";
+    if (els.staffDefendedPhds) els.staffDefendedPhds.innerHTML = "";
     els.staffPublicationEye.textContent = "Publications";
     els.staffPublicationTitle.textContent = "Selected staff publications";
     setEmptyTable(els.staffPublicationTable, "No matching publications.");
@@ -2425,6 +2440,7 @@ function renderStaffProfile(row, bundle) {
   renderStaffSuggestions(person.id);
   renderStaffGrantFit(person.id);
   renderStaffCurrentPhdProjects(person.id);
+  renderStaffDefendedPhds(person.id);
   renderStaffRelated(person.id, bundle, row);
   renderStaffPublications(person.id, bundle, row);
   renderStaffOwnedResources(person.id, row);
@@ -2436,6 +2452,7 @@ function renderStaffSubnav() {
   const pages = [
     ["research", "Research"],
     ["publications", "Publications & grants"],
+    ["phds", "PhD supervision"],
     ["opportunities", "Opportunities"],
   ];
   state.staffSubpage = normalizeStaffSubpage(state.staffSubpage);
@@ -2449,6 +2466,7 @@ function renderStaffSubpageVisibility() {
   const map = {
     research: els.staffResearchPage,
     publications: els.staffPublicationsPage,
+    phds: els.staffPhdsPage,
     opportunities: els.staffOpportunitiesPage,
   };
   Object.entries(map).forEach(([key, section]) => {
@@ -2572,6 +2590,23 @@ function renderStaffCurrentPhdProjects(personId) {
     ${projects.length ? `<div class="current-phd-list staff-current-phd-list">
       ${projects.map((project) => renderCurrentPhdProjectCard(project, { personId })).join("")}
     </div>` : `<p class="small-muted">No current PhD supervision record for this staff member in the imported supervisor workbook.</p>`}
+  `;
+}
+
+function renderStaffDefendedPhds(personId) {
+  if (!els.staffDefendedPhds) return;
+  const theses = staffThesisRecords(personId).slice().sort(sortTheses);
+  const people = peopleById();
+  els.staffDefendedPhds.innerHTML = `
+    <div class="overview-panel-head">
+      <div>
+        <p class="eye">Completed supervision</p>
+        <h3 class="overview-h3">Defended dissertations</h3>
+      </div>
+    </div>
+    ${theses.length ? `<div class="grant-list staff-defended-phd-list">
+      ${theses.map((thesis) => renderDefendedThesisItem(thesis, people)).join("")}
+    </div>` : `<p class="small-muted">No defended PhD supervision record for this staff member in the defended-theses data.</p>`}
   `;
 }
 
@@ -2780,11 +2815,7 @@ function renderStaffRelated(personId, bundle, row) {
   const journalItems = topStaffJournals(summaryPubs);
   const coauthorItems = topStaffCoauthors(personId, summaryPubs);
   const grants = staffGrantRecords(personId);
-  const theses = staffThesisRecords(personId);
-  const currentProjects = staffCurrentPhdProjectRecords(personId);
   let grantItems = grants.map((grant) => ({ type: grantDisplayLabel(grant), year: grant.year || "", title: grant.title, sourceUrl: grant.sourceUrl, sourceLabel: grant.sourceLabel }));
-  let thesisItems = theses.map((thesis) => ({ type: "PhD", year: thesis.year || "", title: `${thesis.candidate}: ${thesis.title}`, sourceUrl: thesis.sourceUrl, sourceLabel: thesis.sourceLabel }));
-  let currentPhdItems = currentProjects.map((project) => ({ type: "Ongoing PhD", year: "", title: `${project.candidate}: ${project.title}`, sourceUrl: project.sourceUrl, sourceLabel: project.sourceLabel }));
   if (bundle.raw) {
     grantItems = row.matchingDocs
       .filter((doc) => doc.type === "grant")
@@ -2795,29 +2826,9 @@ function renderStaffRelated(personId, bundle, row) {
         sourceUrl: doc.item.sourceUrl,
         sourceLabel: doc.item.sourceLabel,
       }));
-    currentPhdItems = row.matchingDocs
-      .filter((doc) => doc.type === "currentPhd")
-      .map((doc) => ({
-        type: "Ongoing PhD",
-        year: "",
-        title: `${doc.item.candidate}: ${doc.item.title}`,
-        sourceUrl: doc.item.sourceUrl,
-        sourceLabel: doc.item.sourceLabel,
-      }));
-    thesisItems = row.matchingDocs
-      .filter((doc) => doc.type === "phd")
-      .map((doc) => ({
-        type: "PhD",
-        year: doc.year || "",
-        title: `${doc.item.candidate}: ${doc.item.title}`,
-        sourceUrl: doc.item.sourceUrl,
-        sourceLabel: doc.item.sourceLabel,
-      }));
   }
   grantItems = grantItems.sort((a, b) => Number(b.year || 0) - Number(a.year || 0));
-  thesisItems = thesisItems.sort((a, b) => Number(b.year || 0) - Number(a.year || 0));
-  currentPhdItems = currentPhdItems.sort((a, b) => a.title.localeCompare(b.title));
-  if (!journalItems.length && !coauthorItems.length && !grantItems.length && !currentPhdItems.length && !thesisItems.length) {
+  if (!journalItems.length && !coauthorItems.length && !grantItems.length) {
     els.staffRelated.innerHTML = "";
     return;
   }
@@ -2825,8 +2836,6 @@ function renderStaffRelated(personId, bundle, row) {
     relatedSection(bundle.raw ? `Journals matching "${bundle.raw}"` : "Journals", journalItems),
     relatedSection(bundle.raw ? `Coauthors matching "${bundle.raw}"` : "Coauthors", coauthorItems),
     relatedSection(bundle.raw ? `Grants matching "${bundle.raw}"` : "Grants", grantItems),
-    relatedSection(bundle.raw ? `Current PhD projects matching "${bundle.raw}"` : "Current PhD projects", currentPhdItems),
-    relatedSection(bundle.raw ? `Defended PhD supervision matching "${bundle.raw}"` : "Defended PhD supervision", thesisItems),
   ].join("");
 }
 
@@ -3263,6 +3272,40 @@ function renderOverview() {
   renderOverviewGrants(grants);
   renderOverviewPhds(theses);
   renderOverviewCurrentPhds(currentProjects);
+}
+
+function renderPhds() {
+  if (!state.data) return;
+  const people = peopleById();
+  const currentProjects = currentPhdProjects().slice().sort(sortCurrentPhdProjects);
+  const defendedTheses = activeTheses().slice().sort(sortTheses);
+  const supervisorRows = phdSupervisorRows(currentProjects, defendedTheses, people);
+  if (els.phdSummary) {
+    els.phdSummary.innerHTML = [
+      metric("Current PhD projects", currentProjects.length),
+      metric("Internal supervisors", supervisorRows.filter((row) => row.person).length),
+      metric("Defended theses", defendedTheses.length),
+      metric("Titles to confirm", currentProjects.filter((project) => project.titleStatus !== "listed").length),
+    ].join("");
+  }
+  if (els.phdCurrentProjects) {
+    els.phdCurrentProjects.innerHTML = currentProjects.length ? `
+      <div class="current-phd-items phd-current-grid">
+        ${currentProjects.map((project) => renderCurrentPhdProjectCard(project)).join("")}
+      </div>
+      ${dataNote(CURRENT_PHD_DATA_NOTE)}
+    ` : `<p class="small-muted">No current PhD project records loaded.</p>${dataNote(CURRENT_PHD_DATA_NOTE)}`;
+  }
+  if (els.phdSupervisorSummary) {
+    els.phdSupervisorSummary.innerHTML = supervisorRows.length ? supervisorRows.map(renderPhdSupervisorSummaryCard).join("")
+      : `<p class="small-muted">No internal supervision records loaded.</p>`;
+  }
+  if (els.phdDefendedList) {
+    els.phdDefendedList.innerHTML = defendedTheses.length ? `
+      ${defendedTheses.map((thesis) => renderDefendedThesisItem(thesis, people)).join("")}
+      ${dataNote(PHD_DATA_NOTE)}
+    ` : `<p class="small-muted">No source-backed defended PhD records for the current staff filter.</p>${dataNote(PHD_DATA_NOTE)}`;
+  }
 }
 
 function renderResources() {
@@ -4409,16 +4452,13 @@ function renderOverviewGrants(grants) {
     els.grantList.innerHTML = `<p class="small-muted">No source-backed grant records for the current staff filter.</p>${dataNote(GRANT_DATA_NOTE)}`;
     return;
   }
-  els.grantList.innerHTML = `
-    ${rows.map((grant) => `
-      <div class="grant-item">
-        <p class="grant-kicker">${escapeHtml(formatYear(grant.year))} - ${escapeHtml(grant.scheme)}</p>
-        <p class="grant-title">${escapeHtml(grant.title)}</p>
-        <p class="grant-meta">${escapeHtml(grantStaff(grant, people))}</p>
-      </div>
-    `).join("")}
-    ${dataNote(GRANT_DATA_NOTE)}
-  `;
+  els.grantList.innerHTML = renderExpandableOverviewList({
+    rows,
+    visibleCount: 5,
+    noun: "funding records",
+    renderItem: (grant) => renderGrantItem(grant, people),
+    note: GRANT_DATA_NOTE,
+  });
 }
 
 function renderOverviewPhds(theses) {
@@ -4429,16 +4469,44 @@ function renderOverviewPhds(theses) {
     els.phdList.innerHTML = `<p class="small-muted">No source-backed defended PhD records for the current staff filter.</p>${dataNote(PHD_DATA_NOTE)}`;
     return;
   }
-  els.phdList.innerHTML = `
-    ${rows.map((thesis) => `
-      <div class="grant-item">
-        <p class="grant-kicker">${escapeHtml(formatYear(thesis.year))} - ${escapeHtml(thesis.candidate)}</p>
-        <p class="grant-title">${escapeHtml(thesis.title)}</p>
-        <p class="grant-meta">${escapeHtml(roleSummary(thesis, people))}</p>
+  els.phdList.innerHTML = renderExpandableOverviewList({
+    rows,
+    visibleCount: 5,
+    noun: "defended dissertations",
+    renderItem: (thesis) => renderDefendedThesisItem(thesis, people),
+    note: PHD_DATA_NOTE,
+  });
+}
+
+function renderExpandableOverviewList({ rows, visibleCount, noun, renderItem, note }) {
+  const visible = rows.slice(0, visibleCount);
+  const extra = rows.slice(visibleCount);
+  return `
+    ${visible.map(renderItem).join("")}
+    ${extra.length ? `<details class="overview-list-extra">
+      <summary>${escapeHtml(`Show all ${rows.length} ${noun}`)}</summary>
+      <div class="overview-list-extra-items">
+        ${extra.map(renderItem).join("")}
       </div>
-    `).join("")}
-    ${dataNote(PHD_DATA_NOTE)}
+    </details>` : ""}
+    ${dataNote(note)}
   `;
+}
+
+function renderGrantItem(grant, people) {
+  return `<div class="grant-item">
+    <p class="grant-kicker">${escapeHtml(formatYear(grant.year))} - ${escapeHtml(grant.scheme)}</p>
+    <p class="grant-title">${escapeHtml(grant.title)}</p>
+    <p class="grant-meta">${escapeHtml(grantStaff(grant, people))}</p>
+  </div>`;
+}
+
+function renderDefendedThesisItem(thesis, people) {
+  return `<div class="grant-item">
+    <p class="grant-kicker">${escapeHtml(formatYear(thesis.year))} - ${escapeHtml(thesis.candidate)}</p>
+    <p class="grant-title">${escapeHtml(thesis.title)}</p>
+    <p class="grant-meta">${escapeHtml(roleSummary(thesis, people))}</p>
+  </div>`;
 }
 
 function renderOverviewCurrentPhds(projects) {
@@ -4482,7 +4550,7 @@ function currentPhdRoleSummary(project, people) {
 function currentPhdRoleSummaryHtml(project, people) {
   return currentPhdRoleItems(project, people).map((item) => {
     const label = item.personId
-      ? `<button class="person-link current-phd-person" type="button" data-staff-id="${escapeHtml(item.personId)}" data-staff-subpage="publications">${escapeHtml(item.label)}</button>`
+      ? `<button class="person-link current-phd-person" type="button" data-staff-id="${escapeHtml(item.personId)}" data-staff-subpage="phds">${escapeHtml(item.label)}</button>`
       : `<span>${escapeHtml(item.label)}</span>`;
     return `<span>${label} <em>${escapeHtml(item.role)}</em></span>`;
   }).join(" ");
@@ -4513,6 +4581,52 @@ function renderCurrentPhdProjectCard(project, options = {}) {
     <p class="grant-title">${escapeHtml(project.title || "Project title to be confirmed")}</p>
     <p class="current-phd-supervisors">${currentPhdRoleSummaryHtml(project, people)}</p>
     ${sourceLink ? `<p class="current-phd-source">${sourceLink}</p>` : ""}
+  </article>`;
+}
+
+function phdSupervisorRows(currentProjects, defendedTheses, people) {
+  const rows = new Map();
+  const ensure = (personId) => {
+    if (!personId || !people.has(personId)) return null;
+    if (!rows.has(personId)) {
+      rows.set(personId, {
+        person: people.get(personId),
+        current: [],
+        defended: [],
+        primaryCurrent: 0,
+      });
+    }
+    return rows.get(personId);
+  };
+  currentProjects.forEach((project) => {
+    (project.roles || []).forEach((role) => {
+      const row = ensure(role.personId);
+      if (!row) return;
+      row.current.push(project);
+      if ((role.role || "").toLowerCase().includes("promotor")) row.primaryCurrent += 1;
+    });
+  });
+  defendedTheses.forEach((thesis) => {
+    (thesis.roles || []).forEach((role) => {
+      const row = ensure(role.personId);
+      if (row) row.defended.push(thesis);
+    });
+  });
+  return Array.from(rows.values())
+    .sort((a, b) => b.current.length - a.current.length || b.primaryCurrent - a.primaryCurrent || b.defended.length - a.defended.length || a.person.display.localeCompare(b.person.display));
+}
+
+function renderPhdSupervisorSummaryCard(row) {
+  const currentPreview = row.current.slice(0, 3).map((project) => project.candidate).join(", ");
+  return `<article class="phd-supervisor-card">
+    <button class="person-link suggestion-name" type="button" data-staff-id="${escapeHtml(row.person.id)}" data-staff-subpage="phds">${escapeHtml(row.person.display)}</button>
+    <p>${escapeHtml(row.person.name)}</p>
+    <div class="suggestion-reasons">
+      <span>${escapeHtml(`${row.current.length} current PhD${row.current.length === 1 ? "" : "s"}`)}</span>
+      <span>${escapeHtml(`${row.defended.length} defended`)}</span>
+      ${row.primaryCurrent ? `<span>${escapeHtml(`${row.primaryCurrent} promotor role${row.primaryCurrent === 1 ? "" : "s"}`)}</span>` : ""}
+    </div>
+    ${currentPreview ? `<p class="phd-supervisor-preview">${escapeHtml(currentPreview)}</p>` : ""}
   </article>`;
 }
 
