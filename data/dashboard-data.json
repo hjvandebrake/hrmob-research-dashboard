@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-06-21",
+    "generatedOn": "2026-06-26",
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-06-21"
+      "to": "2026-06-26"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-06-21"
+      "to": "2026-06-26"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -956,8 +956,7 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
-        "Crossref author affiliation mentions Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
       "topicFamilies": [
@@ -1373,6 +1372,56 @@
       "provisional": true,
       "topicFamilies": [
         "recovery and leisure"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1177/02134748261446390",
+      "doi": "10.1177/02134748261446390",
+      "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+      "year": 2026,
+      "yearSource": "crossref-other",
+      "journal": "International Journal of Social Psychology: Revista de Psicología Social",
+      "issns": [
+        "0213-4748",
+        "1579-3680"
+      ],
+      "sourceType": "journal-article",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "SAGE Publications",
+      "url": "https://doi.org/10.1177/02134748261446390",
+      "authors": [
+        "Ligia Carolina Oliveira-Silva",
+        "Laísla Araújo Pontes",
+        "Deniel Gomes Frutuoso",
+        "Daniela P. Fernández",
+        "Larissa Paula Martins",
+        "Heila Magali da Silva Veiga",
+        "Michelle K. Ryan"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 47.553,
+      "aipJournal": "International Journal of Social Psychology",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Crossref public metadata",
+      "evidence": [
+        "Crossref ORCID matched for Ryan, M.K."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "stereotypes and bias",
+        "gender and leadership"
       ],
       "counted": true,
       "display": true,
@@ -2064,23 +2113,26 @@
       "aipStatus": "matched"
     },
     {
-      "id": "rug:6d1a10f8a234f656",
+      "id": "doi:10.1177/14761270251334044",
       "doi": "10.1177/14761270251334044",
-      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
+      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
       "year": 2025,
-      "yearSource": "rug-reference",
+      "yearSource": "crossref-other",
       "journal": "Strategic Organization",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "1476-1270",
+        "1741-315X"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/a88a67f8-d419-4358-a612-ffaa82fc674e",
+      "url": "https://openalex.org/W4409345189",
       "authors": [
-        "Weck, M.",
-        "Veltrop, D.",
-        "Oehmichen, J.",
-        "Rink, F."
+        "Michelle Weck",
+        "Dennis Veltrop",
+        "Jana Oehmichen",
+        "Floor Rink"
       ],
       "matchedPeople": [
         "FR"
@@ -2091,11 +2143,10 @@
       "aip": 95.623,
       "aipJournal": "Strategic Organization",
       "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
@@ -16785,22 +16836,25 @@
       "aipStatus": "matched"
     },
     {
-      "id": "rug:44a624e981e4d07b",
+      "id": "doi:10.1016/j.joep.2019.102242",
       "doi": "10.1016/j.joep.2019.102242",
       "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
       "year": 2020,
       "yearSource": "rug-reference",
       "journal": "Journal of Economic Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "0167-4870",
+        "1872-7719"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/55d202cf-7c64-48bb-b654-267fee7942bb",
+      "url": "https://openalex.org/W2992972654",
       "authors": [
-        "Mulder, L. B.",
-        "Rink, F.",
-        "Jordan, J."
+        "Laetitia B. Mulder",
+        "Floor Rink",
+        "Jennifer Jordan"
       ],
       "matchedPeople": [
         "LM",
@@ -16815,11 +16869,10 @@
       "aip": 85.619,
       "aipJournal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Mulder, L.B. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Mulder, L.B.",
         "Crossref record contains at least two HRM&OB authors",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
@@ -19999,7 +20052,7 @@
       "doi": "10.5465/ambpp.2019.13479symposium",
       "title": "New Directions in Unethical Prosocial Behavior: Its Antecedents and Consequences",
       "year": 2019,
-      "yearSource": "crossref-print",
+      "yearSource": "openalex",
       "journal": "Academy of Management Proceedings",
       "issns": [
         "2151-6561"
@@ -20036,8 +20089,7 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Crossref author affiliation mentions Groningen for Rink, F.A."
+        "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
       "topicFamilies": [
@@ -38720,7 +38772,8 @@
       "authors": [
         "M. Roskes",
         "C.K.W. De Dreu",
-        "Bernard A. Nijstad"
+        "Bernard A. Nijstad",
+        "C.K.W. De Dreu"
       ],
       "matchedPeople": [
         "CDD",
@@ -45452,9 +45505,7 @@
       "url": "https://openalex.org/W2586728029",
       "authors": [
         "Peter J. Carnevale",
-        "Carsten K. W. De Dreu",
-        "Carnevale, P.",
-        "de Dreu, C.K.W."
+        "Carsten K. W. De Dreu"
       ],
       "matchedPeople": [
         "CDD"
@@ -53012,7 +53063,7 @@
   "summaries": {
     "personCounts": {
       "MA": 9,
-      "MR": 126,
+      "MR": 127,
       "CDD": 245,
       "JDB": 77,
       "BN": 80,
@@ -56225,15 +56276,17 @@
       },
       {
         "journal": "International Journal of Social Psychology",
-        "count": 1,
+        "count": 2,
         "aip": 47.553,
         "category": "PSYCHOLOGY, SOCIAL",
         "rankableJournal": true,
         "people": [
-          "CDD"
+          "CDD",
+          "MR"
         ],
         "years": [
-          2012
+          2012,
+          2026
         ]
       },
       {
@@ -56749,8 +56802,8 @@
     "categorySummary": [
       {
         "category": "PSYCHOLOGY, SOCIAL",
-        "count": 247,
-        "meanAip": 81.28
+        "count": 248,
+        "meanAip": 81.14
       },
       {
         "category": "MANAGEMENT",
@@ -57120,7 +57173,7 @@
       },
       {
         "year": 2026,
-        "count": 27
+        "count": 28
       }
     ],
     "edges": [
@@ -57305,7 +57358,7 @@
         "pubIds": [
           "rug:738ca961bc9a49c8",
           "rug:5b1ca1cec2d493bb",
-          "rug:44a624e981e4d07b",
+          "doi:10.1016/j.joep.2019.102242",
           "doi:10.1177/2515245917747646",
           "doi:10.1016/j.obhdp.2014.11.002"
         ]
@@ -57331,7 +57384,7 @@
         "pubIds": [
           "rug:0fb711d23b570106",
           "doi:10.3389/fpsyg.2022.931314",
-          "rug:44a624e981e4d07b",
+          "doi:10.1016/j.joep.2019.102242",
           "doi:10.3389/fpsyg.2020.575024",
           "doi:10.1016/j.obhdp.2014.11.002"
         ]
@@ -57419,7 +57472,7 @@
         "count": 2,
         "highAipCount": 1,
         "pubIds": [
-          "rug:44a624e981e4d07b",
+          "doi:10.1016/j.joep.2019.102242",
           "doi:10.1016/j.obhdp.2014.11.002"
         ]
       },

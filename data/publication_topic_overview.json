@@ -394,6 +394,30 @@
     "doi": "10.1123/ijspp.2025-0533"
   },
   {
+    "id": "doi:10.1177/02134748261446390",
+    "year": 2026,
+    "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+    "journal": "International Journal of Social Psychology",
+    "aip": 47.553,
+    "topicFamilies": [
+      "stereotypes and bias",
+      "gender and leadership"
+    ],
+    "matchedPeople": [
+      "MR"
+    ],
+    "authors": [
+      "Ligia Carolina Oliveira-Silva",
+      "Laísla Araújo Pontes",
+      "Deniel Gomes Frutuoso",
+      "Daniela P. Fernández",
+      "Larissa Paula Martins",
+      "Heila Magali da Silva Veiga",
+      "Michelle K. Ryan"
+    ],
+    "doi": "10.1177/02134748261446390"
+  },
+  {
     "id": "doi:10.1108/gm-03-2025-0173",
     "year": 2026,
     "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
@@ -712,9 +736,9 @@
     "doi": "10.1080/02678373.2025.2551498"
   },
   {
-    "id": "rug:6d1a10f8a234f656",
+    "id": "doi:10.1177/14761270251334044",
     "year": 2025,
-    "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
+    "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
     "journal": "Strategic Organization",
     "aip": 95.623,
     "topicFamilies": [
@@ -725,10 +749,10 @@
       "FR"
     ],
     "authors": [
-      "Weck, M.",
-      "Veltrop, D.",
-      "Oehmichen, J.",
-      "Rink, F."
+      "Michelle Weck",
+      "Dennis Veltrop",
+      "Jana Oehmichen",
+      "Floor Rink"
     ],
     "doi": "10.1177/14761270251334044"
   },
@@ -6402,7 +6426,7 @@
     "doi": "10.1111/jep.13353"
   },
   {
-    "id": "rug:44a624e981e4d07b",
+    "id": "doi:10.1016/j.joep.2019.102242",
     "year": 2020,
     "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
     "journal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
@@ -6416,9 +6440,9 @@
       "JJ"
     ],
     "authors": [
-      "Mulder, L. B.",
-      "Rink, F.",
-      "Jordan, J."
+      "Laetitia B. Mulder",
+      "Floor Rink",
+      "Jennifer Jordan"
     ],
     "doi": "10.1016/j.joep.2019.102242"
   },
