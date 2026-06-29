@@ -38,7 +38,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-password-gate";
+const DATA_VERSION = "20260629-outlet-scope";
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
@@ -1326,6 +1326,39 @@ function activePublications() {
 
 function activeDisplayPublications() {
   return activePublicationPool({ countedOnly: false });
+}
+
+function activeOutletPublications() {
+  if (!state.data) return [];
+  const ids = activePeopleSet();
+  const [fromYear, toYear] = activeWindowYears();
+  const filtered = state.data.publications.filter((pub) => (
+    outletPublicationRecord(pub)
+    && pub.matchedPeople?.some((id) => ids.has(id))
+    && (!fromYear || pub.year >= fromYear)
+    && (!toYear || pub.year <= toYear)
+  ));
+  return dedupePublications(filtered);
+}
+
+function outletPublicationRecord(pub) {
+  if (!pub || !(pub.journal || pub.aipJournal)) return false;
+  const kind = normalizeSearchText(pub.publicationKind || "");
+  const sourceType = normalizeSearchText(pub.sourceType || "");
+  const source = normalizeSearchText([
+    pub.journal,
+    pub.aipJournal,
+    pub.publisher,
+    pub.publicationKind,
+    pub.sourceType,
+  ].join(" "));
+  if (/repository|preprint|conference|proceedings|out of scope|unknown source/.test(kind)) return false;
+  if (/repository|preprint|conference|proceedings|out of scope|unknown source/.test(sourceType)) return false;
+  if (/academy of management proceedings/.test(source)) return false;
+  return kind.includes("journal")
+    || sourceType.includes("journal")
+    || pub.rankableJournal !== false
+    || isNumber(pub.aip);
 }
 
 function collaborationWindowYears() {
@@ -3533,8 +3566,9 @@ function displayPublication(pub) {
 function renderOverview() {
   if (!state.data) return;
   const pubs = overviewPublications();
+  const outletPubs = activeOutletPublications();
   const aipPubs = pubs.filter((pub) => isNumber(pub.aip));
-  const journals = aggregateJournals(pubs);
+  const journals = aggregateJournals(outletPubs);
   const grants = activeGrants();
   const theses = activeTheses();
   const currentProjects = currentPhdProjects();
@@ -4479,10 +4513,14 @@ function aggregateJournals(pubs) {
         people: new Set(),
         years: new Set(),
         recentCount: 0,
+        countedCount: 0,
+        nonCountedCount: 0,
       });
     }
     const row = byJournal.get(name);
     row.count += 1;
+    if (countedPublication(pub)) row.countedCount += 1;
+    else row.nonCountedCount += 1;
     row.journalDisplay = preferredJournalDisplay(row.journalDisplay, pub.journal || name);
     row.years.add(pub.year);
     if (isRecentPublication(pub)) row.recentCount += 1;
@@ -4567,10 +4605,13 @@ function renderJournalList(target, journals, limit, emptyMessage) {
 }
 
 function renderJournalItem(journal) {
+  const countedMeta = isNumber(journal.countedCount) && journal.countedCount !== journal.count
+    ? ` (${journal.countedCount} counted)`
+    : "";
   return `
     <div class="list-row">
       <p class="list-title">${escapeHtml(journalDisplayName(journal))}</p>
-      <p class="list-meta">${journal.count} publication${journal.count === 1 ? "" : "s"}, ${escapeHtml(yearSetLabel(journal.years))}${isNumber(journal.aip) ? `, AIP ${journal.aip.toFixed(1)}` : ""}</p>
+      <p class="list-meta">${journal.count} outlet record${journal.count === 1 ? "" : "s"}${escapeHtml(countedMeta)}, ${escapeHtml(yearSetLabel(journal.years))}${isNumber(journal.aip) ? `, AIP ${journal.aip.toFixed(1)}` : ""}</p>
     </div>
   `;
 }
@@ -4781,15 +4822,15 @@ function renderOverviewJournals(journals) {
   if (!els.overviewJournalList) return;
   const rows = journals.filter((journal) => journal.count >= 2);
   if (!rows.length) {
-    els.overviewJournalList.innerHTML = `<p class="small-muted">No journal has at least 2 publications in the overview window.</p>`;
+    els.overviewJournalList.innerHTML = `<p class="small-muted">No journal has at least 2 outlet records in the overview window.</p>`;
     return;
   }
   els.overviewJournalList.innerHTML = renderExpandableOverviewList({
     rows,
     visibleCount: 5,
-    noun: "journals with at least 2 publications",
+    noun: "journals with at least 2 outlet records",
     renderItem: renderJournalItem,
-    note: "Overview outlet list includes journals with at least 2 counted publications in the current publication window.",
+    note: "Overview outlet list includes source-backed journal outlet records in the current publication window. Metrics and publication totals still count journal articles only.",
     noteMode: "plain",
   });
 }
@@ -5070,8 +5111,7 @@ function formatYear(year) {
 function renderPublications() {
   if (!state.data) return;
   const people = peopleById();
-  const activePubs = activePublications();
-  renderPublicationJournalSummary(activePubs);
+  renderPublicationJournalSummary();
   syncPublicationPersonFilter();
   const pubs = filteredPublications();
 
@@ -5240,8 +5280,8 @@ function openPublicationReport(publicationId) {
   }
 }
 
-function renderPublicationJournalSummary(pubs) {
-  const journals = aggregateJournals(pubs);
+function renderPublicationJournalSummary() {
+  const journals = aggregateJournals(activeOutletPublications());
   renderJournalPublishedList(journals);
   renderJournalOpenAccessList(journals);
 }
