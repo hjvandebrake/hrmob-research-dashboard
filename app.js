@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-staff-search";
+const DATA_VERSION = "20260629-guide-tune";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -1584,7 +1584,7 @@ function renderStaff() {
     els.staffExpertiseSearch.value = state.staffTopicQuery || "";
   }
   const rows = staffRowsForSearch(bundle);
-  const selected = ensureSelectedStaff(rows);
+  const selected = ensureSelectedStaff(rows, bundle);
   renderStaffSearchSummary(rows, bundle);
   renderStaffList(rows, bundle);
   renderStaffProfile(selected, bundle);
@@ -1616,7 +1616,7 @@ function renderStaffSearchSummary(rows, bundle) {
   const matches = rows.filter((row) => row.score > 0);
   els.staffExpertiseSummary.textContent = matches.length
     ? `${matches.length} staff member${matches.length === 1 ? "" : "s"} with visible evidence for "${bundle.raw}".`
-    : `No staff evidence found for "${bundle.raw}" under the current filters.`;
+    : "No visible match.";
 }
 
 function renderExpertise() {
@@ -2404,7 +2404,7 @@ function collaborationPairBasis({ sharedSignals, sharedTopics, sharedExternal, s
 function collaborationIdeaFromPair({ sharedSignals, sharedTopics, sharedExternal, sharedPartners, sharedGrants }) {
   const text = normalizeSearchText([...sharedSignals, ...sharedTopics].join(" "));
   if (/stress|strain|burnout|recovery|health|wellbeing/.test(text)) {
-    return "You could explore whether stress, recovery, or wellbeing mechanisms generalize across their recent empirical settings, with a compact diary or secondary-data pilot as a first step.";
+    return "You could explore whether stress, recovery, or wellbeing mechanisms generalize across their recent empirical settings, with a focused diary or secondary-data pilot as a first step.";
   }
   if (/team|teams|membership|coordination|boundary|collaboration/.test(text)) {
     return "You could explore a team-process bridge, for example how membership change, coordination, or boundary work affects performance and strain in fluid team arrangements.";
@@ -2482,7 +2482,7 @@ function collaborationIdeaForInterest(item) {
   if (/identity|group/.test(text)) {
     return "You could explore how identity processes shape coordination, voice, conflict, and inclusion in group settings.";
   }
-  return "You could start with a compact scoping meeting around shared theory, datasets, and methods, then decide whether a pilot or grant outline is worth developing.";
+  return "You could start with a focused scoping meeting around shared theory, datasets, and methods, then decide whether a pilot or grant outline is worth developing.";
 }
 
 function collaborationIdeaFromReasons(reasons) {
@@ -2548,7 +2548,7 @@ function staffSearchStats(person, bundle) {
   };
 }
 
-function ensureSelectedStaff(rows) {
+function ensureSelectedStaff(rows, bundle = { raw: "" }) {
   if (!rows.length) {
     state.selectedStaffId = "";
     return null;
@@ -2556,11 +2556,12 @@ function ensureSelectedStaff(rows) {
   if (!state.selectedStaffId) {
     return null;
   }
-  if (!rows.some((row) => row.person.id === state.selectedStaffId)) {
+  const selected = rows.find((row) => row.person.id === state.selectedStaffId);
+  if (!selected || (bundle.raw && selected.score <= 0)) {
     state.selectedStaffId = "";
     return null;
   }
-  return rows.find((row) => row.person.id === state.selectedStaffId) || rows[0];
+  return selected;
 }
 
 function renderStaffList(rows, bundle) {
@@ -2613,7 +2614,7 @@ function renderStaffProfile(row, bundle) {
     <div class="query-strip">
       <span>Matches for</span>
       <strong>${escapeHtml(bundle.raw)}</strong>
-      <em>${escapeHtml(row.score > 0 ? matchSummary(row) : "No visible evidence for this person under the current filters.")}</em>
+      <em>${escapeHtml(row.score > 0 ? matchSummary(row) : "No visible match.")}</em>
     </div>
   ` : "";
   els.staffProfile.innerHTML = `

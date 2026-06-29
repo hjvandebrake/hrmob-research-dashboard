@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260629-staff-search">
+  <link rel="stylesheet" href="styles.css?v=20260629-guide-tune">
 </head>
 <body>
   <nav class="nav">
@@ -58,7 +58,7 @@
           <div>
             <p class="eye">Research guide</p>
             <h2 class="overview-orientation-title">Find expertise, projects, grant angles, resources, and records to correct.</h2>
-            <p>A compact orientation point for HRM&OB research activity.</p>
+            <p>A starting point for HRM&OB research activity.</p>
           </div>
           <div class="overview-use-cases" aria-label="Common dashboard uses">
             <a class="use-case-card" href="#staff">
@@ -70,8 +70,8 @@
               <p>See interests and people links.</p>
             </a>
             <a class="use-case-card" href="#resources">
-              <span>Build around a call</span>
-              <p>Connect calls to people and topics.</p>
+              <span>Build around a grant call</span>
+              <p>Connect grant calls to people and topics.</p>
             </a>
             <a class="use-case-card" href="#contact">
               <span>Suggest updates</span>
@@ -82,21 +82,6 @@
         <p class="metric-context">Group-level indicators for orientation; details and definitions are in Metrics.</p>
         <div id="metrics" class="metric-grid"></div>
         <div class="overview-grid">
-          <section class="overview-panel overview-panel-wide">
-            <div class="sec-head compact">
-              <div>
-                <p class="eye">Publication activity</p>
-                <h2 class="h2">Publications by year</h2>
-              </div>
-              <div class="overview-panel-actions">
-                <a class="section-link" href="#publications">View publications</a>
-                <a class="section-link" href="#metrics">Open Metrics</a>
-              </div>
-            </div>
-            <div id="year-bars" class="bar-chart"></div>
-            <h3 class="sub-h2">AIP distribution</h3>
-            <div id="aip-bars" class="aip-summary"></div>
-          </section>
           <section class="overview-panel overview-panel-wide overview-expertise-panel">
             <div class="overview-panel-head">
               <div>
@@ -111,6 +96,21 @@
             <p class="section-intro">Signals come from publications, grants, PhD projects, and profile fields.</p>
             <div id="overview-topic-cloud" class="topic-cloud topic-cloud-compact"></div>
             <div id="overview-expertise-details" class="overview-expertise-details" hidden></div>
+          </section>
+          <section class="overview-panel overview-panel-wide">
+            <div class="sec-head compact">
+              <div>
+                <p class="eye">Publication activity</p>
+                <h2 class="h2">Publications by year</h2>
+              </div>
+              <div class="overview-panel-actions">
+                <a class="section-link" href="#publications">View publications</a>
+                <a class="section-link" href="#metrics">Open Metrics</a>
+              </div>
+            </div>
+            <div id="year-bars" class="bar-chart"></div>
+            <h3 class="sub-h2">AIP distribution</h3>
+            <div id="aip-bars" class="aip-summary"></div>
           </section>
           <section class="overview-panel">
             <div class="overview-panel-head">
@@ -669,6 +669,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260629-staff-search"></script>
+  <script src="app.js?v=20260629-guide-tune"></script>
 </body>
 </html>
