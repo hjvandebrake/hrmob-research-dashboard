@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260629-network-publications-only">
+  <link rel="stylesheet" href="styles.css?v=20260629-reframing">
 </head>
 <body>
   <nav class="nav">
@@ -54,28 +54,46 @@
     <section id="view-overview" class="sec">
       <div class="wrap">
         <p class="view-context overview-view-context" data-view-context></p>
+        <section class="overview-orientation" aria-label="Dashboard orientation">
+          <div>
+            <p class="eye">Research landscape</p>
+            <h2 class="overview-orientation-title">A shared map for finding expertise, collaborators, grant angles, project links, resources, and records that need correction.</h2>
+            <p>Use this dashboard as a shared map of HRM&OB research activity: topics, people, publications, AIP, PhD projects, grants, collaboration openings, and resources. It is meant to support discovery, coordination, and corrections.</p>
+          </div>
+          <div class="overview-use-cases" aria-label="Common dashboard uses">
+            <a class="use-case-card" href="#staff">
+              <span>Find expertise</span>
+              <p>Search topics, signals, and related publications.</p>
+            </a>
+            <a class="use-case-card" href="#opportunities">
+              <span>Start a conversation</span>
+              <p>See shared interests, current work, and possible people links.</p>
+            </a>
+            <a class="use-case-card" href="#resources">
+              <span>Build around a call</span>
+              <p>Connect grant opportunities to topics, people, and resources.</p>
+            </a>
+            <a class="use-case-card" href="#contact">
+              <span>Update the map</span>
+              <p>Submit corrections, profile updates, collaboration interests, or resources.</p>
+            </a>
+          </div>
+        </section>
+        <p class="metric-context">Group-level indicators for orientation; details and definitions are in Metrics.</p>
         <div id="metrics" class="metric-grid"></div>
         <div class="overview-grid">
-          <section class="overview-panel">
-            <div class="sec-head compact">
-              <div>
-                <p class="eye">Publication activity</p>
-                <h2 class="h2">Publications by year</h2>
-              </div>
-              <a class="section-link" href="#publications">View publications</a>
-            </div>
-            <div id="year-bars" class="bar-chart"></div>
-            <h3 class="sub-h2">AIP distribution</h3>
-            <div id="aip-bars" class="aip-summary"></div>
-          </section>
           <section class="overview-panel overview-panel-wide overview-expertise-panel">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Expertise</p>
-                <h3 class="overview-h3">Expertise areas</h3>
+                <h3 class="overview-h3">Research landscape</h3>
               </div>
-              <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
+              <div class="overview-panel-actions">
+                <a class="section-link" href="#staff">Open staff</a>
+                <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
+              </div>
             </div>
+            <p class="section-intro">Topic signals are generated from available publication, grant, PhD, and profile information where available.</p>
             <div id="overview-topic-cloud" class="topic-cloud topic-cloud-compact"></div>
             <div id="overview-expertise-details" class="overview-expertise-details" hidden></div>
           </section>
@@ -115,9 +133,24 @@
                 <p class="eye">Grants</p>
                 <h3 class="overview-h3">Competitive funding</h3>
               </div>
-              <a class="section-link" href="#resources">Open</a>
+              <a class="section-link" href="#resources">Open resources</a>
             </div>
             <div id="grant-list" class="grant-list"></div>
+          </section>
+          <section class="overview-panel overview-panel-wide">
+            <div class="sec-head compact">
+              <div>
+                <p class="eye">Publication activity</p>
+                <h2 class="h2">Publications by year</h2>
+              </div>
+              <div class="overview-panel-actions">
+                <a class="section-link" href="#publications">View publications</a>
+                <a class="section-link" href="#metrics">Open Metrics</a>
+              </div>
+            </div>
+            <div id="year-bars" class="bar-chart"></div>
+            <h3 class="sub-h2">AIP distribution</h3>
+            <div id="aip-bars" class="aip-summary"></div>
           </section>
         </div>
         <div class="overview-contact">
@@ -152,7 +185,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Supervisors</p>
-                <h3 class="overview-h3">Current supervision load</h3>
+                <h3 class="overview-h3">Current supervision overview</h3>
               </div>
             </div>
             <div id="phd-supervisor-summary" class="phd-supervisor-summary"></div>
@@ -175,11 +208,23 @@
         <div class="sec-head compact">
           <div>
             <p class="eye">Opportunities</p>
-            <h2 class="h2">Shared interests, expertise, and grant angles</h2>
+            <h2 class="h2">Shared interests, expertise, and opportunities</h2>
           </div>
           <a class="section-link" href="#resources">Open grant resources</a>
         </div>
+        <p class="section-intro page-intro">Use these signals to start conversations around shared topics, methods, projects, and calls.</p>
         <div id="collaboration-summary" class="collaboration-summary"></div>
+        <section class="collaboration-section">
+          <div class="overview-panel-head">
+            <div>
+              <p class="eye">Staff input</p>
+              <h3 class="overview-h3">Current work, collaboration interests, and shared resources</h3>
+            </div>
+            <a class="section-link" href="#contact">Add or correct profile information</a>
+          </div>
+          <p class="section-intro">Staff-submitted profile fields help surface current projects, collaboration interests, and resources that may otherwise stay informal.</p>
+          <div id="collaboration-staff-board" class="staff-input-board"></div>
+        </section>
         <section class="collaboration-section">
           <div class="overview-panel-head">
             <div>
@@ -187,25 +232,28 @@
               <h3 class="overview-h3">Conversation clusters</h3>
             </div>
           </div>
+          <p class="section-intro">Use these clusters as starting points for conversations around shared topics, methods, projects, and calls.</p>
           <div id="collaboration-interest-opportunities" class="collaboration-card-list"></div>
         </section>
         <section class="collaboration-section">
           <div class="overview-panel-head">
             <div>
               <p class="eye">Grant opportunities</p>
-              <h3 class="overview-h3">Collaborative calls to build around</h3>
+              <h3 class="overview-h3">Grant calls to build around</h3>
             </div>
             <a class="section-link" href="#resources">Grant workbook</a>
           </div>
+          <p class="section-intro">Calls are shown as starting points for discussion and proposal planning.</p>
           <div id="collaboration-grant-opportunities" class="collaboration-grant-grid"></div>
         </section>
         <section class="collaboration-section">
           <div class="overview-panel-head">
             <div>
               <p class="eye">Network suggestions</p>
-              <h3 class="overview-h3">Additional people links</h3>
+              <h3 class="overview-h3">Possible conversation links</h3>
             </div>
           </div>
+          <p class="section-intro">These links point to people whose topics, publications, grants, PhD roles, or collaboration interests may create useful conversations. They are suggestions for exploration, not rankings.</p>
           <div id="collaboration-pair-opportunities" class="suggestion-list collaboration-pair-list"></div>
         </section>
       </div>
@@ -219,6 +267,7 @@
             <h2 class="h2">Resources</h2>
           </div>
         </div>
+        <p class="section-intro page-intro">Use this section to move from call scanning to possible collaboration and proposal preparation.</p>
         <div class="resource-grid">
           <section class="overview-panel">
             <div class="overview-panel-head">
@@ -334,7 +383,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Variety</p>
-                <h3 class="overview-h3">How concentrated publication output is</h3>
+                <h3 class="overview-h3">Distribution of publication activity</h3>
               </div>
             </div>
             <div id="benchmark-variety" class="variety-list"></div>
@@ -423,7 +472,7 @@
               </div>
               <h3 class="sub-h2">Topic signals</h3>
               <div id="staff-topics" class="topic-cloud"></div>
-              <h3 class="sub-h2">Potential research links</h3>
+              <h3 class="sub-h2">Possible research links</h3>
               <div id="staff-suggestions" class="suggestion-list"></div>
             </section>
             <section id="staff-subpage-publications" class="staff-subpage">
@@ -443,7 +492,7 @@
               <section id="staff-defended-phds" class="staff-defended-phds"></section>
             </section>
             <section id="staff-subpage-opportunities" class="staff-subpage">
-              <h3 class="sub-h2">Grant fit signals</h3>
+              <h3 class="sub-h2">Potential grant connections</h3>
               <div id="staff-grant-fit" class="grant-fit-list"></div>
               <div id="staff-owned-resources" class="staff-owned-resources"></div>
             </section>
@@ -504,6 +553,7 @@
             <h2 class="h2">Corrections and suggestions</h2>
           </div>
         </div>
+        <p class="section-intro page-intro">Use this form to correct missing records, clarify profile information, or add current work, collaboration interests, and resources.</p>
         <div class="contact-grid">
           <section class="overview-panel contact-main-panel">
             <form id="feedback-form" class="feedback-form">
@@ -612,6 +662,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260629-network-publications-only"></script>
+  <script src="app.js?v=20260629-reframing"></script>
 </body>
 </html>

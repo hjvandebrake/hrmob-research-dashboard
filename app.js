@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-network-publications-only";
+const DATA_VERSION = "20260629-reframing";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -465,6 +465,7 @@ function cacheElements() {
   els.expertiseSelectedTopic = document.getElementById("expertise-selected-topic");
   els.expertiseStaffResults = document.getElementById("expertise-staff-results");
   els.collaborationSummary = document.getElementById("collaboration-summary");
+  els.collaborationStaffBoard = document.getElementById("collaboration-staff-board");
   els.collaborationInterestOpportunities = document.getElementById("collaboration-interest-opportunities");
   els.collaborationGrantOpportunities = document.getElementById("collaboration-grant-opportunities");
   els.collaborationPairOpportunities = document.getElementById("collaboration-pair-opportunities");
@@ -680,6 +681,9 @@ function attachEvents() {
       if (handleCollaborationClusterToggle(event)) return;
       handleCollaborationStaffClick(event);
     });
+  }
+  if (els.collaborationStaffBoard) {
+    els.collaborationStaffBoard.addEventListener("click", handleCollaborationStaffClick);
   }
   if (els.collaborationPairOpportunities) {
     els.collaborationPairOpportunities.addEventListener("click", handleCollaborationStaffClick);
@@ -1013,7 +1017,7 @@ async function loadData() {
     if (staffProfileData) state.staffProfileData = staffProfileData;
     if (staffContributionData) state.staffContributionData = staffContributionData;
     const meta = state.data.meta;
-    els.subtitle.textContent = "Publications, journal rankings, opportunities, grants, and PhD supervision.";
+    els.subtitle.textContent = "Publications, AIP, expertise, collaboration, grants, PhD supervision, and shared resources.";
     syncFooterMeta(meta);
     syncPublicationWindowControls();
     populateStaffUpdatePersonSelect();
@@ -1655,9 +1659,62 @@ function renderCollaboration() {
     </div>
     <p class="collaboration-note">Suggestions combine staff-submitted interests, public profile signals, counted publications from ${escapeHtml(collaborationWindowLabel())}, and the grant resources workbook. Treat them as starting points for conversations, not as final eligibility advice.</p>
   `;
+  renderStaffInputBoard();
   renderCollaborationInterestOpportunities(interestOpportunities);
   renderCollaborationGrantOpportunities(grantOpportunities);
   renderCollaborationPairOpportunities(pairOpportunities);
+}
+
+function renderStaffInputBoard() {
+  if (!els.collaborationStaffBoard) return;
+  const people = peopleById();
+  const activeIds = activePeopleSet();
+  const profiles = (state.staffContributionData?.people || [])
+    .filter((profile) => profile?.personId && activeIds.has(profile.personId) && people.has(profile.personId));
+  const groups = [
+    ["workingOn", "Currently working on", "No submitted items yet. Add updates on the Contact page."],
+    ["collaborationInterests", "Interested in collaborating on", "No submitted collaboration interests yet. Add updates on the Contact page."],
+    ["resources", "Resources to share", "No submitted resources yet. Add updates on the Contact page."],
+  ];
+  els.collaborationStaffBoard.innerHTML = groups.map(([key, title, emptyText]) => {
+    const items = profiles.flatMap((profile) => contributionItems(profile, key)
+      .map((item) => ({ person: people.get(profile.personId), item, key })))
+      .filter((entry) => entry.person && entry.item);
+    return renderContributionGroup(title, items, emptyText);
+  }).join("");
+}
+
+function renderContributionGroup(title, items, emptyText) {
+  return `<section class="staff-input-group">
+    <div class="staff-input-group-head">
+      <h4>${escapeHtml(title)}</h4>
+      <span>${items.length ? `${items.length} item${items.length === 1 ? "" : "s"}` : "Open"}</span>
+    </div>
+    <div class="staff-input-card-list">
+      ${items.length ? items.slice(0, 5).map(renderContributionCard).join("") : emptyStateHtml(emptyText, `<a class="section-link" href="#contact">Open Contact</a>`)}
+    </div>
+  </section>`;
+}
+
+function renderContributionCard(entry) {
+  const keywords = contributionKeywords(entry.item).slice(0, 4);
+  const text = entry.item.description || entry.item.title || "";
+  return `<article class="staff-input-card">
+    <div>
+      <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="research">${escapeHtml(entry.person.display)}</button>
+      <strong>${escapeHtml(entry.item.title || "Profile update")}</strong>
+      ${text && text !== entry.item.title ? `<p>${escapeHtml(clipText(text, 150))}</p>` : ""}
+    </div>
+    ${keywords.length ? `<div class="chip-row">${keywords.map((keyword) => `<span class="chip">${escapeHtml(keyword)}</span>`).join("")}</div>` : ""}
+    <button class="section-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="research">Open profile</button>
+  </article>`;
+}
+
+function emptyStateHtml(message, actionHtml = "") {
+  return `<div class="empty-state">
+    <p>${escapeHtml(message)}</p>
+    ${actionHtml}
+  </div>`;
 }
 
 function staffInterestItems() {
@@ -2035,7 +2092,7 @@ function collaborationEvidenceCacheKey() {
 function renderCollaborationInterestOpportunities(opportunities) {
   if (!els.collaborationInterestOpportunities) return;
   if (!opportunities.length) {
-    els.collaborationInterestOpportunities.innerHTML = `<div class="staff-empty">No collaboration clusters match the current staff filter yet.</div>`;
+    els.collaborationInterestOpportunities.innerHTML = `<div class="staff-empty">No conversation clusters match the current filters yet. Try changing the publication window or include affiliated researchers.</div>`;
     return;
   }
   const expanded = Boolean(state.collaborationClustersExpanded);
@@ -2095,7 +2152,7 @@ function renderCollaborationGrantMini(call) {
 function renderCollaborationGrantOpportunities(calls) {
   if (!els.collaborationGrantOpportunities) return;
   if (!calls.length) {
-    els.collaborationGrantOpportunities.innerHTML = `<div class="staff-empty">No collaborative grant calls loaded.</div>`;
+    els.collaborationGrantOpportunities.innerHTML = `<div class="staff-empty">No grant calls are loaded for this view yet. Open Resources to check the workbook and grant-call pages.</div>`;
     return;
   }
   els.collaborationGrantOpportunities.innerHTML = calls.map((call) => {
@@ -2112,13 +2169,60 @@ function renderCollaborationGrantOpportunities(calls) {
         </div>
         <a class="section-link" href="#resources">Resources</a>
       </div>
+      ${renderGrantBadges(call)}
       <p class="recent-call-meta">${escapeHtml([call.funder, call.amount, call.deadline || call.timing].filter(Boolean).join(" - "))}</p>
       <p>${escapeHtml(clipText(call.tips || call.why || call.eligibility || "Collaborative grant opportunity from the resource workbook.", 260))}</p>
+      <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
       <div class="collaboration-person-list">
         ${candidates.length ? candidates.map(renderCollaborationPerson).join("") : `<span class="small-muted">Use this as a department-level scan item.</span>`}
       </div>
     </article>`;
   }).join("");
+}
+
+function renderGrantBadges(call) {
+  const badges = [
+    call.funder,
+    call.scheme || call.stage,
+    grantDeadlineStatus(call),
+    grantCollaborationType(call),
+  ].filter(Boolean);
+  return `<div class="chip-row grant-badge-row">
+    ${badges.map((badge) => `<span class="chip grant-chip">${escapeHtml(badge)}</span>`).join("")}
+  </div>`;
+}
+
+function grantDeadlineStatus(call) {
+  const raw = String(call.deadline || call.timing || "").trim();
+  if (!raw) return "No deadline listed";
+  if (/rolling|ongoing|continuous/i.test(raw)) return "Rolling";
+  const parsed = Date.parse(raw);
+  if (!Number.isNaN(parsed)) {
+    const days = (parsed - Date.now()) / (1000 * 60 * 60 * 24);
+    if (days >= 0 && days <= 120) return "Upcoming";
+    if (days > 120) return "Later";
+  }
+  if (/2026|2027|spring|summer|autumn|fall|winter|q[1-4]/i.test(raw)) return "Later";
+  return raw.length <= 28 ? raw : "Deadline listed";
+}
+
+function grantCollaborationType(call) {
+  const text = normalizeSearchText(collaborativeGrantText(call));
+  if (/consortium|horizon|cost|partner|partnership|stakeholder/.test(text)) return "Consortium";
+  if (/international|global|european|msca|erc/.test(text)) return "International";
+  if (/phd|doctoral|training school|graduate/.test(text)) return "PhD-related";
+  if (/interdisciplinary|cross disciplinary|societal|public private/.test(text)) return "Interdisciplinary";
+  if (/team|collaborat|network|workshop/.test(text)) return "Team";
+  return "Individual or team";
+}
+
+function grantNextStep(call) {
+  const text = normalizeSearchText(collaborativeGrantText(call));
+  if (/consortium|horizon|cost|partner|partnership/.test(text)) return "Find partners";
+  if (/deadline|call|eligibility/.test(text)) return "Review call";
+  if (/workbook|tips|note/.test(text)) return "Use workbook";
+  if (/team|collaborat|network/.test(text)) return "Draft idea";
+  return "Check fit";
 }
 
 function collaborativeGrantOpportunities() {
@@ -2175,24 +2279,35 @@ function collaborativeGrantCandidates(call) {
 function renderCollaborationPairOpportunities(opportunities) {
   if (!els.collaborationPairOpportunities) return;
   if (!opportunities.length) {
-    els.collaborationPairOpportunities.innerHTML = `<div class="staff-empty">No additional pair suggestions under the current filters.</div>`;
+    els.collaborationPairOpportunities.innerHTML = `<div class="staff-empty">No additional people links for the current filters. Try changing the publication window or include affiliated researchers.</div>`;
     return;
   }
   els.collaborationPairOpportunities.innerHTML = opportunities.map((item) => `
-    <article class="suggestion-card collaboration-pair-card">
-      <div class="collaboration-pair-head">
-        <button class="person-link suggestion-name" type="button" data-collaboration-staff="${escapeHtml(item.a.id)}" data-staff-subpage="research">${escapeHtml(item.a.display)}</button>
-        <span>+</span>
-        <button class="person-link suggestion-name" type="button" data-collaboration-staff="${escapeHtml(item.b.id)}" data-staff-subpage="research">${escapeHtml(item.b.display)}</button>
+    <article class="suggestion-card collaboration-pair-card conversation-link-card">
+      <div class="conversation-people">
+        ${renderConversationPerson(item.a)}
+        ${renderConversationPerson(item.b)}
       </div>
       <p class="collaboration-pair-basis">${escapeHtml(item.basis)}</p>
-      <p>${escapeHtml(item.idea)}</p>
+      <p class="collaboration-pair-copy">${escapeHtml(item.idea)}</p>
+      <span class="collaboration-label">Why this link appears</span>
       <div class="suggestion-reasons">
         ${item.reasons.slice(0, 3).map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
       </div>
       <p class="collaboration-pair-next">${escapeHtml(item.nextStep)}</p>
     </article>
   `).join("");
+}
+
+function renderConversationPerson(person) {
+  return `<div class="conversation-person-chip">
+    <strong>${escapeHtml(person.display)}</strong>
+    <span>${escapeHtml(person.name)}</span>
+    <div>
+      <button class="section-link" type="button" data-collaboration-staff="${escapeHtml(person.id)}" data-staff-subpage="research">Open profile</button>
+      <a class="section-link" href="#network/${escapeHtml(person.id)}">Network view</a>
+    </div>
+  </div>`;
 }
 
 function collaborationPairOpportunities() {
@@ -2549,17 +2664,17 @@ function renderStaffOwnedProfile(personId) {
   if (els.staffCurrentWork) {
     els.staffCurrentWork.innerHTML = renderStaffOwnedPanel({
       eye: "Current work",
-      title: "Working on",
+      title: "Currently working on",
       items: contributionItems(contribution, "workingOn"),
-      empty: "No staff-submitted current-work note yet.",
+      empty: "No profile update submitted yet.",
     });
   }
   if (els.staffCollaborationInterests) {
     els.staffCollaborationInterests.innerHTML = renderStaffOwnedPanel({
-      eye: "Collaboration",
-      title: "Interested in",
+      eye: "Collaboration interests",
+      title: "Open to collaboration on",
       items: contributionItems(contribution, "collaborationInterests"),
-      empty: "No collaboration interests submitted yet.",
+      empty: "No profile update submitted yet.",
     });
   }
 }
@@ -2599,7 +2714,7 @@ function renderStaffOwnedResources(personId, row) {
   const resources = contributionItems(staffContribution(personId), "resources");
   els.staffOwnedResources.innerHTML = `
     <h3 class="sub-h2">Shared resources</h3>
-    ${resources.length ? `<div class="staff-resource-list">${resources.map(renderStaffResource).join("")}</div>` : `<p class="small-muted staff-resource-empty">No staff-submitted resources yet.</p>`}
+    ${resources.length ? `<div class="staff-resource-list">${resources.map(renderStaffResource).join("")}</div>` : `<p class="small-muted staff-resource-empty">No profile update submitted yet.</p>`}
     ${row ? `
       <h3 class="sub-h2">Dashboard counts</h3>
       <div class="staff-metrics staff-metrics-bottom">
@@ -3395,9 +3510,11 @@ function renderRecentGrantCalls() {
       : escapeHtml(call.name);
     return `<article class="recent-call-card">
       <h4>${title}</h4>
+      ${renderGrantBadges(call)}
       <p class="recent-call-meta">${escapeHtml([call.funder, call.timing].filter(Boolean).join(" - "))}</p>
       <p>${escapeHtml(clipText(call.why || call.fitNote || "", 180))}</p>
-      ${candidates.length ? `<div class="recent-call-fit"><span>Possible fit</span>${candidates.map((item) => `<b>${escapeHtml(item.person.display)}</b>`).join("")}</div>` : ""}
+      <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
+      ${candidates.length ? `<div class="recent-call-fit"><span>Possible profile links</span>${candidates.map((item) => `<b>${escapeHtml(item.person.display)}</b>`).join("")}</div>` : ""}
     </article>`;
   }).join("");
 }
@@ -3415,9 +3532,11 @@ function resourceOpportunityCard(item) {
   ].filter(Boolean);
   return `<article class="grant-opportunity-card">
     <h5>${title}</h5>
+    ${renderGrantBadges(item)}
     <p class="grant-opportunity-meta">${escapeHtml(facts.join(" - "))}</p>
     ${item.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(item.eligibility, 150))}</p>` : ""}
     ${item.tips ? `<p><strong>Tip</strong> ${escapeHtml(clipText(item.tips, 260))}</p>` : ""}
+    <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(item))}</p>
   </article>`;
 }
 
@@ -3435,7 +3554,7 @@ function renderStaffGrantFit(personId) {
     .sort((a, b) => b.score - a.score || a.call.name.localeCompare(b.call.name))
     .slice(0, 4);
   if (!calls.length) {
-    els.staffGrantFit.innerHTML = `<p class="small-muted">No clear grant-fit signal from the current dashboard data.</p>`;
+    els.staffGrantFit.innerHTML = `<p class="small-muted">No potential grant connection is visible from the current dashboard data.</p>`;
     return;
   }
   els.staffGrantFit.innerHTML = calls.map(({ call, reasons }) => {
@@ -4098,6 +4217,10 @@ function renderMetricMethodNote(container, hrm, rest) {
         <strong>Output centralization</strong>
         <p>Gini-style concentration of counted publications per person-year across included people.</p>
       </div>
+      <div>
+        <strong>How to use these metrics</strong>
+        <p>These metrics are group-level orientation tools. They support transparency, interpretation, and correction of records; they should not be read as individual performance rankings.</p>
+      </div>
     </div>
   `;
 }
@@ -4506,7 +4629,7 @@ function renderOverviewExpertiseDetails() {
     </div>
     <div class="overview-expertise-grid">
       <section class="overview-expertise-column">
-        <h4>People to start with</h4>
+        <h4>Related people</h4>
         <div class="overview-expertise-people">
           ${rows.length ? rows.map((row) => `
             <article class="overview-expertise-person">
@@ -4517,7 +4640,7 @@ function renderOverviewExpertiseDetails() {
         </div>
       </section>
       <section class="overview-expertise-column">
-        <h4>Recent matching publications</h4>
+        <h4>Example publications</h4>
         <div id="overview-expertise-publication-list" class="topic-publication-list overview-expertise-publications"></div>
       </section>
     </div>
