@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260626-1122";
+const DATA_VERSION = "20260629-opportunities-network";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -605,7 +605,12 @@ function attachEvents() {
       const node = event.target.closest("[data-network-person-id]");
       if (!node) return;
       const id = node.getAttribute("data-network-person-id") || "";
-      state.networkPersonId = state.networkPersonId === id ? "" : id;
+      const nextId = state.networkPersonId === id ? "" : id;
+      state.networkPersonId = nextId;
+      if (nextId) {
+        state.networkExternal = true;
+        if (els.networkExternalToggle) els.networkExternalToggle.checked = true;
+      }
       updateRoute();
       renderNetwork();
       requestDeferredDataForCurrentView();
@@ -616,7 +621,12 @@ function attachEvents() {
       if (!node) return;
       event.preventDefault();
       const id = node.getAttribute("data-network-person-id") || "";
-      state.networkPersonId = state.networkPersonId === id ? "" : id;
+      const nextId = state.networkPersonId === id ? "" : id;
+      state.networkPersonId = nextId;
+      if (nextId) {
+        state.networkExternal = true;
+        if (els.networkExternalToggle) els.networkExternalToggle.checked = true;
+      }
       updateRoute();
       renderNetwork();
       requestDeferredDataForCurrentView();
@@ -1003,7 +1013,7 @@ async function loadData() {
     if (staffProfileData) state.staffProfileData = staffProfileData;
     if (staffContributionData) state.staffContributionData = staffContributionData;
     const meta = state.data.meta;
-    els.subtitle.textContent = "Publications, journal rankings, collaboration, grants, and PhD supervision.";
+    els.subtitle.textContent = "Publications, journal rankings, opportunities, grants, and PhD supervision.";
     syncFooterMeta(meta);
     syncPublicationWindowControls();
     populateStaffUpdatePersonSelect();
@@ -1089,13 +1099,21 @@ function validTab(tab) {
 function routeFromHash() {
   const raw = decodeURIComponent((location.hash || "#overview").replace(/^#/, ""));
   const [tab, detail = "", subdetail = ""] = raw.split("/");
-  const normalizedTab = validTab(tab) ? tab : "overview";
-  return { tab: normalizedTab, detail, subdetail, invalidTab: normalizedTab !== tab };
+  const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
+  const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
+  return {
+    tab: normalizedTab,
+    detail,
+    subdetail,
+    invalidTab: !validTab(aliasedTab),
+    legacyTab: tab === "collaboration",
+  };
 }
 
 function routeHash() {
   if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}/${encodeURIComponent(normalizeStaffSubpage(state.staffSubpage))}`;
   if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
+  if (state.tab === "collaboration") return "#opportunities";
   return `#${state.tab}`;
 }
 
@@ -1113,7 +1131,7 @@ function applyRouteFromHash() {
   }
   if (route.tab === "network") state.networkPersonId = route.detail || "";
   setTab(route.tab, { updateHistory: false });
-  if (route.invalidTab) updateRoute({ replace: true });
+  if (route.invalidTab || route.legacyTab) updateRoute({ replace: true });
 }
 
 function normalizeStaffSubpage(value) {
@@ -1712,7 +1730,7 @@ function collaborationOpportunityFromInterest(entry) {
   const owner = {
     person: entry.person,
     score: Number.MAX_SAFE_INTEGER,
-    reasons: [`Submitted interest: ${entry.item.title || "Collaboration interest"}`],
+    reasons: [`Submitted interest: ${entry.item.title || "Opportunity interest"}`],
   };
   const contributors = [
     owner,
@@ -1726,7 +1744,7 @@ function collaborationOpportunityFromInterest(entry) {
   return {
     kind: "staff-interest",
     sourceLabel: `Staff interest: ${entry.person.display}`,
-    title: entry.item.title || "Collaboration interest",
+    title: entry.item.title || "Opportunity interest",
     description: entry.item.description || "",
     primaryPerson: entry.person,
     bundle,
@@ -2036,8 +2054,8 @@ function renderCollaborationInterestOpportunities(opportunities) {
     <article class="collaboration-card">
       <div class="collaboration-card-head">
         <div>
-          <p class="eye">${escapeHtml(row.sourceLabel || "Collaboration opportunity")}</p>
-          <h4>${escapeHtml(row.title || "Collaboration opportunity")}</h4>
+          <p class="eye">${escapeHtml(row.sourceLabel || "Opportunity")}</p>
+          <h4>${escapeHtml(row.title || "Opportunity")}</h4>
         </div>
         ${row.primaryPerson ? `<button class="section-link" type="button" data-collaboration-staff="${escapeHtml(row.primaryPerson.id)}" data-staff-subpage="research">Open profile</button>` : ""}
       </div>
@@ -3675,15 +3693,24 @@ function buildMetricGroups() {
 
 function metricYears() {
   const [fromYear, toYear] = activeWindowYears();
-  const currentYear = new Date().getFullYear();
+  const completedYear = latestCompletedMetricYear();
   const allYears = metricDataYears();
-  const start = Number.isFinite(fromYear)
+  const mode = normalizeWindowMode(state.publicationWindow);
+  const rawEnd = Number.isFinite(toYear) ? toYear : completedYear;
+  const end = Math.min(rawEnd, completedYear);
+  let start = Number.isFinite(fromYear)
     ? fromYear
     : allYears.length ? Math.min(...allYears) : METRICS_START_YEAR;
-  const rawEnd = Number.isFinite(toYear) ? toYear : currentYear;
-  const end = Math.min(rawEnd, currentYear);
+  if (mode !== "all" && Number.isFinite(fromYear) && Number.isFinite(toYear)) {
+    const intendedWindowYears = Math.max(1, toYear - fromYear + 1);
+    start = end - intendedWindowYears + 1;
+  }
   if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) return [];
   return Array.from({ length: end - start + 1 }, (_, idx) => start + idx);
+}
+
+function latestCompletedMetricYear() {
+  return new Date().getFullYear() - 1;
 }
 
 function metricDataYears() {
@@ -3696,7 +3723,7 @@ function metricDataYears() {
 }
 
 function completedMetricYears(years) {
-  const latestCompletedYear = new Date().getFullYear() - 1;
+  const latestCompletedYear = latestCompletedMetricYear();
   return years.filter((year) => year <= latestCompletedYear);
 }
 
@@ -4030,7 +4057,7 @@ function metricTrendColor(group) {
 }
 
 function metricYearLabel(year) {
-  return year === new Date().getFullYear() ? `${year} YTD` : String(year);
+  return String(year);
 }
 
 function renderMetricMethodNote(container, hrm, rest) {
@@ -4040,8 +4067,8 @@ function renderMetricMethodNote(container, hrm, rest) {
   const aipNotInSource = isNumber(quality.aipNotInSourceRows) ? quality.aipNotInSourceRows : null;
   const usablePeople = (state.benchmarkData?.people || []).filter((person) => person.includedInDenominator && person.department !== "HRM&OB").length;
   const trendYears = metricYears();
-  const currentYear = new Date().getFullYear();
-  const currentYearNote = trendYears.includes(currentYear) ? ` Cards use completed years; trend lines include ${currentYear} so far.` : "";
+  const latestTrendYear = trendYears.length ? Math.max(...trendYears) : latestCompletedMetricYear();
+  const currentYearNote = ` Trend lines end with the latest completed year (${latestTrendYear}).`;
   const benchmarkSourceMethod = state.benchmarkData?.meta?.benchmarkSourceMethod || "";
   const benchmarkComparabilityText = benchmarkSourceMethod === "openalex-author-id"
     ? "Benchmark records now use the same OpenAlex author-profile source family as HRM&OB where a staff identity could be accepted. Treat levels as provisional because this is still a public-source seed, not a Pure export."
@@ -4078,17 +4105,32 @@ function renderMetricMethodNote(container, hrm, rest) {
 
 function renderMetricVariety(container, groups) {
   if (!container) return;
-  const maxCentralization = Math.max(0.01, ...groups.map((group) => group.outputCentralization).filter(isNumber));
+  const maxCentralization = Math.max(0.01, ...groups
+    .flatMap((group) => [group.outputCentralization, group.highAipCentralization])
+    .filter(isNumber));
   container.innerHTML = groups.map((group) => {
     const width = isNumber(group.outputCentralization) ? Math.max(2, (group.outputCentralization / maxCentralization) * 100) : 0;
+    const highWidth = isNumber(group.highAipCentralization) ? Math.max(2, (group.highAipCentralization / maxCentralization) * 100) : 0;
     return `
       <div class="variety-row ${group.primary ? "primary" : ""}">
         <div>
           <strong>${escapeHtml(group.label)}</strong>
           <span>Median ${formatMetricValue(group.medianPubs)} - SD ${formatMetricValue(group.outputSd)} - spread ${formatMetricValue(group.spreadPubs)}</span>
         </div>
-        <i><em style="width:${width}%"></em></i>
-        <b>${formatPercentValue(group.outputCentralization)}</b>
+        <div class="variety-bars">
+          <div class="variety-bar-line variety-bar-main">
+            <i class="variety-bar-track"><em style="width:${width}%"></em></i>
+            <span>All counted</span>
+          </div>
+          <div class="variety-bar-line variety-bar-high">
+            <i class="variety-bar-track"><em style="width:${highWidth}%"></em></i>
+            <span>AIP &ge; 95</span>
+          </div>
+        </div>
+        <div class="variety-values">
+          <b>${formatPercentValue(group.outputCentralization)}</b>
+          <span>${formatPercentValue(group.highAipCentralization)}</span>
+        </div>
       </div>
     `;
   }).join("");
@@ -4270,12 +4312,16 @@ function renderJournalList(target, journals, limit, emptyMessage) {
     target.innerHTML = `<p class="small-muted">${escapeHtml(emptyMessage)}</p>`;
     return;
   }
-  target.innerHTML = rows.map((journal) => `
+  target.innerHTML = rows.map(renderJournalItem).join("");
+}
+
+function renderJournalItem(journal) {
+  return `
     <div class="list-row">
       <p class="list-title">${escapeHtml(journalDisplayName(journal))}</p>
-      <p class="list-meta">${journal.count} publications, ${escapeHtml(yearSetLabel(journal.years))}${isNumber(journal.aip) ? `, AIP ${journal.aip.toFixed(1)}` : ""}</p>
+      <p class="list-meta">${journal.count} publication${journal.count === 1 ? "" : "s"}, ${escapeHtml(yearSetLabel(journal.years))}${isNumber(journal.aip) ? `, AIP ${journal.aip.toFixed(1)}` : ""}</p>
     </div>
-  `).join("");
+  `;
 }
 
 function renderJournalOpenAccessList(journals) {
@@ -4482,7 +4528,19 @@ function renderOverviewExpertiseDetails() {
 
 function renderOverviewJournals(journals) {
   if (!els.overviewJournalList) return;
-  renderJournalList(els.overviewJournalList, journals, 12, "No journal records for the overview window.");
+  const rows = journals.filter((journal) => journal.count >= 2);
+  if (!rows.length) {
+    els.overviewJournalList.innerHTML = `<p class="small-muted">No journal has at least 2 publications in the overview window.</p>`;
+    return;
+  }
+  els.overviewJournalList.innerHTML = renderExpandableOverviewList({
+    rows,
+    visibleCount: 5,
+    noun: "journals with at least 2 publications",
+    renderItem: renderJournalItem,
+    note: "Overview outlet list includes journals with at least 2 counted publications in the current publication window.",
+    noteMode: "plain",
+  });
 }
 
 function internalCollaborationEdges(pubs) {
@@ -4561,7 +4619,7 @@ function renderOverviewPhds(theses) {
   });
 }
 
-function renderExpandableOverviewList({ rows, visibleCount, noun, renderItem, note }) {
+function renderExpandableOverviewList({ rows, visibleCount, noun, renderItem, note, noteMode = "data" }) {
   const visible = rows.slice(0, visibleCount);
   const extra = rows.slice(visibleCount);
   return `
@@ -4572,7 +4630,7 @@ function renderExpandableOverviewList({ rows, visibleCount, noun, renderItem, no
         ${extra.map(renderItem).join("")}
       </div>
     </details>` : ""}
-    ${dataNote(note)}
+    ${noteMode === "plain" ? `<p class="small-muted">${escapeHtml(note || "")}</p>` : dataNote(note)}
   `;
 }
 
@@ -5303,6 +5361,23 @@ function shortExternalLabel(name) {
   return trimmed.slice(0, 20);
 }
 
+function readableExternalLabel(name) {
+  const trimmed = String(name || "").replace(/\s+/g, " ").trim();
+  if (trimmed.length <= 30) return trimmed;
+  const commaParts = trimmed.split(",");
+  if (commaParts.length > 1) {
+    const family = commaParts[0].trim();
+    const given = commaParts.slice(1).join(" ").trim();
+    return given ? `${family}, ${given.slice(0, 12)}`.slice(0, 34) : family.slice(0, 34);
+  }
+  const tokens = trimmed.split(" ").filter(Boolean);
+  if (tokens.length > 2) {
+    const family = tokens.slice(-2).join(" ");
+    return `${family}, ${tokens[0][0]}.`.slice(0, 34);
+  }
+  return trimmed.slice(0, 34);
+}
+
 function shortFacultyLabel(name, department) {
   const base = shortFacultyName(name);
   return department ? `${base} (${department})` : base;
@@ -5341,15 +5416,19 @@ function syncNetworkControls(people) {
   document.querySelectorAll(".publication-network-control").forEach((control) => {
     control.hidden = state.networkMode === "teaching";
   });
+  const externalToggleLabel = els.networkExternalToggle?.closest(".network-external-toggle");
+  if (externalToggleLabel) {
+    externalToggleLabel.hidden = state.networkMode === "teaching" || !state.networkPersonId;
+  }
   if (els.externalPartnerPanel) els.externalPartnerPanel.hidden = state.networkMode === "teaching";
   const selected = people.find((person) => person.id === state.networkPersonId);
   if (els.networkClearSelection) els.networkClearSelection.hidden = !selected;
   if (els.networkSelectionNote) {
     const base = state.networkMode === "teaching"
       ? "Click a department member to focus shared-course teaching links."
-      : "Click a department member to focus publication collaborations.";
+      : "Click a department member to focus publication collaborations and show that person's coauthors.";
     els.networkSelectionNote.innerHTML = selected
-      ? `Focused on <strong>${escapeHtml(selected.display)}</strong>. <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selected.id)}">Open staff profile</button>`
+      ? `Focused on <strong>${escapeHtml(selected.display)}</strong>. Showing all detected coauthors in the current publication window. <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selected.id)}">Open staff profile</button>`
       : escapeHtml(base);
   }
   if (els.networkEmpty) {
@@ -5435,12 +5514,22 @@ function renderPublicationNetwork(people) {
     collaborationPubs = pubs.filter((pub) => pub.matchedPeople.includes(selectedPersonId));
     collaborationActiveIds = new Set([selectedPersonId]);
   }
-  const faculty = state.networkExternal
+  const showOuterCollaborators = Boolean(selectedPersonId && state.networkExternal);
+  const faculty = showOuterCollaborators
     ? buildFacultyCollaboration(collaborationPubs, collaborationActiveIds)
     : { nodes: [], edges: [] };
-  const external = state.networkExternal
+  const external = showOuterCollaborators
     ? buildExternalCollaboration(collaborationPubs, collaborationActiveIds)
     : { nodes: [], edges: [] };
+  if (showOuterCollaborators) {
+    external.nodes.forEach((node) => {
+      node.priority = true;
+      node.shortLabel = readableExternalLabel(node.label);
+    });
+    faculty.nodes.forEach((node) => {
+      node.priority = true;
+    });
+  }
   const collaboratorNodes = [...faculty.nodes, ...external.nodes];
   const collaboratorEdges = [...faculty.edges, ...external.edges];
   const selectedPerson = selectedPersonId ? people.find((person) => person.id === selectedPersonId) : null;
@@ -5530,12 +5619,13 @@ function renderNetworkLegend() {
     `;
     return;
   }
+  const selected = Boolean(state.networkPersonId);
   els.networkLegend.innerHTML = `
     <span><i class="legend-node"></i> Node size = publications</span>
     <span><i class="legend-count"></i> Number = publications</span>
     <span><i class="legend-line"></i> Line thickness = shared publications</span>
-    <span><i class="legend-faculty"></i> Other FEB departments</span>
-    <span><i class="legend-external"></i> Outer dots = outside coauthors; labels shown only for strongest repeated ties</span>
+    ${selected ? `<span><i class="legend-faculty"></i> Other FEB departments</span>
+    <span><i class="legend-external"></i> Outside coauthors for the selected person</span>` : ""}
   `;
 }
 
@@ -5573,11 +5663,13 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     const facultyNode = node.scope === "faculty";
     const radius = facultyNode
       ? Math.max(11, Math.min(21, 8.5 + Math.sqrt(node.count || 0) * 2.8))
-      : Math.max(3, Math.min(7, 2.6 + Math.sqrt(node.count || 0) * 1.2));
+      : node.priority
+        ? Math.max(5.8, Math.min(10.5, 4.2 + Math.sqrt(node.count || 0) * 1.55))
+        : Math.max(3, Math.min(7, 2.6 + Math.sqrt(node.count || 0) * 1.2));
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius.toFixed(1)));
-    circle.setAttribute("class", `${facultyNode ? "faculty-node" : "external-node"}${node.aggregate ? " aggregate" : ""}`);
+    circle.setAttribute("class", `${facultyNode ? "faculty-node" : "external-node"}${node.aggregate ? " aggregate" : ""}${node.priority ? " priority" : ""}`);
     const nodeTitle = facultyNode
       ? `${node.label}: ${node.count} shared publications with HRM&OB (${node.department || "other department"})`
       : `${node.label}: ${node.count} shared publications with HRM&OB`;
@@ -5592,7 +5684,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
       label.setAttribute("x", labelPlacement.x);
       label.setAttribute("y", labelPlacement.y);
       label.setAttribute("text-anchor", labelPlacement.anchor);
-      label.setAttribute("class", `${facultyNode ? "faculty-label" : "external-label"}${node.aggregate ? " aggregate" : ""}`);
+      label.setAttribute("class", `${facultyNode ? "faculty-label" : "external-label"}${node.aggregate ? " aggregate" : ""}${node.priority ? " priority" : ""}`);
       if (facultyNode) {
         const nameLine = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
         nameLine.setAttribute("x", labelPlacement.x);
@@ -5639,8 +5731,15 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     group.setAttribute("tabindex", "0");
     group.setAttribute("role", "button");
     group.setAttribute("aria-label", `Focus ${node.label}`);
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     const radius = Math.max(10, Math.min(38, 8 + Math.sqrt(node.count || 0) * 3.8));
+    const hitCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    hitCircle.setAttribute("cx", node.x);
+    hitCircle.setAttribute("cy", node.y);
+    hitCircle.setAttribute("r", String(radius + 22));
+    hitCircle.setAttribute("class", "node-hit");
+    group.appendChild(hitCircle);
+
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius));
@@ -5817,6 +5916,8 @@ function layoutExternalNodes(externalNodes, externalEdges, internalNodes, width,
   const ry = height * 0.43;
   Array.from(groups.entries()).forEach(([anchorId, group], groupIndex) => {
     const anchor = internalById.get(anchorId);
+    const anchorDistance = anchor ? Math.hypot(anchor.x - cx, anchor.y - cy) : Infinity;
+    const centeredFocusGroup = Boolean(anchor && anchorDistance < 40 && groups.size === 1);
     const baseAngle = anchor
       ? Math.atan2(anchor.y - cy, anchor.x - cx)
       : -Math.PI / 2 + (Math.PI * 2 * groupIndex) / Math.max(1, groups.size);
@@ -5831,18 +5932,29 @@ function layoutExternalNodes(externalNodes, externalEdges, internalNodes, width,
     [...aggregate, ...named].forEach((node, index) => {
       let spread = 0;
       let radialStep = 0;
+      let angle;
+      let localRx;
+      let localRy;
       if (!node.aggregate) {
-        const isFaculty = node.scope === "faculty";
-        const lanes = 12;
+        const lanes = centeredFocusGroup ? 18 : 12;
         const ring = Math.floor(index / lanes);
         const lane = index % lanes;
-        spread = (lane - (lanes - 1) / 2) * 0.12 + ring * 0.045;
-        radialStep = ring * 25;
+        if (centeredFocusGroup) {
+          angle = -Math.PI / 2 + (Math.PI * 2 * lane) / lanes + ring * 0.13 + hashNumber(node.id) * 0.045;
+          radialStep = ring * 36;
+          localRx = Math.max(width * 0.30, width * 0.42 - radialStep);
+          localRy = Math.max(height * 0.29, height * 0.39 - radialStep * 0.72);
+        } else {
+          spread = (lane - (lanes - 1) / 2) * 0.12 + ring * 0.045;
+          radialStep = ring * 25;
+        }
       }
-      const jitter = hashNumber(node.id) * 0.1;
-      const angle = baseAngle + spread + jitter;
-      const localRx = Math.max(width * 0.28, rx - radialStep);
-      const localRy = Math.max(height * 0.27, ry - radialStep * 0.75);
+      if (!Number.isFinite(angle)) {
+        const jitter = hashNumber(node.id) * 0.1;
+        angle = baseAngle + spread + jitter;
+        localRx = Math.max(width * 0.28, rx - radialStep);
+        localRy = Math.max(height * 0.27, ry - radialStep * 0.75);
+      }
       placed.push({
         ...node,
         x: clamp(cx + Math.cos(angle) * localRx, 42, width - 42),

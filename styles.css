@@ -454,19 +454,42 @@ td.muted { color: var(--ink-400); }
   height: 3px;
   width: 22px;
 }
-.variety-row i {
+.variety-bars {
+  display: grid;
+  gap: 5px;
+}
+.variety-bar-line {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(80px, 1fr) 72px;
+}
+.variety-bar-track {
   background: var(--ink-100);
   border: 1px solid var(--ink-200);
   display: block;
   height: 10px;
   overflow: hidden;
 }
-.variety-row em {
+.variety-bar-track em {
   background: var(--teal);
   display: block;
   height: 100%;
 }
-.variety-row.primary em { background: var(--red); }
+.variety-row.primary .variety-bar-main em { background: var(--red); }
+.variety-bar-high .variety-bar-track {
+  height: 6px;
+}
+.variety-bar-high em {
+  background: var(--ink-700);
+}
+.variety-bar-line span {
+  color: var(--ink-500);
+  font-size: 0.66rem;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+}
 .variety-list {
   display: flex;
   flex-direction: column;
@@ -493,11 +516,20 @@ td.muted { color: var(--ink-400); }
   line-height: 1.35;
   margin-top: 3px;
 }
-.variety-row b {
+.variety-values {
+  text-align: right;
+}
+.variety-values b,
+.variety-values span {
   color: var(--ink-900);
+  display: block;
   font-size: 0.84rem;
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  line-height: 1.25;
+}
+.variety-values span {
+  color: var(--ink-500);
+  font-size: 0.72rem;
 }
 .method-note {
   border: 1px solid var(--ink-200);
@@ -2091,6 +2123,12 @@ button.word-cloud-item {
   stroke: var(--ink-400);
   stroke-width: 1;
 }
+.external-node.priority {
+  fill: var(--white);
+  opacity: .90;
+  stroke: var(--teal);
+  stroke-width: 1.7;
+}
 .faculty-node {
   fill: var(--ink-200);
   opacity: .98;
@@ -2113,6 +2151,13 @@ button.word-cloud-item {
   stroke-width: 3px;
   stroke-linejoin: round;
 }
+.external-label.priority {
+  fill: var(--ink-900);
+  font-size: 0.66rem;
+  font-weight: 800;
+  opacity: .96;
+  stroke-width: 5px;
+}
 .faculty-label {
   fill: var(--ink-900);
   font-size: 0.70rem;
@@ -2131,6 +2176,11 @@ button.word-cloud-item {
 .node { fill: var(--white); stroke: var(--red); stroke-width: 3.25; }
 .node.focus { stroke-width: 4.2; }
 .node.low { stroke: var(--ink-400); }
+.node-hit {
+  fill: transparent;
+  pointer-events: all;
+  stroke: transparent;
+}
 .network-person-node {
   cursor: pointer;
 }
@@ -2354,7 +2404,7 @@ footer {
   .resource-panel-wide { grid-column: auto; }
   .method-grid { grid-template-columns: 1fr; }
   .variety-row { grid-template-columns: 1fr; }
-  .variety-row b { text-align: left; }
+  .variety-values { text-align: left; }
   .topic-overlay { padding: 12px; }
   .topic-dialog { padding: 22px 18px; }
   .topic-close { position: static; float: right; margin: 0 0 10px 10px; }

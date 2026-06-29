@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260626-1122">
+  <link rel="stylesheet" href="styles.css?v=20260629-opportunities-network">
 </head>
 <body>
   <nav class="nav">
@@ -21,7 +21,7 @@
         <button class="nav-tab on" data-tab="overview">Overview</button>
         <button class="nav-tab" data-tab="staff">Staff</button>
         <button class="nav-tab" data-tab="phds">PhD students</button>
-        <button class="nav-tab" data-tab="collaboration">Collaboration</button>
+        <button class="nav-tab" data-tab="collaboration">Opportunities</button>
         <button class="nav-tab" data-tab="publications">Publications</button>
         <button class="nav-tab" data-tab="network">Network</button>
         <button class="nav-tab" data-tab="metrics">Metrics</button>
@@ -174,7 +174,7 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Collaboration opportunities</p>
+            <p class="eye">Opportunities</p>
             <h2 class="h2">Shared interests, expertise, and grant angles</h2>
           </div>
           <a class="section-link" href="#resources">Open grant resources</a>
@@ -456,7 +456,7 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Collaboration network</p>
+            <p class="eye">Coauthor network</p>
             <h2 class="h2">Department members connected by shared publications</h2>
           </div>
           <div class="network-toggle-row">
@@ -472,12 +472,12 @@
               <input id="network-external-toggle" type="checkbox" checked>
               <span>Outer collaborators</span>
             </label>
-            <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Show all</button>
+            <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Reset</button>
           </div>
         </div>
         <div id="network-selection-note" class="network-selection-note">Click a department member in the network to focus.</div>
         <div class="network-shell">
-          <svg id="network-svg" role="img" aria-label="Collaboration network"></svg>
+          <svg id="network-svg" role="img" aria-label="Coauthor network"></svg>
           <div id="network-empty" class="empty" hidden>No coauthorship edges for the current filters.</div>
         </div>
         <div id="network-legend" class="legend">
@@ -616,6 +616,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260626-1122"></script>
+  <script src="app.js?v=20260629-opportunities-network"></script>
 </body>
 </html>
