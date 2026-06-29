@@ -4,12 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HRM&OB Research Activities Dashboard</title>
+  <script>document.documentElement.classList.add("auth-locked");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260629-guide-tune">
+  <link rel="stylesheet" href="styles.css?v=20260629-password-gate">
 </head>
 <body>
+  <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <form id="auth-form" class="auth-card">
+      <p class="eye">Restricted access</p>
+      <h1 id="auth-title">HRM&OB dashboard</h1>
+      <p>Enter the department password to open the dashboard.</p>
+      <label>
+        <span>Password</span>
+        <input id="auth-password" type="password" autocomplete="current-password" required>
+      </label>
+      <button type="submit">Open dashboard</button>
+      <p id="auth-status" class="auth-status" aria-live="polite"></p>
+    </form>
+  </div>
+
   <nav class="nav">
     <div class="nav-in">
       <a class="logo" href="#overview" data-tab="overview">
@@ -669,6 +684,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260629-guide-tune"></script>
+  <script src="app.js?v=20260629-password-gate"></script>
 </body>
 </html>

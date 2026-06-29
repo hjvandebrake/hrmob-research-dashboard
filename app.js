@@ -32,12 +32,15 @@ const state = {
   selectedStaffId: "",
   staffSubpage: "research",
   collaborationClustersExpanded: false,
+  appStarted: false,
 };
 
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-guide-tune";
+const DATA_VERSION = "20260629-password-gate";
+const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
+const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -429,13 +432,93 @@ const OPEN_ACCESS_JOURNAL_PATTERNS = [
   /international journal of environmental research and public health/i,
 ];
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
-  attachEvents();
-  await loadData();
+  setupAuthGate();
+  if (dashboardHasAccess()) {
+    startDashboard();
+  } else {
+    lockDashboard();
+  }
 });
 
+async function startDashboard() {
+  unlockDashboard();
+  if (state.appStarted) return;
+  state.appStarted = true;
+  attachEvents();
+  await loadData();
+}
+
+function setupAuthGate() {
+  if (!els.authForm) return;
+  els.authForm.addEventListener("submit", handleAuthSubmit);
+}
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+  const password = (els.authPassword?.value || "").trim();
+  if (!password) {
+    if (els.authStatus) els.authStatus.textContent = "Enter the dashboard password.";
+    els.authPassword?.focus();
+    return;
+  }
+  if (els.authStatus) els.authStatus.textContent = "Checking password...";
+  try {
+    const hash = await sha256Hex(password);
+    if (hash !== AUTH_PASSWORD_HASH) {
+      if (els.authStatus) els.authStatus.textContent = "No match. Check the password and try again.";
+      if (els.authPassword) {
+        els.authPassword.value = "";
+        els.authPassword.focus();
+      }
+      return;
+    }
+    try {
+      sessionStorage.setItem(AUTH_STORAGE_KEY, AUTH_PASSWORD_HASH);
+    } catch (_) {
+      // Session storage can be unavailable in hardened browser modes; continue for this page load.
+    }
+    if (els.authStatus) els.authStatus.textContent = "";
+    await startDashboard();
+  } catch (_) {
+    if (els.authStatus) els.authStatus.textContent = "Password check is unavailable in this browser.";
+  }
+}
+
+function dashboardHasAccess() {
+  try {
+    return sessionStorage.getItem(AUTH_STORAGE_KEY) === AUTH_PASSWORD_HASH;
+  } catch (_) {
+    return false;
+  }
+}
+
+function lockDashboard() {
+  document.documentElement.classList.add("auth-locked");
+  if (els.authGate) els.authGate.hidden = false;
+  requestAnimationFrame(() => els.authPassword?.focus());
+}
+
+function unlockDashboard() {
+  document.documentElement.classList.remove("auth-locked");
+  if (els.authGate) els.authGate.hidden = true;
+}
+
+async function sha256Hex(value) {
+  if (!globalThis.crypto?.subtle) throw new Error("WebCrypto unavailable");
+  const bytes = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 function cacheElements() {
+  els.authGate = document.getElementById("auth-gate");
+  els.authForm = document.getElementById("auth-form");
+  els.authPassword = document.getElementById("auth-password");
+  els.authStatus = document.getElementById("auth-status");
   els.subtitle = document.getElementById("subtitle");
   els.footerMeta = document.getElementById("footer-meta");
   els.metrics = document.getElementById("metrics");

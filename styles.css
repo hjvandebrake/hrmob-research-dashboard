@@ -33,6 +33,105 @@ body {
 button, input, select { font: inherit; }
 a { color: inherit; text-decoration: none; }
 
+html.auth-locked,
+html.auth-locked body {
+  min-height: 100%;
+}
+html.auth-locked body {
+  overflow: hidden;
+}
+html.auth-locked .nav,
+html.auth-locked .pg-hd,
+html.auth-locked main,
+html.auth-locked footer,
+html.auth-locked .topic-overlay {
+  display: none !important;
+}
+.auth-gate {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.9)),
+    var(--bg);
+  display: grid;
+  inset: 0;
+  justify-items: center;
+  min-height: 100vh;
+  padding: var(--pad);
+  position: fixed;
+  z-index: 1000;
+}
+.auth-gate[hidden],
+html:not(.auth-locked) .auth-gate {
+  display: none !important;
+}
+.auth-card {
+  background: var(--white);
+  border: 1px solid var(--ink-200);
+  border-left: 3px solid var(--red);
+  box-shadow: 0 16px 42px rgba(25, 31, 42, .10);
+  max-width: 420px;
+  padding: 28px;
+  width: min(100%, 420px);
+}
+.auth-card h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 4vw, 2.15rem);
+  line-height: 1.12;
+  margin: 0 0 8px;
+}
+.auth-card p {
+  color: var(--ink-500);
+  font-size: 0.9rem;
+  line-height: 1.42;
+  margin: 0 0 18px;
+}
+.auth-card label {
+  color: var(--ink-400);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.66rem;
+  font-weight: 700;
+  gap: 6px;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.auth-card input {
+  border: 1px solid var(--ink-200);
+  color: var(--ink-900);
+  font-size: 1rem;
+  height: 42px;
+  letter-spacing: 0;
+  padding: 0 11px;
+  text-transform: none;
+}
+.auth-card input:focus {
+  border-color: var(--red);
+  outline: 2px solid var(--red-lt);
+}
+.auth-card button {
+  background: var(--red);
+  border: 1px solid var(--red);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 40px;
+  padding: 0 16px;
+}
+.auth-card button:hover,
+.auth-card button:focus-visible {
+  background: var(--red-dk);
+  border-color: var(--red-dk);
+  outline: 2px solid var(--red-lt);
+  outline-offset: 3px;
+}
+.auth-status {
+  color: var(--red) !important;
+  font-size: 0.82rem !important;
+  margin: 12px 0 0 !important;
+  min-height: 1.2em;
+}
+
 .wrap { max-width: min(var(--max), 100% - var(--pad) * 2); margin: 0 auto; }
 .sec { padding: var(--sp) var(--pad); background: var(--white); }
 .sec + .sec { border-top: 1px solid var(--ink-200); }
