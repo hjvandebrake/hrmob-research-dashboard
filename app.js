@@ -1150,8 +1150,7 @@ function setTab(tab, options = {}) {
 
 function syncFooterMeta(meta = {}) {
   if (!els.footerMeta) return;
-  const generated = meta.generatedOn ? `Data generated ${meta.generatedOn}` : "Data generation date unavailable";
-  els.footerMeta.textContent = `${generated} - provisional public-source scrape - metrics count journal articles only`;
+  els.footerMeta.textContent = meta.generatedOn ? `Last updated ${meta.generatedOn}` : "Last updated date unavailable";
   if (meta.publicationSource) {
     els.footerMeta.title = meta.publicationSource;
   }
