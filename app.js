@@ -37,7 +37,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-reframing";
+const DATA_VERSION = "20260629-staff-search";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -469,6 +469,8 @@ function cacheElements() {
   els.collaborationInterestOpportunities = document.getElementById("collaboration-interest-opportunities");
   els.collaborationGrantOpportunities = document.getElementById("collaboration-grant-opportunities");
   els.collaborationPairOpportunities = document.getElementById("collaboration-pair-opportunities");
+  els.staffExpertiseSearch = document.getElementById("staff-expertise-search");
+  els.staffExpertiseSummary = document.getElementById("staff-expertise-summary");
   els.staffList = document.getElementById("staff-list");
   els.staffProfile = document.getElementById("staff-profile");
   els.staffSubnav = document.getElementById("staff-subnav");
@@ -798,6 +800,13 @@ function attachEvents() {
   });
   if (els.expertiseStaffResults) {
     els.expertiseStaffResults.addEventListener("click", handleExpertiseStaffClick);
+  }
+  if (els.staffExpertiseSearch) {
+    els.staffExpertiseSearch.addEventListener("input", debounce(() => {
+      state.staffTopicQuery = els.staffExpertiseSearch.value.trim();
+      state.staffTopicMode = "query";
+      renderStaff();
+    }, 120));
   }
   els.staffList.addEventListener("click", (event) => {
     const button = event.target.closest("[data-staff-id]");
@@ -1214,7 +1223,7 @@ function syncPublicationWindowControls() {
 }
 
 function syncViewContext() {
-  const text = `${rosterModeLabel()} - Publication window: ${activeWindowLabel()}`;
+  const text = `${rosterModeLabel()} | ${activeWindowLabel()}`;
   (els.viewContexts || []).forEach((context) => {
     context.textContent = text;
   });
@@ -1571,10 +1580,43 @@ function staffEvidenceDocs(personId) {
 function renderStaff() {
   if (!state.data || !els.staffList) return;
   const bundle = expertiseBundle(state.staffTopicQuery || "", state.staffTopicMode || "query");
-  const rows = rankedStaff(bundle);
+  if (els.staffExpertiseSearch && els.staffExpertiseSearch.value !== (state.staffTopicQuery || "")) {
+    els.staffExpertiseSearch.value = state.staffTopicQuery || "";
+  }
+  const rows = staffRowsForSearch(bundle);
   const selected = ensureSelectedStaff(rows);
+  renderStaffSearchSummary(rows, bundle);
   renderStaffList(rows, bundle);
   renderStaffProfile(selected, bundle);
+}
+
+function staffRowsForSearch(bundle) {
+  const rows = activePeople().map((person) => staffSearchStats(person, bundle));
+  if (!bundle.raw) return rows.sort((a, b) => a.person.display.localeCompare(b.person.display));
+  return rows.sort((a, b) => {
+    const aMatch = a.score > 0 ? 1 : 0;
+    const bMatch = b.score > 0 ? 1 : 0;
+    if (aMatch !== bMatch) return bMatch - aMatch;
+    if (aMatch && bMatch) {
+      return b.topicPubPct - a.topicPubPct
+        || b.topicPubs - a.topicPubs
+        || b.score - a.score
+        || a.person.display.localeCompare(b.person.display);
+    }
+    return a.person.display.localeCompare(b.person.display);
+  });
+}
+
+function renderStaffSearchSummary(rows, bundle) {
+  if (!els.staffExpertiseSummary) return;
+  if (!bundle.raw) {
+    els.staffExpertiseSummary.textContent = "Search publications, grants, PhD projects, and profile fields.";
+    return;
+  }
+  const matches = rows.filter((row) => row.score > 0);
+  els.staffExpertiseSummary.textContent = matches.length
+    ? `${matches.length} staff member${matches.length === 1 ? "" : "s"} with visible evidence for "${bundle.raw}".`
+    : `No staff evidence found for "${bundle.raw}" under the current filters.`;
 }
 
 function renderExpertise() {
@@ -2528,10 +2570,13 @@ function renderStaffList(rows, bundle) {
   }
   els.staffList.innerHTML = rows.map((row) => {
     const selected = row.person.id === state.selectedStaffId;
+    const hasSearch = Boolean(bundle.raw);
+    const hasMatch = row.score > 0;
     const meta = bundle.raw
-      ? staffEvidenceSummary(row)
+      ? (hasMatch ? staffEvidenceSummary(row) : "No visible match")
       : `${row.publications} pubs`;
-    return `<button class="staff-row${selected ? " on" : ""}" type="button" data-staff-id="${escapeHtml(row.person.id)}">
+    const matchClass = hasSearch ? (hasMatch ? " expertise-match" : " expertise-no-match") : "";
+    return `<button class="staff-row${selected ? " on" : ""}${matchClass}" type="button" data-staff-id="${escapeHtml(row.person.id)}">
       <span class="staff-row-main">
         ${personPhoto(row.person, "staff-row-photo")}
         <span>
@@ -2568,7 +2613,7 @@ function renderStaffProfile(row, bundle) {
     <div class="query-strip">
       <span>Matches for</span>
       <strong>${escapeHtml(bundle.raw)}</strong>
-      <em>${escapeHtml(matchSummary(row))}</em>
+      <em>${escapeHtml(row.score > 0 ? matchSummary(row) : "No visible evidence for this person under the current filters.")}</em>
     </div>
   ` : "";
   els.staffProfile.innerHTML = `

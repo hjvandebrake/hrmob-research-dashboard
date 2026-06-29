@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260629-reframing">
+  <link rel="stylesheet" href="styles.css?v=20260629-staff-search">
 </head>
 <body>
   <nav class="nav">
@@ -56,44 +56,59 @@
         <p class="view-context overview-view-context" data-view-context></p>
         <section class="overview-orientation" aria-label="Dashboard orientation">
           <div>
-            <p class="eye">Research landscape</p>
-            <h2 class="overview-orientation-title">A shared map for finding expertise, collaborators, grant angles, project links, resources, and records that need correction.</h2>
-            <p>Use this dashboard as a shared map of HRM&OB research activity: topics, people, publications, AIP, PhD projects, grants, collaboration openings, and resources. It is meant to support discovery, coordination, and corrections.</p>
+            <p class="eye">Research guide</p>
+            <h2 class="overview-orientation-title">Find expertise, projects, grant angles, resources, and records to correct.</h2>
+            <p>A compact orientation point for HRM&OB research activity.</p>
           </div>
           <div class="overview-use-cases" aria-label="Common dashboard uses">
             <a class="use-case-card" href="#staff">
               <span>Find expertise</span>
-              <p>Search topics, signals, and related publications.</p>
+              <p>Search people and topic signals.</p>
             </a>
             <a class="use-case-card" href="#opportunities">
               <span>Start a conversation</span>
-              <p>See shared interests, current work, and possible people links.</p>
+              <p>See interests and people links.</p>
             </a>
             <a class="use-case-card" href="#resources">
               <span>Build around a call</span>
-              <p>Connect grant opportunities to topics, people, and resources.</p>
+              <p>Connect calls to people and topics.</p>
             </a>
             <a class="use-case-card" href="#contact">
-              <span>Update the map</span>
-              <p>Submit corrections, profile updates, collaboration interests, or resources.</p>
+              <span>Suggest updates</span>
+              <p>Correct records or profile fields.</p>
             </a>
           </div>
         </section>
         <p class="metric-context">Group-level indicators for orientation; details and definitions are in Metrics.</p>
         <div id="metrics" class="metric-grid"></div>
         <div class="overview-grid">
+          <section class="overview-panel overview-panel-wide">
+            <div class="sec-head compact">
+              <div>
+                <p class="eye">Publication activity</p>
+                <h2 class="h2">Publications by year</h2>
+              </div>
+              <div class="overview-panel-actions">
+                <a class="section-link" href="#publications">View publications</a>
+                <a class="section-link" href="#metrics">Open Metrics</a>
+              </div>
+            </div>
+            <div id="year-bars" class="bar-chart"></div>
+            <h3 class="sub-h2">AIP distribution</h3>
+            <div id="aip-bars" class="aip-summary"></div>
+          </section>
           <section class="overview-panel overview-panel-wide overview-expertise-panel">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Expertise</p>
-                <h3 class="overview-h3">Research landscape</h3>
+                <h3 class="overview-h3">Expertise overview</h3>
               </div>
               <div class="overview-panel-actions">
                 <a class="section-link" href="#staff">Open staff</a>
                 <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
               </div>
             </div>
-            <p class="section-intro">Topic signals are generated from available publication, grant, PhD, and profile information where available.</p>
+            <p class="section-intro">Signals come from publications, grants, PhD projects, and profile fields.</p>
             <div id="overview-topic-cloud" class="topic-cloud topic-cloud-compact"></div>
             <div id="overview-expertise-details" class="overview-expertise-details" hidden></div>
           </section>
@@ -136,21 +151,6 @@
               <a class="section-link" href="#resources">Open resources</a>
             </div>
             <div id="grant-list" class="grant-list"></div>
-          </section>
-          <section class="overview-panel overview-panel-wide">
-            <div class="sec-head compact">
-              <div>
-                <p class="eye">Publication activity</p>
-                <h2 class="h2">Publications by year</h2>
-              </div>
-              <div class="overview-panel-actions">
-                <a class="section-link" href="#publications">View publications</a>
-                <a class="section-link" href="#metrics">Open Metrics</a>
-              </div>
-            </div>
-            <div id="year-bars" class="bar-chart"></div>
-            <h3 class="sub-h2">AIP distribution</h3>
-            <div id="aip-bars" class="aip-summary"></div>
           </section>
         </div>
         <div class="overview-contact">
@@ -458,6 +458,13 @@
             <h2 class="h2">People, topics, and publication records</h2>
           </div>
         </div>
+        <div class="staff-search-panel" aria-label="Find staff expertise">
+          <label class="search-box staff-expertise-search">
+            <span>Find expertise</span>
+            <input id="staff-expertise-search" type="search" placeholder="Search stress, teamwork, virtual teams, status...">
+          </label>
+          <p id="staff-expertise-summary" class="staff-search-summary">Search publications, grants, PhD projects, and profile fields.</p>
+        </div>
         <div class="staff-grid">
           <aside class="staff-panel">
             <div id="staff-list" class="staff-list"></div>
@@ -662,6 +669,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260629-reframing"></script>
+  <script src="app.js?v=20260629-staff-search"></script>
 </body>
 </html>
