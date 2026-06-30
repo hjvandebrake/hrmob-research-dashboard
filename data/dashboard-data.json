@@ -3275,7 +3275,6 @@
         "Faber, N. S."
       ],
       "matchedPeople": [
-        "MA",
         "MR"
       ],
       "sourcePeople": [
@@ -3290,7 +3289,8 @@
       "evidence": [
         "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K.",
-        "Crossref author affiliation mentions Groningen for Ryan, M.K."
+        "Crossref author affiliation mentions Groningen for Ryan, M.K.",
+        "Curated exclusion: same-name record by Madisyn F. Arnold, not Miriam Arnold; retain publication for Michelle Ryan"
       ],
       "provisional": true,
       "topicFamilies": [
@@ -53062,7 +53062,7 @@
   ],
   "summaries": {
     "personCounts": {
-      "MA": 9,
+      "MA": 8,
       "MR": 127,
       "CDD": 245,
       "JDB": 77,
@@ -54568,7 +54568,6 @@
           "JJ",
           "JS",
           "LM",
-          "MA",
           "MR",
           "OJ"
         ],
@@ -57521,15 +57520,6 @@
         "highAipCount": 0,
         "pubIds": [
           "rug:4fcb628dc323e2c2"
-        ]
-      },
-      {
-        "source": "MA",
-        "target": "MR",
-        "count": 1,
-        "highAipCount": 0,
-        "pubIds": [
-          "rug:dbe8a317565997e4"
         ]
       },
       {
