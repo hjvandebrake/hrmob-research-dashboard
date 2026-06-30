@@ -38,11 +38,10 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260629-outlet-scope";
+const DATA_VERSION = "20260630-email-forms";
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
-const FEEDBACK_ISSUE_URL = "https://github.com/hjvandebrake/hrmob-research-dashboard/issues/new";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
@@ -952,16 +951,9 @@ function handleFeedbackSubmit(event) {
     "Comment:",
     comment,
   ].join("\n");
-  const params = new URLSearchParams({
-    template: "dashboard-feedback.md",
-    title,
-    body,
-    labels: "dashboard-feedback",
-  });
-  const url = `${FEEDBACK_ISSUE_URL}?${params.toString()}`;
-  window.open(url, "_blank", "noopener");
+  openEmailDraft(`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`);
   if (els.feedbackStatus) {
-    els.feedbackStatus.textContent = "A GitHub issue draft opened. Submit it there to save the suggestion.";
+    els.feedbackStatus.textContent = "Your email app should open with the suggestion. Send that email to submit it to Joost.";
   }
 }
 
@@ -984,22 +976,12 @@ function handleStaffUpdateSubmit(event) {
   }
   const person = peopleById().get(personId);
   const personLabel = person ? `${person.display} - ${person.name}` : personId;
-  const resourceLines = parseSubmittedLines(resources);
-  const payload = {
-    personId,
-    staffMember: personLabel,
-    submittedBy: submittedBy || "",
-    currentWork: parseSubmittedLines(currentWork),
-    collaborationInterests: parseSubmittedLines(collaboration),
-    resources: resourceLines,
-    dashboardUrl: window.location.href,
-    submittedAt: new Date().toISOString(),
-  };
   const body = [
     `Submitted by: ${submittedBy || "Not provided"}`,
     `Staff member: ${personLabel}`,
     `Person ID: ${personId}`,
     `Dashboard URL: ${window.location.href}`,
+    `Submitted at: ${new Date().toISOString()}`,
     "",
     "## Currently working on",
     currentWork || "Not provided",
@@ -1011,21 +993,10 @@ function handleStaffUpdateSubmit(event) {
     resources || "Not provided",
     "",
     "For datasets, slide decks, workbooks, or other files, email Joost directly at h.j.van.de.brake@rug.nl. File uploads are not accepted through the dashboard.",
-    "",
-    "<!-- staff-profile-update-json",
-    JSON.stringify(payload, null, 2),
-    "-->",
   ].join("\n");
-  const params = new URLSearchParams({
-    template: "staff-profile-update.md",
-    title: `[Staff profile update] ${personLabel}`,
-    body,
-    labels: "staff-profile-update",
-  });
-  const url = `${FEEDBACK_ISSUE_URL}?${params.toString()}`;
-  window.open(url, "_blank", "noopener");
+  openEmailDraft(`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`[Staff profile update] ${personLabel}`)}&body=${encodeURIComponent(body)}`);
   if (els.staffUpdateStatus) {
-    els.staffUpdateStatus.textContent = "A GitHub issue draft opened. Submit it there to save the profile update.";
+    els.staffUpdateStatus.textContent = "Your email app should open with the profile update. Send that email to submit it to Joost.";
   }
 }
 
@@ -1045,13 +1016,6 @@ function handleCollaborationClusterToggle(event) {
   return true;
 }
 
-function parseSubmittedLines(value) {
-  return String(value || "")
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean);
-}
-
 function feedbackMailtoHref() {
   const name = (els.feedbackName?.value || "").trim();
   const area = (els.feedbackArea?.value || "General").trim();
@@ -1064,6 +1028,15 @@ function feedbackMailtoHref() {
     comment,
   ].join("\n");
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Dashboard feedback: ${area}`)}&body=${encodeURIComponent(body)}`;
+}
+
+function openEmailDraft(href) {
+  const link = document.createElement("a");
+  link.href = href;
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 }
 
 function populateStaffUpdatePersonSelect() {

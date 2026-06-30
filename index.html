@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260629-outlet-scope">
+  <link rel="stylesheet" href="styles.css?v=20260630-email-forms">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -575,7 +575,7 @@
             <h2 class="h2">Corrections and suggestions</h2>
           </div>
         </div>
-        <p class="section-intro page-intro">Use this form to correct missing records, clarify profile information, or add current work, collaboration interests, and resources.</p>
+        <p class="section-intro page-intro">Use this form to correct missing records, clarify profile information, or add current work, collaboration interests, and resources. Submissions are prepared as an email to Joost, so no GitHub account is needed.</p>
         <div class="contact-grid">
           <section class="overview-panel contact-main-panel">
             <form id="feedback-form" class="feedback-form">
@@ -602,7 +602,7 @@
                 <textarea id="feedback-comment" rows="5" placeholder="What should be corrected or added?"></textarea>
               </label>
               <div class="feedback-actions">
-                <button class="primary-action" type="submit">Save as suggestion</button>
+                <button class="primary-action" type="submit">Email suggestion</button>
                 <a id="feedback-email-link" class="section-link" href="mailto:h.j.van.de.brake@rug.nl">Email Joost</a>
               </div>
               <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
@@ -611,7 +611,7 @@
           <aside class="overview-panel contact-side-panel">
             <p class="eye">Email</p>
             <p class="contact-line"><a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a></p>
-            <p class="quiet-contact-copy">Suggestions are saved as GitHub issues and reviewed before any dashboard change is made.</p>
+            <p class="quiet-contact-copy">Suggestions are emailed to Joost and reviewed before any dashboard change is made.</p>
           </aside>
           <section class="overview-panel contact-staff-panel">
             <div class="overview-panel-head">
@@ -646,8 +646,9 @@
                 <textarea id="staff-update-resources" rows="4" placeholder="Datasets, slides, workbooks, templates, methods, or links"></textarea>
               </label>
               <p class="staff-resource-note">For datasets, slide decks, workbooks, or other files, email Joost directly at <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>. Use the field above to describe the resource or paste a stable link.</p>
+              <p class="staff-resource-note">No GitHub account is needed. Your email app will open with these fields filled in; send that email to submit the update.</p>
               <div class="feedback-actions">
-                <button class="primary-action" type="submit">Save profile update</button>
+                <button class="primary-action" type="submit">Email profile update</button>
               </div>
               <p id="staff-update-status" class="feedback-status" aria-live="polite"></p>
             </form>
@@ -684,6 +685,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260629-outlet-scope"></script>
+  <script src="app.js?v=20260630-email-forms"></script>
 </body>
 </html>
