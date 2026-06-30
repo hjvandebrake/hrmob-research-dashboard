@@ -1,97 +1,34 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generatedOn": "2026-06-22",
+    "generatedOn": "2026-06-30",
     "source": "Staff-submitted profile contribution layer.",
     "people": 1
   },
   "people": [
     {
       "personId": "JVB",
-      "updatedOn": "2026-06-22",
+      "updatedOn": "2026-06-30",
       "workingOn": [
         {
-          "title": "Multiple team membership projects",
-          "description": "Working on several multiple team membership projects, including diary studies, multilevel work, conceptual work, network-based research, and scale development.",
-          "keywords": [
-            "multiple team membership",
-            "diary studies",
-            "multilevel work",
-            "conceptual work",
-            "network-based research",
-            "scale development"
-          ]
-        },
-        {
-          "title": "Virtual teams and remote work research",
-          "description": "Working on projects related to virtual teams and remote work research.",
-          "keywords": [
-            "virtual teams",
-            "remote work",
-            "remote work research"
-          ]
+          "title": "TESTTEST",
+          "keywords": []
         }
       ],
       "collaborationInterests": [
         {
-          "title": "Teams, teamwork, and modern team arrangements",
-          "description": "Interested in collaboration on teamwork in general and on newer forms of teaming, including virtual teams, fluid teams, multiple team membership, ad hoc teams, team processes, and team states.",
-          "keywords": [
-            "teams",
-            "teamwork",
-            "modern team arrangements",
-            "new forms of teaming",
-            "virtual teams",
-            "fluid teams",
-            "multiple team membership",
-            "ad hoc teams",
-            "team processes",
-            "team states"
-          ]
-        },
-        {
-          "title": "Work stress, appraisal, and role stress",
-          "description": "Interested in work stress, challenge stress, hindrance stress, threat appraisal, role stress, and role theory.",
-          "keywords": [
-            "work stress",
-            "challenge stress",
-            "hindrance stress",
-            "threat appraisal",
-            "role stress",
-            "role theory"
-          ]
-        },
-        {
-          "title": "Social status and status characteristics",
-          "description": "Interested in social status, status processes, and status characteristics theory.",
-          "keywords": [
-            "social status",
-            "status characteristics theory",
-            "status processes",
-            "group settings"
-          ]
-        },
-        {
-          "title": "Social identity in group settings",
-          "description": "Interested in social identity theory and related questions relevant to groups and collective settings.",
-          "keywords": [
-            "social identity theory",
-            "group settings",
-            "groups",
-            "collective identity"
-          ]
+          "title": "TESTTEST",
+          "keywords": []
         }
       ],
       "resources": [
         {
-          "title": "Grant opportunities workbook",
-          "type": "Excel workbook",
-          "format": "XLSX",
-          "description": "Full grant overview, deadlines, notes, and sign-up sheet.",
-          "url": "assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx",
-          "download": true
+          "title": "TESTTEST",
+          "type": "Shared resource",
+          "description": "TESTTEST"
         }
-      ]
+      ],
+      "sourceIssue": 1
     }
   ]
 }
