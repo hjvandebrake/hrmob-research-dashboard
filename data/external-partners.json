@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-06-26",
+    "generatedOn": "2026-07-03",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 759,
-    "cacheHits": 757,
-    "fetched": 2,
+    "eligiblePublications": 760,
+    "cacheHits": 760,
+    "fetched": 0,
     "partnerCount": 635
   },
   "partners": [
@@ -1728,7 +1728,7 @@
       "institution": "Leiden University",
       "country": "NL",
       "type": "education",
-      "publicationCount": 83,
+      "publicationCount": 82,
       "staffIds": [
         "BN",
         "CDD",
@@ -2272,17 +2272,6 @@
           ],
           "authors": [
             "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1523/jneurosci.1242-17.2018",
-          "year": 2018,
-          "title": "Neurobiological Mechanisms of Responding to Injustice",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Mirre Stallen"
           ]
         },
         {
@@ -5361,6 +5350,334 @@
       ]
     },
     {
+      "id": "au:australian national university",
+      "institution": "Australian National University",
+      "country": "AU",
+      "type": "education",
+      "publicationCount": 24,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Alexandra N. Fisher",
+        "Barbara Dávid",
+        "Boris Bizumić",
+        "Brooke Franklin-Paddock",
+        "Craig McGarty",
+        "Diana M. Grace",
+        "Elise Stephenson",
+        "Emina Subašić",
+        "Emmaline A. Monteith",
+        "Gosia Mikołajczak",
+        "Jack Hayes",
+        "John Turner",
+        "Kate A. B. Western",
+        "Katherine J. Reynolds",
+        "Kristine E. Veenstra",
+        "Ligia Oliveria‐Silva",
+        "Lígia Carolina Oliveira-Silva",
+        "Michael J. Platow",
+        "Olivia Evans",
+        "Penélope J. Oakes",
+        "S. Alexander Haslam",
+        "Susan Johnson",
+        "Tegan Cruwys",
+        "Veljko Jovanović"
+      ],
+      "publications": [
+        {
+          "id": "rug:cbb06ae3b7537232",
+          "year": 2026,
+          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "rug:6bd660442de6d001",
+          "year": 2026,
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "rug:86b7df65309bd318",
+          "year": 2026,
+          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Gosia Mikołajczak"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70286",
+          "year": 2026,
+          "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys",
+            "Olivia Evans"
+          ]
+        },
+        {
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "rug:fd3cdae1acace359",
+          "year": 2025,
+          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Brooke Franklin-Paddock",
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "rug:455da26bb47411be",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
+          ]
+        },
+        {
+          "id": "rug:28f7eafbd6a7e3e4",
+          "year": 2025,
+          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher"
+          ]
+        },
+        {
+          "id": "doi:10.1177/13563890241284626",
+          "year": 2024,
+          "title": "A framework for evaluating women’s leadership programmes",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Elise Stephenson",
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher",
+            "Jack Hayes"
+          ]
+        },
+        {
+          "id": "doi:10.1080/17512786.2024.2441283",
+          "year": 2024,
+          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra N. Fisher",
+            "Gosia Mikołajczak",
+            "Emmaline A. Monteith"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-024-01453-6",
+          "year": 2024,
+          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra N. Fisher",
+            "Gosia Mikołajczak",
+            "Veljko Jovanović"
+          ]
+        },
+        {
+          "id": "doi:10.1177/08862605211073095",
+          "year": 2022,
+          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430218763272",
+          "year": 2018,
+          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2014.05.002",
+          "year": 2014,
+          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
+          "year": 2008,
+          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Diana M. Grace",
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1348/014466606x153080",
+          "year": 2006,
+          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "Boris Bizumić",
+            "Emina Subašić"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.292",
+          "year": 2005,
+          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.293",
+          "year": 2005,
+          "title": "Non‐instrumental voice and extra‐role behaviour",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow",
+            "Diana M. Grace"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
+          "year": 2004,
+          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid",
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1023/b:sers.0000003342.16137.32",
+          "year": 2003,
+          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430201004003002",
+          "year": 2001,
+          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "John Turner",
+            "Katherine J. Reynolds",
+            "Craig McGarty",
+            "Penélope J. Oakes",
+            "Susan Johnson",
+            "Kristine E. Veenstra"
+          ]
+        },
+        {
+          "id": "doi:10.1006/jesp.2000.1473",
+          "year": 2001,
+          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "S. Alexander Haslam"
+          ]
+        }
+      ]
+    },
+    {
       "id": "nl:tilburg university",
       "institution": "Tilburg University",
       "country": "NL",
@@ -5672,328 +5989,11 @@
       ]
     },
     {
-      "id": "au:australian national university",
-      "institution": "Australian National University",
-      "country": "AU",
-      "type": "education",
-      "publicationCount": 23,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Alexandra N. Fisher",
-        "Barbara Dávid",
-        "Boris Bizumić",
-        "Brooke Franklin-Paddock",
-        "Craig McGarty",
-        "Diana M. Grace",
-        "Elise Stephenson",
-        "Emina Subašić",
-        "Emmaline A. Monteith",
-        "Gosia Mikołajczak",
-        "Jack Hayes",
-        "John Turner",
-        "Kate A. B. Western",
-        "Katherine J. Reynolds",
-        "Kristine E. Veenstra",
-        "Ligia Oliveria‐Silva",
-        "Lígia Carolina Oliveira-Silva",
-        "Michael J. Platow",
-        "Olivia Evans",
-        "Penélope J. Oakes",
-        "S. Alexander Haslam",
-        "Susan Johnson",
-        "Tegan Cruwys",
-        "Veljko Jovanović"
-      ],
-      "publications": [
-        {
-          "id": "rug:cbb06ae3b7537232",
-          "year": 2026,
-          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "rug:6bd660442de6d001",
-          "year": 2026,
-          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "rug:86b7df65309bd318",
-          "year": 2026,
-          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva",
-            "Gosia Mikołajczak"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.70286",
-          "year": 2026,
-          "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kate A. B. Western",
-            "Tegan Cruwys",
-            "Olivia Evans"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "rug:fd3cdae1acace359",
-          "year": 2025,
-          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Brooke Franklin-Paddock",
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "rug:455da26bb47411be",
-          "year": 2025,
-          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Ligia Oliveria‐Silva"
-          ]
-        },
-        {
-          "id": "rug:28f7eafbd6a7e3e4",
-          "year": 2025,
-          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher"
-          ]
-        },
-        {
-          "id": "doi:10.1177/13563890241284626",
-          "year": 2024,
-          "title": "A framework for evaluating women’s leadership programmes",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Elise Stephenson",
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher",
-            "Jack Hayes"
-          ]
-        },
-        {
-          "id": "doi:10.1080/17512786.2024.2441283",
-          "year": 2024,
-          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra N. Fisher",
-            "Gosia Mikołajczak",
-            "Emmaline A. Monteith"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-024-01453-6",
-          "year": 2024,
-          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra N. Fisher",
-            "Gosia Mikołajczak",
-            "Veljko Jovanović"
-          ]
-        },
-        {
-          "id": "doi:10.1177/08862605211073095",
-          "year": 2022,
-          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kate A. B. Western",
-            "Tegan Cruwys"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430218763272",
-          "year": 2018,
-          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2014.05.002",
-          "year": 2014,
-          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
-          "year": 2008,
-          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Diana M. Grace",
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1348/014466606x153080",
-          "year": 2006,
-          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "Boris Bizumić",
-            "Emina Subašić"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.292",
-          "year": 2005,
-          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.293",
-          "year": 2005,
-          "title": "Non‐instrumental voice and extra‐role behaviour",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow",
-            "Diana M. Grace"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
-          "year": 2004,
-          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid",
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1023/b:sers.0000003342.16137.32",
-          "year": 2003,
-          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430201004003002",
-          "year": 2001,
-          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "John Turner",
-            "Katherine J. Reynolds",
-            "Craig McGarty",
-            "Penélope J. Oakes",
-            "Susan Johnson",
-            "Kristine E. Veenstra"
-          ]
-        },
-        {
-          "id": "doi:10.1006/jesp.2000.1473",
-          "year": 2001,
-          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "S. Alexander Haslam"
-          ]
-        }
-      ]
-    },
-    {
       "id": "nl:erasmus university rotterdam",
       "institution": "Erasmus University Rotterdam",
       "country": "NL",
       "type": "education",
-      "publicationCount": 23,
+      "publicationCount": 22,
       "staffIds": [
         "BN",
         "CDD",
@@ -6115,18 +6115,6 @@
           ],
           "authors": [
             "Anne Nederveen Pieterse"
-          ]
-        },
-        {
-          "id": "doi:10.1523/jneurosci.1242-17.2018",
-          "year": 2018,
-          "title": "Neurobiological Mechanisms of Responding to Injustice",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Mirre Stallen",
-            "Ale Smidts"
           ]
         },
         {
@@ -6294,7 +6282,7 @@
       "institution": "Radboud University Nijmegen",
       "country": "NL",
       "type": "education",
-      "publicationCount": 19,
+      "publicationCount": 18,
       "staffIds": [
         "BN",
         "CDD",
@@ -6303,7 +6291,6 @@
       ],
       "authors": [
         "Alan G. Sanfey",
-        "Amber Heijne",
         "Carolina de Weerth",
         "Debby G. J. Beckers",
         "Esther S. Kluwer",
@@ -6356,19 +6343,6 @@
           ],
           "authors": [
             "Debby G. J. Beckers"
-          ]
-        },
-        {
-          "id": "doi:10.1523/jneurosci.1242-17.2018",
-          "year": 2018,
-          "title": "Neurobiological Mechanisms of Responding to Injustice",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Mirre Stallen",
-            "Amber Heijne",
-            "Alan G. Sanfey"
           ]
         },
         {
@@ -6970,174 +6944,175 @@
       ]
     },
     {
-      "id": "nl:university of applied sciences leiden",
-      "institution": "University of Applied Sciences Leiden",
-      "country": "NL",
+      "id": "us:university of virginia",
+      "institution": "University of Virginia",
+      "country": "US",
       "type": "education",
       "publicationCount": 13,
       "staffIds": [
-        "CDD"
+        "BN",
+        "FR",
+        "LM",
+        "MR"
       ],
       "authors": [
-        "Andrea Fariña",
-        "Angelo Romano",
-        "Eric van Dijk",
-        "Jörg Gross",
-        "Laura C. Hoenig",
-        "Lennart Reddmann",
-        "Luuk L. Snijder",
-        "Michael Rojek-Giffin",
-        "Mirre Stallen",
-        "Ruthie Pliskin",
-        "Zsombor Z. Méder"
+        "Brian A. Nosek",
+        "Christopher T. Begeny",
+        "Daniel P. Martin",
+        "Daniela Fernández",
+        "Daniela P. Fernández",
+        "Nicholas R. Buttrick",
+        "Phatthanakit Chobthamkit",
+        "Summer Bedford"
       ],
       "publications": [
         {
-          "id": "doi:10.1017/s0140525x23002698",
-          "year": 2024,
-          "title": "Peace as prerequisite rather than consequence of cooperation",
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Angelo Romano"
+            "Daniela Fernández"
           ]
         },
         {
-          "id": "doi:10.1038/s41467-024-53409-9",
-          "year": 2024,
-          "title": "Prosocial preferences can escalate intergroup conflicts by countering selfish motivations to leave",
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Luuk L. Snijder"
+            "Daniela P. Fernández"
           ]
         },
         {
-          "id": "doi:10.1126/sciadv.adm7968",
-          "year": 2024,
-          "title": "The nasty neighbor effect in humans",
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Angelo Romano"
+            "Daniela Fernández"
           ]
         },
         {
-          "id": "doi:10.1038/s41467-023-42128-2",
+          "id": "rug:455da26bb47411be",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela Fernández",
+            "Summer Bedford",
+            "Christopher T. Begeny"
+          ]
+        },
+        {
+          "id": "doi:10.11144/javeriana.upsy23.pdcp",
+          "year": 2024,
+          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Nicholas R. Buttrick"
+          ]
+        },
+        {
+          "id": "doi:10.1111/spc3.12909",
           "year": 2023,
-          "title": "Partner choice and cooperation in social dilemmas can increase resource inequality",
+          "title": "Conceptual replication and extension of health behavior theories' predictions in the context of COVID‐19: Evidence across countries and over time",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Luuk L. Snijder"
+            "Nicholas R. Buttrick"
           ]
         },
         {
-          "id": "doi:10.1038/s41598-023-29512-0",
+          "id": "doi:10.1002/ejsp.2968",
           "year": 2023,
-          "title": "Political ideology and moral dilemmas in public good provision",
+          "title": "Identifying important individual‐ and country‐level predictors of conspiracy theorizing: A machine learning analysis",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Laura C. Hoenig"
+            "Nicholas R. Buttrick"
           ]
         },
         {
-          "id": "doi:10.1098/rstb.2021.0147",
+          "id": "doi:10.1037/emo0001118",
+          "year": 2023,
+          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Nicholas R. Buttrick"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cresp.2021.100028",
           "year": 2022,
-          "title": "Environmental stress increases out-group aggression and intergroup conflict in humans",
+          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Jörg Gross",
-            "Lennart Reddmann"
+            "Nicholas R. Buttrick"
           ]
         },
         {
-          "id": "doi:10.1098/rstb.2020.0135",
+          "id": "doi:10.1016/j.paid.2020.110535",
           "year": 2021,
-          "title": "Political games of attack and defence",
+          "title": "Intergenerational conflicts of interest and prosocial behavior during the COVID-19 pandemic",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Ruthie Pliskin",
-            "Michael Rojek-Giffin",
-            "Zsombor Z. Méder",
-            "Jörg Gross"
+            "Nicholas R. Buttrick",
+            "Phatthanakit Chobthamkit"
           ]
         },
         {
-          "id": "doi:10.1016/j.tics.2020.06.005",
-          "year": 2020,
-          "title": "Group Cooperation, Carrying-Capacity Stress, and Intergroup Conflict",
+          "id": "doi:10.1177/01461672211036602",
+          "year": 2021,
+          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Jörg Gross",
-            "Andrea Fariña"
+            "Nicholas R. Buttrick"
           ]
         },
         {
-          "id": "doi:10.1016/j.copsyc.2019.07.019",
-          "year": 2020,
-          "title": "Power in economic games",
+          "id": "doi:10.1002/casp.2572",
+          "year": 2021,
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
           "staffIds": [
-            "CDD"
+            "MR"
           ],
           "authors": [
-            "Eric van Dijk"
+            "Nicholas R. Buttrick"
           ]
         },
         {
-          "id": "doi:10.1038/s41467-020-18896-6",
-          "year": 2020,
-          "title": "Self-reliance crowds out group cooperation and increases wealth inequality",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1126/sciadv.aau7296",
-          "year": 2019,
-          "title": "Individual solutions to shared problems create a modern tragedy of the commons",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41467-019-08727-8",
-          "year": 2019,
-          "title": "The rise and fall of cooperation through reputation and group polarization",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1523/jneurosci.1242-17.2018",
+          "id": "doi:10.1177/2515245917747646",
           "year": 2018,
-          "title": "Neurobiological Mechanisms of Responding to Injustice",
+          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
           "staffIds": [
-            "CDD"
+            "BN",
+            "FR",
+            "LM"
           ],
           "authors": [
-            "Mirre Stallen"
+            "Daniel P. Martin",
+            "Brian A. Nosek"
           ]
         }
       ]
@@ -7317,6 +7292,167 @@
       ]
     },
     {
+      "id": "nl:university of applied sciences leiden",
+      "institution": "University of Applied Sciences Leiden",
+      "country": "NL",
+      "type": "education",
+      "publicationCount": 12,
+      "staffIds": [
+        "CDD"
+      ],
+      "authors": [
+        "Andrea Fariña",
+        "Angelo Romano",
+        "Eric van Dijk",
+        "Jörg Gross",
+        "Laura C. Hoenig",
+        "Lennart Reddmann",
+        "Luuk L. Snijder",
+        "Michael Rojek-Giffin",
+        "Ruthie Pliskin",
+        "Zsombor Z. Méder"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1017/s0140525x23002698",
+          "year": 2024,
+          "title": "Peace as prerequisite rather than consequence of cooperation",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Angelo Romano"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41467-024-53409-9",
+          "year": 2024,
+          "title": "Prosocial preferences can escalate intergroup conflicts by countering selfish motivations to leave",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Luuk L. Snijder"
+          ]
+        },
+        {
+          "id": "doi:10.1126/sciadv.adm7968",
+          "year": 2024,
+          "title": "The nasty neighbor effect in humans",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Angelo Romano"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41467-023-42128-2",
+          "year": 2023,
+          "title": "Partner choice and cooperation in social dilemmas can increase resource inequality",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Luuk L. Snijder"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41598-023-29512-0",
+          "year": 2023,
+          "title": "Political ideology and moral dilemmas in public good provision",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Laura C. Hoenig"
+          ]
+        },
+        {
+          "id": "doi:10.1098/rstb.2021.0147",
+          "year": 2022,
+          "title": "Environmental stress increases out-group aggression and intergroup conflict in humans",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross",
+            "Lennart Reddmann"
+          ]
+        },
+        {
+          "id": "doi:10.1098/rstb.2020.0135",
+          "year": 2021,
+          "title": "Political games of attack and defence",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Ruthie Pliskin",
+            "Michael Rojek-Giffin",
+            "Zsombor Z. Méder",
+            "Jörg Gross"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.tics.2020.06.005",
+          "year": 2020,
+          "title": "Group Cooperation, Carrying-Capacity Stress, and Intergroup Conflict",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross",
+            "Andrea Fariña"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.copsyc.2019.07.019",
+          "year": 2020,
+          "title": "Power in economic games",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Eric van Dijk"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41467-020-18896-6",
+          "year": 2020,
+          "title": "Self-reliance crowds out group cooperation and increases wealth inequality",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
+          ]
+        },
+        {
+          "id": "doi:10.1126/sciadv.aau7296",
+          "year": 2019,
+          "title": "Individual solutions to shared problems create a modern tragedy of the commons",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41467-019-08727-8",
+          "year": 2019,
+          "title": "The rise and fall of cooperation through reputation and group polarization",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
+          ]
+        }
+      ]
+    },
+    {
       "id": "us:university of maryland college park",
       "institution": "University of Maryland, College Park",
       "country": "US",
@@ -7481,169 +7617,6 @@
           ],
           "authors": [
             "Michele J. Gelfand"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of virginia",
-      "institution": "University of Virginia",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 12,
-      "staffIds": [
-        "BN",
-        "FR",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Brian A. Nosek",
-        "Christopher T. Begeny",
-        "Daniel P. Martin",
-        "Daniela Fernández",
-        "Daniela P. Fernández",
-        "Nicholas R. Buttrick",
-        "Phatthanakit Chobthamkit",
-        "Summer Bedford"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela P. Fernández"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela Fernández"
-          ]
-        },
-        {
-          "id": "rug:455da26bb47411be",
-          "year": 2025,
-          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela Fernández",
-            "Summer Bedford",
-            "Christopher T. Begeny"
-          ]
-        },
-        {
-          "id": "doi:10.11144/javeriana.upsy23.pdcp",
-          "year": 2024,
-          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1111/spc3.12909",
-          "year": 2023,
-          "title": "Conceptual replication and extension of health behavior theories' predictions in the context of COVID‐19: Evidence across countries and over time",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.2968",
-          "year": 2023,
-          "title": "Identifying important individual‐ and country‐level predictors of conspiracy theorizing: A machine learning analysis",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1037/emo0001118",
-          "year": 2023,
-          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.cresp.2021.100028",
-          "year": 2022,
-          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.paid.2020.110535",
-          "year": 2021,
-          "title": "Intergenerational conflicts of interest and prosocial behavior during the COVID-19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick",
-            "Phatthanakit Chobthamkit"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01461672211036602",
-          "year": 2021,
-          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.2572",
-          "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nicholas R. Buttrick"
-          ]
-        },
-        {
-          "id": "doi:10.1177/2515245917747646",
-          "year": 2018,
-          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
-          "staffIds": [
-            "BN",
-            "FR",
-            "LM"
-          ],
-          "authors": [
-            "Daniel P. Martin",
-            "Brian A. Nosek"
           ]
         }
       ]
@@ -15632,6 +15605,104 @@
       ]
     },
     {
+      "id": "br:universidade federal de uberl ndia",
+      "institution": "Universidade Federal de Uberlândia",
+      "country": "BR",
+      "type": "education",
+      "publicationCount": 6,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "A. Torres",
+        "Deniel Gomes Frutuoso",
+        "Heila Magali da Silva Veiga",
+        "Larissa Paula Martins",
+        "Laísla Araújo Pontes",
+        "Letícia Barbosa-Silva",
+        "Letícia Silva",
+        "Ligia Oliveria‐Silva",
+        "Lígia Carolina Oliveira-Silva",
+        "Olívia Pillar Perez Miziara"
+      ],
+      "publications": [
+        {
+          "id": "rug:cbb06ae3b7537232",
+          "year": 2026,
+          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Laísla Araújo Pontes",
+            "Deniel Gomes Frutuoso",
+            "Larissa Paula Martins",
+            "Heila Magali da Silva Veiga"
+          ]
+        },
+        {
+          "id": "rug:86b7df65309bd318",
+          "year": 2026,
+          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Silva",
+            "Lígia Carolina Oliveira-Silva",
+            "Olívia Pillar Perez Miziara"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Barbosa-Silva",
+            "Olívia Pillar Perez Miziara",
+            "A. Torres"
+          ]
+        },
+        {
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "rug:455da26bb47411be",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
+          ]
+        }
+      ]
+    },
+    {
       "id": "dz:university ferhat abbas of setif",
       "institution": "University Ferhat Abbas of Setif",
       "country": "DZ",
@@ -17327,85 +17398,6 @@
           ],
           "authors": [
             "Petra Lindfors"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "br:universidade federal de uberl ndia",
-      "institution": "Universidade Federal de Uberlândia",
-      "country": "BR",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "A. Torres",
-        "Letícia Barbosa-Silva",
-        "Letícia Silva",
-        "Ligia Oliveria‐Silva",
-        "Lígia Carolina Oliveira-Silva",
-        "Olívia Pillar Perez Miziara"
-      ],
-      "publications": [
-        {
-          "id": "rug:cbb06ae3b7537232",
-          "year": 2026,
-          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Silva"
-          ]
-        },
-        {
-          "id": "rug:86b7df65309bd318",
-          "year": 2026,
-          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Silva",
-            "Lígia Carolina Oliveira-Silva",
-            "Olívia Pillar Perez Miziara"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Barbosa-Silva",
-            "Olívia Pillar Perez Miziara",
-            "A. Torres"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "rug:455da26bb47411be",
-          "year": 2025,
-          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Ligia Oliveria‐Silva"
           ]
         }
       ]
@@ -19685,6 +19677,55 @@
       ]
     },
     {
+      "id": "cl:alberto hurtado university",
+      "institution": "Alberto Hurtado University",
+      "country": "CL",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Daniela Fernández",
+        "Daniela P. Fernández"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela Fernández"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11218-026-10232-y",
+          "year": 2026,
+          "title": "The potentially insidious consequences of belonging for inequality: associations between university students’ sense of belonging and perceived permeability",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela Fernández"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela P. Fernández"
+          ]
+        }
+      ]
+    },
+    {
       "id": "dz:centre hospito universitaire de s tif",
       "institution": "Centre Hospito Universitaire de Sétif",
       "country": "DZ",
@@ -21788,44 +21829,6 @@
       ]
     },
     {
-      "id": "cl:alberto hurtado university",
-      "institution": "Alberto Hurtado University",
-      "country": "CL",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Daniela Fernández",
-        "Daniela P. Fernández"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1007/s11218-026-10232-y",
-          "year": 2026,
-          "title": "The potentially insidious consequences of belonging for inequality: associations between university students’ sense of belonging and perceived permeability",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela Fernández"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela P. Fernández"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:american university",
       "institution": "American University",
       "country": "US",
@@ -23704,7 +23707,7 @@
         },
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -27391,7 +27394,7 @@
       "publications": [
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -27417,7 +27420,7 @@
       "publications": [
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -33007,6 +33010,32 @@
       ]
     },
     {
+      "id": "br:universidade federal do rio de janeiro",
+      "institution": "Universidade Federal do Rio de Janeiro",
+      "country": "BR",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Lígia Carolina Oliveira-Silva"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        }
+      ]
+    },
+    {
       "id": "pt:universidade lus fona",
       "institution": "Universidade Lusófona",
       "country": "PT",
@@ -33334,32 +33363,6 @@
           ],
           "authors": [
             "Silvana Mula"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of california san diego",
-      "institution": "University of California San Diego",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Filippo Canali De Rossi"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1523/jneurosci.1242-17.2018",
-          "year": 2018,
-          "title": "Neurobiological Mechanisms of Responding to Injustice",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Filippo Canali De Rossi"
           ]
         }
       ]

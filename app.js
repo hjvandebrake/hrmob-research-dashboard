@@ -11,6 +11,7 @@ const state = {
   staffContributionData: { meta: {}, people: [] },
   staffContributionLookupCache: null,
   deferredDataStatus: {},
+  dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
   publicationWindow: "last10",
@@ -38,7 +39,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260630-miriamfix";
+const DATA_VERSION = "20260710-0820";
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
@@ -81,7 +82,9 @@ let collaborationEvidenceCache = {
   textByPerson: new Map(),
 };
 
-const EXPERTISE_FAMILIES = [
+let topicOverlayOpener = null;
+
+let EXPERTISE_FAMILIES = [
   ["teams and groups", ["team", "teams", "group", "groups", "teamwork", "small group", "work group", "project team", "team performance", "team effectiveness"]],
   ["collaboration and coordination", ["collaboration", "coordination", "cooperation", "cooperative", "collaborative", "interdependence", "collective action", "coordination failure"]],
   ["multiple team membership", ["multiple team membership", "multiple team memberships", "multiple teams", "multiple team", "multi team", "multiteam", "multiteaming"]],
@@ -518,6 +521,7 @@ function cacheElements() {
   els.authForm = document.getElementById("auth-form");
   els.authPassword = document.getElementById("auth-password");
   els.authStatus = document.getElementById("auth-status");
+  els.dataStatus = document.getElementById("data-status");
   els.subtitle = document.getElementById("subtitle");
   els.footerMeta = document.getElementById("footer-meta");
   els.metrics = document.getElementById("metrics");
@@ -646,8 +650,24 @@ function attachEvents() {
       setTab(el.dataset.tab);
     });
   });
+  const navTabs = Array.from(document.querySelectorAll(".nav-tab"));
+  navTabs.forEach((tab, index) => {
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex = null;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % navTabs.length;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + navTabs.length) % navTabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = navTabs.length - 1;
+      if (nextIndex === null) return;
+      event.preventDefault();
+      const nextTab = navTabs[nextIndex];
+      setTab(nextTab.dataset.tab);
+      nextTab.focus();
+    });
+  });
   els.fteToggle.addEventListener("change", () => {
     state.includeAffiliatedResearchers = els.fteToggle.checked;
+    updateRoute();
     renderCurrentView();
   });
   if (els.publicationWindowToggle) {
@@ -656,6 +676,7 @@ function attachEvents() {
       if (!button) return;
       state.publicationWindow = normalizeWindowMode(button.dataset.windowMode);
       syncPublicationWindowControls();
+      updateRoute();
       renderCurrentView();
     });
   }
@@ -878,7 +899,12 @@ function attachEvents() {
     if (event.target === els.topicOverlay) closeTopicOverlay();
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !els.topicOverlay.hidden) closeTopicOverlay();
+    if (els.topicOverlay.hidden) return;
+    if (event.key === "Escape") {
+      closeTopicOverlay();
+      return;
+    }
+    if (event.key === "Tab") trapTopicOverlayFocus(event);
   });
   if (els.expertiseStaffResults) {
     els.expertiseStaffResults.addEventListener("click", handleExpertiseStaffClick);
@@ -908,6 +934,12 @@ function attachEvents() {
     if (state.tab === "network") renderNetwork();
   }, 180));
   window.addEventListener("hashchange", () => {
+    applyRouteFromHash();
+  });
+  window.addEventListener("popstate", () => {
+    applyGlobalStateFromUrl();
+    syncPublicationWindowControls();
+    if (els.fteToggle) els.fteToggle.checked = state.includeAffiliatedResearchers;
     applyRouteFromHash();
   });
 }
@@ -1076,15 +1108,26 @@ async function loadData() {
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
+    state.dataLoadFailures = new Set([
+      ["grants", grantsData],
+      ["phds", phdsData],
+      ["resources", resourceData],
+      ["staff profiles", staffProfileData],
+      ["staff contributions", staffContributionData],
+    ].filter(([, data]) => !data).map(([label]) => label));
     if (grantsData) state.grantsData = grantsData;
     if (phdsData) state.phdsData = phdsData;
     if (resourceData) state.resourceData = resourceData;
     if (staffProfileData) state.staffProfileData = staffProfileData;
     if (staffContributionData) state.staffContributionData = staffContributionData;
     const meta = state.data.meta;
+    hydrateTopicFamilies(meta.topicFamilies);
+    applyGlobalStateFromUrl();
     els.subtitle.textContent = "Publications, AIP, expertise, collaboration, grants, PhD supervision, and shared resources.";
     syncFooterMeta(meta);
+    syncDataStatus();
     syncPublicationWindowControls();
+    if (els.fteToggle) els.fteToggle.checked = state.includeAffiliatedResearchers;
     populateStaffUpdatePersonSelect();
     applyRouteFromHash();
   } catch (error) {
@@ -1092,8 +1135,20 @@ async function loadData() {
   }
 }
 
+function hydrateTopicFamilies(topicFamilies) {
+  if (!Array.isArray(topicFamilies) || !topicFamilies.length) return;
+  const normalized = topicFamilies
+    .map((entry) => Array.isArray(entry)
+      ? entry
+      : [entry?.label, entry?.terms])
+    .filter(([label, terms]) => typeof label === "string" && Array.isArray(terms) && terms.length)
+    .map(([label, terms]) => [label, terms.filter((term) => typeof term === "string")]);
+  if (normalized.length) EXPERTISE_FAMILIES = normalized;
+}
+
 const DEFERRED_DATA_FILES = {
   benchmark: {
+    label: "benchmark comparisons",
     filename: "benchmark-data.json",
     apply(data) {
       state.benchmarkData = data;
@@ -1102,12 +1157,14 @@ const DEFERRED_DATA_FILES = {
     },
   },
   externalPartners: {
+    label: "external partner affiliations",
     filename: "external-partners.json",
     apply(data) {
       state.externalPartnersData = data;
     },
   },
   teaching: {
+    label: "teaching relationships",
     filename: "teaching-data.json",
     apply(data) {
       state.teachingData = data;
@@ -1148,17 +1205,33 @@ async function loadDeferredData(keys) {
       if (data) {
         DEFERRED_DATA_FILES[key].apply(data);
         state.deferredDataStatus[key] = "loaded";
+        state.dataLoadFailures.delete(DEFERRED_DATA_FILES[key].label);
         changed = true;
       } else {
         state.deferredDataStatus[key] = "failed";
+        state.dataLoadFailures.add(DEFERRED_DATA_FILES[key].label);
       }
     });
+    syncDataStatus();
     if (changed && state.data) renderCurrentView();
   } catch (_) {
     requested.forEach((key) => {
-      if (state.deferredDataStatus[key] === "loading") state.deferredDataStatus[key] = "failed";
+      if (state.deferredDataStatus[key] === "loading") {
+        state.deferredDataStatus[key] = "failed";
+        state.dataLoadFailures.add(DEFERRED_DATA_FILES[key].label);
+      }
     });
+    syncDataStatus();
   }
+}
+
+function syncDataStatus() {
+  if (!els.dataStatus) return;
+  const failures = Array.from(state.dataLoadFailures || []);
+  els.dataStatus.hidden = failures.length === 0;
+  els.dataStatus.textContent = failures.length
+    ? `Some supporting data did not load: ${failures.join(", ")}. A missing panel is not evidence of zero activity. Reload the page or report the problem if it persists.`
+    : "";
 }
 
 function validTab(tab) {
@@ -1186,9 +1259,25 @@ function routeHash() {
   return `#${state.tab}`;
 }
 
+function applyGlobalStateFromUrl() {
+  const params = new URLSearchParams(location.search);
+  state.publicationWindow = normalizeWindowMode(params.get("window") || state.publicationWindow);
+  state.includeAffiliatedResearchers = ["1", "true", "yes"].includes((params.get("affiliated") || "").toLowerCase());
+}
+
+function routeUrl() {
+  const params = new URLSearchParams(location.search);
+  if (normalizeWindowMode(state.publicationWindow) === "last10") params.delete("window");
+  else params.set("window", normalizeWindowMode(state.publicationWindow));
+  if (state.includeAffiliatedResearchers) params.set("affiliated", "1");
+  else params.delete("affiliated");
+  const query = params.toString();
+  return `${location.pathname}${query ? `?${query}` : ""}${routeHash()}`;
+}
+
 function updateRoute({ replace = false } = {}) {
-  const next = routeHash();
-  if (location.hash === next) return;
+  const next = routeUrl();
+  if (`${location.pathname}${location.search}${location.hash}` === next) return;
   history[replace ? "replaceState" : "pushState"](null, "", next);
 }
 
@@ -1209,9 +1298,17 @@ function normalizeStaffSubpage(value) {
 
 function setTab(tab, options = {}) {
   state.tab = validTab(tab) ? tab : "overview";
-  document.querySelectorAll(".nav-tab").forEach((btn) => btn.classList.toggle("on", btn.dataset.tab === state.tab));
+  document.body.dataset.activeTab = state.tab;
+  document.querySelectorAll(".nav-tab").forEach((btn) => {
+    const active = btn.dataset.tab === state.tab;
+    btn.classList.toggle("on", active);
+    btn.setAttribute("aria-selected", String(active));
+    btn.tabIndex = active ? 0 : -1;
+  });
   document.querySelectorAll("main > section").forEach((section) => {
-    section.hidden = section.id !== `view-${state.tab}`;
+    const active = section.id === `view-${state.tab}`;
+    section.hidden = !active;
+    section.setAttribute("aria-hidden", String(!active));
   });
   if (options.updateHistory !== false) updateRoute({ replace: Boolean(options.replace) });
   if (state.data) renderCurrentView();
@@ -1219,7 +1316,9 @@ function setTab(tab, options = {}) {
 
 function syncFooterMeta(meta = {}) {
   if (!els.footerMeta) return;
-  els.footerMeta.textContent = meta.generatedOn ? `Last updated ${meta.generatedOn}` : "Last updated date unavailable";
+  els.footerMeta.textContent = meta.generatedOn
+    ? `Last updated ${meta.generatedOn} · Provisional public-source data`
+    : "Last updated date unavailable · Provisional public-source data";
   if (meta.publicationSource) {
     els.footerMeta.title = meta.publicationSource;
   }
@@ -3062,6 +3161,7 @@ function intersectSets(a, b) {
 
 function showTopicOverlay(query, mode = "query") {
   if (!els.topicOverlay || !query) return;
+  topicOverlayOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   const bundle = expertiseBundle(query, mode);
   const people = peopleById();
   const rows = rankedStaff(bundle)
@@ -3085,12 +3185,32 @@ function showTopicOverlay(query, mode = "query") {
   `).join("") : `<p class="small-muted">No publication examples under the current filters.</p>`;
   els.topicOverlay.hidden = false;
   document.body.classList.add("overlay-open");
+  requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
 }
 
 function closeTopicOverlay() {
   if (!els.topicOverlay) return;
   els.topicOverlay.hidden = true;
   document.body.classList.remove("overlay-open");
+  if (topicOverlayOpener?.isConnected) topicOverlayOpener.focus();
+  topicOverlayOpener = null;
+}
+
+function trapTopicOverlayFocus(event) {
+  const dialog = els.topicOverlay?.querySelector('[role="dialog"]');
+  if (!dialog) return;
+  const focusable = Array.from(dialog.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+    .filter((element) => !element.hidden);
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 function renderStaffRelated(personId, bundle, row) {
@@ -3546,7 +3666,7 @@ function renderOverview() {
   const theses = activeTheses();
   const currentProjects = currentPhdProjects();
   els.metrics.innerHTML = [
-    metric("Total publications", pubs.length),
+    metric("Counted journal publications", pubs.length),
     metric("Publishing outlets", journals.length),
     metric("Current PhDs", currentProjects.length),
     metric("Defended PhDs", theses.length),
