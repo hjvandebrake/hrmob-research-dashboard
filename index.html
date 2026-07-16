@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260710-0820">
+  <link rel="stylesheet" href="styles.css?v=20260716-1038">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to dashboard content</a>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
     <form id="auth-form" class="auth-card">
       <p class="eye">Restricted access</p>
@@ -68,7 +69,7 @@
 
   <div id="data-status" class="data-status" role="status" aria-live="polite" hidden></div>
 
-  <main>
+  <main id="main-content">
     <section id="view-overview" class="sec" role="tabpanel" aria-labelledby="tab-overview">
       <div class="wrap">
         <p class="view-context overview-view-context" data-view-context></p>
@@ -127,7 +128,7 @@
               </div>
             </div>
             <div id="year-bars" class="bar-chart"></div>
-            <h3 class="sub-h2">AIP distribution</h3>
+            <h3 class="sub-h2">AIP coverage and journal thresholds</h3>
             <div id="aip-bars" class="aip-summary"></div>
           </section>
           <section class="overview-panel">
@@ -310,10 +311,20 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Recent calls</p>
-                <h3 class="overview-h3">Grant calls to watch</h3>
+                <h3 id="resource-calls-title" class="overview-h3">Grant calls to watch</h3>
               </div>
             </div>
-            <div id="resource-recent-calls" class="recent-call-list"></div>
+            <div class="resource-calls-toolbar">
+              <p id="resource-calls-meta" class="resource-calls-meta" role="status" aria-live="polite">Loading grant calls&hellip;</p>
+              <label class="switch resource-show-closed-control">
+                <input id="resource-show-closed" type="checkbox" aria-controls="resource-recent-calls resource-opportunities">
+                <span class="switch-copy">
+                  <span>Show closed calls</span>
+                  <small>Include past deadlines</small>
+                </span>
+              </label>
+            </div>
+            <div id="resource-recent-calls" class="recent-call-list" aria-labelledby="resource-calls-title" aria-describedby="resource-calls-meta"></div>
           </section>
 
           <section class="overview-panel">
@@ -423,11 +434,11 @@
             <div class="tool-row">
               <label class="search-box">
                 <span>Search</span>
-                <input id="pub-search" type="search" placeholder="Title, journal, author">
+                <input id="pub-search" type="search" placeholder="Title, journal, author" aria-controls="publication-table">
               </label>
               <label class="select-box">
                 <span>AIP band</span>
-                <select id="aip-filter">
+                <select id="aip-filter" aria-controls="publication-table">
                   <option value="all">All</option>
                   <option value="gte90">AIP &ge; 90</option>
                   <option value="gte95">AIP &ge; 95</option>
@@ -436,14 +447,18 @@
               </label>
               <label class="select-box">
                 <span>Person</span>
-                <select id="person-filter">
+                <select id="person-filter" aria-controls="publication-table">
                   <option value="">All people</option>
                 </select>
               </label>
               <button id="publication-download-csv" class="section-link table-download" type="button">Download CSV</button>
             </div>
-            <div class="table-wrap">
-              <table id="publication-table"></table>
+            <div class="publication-filter-meta">
+              <p id="publication-results-summary" class="publication-results-summary" role="status" aria-live="polite">Loading publication records&hellip;</p>
+              <button id="publication-clear-filters" class="section-link publication-clear-filters" type="button" aria-controls="publication-table" hidden>Clear filters</button>
+            </div>
+            <div class="table-wrap publication-results-table" role="region" aria-label="Publication results" aria-describedby="publication-results-summary" tabindex="0">
+              <table id="publication-table" aria-describedby="publication-results-summary"></table>
             </div>
           </section>
           <aside class="publication-side">
@@ -460,7 +475,7 @@
           <div class="overview-panel-head">
             <div>
               <p class="eye">Open access</p>
-              <h3 class="overview-h3">Open access outlets</h3>
+              <h3 class="overview-h3">Observed and suggested open access outlets</h3>
             </div>
           </div>
           <div id="journal-open-access-list" class="outlet-list outlet-grid"></div>
@@ -481,7 +496,7 @@
             <span>Find expertise</span>
             <input id="staff-expertise-search" type="search" placeholder="Search stress, teamwork, virtual teams, status...">
           </label>
-          <p id="staff-expertise-summary" class="staff-search-summary">Search publications, grants, PhD projects, and profile fields.</p>
+          <p id="staff-expertise-summary" class="staff-search-summary" role="status" aria-live="polite">Search publications, grants, PhD projects, and profile fields.</p>
         </div>
         <div class="staff-grid">
           <aside class="staff-panel">
@@ -528,36 +543,119 @@
 
     <section id="view-network" class="sec" role="tabpanel" aria-labelledby="tab-network" hidden>
       <div class="wrap">
-        <div class="sec-head compact">
+        <div class="sec-head compact network-page-head">
           <div>
-            <p class="eye">Coauthor network</p>
-            <h2 class="h2">Department members connected by shared publications</h2>
+            <p class="eye">Relationship network</p>
+            <h2 class="h2">Explore publication and teaching connections</h2>
           </div>
-          <div class="network-toggle-row">
+          <div class="network-mode-block">
+            <span id="network-mode-label" class="control-label">Relationship</span>
+            <div id="network-mode-toggle" class="metric-toggle network-mode-toggle" role="group" aria-labelledby="network-mode-label">
+              <button class="on" type="button" data-network-mode="publications" aria-pressed="true">Publications</button>
+              <button type="button" data-network-mode="teaching" aria-pressed="false">Teaching</button>
+            </div>
+          </div>
+        </div>
+        <p class="section-intro page-intro network-page-intro">Start with the department overview, then select a member to inspect their strongest internal and outside relationships. Line thickness represents the number of shared publications or course offerings&mdash;not relationship quality or research impact.</p>
+
+        <section class="network-controls" aria-labelledby="network-controls-title">
+          <div class="network-controls-heading">
+            <div>
+              <p class="eye">View controls</p>
+              <h3 id="network-controls-title" class="network-controls-title">Choose what the map shows</h3>
+            </div>
+            <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Clear selection</button>
+          </div>
+          <div class="network-control-grid">
+            <label class="select-box network-scope-control">
+              <span>Network scope</span>
+              <select id="network-scope-select" aria-describedby="network-scope-help">
+                <option value="department">Department overview</option>
+                <option value="selected">Selected member</option>
+              </select>
+            </label>
             <label class="switch network-aip-toggle publication-network-control" title="Show only collaborations from publications in journals with AIP score 95.0 or higher">
               <input id="network-aip-toggle" type="checkbox">
-              <span>AIP &ge; 95 only</span>
+              <span class="switch-copy">
+                <span>AIP &ge; 95 only</span>
+                <small>Filter publication ties</small>
+              </span>
             </label>
             <label class="switch network-external-toggle publication-network-control">
               <input id="network-external-toggle" type="checkbox" checked>
-              <span>Outer collaborators</span>
+              <span class="switch-copy">
+                <span>Outside coauthors</span>
+                <small>Show for selected member</small>
+              </span>
             </label>
-            <button id="network-clear-selection" class="section-link network-clear-selection" type="button" hidden>Reset</button>
+            <label class="select-box network-min-tie-control publication-network-control" hidden>
+              <span>Minimum shared publications</span>
+              <select id="network-min-tie-select">
+                <option value="1">1 or more</option>
+                <option value="2">2 or more</option>
+                <option value="3">3 or more</option>
+                <option value="5">5 or more</option>
+              </select>
+            </label>
           </div>
+          <p id="network-scope-help" class="network-control-help">In Selected member view, choose a node in the map to reveal that person&rsquo;s coauthors and supporting records.</p>
+        </section>
+
+        <div id="network-summary" class="network-summary" role="status" aria-live="polite">
+          <p class="network-summary-placeholder">Network counts will appear when the data are ready.</p>
         </div>
-        <div id="network-selection-note" class="network-selection-note">Click a department member in the network to focus.</div>
-        <div class="network-shell">
-          <svg id="network-svg" role="img" aria-label="Coauthor network"></svg>
-          <div id="network-empty" class="empty" hidden>No coauthorship edges for the current filters.</div>
+
+        <div class="network-workspace">
+          <section class="network-visual-column" aria-labelledby="network-map-title">
+            <div class="network-section-heading">
+              <div>
+                <p class="eye">Map</p>
+                <h3 id="network-map-title" class="overview-h3">Relationship map</h3>
+              </div>
+              <div id="network-selection-note" class="network-selection-note">Select a department member to focus their relationships.</div>
+            </div>
+            <div class="network-shell">
+              <svg id="network-svg" role="img" aria-label="Collaboration network" aria-describedby="network-map-description"></svg>
+              <div id="network-empty" class="empty" role="status" hidden>No coauthorship edges for the current filters.</div>
+            </div>
+            <p id="network-map-description" class="visually-hidden">Department members are shown as labelled circles. Larger circles represent more records. Lines connect people who share publications or course offerings; thicker lines represent more shared records. Use the evidence table below for a text alternative.</p>
+            <div class="network-legend-shell" aria-labelledby="network-legend-title">
+              <p id="network-legend-title" class="network-legend-title">How to read the map</p>
+              <div id="network-legend" class="legend">
+                <span><i class="legend-node"></i> Node size = publications</span>
+                <span><i class="legend-count"></i> Number = publications</span>
+                <span class="legend-strength">
+                  <span class="legend-strength-scale" aria-hidden="true"><i class="legend-line legend-line-weak"></i><i class="legend-line legend-line-strong"></i></span>
+                  Line strength = shared publications
+                </span>
+                <span><i class="legend-faculty"></i> Other FEB departments</span>
+                <span><i class="legend-external"></i> Outside coauthors</span>
+              </div>
+            </div>
+          </section>
+
+          <aside class="network-detail-column" aria-label="Network selection details">
+            <div id="network-inspector" class="network-inspector" aria-live="polite">
+              <p class="eye">Selection details</p>
+              <h3 class="network-inspector-title">Start with a department member</h3>
+              <p>Choose Selected member above or select a labelled department node. This panel will explain the person&rsquo;s visible ties and strongest outside coauthors.</p>
+            </div>
+          </aside>
         </div>
-        <div id="network-legend" class="legend">
-          <span><i class="legend-node"></i> Node size = publications</span>
-          <span><i class="legend-count"></i> Number = publications</span>
-          <span><i class="legend-line"></i> Line thickness = shared publications</span>
-          <span><i class="legend-faculty"></i> Other FEB departments</span>
-          <span><i class="legend-external"></i> Outer dots = outside coauthors; labels shown only for strongest repeated ties</span>
-        </div>
-        <div id="network-table-wrap" class="table-wrap compact-table"></div>
+
+        <section class="network-evidence-panel" aria-labelledby="network-evidence-title">
+          <div class="overview-panel-head">
+            <div>
+              <p class="eye">Evidence</p>
+              <h3 id="network-evidence-title" class="overview-h3">Relationships behind the map</h3>
+            </div>
+          </div>
+          <p class="section-intro">Use this table to compare tie strength and inspect the publications or course offerings behind each connection. Counts follow the active time window and filters.</p>
+          <div id="network-evidence-table-wrap" class="network-evidence-table-wrap">
+            <div id="network-table-wrap" class="table-wrap compact-table"></div>
+          </div>
+        </section>
+
         <section class="external-partner-panel">
           <div class="overview-panel-head">
             <div>
@@ -606,9 +704,10 @@
               </label>
               <div class="feedback-actions">
                 <button class="primary-action" type="submit">Email suggestion</button>
+                <button id="feedback-copy" class="secondary-action" type="button">Copy email text</button>
                 <a id="feedback-email-link" class="section-link" href="mailto:h.j.van.de.brake@rug.nl">Email Joost</a>
               </div>
-              <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+              <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
             </form>
           </section>
           <aside class="overview-panel contact-side-panel">
@@ -653,8 +752,9 @@
               <p class="staff-resource-note">No GitHub account is needed. Your email app will open with these fields filled in; send that email to submit the update.</p>
               <div class="feedback-actions">
                 <button class="primary-action" type="submit">Email profile update</button>
+                <button id="staff-update-copy" class="secondary-action" type="button">Copy email text</button>
               </div>
-              <p id="staff-update-status" class="feedback-status" aria-live="polite"></p>
+              <p id="staff-update-status" class="feedback-status" role="status" aria-live="polite"></p>
             </form>
           </section>
         </div>
@@ -689,6 +789,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260710-0820"></script>
+  <script src="app.js?v=20260716-1038"></script>
 </body>
 </html>

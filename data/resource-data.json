@@ -2,8 +2,19 @@
   "meta": {
     "sourceFile": "hrmob-grant-opportunities-2026-2027.xlsx",
     "updatedLabel": "26 March 2026",
+    "sourceUpdatedDate": "2026-03-26",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "recentCallsChecked": "2026-07-03"
+    "generatedDate": "2026-07-16",
+    "deadlineStatusAsOf": "2026-07-16",
+    "recentCallsChecked": "2026-07-16",
+    "deadlineStatusValues": {
+      "upcoming": "Upcoming",
+      "later": "Later",
+      "passed": "Passed",
+      "rolling": "Rolling",
+      "date-unconfirmed": "Date not confirmed"
+    },
+    "deadlineStatusRule": "Exact dates within 120 days are upcoming; later exact dates are later; elapsed dates are passed; vague timing remains date-unconfirmed."
   },
   "opportunities": [
     {
@@ -16,7 +27,16 @@
       "successRate": "~14%",
       "deadline": "Results current round mid-2026. Next round opens ~Sep 2026.",
       "tips": "Pre-proposal then full proposal. Narrative CV describing 3 to 5 key outputs. Weighted 75% scientific quality, 25% impact. Cannot hire PhD candidates or postdocs from the grant.",
-      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2025"
+      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2025",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Early Career",
@@ -28,7 +48,16 @@
       "successRate": "10-14%",
       "deadline": "~October 2026",
       "tips": "Panel SH1 (Individuals, Markets and Organisations: Economics, finance, management) covers HRM, OB, strategy, labour economics. Step 1 assesses vision and PI quality only (5 pages). Methodology assessed at Step 2 only. Must be genuinely groundbreaking.",
-      "link": "https://erc.europa.eu/apply-grant/starting-grant"
+      "link": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": "2026-10",
+      "deadlinePrecision": "month",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Early Career",
@@ -40,7 +69,21 @@
       "successRate": "~10% (dropped from ~15% in 2024)",
       "deadline": "9 September 2026",
       "tips": "European or Global fellowship. Applicant and host supervisor write jointly. Requires a training and career development plan. Note: applications surged 65% in 2025, pushing success rates below 10%.",
-      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
+      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadlineDate": "2026-09-09",
+      "nextDeadlineDate": "2026-09-09",
+      "deadlineDates": [
+        {
+          "date": "2026-09-09",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Early Career",
@@ -52,7 +95,16 @@
       "successRate": "Moderate",
       "deadline": "Annual (check KNAW website)",
       "tips": "Small grant for conferences, short research visits, or pilot studies. Low administrative burden. Note: biennial cycle. Next application window expected September 2027.",
-      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-van-der-gaag-grant"
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-van-der-gaag-grant",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Early Career",
@@ -64,7 +116,16 @@
       "successRate": "Moderate",
       "deadline": "Annual (check KNAW website)",
       "tips": "Funds interdisciplinary workshops and meetings. Useful for building cross-institutional collaborations before larger grant applications.",
-      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-early-career-partnerships"
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-early-career-partnerships",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Early Career",
@@ -76,7 +137,25 @@
       "successRate": "Variable",
       "deadline": "Round 2: 7 Apr 2026 Round 3: 15 Sep 2026",
       "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
-      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-xs-2026-round-1"
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-xs-2026-round-1",
+      "deadlineDate": "2026-09-15",
+      "nextDeadlineDate": "2026-09-15",
+      "deadlineDates": [
+        {
+          "date": "2026-04-07",
+          "status": "passed"
+        },
+        {
+          "date": "2026-09-15",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Mid-Career",
@@ -88,7 +167,21 @@
       "successRate": "15-20%",
       "deadline": "Full proposal: 9 April 2026",
       "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
-      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2025"
+      "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2025",
+      "deadlineDate": "2026-04-09",
+      "nextDeadlineDate": null,
+      "deadlineDates": [
+        {
+          "date": "2026-04-09",
+          "status": "passed"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Mid-Career",
@@ -100,7 +193,16 @@
       "successRate": "10-14%",
       "deadline": "~January 2027",
       "tips": "Panel SH1 (Economics, finance, management). Must demonstrate strong independent publication record and PhD supervision. The 2027 eligibility widening creates new opportunities for researchers previously caught between Starting and Consolidator windows.",
-      "link": "https://erc.europa.eu/apply-grant/consolidator-grant"
+      "link": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": "2027-01",
+      "deadlinePrecision": "month",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Mid-Career",
@@ -112,7 +214,16 @@
       "successRate": "~20%",
       "deadline": "Expected mid-2026 (alternates with L)",
       "tips": "Funds one PhD or postdoc position alongside your own research time. Medium-scale independent programme. Alternates annually with the L scheme. Check NWO for call opening.",
-      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-m-2024"
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-m-2024",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Senior",
@@ -124,7 +235,21 @@
       "successRate": "10-15%",
       "deadline": "Full proposal: 8 September 2026",
       "tips": "Funds an entire research group. Pre-proposal stage closed March 2026. Full proposal then interview. The highest-prestige NWO individual grant. Expect intense competition from across all SSH disciplines.",
-      "link": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026"
+      "link": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026",
+      "deadlineDate": "2026-09-08",
+      "nextDeadlineDate": "2026-09-08",
+      "deadlineDates": [
+        {
+          "date": "2026-09-08",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Senior",
@@ -136,7 +261,21 @@
       "successRate": "~11%",
       "deadline": "27 August 2026",
       "tips": "Panel SH1 (Economics, finance, management). Requires field-shaping track record and international recognition. The proposal should articulate a 10-year research vision. The additional equipment budget is €1M (or €2M if relocating from outside Europe). You do not need to be a full professor, but you must demonstrate exceptional scientific leadership.",
-      "link": "https://erc.europa.eu/apply-grant/advanced-grant"
+      "link": "https://erc.europa.eu/apply-grant/advanced-grant",
+      "deadlineDate": "2026-08-27",
+      "nextDeadlineDate": "2026-08-27",
+      "deadlineDates": [
+        {
+          "date": "2026-08-27",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Senior",
@@ -148,7 +287,16 @@
       "successRate": "~15%",
       "deadline": "Next round ~2027 (2025 round in assessment)",
       "tips": "Largest NWO SSH individual grant. Funds a substantial research programme with multiple positions. Runs biennially. The 2025 round closed Feb 2026 and is now in assessment.",
-      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-l-2025"
+      "link": "https://www.nwo.nl/en/calls/ssh-open-competition-l-2025",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Senior",
@@ -160,7 +308,21 @@
       "successRate": "~31%",
       "deadline": "17 September 2026 (cut-off 2)",
       "tips": "Funds societal or commercial valorisation of ERC-funded research. Lump sum with light reporting. The highest success rate of any ERC scheme.",
-      "link": "https://erc.europa.eu/apply-grant/proof-concept"
+      "link": "https://erc.europa.eu/apply-grant/proof-concept",
+      "deadlineDate": "2026-09-17",
+      "nextDeadlineDate": "2026-09-17",
+      "deadlineDates": [
+        {
+          "date": "2026-09-17",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -172,7 +334,16 @@
       "successRate": "",
       "deadline": "In preparation. No date yet.",
       "tips": "HIGHLY RELEVANT. Focuses on labour productivity, strategic HRM in SMEs, and teams working with AI and robotics. Takes an integrated view of the innovation ecosystem, organisational HRM policy, and individual/team adaptation to technology. Start identifying industry partners now.",
-      "link": "https://www.nwo.nl/en/calls/kic-human-capital-and-digital-innovation-in-the-netherlands"
+      "link": "https://www.nwo.nl/en/calls/kic-human-capital-and-digital-innovation-in-the-netherlands",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -184,7 +355,16 @@
       "successRate": "",
       "deadline": "Call expected 2026. No date yet.",
       "tips": "Budget €161M for approximately 6 to 7 consortia. Requires absolute world-leading position. SSH-oriented Gravitation projects exist. Extremely competitive but transformative if successful.",
-      "link": "https://www.nwo.nl/en/researchprogrammes/gravitation"
+      "link": "https://www.nwo.nl/en/researchprogrammes/gravitation",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -196,7 +376,21 @@
       "successRate": "",
       "deadline": "Round 2: 15 September 2026",
       "tips": "Small exploratory grants for testing existing AI applications in organisations. Focus on labour savings and productivity gains. Practice-oriented. Excellent seed funding to prepare a larger KIC Human Capital bid.",
-      "link": "https://www.nwo.nl/en/calls/kiem-arbeidsbesparende-ai"
+      "link": "https://www.nwo.nl/en/calls/kiem-arbeidsbesparende-ai",
+      "deadlineDate": "2026-09-15",
+      "nextDeadlineDate": "2026-09-15",
+      "deadlineDates": [
+        {
+          "date": "2026-09-15",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -208,7 +402,25 @@
       "successRate": "",
       "deadline": "Two collection dates: 24 Mar and 15 Sep 2026",
       "tips": "Exploratory applied research under the KIA Social Earning Capacity. Broad scope covering HRM, organisational innovation, and human capital development. Low barrier seed funding.",
-      "link": "https://www.nwo.nl/en/calls/kiem-mv"
+      "link": "https://www.nwo.nl/en/calls/kiem-mv",
+      "deadlineDate": "2026-09-15",
+      "nextDeadlineDate": "2026-09-15",
+      "deadlineDates": [
+        {
+          "date": "2026-03-24",
+          "status": "passed"
+        },
+        {
+          "date": "2026-09-15",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -220,7 +432,16 @@
       "successRate": "",
       "deadline": "Expected autumn 2026",
       "tips": "Funds workshops, training schools, short-term scientific missions. Not research itself. COST participants show a 39% success rate in subsequent Horizon Europe applications. Strategic precursor to larger bids.",
-      "link": "https://www.cost.eu/funding/open-call/"
+      "link": "https://www.cost.eu/funding/open-call/",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -232,7 +453,21 @@
       "successRate": "",
       "deadline": "Two-stage: 1st deadline 2 Feb 2027",
       "tips": "AI-based human-machine interaction, inclusion, well-being, upskilling, and career evolution. Two-stage call opening Sep 2026. Directly relevant for OB researchers studying technology and work.",
-      "link": "https://www.horizon-europe.gouv.fr/new-approaches-humanai-collaboration-workforce-future-ria-made-europe-and-ai-data-and-robotics"
+      "link": "https://www.horizon-europe.gouv.fr/new-approaches-humanai-collaboration-workforce-future-ria-made-europe-and-ai-data-and-robotics",
+      "deadlineDate": "2027-02-02",
+      "nextDeadlineDate": "2027-02-02",
+      "deadlineDates": [
+        {
+          "date": "2027-02-02",
+          "status": "later"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -244,7 +479,16 @@
       "successRate": "",
       "deadline": "~September 2027",
       "tips": "Corporate governance, CSR, and democratic engagement. Part of the Cluster 2 2027 work programme.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": "2027-09",
+      "deadlinePrecision": "month",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -256,7 +500,16 @@
       "successRate": "",
       "deadline": "~September 2027",
       "tips": "Worker mobility, migration, and labour market integration across the EU.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2027",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": "2027-09",
+      "deadlinePrecision": "month",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -268,7 +521,16 @@
       "successRate": "",
       "deadline": "Expected call opening mid-2026",
       "tips": "Annual cycle. Watch NWO SSH page for exact dates.",
-      "link": "https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme"
+      "link": "https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -280,7 +542,16 @@
       "successRate": "",
       "deadline": "Expected late 2026 or 2027",
       "tips": "Alternates with L round. Monitor NWO announcements.",
-      "link": "https://www.nwo.nl/en/researchprogrammes/open-competition-ssh"
+      "link": "https://www.nwo.nl/en/researchprogrammes/open-competition-ssh",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -292,7 +563,16 @@
       "successRate": "",
       "deadline": "Various. Check ZonMw.",
       "tips": "Relevant when framing OB research around occupational health, burnout prevention, sustainable employability, or healthcare workforce issues.",
-      "link": "https://www.zonmw.nl/en/work"
+      "link": "https://www.zonmw.nl/en/work",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -304,7 +584,21 @@
       "successRate": "",
       "deadline": "13 May 2026",
       "tips": "Funds research visits and small events. Very low barrier.",
-      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-humanities-fund"
+      "link": "https://www.knaw.nl/en/funds-and-prizes/knaw-humanities-fund",
+      "deadlineDate": "2026-05-13",
+      "nextDeadlineDate": null,
+      "deadlineDates": [
+        {
+          "date": "2026-05-13",
+          "status": "passed"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -316,7 +610,16 @@
       "successRate": "",
       "deadline": "Various. Check Wellcome.",
       "tips": "This is a UK-based fund, it seams more promising to collaborate with UK-based colleagues.",
-      "link": "https://wellcome.org/research-funding/schemes"
+      "link": "https://wellcome.org/research-funding/schemes",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Watch List",
@@ -328,7 +631,16 @@
       "successRate": "",
       "deadline": "Various. Check Volkswagen Stiftung.",
       "tips": "This is a German-based fund, it seams more promising to collaborate with colleagues form Germany.",
-      "link": "https://www.volkswagenstiftung.de/en/our-funding-portfolio"
+      "link": "https://www.volkswagenstiftung.de/en/our-funding-portfolio",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -340,7 +652,21 @@
       "successRate": "Competitive (12 themes)",
       "deadline": "6 October 2026",
       "tips": "Must span the entire knowledge chain: fundamental, applied, and practice-oriented research. The 'Reinventing Work' theme covers digital labour, platform work, autonomy versus control, and solidarity. Mandatory collaborative workshops ran in Feb/Mar 2026. Societal partners required.",
-      "link": "https://www.nwo.nl/en/researchprogrammes/dutch-research-agenda-nwa/research-along-routes-by-consortia-nwa-orc/nwa-orc-2026/themes/reinventing-work-artistic-research-into-labour-in-the-digital-age"
+      "link": "https://www.nwo.nl/en/researchprogrammes/dutch-research-agenda-nwa/research-along-routes-by-consortia-nwa-orc/nwa-orc-2026/themes/reinventing-work-artistic-research-into-labour-in-the-digital-age",
+      "deadlineDate": "2026-10-06",
+      "nextDeadlineDate": "2026-10-06",
+      "deadlineDates": [
+        {
+          "date": "2026-10-06",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -352,7 +678,21 @@
       "successRate": "Variable",
       "deadline": "22 September 2026",
       "tips": "Thematically free as long as it aligns with a KIA. The S variant is designed for smaller consortia that want to grow into sustained partnerships. Information meeting 14 April 2026. Good entry point for building industry collaborations around HRM/OB topics.",
-      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-s-2026"
+      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-s-2026",
+      "deadlineDate": "2026-09-22",
+      "nextDeadlineDate": "2026-09-22",
+      "deadlineDates": [
+        {
+          "date": "2026-09-22",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -364,7 +704,21 @@
       "successRate": "Variable",
       "deadline": "Full proposal: 12 November 2026",
       "tips": "Thematically free. Large-scale public-private partnerships. Pre-proposal deadline passed (10 Mar 2026). You can still join an existing consortium as co-applicant or wait for the next round.",
-      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-xl"
+      "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-xl",
+      "deadlineDate": "2026-11-12",
+      "nextDeadlineDate": "2026-11-12",
+      "deadlineDates": [
+        {
+          "date": "2026-11-12",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -376,7 +730,21 @@
       "successRate": "~4 projects funded (€7M total)",
       "deadline": "9 June 2026",
       "tips": "Focused on food, mobility, and energy transitions, but the core question is about adaptivity of organisations and individuals in change processes. OB researchers can contribute on organisational learning, change management, and human capital.",
-      "link": "https://www.nwo.nl/en/calls/kic-adaptivity-in-transitions"
+      "link": "https://www.nwo.nl/en/calls/kic-adaptivity-in-transitions",
+      "deadlineDate": "2026-06-09",
+      "nextDeadlineDate": null,
+      "deadlineDates": [
+        {
+          "date": "2026-06-09",
+          "status": "passed"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -388,7 +756,21 @@
       "successRate": "~15%",
       "deadline": "23 September 2026",
       "tips": "Topic: Strengthen Europe's social model through productivity. Research and Innovation Action with 100% funding plus 25% flat rate for indirect costs.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
+      "deadlineDate": "2026-09-23",
+      "nextDeadlineDate": "2026-09-23",
+      "deadlineDates": [
+        {
+          "date": "2026-09-23",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -400,7 +782,21 @@
       "successRate": "~15%",
       "deadline": "23 September 2026",
       "tips": "Making Europe a global magnet for talent. Covers attracting and retaining researchers and high-skilled workers. Directly relevant to talent management and international HRM research.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
+      "deadlineDate": "2026-09-23",
+      "nextDeadlineDate": "2026-09-23",
+      "deadlineDates": [
+        {
+          "date": "2026-09-23",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -412,7 +808,21 @@
       "successRate": "~15%",
       "deadline": "23 September 2026",
       "tips": "Fostering competencies for the green transition. Covers workforce development, skills anticipation, and training system design.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
+      "deadlineDate": "2026-09-23",
+      "nextDeadlineDate": "2026-09-23",
+      "deadlineDates": [
+        {
+          "date": "2026-09-23",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -424,7 +834,21 @@
       "successRate": "~15%",
       "deadline": "23 September 2026",
       "tips": "How governments prepare the civil service for the future. Strong public sector management and HR angle. Workforce planning, digital skills in government, organisational transformation.",
-      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026"
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
+      "deadlineDate": "2026-09-23",
+      "nextDeadlineDate": "2026-09-23",
+      "deadlineDates": [
+        {
+          "date": "2026-09-23",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -436,7 +860,21 @@
       "successRate": "N/A (partnership call)",
       "deadline": "13 October 2026",
       "tips": "Seven-year co-funded partnership covering future of work, social protection, education and skills, and just transitions. Co-funded by national agencies including NWO. Positioning yourself early creates a sustained funding pipeline through 2034.",
-      "link": "https://www.horizon-europe.gouv.fr/co-funded-european-partnership-social-transformations-and-resilience-42672"
+      "link": "https://www.horizon-europe.gouv.fr/co-funded-european-partnership-social-transformations-and-resilience-42672",
+      "deadlineDate": "2026-10-13",
+      "nextDeadlineDate": "2026-10-13",
+      "deadlineDates": [
+        {
+          "date": "2026-10-13",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -448,7 +886,21 @@
       "successRate": "~10%",
       "deadline": "24 November 2026",
       "tips": "Structured PhD training programme with strong intersectoral and international mobility requirements. Each doctoral candidate must spend time at a non-academic partner.",
-      "link": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-doctoral-networks_en"
+      "link": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-doctoral-networks_en",
+      "deadlineDate": "2026-11-24",
+      "nextDeadlineDate": "2026-11-24",
+      "deadlineDates": [
+        {
+          "date": "2026-11-24",
+          "status": "later"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -460,7 +912,21 @@
       "successRate": "~22-25% (was ~30% in 2022, declining)",
       "deadline": "16 April 2026",
       "tips": "Funds short-term staff secondments between partners for knowledge transfer. Relatively high success rate. Good networking instrument that can lead to larger collaborative bids.",
-      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/staff-exchanges"
+      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/staff-exchanges",
+      "deadlineDate": "2026-04-16",
+      "nextDeadlineDate": null,
+      "deadlineDates": [
+        {
+          "date": "2026-04-16",
+          "status": "passed"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     },
     {
       "stage": "Consortium",
@@ -472,7 +938,16 @@
       "successRate": "~10%",
       "deadline": "~November 2026",
       "tips": "Funds ambitious research that could not be achieved by any single PI alone. Requires genuine intellectual synergy, not just a sum of parts. Cross-disciplinary combinations encouraged.",
-      "link": "https://erc.europa.eu/apply-grant/synergy-grant"
+      "link": "https://erc.europa.eu/apply-grant/synergy-grant",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": "2026-11",
+      "deadlinePrecision": "month",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "workbook",
+      "sourceCheckedDate": "2026-03-26"
     }
   ],
   "recentCalls": [
@@ -483,20 +958,33 @@
       "amount": "€850,000",
       "duration": "5 years",
       "eligibility": "PhD obtained max 8 years ago",
-      "timing": "New round expected later in 2026; monitor NWO.",
+      "deadline": "",
+      "timing": "The next-round deadline is not confirmed; monitor the official NWO Talent Programme page.",
       "why": "Core mid-career personal grant. Start early because embedding and departmental support need coordination.",
       "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
       "fitStage": "mid",
       "fitNote": "Department shortlist currently limited to Joost van de Brake and Jeff Lees; verify formal NWO window and any extensions before nomination.",
       "sourceLabel": "NWO Talent Programme",
       "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme",
+      "sourceCallStatus": "monitor",
+      "sourceNote": "The programme page still linked to the closed Vidi SSH 2025 round when checked; no next-round deadline was published there.",
+      "openDate": "",
       "includePersonIds": [
         "JVB",
         "JL"
       ],
       "excludePersonIds": [],
       "manualReason": "Department shortlist currently limited to Joost van de Brake and Jeff Lees.",
-      "candidateMode": ""
+      "candidateMode": "",
+      "deadlineDate": null,
+      "nextDeadlineDate": null,
+      "deadlineDates": [],
+      "deadlineMonth": null,
+      "deadlinePrecision": "unconfirmed",
+      "deadlineStatus": "date-unconfirmed",
+      "deadlineStatusLabel": "Date not confirmed",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     },
     {
       "name": "NWO Veni SSH",
@@ -505,17 +993,41 @@
       "amount": "€320,000",
       "duration": "3 years",
       "eligibility": "PhD obtained max 3 years ago",
-      "timing": "Next round expected around September 2026.",
+      "deadline": "2026-09-01",
+      "timing": "Pre-proposals close 1 September 2026; invited full proposals close 26 January 2027.",
       "why": "Early-career personal grant for a first independent project line.",
       "tips": "Pre-proposal then full proposal. Narrative CV describing 3 to 5 key outputs. Weighted 75% scientific quality, 25% impact. Cannot hire PhD candidates or postdocs from the grant.",
       "fitStage": "early",
       "fitNote": "Potentially relevant for early-career staff; verify the three-year post-PhD rule and extensions.",
-      "sourceLabel": "NWO Talent Programme",
-      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme",
+      "sourceLabel": "NWO Veni SSH 2026 call",
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2026",
+      "sourceCallStatus": "open",
+      "sourceNote": "Official NWO call page listed the pre-proposal and invited full-application deadlines.",
+      "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": ""
+      "candidateMode": "",
+      "deadlineDate": "2026-09-01",
+      "nextDeadlineDate": "2026-09-01",
+      "deadlineDates": [
+        {
+          "date": "2026-09-01",
+          "label": "Pre-proposal",
+          "status": "upcoming"
+        },
+        {
+          "date": "2027-01-26",
+          "label": "Invited full application",
+          "status": "later"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     },
     {
       "name": "NWO SSH Open Competition XS",
@@ -524,17 +1036,36 @@
       "amount": "€50,000",
       "duration": "6-24 months",
       "eligibility": "PhD obtained at least 5 years ago (no upper limit since 2026)",
-      "timing": "Round 3 deadline listed in the workbook: 15 September 2026.",
+      "deadline": "2026-09-15",
+      "timing": "Round 3 closes 15 September 2026.",
       "why": "Good fit for a compact pilot, method test, or new research direction that can seed a larger proposal.",
       "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
       "fitStage": "established",
       "fitNote": "Potentially relevant for staff at least five years after PhD; verify current call conditions.",
-      "sourceLabel": "NWO SSH Open Competition",
-      "sourceUrl": "https://www.nwo.nl/en/researchprogrammes/open-competition-domain-ssh",
+      "sourceLabel": "NWO SSH Open Competition XS 2026 round 3",
+      "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-xs-2026-round-3",
+      "sourceCallStatus": "open",
+      "sourceNote": "Official NWO round-3 call page listed the full-application deadline.",
+      "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": ""
+      "candidateMode": "",
+      "deadlineDate": "2026-09-15",
+      "nextDeadlineDate": "2026-09-15",
+      "deadlineDates": [
+        {
+          "date": "2026-09-15",
+          "label": "Round 3 full application",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     },
     {
       "name": "MSCA Postdoctoral Fellowship",
@@ -543,17 +1074,37 @@
       "amount": "~€80-90K/year (NL rate)",
       "duration": "1-2 years",
       "eligibility": "PhD holders with mobility rule: must not have lived in NL for more than 12 months in past 3 years",
-      "timing": "Workbook deadline: 9 September 2026.",
+      "deadline": "2026-09-09",
+      "timing": "The 2026 call closes 9 September 2026 at 17:00 CEST.",
       "why": "Useful when a strong external postdoc candidate wants to come to Groningen with a supervisor.",
       "tips": "European or Global fellowship. Applicant and host supervisor write jointly. Requires a training and career development plan. Note: applications surged 65% in 2025, pushing success rates below 10%.",
       "fitStage": "supervisor",
       "fitNote": "Relevant for staff who can host a mobile postdoc candidate; candidate mobility rule is decisive.",
-      "sourceLabel": "MSCA Postdoctoral Fellowships",
-      "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "sourceLabel": "MSCA Postdoctoral Fellowships 2026 call",
+      "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2026",
+      "sourceCallStatus": "open",
+      "sourceNote": "Official MSCA call page listed the 2026 proposal deadline and call status.",
+      "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": ""
+      "candidateMode": "",
+      "deadlineDate": "2026-09-09",
+      "nextDeadlineDate": "2026-09-09",
+      "deadlineDates": [
+        {
+          "date": "2026-09-09",
+          "label": "Proposal",
+          "timeLabel": "17:00 CEST",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     },
     {
       "name": "ERC Starting Grant",
@@ -562,17 +1113,36 @@
       "amount": "Up to €1.5M (+€1M equipment)",
       "duration": "5 years",
       "eligibility": "0 to 10 yrs post-PhD (widened from 2 to 7 starting 2027)",
-      "timing": "2027 call expected in the 2026 ERC work programme cycle.",
+      "deadline": "2026-10-14",
+      "timing": "The 2027 call is scheduled to open 22 July 2026 and close 14 October 2026, subject to Work Programme 2027 adoption.",
       "why": "High-risk, high-gain individual grant for an independent research programme.",
       "tips": "Panel SH1 (Individuals, Markets and Organisations: Economics, finance, management) covers HRM, OB, strategy, labour economics. Step 1 assesses vision and PI quality only (5 pages). Methodology assessed at Step 2 only. Must be genuinely groundbreaking.",
       "fitStage": "early-mid",
       "fitNote": "Potentially relevant for staff in the Starting Grant post-PhD window; verify ERC window and extensions.",
       "sourceLabel": "ERC Starting Grant",
       "sourceUrl": "https://erc.europa.eu/apply-grant/starting-grant",
+      "sourceCallStatus": "forthcoming",
+      "sourceNote": "Official ERC page listed the provisional opening and deadline, both subject to adoption of Work Programme 2027.",
+      "openDate": "2026-07-22",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": ""
+      "candidateMode": "",
+      "deadlineDate": "2026-10-14",
+      "nextDeadlineDate": "2026-10-14",
+      "deadlineDates": [
+        {
+          "date": "2026-10-14",
+          "label": "Proposal",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     },
     {
       "name": "NWO awards: impact, open science, team science",
@@ -581,17 +1151,41 @@
       "amount": "",
       "duration": "",
       "eligibility": "",
-      "timing": "Nomination deadline: 23 June 2026 for the Leo Waaijers Open Science Award and 10 September 2026 for the other awards.",
+      "deadline": "2026-09-10",
+      "timing": "The Leo Waaijers deadline passed on 23 June 2026; the other three NWO Awards close 10 September 2026.",
       "why": "Useful for recognising strong open science, team science, impact, collaboration, or research-culture contributions rather than funding a new project.",
       "tips": "",
       "fitStage": "recognition",
       "fitNote": "Not a project grant. Treat as an award or recognition lead only when there is clear evidence for the specific contribution.",
       "sourceLabel": "NWO news",
       "sourceUrl": "https://www.nwo.nl/en/news/nwo-launches-new-awards-for-impact-open-science-and-team-science",
+      "sourceCallStatus": "partly-open",
+      "sourceNote": "Official NWO announcement listed separate deadlines for the open-science award and the other three awards.",
+      "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": "none"
+      "candidateMode": "none",
+      "deadlineDate": "2026-09-10",
+      "nextDeadlineDate": "2026-09-10",
+      "deadlineDates": [
+        {
+          "date": "2026-06-23",
+          "label": "Leo Waaijers Open Science Award",
+          "status": "passed"
+        },
+        {
+          "date": "2026-09-10",
+          "label": "Other three NWO Awards",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source",
+      "sourceCheckedDate": "2026-07-16"
     }
   ],
   "tips": [
