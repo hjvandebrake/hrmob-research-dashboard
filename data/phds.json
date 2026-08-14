@@ -3,9 +3,9 @@
     "generatedOn": "2026-06-06",
     "sourceNote": "Initial source-backed list of defended PhD theses where supplied department members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
     "scope": "Completed/defended PhDs only; committee/examiner roles are excluded.",
-    "currentProjectsGeneratedOn": "2026-06-23",
-    "currentProjectsSourceNote": "Current/ongoing OB PhD status is based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23, with explicit completed-candidate exclusions applied. The public RUG OB PhD candidates page is used only as a project-title source where a listed title is useful; it is not treated as authoritative for current PhD-student status.",
-    "currentProjectsScope": "Current/ongoing OB PhD projects; defended theses remain in theses[]."
+    "currentProjectsGeneratedOn": "2026-08-11",
+    "currentProjectsSourceNote": "Current/ongoing PhD status and supervisor mappings are based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23 and subsequent staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.",
+    "currentProjectsScope": "Current/ongoing PhD projects supervised by supplied department members; defended theses remain in theses[]."
   },
   "theses": [
     {
@@ -754,7 +754,7 @@
       "id": "current-phd-franzisca-fastje",
       "candidate": "Franzisca Fastje",
       "displayCandidate": "Fastje, Franzisca",
-      "title": "The antecedents and consequences of hybrid work arangements: a multi-level perspective",
+      "title": "The antecedents and consequences of hybrid work arrangements: a multi-level perspective",
       "titleStatus": "listed",
       "status": "ongoing",
       "roles": [
@@ -1130,6 +1130,67 @@
       "notes": [
         "Project title from the RUG OB PhD candidates page.",
         "Current-project indication and supervisor mapping from overzicht OB PhDs_Joost.xlsx, with explicit completed-candidate exclusions applied."
+      ]
+    },
+    {
+      "id": "current-phd-wout-schiphorst",
+      "candidate": "Wout Schiphorst",
+      "displayCandidate": "Schiphorst, Wout",
+      "title": "Under pressure: how auditors remain independent in their interactions with clients",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "name": "D.A. de Waard",
+          "role": "Promotor",
+          "slot": "Promotor",
+          "kind": "external"
+        },
+        {
+          "personId": "LM",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2"
+        }
+      ],
+      "sourceLabel": "RUG Accounting PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/accounting/people/phd-candidates?lang=en",
+      "profileUrl": "https://www.rug.nl/staff/w.schiphorst/",
+      "notes": [
+        "Candidate and project title confirmed on the RUG Accounting PhD candidates page.",
+        "Supervisor mapping confirmed by Laetitia Mulder on 2026-08-11."
+      ]
+    },
+    {
+      "id": "current-phd-niels-van-der-meer",
+      "candidate": "Niels van der Meer",
+      "displayCandidate": "Meer, Niels van der",
+      "title": "Accounting standards type and audit quality: The role of auditor’s cognitive fit, client pressure and enforcement",
+      "titleStatus": "listed",
+      "status": "ongoing",
+      "roles": [
+        {
+          "name": "D.A. de Waard",
+          "role": "Promotor",
+          "slot": "Promotor",
+          "kind": "external"
+        },
+        {
+          "name": "Yasemin Karaibrahimoglu",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 2",
+          "kind": "external"
+        },
+        {
+          "personId": "LM",
+          "role": "Co-supervisor",
+          "slot": "Supervisor 3"
+        }
+      ],
+      "sourceLabel": "RUG Accounting PhD candidates page",
+      "sourceUrl": "https://www.rug.nl/research/accounting/people/phd-candidates?lang=en",
+      "notes": [
+        "The RUG Accounting PhD candidates page confirms the candidate and project area.",
+        "The current title and supervisor mapping were confirmed by Laetitia Mulder on 2026-08-11."
       ]
     },
     {

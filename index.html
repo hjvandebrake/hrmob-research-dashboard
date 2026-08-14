@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>HRM&OB Research Activities Dashboard</title>
+  <title>HRM&amp;OB Research Activities Dashboard</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add("auth-locked");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260716-1038">
+  <link rel="stylesheet" href="styles.css?v=20260814-0817">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
-  <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+  <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title" aria-describedby="auth-description">
     <form id="auth-form" class="auth-card">
-      <p class="eye">Restricted access</p>
-      <h1 id="auth-title">HRM&OB dashboard</h1>
-      <p>Enter the department password to open the dashboard.</p>
+      <p class="eye">Department access</p>
+      <h1 id="auth-title">HRM&amp;OB dashboard</h1>
+      <p id="auth-description">Enter the shared department password to open the dashboard.</p>
       <label>
         <span>Password</span>
         <input id="auth-password" type="password" autocomplete="current-password" required>
@@ -27,25 +28,25 @@
     </form>
   </div>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary dashboard navigation">
     <div class="nav-in">
       <a class="logo" href="#overview" data-tab="overview">
-        <span class="logo-name">HRM&OB</span>
+        <span class="logo-name">HRM&amp;OB</span>
         <span class="logo-sub">Research activities dashboard</span>
       </a>
       <div class="nav-sep"></div>
       <div class="nav-tabs" role="tablist" aria-label="Dashboard sections">
-        <button id="tab-overview" class="nav-tab on" role="tab" aria-controls="view-overview" aria-selected="true" data-tab="overview">Overview</button>
-        <button id="tab-staff" class="nav-tab" role="tab" aria-controls="view-staff" aria-selected="false" tabindex="-1" data-tab="staff">Staff</button>
-        <button id="tab-phds" class="nav-tab" role="tab" aria-controls="view-phds" aria-selected="false" tabindex="-1" data-tab="phds">PhD students</button>
-        <button id="tab-collaboration" class="nav-tab" role="tab" aria-controls="view-collaboration" aria-selected="false" tabindex="-1" data-tab="collaboration">Opportunities</button>
-        <button id="tab-publications" class="nav-tab" role="tab" aria-controls="view-publications" aria-selected="false" tabindex="-1" data-tab="publications">Publications</button>
-        <button id="tab-network" class="nav-tab" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
-        <button id="tab-metrics" class="nav-tab" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
-        <button id="tab-resources" class="nav-tab" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
-        <button id="tab-contact" class="nav-tab contact-tab" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
+        <button id="tab-overview" class="nav-tab on" type="button" role="tab" aria-controls="view-overview" aria-selected="true" data-tab="overview">Overview</button>
+        <button id="tab-staff" class="nav-tab" type="button" role="tab" aria-controls="view-staff" aria-selected="false" tabindex="-1" data-tab="staff">Staff</button>
+        <button id="tab-phds" class="nav-tab" type="button" role="tab" aria-controls="view-phds" aria-selected="false" tabindex="-1" data-tab="phds">PhD students</button>
+        <button id="tab-collaboration" class="nav-tab" type="button" role="tab" aria-controls="view-collaboration" aria-selected="false" tabindex="-1" data-tab="collaboration">Opportunities</button>
+        <button id="tab-publications" class="nav-tab" type="button" role="tab" aria-controls="view-publications" aria-selected="false" tabindex="-1" data-tab="publications">Publications</button>
+        <button id="tab-network" class="nav-tab" type="button" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
+        <button id="tab-metrics" class="nav-tab" type="button" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
+        <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
+        <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
-      <div id="publication-window-toggle" class="metric-toggle window-toggle" aria-label="Publication window">
+      <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
         <button type="button" data-window-mode="recent" aria-pressed="false">Last 5</button>
         <button class="on" type="button" data-window-mode="last10" aria-pressed="true">Last 10</button>
         <button type="button" data-window-mode="all" aria-pressed="false">All</button>
@@ -61,8 +62,8 @@
 
   <header class="pg-hd">
     <div class="wrap">
-      <p class="eye">HRM&OB dashboard</p>
-      <h1>HRM&OB research activities dashboard</h1>
+      <p class="eye">HRM&amp;OB dashboard</p>
+      <h1>HRM&amp;OB research activities dashboard</h1>
       <p id="subtitle">Loading publication data...</p>
     </div>
   </header>
@@ -77,9 +78,9 @@
           <div>
             <p class="eye">Research guide</p>
             <h2 class="overview-orientation-title">Find expertise, projects, grant angles, resources, and records to correct.</h2>
-            <p>A starting point for HRM&OB research activity.</p>
+            <p>A starting point for HRM&amp;OB research activity.</p>
           </div>
-          <div class="overview-use-cases" aria-label="Common dashboard uses">
+          <nav class="overview-use-cases" aria-label="Common dashboard uses">
             <a class="use-case-card" href="#staff">
               <span>Find expertise</span>
               <p>Search people and topic signals.</p>
@@ -96,7 +97,7 @@
               <span>Suggest updates</span>
               <p>Correct records or profile fields.</p>
             </a>
-          </div>
+          </nav>
         </section>
         <p class="metric-context">Group-level indicators for orientation; details and definitions are in Metrics.</p>
         <div id="metrics" class="metric-grid"></div>
@@ -105,7 +106,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Expertise</p>
-                <h3 class="overview-h3">Expertise overview</h3>
+                <h2 class="overview-h3">Expertise overview</h2>
               </div>
               <div class="overview-panel-actions">
                 <a class="section-link" href="#staff">Open staff</a>
@@ -135,7 +136,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Journals</p>
-                <h3 class="overview-h3">Publishing outlets</h3>
+                <h2 class="overview-h3">Publishing outlets</h2>
               </div>
               <a class="section-link" href="#publications">Open</a>
             </div>
@@ -145,7 +146,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">PhDs</p>
-                <h3 class="overview-h3">Defended theses</h3>
+                <h2 class="overview-h3">Defended theses</h2>
               </div>
               <a class="section-link" href="#phds">Open</a>
             </div>
@@ -155,7 +156,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">PhD pipeline</p>
-                <h3 class="overview-h3">Ongoing PhD projects</h3>
+                <h2 class="overview-h3">Ongoing PhD projects</h2>
               </div>
               <a class="section-link" href="#phds">Open page</a>
             </div>
@@ -165,7 +166,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Grants</p>
-                <h3 class="overview-h3">Competitive funding</h3>
+                <h2 class="overview-h3">Competitive funding</h2>
               </div>
               <a class="section-link" href="#resources">Open resources</a>
             </div>
@@ -324,7 +325,7 @@
                 </span>
               </label>
             </div>
-            <div id="resource-recent-calls" class="recent-call-list" aria-labelledby="resource-calls-title" aria-describedby="resource-calls-meta"></div>
+            <section id="resource-recent-calls" class="recent-call-list" aria-labelledby="resource-calls-title" aria-describedby="resource-calls-meta"></section>
           </section>
 
           <section class="overview-panel">
@@ -392,7 +393,7 @@
                 <p class="eye">Faculty comparison</p>
                 <h3 id="benchmark-trend-title" class="overview-h3">Average counted publications per person per year by group</h3>
               </div>
-              <div id="benchmark-trend-toggle" class="metric-toggle" aria-label="Trend metric">
+              <div id="benchmark-trend-toggle" class="metric-toggle" role="group" aria-label="Trend metric">
                 <button class="on" type="button" data-metric-trend="pubRate" aria-pressed="true">All counted</button>
                 <button type="button" data-metric-trend="highAipRate" aria-pressed="false">AIP &ge; 95</button>
               </div>
@@ -430,7 +431,7 @@
           </div>
         </div>
         <div class="publication-layout">
-          <section class="publication-main">
+          <div class="publication-main">
             <div class="tool-row">
               <label class="search-box">
                 <span>Search</span>
@@ -457,15 +458,15 @@
               <p id="publication-results-summary" class="publication-results-summary" role="status" aria-live="polite">Loading publication records&hellip;</p>
               <button id="publication-clear-filters" class="section-link publication-clear-filters" type="button" aria-controls="publication-table" hidden>Clear filters</button>
             </div>
-            <div class="table-wrap publication-results-table" role="region" aria-label="Publication results" aria-describedby="publication-results-summary" tabindex="0">
+            <section class="table-wrap publication-results-table" aria-label="Publication results" aria-describedby="publication-results-summary" tabindex="0">
               <table id="publication-table" aria-describedby="publication-results-summary"></table>
-            </div>
-          </section>
-          <aside class="publication-side">
+            </section>
+          </div>
+          <aside class="publication-side" aria-labelledby="publication-journals-title">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Journals</p>
-                <h3 class="overview-h3">Where we have published most</h3>
+                <h3 id="publication-journals-title" class="overview-h3">Where we have published most</h3>
               </div>
             </div>
             <div id="journal-published-list" class="list-stack"></div>
@@ -491,7 +492,7 @@
             <h2 class="h2">People, topics, and publication records</h2>
           </div>
         </div>
-        <div class="staff-search-panel" aria-label="Find staff expertise">
+        <div class="staff-search-panel" role="search" aria-label="Find staff expertise">
           <label class="search-box staff-expertise-search">
             <span>Find expertise</span>
             <input id="staff-expertise-search" type="search" placeholder="Search stress, teamwork, virtual teams, status...">
@@ -499,16 +500,16 @@
           <p id="staff-expertise-summary" class="staff-search-summary" role="status" aria-live="polite">Search publications, grants, PhD projects, and profile fields.</p>
         </div>
         <div class="staff-grid">
-          <aside class="staff-panel">
+          <aside class="staff-panel" aria-label="Staff directory">
             <div id="staff-list" class="staff-list"></div>
           </aside>
-          <section class="staff-detail">
+          <div class="staff-detail">
             <div id="staff-profile"></div>
             <nav id="staff-subnav" class="staff-subnav" aria-label="Staff profile sections"></nav>
             <section id="staff-subpage-research" class="staff-subpage">
               <div class="staff-owned-grid">
-                <section id="staff-current-work" class="staff-owned-panel"></section>
-                <section id="staff-collaboration-interests" class="staff-owned-panel"></section>
+                <div id="staff-current-work" class="staff-owned-panel"></div>
+                <div id="staff-collaboration-interests" class="staff-owned-panel"></div>
               </div>
               <h3 class="sub-h2">Topic signals</h3>
               <div id="staff-topics" class="topic-cloud"></div>
@@ -528,15 +529,15 @@
               </div>
             </section>
             <section id="staff-subpage-phds" class="staff-subpage">
-              <section id="staff-current-phd-projects" class="staff-current-phd-projects"></section>
-              <section id="staff-defended-phds" class="staff-defended-phds"></section>
+              <div id="staff-current-phd-projects" class="staff-current-phd-projects"></div>
+              <div id="staff-defended-phds" class="staff-defended-phds"></div>
             </section>
             <section id="staff-subpage-opportunities" class="staff-subpage">
               <h3 class="sub-h2">Potential grant connections</h3>
               <div id="staff-grant-fit" class="grant-fit-list"></div>
               <div id="staff-owned-resources" class="staff-owned-resources"></div>
             </section>
-          </section>
+          </div>
         </div>
       </div>
     </section>
@@ -556,7 +557,7 @@
             </div>
           </div>
         </div>
-        <p class="section-intro page-intro network-page-intro">Start with the department overview, then select a member to inspect their strongest internal and outside relationships. Line thickness represents the number of shared publications or course offerings&mdash;not relationship quality or research impact.</p>
+        <p class="section-intro page-intro network-page-intro">Start with the department overview, then select a member to inspect their strongest internal and outside relationships. Line weight and numbered badges represent shared publications or course offerings&mdash;not relationship quality or research impact.</p>
 
         <section class="network-controls" aria-labelledby="network-controls-title">
           <div class="network-controls-heading">
@@ -568,10 +569,9 @@
           </div>
           <div class="network-control-grid">
             <label class="select-box network-scope-control">
-              <span>Network scope</span>
+              <span>Network focus</span>
               <select id="network-scope-select" aria-describedby="network-scope-help">
                 <option value="department">Department overview</option>
-                <option value="selected">Selected member</option>
               </select>
             </label>
             <label class="switch network-aip-toggle publication-network-control" title="Show only collaborations from publications in journals with AIP score 95.0 or higher">
@@ -598,10 +598,11 @@
               </select>
             </label>
           </div>
-          <p id="network-scope-help" class="network-control-help">In Selected member view, choose a node in the map to reveal that person&rsquo;s coauthors and supporting records.</p>
+          <p id="network-scope-help" class="network-control-help">Choose the department overview or focus a named member. You can also select a node in the map.</p>
         </section>
 
-        <div id="network-summary" class="network-summary" role="status" aria-live="polite">
+        <p id="network-selection-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="network-summary" class="network-summary">
           <p class="network-summary-placeholder">Network counts will appear when the data are ready.</p>
         </div>
 
@@ -615,30 +616,30 @@
               <div id="network-selection-note" class="network-selection-note">Select a department member to focus their relationships.</div>
             </div>
             <div class="network-shell">
-              <svg id="network-svg" role="img" aria-label="Collaboration network" aria-describedby="network-map-description"></svg>
+              <svg id="network-svg" role="img" aria-label="Collaboration network"></svg>
               <div id="network-empty" class="empty" role="status" hidden>No coauthorship edges for the current filters.</div>
             </div>
-            <p id="network-map-description" class="visually-hidden">Department members are shown as labelled circles. Larger circles represent more records. Lines connect people who share publications or course offerings; thicker lines represent more shared records. Use the evidence table below for a text alternative.</p>
-            <div class="network-legend-shell" aria-labelledby="network-legend-title">
+            <p id="network-map-description" class="visually-hidden" aria-hidden="true">Department members are shown as labelled circles. Larger circles represent more records. Lines connect people who share publications or course offerings; thicker lines represent more shared records. Position reflects the display layout, not quality, status, or impact. Use the evidence table below for a text alternative.</p>
+            <div class="network-legend-shell" role="group" aria-labelledby="network-legend-title">
               <p id="network-legend-title" class="network-legend-title">How to read the map</p>
               <div id="network-legend" class="legend">
-                <span><i class="legend-node"></i> Node size = publications</span>
-                <span><i class="legend-count"></i> Number = publications</span>
+                <span><i class="legend-node" aria-hidden="true"></i> Node size = publications</span>
+                <span><i class="legend-count" aria-hidden="true">7</i> Number = publications</span>
                 <span class="legend-strength">
                   <span class="legend-strength-scale" aria-hidden="true"><i class="legend-line legend-line-weak"></i><i class="legend-line legend-line-strong"></i></span>
                   Line strength = shared publications
                 </span>
-                <span><i class="legend-faculty"></i> Other FEB departments</span>
-                <span><i class="legend-external"></i> Outside coauthors</span>
+                <span><i class="legend-faculty" aria-hidden="true"></i> Other FEB departments</span>
+                <span><i class="legend-external" aria-hidden="true"></i> Outside coauthors</span>
               </div>
             </div>
           </section>
 
           <aside class="network-detail-column" aria-label="Network selection details">
-            <div id="network-inspector" class="network-inspector" aria-live="polite">
+            <div id="network-inspector" class="network-inspector">
               <p class="eye">Selection details</p>
               <h3 class="network-inspector-title">Start with a department member</h3>
-              <p>Choose Selected member above or select a labelled department node. This panel will explain the person&rsquo;s visible ties and strongest outside coauthors.</p>
+              <p>Choose a named member above or select a labelled department node. This panel will explain the person&rsquo;s visible ties and strongest outside coauthors.</p>
             </div>
           </aside>
         </div>
@@ -647,22 +648,23 @@
           <div class="overview-panel-head">
             <div>
               <p class="eye">Evidence</p>
-              <h3 id="network-evidence-title" class="overview-h3">Relationships behind the map</h3>
+              <h3 id="network-evidence-title" class="overview-h3">Current network evidence</h3>
             </div>
           </div>
-          <p class="section-intro">Use this table to compare tie strength and inspect the publications or course offerings behind each connection. Counts follow the active time window and filters.</p>
+          <p class="section-intro">Compare tie strength and inspect the publications or course offerings behind each connection. Counts follow the active time window and filters; the map may cap outside nodes for readability while qualifying evidence remains listed here.</p>
           <div id="network-evidence-table-wrap" class="network-evidence-table-wrap">
-            <div id="network-table-wrap" class="table-wrap compact-table"></div>
+            <section id="network-table-wrap" class="table-wrap compact-table" aria-label="Scrollable relationship evidence table" tabindex="0"></section>
           </div>
         </section>
 
-        <section class="external-partner-panel">
+        <section class="external-partner-panel" aria-labelledby="coauthor-institutions-title">
           <div class="overview-panel-head">
             <div>
-              <p class="eye">External partners</p>
-              <h3 class="overview-h3">Institutions in coauthor affiliations</h3>
+              <p class="eye">Coauthor affiliations</p>
+              <h3 id="coauthor-institutions-title" class="overview-h3">Institutions observed in publication records</h3>
             </div>
           </div>
+          <p class="section-intro">Affiliations are derived from OpenAlex authorship metadata. They are useful signals of institutional reach, but can be incomplete, non-exclusive, or historical and do not imply a formal partnership.</p>
           <div id="external-partner-list" class="partner-list"></div>
         </section>
       </div>
@@ -678,7 +680,7 @@
         </div>
         <p class="section-intro page-intro">Use this form to correct missing records, clarify profile information, or add current work, collaboration interests, and resources. Submissions are prepared as an email to Joost, so no GitHub account is needed.</p>
         <div class="contact-grid">
-          <section class="overview-panel contact-main-panel">
+          <div class="overview-panel contact-main-panel">
             <form id="feedback-form" class="feedback-form">
               <div class="feedback-fields">
                 <label>
@@ -709,8 +711,8 @@
               </div>
               <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
             </form>
-          </section>
-          <aside class="overview-panel contact-side-panel">
+          </div>
+          <aside class="overview-panel contact-side-panel" aria-label="Contact details">
             <p class="eye">Email</p>
             <p class="contact-line"><a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a></p>
             <p class="quiet-contact-copy">Suggestions are emailed to Joost and reviewed before any dashboard change is made.</p>
@@ -764,7 +766,7 @@
   </main>
 
   <div id="topic-overlay" class="topic-overlay" hidden>
-    <div class="topic-dialog" role="dialog" aria-modal="true" aria-labelledby="topic-overlay-title">
+    <div class="topic-dialog" role="dialog" aria-modal="true" aria-labelledby="topic-overlay-title" aria-describedby="topic-overlay-summary">
       <button class="topic-close" type="button" data-topic-overlay-close>Close</button>
       <p class="eye">Topic detail</p>
       <h2 id="topic-overlay-title" class="h2">Topic</h2>
@@ -784,11 +786,11 @@
 
   <footer>
     <div class="ft">
-      <span>HRM&OB research activities dashboard</span>
+      <span>HRM&amp;OB research activities dashboard</span>
       <span id="footer-meta"></span>
     </div>
   </footer>
 
-  <script src="app.js?v=20260716-1038"></script>
+  <script src="app.js?v=20260814-0817"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generatedOn": "2026-06-22",
+    "generatedOn": "2026-08-11",
     "source": "Staff-submitted profile contribution layer.",
-    "people": 1
+    "people": 2
   },
   "people": [
     {
@@ -92,6 +92,96 @@
           "download": true
         }
       ]
+    },
+    {
+      "personId": "LM",
+      "updatedOn": "2026-08-11",
+      "workingOn": [
+        {
+          "title": "Moral appeals",
+          "description": "Research on moral appeals.",
+          "keywords": [
+            "moral appeals",
+            "morality"
+          ]
+        },
+        {
+          "title": "Norms and drug use",
+          "description": "Research on norms and drug use.",
+          "keywords": [
+            "norms",
+            "drug use"
+          ]
+        },
+        {
+          "title": "Long-term effects of laws and mandates",
+          "description": "Research on the long-term effects of laws and mandates.",
+          "keywords": [
+            "laws",
+            "mandates",
+            "long-term effects"
+          ]
+        },
+        {
+          "title": "Inclusive recruitment",
+          "description": "Research on inclusive recruitment.",
+          "keywords": [
+            "inclusive recruitment",
+            "recruitment",
+            "inclusion"
+          ]
+        },
+        {
+          "title": "Zero-tolerance policies and DEI",
+          "description": "Research on zero-tolerance policies and diversity, equity, and inclusion.",
+          "keywords": [
+            "zero-tolerance policies",
+            "DEI",
+            "diversity and inclusion"
+          ]
+        },
+        {
+          "title": "LGB meta-stereotypes within teams",
+          "description": "Research on LGB meta-stereotypes within teams.",
+          "keywords": [
+            "LGB meta-stereotypes",
+            "teams",
+            "stereotypes"
+          ]
+        },
+        {
+          "title": "Client-accountant interactions and accountancy standards",
+          "description": "Research on client-accountant interactions and specific and general standards in accountancy.",
+          "keywords": [
+            "client-accountant interactions",
+            "accountancy",
+            "specific standards",
+            "general standards"
+          ]
+        }
+      ],
+      "collaborationInterests": [
+        {
+          "title": "Long-term effects of policies and regulations",
+          "description": "Interested in collaboration on the long-term effects of policies and regulations.",
+          "keywords": [
+            "policies",
+            "regulations",
+            "long-term effects"
+          ]
+        },
+        {
+          "title": "Moral appeals and (un)ethical behavior",
+          "description": "Interested in collaboration on anything related to moral appeals or (un)ethical behavior, in any context.",
+          "keywords": [
+            "moral appeals",
+            "ethical behavior",
+            "unethical behavior",
+            "morality"
+          ]
+        }
+      ],
+      "resources": []
     }
   ]
 }

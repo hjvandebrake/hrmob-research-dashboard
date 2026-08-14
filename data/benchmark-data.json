@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-07-03",
+    "generatedOn": "2026-08-14",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -56516,27 +56516,6 @@
       ]
     },
     {
-      "id": "doi:10.3389/fpsyg.2014.00647",
-      "year": 2014,
-      "title": "â€œWhen the going gets tough, who keeps going?â€ Depletion sensitivity moderates the ego-depletion effect",
-      "doi": "10.3389/fpsyg.2014.00647",
-      "aip": 78.713,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-bm-fennis"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-bm-fennis"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.15358/0935-0381_2014_1_54",
       "year": 2014,
       "title": "Widerstände von Projektleitern gegen den Synergie-Transfer",
@@ -60263,6 +60242,27 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "doi:10.3389/fpsyg.2014.00647",
+      "year": 2014,
+      "title": "?When the going gets tough, who keeps going?? Depletion sensitivity moderates the ego-depletion effect",
+      "doi": "10.3389/fpsyg.2014.00647",
+      "aip": 78.713,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-bm-fennis"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-bm-fennis"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {

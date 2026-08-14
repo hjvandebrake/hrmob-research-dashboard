@@ -4,8 +4,8 @@
     "updatedLabel": "26 March 2026",
     "sourceUpdatedDate": "2026-03-26",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "generatedDate": "2026-07-16",
-    "deadlineStatusAsOf": "2026-07-16",
+    "generatedDate": "2026-08-14",
+    "deadlineStatusAsOf": "2026-08-14",
     "recentCallsChecked": "2026-07-16",
     "deadlineStatusValues": {
       "upcoming": "Upcoming",
@@ -892,13 +892,13 @@
       "deadlineDates": [
         {
           "date": "2026-11-24",
-          "status": "later"
+          "status": "upcoming"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "later",
-      "deadlineStatusLabel": "Later",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },

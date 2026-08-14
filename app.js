@@ -38,13 +38,14 @@ const state = {
   staffSubpage: "research",
   collaborationClustersExpanded: false,
   appStarted: false,
+  dataLoading: false,
 };
 
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260716-1038";
-const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
+const DATA_VERSION = "20260814-0817";
+const AUTH_PASSWORD_HASH = "f0d40db142e5ce997137dd4b668cc9ed4a104e29a50e18af00497b9b9cf14040";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
@@ -64,7 +65,7 @@ const NETWORK_EVIDENCE_ROW_LIMIT = 150;
 const NETWORK_MIN_TIE_OPTIONS = new Set([1, 2, 3, 5]);
 const GRANT_DATA_NOTE = "Grant records are source-backed public records; coverage may miss older, internal, or unpublished funding.";
 const PHD_DATA_NOTE = "PhD counts include defended theses only.";
-const CURRENT_PHD_DATA_NOTE = "Current PhD status and supervision come from the local OB PhD supervisor workbook, with explicit completed-candidate corrections. The public RUG PhD page is used only as a project-title source and may be outdated for current status.";
+const CURRENT_PHD_DATA_NOTE = "Current PhD status and supervision come from the local supervisor workbook plus staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.";
 const METRIC_TREND_COLORS = {
   HRMOB: "#9d3138",
   Marketing: "#2f7480",
@@ -78,6 +79,7 @@ let publicationPoolCache = {
   key: "",
   counted: null,
   display: null,
+  outlet: null,
   staff: {
     counted: new Map(),
     display: new Map(),
@@ -87,6 +89,11 @@ let publicationPoolCache = {
 let collaborationEvidenceCache = {
   key: "",
   textByPerson: new Map(),
+};
+
+let staffOverlapProfileCache = {
+  key: "",
+  profiles: new Map(),
 };
 
 const externalAuthorCandidateCache = new WeakMap();
@@ -492,6 +499,7 @@ async function handleAuthSubmit(event) {
     }
     if (els.authStatus) els.authStatus.textContent = "";
     await startDashboard();
+    focusDashboardHeading();
   } catch (_) {
     if (els.authStatus) els.authStatus.textContent = "Password check is unavailable in this browser.";
   }
@@ -516,6 +524,13 @@ function unlockDashboard() {
   if (els.authGate) els.authGate.hidden = true;
 }
 
+function focusDashboardHeading() {
+  const heading = document.querySelector(".pg-hd h1");
+  if (!heading) return;
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+}
+
 async function sha256Hex(value) {
   if (!globalThis.crypto?.subtle) throw new Error("WebCrypto unavailable");
   const bytes = new TextEncoder().encode(value);
@@ -530,6 +545,8 @@ function cacheElements() {
   els.authForm = document.getElementById("auth-form");
   els.authPassword = document.getElementById("auth-password");
   els.authStatus = document.getElementById("auth-status");
+  els.skipLink = document.querySelector(".skip-link");
+  els.mainContent = document.getElementById("main-content");
   els.dataStatus = document.getElementById("data-status");
   els.subtitle = document.getElementById("subtitle");
   els.footerMeta = document.getElementById("footer-meta");
@@ -566,6 +583,7 @@ function cacheElements() {
   els.collaborationPairOpportunities = document.getElementById("collaboration-pair-opportunities");
   els.staffExpertiseSearch = document.getElementById("staff-expertise-search");
   els.staffExpertiseSummary = document.getElementById("staff-expertise-summary");
+  els.staffGrid = document.querySelector(".staff-grid");
   els.staffList = document.getElementById("staff-list");
   els.staffProfile = document.getElementById("staff-profile");
   els.staffSubnav = document.getElementById("staff-subnav");
@@ -604,6 +622,7 @@ function cacheElements() {
   els.networkMinTieSelect = document.getElementById("network-min-tie-select");
   els.networkClearSelection = document.getElementById("network-clear-selection");
   els.networkSelectionNote = document.getElementById("network-selection-note");
+  els.networkSelectionStatus = document.getElementById("network-selection-status");
   els.networkSummary = document.getElementById("network-summary");
   els.networkInspector = document.getElementById("network-inspector");
   els.networkScopeHelp = document.getElementById("network-scope-help");
@@ -654,6 +673,15 @@ function cacheElements() {
 }
 
 function attachEvents() {
+  els.skipLink?.addEventListener("click", (event) => {
+    event.preventDefault();
+    focusDashboardContent();
+  });
+  els.dataStatus?.addEventListener("click", (event) => {
+    const retry = event.target.closest("[data-retry-dashboard]");
+    if (!retry) return;
+    loadData();
+  });
   document.querySelectorAll("[data-tab]").forEach((el) => {
     el.addEventListener("click", (event) => {
       event.preventDefault();
@@ -688,8 +716,8 @@ function attachEvents() {
   });
   els.fteToggle.addEventListener("change", () => {
     state.includeAffiliatedResearchers = els.fteToggle.checked;
-    updateRoute();
     renderCurrentView();
+    updateRoute();
   });
   if (els.publicationWindowToggle) {
     els.publicationWindowToggle.addEventListener("click", (event) => {
@@ -704,6 +732,7 @@ function attachEvents() {
   if (els.networkAipToggle) {
     els.networkAipToggle.addEventListener("change", () => {
       state.networkAipHighOnly = els.networkAipToggle.checked;
+      updateRoute({ replace: true });
       renderNetwork();
       requestDeferredDataForCurrentView();
     });
@@ -713,8 +742,6 @@ function attachEvents() {
       const button = event.target.closest("[data-network-mode]");
       if (!button) return;
       state.networkMode = button.dataset.networkMode === "teaching" ? "teaching" : "publications";
-      state.networkScope = "department";
-      state.networkPersonId = "";
       state.networkCollaboratorId = "";
       updateRoute({ replace: true });
       syncViewContext();
@@ -724,17 +751,11 @@ function attachEvents() {
   }
   if (els.networkScopeSelect) {
     els.networkScopeSelect.addEventListener("change", () => {
-      state.networkScope = els.networkScopeSelect.value === "selected" ? "selected" : "department";
+      const selectedValue = els.networkScopeSelect.value || "department";
+      const selectedPersonId = selectedValue.startsWith("person:") ? selectedValue.slice(7) : "";
+      state.networkScope = selectedPersonId ? "selected" : "department";
+      state.networkPersonId = selectedPersonId;
       state.networkCollaboratorId = "";
-      if (state.networkScope === "selected") {
-        state.networkPersonId = state.networkPersonId || defaultNetworkFocusPersonId(activePeople());
-        if (state.networkMode === "publications") {
-          state.networkExternal = true;
-          if (els.networkExternalToggle) els.networkExternalToggle.checked = true;
-        }
-      } else {
-        state.networkPersonId = "";
-      }
       updateRoute();
       renderNetwork();
       requestDeferredDataForCurrentView();
@@ -745,6 +766,7 @@ function attachEvents() {
       const value = Number(els.networkMinTieSelect.value);
       state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(value) ? value : 2;
       state.networkCollaboratorId = "";
+      updateRoute({ replace: true });
       renderNetwork();
     });
   }
@@ -756,6 +778,7 @@ function attachEvents() {
       updateRoute();
       renderNetwork();
       requestDeferredDataForCurrentView();
+      requestAnimationFrame(() => els.networkScopeSelect?.focus());
     });
   }
   if (els.networkSvg) {
@@ -763,17 +786,38 @@ function attachEvents() {
       activateNetworkTarget(event.target);
     });
     els.networkSvg.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
       const node = event.target.closest("[data-network-person-id], [data-network-collaborator-id]");
       if (!node) return;
+      if (["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
+        event.preventDefault();
+        const nodes = Array.from(els.networkSvg.querySelectorAll("[data-network-person-id], [data-network-collaborator-id]"));
+        if (!nodes.length) return;
+        const currentIndex = Math.max(0, nodes.indexOf(node));
+        let nextIndex = currentIndex;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (currentIndex + 1) % nodes.length;
+        if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (currentIndex - 1 + nodes.length) % nodes.length;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = nodes.length - 1;
+        nodes.forEach((item, index) => item.setAttribute("tabindex", index === nextIndex ? "0" : "-1"));
+        nodes[nextIndex].focus();
+        return;
+      }
+      if (event.key !== "Enter" && event.key !== " ") return;
       event.preventDefault();
       activateNetworkTarget(node);
+    });
+    els.networkSvg.addEventListener("focusin", (event) => {
+      const node = event.target.closest("[data-network-person-id], [data-network-collaborator-id]");
+      if (!node) return;
+      els.networkSvg.querySelectorAll("[data-network-person-id], [data-network-collaborator-id]")
+        .forEach((item) => item.setAttribute("tabindex", item === node ? "0" : "-1"));
     });
   }
   if (els.networkExternalToggle) {
     els.networkExternalToggle.addEventListener("change", () => {
       state.networkExternal = els.networkExternalToggle.checked;
       if (!state.networkExternal) state.networkCollaboratorId = "";
+      updateRoute({ replace: true });
       renderNetwork();
       requestDeferredDataForCurrentView();
     });
@@ -782,37 +826,52 @@ function attachEvents() {
     els.networkSelectionNote.addEventListener("click", (event) => {
       const button = event.target.closest("[data-network-open-staff]");
       if (!button) return;
+      clearStaffSearchState();
       state.selectedStaffId = button.dataset.networkOpenStaff || "";
-      setTab("staff");
+      state.staffSubpage = "research";
+      setTab("staff", { focusView: false });
+      requestAnimationFrame(focusStaffProfileHeading);
     });
   }
   [els.networkInspector, els.networkTableWrap].filter(Boolean).forEach((container) => {
     container.addEventListener("click", (event) => {
       const profileButton = event.target.closest("[data-network-open-staff]");
       if (profileButton) {
+        clearStaffSearchState();
         state.selectedStaffId = profileButton.dataset.networkOpenStaff || "";
-        setTab("staff");
+        state.staffSubpage = "research";
+        setTab("staff", { focusView: false });
+        requestAnimationFrame(focusStaffProfileHeading);
         return;
       }
       const collaboratorButton = event.target.closest("[data-network-collaborator-id]");
       if (collaboratorButton) {
         state.networkCollaboratorId = collaboratorButton.dataset.networkCollaboratorId || "";
         renderNetwork();
+        restoreNetworkFocus({ collaboratorId: state.networkCollaboratorId });
         return;
       }
       const personButton = event.target.closest("[data-network-focus-person]");
       if (personButton) {
-        focusNetworkPerson(personButton.dataset.networkFocusPerson || "");
+        focusNetworkPerson(personButton.dataset.networkFocusPerson || "", { restoreFocus: true });
         return;
       }
       if (event.target.closest("[data-network-clear-collaborator]")) {
         state.networkCollaboratorId = "";
         renderNetwork();
+        restoreNetworkFocus({ personId: state.networkPersonId });
       }
     });
   });
   if (els.staffProfile) {
     els.staffProfile.addEventListener("click", (event) => {
+      const directoryButton = event.target.closest("[data-staff-list]");
+      if (directoryButton) {
+        const selected = els.staffList?.querySelector(`[data-staff-id="${state.selectedStaffId}"]`);
+        selected?.scrollIntoView({ block: "center", behavior: "auto" });
+        selected?.focus({ preventScroll: true });
+        return;
+      }
       const button = event.target.closest("[data-open-network-person]");
       if (button) {
         state.networkPersonId = button.dataset.openNetworkPerson || "";
@@ -835,10 +894,14 @@ function attachEvents() {
     els.staffSubnav.addEventListener("click", (event) => {
       const button = event.target.closest("[data-staff-subpage]");
       if (!button) return;
-      state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage);
+      const subpage = normalizeStaffSubpage(button.dataset.staffSubpage);
+      state.staffSubpage = subpage;
       updateRoute();
       renderStaffSubpageVisibility();
       renderStaffSubnav();
+      requestAnimationFrame(() => {
+        els.staffSubnav?.querySelector(`[data-staff-subpage="${subpage}"]`)?.focus();
+      });
     });
   }
   if (els.collaborationInterestOpportunities) {
@@ -863,7 +926,7 @@ function attachEvents() {
     renderMetrics();
   });
   els.pubSearch.addEventListener("input", debounce(() => {
-    state.search = els.pubSearch.value.trim().toLowerCase();
+    state.search = normalizeSearchText(els.pubSearch.value);
     renderPublications();
   }, 140));
   els.aipFilter.addEventListener("change", () => {
@@ -1001,6 +1064,7 @@ function attachEvents() {
     state.selectedStaffId = button.dataset.staffId;
     updateRoute();
     renderStaff();
+    requestAnimationFrame(focusStaffProfileHeading);
   });
   els.staffSuggestions.addEventListener("click", (event) => {
     const button = event.target.closest("[data-staff-id]");
@@ -1027,9 +1091,11 @@ function handleInlineStaffLink(event) {
   const button = event.target.closest("[data-staff-id]");
   if (!button) return;
   event.preventDefault();
+  clearStaffSearchState();
   state.selectedStaffId = button.dataset.staffId || "";
   state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "phds");
-  setTab("staff");
+  setTab("staff", { focusView: false });
+  requestAnimationFrame(focusStaffProfileHeading);
 }
 
 function handleExpertiseStaffClick(event) {
@@ -1114,9 +1180,17 @@ function handleStaffUpdateSubmit(event) {
 function handleCollaborationStaffClick(event) {
   const button = event.target.closest("[data-collaboration-staff]");
   if (!button) return;
+  clearStaffSearchState();
   state.selectedStaffId = button.dataset.collaborationStaff || "";
   state.staffSubpage = normalizeStaffSubpage(button.dataset.staffSubpage || "research");
-  setTab("staff");
+  setTab("staff", { focusView: false });
+  requestAnimationFrame(focusStaffProfileHeading);
+}
+
+function clearStaffSearchState() {
+  state.staffTopicQuery = "";
+  state.staffTopicMode = "query";
+  if (els.staffExpertiseSearch) els.staffExpertiseSearch.value = "";
 }
 
 function handleCollaborationClusterToggle(event) {
@@ -1211,11 +1285,15 @@ async function copyStaffUpdateDraft() {
 }
 
 async function copyTextWithFallback(text) {
-  try {
-    if (navigator.clipboard?.writeText) {
+  if (navigator.clipboard?.writeText) {
+    try {
       await navigator.clipboard.writeText(text);
       return true;
+    } catch (_) {
+      // Continue to the selection-based fallback when clipboard permissions are denied.
     }
+  }
+  try {
     const textarea = document.createElement("textarea");
     textarea.value = text;
     textarea.setAttribute("readonly", "");
@@ -1226,7 +1304,7 @@ async function copyTextWithFallback(text) {
     const copied = document.execCommand("copy");
     textarea.remove();
     return copied;
-  } catch (_error) {
+  } catch (_) {
     return false;
   }
 }
@@ -1259,13 +1337,21 @@ function populateStaffUpdatePersonSelect() {
 async function fetchDataFile(filename) {
   try {
     const response = await fetch(`data/${filename}?v=${DATA_VERSION}`);
-    return response?.ok ? response.json() : null;
+    return response?.ok ? await response.json() : null;
   } catch (_) {
     return null;
   }
 }
 
 async function loadData() {
+  if (state.dataLoading) return;
+  state.dataLoading = true;
+  els.mainContent?.setAttribute("aria-busy", "true");
+  if (els.dataStatus?.classList.contains("data-status-fatal")) {
+    els.dataStatus.classList.remove("data-status-fatal");
+    els.dataStatus.setAttribute("role", "status");
+    els.dataStatus.textContent = "Retrying dashboard data...";
+  }
   try {
     const [response, grantsData, phdsData, resourceData, staffProfileData, staffContributionData] = await Promise.all([
       fetch(`data/dashboard-data.json?v=${DATA_VERSION}`),
@@ -1300,8 +1386,24 @@ async function loadData() {
     populateStaffUpdatePersonSelect();
     applyRouteFromHash();
   } catch (error) {
-    els.subtitle.textContent = `Could not load dashboard data: ${error.message}`;
+    state.data = null;
+    showFatalDataError(error);
+  } finally {
+    state.dataLoading = false;
+    els.mainContent?.removeAttribute("aria-busy");
   }
+}
+
+function showFatalDataError(error) {
+  const detail = String(error?.message || "Unknown loading error");
+  if (els.subtitle) els.subtitle.textContent = "Dashboard data are currently unavailable.";
+  if (!els.dataStatus) return;
+  els.dataStatus.hidden = false;
+  els.dataStatus.classList.add("data-status-fatal");
+  els.dataStatus.setAttribute("role", "alert");
+  els.dataStatus.innerHTML = `<strong>The dashboard could not load its core data.</strong>
+    <span>Check your connection and try again. (${escapeHtml(detail)})</span>
+    <button class="data-retry" type="button" data-retry-dashboard>Retry loading</button>`;
 }
 
 function hydrateTopicFamilies(topicFamilies) {
@@ -1330,6 +1432,7 @@ const DEFERRED_DATA_FILES = {
     filename: "external-partners.json",
     apply(data) {
       state.externalPartnersData = data;
+      staffOverlapProfileCache = { key: "", profiles: new Map() };
     },
   },
   teaching: {
@@ -1398,6 +1501,8 @@ async function loadDeferredData(keys) {
 function syncDataStatus() {
   if (!els.dataStatus) return;
   const failures = Array.from(state.dataLoadFailures || []);
+  els.dataStatus.classList.remove("data-status-fatal");
+  els.dataStatus.setAttribute("role", "status");
   els.dataStatus.hidden = failures.length === 0;
   els.dataStatus.textContent = failures.length
     ? `Some supporting data did not load: ${failures.join(", ")}. A missing panel is not evidence of zero activity. Reload the page or report the problem if it persists.`
@@ -1409,7 +1514,25 @@ function validTab(tab) {
 }
 
 function routeFromHash() {
-  const raw = decodeURIComponent((location.hash || "#overview").replace(/^#/, ""));
+  const encoded = (location.hash || "#overview").replace(/^#/, "");
+  let raw = encoded;
+  let invalidEncoding = false;
+  try {
+    raw = decodeURIComponent(encoded);
+  } catch (_) {
+    raw = "overview";
+    invalidEncoding = true;
+  }
+  if (raw === "main-content") {
+    return {
+      tab: validTab(state.tab) ? state.tab : "overview",
+      detail: "",
+      subdetail: "",
+      invalidTab: false,
+      legacyTab: false,
+      skipTarget: true,
+    };
+  }
   const [tab, detail = "", subdetail = ""] = raw.split("/");
   const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
   const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
@@ -1417,8 +1540,9 @@ function routeFromHash() {
     tab: normalizedTab,
     detail,
     subdetail,
-    invalidTab: !validTab(aliasedTab),
+    invalidTab: invalidEncoding || !validTab(aliasedTab),
     legacyTab: tab === "collaboration",
+    skipTarget: false,
   };
 }
 
@@ -1433,6 +1557,11 @@ function applyGlobalStateFromUrl() {
   const params = new URLSearchParams(location.search);
   state.publicationWindow = normalizeWindowMode(params.get("window") || state.publicationWindow);
   state.includeAffiliatedResearchers = ["1", "true", "yes"].includes((params.get("affiliated") || "").toLowerCase());
+  state.networkMode = params.get("network") === "teaching" ? "teaching" : "publications";
+  state.networkAipHighOnly = params.get("aip") === "95";
+  state.networkExternal = params.get("outside") !== "0";
+  const requestedMinTie = Number(params.get("minTie"));
+  state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(requestedMinTie) ? requestedMinTie : 2;
 }
 
 function routeUrl() {
@@ -1441,6 +1570,18 @@ function routeUrl() {
   else params.set("window", normalizeWindowMode(state.publicationWindow));
   if (state.includeAffiliatedResearchers) params.set("affiliated", "1");
   else params.delete("affiliated");
+  if (state.tab === "network") {
+    if (state.networkMode === "teaching") params.set("network", "teaching");
+    else params.delete("network");
+    if (state.networkAipHighOnly) params.set("aip", "95");
+    else params.delete("aip");
+    if (!state.networkExternal) params.set("outside", "0");
+    else params.delete("outside");
+    if (Number(state.networkMinTie) !== 2) params.set("minTie", String(state.networkMinTie));
+    else params.delete("minTie");
+  } else {
+    ["network", "aip", "outside", "minTie"].forEach((key) => params.delete(key));
+  }
   const query = params.toString();
   return `${location.pathname}${query ? `?${query}` : ""}${routeHash()}`;
 }
@@ -1454,8 +1595,8 @@ function updateRoute({ replace = false } = {}) {
 function applyRouteFromHash() {
   const route = routeFromHash();
   if (route.tab === "staff") {
-    state.selectedStaffId = route.detail || state.selectedStaffId;
-    state.staffSubpage = normalizeStaffSubpage(route.subdetail || state.staffSubpage);
+    state.selectedStaffId = route.detail || "";
+    state.staffSubpage = normalizeStaffSubpage(route.subdetail || "research");
   }
   if (route.tab === "network") {
     state.networkPersonId = route.detail || "";
@@ -1463,7 +1604,9 @@ function applyRouteFromHash() {
     state.networkCollaboratorId = "";
   }
   setTab(route.tab, { updateHistory: false });
-  if (route.invalidTab || route.legacyTab) updateRoute({ replace: true });
+  const routeChangedDuringRender = location.hash !== routeHash();
+  if (route.invalidTab || route.legacyTab || route.skipTarget || routeChangedDuringRender) updateRoute({ replace: true });
+  if (route.skipTarget) requestAnimationFrame(focusDashboardContent);
 }
 
 function normalizeStaffSubpage(value) {
@@ -1501,6 +1644,15 @@ function focusActiveView(tab) {
   if (!heading) return;
   heading.tabIndex = -1;
   heading.focus({ preventScroll: true });
+}
+
+function focusDashboardContent() {
+  const section = document.getElementById(`view-${state.tab}`);
+  const heading = section?.querySelector("h2");
+  if (!section || !heading) return;
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+  section.scrollIntoView({ block: "start", behavior: "auto" });
 }
 
 function syncFooterMeta(meta = {}) {
@@ -1569,6 +1721,10 @@ function syncPublicationWindowControls() {
 function syncViewContext() {
   const roster = rosterModeLabel();
   const publicationWindow = activeWindowLabel();
+  const metricsYears = metricYears();
+  const metricsWindow = metricsYears.length
+    ? `${metricsYears[0]}-${metricsYears[metricsYears.length - 1]} completed years`
+    : "No completed years in the selected window";
   const contextByTab = {
     overview: `${roster} | Publication indicators: ${publicationWindow} | PhD and grant cards: full available records`,
     staff: `${roster} | Publication evidence: ${publicationWindow}`,
@@ -1576,10 +1732,10 @@ function syncViewContext() {
     collaboration: `${roster} | Publication-based signals: ${publicationWindow}`,
     publications: `${roster} | ${publicationWindow}`,
     network: state.networkMode === "teaching"
-      ? `${roster} | Teaching snapshot`
+      ? `${roster} | Teaching offerings: ${state.teachingData?.meta?.academicYear || "latest loaded academic year"}`
       : `${roster} | Publication ties: ${publicationWindow}`,
-    metrics: `${roster} | Completed-year publication metrics: ${publicationWindow}`,
-    resources: "Resource snapshot | Source and review dates are shown with the records",
+    metrics: `${roster} | ${metricsWindow} | Current-year records are excluded`,
+    resources: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
     contact: "Corrections, suggestions, and staff profile updates",
   };
   (els.viewContexts || []).forEach((context) => {
@@ -1587,10 +1743,12 @@ function syncViewContext() {
     context.textContent = contextByTab[tab] || `${roster} | ${publicationWindow}`;
   });
   if (els.publicationWindowToggle) {
-    els.publicationWindowToggle.hidden = !new Set(["overview", "staff", "collaboration", "publications", "network", "metrics"]).has(state.tab);
+    const windowRelevant = new Set(["overview", "staff", "collaboration", "publications", "network", "metrics", "resources"]).has(state.tab)
+      && !(state.tab === "network" && state.networkMode === "teaching");
+    els.publicationWindowToggle.hidden = !windowRelevant;
   }
   const rosterToggle = els.fteToggle?.closest("label");
-  if (rosterToggle) rosterToggle.hidden = new Set(["resources", "contact"]).has(state.tab);
+  if (rosterToggle) rosterToggle.hidden = state.tab === "contact";
 }
 
 function activePeopleSet() {
@@ -1611,6 +1769,8 @@ function activeDisplayPublications() {
 
 function activeOutletPublications() {
   if (!state.data) return [];
+  const cache = ensurePublicationPoolCache();
+  if (cache.outlet) return cache.outlet;
   const ids = activePeopleSet();
   const [fromYear, toYear] = activeWindowYears();
   const filtered = state.data.publications.filter((pub) => (
@@ -1619,7 +1779,8 @@ function activeOutletPublications() {
     && (!fromYear || pub.year >= fromYear)
     && (!toYear || pub.year <= toYear)
   ));
-  return dedupePublications(filtered);
+  cache.outlet = dedupePublications(filtered);
+  return cache.outlet;
 }
 
 function outletPublicationRecord(pub) {
@@ -1673,6 +1834,7 @@ function ensurePublicationPoolCache() {
       key,
       counted: null,
       display: null,
+      outlet: null,
       staff: {
         counted: new Map(),
         display: new Map(),
@@ -1985,6 +2147,7 @@ function renderStaff() {
   }
   const rows = staffRowsForSearch(bundle);
   const selected = ensureSelectedStaff(rows, bundle);
+  els.staffGrid?.classList.toggle("has-selection", Boolean(selected));
   renderStaffSearchSummary(rows, bundle);
   renderStaffList(rows, bundle);
   renderStaffProfile(selected, bundle);
@@ -2640,7 +2803,6 @@ function renderGrantBadges(call) {
 }
 
 function grantDeadlineStatus(call) {
-  if (call.deadlineStatusLabel) return call.deadlineStatusLabel;
   const structuredLabels = {
     upcoming: "Upcoming",
     later: "Later",
@@ -2648,7 +2810,9 @@ function grantDeadlineStatus(call) {
     rolling: "Rolling",
     "date-unconfirmed": "Date not confirmed",
   };
-  if (structuredLabels[call.deadlineStatus]) return structuredLabels[call.deadlineStatus];
+  const currentStatus = grantDeadlineState(call);
+  if (structuredLabels[currentStatus]) return structuredLabels[currentStatus];
+  if (call.deadlineStatusLabel) return call.deadlineStatusLabel;
   const raw = String(call.deadline || call.timing || "").trim();
   if (!raw) return "No deadline listed";
   if (/rolling|ongoing|continuous/i.test(raw)) return "Rolling";
@@ -2657,9 +2821,33 @@ function grantDeadlineStatus(call) {
     const days = (parsed - Date.now()) / (1000 * 60 * 60 * 24);
     if (days >= 0 && days <= 120) return "Upcoming";
     if (days > 120) return "Later";
+    return "Passed";
   }
   if (/2026|2027|spring|summer|autumn|fall|winter|q[1-4]/i.test(raw)) return "Later";
   return raw.length <= 28 ? raw : "Deadline listed";
+}
+
+function grantDeadlineState(call, now = new Date()) {
+  const exactDates = [
+    call.nextDeadlineDate,
+    call.deadlineDate,
+    ...(call.deadlineDates || []).map((item) => item?.date),
+  ].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value || "")));
+  const dates = Array.from(new Set(exactDates)).sort();
+  if (dates.length) {
+    const today = [
+      now.getFullYear(),
+      String(now.getMonth() + 1).padStart(2, "0"),
+      String(now.getDate()).padStart(2, "0"),
+    ].join("-");
+    const next = dates.find((date) => date >= today);
+    if (!next) return "passed";
+    const [year, month, day] = next.split("-").map(Number);
+    const [todayYear, todayMonth, todayDay] = today.split("-").map(Number);
+    const days = (Date.UTC(year, month - 1, day) - Date.UTC(todayYear, todayMonth - 1, todayDay)) / 86400000;
+    return days <= 120 ? "upcoming" : "later";
+  }
+  return call.deadlineStatus || "";
 }
 
 function grantCollaborationType(call) {
@@ -2686,7 +2874,7 @@ function collaborativeGrantOpportunities() {
   const rows = [
     ...(state.resourceData?.opportunities || []),
     ...(state.resourceData?.recentCalls || []),
-  ].filter((call) => call.deadlineStatus !== "passed");
+  ].filter((call) => grantDeadlineState(call) !== "passed");
   rows.forEach((call) => {
     const text = normalizeSearchText(collaborativeGrantText(call));
     const collaborative = call.stage === "Consortium"
@@ -2971,7 +3159,7 @@ function ensureSelectedStaff(rows, bundle = { raw: "" }) {
     return null;
   }
   const selected = rows.find((row) => row.person.id === state.selectedStaffId);
-  if (!selected || (bundle.raw && selected.score <= 0)) {
+  if (!selected) {
     state.selectedStaffId = "";
     return null;
   }
@@ -2991,7 +3179,7 @@ function renderStaffList(rows, bundle) {
       ? (hasMatch ? staffEvidenceSummary(row) : "No visible match")
       : `${row.publications} pubs`;
     const matchClass = hasSearch ? (hasMatch ? " expertise-match" : " expertise-no-match") : "";
-    return `<button class="staff-row${selected ? " on" : ""}${matchClass}" type="button" data-staff-id="${escapeHtml(row.person.id)}">
+    return `<button class="staff-row${selected ? " on" : ""}${matchClass}" type="button" data-staff-id="${escapeHtml(row.person.id)}" aria-controls="staff-profile" aria-pressed="${selected ? "true" : "false"}">
       <span class="staff-row-main">
         ${personPhoto(row.person, "staff-row-photo")}
         <span>
@@ -3036,11 +3224,12 @@ function renderStaffProfile(row, bundle) {
       ${personPhoto(person, "staff-profile-photo")}
       <div>
         <p class="eye">${escapeHtml(person.display)}</p>
-        <h3>${escapeHtml(person.name)}</h3>
+        <h3 id="staff-profile-title" tabindex="-1">${escapeHtml(person.name)}</h3>
         ${renderPublicStaffInfo(person.id)}
         <div class="staff-profile-actions">
           <button class="section-link" type="button" data-open-network-person="${escapeHtml(person.id)}">View in network</button>
           <button class="section-link" type="button" data-staff-update-person="${escapeHtml(person.id)}">Update profile fields</button>
+          <button class="section-link staff-directory-link" type="button" data-staff-list>Choose another staff member</button>
         </div>
       </div>
     </div>
@@ -3069,8 +3258,12 @@ function renderStaffSubnav() {
   ];
   state.staffSubpage = normalizeStaffSubpage(state.staffSubpage);
   els.staffSubnav.innerHTML = pages.map(([key, label]) => `
-    <button class="${key === state.staffSubpage ? "on" : ""}" type="button" data-staff-subpage="${escapeHtml(key)}" aria-pressed="${key === state.staffSubpage ? "true" : "false"}">${escapeHtml(label)}</button>
+    <button class="${key === state.staffSubpage ? "on" : ""}" type="button" data-staff-subpage="${escapeHtml(key)}" aria-controls="staff-subpage-${escapeHtml(key)}" aria-pressed="${key === state.staffSubpage ? "true" : "false"}">${escapeHtml(label)}</button>
   `).join("");
+}
+
+function focusStaffProfileHeading() {
+  document.getElementById("staff-profile-title")?.focus({ preventScroll: false });
 }
 
 function renderStaffSubpageVisibility() {
@@ -3334,6 +3527,18 @@ function staffCollaborationSuggestions(personId) {
 }
 
 function staffOverlapProfile(personId) {
+  const partnerMeta = state.externalPartnersData?.meta || {};
+  const cacheKey = [
+    activePublicationPoolKey(),
+    partnerMeta.generatedDate || partnerMeta.generatedOn || "",
+    state.externalPartnersData?.partners?.length || 0,
+  ].join("|");
+  if (staffOverlapProfileCache.key !== cacheKey) {
+    staffOverlapProfileCache = { key: cacheKey, profiles: new Map() };
+  }
+  if (staffOverlapProfileCache.profiles.has(personId)) {
+    return staffOverlapProfileCache.profiles.get(personId);
+  }
   const publications = collaborationPublicationRecords(personId);
   const publicationIds = new Set(publications.map((pub) => pub.id));
   const topics = new Set(semanticTopicSignals(publications, { minCount: 1, phraseMinCount: 2 })
@@ -3375,12 +3580,16 @@ function staffOverlapProfile(personId) {
   const partnerLabels = new Map();
   const partners = new Set();
   (state.externalPartnersData?.partners || []).forEach((partner) => {
-    const staffIds = new Set((partner.publications || []).flatMap((pub) => pub.staffIds || []));
-    if (!staffIds.has(personId)) return;
+    const supportsCurrentWindow = (partner.publications || []).some((pub) => (
+      publicationIds.has(pub.id) && (pub.staffIds || []).includes(personId)
+    ));
+    if (!supportsCurrentWindow) return;
     partners.add(partner.id);
     partnerLabels.set(partner.id, partner.institution);
   });
-  return { topics, signalTopics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels, publicationIds, publications };
+  const result = { topics, signalTopics, externalAuthors, externalAuthorLabels, grants, partners, partnerLabels, publicationIds, publications };
+  staffOverlapProfileCache.profiles.set(personId, result);
+  return result;
 }
 
 function intersectSets(a, b) {
@@ -3392,6 +3601,7 @@ function showTopicOverlay(query, mode = "query") {
   topicOverlayOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   const bundle = expertiseBundle(query, mode);
   const people = peopleById();
+  const activeIds = activePeopleSet();
   const rows = rankedStaff(bundle)
     .filter((row) => row.topicPubs > 0)
     .sort((a, b) => b.topicPubPct - a.topicPubPct || b.topicPubs - a.topicPubs || a.person.display.localeCompare(b.person.display));
@@ -3405,12 +3615,18 @@ function showTopicOverlay(query, mode = "query") {
       <span>${escapeHtml(formatPercent(row.topicPubPct))} of counted publications - ${row.topicPubs} publication${row.topicPubs === 1 ? "" : "s"}</span>
     </div>
   `).join("") : `<p class="small-muted">No staff-level matches under the current filters.</p>`;
-  els.topicOverlayPublications.innerHTML = pubs.length ? pubs.slice(0, 8).map((pub) => `
-    <div class="topic-detail-row">
-      <strong>${escapeHtml(pub.title)}</strong>
-      <span>${escapeHtml(String(pub.year || ""))} - ${escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown journal"))}${pub.matchedPeople?.length ? ` - ${escapeHtml(pub.matchedPeople.map((id) => people.get(id)?.display || id).sort().join(", "))}` : ""}</span>
-    </div>
-  `).join("") : `<p class="small-muted">No publication examples under the current filters.</p>`;
+  els.topicOverlayPublications.innerHTML = pubs.length ? pubs.slice(0, 8).map((pub) => {
+    const matchedNames = activeMatchedPeople(pub, activeIds)
+      .map((id) => people.get(id)?.display || id)
+      .sort()
+      .join(", ");
+    return `
+      <div class="topic-detail-row">
+        <strong>${escapeHtml(pub.title)}</strong>
+        <span>${escapeHtml(String(pub.year || ""))} - ${escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown journal"))}${matchedNames ? ` - ${escapeHtml(matchedNames)}` : ""}</span>
+      </div>
+    `;
+  }).join("") : `<p class="small-muted">No publication examples under the current filters.</p>`;
   els.topicOverlay.hidden = false;
   document.body.classList.add("overlay-open");
   requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
@@ -3503,7 +3719,7 @@ function topStaffCoauthors(personId, pubs) {
   const byCoauthor = new Map();
   pubs.forEach((pub) => {
     const seen = new Set();
-    pub.matchedPeople.forEach((id) => {
+    activeMatchedPeople(pub).forEach((id) => {
       if (id === personId || !people.has(id)) return;
       const key = `roster:${id}`;
       if (seen.has(key)) return;
@@ -3616,7 +3832,7 @@ function renderTopicPublicationList(container, pubs) {
     return;
   }
   container.innerHTML = pubs.map((pub) => {
-    const staff = (pub.matchedPeople || [])
+    const staff = activeMatchedPeople(pub)
       .map((id) => people.get(id)?.display || id)
       .sort()
       .join(", ");
@@ -3951,7 +4167,7 @@ function renderResources() {
   const allOpportunities = state.resourceData?.opportunities || [];
   const opportunities = state.resourceShowClosed
     ? allOpportunities
-    : allOpportunities.filter((item) => item.deadlineStatus !== "passed");
+    : allOpportunities.filter((item) => grantDeadlineState(item) !== "passed");
   if (!opportunities.length) {
     els.resourceOpportunities.innerHTML = `<div class="staff-empty">No grant opportunity data loaded.</div>`;
   } else {
@@ -3988,11 +4204,11 @@ function renderRecentGrantCalls() {
   const allCalls = state.resourceData?.recentCalls || [];
   const calls = (state.resourceShowClosed
     ? allCalls
-    : allCalls.filter((call) => call.deadlineStatus !== "passed")).slice(0, 6);
+    : allCalls.filter((call) => grantDeadlineState(call) !== "passed")).slice(0, 6);
   const hiddenClosed = [
     ...allCalls,
     ...(state.resourceData?.opportunities || []),
-  ].filter((call) => call.deadlineStatus === "passed").length;
+  ].filter((call) => grantDeadlineState(call) === "passed").length;
   const checkedDate = state.resourceData?.meta?.recentCallsChecked || "";
   const workbookDate = state.resourceData?.meta?.sourceUpdatedDate || "";
   if (els.resourceCallsMeta) {
@@ -4348,16 +4564,21 @@ function metricYears() {
   let start = Number.isFinite(fromYear)
     ? fromYear
     : allYears.length ? Math.min(...allYears) : METRICS_START_YEAR;
-  if (mode !== "all" && Number.isFinite(fromYear) && Number.isFinite(toYear)) {
-    const intendedWindowYears = Math.max(1, toYear - fromYear + 1);
-    start = end - intendedWindowYears + 1;
-  }
+  if (mode === "all") start = Math.max(start, METRICS_START_YEAR);
   if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) return [];
   return Array.from({ length: end - start + 1 }, (_, idx) => start + idx);
 }
 
 function latestCompletedMetricYear() {
-  return new Date().getFullYear() - 1;
+  const currentCompletedYear = new Date().getFullYear() - 1;
+  const coverageEnd = String(state.data?.meta?.publicationWindow?.to || "");
+  const match = coverageEnd.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!match) return currentCompletedYear;
+  const coverageYear = Number(match[1]);
+  const coverageCompletedYear = match[2] === "12" && match[3] === "31"
+    ? coverageYear
+    : coverageYear - 1;
+  return Math.min(currentCompletedYear, coverageCompletedYear);
 }
 
 function metricDataYears() {
@@ -4380,8 +4601,9 @@ function buildHrmMetricGroup(years) {
   const people = basePeople.map((person) => ({
     id: person.id,
     department: "HRM&OB",
-    firstYear: firstYears.get(person.id) || person.joinedYear,
+    firstYear: Number.isFinite(person.joinedYear) ? person.joinedYear : firstYears.get(person.id),
     joinedYear: person.joinedYear,
+    leftYear: person.leftYear,
     rank: person.rank,
   }));
   const peopleByMetricId = new Map(basePeople.map((person) => [person.id, person]));
@@ -4500,7 +4722,9 @@ function computeMetricGroup(label, key, people, pubs, years, primary) {
   const yearly = years.map((year) => {
     const activePeopleForYear = people.filter((person) => {
       const firstYear = firstYearByPerson.get(person.id);
-      return Number.isFinite(firstYear) && firstYear <= year;
+      return Number.isFinite(firstYear)
+        && firstYear <= year
+        && (!Number.isFinite(person.leftYear) || year <= person.leftYear);
     });
     const personPubCounts = activePeopleForYear.map((person) => (
       pubs.filter((pub) => pub.year === year && pub.people.includes(person.id)).length
@@ -4519,13 +4743,19 @@ function computeMetricGroup(label, key, people, pubs, years, primary) {
   const lastCompletedMetricYear = summaryYears.length ? Math.max(...summaryYears) : null;
   const activePeople = people.filter((person) => {
     const firstYear = firstYearByPerson.get(person.id);
-    return Number.isFinite(firstYear) && Number.isFinite(lastCompletedMetricYear) && firstYear <= lastCompletedMetricYear;
+    return Number.isFinite(firstYear)
+      && Number.isFinite(lastCompletedMetricYear)
+      && summaryYears.some((year) => year >= firstYear && (!Number.isFinite(person.leftYear) || year <= person.leftYear));
   });
   const personRates = [];
   const personHighRates = [];
   activePeople.forEach((person) => {
     const firstYear = firstYearByPerson.get(person.id);
-    const activeYears = summaryYears.filter((year) => Number.isFinite(firstYear) && year >= firstYear);
+    const activeYears = summaryYears.filter((year) => (
+      Number.isFinite(firstYear)
+      && year >= firstYear
+      && (!Number.isFinite(person.leftYear) || year <= person.leftYear)
+    ));
     if (!activeYears.length) return;
     const personPubs = (pubsByPerson.get(person.id) || []).filter((pub) => summaryYearSet.has(pub.year));
     personRates.push(personPubs.length / activeYears.length);
@@ -4776,7 +5006,7 @@ function renderMetricMethodNote(container, hrm, rest) {
     <div class="method-grid">
       <div>
         <strong>Professor-rank denominator</strong>
-        <p>HRM&amp;OB metrics include roster members marked assistant, associate, or full professor. When a roster joined year is available, earlier publications are omitted; rows without a joined year still enter from their first counted publication year.${currentYearNote}</p>
+        <p>HRM&amp;OB metrics include roster members marked assistant, associate, or full professor. A known joined year starts the active-person denominator, including zero-publication years; a known left year ends it. Rows without a joined year enter from their first counted publication year.${currentYearNote} Comparisons begin in ${METRICS_START_YEAR}, the first benchmark year.</p>
       </div>
       <div>
         <strong>AIP &ge; 95 pubs/person/year</strong>
@@ -4917,6 +5147,7 @@ function activeWindowLabel() {
 
 function aggregateJournals(pubs) {
   const people = peopleById();
+  const activeIds = activePeopleSet();
   const byJournal = new Map();
   pubs.forEach((pub) => {
     const name = pub.aipJournal || pub.journal || pub.publicationKind || "Unmatched journal";
@@ -4945,7 +5176,7 @@ function aggregateJournals(pubs) {
     if (isNumber(pub.aip)) row.aip = pub.aip;
     row.category = journalTypeCategory(pub);
     if (pub.rankableJournal === false) row.rankableJournal = false;
-    pub.matchedPeople.forEach((id) => {
+    activeMatchedPeople(pub, activeIds).forEach((id) => {
       if (people.has(id)) row.people.add(id);
     });
   });
@@ -5143,6 +5374,16 @@ function renderYearBars(pubs) {
     }).join("")}
     </div>
     <p class="year-chart-note">${escapeHtml(`${total} publication${total === 1 ? "" : "s"} across ${publicationWindowLabel()}; peak ${max} in ${peakLabel}.${includesYearToDate ? ` ${currentYear} is year to date.` : ""}`)}</p>
+    <details class="metric-data-details year-data-details">
+      <summary>View annual data as a table</summary>
+      <div class="table-wrap year-data-table-wrap" role="region" aria-label="Annual publication counts" tabindex="0">
+        <table>
+          <caption class="visually-hidden">Counted journal publications by year for ${escapeHtml(publicationWindowLabel())}.</caption>
+          <thead><tr><th scope="col">Year</th><th scope="col" class="num">Publications</th></tr></thead>
+          <tbody>${years.map((year) => `<tr><th scope="row">${year}${year === currentYear ? " (YTD)" : ""}</th><td class="num">${counts.get(year) || 0}</td></tr>`).join("")}</tbody>
+        </table>
+      </div>
+    </details>
   </div>`;
 }
 
@@ -5548,6 +5789,7 @@ function formatYear(year) {
 function renderPublications() {
   if (!state.data) return;
   const people = peopleById();
+  const activeIds = activePeopleSet();
   renderPublicationJournalSummary();
   syncPublicationPersonFilter();
   const total = activePublications().length;
@@ -5570,7 +5812,7 @@ function renderPublications() {
     publicationCell(pub, { report: true }),
     escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
     aipBadge(pub.aip, pub),
-    escapeHtml(pub.matchedPeople.map((id) => people.get(id)?.display || id).sort().join(", ")),
+    escapeHtml(activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.display || id).sort().join(", ")),
   ]);
   setPublicationTable(els.publicationTable, rows);
 }
@@ -5592,21 +5834,22 @@ function syncPublicationPersonFilter() {
 
 function filteredPublications() {
   const people = peopleById();
+  const activeIds = activePeopleSet();
   let pubs = activePublications();
   if (state.publicationPersonFilter) {
     pubs = pubs.filter((pub) => pub.matchedPeople.includes(state.publicationPersonFilter));
   }
   if (state.search) {
     pubs = pubs.filter((pub) => {
-      const haystack = [
+      const haystack = normalizeSearchText([
         pub.title,
         pub.journal,
         pub.aipJournal,
         pub.authors.join(" "),
         pub.doi,
         pub.year,
-        pub.matchedPeople.map((id) => people.get(id)?.display || id).join(" "),
-      ].join(" ").toLowerCase();
+        activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.display || id).join(" "),
+      ].join(" "));
       return haystack.includes(state.search);
     });
   }
@@ -5652,6 +5895,20 @@ function setPublicationSort(key) {
     state.publicationSortDir = key === "title" || key === "journal" ? "asc" : "desc";
   }
   renderPublications();
+  const direction = state.publicationSortDir === "asc" ? "ascending" : "descending";
+  const label = {
+    year: "year",
+    date: "year",
+    title: "publication title",
+    journal: "journal",
+    aip: "AIP score",
+  }[key] || key;
+  if (els.publicationResultsSummary) {
+    els.publicationResultsSummary.textContent += ` Sorted by ${label}, ${direction}.`;
+  }
+  requestAnimationFrame(() => {
+    els.publicationTable?.querySelector(`[data-publication-sort="${key}"]`)?.focus();
+  });
 }
 
 function sortIndicator(key) {
@@ -5682,6 +5939,7 @@ function setPublicationTable(table, rows) {
 
 function downloadPublicationCsv() {
   const people = peopleById();
+  const activeIds = activePeopleSet();
   const rows = filteredPublications().map((pub) => ({
     year: pub.year || "",
     title: pub.title || "",
@@ -5689,30 +5947,35 @@ function downloadPublicationCsv() {
     aip: isNumber(pub.aip) ? pub.aip.toFixed(1) : "",
     aipStatus: pub.aipStatus || "",
     authors: (pub.authors || []).join("; "),
-    hrmobAuthors: (pub.matchedPeople || []).map((id) => people.get(id)?.display || id).sort().join("; "),
+    hrmobAuthors: activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.display || id).sort().join("; "),
     doi: pub.doi || "",
   }));
   const csv = rowsToCsv(rows, ["year", "title", "journal", "aip", "aipStatus", "authors", "hrmobAuthors", "doi"]);
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const blob = new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" });
   const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
+  const downloadUrl = URL.createObjectURL(blob);
+  link.href = downloadUrl;
   link.download = `hrmob-publications-${DATA_VERSION}.csv`;
   document.body.appendChild(link);
   link.click();
-  URL.revokeObjectURL(link.href);
   link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 0);
+}
+
+function activeMatchedPeople(pub, activeIds = activePeopleSet()) {
+  return (pub.matchedPeople || []).filter((id) => activeIds.has(id));
 }
 
 function rowsToCsv(rows, columns) {
   return [
     columns.join(","),
     ...rows.map((row) => columns.map((column) => csvCell(row[column])).join(",")),
-  ].join("\n");
+  ].join("\r\n");
 }
 
 function csvCell(value) {
   const text = String(value ?? "");
-  return /[",\n]/.test(text) ? `"${text.replace(/"/g, "\"\"")}"` : text;
+  return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, "\"\"")}"` : text;
 }
 
 function openPublicationReport(publicationId) {
@@ -5741,10 +6004,11 @@ function renderPublicationJournalSummary() {
 }
 
 function publicationCell(pub, options = {}) {
-  const doi = pub.doi ? `<a class="doi" href="https://doi.org/${encodeURIComponent(pub.doi)}" target="_blank" rel="noopener">doi</a>` : "";
+  const title = String(pub.title || "Untitled publication");
+  const doi = pub.doi ? `<a class="doi" href="https://doi.org/${encodeURIComponent(pub.doi)}" target="_blank" rel="noopener" aria-label="Open DOI for ${escapeHtml(title)} (opens in a new tab)">doi</a>` : "";
   const status = publicationStatusBadge(pub);
-  const report = options.report ? ` <button class="table-action" type="button" data-report-publication-id="${escapeHtml(pub.id)}">report</button>` : "";
-  return `<span class="primary-text">${escapeHtml(pub.title)}</span> ${doi}${status}<br>
+  const report = options.report ? ` <button class="table-action" type="button" data-report-publication-id="${escapeHtml(pub.id)}" aria-label="Report an issue with ${escapeHtml(title)}">report</button>` : "";
+  return `<span class="primary-text">${escapeHtml(title)}</span> ${doi}${status}<br>
     <span class="small-muted">${escapeHtml(pub.authors.slice(0, 8).join(", "))}${pub.authors.length > 8 ? ", ..." : ""}</span>${report}`;
 }
 
@@ -5863,14 +6127,16 @@ function buildOutsideCollaborationView(nodes, edges, minimumCount) {
   const rankedEdges = edges.slice().sort((a, b) => b.count - a.count || a.target.localeCompare(b.target));
   const normalizedMinimum = Number.isFinite(minimumCount) ? Math.max(1, minimumCount) : Infinity;
   const qualifyingEdges = rankedEdges.filter((edge) => edge.count >= normalizedMinimum);
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1200;
+  const renderLimit = Math.min(NETWORK_OUTSIDE_NODE_LIMIT, viewportWidth < 640 ? 24 : viewportWidth < 980 ? 40 : NETWORK_OUTSIDE_NODE_LIMIT);
   const qualifyingIds = new Set(qualifyingEdges.map((edge) => edge.target));
   if (state.networkCollaboratorId && !qualifyingIds.has(state.networkCollaboratorId)) {
     state.networkCollaboratorId = "";
   }
-  let visibleEdges = qualifyingEdges.slice(0, NETWORK_OUTSIDE_NODE_LIMIT);
+  let visibleEdges = qualifyingEdges.slice(0, renderLimit);
   if (state.networkCollaboratorId && !visibleEdges.some((edge) => edge.target === state.networkCollaboratorId)) {
     const selectedEdge = qualifyingEdges.find((edge) => edge.target === state.networkCollaboratorId);
-    if (selectedEdge) visibleEdges = [...visibleEdges.slice(0, NETWORK_OUTSIDE_NODE_LIMIT - 1), selectedEdge];
+    if (selectedEdge) visibleEdges = [...visibleEdges.slice(0, Math.max(0, renderLimit - 1)), selectedEdge];
   }
   const nodeById = new Map(nodes.map((node) => [node.id, node]));
   const visibleNodes = visibleEdges.map((edge) => {
@@ -5897,6 +6163,7 @@ function buildOutsideCollaborationView(nodes, edges, minimumCount) {
     hiddenByThreshold: rankedEdges.length - qualifyingEdges.length,
     hiddenByLimit: Math.max(0, qualifyingEdges.length - visibleEdges.length),
     minimumCount: normalizedMinimum,
+    renderLimit,
   };
 }
 
@@ -6201,6 +6468,9 @@ function activateNetworkTarget(target) {
     const id = collaboratorNode.getAttribute("data-network-collaborator-id") || "";
     state.networkCollaboratorId = state.networkCollaboratorId === id ? "" : id;
     renderNetwork();
+    restoreNetworkFocus(state.networkCollaboratorId
+      ? { collaboratorId: state.networkCollaboratorId }
+      : { personId: state.networkPersonId });
     return;
   }
   const personNode = target.closest?.("[data-network-person-id]");
@@ -6212,66 +6482,32 @@ function activateNetworkTarget(target) {
     state.networkCollaboratorId = "";
     updateRoute();
     renderNetwork();
+    restoreNetworkFocus({ personId: id });
     return;
   }
-  focusNetworkPerson(id);
+  focusNetworkPerson(id, { restoreFocus: true });
 }
 
-function focusNetworkPerson(id) {
+function focusNetworkPerson(id, { restoreFocus = false } = {}) {
   if (!id) return;
   state.networkScope = "selected";
   state.networkPersonId = id;
   state.networkCollaboratorId = "";
-  if (state.networkMode === "publications") {
-    state.networkExternal = true;
-    if (els.networkExternalToggle) els.networkExternalToggle.checked = true;
-  }
   updateRoute();
   renderNetwork();
   requestDeferredDataForCurrentView();
+  if (restoreFocus) restoreNetworkFocus({ personId: id });
 }
 
-function defaultNetworkFocusPersonId(people) {
-  const activeIds = new Set(people.map((person) => person.id));
-  const stats = new Map(people.map((person) => [person.id, { count: 0, degree: new Set(), strength: 0 }]));
-  if (state.networkMode === "teaching") {
-    (state.teachingData?.edges || []).forEach((edge) => {
-      if (!activeIds.has(edge.source) || !activeIds.has(edge.target)) return;
-      const count = Number(edge.count) || 0;
-      const source = stats.get(edge.source);
-      const target = stats.get(edge.target);
-      source.degree.add(edge.target);
-      target.degree.add(edge.source);
-      source.strength += count;
-      target.strength += count;
-    });
-    (state.teachingData?.records || []).forEach((record) => {
-      if (record.networkEligible && stats.has(record.personId)) stats.get(record.personId).count += 1;
-    });
-  } else {
-    let publications = activePublications();
-    if (state.networkAipHighOnly) publications = publications.filter((pub) => isNumber(pub.aip) && pub.aip >= 95);
-    publications.forEach((pub) => {
-      const ids = [...new Set((pub.matchedPeople || []).filter((id) => activeIds.has(id)))];
-      ids.forEach((id) => { stats.get(id).count += 1; });
-      for (let i = 0; i < ids.length; i += 1) {
-        for (let j = i + 1; j < ids.length; j += 1) {
-          stats.get(ids[i]).degree.add(ids[j]);
-          stats.get(ids[j]).degree.add(ids[i]);
-          stats.get(ids[i]).strength += 1;
-          stats.get(ids[j]).strength += 1;
-        }
-      }
-    });
-  }
-  return people.slice().sort((a, b) => {
-    const aStats = stats.get(a.id);
-    const bStats = stats.get(b.id);
-    return bStats.degree.size - aStats.degree.size
-      || bStats.strength - aStats.strength
-      || bStats.count - aStats.count
-      || a.display.localeCompare(b.display);
-  })[0]?.id || "";
+function restoreNetworkFocus({ personId = "", collaboratorId = "" } = {}) {
+  requestAnimationFrame(() => {
+    const nodes = Array.from(els.networkSvg?.querySelectorAll("[data-network-person-id], [data-network-collaborator-id]") || []);
+    const target = nodes.find((node) => (
+      (personId && node.getAttribute("data-network-person-id") === personId)
+      || (collaboratorId && node.getAttribute("data-network-collaborator-id") === collaboratorId)
+    ));
+    target?.focus();
+  });
 }
 
 function syncNetworkControls(people) {
@@ -6282,7 +6518,7 @@ function syncNetworkControls(people) {
   }
   state.networkScope = state.networkScope === "selected" ? "selected" : "department";
   if (state.networkScope === "selected" && !state.networkPersonId) {
-    state.networkPersonId = defaultNetworkFocusPersonId(people);
+    state.networkScope = "department";
   }
   if (state.networkScope === "department") {
     state.networkPersonId = "";
@@ -6295,12 +6531,24 @@ function syncNetworkControls(people) {
       button.setAttribute("aria-pressed", String(on));
     });
   }
-  if (els.networkScopeSelect) els.networkScopeSelect.value = state.networkScope;
+  if (els.networkScopeSelect) {
+    const sortedPeople = people.slice().sort((a, b) => a.display.localeCompare(b.display));
+    const signature = sortedPeople.map((person) => `${person.id}:${person.display}`).join("|");
+    if (els.networkScopeSelect.dataset.peopleSignature !== signature) {
+      els.networkScopeSelect.innerHTML = `<option value="department">Department overview</option>${sortedPeople.map((person) => (
+        `<option value="person:${escapeHtml(person.id)}">${escapeHtml(person.display)}</option>`
+      )).join("")}`;
+      els.networkScopeSelect.dataset.peopleSignature = signature;
+    }
+    els.networkScopeSelect.value = selectedNetworkOptionValue(state.networkPersonId);
+  }
   if (els.networkMinTieSelect) {
     const normalizedMinTie = NETWORK_MIN_TIE_OPTIONS.has(Number(state.networkMinTie)) ? Number(state.networkMinTie) : 2;
     state.networkMinTie = normalizedMinTie;
     els.networkMinTieSelect.value = String(normalizedMinTie);
   }
+  if (els.networkAipToggle) els.networkAipToggle.checked = state.networkAipHighOnly;
+  if (els.networkExternalToggle) els.networkExternalToggle.checked = state.networkExternal;
   document.querySelectorAll(".publication-network-control").forEach((control) => {
     control.hidden = state.networkMode === "teaching";
   });
@@ -6314,10 +6562,15 @@ function syncNetworkControls(people) {
   }
   if (els.externalPartnerPanel) els.externalPartnerPanel.hidden = state.networkMode === "teaching";
   const selected = people.find((person) => person.id === state.networkPersonId);
+  if (els.networkSelectionStatus) {
+    els.networkSelectionStatus.textContent = selected
+      ? `Network focus: ${selected.display}`
+      : "Department network overview shown.";
+  }
   if (els.networkClearSelection) els.networkClearSelection.hidden = state.networkScope !== "selected" || !selected;
   if (els.networkSelectionNote) {
     if (selected) {
-      els.networkSelectionNote.innerHTML = `Focused on <strong>${escapeHtml(selected.display)}</strong>. <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selected.id)}">Open staff profile</button>`;
+      els.networkSelectionNote.innerHTML = `Focused on <strong>${escapeHtml(selected.display)}</strong> &mdash; <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selected.id)}">open staff profile</button>`;
     } else {
       els.networkSelectionNote.textContent = state.networkMode === "teaching"
         ? "Department overview of shared-course teaching ties. Select a member to inspect their connections."
@@ -6325,9 +6578,16 @@ function syncNetworkControls(people) {
     }
   }
   if (els.networkScopeHelp) {
-    els.networkScopeHelp.textContent = state.networkScope === "selected"
-      ? `Selected member view follows ${selected?.display || "the strongest-connected active member"}. Outside-coauthor thresholds apply only to author ties beyond HRM&OB.`
-      : "Department overview shows coauthorship or shared-course ties among the active HRM&OB roster. Select any node to open an ego network.";
+    if (state.networkMode === "teaching") {
+      const academicYear = state.teachingData?.meta?.academicYear || "the loaded academic year";
+      els.networkScopeHelp.textContent = state.networkScope === "selected"
+        ? `Focus: ${selected?.display || "the selected member"} — ties are shared eligible course offerings in the ${academicYear} Ocasys snapshot.`
+        : `Department overview shows shared eligible course offerings in the ${academicYear} Ocasys snapshot. Choose a named member or select any node to focus.`;
+    } else {
+      els.networkScopeHelp.textContent = state.networkScope === "selected"
+        ? `Focus: ${selected?.display || "the selected member"} — outside-coauthor thresholds apply only beyond HRM&OB; publication ties may predate current appointments.`
+        : "Department overview connects current roster members through publications in the active window; ties may predate their HRM&OB appointments. Choose a name or node to focus.";
+    }
   }
   if (els.networkEmpty) {
     els.networkEmpty.textContent = state.networkMode === "teaching"
@@ -6335,6 +6595,10 @@ function syncNetworkControls(people) {
       : "No coauthorship edges for the current filters.";
   }
   renderNetworkLegend();
+}
+
+function selectedNetworkOptionValue(personId) {
+  return personId ? `person:${personId}` : "department";
 }
 
 function renderNetwork() {
@@ -6479,8 +6743,10 @@ function renderPublicationNetwork(people) {
 }
 
 function renderTeachingNetwork(people) {
+  syncViewContext();
   const activeIds = new Set(people.map((person) => person.id));
   const selectedPersonId = state.networkScope === "selected" ? state.networkPersonId : "";
+  const teachingCourses = (state.teachingData?.courses || []).filter((course) => course.networkEligible);
   const records = (state.teachingData?.records || []).filter((record) => (
     activeIds.has(record.personId) && record.networkEligible
   ));
@@ -6489,12 +6755,21 @@ function renderTeachingNetwork(people) {
   (state.teachingData?.edges || []).forEach((edge) => {
     if (!activeIds.has(edge.source) || !activeIds.has(edge.target)) return;
     const key = `${edge.source}|${edge.target}`;
+    const offerings = teachingCourses.filter((course) => (
+      (course.staffIds || []).includes(edge.source) && (course.staffIds || []).includes(edge.target)
+    )).map((course) => ({
+      code: course.code,
+      offeringCode: course.offeringCode,
+      title: course.title,
+      term: course.term,
+      programme: course.department,
+      url: course.courseUrl,
+    }));
     edgeMap.set(key, {
       source: edge.source,
       target: edge.target,
-      count: edge.count || 0,
-      courseCodes: edge.courseCodes || [],
-      courseTitles: edge.courseTitles || [],
+      count: offerings.length || edge.count || 0,
+      offerings,
       metricLabel: "shared course offerings",
     });
   });
@@ -6520,7 +6795,7 @@ function renderTeachingNetwork(people) {
     count: nodeStats.get(person.id)?.count || 0,
     degree: nodeStats.get(person.id)?.degree || 0,
     strength: nodeStats.get(person.id)?.strength || 0,
-    metricLabel: "listed courses",
+    metricLabel: "course offerings",
     focus: person.id === selectedPersonId,
   }));
   let visibleEdges = edges;
@@ -6539,7 +6814,7 @@ function renderTeachingNetwork(people) {
     els.networkEmpty.textContent = `No shared teaching-course ties for ${selectedPerson.display} under the current filters.`;
   }
   els.networkEmpty.hidden = visibleEdges.length > 0;
-  const model = { mode: "teaching", people, records, nodes, edges, visibleNodes, visibleEdges, selectedPerson };
+  const model = { mode: "teaching", people, records, courses: teachingCourses, nodes, edges, visibleNodes, visibleEdges, selectedPerson };
   drawNetwork(visibleNodes, visibleEdges, [], [], model);
   renderTeachingNetworkSummary(model);
   renderTeachingNetworkInspector(model);
@@ -6551,18 +6826,22 @@ function renderNetworkLegend() {
   if (!els.networkLegend) return;
   if (state.networkMode === "teaching") {
     els.networkLegend.innerHTML = `
-      <span><i class="legend-node"></i> Node size = listed courses</span>
-      <span><i class="legend-count"></i> Number = listed courses</span>
-      <span><i class="legend-line"></i> Line width = shared offerings (1 thin; 2 medium; 5+ strong)</span>
+      <span><i class="legend-node" aria-hidden="true"></i> Node size and number = course-offering records</span>
+      <span><i class="legend-line" aria-hidden="true"></i> Line weight and badges = shared offerings</span>
+      <span><i class="legend-isolate" aria-hidden="true"></i> Dashed node = no shared offering detected</span>
+      <span>Position supports readability and connectedness; it is not a ranking.</span>
     `;
     return;
   }
   const selected = state.networkScope === "selected" && Boolean(state.networkPersonId);
   els.networkLegend.innerHTML = `
-    <span><i class="legend-node"></i> Department node size and number = counted publications</span>
-    <span><i class="legend-line"></i> Line width = shared publications (1 thin; 2 medium; 5+ strong)</span>
-    ${selected && state.networkExternal ? `<span><i class="legend-faculty"></i> Identified coauthors in other FEB departments</span>
-    <span><i class="legend-external"></i> Other outside coauthors; labelled names are the strongest ties</span>` : ""}
+    <span><i class="legend-node" aria-hidden="true"></i> Department node size and number = counted publications</span>
+    <span><i class="legend-line" aria-hidden="true"></i> Line weight and badges = shared publications; red = 5+</span>
+    <span><i class="legend-isolate" aria-hidden="true"></i> Dashed node = no internal tie detected</span>
+    ${selected ? `<span><i class="legend-selected" aria-hidden="true"></i> Filled node = selected member</span>` : ""}
+    ${selected && state.networkExternal ? `<span><i class="legend-faculty" aria-hidden="true"></i> Identified coauthors in other FEB departments</span>
+    <span><i class="legend-external" aria-hidden="true"></i> Other outside coauthors; labelled names are the strongest ties</span>` : ""}
+    <span>Position supports readability and connectedness; it is not a ranking.</span>
   `;
 }
 
@@ -6578,12 +6857,14 @@ function renderNetworkSummaryCards(cards) {
 }
 
 function renderPublicationNetworkSummary(model) {
-  const { people, edges, visibleEdges, selectedPerson, outsideView, showOuterCollaborators, nodes } = model;
+  const { people, edges, visibleEdges, selectedPerson, outsideView, nodes, collaborationPubs } = model;
   if (!selectedPerson) {
     const connectedPublicationCount = new Set(edges.flatMap((edge) => edge.pubIds || [])).size;
     const strongest = edges[0];
+    const connectedMembers = nodes.filter((node) => node.degree > 0).length;
+    const isolatedMembers = Math.max(0, people.length - connectedMembers);
     renderNetworkSummaryCards([
-      { value: people.length, label: "Active members", detail: "Current roster filter" },
+      { value: `${connectedMembers}/${people.length}`, label: "Members with an internal tie", detail: `${isolatedMembers} without a detected tie` },
       { value: edges.length, label: "Internal coauthor ties", detail: "At least one shared publication" },
       { value: connectedPublicationCount, label: "Publications linking colleagues", detail: collaborationWindowLabel() },
       { value: strongest?.count || 0, label: "Strongest internal tie", detail: strongest ? networkEdgePairLabel(strongest, people) : "No detected tie" },
@@ -6591,25 +6872,30 @@ function renderPublicationNetworkSummary(model) {
     return;
   }
   const selectedNode = nodes.find((node) => node.id === selectedPerson.id);
-  const outsideDetail = !state.networkExternal
-    ? "Hidden in the map"
-    : outsideView.hiddenByLimit
-      ? `Showing top ${outsideView.renderedCount} of ${outsideView.qualifyingCount} meeting ${state.networkMinTie}+`
-      : `${outsideView.qualifyingCount} meet the ${state.networkMinTie}+ threshold`;
+  const activeIds = new Set(people.map((person) => person.id));
+  const internallyCoauthoredPubs = collaborationPubs.filter((pub) => (
+    (pub.matchedPeople || []).some((id) => id !== selectedPerson.id && activeIds.has(id))
+  )).length;
+  const internalShare = selectedNode?.count
+    ? `${Math.round((internallyCoauthoredPubs / selectedNode.count) * 100)}% of counted publications`
+    : "No counted publications";
   renderNetworkSummaryCards([
     { value: selectedNode?.count || 0, label: "Counted publications", detail: collaborationWindowLabel() },
     { value: visibleEdges.length, label: "Department coauthors", detail: "Active roster only" },
-    { value: outsideView.totalCount, label: "Detected outside coauthors", detail: "Before the display threshold" },
-    { value: showOuterCollaborators ? outsideView.renderedCount : 0, label: "Outside ties on map", detail: outsideDetail },
+    { value: internallyCoauthoredPubs, label: "Publications with a colleague", detail: internalShare },
+    { value: outsideView.totalCount, label: "Detected outside coauthors", detail: state.networkExternal ? `${outsideView.qualifyingCount} meet the ${state.networkMinTie}+ display threshold` : "Currently hidden on the map" },
   ]);
 }
 
 function renderTeachingNetworkSummary(model) {
-  const { people, records, edges, visibleEdges, selectedPerson, nodes } = model;
+  const { people, courses, edges, visibleEdges, selectedPerson, nodes } = model;
+  const academicYear = state.teachingData?.meta?.academicYear || "Loaded snapshot";
   if (!selectedPerson) {
+    const connectedMembers = nodes.filter((node) => node.degree > 0).length;
+    const isolatedMembers = Math.max(0, people.length - connectedMembers);
     renderNetworkSummaryCards([
-      { value: people.length, label: "Active members", detail: "Current roster filter" },
-      { value: records.length, label: "Listed course records", detail: "Network-eligible records" },
+      { value: `${connectedMembers}/${people.length}`, label: "Members with a shared offering", detail: `${isolatedMembers} without a detected tie` },
+      { value: courses.length, label: "Eligible course offerings", detail: academicYear },
       { value: edges.length, label: "Shared-course ties", detail: "At least one shared offering" },
       { value: edges[0]?.count || 0, label: "Strongest teaching tie", detail: edges[0] ? networkEdgePairLabel(edges[0], people) : "No detected tie" },
     ]);
@@ -6618,24 +6904,31 @@ function renderTeachingNetworkSummary(model) {
   const selectedNode = nodes.find((node) => node.id === selectedPerson.id);
   const sharedOfferings = visibleEdges.reduce((sum, edge) => sum + (Number(edge.count) || 0), 0);
   renderNetworkSummaryCards([
-    { value: selectedNode?.count || 0, label: "Listed courses", detail: selectedPerson.display },
+    { value: selectedNode?.count || 0, label: "Course-offering records", detail: academicYear },
     { value: visibleEdges.length, label: "Teaching partners", detail: "Shared course offerings" },
-    { value: sharedOfferings, label: "Pair-course links", detail: "Summed across visible ties" },
+    { value: sharedOfferings, label: "Pair-offering links", detail: "Summed across visible ties" },
     { value: visibleEdges[0]?.count || 0, label: "Strongest teaching tie", detail: visibleEdges[0] ? networkOtherPersonLabel(visibleEdges[0], selectedPerson.id, people) : "No detected tie" },
   ]);
 }
 
 function renderPublicationNetworkInspector(model) {
   if (!els.networkInspector) return;
-  const { people, edges, visibleEdges, selectedPerson, outsideView, showOuterCollaborators, collaborationPubs } = model;
+  const { people, edges, nodes, visibleEdges, selectedPerson, outsideView, showOuterCollaborators, collaborationPubs } = model;
   if (!selectedPerson) {
     const strongest = edges[0];
+    const mostConnected = nodes.slice()
+      .filter((node) => node.degree > 0)
+      .sort((a, b) => b.degree - a.degree || b.strength - a.strength || b.count - a.count || a.label.localeCompare(b.label))
+      .slice(0, 4);
     els.networkInspector.innerHTML = `
       <p class="eye">Selection details</p>
       <h3 class="network-inspector-title">Department overview</h3>
       <p>${edges.length ? `${edges.length} internal coauthor ties connect the active roster.` : "No internal coauthor ties match the current filters."}</p>
       ${strongest ? `<div class="network-inspector-stats"><div class="network-inspector-stat"><strong>${strongest.count}</strong><span>shared publications in the strongest tie</span></div></div>
       <p><strong>${escapeHtml(networkEdgePairLabel(strongest, people))}</strong></p>` : ""}
+      ${mostConnected.length ? `<p><strong>Most connected in this filtered map</strong></p><ul class="network-inspector-list">${mostConnected.map((node) => (
+        `<li><button class="section-link" type="button" data-network-focus-person="${escapeHtml(node.id)}">${escapeHtml(node.label)}</button> <span class="small-muted">${node.degree} coauthor${node.degree === 1 ? "" : "s"} · ${node.strength} pair-publication links</span></li>`
+      )).join("")}</ul>` : ""}
       <p>Select a department node to open that member&rsquo;s ego network and inspect outside coauthors.</p>`;
     return;
   }
@@ -6647,32 +6940,33 @@ function renderPublicationNetworkInspector(model) {
     const scope = selectedOutsideNode.scope === "faculty"
       ? `Other FEB department${selectedOutsideNode.department ? `: ${selectedOutsideNode.department}` : ""}`
       : "Outside HRM&OB";
-    const evidenceItems = selectedOutsideEdge.pubIds.slice(0, 8).map((id) => pubById.get(id)).filter(Boolean);
+    const evidenceItems = selectedOutsideEdge.pubIds.map((id) => pubById.get(id)).filter(Boolean);
     els.networkInspector.innerHTML = `
       <p class="eye">Selected coauthor tie</p>
       <h3 class="network-inspector-title">${escapeHtml(selectedOutsideNode.label)}</h3>
       <div class="network-inspector-stats">
-        <div class="network-inspector-stat"><strong>${selectedOutsideEdge.count}</strong><span>shared publications with ${escapeHtml(selectedPerson.display)}</span></div>
+        <div class="network-inspector-stat"><strong>${selectedOutsideEdge.count}</strong><span>shared publication${selectedOutsideEdge.count === 1 ? "" : "s"} with ${escapeHtml(selectedPerson.display)}</span></div>
         <div class="network-inspector-stat"><strong>${escapeHtml(scope)}</strong><span>coauthor category</span></div>
       </div>
-      <p><strong>Supporting publications</strong></p>
-      <ul class="network-inspector-list">${evidenceItems.map((pub) => `<li>${escapeHtml(`${pub.year || "Year unknown"}: ${pub.title}`)}</li>`).join("") || "<li>No publication title available.</li>"}</ul>
-      ${selectedOutsideEdge.pubIds.length > evidenceItems.length ? `<p class="small-muted">Plus ${selectedOutsideEdge.pubIds.length - evidenceItems.length} more supporting publication${selectedOutsideEdge.pubIds.length - evidenceItems.length === 1 ? "" : "s"} in the evidence table.</p>` : ""}
+      <details class="network-evidence-details"><summary>Show ${evidenceItems.length} supporting publication${evidenceItems.length === 1 ? "" : "s"}</summary>${renderPublicationEvidenceList(evidenceItems)}</details>
       <button class="section-link" type="button" data-network-clear-collaborator>Back to all visible coauthors</button>
       <p class="small-muted">Outside coauthors are matched from publication author-name strings, not a complete identity registry. Name variants can split one person and identical names can merge people. Other-FEB identities are separated where benchmark matches permit.</p>`;
     return;
   }
   const strongestOutside = outsideView.allEdges[0];
+  const strongestInternal = visibleEdges[0];
   const qualifying = outsideView.qualifyingEdges.slice(0, 6);
   els.networkInspector.innerHTML = `
     <p class="eye">Selected member</p>
     <h3 class="network-inspector-title">${escapeHtml(selectedPerson.display)}</h3>
     <div class="network-inspector-stats">
       <div class="network-inspector-stat"><strong>${visibleEdges.length}</strong><span>department coauthors</span></div>
+      <div class="network-inspector-stat"><strong>${strongestInternal?.count || 0}</strong><span>shared publications in strongest internal tie</span></div>
       <div class="network-inspector-stat"><strong>${outsideView.totalCount}</strong><span>detected outside coauthors</span></div>
       <div class="network-inspector-stat"><strong>${strongestOutside?.count || 0}</strong><span>shared publications in strongest outside tie</span></div>
     </div>
-    ${state.networkExternal ? `<p>Showing ${outsideView.renderedCount} of ${outsideView.qualifyingCount} outside ties that meet the ${state.networkMinTie}+ shared-publication threshold${outsideView.hiddenByLimit ? `; the map is capped at ${NETWORK_OUTSIDE_NODE_LIMIT} nodes for readability` : ""}.</p>` : "<p>Outside coauthors are currently hidden. Turn them on to compare external tie strength.</p>"}
+    ${strongestInternal ? `<p>Strongest internal connection: <button class="section-link" type="button" data-network-focus-person="${escapeHtml(strongestInternal.source === selectedPerson.id ? strongestInternal.target : strongestInternal.source)}">${escapeHtml(networkOtherPersonLabel(strongestInternal, selectedPerson.id, people))}</button> <span class="small-muted">${strongestInternal.count} shared publication${strongestInternal.count === 1 ? "" : "s"}</span></p>` : ""}
+    ${state.networkExternal ? `<p>Showing ${outsideView.renderedCount} of ${outsideView.qualifyingCount} outside ties that meet the ${state.networkMinTie}+ shared-publication threshold${outsideView.hiddenByLimit ? `; this viewport caps the map at ${outsideView.renderLimit} outside nodes for readability` : ""}.</p>` : "<p>Outside coauthors are currently hidden. Turn them on to compare external tie strength.</p>"}
     ${showOuterCollaborators && qualifying.length ? `<p><strong>Strongest visible outside ties</strong></p><ul class="network-inspector-list">${qualifying.map((edge) => {
       const node = outsideNodeById.get(edge.target);
       return `<li><button class="section-link" type="button" data-network-collaborator-id="${escapeHtml(edge.target)}">${escapeHtml(node?.label || edge.target)}</button> <span class="small-muted">${edge.count} shared publication${edge.count === 1 ? "" : "s"}</span></li>`;
@@ -6683,13 +6977,20 @@ function renderPublicationNetworkInspector(model) {
 
 function renderTeachingNetworkInspector(model) {
   if (!els.networkInspector) return;
-  const { people, edges, visibleEdges, selectedPerson } = model;
+  const { people, edges, nodes, visibleEdges, selectedPerson } = model;
+  const academicYear = state.teachingData?.meta?.academicYear || "the loaded academic year";
   if (!selectedPerson) {
+    const mostConnected = nodes.slice().filter((node) => node.degree > 0)
+      .sort((a, b) => b.degree - a.degree || b.strength - a.strength || a.label.localeCompare(b.label))
+      .slice(0, 4);
     els.networkInspector.innerHTML = `
       <p class="eye">Selection details</p>
       <h3 class="network-inspector-title">Department teaching overview</h3>
-      <p>${edges.length ? `${edges.length} shared-course ties appear in the currently loaded teaching records.` : "No shared-course ties match the current roster."}</p>
-      <p>Select a member to isolate their teaching relationships. These are administrative teaching links, not evidence of research collaboration.</p>`;
+      <p>${edges.length ? `${edges.length} shared-offering ties appear in the ${escapeHtml(academicYear)} Ocasys records.` : "No shared-offering ties match the loaded records and roster."}</p>
+      ${mostConnected.length ? `<p><strong>Most connected in this teaching map</strong></p><ul class="network-inspector-list">${mostConnected.map((node) => (
+        `<li><button class="section-link" type="button" data-network-focus-person="${escapeHtml(node.id)}">${escapeHtml(node.label)}</button> <span class="small-muted">${node.degree} teaching partner${node.degree === 1 ? "" : "s"}</span></li>`
+      )).join("")}</ul>` : ""}
+      <p>Select a member to isolate their teaching relationships. Ties mean lecturer/coordinator listings on the same eligible non-thesis course offering; they are not evidence of research collaboration or teaching quality.</p>`;
     return;
   }
   const strongest = visibleEdges[0];
@@ -6698,18 +6999,44 @@ function renderTeachingNetworkInspector(model) {
     <h3 class="network-inspector-title">${escapeHtml(selectedPerson.display)}</h3>
     <div class="network-inspector-stats">
       <div class="network-inspector-stat"><strong>${visibleEdges.length}</strong><span>teaching partners</span></div>
-      <div class="network-inspector-stat"><strong>${visibleEdges.reduce((sum, edge) => sum + (Number(edge.count) || 0), 0)}</strong><span>pair-course links</span></div>
+      <div class="network-inspector-stat"><strong>${visibleEdges.reduce((sum, edge) => sum + (Number(edge.count) || 0), 0)}</strong><span>pair-offering links</span></div>
       <div class="network-inspector-stat"><strong>${strongest?.count || 0}</strong><span>shared offerings in strongest tie</span></div>
     </div>
-    ${strongest ? `<p>Strongest visible teaching connection: <strong>${escapeHtml(networkOtherPersonLabel(strongest, selectedPerson.id, people))}</strong>.</p>` : "<p>No shared teaching-course ties match the current records.</p>"}
+    ${strongest ? `<p>Strongest visible teaching connection: <strong>${escapeHtml(networkOtherPersonLabel(strongest, selectedPerson.id, people))}</strong></p>${renderTeachingOfferingEvidence(strongest.offerings || [])}` : "<p>No shared teaching-course ties match the current records.</p>"}
     <button class="section-link" type="button" data-network-open-staff="${escapeHtml(selectedPerson.id)}">Open staff profile</button>
-    <p class="small-muted">Teaching ties reflect the loaded course records and should not be interpreted as research collaboration or teaching quality.</p>`;
+    <p class="small-muted">Source: public Ocasys ${escapeHtml(academicYear)} course-search, programme-scheme, and course-page records. Absence means no eligible shared listing was detected in this loaded snapshot.</p>`;
+}
+
+function renderPublicationEvidenceList(publications, limit = Infinity) {
+  const visible = publications.slice(0, limit);
+  if (!visible.length) return `<p class="small-muted">No publication title is available.</p>`;
+  return `<ul class="network-evidence-list">${visible.map((pub) => {
+    const doi = typeof pub.doi === "string" && /^10\.\d{4,9}\//.test(pub.doi) ? pub.doi : "";
+    const link = doi
+      ? `<a href="https://doi.org/${escapeHtml(doi)}" target="_blank" rel="noopener noreferrer">DOI</a>`
+      : (typeof pub.url === "string" && /^https?:\/\//.test(pub.url)
+        ? `<a href="${escapeHtml(pub.url)}" target="_blank" rel="noopener noreferrer">Record</a>`
+        : "");
+    return `<li><span>${escapeHtml(`${pub.year || "Year unknown"}: ${pub.title}`)}</span>${link ? ` ${link}` : ""}</li>`;
+  }).join("")}</ul>`;
+}
+
+function renderTeachingOfferingEvidence(offerings, limit = Infinity) {
+  const visible = offerings.slice(0, limit);
+  if (!visible.length) return "";
+  return `<ul class="network-evidence-list">${visible.map((offering) => {
+    const link = typeof offering.url === "string" && /^https?:\/\//.test(offering.url)
+      ? `<a href="${escapeHtml(offering.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(offering.code || "Course")}</a>`
+      : escapeHtml(offering.code || "Course");
+    const context = [offering.term, offering.programme].filter(Boolean).join(" · ");
+    return `<li>${link}: ${escapeHtml(offering.title || "Untitled course")}${context ? ` <span class="small-muted">${escapeHtml(context)}</span>` : ""}</li>`;
+  }).join("")}</ul>`;
 }
 
 function networkSvgDescription(model, nodes, edges, collaboratorNodes, collaboratorEdges) {
   const relationship = model.mode === "teaching" ? "shared-course" : "coauthor";
   const focus = model.selectedPerson ? ` focused on ${model.selectedPerson.display}` : " in the department overview";
-  return `Interactive ${relationship} network${focus}. ${nodes.length} department members, ${edges.length} internal ties, and ${collaboratorNodes.length} outside coauthors are visible. Activate a department node to focus it${collaboratorEdges.length ? ", or activate an outside coauthor to inspect supporting publications" : ""}. The evidence table provides the same relationships as text.`;
+  return `Interactive ${relationship} network${focus}; ${nodes.length} department members, ${edges.length} internal ties, and ${collaboratorNodes.length} outside coauthors are visible. Position supports a readable connectedness layout and does not represent quality, status, or impact. Use arrow keys to move among nodes and Enter or Space to activate one. Activate a department node to focus it${collaboratorEdges.length ? ", or activate an outside coauthor to inspect supporting publications" : ""}. The evidence table provides the relationships as text.`;
 }
 
 function networkEdgePairLabel(edge, people) {
@@ -6725,12 +7052,12 @@ function networkOtherPersonLabel(edge, selectedId, people) {
 function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [], model = {}) {
   const svg = els.networkSvg;
   const rect = svg.getBoundingClientRect();
-  const width = Math.max(560, rect.width || svg.clientWidth || 900);
+  const width = Math.max(320, Math.round(rect.width || svg.clientWidth || 900));
   const height = Math.max(480, rect.height || 620);
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.setAttribute("role", "group");
   svg.setAttribute("aria-labelledby", "network-svg-title");
-  svg.setAttribute("aria-describedby", "network-svg-description network-map-description");
+  svg.setAttribute("aria-describedby", "network-svg-description");
   svg.innerHTML = "";
   const svgHeading = document.createElementNS("http://www.w3.org/2000/svg", "title");
   svgHeading.setAttribute("id", "network-svg-title");
@@ -6743,8 +7070,22 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
   if (els.networkMapDescription) els.networkMapDescription.textContent = svgDescription.textContent;
   const placed = layoutNetwork(nodes, edges, width, height);
   const byId = new Map(placed.map((node) => [node.id, node]));
+  const visibleDegreeById = new Map(placed.map((node) => [node.id, 0]));
+  edges.forEach((edge) => {
+    visibleDegreeById.set(edge.source, (visibleDegreeById.get(edge.source) || 0) + 1);
+    visibleDegreeById.set(edge.target, (visibleDegreeById.get(edge.target) || 0) + 1);
+  });
   const placedExternal = layoutExternalNodes(collaboratorNodes, collaboratorEdges, placed, width, height);
   const externalById = new Map(placedExternal.map((node) => [node.id, node]));
+  const highlightNetworkEdges = ({ personId = "", collaboratorId = "" }, active) => {
+    svg.querySelectorAll(".edge, .external-edge, .faculty-edge").forEach((path) => {
+      const incident = personId
+        ? path.dataset.edgeSource === personId || path.dataset.edgeTarget === personId
+        : path.dataset.edgeTarget === collaboratorId;
+      path.classList.toggle("is-highlighted", Boolean(active && incident));
+      path.classList.toggle("is-muted", Boolean(active && !incident));
+    });
+  };
 
   const appendCollaboratorEdge = (edge) => {
     const a = byId.get(edge.source);
@@ -6754,12 +7095,15 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     path.setAttribute("d", externalEdgePath(a, b, width, height));
     const facultyEdge = edge.scope === "faculty";
     path.setAttribute("class", facultyEdge ? "faculty-edge" : "external-edge");
+    path.dataset.edgeSource = edge.source;
+    path.dataset.edgeTarget = edge.target;
     path.setAttribute("stroke-width", String(collaboratorEdgeWidth(edge).toFixed(2)));
     path.style.opacity = edge.target === state.networkCollaboratorId ? "0.96" : facultyEdge ? "0.68" : "0.52";
     path.setAttribute("aria-hidden", "true");
+    const publicationLabel = `${edge.count} shared publication${edge.count === 1 ? "" : "s"}`;
     const title = facultyEdge
-      ? `${a.label} + ${b.label} (${b.department || "other department"}): ${edge.count} shared publications`
-      : `${a.label} + ${b.label}: ${edge.count} shared publications`;
+      ? `${a.label} + ${b.label} (${b.department || "other department"}): ${publicationLabel}`
+      : `${a.label} + ${b.label}: ${publicationLabel}`;
     path.appendChild(svgTitle(title));
     svg.appendChild(path);
   };
@@ -6773,35 +7117,44 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
         ? Math.max(5.8, Math.min(10.5, 4.2 + Math.sqrt(node.count || 0) * 1.55))
         : Math.max(3, Math.min(7, 2.6 + Math.sqrt(node.count || 0) * 1.2));
     const scopeLabel = facultyNode ? `other FEB department (${node.department || "department unknown"})` : "outside HRM&OB";
+    group.setAttribute("class", `network-collaborator-node${node.selected ? " selected" : ""}`);
     group.setAttribute("data-network-collaborator-id", node.id);
-    group.setAttribute("tabindex", "0");
+    group.setAttribute("tabindex", node.selected ? "0" : "-1");
     group.setAttribute("focusable", "true");
     group.setAttribute("role", "button");
     group.setAttribute("aria-pressed", String(Boolean(node.selected)));
-    group.setAttribute("aria-label", `${node.label}, ${scopeLabel}: ${node.tieCount || node.count || 0} shared publications. Show supporting publications.`);
+    const sharedPublicationCount = node.tieCount || node.count || 0;
+    const sharedPublicationLabel = `${sharedPublicationCount} shared publication${sharedPublicationCount === 1 ? "" : "s"}`;
+    group.setAttribute("aria-label", `${node.label}, ${scopeLabel}: ${sharedPublicationLabel}. ${node.selected ? "Clear coauthor selection." : "Show supporting publications."}`);
     group.style.cursor = "pointer";
+    group.addEventListener("mouseenter", () => highlightNetworkEdges({ collaboratorId: node.id }, true));
+    group.addEventListener("mouseleave", () => highlightNetworkEdges({ collaboratorId: node.id }, false));
+    group.addEventListener("focus", () => highlightNetworkEdges({ collaboratorId: node.id }, true));
+    group.addEventListener("blur", () => highlightNetworkEdges({ collaboratorId: node.id }, false));
     const hitCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     hitCircle.setAttribute("cx", node.x);
     hitCircle.setAttribute("cy", node.y);
     hitCircle.setAttribute("r", String(Math.max(12, radius + 8)));
     hitCircle.setAttribute("class", "node-hit");
+    hitCircle.setAttribute("aria-hidden", "true");
     group.appendChild(hitCircle);
     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius.toFixed(1)));
     circle.setAttribute("class", `${facultyNode ? "faculty-node" : "external-node"}${node.aggregate ? " aggregate" : ""}${node.priority ? " priority" : ""}`);
+    circle.setAttribute("aria-hidden", "true");
     if (node.selected) {
       circle.style.opacity = "1";
       circle.style.strokeWidth = "3.4";
     }
     const nodeTitle = facultyNode
-      ? `${node.label}: ${node.tieCount || node.count} shared publications with the selected member (${node.department || "other department"})`
-      : `${node.label}: ${node.tieCount || node.count} shared publications with the selected member`;
+      ? `${node.label}: ${sharedPublicationLabel} with the selected member (${node.department || "other department"})`
+      : `${node.label}: ${sharedPublicationLabel} with the selected member`;
     circle.appendChild(svgTitle(nodeTitle));
     group.appendChild(circle);
 
-    if (facultyNode || node.priority || node.aggregate) {
+    if (facultyNode || node.shortLabel) {
       const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
       const labelPlacement = facultyNode
         ? collaboratorLabelPlacement(node, radius, width, height)
@@ -6810,6 +7163,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
       label.setAttribute("y", labelPlacement.y);
       label.setAttribute("text-anchor", labelPlacement.anchor);
       label.setAttribute("class", `${facultyNode ? "faculty-label" : "external-label"}${node.aggregate ? " aggregate" : ""}${node.priority ? " priority" : ""}`);
+      label.setAttribute("aria-hidden", "true");
       if (facultyNode) {
         const nameLine = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
         nameLine.setAttribute("x", labelPlacement.x);
@@ -6824,7 +7178,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
           label.appendChild(departmentLine);
         }
       } else {
-        label.textContent = node.shortLabel;
+        label.textContent = `${node.shortLabel} · ${node.tieCount || node.count || 0}`;
       }
       group.appendChild(label);
     }
@@ -6834,17 +7188,47 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
   collaboratorEdges.filter((edge) => edge.scope !== "faculty").forEach(appendCollaboratorEdge);
   placedExternal.filter((node) => node.scope !== "faculty").forEach(appendCollaboratorNode);
 
+  const edgeLabelThreshold = model.selectedPerson ? 1 : model.mode === "teaching" ? 2 : 3;
+  const edgeLabelLimit = model.selectedPerson ? 12 : 9;
+  const labelledEdgeKeys = new Set(edges
+    .filter((edge) => edge.count >= edgeLabelThreshold)
+    .slice(0, edgeLabelLimit)
+    .map((edge) => `${edge.source}|${edge.target}`));
+  const edgeLabels = [];
   edges.forEach((edge) => {
     const a = byId.get(edge.source);
     const b = byId.get(edge.target);
     if (!a || !b) return;
+    const geometry = edgeGeometry(edge, a, b, placed);
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", edgePath(edge, a, b, placed));
-    path.setAttribute("class", "edge");
+    path.setAttribute("d", geometry.path);
+    path.setAttribute("class", `edge ${edge.count >= 5 ? "edge-strong" : edge.count >= 2 ? "edge-medium" : "edge-weak"}`);
+    path.dataset.edgeSource = edge.source;
+    path.dataset.edgeTarget = edge.target;
     path.setAttribute("stroke-width", String(staffEdgeWidth(edge).toFixed(2)));
     path.setAttribute("aria-hidden", "true");
     path.appendChild(svgTitle(`${a.label} + ${b.label}: ${edge.count} ${edge.metricLabel || "shared publications"}`));
     svg.appendChild(path);
+    if (labelledEdgeKeys.has(`${edge.source}|${edge.target}`)) edgeLabels.push({ edge, geometry });
+  });
+
+  edgeLabels.forEach(({ edge, geometry }) => {
+    const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    group.setAttribute("class", "edge-count-label");
+    group.setAttribute("aria-hidden", "true");
+    const badge = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    badge.setAttribute("cx", geometry.labelX.toFixed(1));
+    badge.setAttribute("cy", geometry.labelY.toFixed(1));
+    badge.setAttribute("r", edge.count >= 10 ? "11" : "9.5");
+    badge.setAttribute("class", edge.count >= 5 ? "edge-count-badge strong" : "edge-count-badge");
+    group.appendChild(badge);
+    const count = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    count.setAttribute("x", geometry.labelX.toFixed(1));
+    count.setAttribute("y", geometry.labelY.toFixed(1));
+    count.setAttribute("class", "edge-count-text");
+    count.textContent = String(edge.count);
+    group.appendChild(count);
+    svg.appendChild(group);
   });
 
   collaboratorEdges.filter((edge) => edge.scope === "faculty").forEach(appendCollaboratorEdge);
@@ -6852,26 +7236,44 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
 
   placed.forEach((node) => {
     const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    group.setAttribute("class", "network-person-node");
+    group.setAttribute("class", `network-person-node${node.focus ? " selected" : ""}`);
     group.setAttribute("data-network-person-id", node.id);
-    group.setAttribute("tabindex", "0");
+    const keyboardTarget = !state.networkCollaboratorId
+      && node.id === (state.networkPersonId || placed[0]?.id);
+    group.setAttribute("tabindex", keyboardTarget ? "0" : "-1");
     group.setAttribute("focusable", "true");
     group.setAttribute("role", "button");
     group.setAttribute("aria-pressed", String(Boolean(node.focus)));
-    group.setAttribute("aria-label", `${node.label}: ${node.count} ${node.metricLabel || "publications"}, ${node.degree || 0} visible department ties. Focus this member.`);
+    const visibleDegree = visibleDegreeById.get(node.id) || 0;
+    group.setAttribute("aria-label", `${node.label}: ${node.count} ${node.metricLabel || "publications"}, ${visibleDegree} visible department tie${visibleDegree === 1 ? "" : "s"}. ${node.focus ? "Return to the department overview." : "Focus this member."}`);
+    group.addEventListener("mouseenter", () => highlightNetworkEdges({ personId: node.id }, true));
+    group.addEventListener("mouseleave", () => highlightNetworkEdges({ personId: node.id }, false));
+    group.addEventListener("focus", () => highlightNetworkEdges({ personId: node.id }, true));
+    group.addEventListener("blur", () => highlightNetworkEdges({ personId: node.id }, false));
     const radius = Math.max(10, Math.min(38, 8 + Math.sqrt(node.count || 0) * 3.8));
     const hitCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     hitCircle.setAttribute("cx", node.x);
     hitCircle.setAttribute("cy", node.y);
     hitCircle.setAttribute("r", String(radius + 22));
     hitCircle.setAttribute("class", "node-hit");
+    hitCircle.setAttribute("aria-hidden", "true");
     group.appendChild(hitCircle);
 
+    if (node.focus) {
+      const halo = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      halo.setAttribute("cx", node.x);
+      halo.setAttribute("cy", node.y);
+      halo.setAttribute("r", String(radius + 8));
+      halo.setAttribute("class", "node-focus-halo");
+      halo.setAttribute("aria-hidden", "true");
+      group.appendChild(halo);
+    }
     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", String(radius));
-    circle.setAttribute("class", `node${node.count ? "" : " low"}${node.focus ? " focus" : ""}`);
+    circle.setAttribute("class", `node${node.count ? "" : " low"}${node.degree ? "" : " isolated"}${node.focus ? " focus" : ""}`);
+    circle.setAttribute("aria-hidden", "true");
     circle.appendChild(svgTitle(`${node.label}: ${node.count} ${node.metricLabel || "publications"}, FTE ${node.fte}`));
     group.appendChild(circle);
 
@@ -6879,6 +7281,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     countLabel.setAttribute("x", node.x);
     countLabel.setAttribute("y", node.y);
     countLabel.setAttribute("class", "node-count");
+    countLabel.setAttribute("aria-hidden", "true");
     countLabel.textContent = String(node.count || 0);
     group.appendChild(countLabel);
 
@@ -6888,20 +7291,68 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     label.setAttribute("y", labelPlacement.y);
     label.setAttribute("text-anchor", labelPlacement.anchor);
     label.setAttribute("class", "node-label");
+    label.setAttribute("aria-hidden", "true");
     label.textContent = node.label;
     group.appendChild(label);
     svg.appendChild(group);
+  });
+  declutterCompactNetworkLabels(svg, width);
+}
+
+function declutterCompactNetworkLabels(svg, width) {
+  if (width >= 560) return;
+  const paddedBox = (element, padding = 3) => {
+    try {
+      const box = element.getBBox();
+      return {
+        left: box.x - padding,
+        right: box.x + box.width + padding,
+        top: box.y - padding,
+        bottom: box.y + box.height + padding,
+      };
+    } catch (_error) {
+      return null;
+    }
+  };
+  const overlaps = (a, b) => Boolean(a && b
+    && a.left < b.right
+    && a.right > b.left
+    && a.top < b.bottom
+    && a.bottom > b.top);
+  const protectedBoxes = [
+    ...svg.querySelectorAll(".node-label"),
+    ...svg.querySelectorAll("circle.node"),
+  ].map((element) => paddedBox(element, 4)).filter(Boolean);
+  const occupied = protectedBoxes.slice();
+
+  svg.querySelectorAll(".edge-count-label").forEach((label) => {
+    const box = paddedBox(label, 2);
+    if (occupied.some((placed) => overlaps(box, placed))) {
+      label.classList.add("collision-hidden");
+      return;
+    }
+    if (box) occupied.push(box);
+  });
+
+  svg.querySelectorAll(".faculty-label, .external-label.priority").forEach((label) => {
+    const box = paddedBox(label, 3);
+    if (occupied.some((placed) => overlaps(box, placed))) {
+      label.classList.add("collision-hidden");
+      return;
+    }
+    if (box) occupied.push(box);
   });
 }
 
 function layoutNetwork(nodes, edges, width, height) {
   const cx = width / 2;
   const cy = height / 2;
-  const margin = 76;
-  const innerRx = Math.max(105, width * 0.16);
-  const innerRy = Math.max(84, height * 0.145);
-  const outerRx = Math.max(205, width * 0.34);
-  const outerRy = Math.max(160, height * 0.29);
+  const compact = width < 560;
+  const margin = compact ? 46 : 76;
+  const innerRx = compact ? Math.max(70, width * 0.22) : Math.max(105, width * 0.16);
+  const innerRy = compact ? Math.max(88, height * 0.18) : Math.max(84, height * 0.145);
+  const outerRx = compact ? Math.max(124, width * 0.38) : Math.max(205, width * 0.34);
+  const outerRy = compact ? Math.max(158, height * 0.31) : Math.max(160, height * 0.29);
   const centrality = networkLayoutCentrality(nodes);
   const sorted = nodes.slice().map((node) => ({
     ...node,
@@ -6916,8 +7367,8 @@ function layoutNetwork(nodes, edges, width, height) {
   });
   if (!sorted.length) return [];
   const placed = [{ ...sorted[0], x: cx, y: cy }];
-  const inner = sorted.slice(1, Math.min(sorted.length, 7));
-  const outer = sorted.slice(7);
+  const inner = sorted.slice(1, Math.min(sorted.length, 7)).sort((a, b) => a.label.localeCompare(b.label));
+  const outer = sorted.slice(7).sort((a, b) => a.label.localeCompare(b.label));
   inner.forEach((node, index) => {
     const angle = -Math.PI / 2 + (Math.PI * 2 * index) / Math.max(1, inner.length);
     placed.push({
@@ -6952,10 +7403,16 @@ function collaboratorLabelPlacement(node, radius, width, height) {
   const uy = dy / length;
   const offset = radius + 16;
   const verticalNudge = uy < -0.35 ? -1 : 3;
+  const fitted = fitNetworkLabelX(
+    clamp(node.x + ux * offset, 28, width - 28),
+    ux > 0.28 ? "start" : ux < -0.28 ? "end" : "middle",
+    node.label,
+    width,
+  );
   return {
-    x: clamp(node.x + ux * offset, 58, width - 58),
+    x: fitted.x,
     y: clamp(node.y + uy * offset + verticalNudge, 38, height - 38),
-    anchor: ux > 0.28 ? "start" : ux < -0.28 ? "end" : "middle",
+    anchor: fitted.anchor,
   };
 }
 
@@ -6975,11 +7432,33 @@ function internalNodeLabelPlacement(node, radius, width, height) {
   const ux = dx / length;
   const uy = dy / length;
   const offset = radius + 18;
+  const fitted = fitNetworkLabelX(
+    clamp(node.x + ux * offset, 24, width - 24),
+    ux > 0.28 ? "start" : ux < -0.28 ? "end" : "middle",
+    node.label,
+    width,
+  );
   return {
-    x: clamp(node.x + ux * offset, 50, width - 50),
+    x: fitted.x,
     y: clamp(node.y + uy * offset + 5, 30, height - 30),
-    anchor: ux > 0.28 ? "start" : ux < -0.28 ? "end" : "middle",
+    anchor: fitted.anchor,
   };
+}
+
+function fitNetworkLabelX(x, anchor, label, width) {
+  const inset = width < 560 ? 12 : 18;
+  const characterWidth = width < 560 ? 6.6 : 7.3;
+  const estimatedWidth = Math.min(width * 0.58, Math.max(42, String(label || "").length * characterWidth));
+  if (anchor === "start" && x + estimatedWidth > width - inset) {
+    return { x: width - inset, anchor: "end" };
+  }
+  if (anchor === "end" && x - estimatedWidth < inset) {
+    return { x: inset, anchor: "start" };
+  }
+  if (anchor === "middle") {
+    return { x: clamp(x, inset + estimatedWidth / 2, width - inset - estimatedWidth / 2), anchor };
+  }
+  return { x, anchor };
 }
 
 function staffEdgeWidth(edge) {
@@ -7006,9 +7485,10 @@ function layoutExternalNodes(externalNodes, externalEdges, internalNodes, width,
   const facultyNodes = externalNodes
     .filter((node) => node.scope === "faculty")
     .sort((a, b) => b.count - a.count || b.strength - a.strength || a.label.localeCompare(b.label));
-  const facultyMargin = 92;
-  const facultyRx = Math.max(210, width * 0.385);
-  const facultyRy = Math.max(160, height * 0.355);
+  const compact = width < 560;
+  const facultyMargin = compact ? 48 : 92;
+  const facultyRx = compact ? Math.max(126, width * 0.38) : Math.max(210, width * 0.385);
+  const facultyRy = compact ? Math.max(150, height * 0.33) : Math.max(160, height * 0.355);
   facultyNodes.forEach((node, index) => {
     const count = Math.max(1, facultyNodes.length);
     const ring = Math.floor(index / Math.max(1, Math.ceil(count / 2)));
@@ -7090,7 +7570,7 @@ function layoutExternalNodes(externalNodes, externalEdges, internalNodes, width,
   return placed;
 }
 
-function edgePath(edge, a, b, nodes) {
+function edgeGeometry(edge, a, b, nodes) {
   const dx = b.x - a.x;
   const dy = b.y - a.y;
   const len = Math.hypot(dx, dy) || 1;
@@ -7112,7 +7592,11 @@ function edgePath(edge, a, b, nodes) {
 
   const cx = (a.x + b.x) / 2 + nx * bend * sign;
   const cy = (a.y + b.y) / 2 + ny * bend * sign;
-  return `M ${a.x.toFixed(1)} ${a.y.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
+  return {
+    path: `M ${a.x.toFixed(1)} ${a.y.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`,
+    labelX: a.x * 0.25 + cx * 0.5 + b.x * 0.25,
+    labelY: a.y * 0.25 + cy * 0.5 + b.y * 0.25,
+  };
 }
 
 function externalEdgePath(a, b, width, height) {
@@ -7192,30 +7676,39 @@ function renderPublicationNetworkTable(model) {
   const note = allRows.length > limitedRows.length
     ? `<p class="small-muted">Showing the ${NETWORK_EVIDENCE_ROW_LIMIT} strongest of ${allRows.length} qualifying relationships. Counts and summary totals still use all detected ties.</p>`
     : "";
+  const mapCapNote = showOuterCollaborators && outsideView.hiddenByLimit
+    ? `<p class="small-muted">The map displays the strongest ${outsideView.renderedCount} outside ties on this viewport; the table can include additional relationships meeting the threshold.</p>`
+    : "";
   const rows = limitedRows.map(({ edge, relationship, type }) => [
     relationship,
     escapeHtml(type),
     edge.count,
     escapeHtml(yearSetLabel(new Set((edge.pubIds || []).map((id) => pubById.get(id)?.year).filter(Number.isFinite)))),
-    escapeHtml((edge.pubIds || []).slice(0, 4).map((id) => {
-      const pub = pubById.get(id);
-      return pub ? `${pub.year || "Year unknown"}: ${pub.title}` : "";
-    }).filter(Boolean).join("; ")),
+    renderPublicationEvidenceList((edge.pubIds || []).map((id) => pubById.get(id)).filter(Boolean), 4),
   ]);
-  els.networkTableWrap.innerHTML = `${note}<table id="network-table"></table>`;
+  els.networkTableWrap.innerHTML = `${note}${mapCapNote}<table id="network-table"></table>`;
   const table = document.getElementById("network-table");
   setTable(table, ["Coauthor relationship", "Type", "Shared publications", "Years", "Supporting examples"], rows, [false, false, true, false, false]);
   table.insertAdjacentHTML("afterbegin", `<caption class="visually-hidden">Publication relationships shown in the network</caption>`);
+  limitedRows.forEach((row, index) => {
+    if (!row.selected) return;
+    const tableRow = table.tBodies[0]?.rows[index];
+    tableRow?.classList.add("network-evidence-row-selected");
+    tableRow?.setAttribute("aria-current", "true");
+  });
 }
 
 function renderTeachingNetworkTable(edges) {
   const people = peopleById();
   const limitedEdges = edges.slice(0, NETWORK_EVIDENCE_ROW_LIMIT);
-  const rows = limitedEdges.map((edge) => [
-    escapeHtml(`${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`),
-    edge.count,
-    escapeHtml((edge.courseTitles || []).slice(0, 5).join("; ")),
-  ]);
+  const selectedId = state.networkScope === "selected" ? state.networkPersonId : "";
+  const rows = limitedEdges.map((edge) => {
+    const otherId = edge.source === selectedId ? edge.target : edge.source;
+    const pair = selectedId
+      ? `<button class="person-link" type="button" data-network-focus-person="${escapeHtml(otherId)}">${escapeHtml(people.get(otherId)?.display || otherId)}</button>`
+      : escapeHtml(`${people.get(edge.source)?.display || edge.source} + ${people.get(edge.target)?.display || edge.target}`);
+    return [pair, edge.count, renderTeachingOfferingEvidence(edge.offerings || [], 6)];
+  });
   if (!rows.length) {
     els.networkTableWrap.innerHTML = `<div class="staff-empty">No shared teaching-course ties for the current focus.</div>`;
     return;
@@ -7225,7 +7718,7 @@ function renderTeachingNetworkTable(edges) {
     : "";
   els.networkTableWrap.innerHTML = `${note}<table id="network-table"></table>`;
   const table = document.getElementById("network-table");
-  setTable(table, ["Pair", "Shared course offerings", "Courses"], rows, [false, true, false]);
+  setTable(table, [selectedId ? "Teaching partner" : "Pair", "Shared course offerings", "Offering evidence"], rows, [false, true, false]);
   table.insertAdjacentHTML("afterbegin", `<caption class="visually-hidden">Shared-course teaching relationships shown in the network</caption>`);
 }
 
@@ -7254,14 +7747,18 @@ function renderExternalPartners(pubs, activeIds) {
       };
     })
     .filter(Boolean)
-    .sort((a, b) => b.visiblePubs.length - a.visiblePubs.length || a.institution.localeCompare(b.institution))
-    .slice(0, 12);
+    .sort((a, b) => b.visiblePubs.length - a.visiblePubs.length || a.institution.localeCompare(b.institution));
 
   if (!partners.length) {
     els.externalPartnerList.innerHTML = `<p class="small-muted">No external institution affiliation data for the current filters.</p>`;
     return;
   }
-  els.externalPartnerList.innerHTML = partners.map((partner) => {
+  const displayedPartners = partners.slice(0, 12);
+  const selectedPerson = state.networkScope === "selected" ? people.get(state.networkPersonId) : null;
+  const scopeLabel = selectedPerson ? `for ${selectedPerson.display}` : "across the active roster";
+  const sourceDate = state.externalPartnersData?.meta?.generatedOn;
+  const note = `<div class="partner-list-note" role="note"><strong>Top ${displayedPartners.length} of ${partners.length}</strong> institutions ${escapeHtml(scopeLabel)}, ranked by counted publications${sourceDate ? ` · metadata generated ${escapeHtml(sourceDate)}` : ""}. One publication can contribute to several institutions.</div>`;
+  els.externalPartnerList.innerHTML = note + displayedPartners.map((partner) => {
     const staff = Array.from(partner.staffIds)
       .map((id) => people.get(id)?.display || id)
       .sort()
