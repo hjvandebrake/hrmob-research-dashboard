@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-08-14",
+    "generatedOn": "2026-08-20",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
     "eligiblePublications": 789,
-    "cacheHits": 789,
-    "fetched": 0,
+    "cacheHits": 786,
+    "fetched": 3,
     "partnerCount": 794
   },
   "partners": [
@@ -109,7 +109,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -2949,7 +2949,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -4414,7 +4414,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -5655,7 +5655,7 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1080/17512786.2024.2441283",
+          "id": "rug:d1d0f95317741052",
           "year": 2026,
           "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
           "staffIds": [
@@ -6031,7 +6031,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -6939,7 +6939,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -7794,9 +7794,9 @@
           ]
         },
         {
-          "id": "rug:195f16a6ef4dda78",
+          "id": "doi:10.1111/jasp.13075",
           "year": 2025,
-          "title": "Overcoming or Removing Gendered Barriers?: Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
+          "title": "Overcoming or Removing Gendered Barriers? Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
           "staffIds": [
             "FR",
             "MR"
@@ -7958,7 +7958,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -8310,7 +8310,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -8859,7 +8859,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9037,7 +9037,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9177,7 +9177,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9330,7 +9330,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9469,7 +9469,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9588,7 +9588,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -9880,7 +9880,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -10037,7 +10037,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -10316,7 +10316,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -10458,7 +10458,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -10588,7 +10588,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -10859,7 +10859,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -11132,7 +11132,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -11400,7 +11400,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -11890,7 +11890,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12005,7 +12005,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12253,7 +12253,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12358,7 +12358,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12492,7 +12492,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12618,7 +12618,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -12732,7 +12732,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -13210,7 +13210,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -13437,7 +13437,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -13542,7 +13542,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -13783,7 +13783,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -14280,7 +14280,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -14582,7 +14582,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -14929,7 +14929,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -15021,7 +15021,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -15224,7 +15224,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -15306,7 +15306,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -15433,9 +15433,9 @@
           ]
         },
         {
-          "id": "doi:10.1177/14761270251334044",
+          "id": "rug:6d1a10f8a234f656",
           "year": 2026,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
           "staffIds": [
             "FR"
           ],
@@ -16255,7 +16255,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -18078,7 +18078,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -18551,7 +18551,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -19408,7 +19408,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -19556,7 +19556,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -19707,7 +19707,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -19838,7 +19838,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -19908,7 +19908,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -20781,7 +20781,7 @@
           ]
         },
         {
-          "id": "rug:45896b4d8486b684",
+          "id": "doi:10.1111/jep.13462",
           "year": 2021,
           "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
           "staffIds": [
@@ -20911,7 +20911,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -21043,7 +21043,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -21215,7 +21215,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -22009,6 +22009,58 @@
       ]
     },
     {
+      "id": "us:carnegie mellon university",
+      "institution": "Carnegie Mellon University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "FR",
+        "JJ",
+        "MR"
+      ],
+      "authors": [
+        "Aimée A. Kane",
+        "Jocelyn J. Bélanger",
+        "Taya R. Cohen"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s12144-024-06989-0",
+          "year": 2025,
+          "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Jocelyn J. Bélanger"
+          ]
+        },
+        {
+          "id": "rug:c1767600bf9a9282",
+          "year": 2015,
+          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Taya R. Cohen"
+          ]
+        },
+        {
+          "id": "doi:10.1037/gdn0000024",
+          "year": 2015,
+          "title": "How newcomers influence group utilization of their knowledge: Integrating versus differentiating strategies.",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Aimée A. Kane"
+          ]
+        }
+      ]
+    },
+    {
       "id": "dz:centre hospito universitaire de s tif",
       "institution": "Centre Hospito Universitaire de Sétif",
       "country": "DZ",
@@ -22022,7 +22074,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -22221,7 +22273,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -22680,7 +22732,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -23443,7 +23495,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -23603,9 +23655,9 @@
           ]
         },
         {
-          "id": "doi:10.1177/14761270251334044",
+          "id": "rug:6d1a10f8a234f656",
           "year": 2026,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
           "staffIds": [
             "FR"
           ],
@@ -24369,7 +24421,7 @@
           ]
         },
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -24677,7 +24729,7 @@
           ]
         },
         {
-          "id": "rug:45896b4d8486b684",
+          "id": "doi:10.1111/jep.13462",
           "year": 2021,
           "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
           "staffIds": [
@@ -24845,45 +24897,6 @@
           ],
           "authors": [
             "Antony S. R. Manstead"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:carnegie mellon university",
-      "institution": "Carnegie Mellon University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "FR",
-        "JJ"
-      ],
-      "authors": [
-        "Aimée A. Kane",
-        "Taya R. Cohen"
-      ],
-      "publications": [
-        {
-          "id": "rug:c1767600bf9a9282",
-          "year": 2015,
-          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Taya R. Cohen"
-          ]
-        },
-        {
-          "id": "doi:10.1037/gdn0000024",
-          "year": 2015,
-          "title": "How newcomers influence group utilization of their knowledge: Integrating versus differentiating strategies.",
-          "staffIds": [
-            "FR"
-          ],
-          "authors": [
-            "Aimée A. Kane"
           ]
         }
       ]
@@ -25237,7 +25250,7 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1080/17512786.2024.2441283",
+          "id": "rug:d1d0f95317741052",
           "year": 2026,
           "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
           "staffIds": [
@@ -26453,7 +26466,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -27057,7 +27070,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -28997,7 +29010,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [
@@ -39307,7 +39320,7 @@
       ],
       "publications": [
         {
-          "id": "rug:c4942d1ed93dcc22",
+          "id": "doi:10.1007/s12144-024-06989-0",
           "year": 2025,
           "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
           "staffIds": [

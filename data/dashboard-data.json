@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-08-14",
+    "generatedOn": "2026-08-20",
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-08-14"
+      "to": "2026-08-20"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-08-14"
+      "to": "2026-08-20"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -1251,26 +1251,23 @@
       "aipStatus": "reviewed-not-in-aip-source"
     },
     {
-      "id": "doi:10.1177/14761270251334044",
+      "id": "rug:6d1a10f8a234f656",
       "doi": "10.1177/14761270251334044",
-      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
+      "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
       "year": 2026,
-      "yearSource": "crossref-print",
+      "yearSource": "rug-reference",
       "journal": "Strategic Organization",
-      "issns": [
-        "1476-1270",
-        "1741-315X"
-      ],
-      "sourceType": "journal",
+      "issns": [],
+      "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W4409345189",
+      "url": "https://research.rug.nl/en/publications/a88a67f8-d419-4358-a612-ffaa82fc674e",
       "authors": [
-        "Michelle Weck",
-        "Dennis Veltrop",
-        "Jana Oehmichen",
-        "Floor Rink"
+        "Weck, M.",
+        "Veltrop, D.",
+        "Oehmichen, J.",
+        "Rink, F."
       ],
       "matchedPeople": [
         "FR"
@@ -1281,10 +1278,11 @@
       "aip": 95.623,
       "aipJournal": "Strategic Organization",
       "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "University of Groningen staff publication page",
       "evidence": [
+        "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
@@ -1863,7 +1861,7 @@
       "doi": "10.1038/s41586-025-10078-y",
       "title": "Investigating the replicability of the social and behavioural sciences",
       "year": 2026,
-      "yearSource": "curated-reference",
+      "yearSource": "rug-reference",
       "journal": "Nature",
       "issns": [
         "0028-0836",
@@ -2181,7 +2179,8 @@
       "subjects": [],
       "source": "Curated public web seed",
       "evidence": [
-        "Nature lists Laetitia B. Mulder as an author and the University of Groningen as her affiliation; staff-submitted on 2026-08-11 because the public API collection omitted the article."
+        "Nature lists Laetitia B. Mulder as an author and the University of Groningen as her affiliation; staff-submitted on 2026-08-11 because the public API collection omitted the article.",
+        "RUG staff publication page for Mulder, L.B. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "topicFamilies": [],
@@ -2191,27 +2190,24 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1080/17512786.2024.2441283",
+      "id": "rug:d1d0f95317741052",
       "doi": "10.1080/17512786.2024.2441283",
       "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
       "year": 2026,
-      "yearSource": "crossref-print",
+      "yearSource": "rug-reference",
       "journal": "Journalism Practice",
-      "issns": [
-        "1751-2786",
-        "1751-2794"
-      ],
-      "sourceType": "journal",
+      "issns": [],
+      "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W4405475907",
+      "url": "https://research.rug.nl/en/publications/b3f64dca-a0c3-4b4f-98c8-f5f7cd75accf",
       "authors": [
-        "Kathryn Shine",
-        "Alexandra N. Fisher",
-        "Gosia Mikołajczak",
-        "Michelle K. Ryan",
-        "Emmaline A. Monteith"
+        "Shine, K.",
+        "Fisher, A. N.",
+        "ajczak, G.",
+        "Ryan, M. K.",
+        "Monteith, E. A."
       ],
       "matchedPeople": [
         "MR"
@@ -2222,10 +2218,11 @@
       "aip": 77.085,
       "aipJournal": "Journalism Practice",
       "aipCategory": "COMMUNICATION",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "University of Groningen staff publication page",
       "evidence": [
+        "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K.",
         "Crossref ORCID matched for Ryan, M.K."
       ],
@@ -3337,6 +3334,53 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.5167/uzh-281945",
+      "doi": "10.5167/uzh-281945",
+      "title": "Crafting for Health: A Longitudinal Study of Job and Off-Job Crafting Changes during the COVID-19 Pandemic",
+      "year": 2025,
+      "yearSource": "openalex",
+      "journal": "Zurich Open Repository and Archive (University of Zurich)",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W7124679531",
+      "authors": [
+        "Anja Isabel Morstatt",
+        "Georg F. Bauer",
+        "Jessica de Bloom",
+        "Zachary Joseph Roman",
+        "Martin Tušl",
+        "Philipp Kerksieck"
+      ],
+      "matchedPeople": [
+        "JDB"
+      ],
+      "sourcePeople": [
+        "JDB"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Bloom, J. de"
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "occupational health",
+        "recovery and leisure",
+        "job crafting"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
       "id": "rug:d0996e90650ee66f",
       "doi": "10.1080/02678373.2025.2551498",
       "title": "Crossover of emotional exhaustion in collaboration networks: the roles of hindrance stressors and organisational tenure",
@@ -4206,23 +4250,26 @@
       "aipStatus": "matched"
     },
     {
-      "id": "rug:195f16a6ef4dda78",
+      "id": "doi:10.1111/jasp.13075",
       "doi": "10.1111/jasp.13075",
-      "title": "Overcoming or Removing Gendered Barriers?: Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
+      "title": "Overcoming or Removing Gendered Barriers? Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
       "year": 2025,
-      "yearSource": "rug-reference",
+      "yearSource": "crossref-print",
       "journal": "Journal of Applied Social Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "0021-9029",
+        "1559-1816"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/b1dc24b9-d54c-4f01-9c6e-a52cb3995b76",
+      "url": "https://openalex.org/W4405077811",
       "authors": [
-        "Wong, E.",
-        "Kirby, T.",
-        "Ryan, M.",
-        "Rink, F."
+        "Chuk Yan Wong",
+        "Teri A. Kirby",
+        "Michelle K. Ryan",
+        "Floor Rink"
       ],
       "matchedPeople": [
         "FR",
@@ -4235,11 +4282,10 @@
       "aip": 77.218,
       "aipJournal": "JOURNAL OF APPLIED SOCIAL PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "Crossref author affiliation mentions Groningen for Rink, F.A.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K.",
@@ -4537,18 +4583,21 @@
       "aipStatus": "matched"
     },
     {
-      "id": "rug:c4942d1ed93dcc22",
+      "id": "doi:10.1007/s12144-024-06989-0",
       "doi": "10.1007/s12144-024-06989-0",
       "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
       "year": 2025,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "Current Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "1046-1310",
+        "1936-4733"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/740f5eac-9ff2-47bb-8a3d-e344c5da38e9",
+      "url": "https://openalex.org/W4406379374",
       "authors": [
         "Robin Wollast",
         "Adrian Lüders",
@@ -4635,11 +4684,10 @@
       "aip": 64.981,
       "aipJournal": "CURRENT PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
@@ -12050,6 +12098,50 @@
       "aipStatus": "matched"
     },
     {
+      "id": "openalex:W7203565328",
+      "doi": "",
+      "title": "How leaders impact their teams in job crafting",
+      "year": 2022,
+      "yearSource": "openalex",
+      "journal": "Open MIND",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W7203565328",
+      "authors": [
+        "Lina M. Mülder",
+        "Miriam Arnold",
+        "Thomas Rigotti"
+      ],
+      "matchedPeople": [
+        "MA"
+      ],
+      "sourcePeople": [
+        "MA"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Arnold, M."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "teams and groups",
+        "leadership",
+        "job crafting"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
       "id": "doi:10.1038/d41586-022-01045-y",
       "doi": "10.1038/d41586-022-01045-y",
       "title": "To advance equality for women, use the evidence",
@@ -15455,23 +15547,26 @@
       "aipStatus": "matched"
     },
     {
-      "id": "rug:45896b4d8486b684",
+      "id": "doi:10.1111/jep.13462",
       "doi": "10.1111/jep.13462",
       "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
       "year": 2021,
-      "yearSource": "rug-reference",
+      "yearSource": "crossref-print",
       "journal": "Journal of Evaluation in Clinical Practice",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "1356-1294",
+        "1365-2753"
+      ],
+      "sourceType": "journal-article",
       "publicationKind": "Journal",
       "rankableJournal": true,
-      "publisher": "",
-      "url": "https://research.rug.nl/en/publications/0a4ba262-c123-42c0-8bf2-3b7d917df10e",
+      "publisher": "Wiley",
+      "url": "https://doi.org/10.1111/jep.13462",
       "authors": [
-        "Kuilman, L.",
-        "Jansen, G.",
-        "Mulder, L. B.",
-        "Roodbol, P."
+        "Luppo Kuilman",
+        "Gerard Jansen",
+        "Laetitia B. Mulder",
+        "Petrie Roodbol"
       ],
       "matchedPeople": [
         "LM"
@@ -15482,11 +15577,10 @@
       "aip": 65.974,
       "aipJournal": "JOURNAL OF EVALUATION IN CLINICAL PRACTICE",
       "aipCategory": "MEDICINE, GENERAL & INTERNAL",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "Crossref public metadata",
       "evidence": [
-        "RUG staff publication page for Mulder, L.B. lists this as a peer-reviewed journal publication.",
         "Crossref ORCID matched for Mulder, L.B."
       ],
       "provisional": true,
@@ -17316,52 +17410,6 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.6084/m9.figshare.12864824",
-      "doi": "10.6084/m9.figshare.12864824",
-      "title": "Additional file 1 of Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-      "year": 2020,
-      "yearSource": "openalex",
-      "journal": "Open MIND",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4394072680",
-      "authors": [
-        "Alexandra Smyth",
-        "Jessica de Bloom",
-        "Christine Syrek",
-        "Markus Domin",
-        "Monique Janneck",
-        "Jo Annika Reins",
-        "Dirk Lehr"
-      ],
-      "matchedPeople": [
-        "JDB"
-      ],
-      "sourcePeople": [
-        "JDB"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de"
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "recovery and leisure"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
     },
     {
       "id": "doi:10.1111/ncmr.12185",
@@ -30311,50 +30359,6 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
-    },
-    {
-      "id": "openalex:W7135254400",
-      "doi": "",
-      "title": "Working with subgroup identities to build organizational identification and support for organizational strategy",
-      "year": 2013,
-      "yearSource": "openalex",
-      "journal": "Queensland's institutional digital repository (The University of Queensland)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W7135254400",
-      "authors": [
-        "Kim Peters",
-        "S. Alexander Haslam",
-        "Michelle K. Ryan",
-        "Miguel Fonseca"
-      ],
-      "matchedPeople": [
-        "MR"
-      ],
-      "sourcePeople": [
-        "MR"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "identity and belonging",
-        "technology and AI"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
     },
     {
       "id": "doi:10.1177/0146167213482984",
