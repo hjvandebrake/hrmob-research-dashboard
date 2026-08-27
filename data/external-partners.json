@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedOn": "2026-08-20",
+    "generatedOn": "2026-08-27",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
     "eligiblePublications": 789,
-    "cacheHits": 786,
-    "fetched": 3,
-    "partnerCount": 794
+    "cacheHits": 789,
+    "fetched": 0,
+    "partnerCount": 793
   },
   "partners": [
     {
@@ -133,17 +133,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/01492063231177976",
-          "year": 2024,
-          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Brooke A. Gazdag"
-          ]
-        },
-        {
           "id": "doi:10.11144/javeriana.upsy23.pdcp",
           "year": 2024,
           "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
@@ -189,14 +178,14 @@
           ]
         },
         {
-          "id": "doi:10.1002/smi.3185",
+          "id": "doi:10.1177/01492063231177976",
           "year": 2023,
-          "title": "Daily sleep in relation to subjective and physiological stress in an occupational context: Daily vigour as a mediator",
+          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
           "staffIds": [
-            "JDB"
+            "MR"
           ],
           "authors": [
-            "Michelle Van Laethem"
+            "Brooke A. Gazdag"
           ]
         },
         {
@@ -235,7 +224,7 @@
         {
           "id": "doi:10.16993/sjwop.181",
           "year": 2023,
-          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees&rsquo; Psychological Needs Satisfaction and Well-Being",
+          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
           "staffIds": [
             "FR",
             "JDB"
@@ -254,6 +243,17 @@
           ],
           "authors": [
             "Birga M. Schumpe"
+          ]
+        },
+        {
+          "id": "doi:10.1002/smi.3185",
+          "year": 2022,
+          "title": "Daily sleep in relation to subjective and physiological stress in an occupational context: Daily vigour as a mediator",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Michelle Van Laethem"
           ]
         },
         {
@@ -304,7 +304,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -352,17 +352,6 @@
           ]
         },
         {
-          "id": "doi:10.1111/joop.12239",
-          "year": 2019,
-          "title": "Challenge and hindrance demands in relation to self‐reported job performance and the role of restoration, sleep quality, and affective rumination",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Michelle Van Laethem"
-          ]
-        },
-        {
           "id": "doi:10.1073/pnas.1820133116",
           "year": 2019,
           "title": "On the psychology and economics of antisocial personality",
@@ -405,6 +394,17 @@
           "authors": [
             "Matthijs Baas",
             "Yujie Cheng"
+          ]
+        },
+        {
+          "id": "doi:10.1111/joop.12239",
+          "year": 2018,
+          "title": "Challenge and hindrance demands in relation to self‐reported job performance and the role of restoration, sleep quality, and affective rumination",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Michelle Van Laethem"
           ]
         },
         {
@@ -946,18 +946,6 @@
           ]
         },
         {
-          "id": "doi:10.1002/bdm.736",
-          "year": 2012,
-          "title": "The Price of a Piece of Cheese: Value from Fit Between Epistemic Needs and a Learning Versus an Outcome Focus",
-          "staffIds": [
-            "BN",
-            "CDD"
-          ],
-          "authors": [
-            "Ilona M. McNeill"
-          ]
-        },
-        {
           "id": "doi:10.1111/j.1467-7687.2012.01176.x",
           "year": 2012,
           "title": "The development of creative cognition across adolescence: distinct trajectories for insight and divergent thinking",
@@ -991,18 +979,6 @@
             "Matthijs Baas",
             "Inge Wolsink",
             "Marieke Roskes"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1948550610381789",
-          "year": 2011,
-          "title": "Behavioral Activation Links to Creativity Because of Increased Cognitive Flexibility",
-          "staffIds": [
-            "BN",
-            "CDD"
-          ],
-          "authors": [
-            "Matthijs Baas"
           ]
         },
         {
@@ -1079,6 +1055,18 @@
           ]
         },
         {
+          "id": "doi:10.1002/bdm.736",
+          "year": 2011,
+          "title": "The Price of a Piece of Cheese: Value from Fit Between Epistemic Needs and a Learning Versus an Outcome Focus",
+          "staffIds": [
+            "BN",
+            "CDD"
+          ],
+          "authors": [
+            "Ilona M. McNeill"
+          ]
+        },
+        {
           "id": "doi:10.1177/0956797611418677",
           "year": 2011,
           "title": "The Right Side? Under Time Pressure, Approach Motivation Leads to Right-Oriented Bias",
@@ -1107,6 +1095,18 @@
           "id": "doi:10.1037/a0022981",
           "year": 2011,
           "title": "When prevention promotes creativity: The role of mood, regulatory focus, and regulatory closure.",
+          "staffIds": [
+            "BN",
+            "CDD"
+          ],
+          "authors": [
+            "Matthijs Baas"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1948550610381789",
+          "year": 2010,
+          "title": "Behavioral Activation Links to Creativity Because of Increased Cognitive Flexibility",
           "staffIds": [
             "BN",
             "CDD"
@@ -1424,18 +1424,6 @@
           ]
         },
         {
-          "id": "doi:10.1016/j.jesp.2006.05.010",
-          "year": 2007,
-          "title": "Motivated information processing and group decision-making: Effects of process accountability on information processing and decision quality",
-          "staffIds": [
-            "BN",
-            "CDD"
-          ],
-          "authors": [
-            "Lotte Scholten"
-          ]
-        },
-        {
           "id": "doi:10.1007/s10726-007-9089-3",
           "year": 2007,
           "title": "Response modes in negotiation",
@@ -1444,6 +1432,18 @@
           ],
           "authors": [
             "Gerben A. van Kleef"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2006.05.010",
+          "year": 2006,
+          "title": "Motivated information processing and group decision-making: Effects of process accountability on information processing and decision quality",
+          "staffIds": [
+            "BN",
+            "CDD"
+          ],
+          "authors": [
+            "Lotte Scholten"
           ]
         },
         {
@@ -2202,7 +2202,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -3022,17 +3022,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/0044118x231204405",
-          "year": 2024,
-          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Sabrina Spangsdorf"
-          ]
-        },
-        {
           "id": "doi:10.1080/15298868.2022.2057580",
           "year": 2023,
           "title": "A leadership looking glass: How reflected appraisals of leadership shape individuals’ own perceived prototypicality and group identification",
@@ -3093,27 +3082,14 @@
           ]
         },
         {
-          "id": "doi:10.1177/14687941211045192",
+          "id": "doi:10.1177/0044118x231204405",
           "year": 2023,
-          "title": "Reflecting on the use of Google Docs for online interviews: Innovation in qualitative data collection",
+          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
           "staffIds": [
             "MR"
           ],
           "authors": [
-            "Victoria Opara",
             "Sabrina Spangsdorf"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.2925",
-          "year": 2023,
-          "title": "Support (and rejection) of meritocracy as a self‐enhancement identity strategy: A qualitative study of university students’ perceptions about meritocracy in higher education",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Daniela Fernández",
-            "Christopher T. Begeny"
           ]
         },
         {
@@ -3179,6 +3155,18 @@
           ]
         },
         {
+          "id": "doi:10.1002/ejsp.2925",
+          "year": 2022,
+          "title": "Support (and rejection) of meritocracy as a self‐enhancement identity strategy: A qualitative study of university students’ perceptions about meritocracy in higher education",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela Fernández",
+            "Christopher T. Begeny"
+          ]
+        },
+        {
           "id": "doi:10.1177/03616843221084048",
           "year": 2022,
           "title": "The Gendered Consequences of Risk-Taking at Work: Are Women Averse to Risk or to Poor Consequences?",
@@ -3212,6 +3200,18 @@
           ]
         },
         {
+          "id": "doi:10.1177/14687941211045192",
+          "year": 2021,
+          "title": "Reflecting on the use of Google Docs for online interviews: Innovation in qualitative data collection",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Victoria Opara",
+            "Sabrina Spangsdorf"
+          ]
+        },
+        {
           "id": "doi:10.1002/jts5.121",
           "year": 2021,
           "title": "Testing the motivational effects of attainable role models: Field and experimental evidence",
@@ -3234,28 +3234,6 @@
           "authors": [
             "Thekla Morgenroth",
             "Christopher T. Begeny"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1745691620902442",
-          "year": 2021,
-          "title": "The Effects of Gender Trouble: An Integrative Theoretical Framework of the Perpetuation and Disruption of the Gender/Sex Binary",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jasp.12728",
-          "year": 2021,
-          "title": "Think Manager–Think Parent? Investigating the fatherhood advantage and the motherhood penalty using the Think Manager–Think Male paradigm",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
           ]
         },
         {
@@ -3319,6 +3297,17 @@
           ]
         },
         {
+          "id": "doi:10.1177/1745691620902442",
+          "year": 2020,
+          "title": "The Effects of Gender Trouble: An Integrative Theoretical Framework of the Perpetuation and Disruption of the Gender/Sex Binary",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth"
+          ]
+        },
+        {
           "id": "doi:10.1111/gwao.12456",
           "year": 2020,
           "title": "The workplace experiences of BAME professional women: Understanding experiences at the intersection",
@@ -3330,14 +3319,14 @@
           ]
         },
         {
-          "id": "doi:10.1177/0361684319868730",
+          "id": "doi:10.1111/jasp.12728",
           "year": 2020,
-          "title": "Why Women Are Blamed for Being Sexually Harassed: The Effects of Empathy for Female Victims and Male Perpetrators",
+          "title": "Think Manager–Think Parent? Investigating the fatherhood advantage and the motherhood penalty using the Think Manager–Think Male paradigm",
           "staffIds": [
             "MR"
           ],
           "authors": [
-            "Renata Bongiorno"
+            "Thekla Morgenroth"
           ]
         },
         {
@@ -3349,6 +3338,17 @@
           ],
           "authors": [
             "Joshua Skewes"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0361684319868730",
+          "year": 2019,
+          "title": "Why Women Are Blamed for Being Sexually Harassed: The Effects of Empathy for Female Victims and Male Perpetrators",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Renata Bongiorno"
           ]
         },
         {
@@ -3398,17 +3398,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/1948550617722833",
-          "year": 2018,
-          "title": "Sex, Drugs, and Reckless Driving",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
-          ]
-        },
-        {
           "id": "doi:10.1111/bjop.12242",
           "year": 2017,
           "title": "Genius begins at home: Shared social identity enhances the recognition of creative performance",
@@ -3443,6 +3432,17 @@
           ]
         },
         {
+          "id": "doi:10.1177/1948550617722833",
+          "year": 2017,
+          "title": "Sex, Drugs, and Reckless Driving",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth"
+          ]
+        },
+        {
           "id": "doi:10.1016/j.leaqua.2015.10.008",
           "year": 2016,
           "title": "Getting on top of the glass cliff: Reviewing a decade of evidence, explanations, and impact",
@@ -3453,18 +3453,6 @@
           ],
           "authors": [
             "Thekla Morgenroth"
-          ]
-        },
-        {
-          "id": "doi:10.1111/bjop.12106",
-          "year": 2015,
-          "title": "Marines, medics, and machismo: Lack of fit with masculine occupational stereotypes discourages men's participation",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kim Peters",
-            "S. Alexander Haslam"
           ]
         },
         {
@@ -3514,6 +3502,18 @@
           ]
         },
         {
+          "id": "doi:10.1111/bjop.12106",
+          "year": 2014,
+          "title": "Marines, medics, and machismo: Lack of fit with masculine occupational stereotypes discourages men's participation",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kim Peters",
+            "S. Alexander Haslam"
+          ]
+        },
+        {
           "id": "doi:10.3109/09638288.2014.956814",
           "year": 2014,
           "title": "Negotiating identity: a qualitative analysis of stigma and support seeking for individuals with cerebral palsy",
@@ -3526,17 +3526,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/1368430212453629",
-          "year": 2013,
-          "title": "The hidden costs of surveillance for performance and helping behaviour",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Jolanda Jetten"
-          ]
-        },
-        {
           "id": "doi:10.1177/1059601112472368",
           "year": 2013,
           "title": "Working With Subgroup Identities to Build Organizational Identification and Support for Organizational Strategy",
@@ -3546,6 +3535,17 @@
           "authors": [
             "Kim Peters",
             "Miguel A. Fonseca"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430212453629",
+          "year": 2012,
+          "title": "The hidden costs of surveillance for performance and helping behaviour",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Jolanda Jetten"
           ]
         },
         {
@@ -3920,21 +3920,9 @@
           ]
         },
         {
-          "id": "doi:10.1002/smi.3185",
-          "year": 2023,
-          "title": "Daily sleep in relation to subjective and physiological stress in an occupational context: Daily vigour as a mediator",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ulla Kinnunen",
-            "Marjaana Sianoja"
-          ]
-        },
-        {
           "id": "doi:10.16993/sjwop.181",
           "year": 2023,
-          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees&rsquo; Psychological Needs Satisfaction and Well-Being",
+          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
           "staffIds": [
             "FR",
             "JDB"
@@ -3953,6 +3941,18 @@
           ],
           "authors": [
             "Ulla Kinnunen"
+          ]
+        },
+        {
+          "id": "doi:10.1002/smi.3185",
+          "year": 2022,
+          "title": "Daily sleep in relation to subjective and physiological stress in an occupational context: Daily vigour as a mediator",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Ulla Kinnunen",
+            "Marjaana Sianoja"
           ]
         },
         {
@@ -4069,18 +4069,6 @@
           ]
         },
         {
-          "id": "doi:10.1111/joop.12239",
-          "year": 2019,
-          "title": "Challenge and hindrance demands in relation to self‐reported job performance and the role of restoration, sleep quality, and affective rumination",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Marjaana Sianoja",
-            "Ulla Kinnunen"
-          ]
-        },
-        {
           "id": "doi:10.16993/sjwop.87",
           "year": 2019,
           "title": "Do Older Teachers Benefit More From Workday Break Recovery Than Younger Ones?",
@@ -4127,6 +4115,18 @@
             "JDB"
           ],
           "authors": [
+            "Ulla Kinnunen"
+          ]
+        },
+        {
+          "id": "doi:10.1111/joop.12239",
+          "year": 2018,
+          "title": "Challenge and hindrance demands in relation to self‐reported job performance and the role of restoration, sleep quality, and affective rumination",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Marjaana Sianoja",
             "Ulla Kinnunen"
           ]
         },
@@ -4517,7 +4517,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -5268,17 +5268,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/01492063231177976",
-          "year": 2024,
-          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Tyler G. Okimoto"
-          ]
-        },
-        {
           "id": "doi:10.11144/javeriana.upsy23.pdcp",
           "year": 2024,
           "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
@@ -5309,6 +5298,17 @@
           ],
           "authors": [
             "Winnifred R. Louis"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231177976",
+          "year": 2023,
+          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Tyler G. Okimoto"
           ]
         },
         {
@@ -5358,25 +5358,12 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
           "authors": [
             "Winnifred R. Louis"
-          ]
-        },
-        {
-          "id": "doi:10.1177/0361684319868730",
-          "year": 2020,
-          "title": "Why Women Are Blamed for Being Sexually Harassed: The Effects of Empathy for Female Victims and Male Perpetrators",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Renata Bongiorno",
-            "Chloe Langbroek",
-            "Michelle Ting"
           ]
         },
         {
@@ -5401,6 +5388,19 @@
           ],
           "authors": [
             "S. Alexander Haslam"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0361684319868730",
+          "year": 2019,
+          "title": "Why Women Are Blamed for Being Sexually Harassed: The Effects of Empathy for Female Victims and Male Perpetrators",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Renata Bongiorno",
+            "Chloe Langbroek",
+            "Michelle Ting"
           ]
         },
         {
@@ -5454,18 +5454,6 @@
           ]
         },
         {
-          "id": "doi:10.1111/bjop.12106",
-          "year": 2015,
-          "title": "Marines, medics, and machismo: Lack of fit with masculine occupational stereotypes discourages men's participation",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kim Peters",
-            "S. Alexander Haslam"
-          ]
-        },
-        {
           "id": "doi:10.3389/fpsyg.2015.01460",
           "year": 2015,
           "title": "Social and relational identification as determinants of care workers’ motivation and well-being",
@@ -5514,6 +5502,18 @@
           ]
         },
         {
+          "id": "doi:10.1111/bjop.12106",
+          "year": 2014,
+          "title": "Marines, medics, and machismo: Lack of fit with masculine occupational stereotypes discourages men's participation",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kim Peters",
+            "S. Alexander Haslam"
+          ]
+        },
+        {
           "id": "doi:10.1002/ejsp.1985",
           "year": 2013,
           "title": "Leader performance and prototypicality: Their inter‐relationship and impact on leaders' identity entrepreneurship",
@@ -5526,17 +5526,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/1368430212453629",
-          "year": 2013,
-          "title": "The hidden costs of surveillance for performance and helping behaviour",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Jolanda Jetten"
-          ]
-        },
-        {
           "id": "doi:10.1177/1059601112472368",
           "year": 2013,
           "title": "Working With Subgroup Identities to Build Organizational Identification and Support for Organizational Strategy",
@@ -5545,6 +5534,17 @@
           ],
           "authors": [
             "S. Alexander Haslam"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430212453629",
+          "year": 2012,
+          "title": "The hidden costs of surveillance for performance and helping behaviour",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Jolanda Jetten"
           ]
         },
         {
@@ -6510,17 +6510,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/0149206309344117",
-          "year": 2010,
-          "title": "Why Turnover Matters in Self-Managing Work Teams: Learning, Social Integration, and Task Flexibility",
-          "staffIds": [
-            "GVV"
-          ],
-          "authors": [
-            "Ben Kuipers"
-          ]
-        },
-        {
           "id": "doi:10.1080/09585190802670797",
           "year": 2009,
           "title": "Development and performance of self-managing work teams: a theoretical and empirical examination",
@@ -6540,6 +6529,17 @@
           ],
           "authors": [
             "Dirk van Dierendonck"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0149206309344117",
+          "year": 2009,
+          "title": "Why Turnover Matters in Self-Managing Work Teams: Learning, Social Integration, and Task Flexibility",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Ben Kuipers"
           ]
         },
         {
@@ -6566,7 +6566,7 @@
         },
         {
           "id": "doi:10.1016/j.jesp.2006.05.010",
-          "year": 2007,
+          "year": 2006,
           "title": "Motivated information processing and group decision-making: Effects of process accountability on information processing and decision quality",
           "staffIds": [
             "BN",
@@ -6687,7 +6687,7 @@
         },
         {
           "id": "doi:10.1111/joop.12239",
-          "year": 2019,
+          "year": 2018,
           "title": "Challenge and hindrance demands in relation to self‐reported job performance and the role of restoration, sleep quality, and affective rumination",
           "staffIds": [
             "JDB"
@@ -7058,7 +7058,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -7344,7 +7344,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -7373,7 +7373,7 @@
       "institution": "Hochschule Bonn-Rhein-Sieg",
       "country": "DE",
       "type": "education",
-      "publicationCount": 14,
+      "publicationCount": 13,
       "staffIds": [
         "FR",
         "JDB"
@@ -7390,20 +7390,9 @@
       ],
       "publications": [
         {
-          "id": "rug:fc5761e7fd641204",
-          "year": 2026,
-          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -7625,7 +7614,7 @@
         },
         {
           "id": "doi:10.1287/orsc.2021.1436",
-          "year": 2022,
+          "year": 2021,
           "title": "Managing Boundaries in Multiteam Structures: From Parochialism to Integrated Pluralism",
           "staffIds": [
             "GVV",
@@ -7661,9 +7650,9 @@
           ]
         },
         {
-          "id": "rug:2c52c57c341ab608",
+          "id": "doi:10.1111/joop.12326",
           "year": 2020,
-          "title": "Multiple team membership and job performance: The role of employees' information-sharing networks",
+          "title": "Multiple team membership and job performance: The role of employees’ information‐sharing networks",
           "staffIds": [
             "FR",
             "GVV",
@@ -7806,17 +7795,6 @@
           ]
         },
         {
-          "id": "doi:10.1002/ejsp.3136",
-          "year": 2025,
-          "title": "The Moralization of Women's Bodies",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
-          ]
-        },
-        {
           "id": "doi:10.1007/s11199-024-01473-2",
           "year": 2024,
           "title": "Sex Wars and TERF Wars: The Divisiveness of Who is Included in Feminism",
@@ -7829,14 +7807,14 @@
           ]
         },
         {
-          "id": "doi:10.1177/0044118x231204405",
+          "id": "doi:10.1002/ejsp.3136",
           "year": 2024,
-          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
+          "title": "The Moralization of Women's Bodies",
           "staffIds": [
             "MR"
           ],
           "authors": [
-            "Teri A. Kirby"
+            "Thekla Morgenroth"
           ]
         },
         {
@@ -7848,6 +7826,17 @@
           ],
           "authors": [
             "Thekla Morgenroth"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0044118x231204405",
+          "year": 2023,
+          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Teri A. Kirby"
           ]
         },
         {
@@ -8410,7 +8399,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -8758,7 +8747,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9007,7 +8996,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9139,7 +9128,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9267,7 +9256,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9431,7 +9420,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9563,7 +9552,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -9690,173 +9679,12 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
           "authors": [
             "Jamilah Hanum Abdul Khaiyom"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:leuphana university of l neburg",
-      "institution": "Leuphana University of Lüneburg",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 10,
-      "staffIds": [
-        "JDB",
-        "JL",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Alexandra Smyth",
-        "Alexandra Thomsen",
-        "Anniina Virtanen",
-        "Arobindu Dash",
-        "Christine Syrek",
-        "David D. Loschelder",
-        "Dirk Lehr",
-        "Hanna Brückner",
-        "Hannes M. Petrowsky",
-        "Jo Annika Reins",
-        "Lea Boecker",
-        "Markus Domin",
-        "Martina Grunow",
-        "Meikel Soliman",
-        "Oliver Genschow",
-        "Ulla Kinnunen",
-        "Yannik A. Escher"
-      ],
-      "publications": [
-        {
-          "id": "rug:fc5761e7fd641204",
-          "year": 2026,
-          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Alexandra Thomsen",
-            "Hanna Brückner",
-            "Markus Domin",
-            "Jo Annika Reins",
-            "Dirk Lehr"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Martina Grunow"
-          ]
-        },
-        {
-          "id": "doi:10.11144/javeriana.upsy23.pdcp",
-          "year": 2024,
-          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "rug:0f55694ebd41f3b6",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Lea Boecker",
-            "Yannik A. Escher",
-            "Oliver Genschow",
-            "David D. Loschelder",
-            "Hannes M. Petrowsky",
-            "Meikel Soliman"
-          ]
-        },
-        {
-          "id": "doi:10.1037/emo0001118",
-          "year": 2023,
-          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.cresp.2021.100028",
-          "year": 2022,
-          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2021.784844",
-          "year": 2021,
-          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Dirk Lehr"
-          ]
-        },
-        {
-          "id": "doi:10.1186/s12889-020-09354-5",
-          "year": 2020,
-          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Alexandra Smyth",
-            "Markus Domin",
-            "Jo Annika Reins",
-            "Dirk Lehr"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10902-020-00247-3",
-          "year": 2020,
-          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Dirk Lehr",
-            "Jo Annika Reins"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2019.032.004.003",
-          "year": 2019,
-          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Anniina Virtanen",
-            "Jo Annika Reins",
-            "Christine Syrek",
-            "Dirk Lehr",
-            "Ulla Kinnunen"
           ]
         }
       ]
@@ -9995,7 +9823,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10142,7 +9970,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10288,7 +10116,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10426,7 +10254,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10537,7 +10365,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10698,7 +10526,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -10753,7 +10581,7 @@
         },
         {
           "id": "doi:10.1287/orsc.2021.1436",
-          "year": 2022,
+          "year": 2021,
           "title": "Managing Boundaries in Multiteam Structures: From Parochialism to Integrated Pluralism",
           "staffIds": [
             "GVV",
@@ -10765,7 +10593,7 @@
         },
         {
           "id": "doi:10.1146/annurev-orgpsych-032117-104500",
-          "year": 2018,
+          "year": 2017,
           "title": "Diversity and Inequality in Management Teams: A Review and Integration of Research on Vertical and Horizontal Member Differences",
           "staffIds": [
             "GVV"
@@ -10788,7 +10616,7 @@
         },
         {
           "id": "doi:10.1287/orsc.2013.0835",
-          "year": 2014,
+          "year": 2013,
           "title": "Status Inertia and Member Replacement in Role-Differentiated Teams",
           "staffIds": [
             "GVV"
@@ -10800,7 +10628,7 @@
         },
         {
           "id": "doi:10.1287/orsc.1090.0452",
-          "year": 2010,
+          "year": 2009,
           "title": "Power Asymmetry and Learning in Teams: The Moderating Role of Performance Feedback",
           "staffIds": [
             "GVV"
@@ -10811,7 +10639,7 @@
         },
         {
           "id": "doi:10.1177/0149206309344117",
-          "year": 2010,
+          "year": 2009,
           "title": "Why Turnover Matters in Self-Managing Work Teams: Learning, Social Integration, and Task Flexibility",
           "staffIds": [
             "GVV"
@@ -10955,7 +10783,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -11056,7 +10884,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -11211,7 +11039,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -11374,7 +11202,7 @@
         },
         {
           "id": "doi:10.1002/bdm.736",
-          "year": 2012,
+          "year": 2011,
           "title": "The Price of a Piece of Cheese: Value from Fit Between Epistemic Needs and a Learning Versus an Outcome Focus",
           "staffIds": [
             "BN",
@@ -11490,7 +11318,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -11608,7 +11436,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -11980,12 +11808,156 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
           "authors": [
             "Heyla A. Selim"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:leuphana university of l neburg",
+      "institution": "Leuphana University of Lüneburg",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 9,
+      "staffIds": [
+        "JDB",
+        "JL",
+        "LM",
+        "MR"
+      ],
+      "authors": [
+        "Alexandra Smyth",
+        "Anniina Virtanen",
+        "Arobindu Dash",
+        "Christine Syrek",
+        "David D. Loschelder",
+        "Dirk Lehr",
+        "Hannes M. Petrowsky",
+        "Jo Annika Reins",
+        "Lea Boecker",
+        "Markus Domin",
+        "Martina Grunow",
+        "Meikel Soliman",
+        "Oliver Genschow",
+        "Ulla Kinnunen",
+        "Yannik A. Escher"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Martina Grunow"
+          ]
+        },
+        {
+          "id": "doi:10.11144/javeriana.upsy23.pdcp",
+          "year": 2024,
+          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "rug:0f55694ebd41f3b6",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Lea Boecker",
+            "Yannik A. Escher",
+            "Oliver Genschow",
+            "David D. Loschelder",
+            "Hannes M. Petrowsky",
+            "Meikel Soliman"
+          ]
+        },
+        {
+          "id": "doi:10.1037/emo0001118",
+          "year": 2023,
+          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cresp.2021.100028",
+          "year": 2022,
+          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2021.784844",
+          "year": 2021,
+          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Dirk Lehr"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12889-020-09354-5",
+          "year": 2020,
+          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Alexandra Smyth",
+            "Markus Domin",
+            "Jo Annika Reins",
+            "Dirk Lehr"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10902-020-00247-3",
+          "year": 2020,
+          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Dirk Lehr",
+            "Jo Annika Reins"
+          ]
+        },
+        {
+          "id": "doi:10.5117/2019.032.004.003",
+          "year": 2019,
+          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Anniina Virtanen",
+            "Jo Annika Reins",
+            "Christine Syrek",
+            "Dirk Lehr",
+            "Ulla Kinnunen"
           ]
         }
       ]
@@ -12096,7 +12068,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12212,7 +12184,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12332,7 +12304,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12462,7 +12434,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12593,7 +12565,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12708,7 +12680,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12822,7 +12794,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -12946,7 +12918,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -13177,7 +13149,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -13516,7 +13488,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -13621,7 +13593,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -13732,7 +13704,7 @@
         },
         {
           "id": "doi:10.1177/1948550617722833",
-          "year": 2018,
+          "year": 2017,
           "title": "Sex, Drugs, and Reckless Driving",
           "staffIds": [
             "MR"
@@ -13887,7 +13859,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -13995,7 +13967,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -14554,7 +14526,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -14666,7 +14638,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15089,7 +15061,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15281,7 +15253,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15374,7 +15346,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15683,7 +15655,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15775,7 +15747,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -15885,7 +15857,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -16323,7 +16295,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -16527,7 +16499,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -16845,6 +16817,109 @@
       ]
     },
     {
+      "id": "ch:university of st gallen",
+      "institution": "University of St.Gallen",
+      "country": "CH",
+      "type": "education",
+      "publicationCount": 7,
+      "staffIds": [
+        "GVV",
+        "JVB",
+        "MR",
+        "SB",
+        "TDV"
+      ],
+      "authors": [
+        "Heike Bruch",
+        "Jamie L. Gloor",
+        "Raphael Boemelburg",
+        "Ulrich Leicht‐Deobald"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.5465/amj.2023.0869",
+          "year": 2026,
+          "title": "The Connectivity Paradox of Flexible Team Arrangements",
+          "staffIds": [
+            "GVV",
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "curated:jom-2025-team-boundary-management",
+          "year": 2025,
+          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Ulrich Leicht‐Deobald"
+          ]
+        },
+        {
+          "id": "rug:0d10981c655696ea",
+          "year": 2024,
+          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231177976",
+          "year": 2023,
+          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Jamie L. Gloor"
+          ]
+        },
+        {
+          "id": "rug:c8a09656e9ca78a6",
+          "year": 2023,
+          "title": "Regulatory focus climate, organizational structure, and employee ambidexterity: An interactive multilevel model",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Raphael Boemelburg",
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "rug:8b813abb0d4ed29f",
+          "year": 2022,
+          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
+          "staffIds": [
+            "JVB",
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "rug:3a6311a86a18f164",
+          "year": 2021,
+          "title": "Role strain and role accumulation across multiple teams: The moderating role of employees' polychronic orientation",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        }
+      ]
+    },
+    {
       "id": "at:university of vienna",
       "institution": "University of Vienna",
       "country": "AT",
@@ -16904,7 +16979,7 @@
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -17033,7 +17108,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -17391,7 +17466,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -17455,7 +17530,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -17779,7 +17854,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -17860,7 +17935,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -17927,7 +18002,7 @@
         },
         {
           "id": "doi:10.1177/14687941211045192",
-          "year": 2023,
+          "year": 2021,
           "title": "Reflecting on the use of Google Docs for online interviews: Innovation in qualitative data collection",
           "staffIds": [
             "MR"
@@ -17938,7 +18013,7 @@
         },
         {
           "id": "doi:10.1177/0361684319868730",
-          "year": 2020,
+          "year": 2019,
           "title": "Why Women Are Blamed for Being Sexually Harassed: The Effects of Empathy for Female Victims and Male Perpetrators",
           "staffIds": [
             "MR"
@@ -18029,7 +18104,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -18039,7 +18114,7 @@
         },
         {
           "id": "doi:10.1177/1368430212453629",
-          "year": 2013,
+          "year": 2012,
           "title": "The hidden costs of surveillance for performance and helping behaviour",
           "staffIds": [
             "MR"
@@ -18090,7 +18165,7 @@
         },
         {
           "id": "doi:10.1002/ejsp.3136",
-          "year": 2025,
+          "year": 2024,
           "title": "The Moralization of Women's Bodies",
           "staffIds": [
             "MR"
@@ -18150,97 +18225,6 @@
             "Jim A. C. Everett",
             "Nadira S. Faber",
             "Molly J. Crockett"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ch:university of st gallen",
-      "institution": "University of St.Gallen",
-      "country": "CH",
-      "type": "education",
-      "publicationCount": 6,
-      "staffIds": [
-        "GVV",
-        "JVB",
-        "MR",
-        "SB",
-        "TDV"
-      ],
-      "authors": [
-        "Heike Bruch",
-        "Jamie L. Gloor",
-        "Raphael Boemelburg",
-        "Ulrich Leicht‐Deobald"
-      ],
-      "publications": [
-        {
-          "id": "curated:jom-2025-team-boundary-management",
-          "year": 2025,
-          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Ulrich Leicht‐Deobald"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01492063231177976",
-          "year": 2024,
-          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Jamie L. Gloor"
-          ]
-        },
-        {
-          "id": "rug:0d10981c655696ea",
-          "year": 2024,
-          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Heike Bruch"
-          ]
-        },
-        {
-          "id": "rug:c8a09656e9ca78a6",
-          "year": 2023,
-          "title": "Regulatory focus climate, organizational structure, and employee ambidexterity: An interactive multilevel model",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Raphael Boemelburg",
-            "Heike Bruch"
-          ]
-        },
-        {
-          "id": "rug:8b813abb0d4ed29f",
-          "year": 2022,
-          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
-          "staffIds": [
-            "JVB",
-            "SB"
-          ],
-          "authors": [
-            "Heike Bruch"
-          ]
-        },
-        {
-          "id": "rug:3a6311a86a18f164",
-          "year": 2021,
-          "title": "Role strain and role accumulation across multiple teams: The moderating role of employees' polychronic orientation",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Heike Bruch"
           ]
         }
       ]
@@ -18416,7 +18400,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -18502,7 +18486,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -19036,7 +19020,7 @@
         {
           "id": "doi:10.16993/sjwop.181",
           "year": 2023,
-          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees&rsquo; Psychological Needs Satisfaction and Well-Being",
+          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
           "staffIds": [
             "FR",
             "JDB"
@@ -19227,7 +19211,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -19256,7 +19240,7 @@
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -20153,7 +20137,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -20275,7 +20259,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -20670,18 +20654,6 @@
           ]
         },
         {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2016,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck"
-          ]
-        },
-        {
           "id": "doi:10.1109/emr.2016.7792411",
           "year": 2016,
           "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
@@ -20693,6 +20665,18 @@
             "John R. Hollenbeck",
             "Robert B. Davison",
             "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "John R. Hollenbeck"
           ]
         }
       ]
@@ -20746,7 +20730,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -21104,18 +21088,6 @@
           ]
         },
         {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2016,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
           "id": "doi:10.1037/a0038513",
           "year": 2015,
           "title": "Abusive supervision and subordinate performance: Instrumentality considerations in the emergence and consequences of abusive supervision.",
@@ -21127,8 +21099,20 @@
           ]
         },
         {
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
           "id": "doi:10.5465/amj.2012.0360",
-          "year": 2014,
+          "year": 2013,
           "title": "Antecedents of Individuals' Interteam Coordination: Broad Functional Experiences as a Mixed Blessing",
           "staffIds": [
             "GVV",
@@ -21446,18 +21430,6 @@
           ]
         },
         {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2016,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Robert B. Davison"
-          ]
-        },
-        {
           "id": "doi:10.1109/emr.2016.7792411",
           "year": 2016,
           "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
@@ -21469,6 +21441,18 @@
             "John R. Hollenbeck",
             "Robert B. Davison",
             "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Robert B. Davison"
           ]
         }
       ]
@@ -22555,7 +22539,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -22652,7 +22636,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -22807,7 +22791,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -22906,7 +22890,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -23128,7 +23112,7 @@
         },
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -23285,7 +23269,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -23369,7 +23353,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -23746,9 +23730,9 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1002/ejsp.3136",
+          "id": "doi:10.1037/pspa0000441",
           "year": 2025,
-          "title": "The Moralization of Women's Bodies",
+          "title": "The strategic use of harm-based moral arguments in the context of women’s bodily autonomy.",
           "staffIds": [
             "MR"
           ],
@@ -23757,9 +23741,9 @@
           ]
         },
         {
-          "id": "doi:10.1037/pspa0000441",
-          "year": 2025,
-          "title": "The strategic use of harm-based moral arguments in the context of women’s bodily autonomy.",
+          "id": "doi:10.1002/ejsp.3136",
+          "year": 2024,
+          "title": "The Moralization of Women's Bodies",
           "staffIds": [
             "MR"
           ],
@@ -24473,7 +24457,7 @@
         },
         {
           "id": "doi:10.1111/jasp.12728",
-          "year": 2021,
+          "year": 2020,
           "title": "Think Manager–Think Parent? Investigating the fatherhood advantage and the motherhood penalty using the Think Manager–Think Male paradigm",
           "staffIds": [
             "MR"
@@ -25091,17 +25075,6 @@
       ],
       "publications": [
         {
-          "id": "doi:10.1177/0149206312471386",
-          "year": 2015,
-          "title": "Supervisory Responsiveness and Employee Self-Perceived Status and Voice Behavior",
-          "staffIds": [
-            "OJ"
-          ],
-          "authors": [
-            "Liping Gao"
-          ]
-        },
-        {
           "id": "doi:10.1016/j.leaqua.2014.12.004",
           "year": 2015,
           "title": "Transformational leadership and follower creativity: The mediating role of follower relational identification and the moderating role of leader creativity expectations",
@@ -25111,6 +25084,17 @@
           "authors": [
             "Rujie Qu",
             "Kan Shi"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0149206312471386",
+          "year": 2013,
+          "title": "Supervisory Responsiveness and Employee Self-Perceived Status and Voice Behavior",
+          "staffIds": [
+            "OJ"
+          ],
+          "authors": [
+            "Liping Gao"
           ]
         }
       ]
@@ -25499,7 +25483,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -25942,7 +25926,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -26519,7 +26503,7 @@
         },
         {
           "id": "doi:10.5465/amj.2012.0360",
-          "year": 2014,
+          "year": 2013,
           "title": "Antecedents of Individuals' Interteam Coordination: Broad Functional Experiences as a Mixed Blessing",
           "staffIds": [
             "GVV",
@@ -26642,7 +26626,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -27089,48 +27073,6 @@
           ],
           "authors": [
             "Shian‐Ling Keng"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:technical university of applied sciences l beck",
-      "institution": "Technical University of Applied Sciences Lübeck",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "JDB"
-      ],
-      "authors": [
-        "Jo Annika Reins",
-        "Markus Domin",
-        "Monique Janneck"
-      ],
-      "publications": [
-        {
-          "id": "rug:fc5761e7fd641204",
-          "year": 2026,
-          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Monique Janneck",
-            "Markus Domin",
-            "Jo Annika Reins"
-          ]
-        },
-        {
-          "id": "doi:10.1186/s12889-020-09354-5",
-          "year": 2020,
-          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Markus Domin",
-            "Monique Janneck"
           ]
         }
       ]
@@ -27650,7 +27592,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -27690,7 +27632,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -27728,7 +27670,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -31943,7 +31885,7 @@
       "publications": [
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -31969,7 +31911,7 @@
       "publications": [
         {
           "id": "doi:10.1177/0149206311398136",
-          "year": 2013,
+          "year": 2011,
           "title": "Someone to Look Up To",
           "staffIds": [
             "JJ"
@@ -33896,7 +33838,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -33948,7 +33890,7 @@
       "publications": [
         {
           "id": "doi:10.1080/1359432x.2012.734038",
-          "year": 2014,
+          "year": 2012,
           "title": "Innovation in top management teams: Minority dissent, transformational leadership, and radical innovations",
           "staffIds": [
             "BN",
@@ -34320,7 +34262,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -35891,7 +35833,7 @@
         {
           "id": "doi:10.16993/sjwop.181",
           "year": 2023,
-          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees&rsquo; Psychological Needs Satisfaction and Well-Being",
+          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
           "staffIds": [
             "FR",
             "JDB"
@@ -37066,7 +37008,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -37092,7 +37034,7 @@
         {
           "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID‐19 pandemic",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
             "MR"
           ],
@@ -37253,7 +37195,7 @@
       "publications": [
         {
           "id": "doi:10.1177/01492063231177976",
-          "year": 2024,
+          "year": 2023,
           "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
           "staffIds": [
             "MR"
@@ -37691,40 +37633,6 @@
       ]
     },
     {
-      "id": "za:sustainability institute",
-      "institution": "Sustainability Institute",
-      "country": "ZA",
-      "type": "nonprofit",
-      "publicationCount": 1,
-      "staffIds": [
-        "JDB"
-      ],
-      "authors": [
-        "Alexandra Thomsen",
-        "Dirk Lehr",
-        "Hanna Brückner",
-        "Jo Annika Reins",
-        "Markus Domin"
-      ],
-      "publications": [
-        {
-          "id": "rug:fc5761e7fd641204",
-          "year": 2026,
-          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Alexandra Thomsen",
-            "Hanna Brückner",
-            "Markus Domin",
-            "Jo Annika Reins",
-            "Dirk Lehr"
-          ]
-        }
-      ]
-    },
-    {
       "id": "dk:svendborg sygehus",
       "institution": "Svendborg Sygehus",
       "country": "DK",
@@ -37938,6 +37846,34 @@
           "authors": [
             "Joseph Luomba",
             "Fenant Laurent Mhagama"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:technical university of applied sciences l beck",
+      "institution": "Technical University of Applied Sciences Lübeck",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Markus Domin",
+        "Monique Janneck"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1186/s12889-020-09354-5",
+          "year": 2020,
+          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Markus Domin",
+            "Monique Janneck"
           ]
         }
       ]
@@ -39204,7 +39140,7 @@
       "publications": [
         {
           "id": "doi:10.1080/00222216.2023.2193180",
-          "year": 2024,
+          "year": 2023,
           "title": "Integrative review: Vacations and subjective well-being",
           "staffIds": [
             "JDB"
