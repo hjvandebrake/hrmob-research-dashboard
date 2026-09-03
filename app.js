@@ -44,7 +44,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260827-1146";
+const DATA_VERSION = "20260903-1105";
 const AUTH_PASSWORD_HASH = "f0d40db142e5ce997137dd4b668cc9ed4a104e29a50e18af00497b9b9cf14040";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
