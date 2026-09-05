@@ -44,9 +44,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260903-1105";
-const AUTH_PASSWORD_HASH = "f0d40db142e5ce997137dd4b668cc9ed4a104e29a50e18af00497b9b9cf14040";
-const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
+const DATA_VERSION = "20260905-no-auth";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -452,76 +450,14 @@ const OPEN_ACCESS_JOURNAL_PATTERNS = [
 
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
-  setupAuthGate();
-  if (dashboardHasAccess()) {
-    startDashboard();
-  } else {
-    lockDashboard();
-  }
+  startDashboard();
 });
 
 async function startDashboard() {
-  unlockDashboard();
   if (state.appStarted) return;
   state.appStarted = true;
   attachEvents();
   await loadData();
-}
-
-function setupAuthGate() {
-  if (!els.authForm) return;
-  els.authForm.addEventListener("submit", handleAuthSubmit);
-}
-
-async function handleAuthSubmit(event) {
-  event.preventDefault();
-  const password = (els.authPassword?.value || "").trim();
-  if (!password) {
-    if (els.authStatus) els.authStatus.textContent = "Enter the dashboard password.";
-    els.authPassword?.focus();
-    return;
-  }
-  if (els.authStatus) els.authStatus.textContent = "Checking password...";
-  try {
-    const hash = await sha256Hex(password);
-    if (hash !== AUTH_PASSWORD_HASH) {
-      if (els.authStatus) els.authStatus.textContent = "No match. Check the password and try again.";
-      if (els.authPassword) {
-        els.authPassword.value = "";
-        els.authPassword.focus();
-      }
-      return;
-    }
-    try {
-      sessionStorage.setItem(AUTH_STORAGE_KEY, AUTH_PASSWORD_HASH);
-    } catch (_) {
-      // Session storage can be unavailable in hardened browser modes; continue for this page load.
-    }
-    if (els.authStatus) els.authStatus.textContent = "";
-    await startDashboard();
-    focusDashboardHeading();
-  } catch (_) {
-    if (els.authStatus) els.authStatus.textContent = "Password check is unavailable in this browser.";
-  }
-}
-
-function dashboardHasAccess() {
-  try {
-    return sessionStorage.getItem(AUTH_STORAGE_KEY) === AUTH_PASSWORD_HASH;
-  } catch (_) {
-    return false;
-  }
-}
-
-function lockDashboard() {
-  document.documentElement.classList.add("auth-locked");
-  if (els.authGate) els.authGate.hidden = false;
-  requestAnimationFrame(() => els.authPassword?.focus());
-}
-
-function unlockDashboard() {
-  document.documentElement.classList.remove("auth-locked");
-  if (els.authGate) els.authGate.hidden = true;
 }
 
 function focusDashboardHeading() {
@@ -531,20 +467,7 @@ function focusDashboardHeading() {
   heading.focus({ preventScroll: true });
 }
 
-async function sha256Hex(value) {
-  if (!globalThis.crypto?.subtle) throw new Error("WebCrypto unavailable");
-  const bytes = new TextEncoder().encode(value);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(digest))
-    .map((byte) => byte.toString(16).padStart(2, "0"))
-    .join("");
-}
-
 function cacheElements() {
-  els.authGate = document.getElementById("auth-gate");
-  els.authForm = document.getElementById("auth-form");
-  els.authPassword = document.getElementById("auth-password");
-  els.authStatus = document.getElementById("auth-status");
   els.skipLink = document.querySelector(".skip-link");
   els.mainContent = document.getElementById("main-content");
   els.dataStatus = document.getElementById("data-status");
