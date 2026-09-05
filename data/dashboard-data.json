@@ -3197,10 +3197,12 @@
       ],
       "matchedPeople": [
         "SB",
+        "JVB",
         "GVV"
       ],
       "sourcePeople": [
         "SB",
+        "JVB",
         "GVV"
       ],
       "aip": 99.152,
@@ -3211,6 +3213,7 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Berger, S.",
+        "OpenAlex lists Hendrik J. Van de Brake, the publication name of Joost van de Brake.",
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
