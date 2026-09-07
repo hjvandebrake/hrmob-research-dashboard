@@ -3384,7 +3384,6 @@ footer {
 #view-overview .metric-grid { grid-template-columns: repeat(4,minmax(0,1fr)); margin-bottom: 24px; }
 #view-overview .overview-grid { gap: 20px; grid-template-columns: minmax(0,1fr); }
 #view-overview .overview-panel-wide { grid-column: auto; }
-body[data-active-tab="metrics"] .nav-in > .switch { display: none; }
 #benchmark-summary { grid-template-columns: repeat(3,minmax(0,1fr)); }
 #view-overview .overview-panel { padding: 18px 20px; }
 #view-overview .h2 { font-size: 1.2rem; }
