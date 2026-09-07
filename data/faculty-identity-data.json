@@ -12,11 +12,11 @@
     },
     "generatedOn": "2026-09-07",
     "people": 528,
-    "publicationsChecked": 4276,
+    "publicationsChecked": 4273,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 481,
     "additionalBenchmarkLinks": 39,
-    "rejectedLinks": 94,
+    "rejectedLinks": 96,
     "identityConflicts": 2,
     "method": "Unique compatible author names against official staff profiles and departmental rosters; independent of benchmark eligibility. Initial-only matches remain provisional."
   },
@@ -68540,23 +68540,6 @@
       "matches": []
     },
     {
-      "id": "doi:10.1364/oe.27.033436",
-      "doi": "10.1364/oe.27.033436",
-      "publicationIds": [
-        "doi:10.1364/oe.27.033436"
-      ],
-      "people": [
-        "ops-c-emmanouilidis"
-      ],
-      "matches": [
-        {
-          "personId": "ops-c-emmanouilidis",
-          "author": "Christos Emmanouilidis",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1111/j.1540-5885.2011.00791.x",
       "doi": "10.1111/j.1540-5885.2011.00791.x",
       "publicationIds": [
@@ -80394,23 +80377,6 @@
       ]
     },
     {
-      "id": "doi:10.1159/000029392",
-      "doi": "10.1159/000029392",
-      "publicationIds": [
-        "doi:10.1159/000029392"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5117/2005.018.002.001",
       "doi": "10.5117/2005.018.002.001",
       "publicationIds": [
@@ -87300,23 +87266,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "openalex:W10461089",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W10461089"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
           "method": "unique compatible author name"
         }
       ]

@@ -23,7 +23,7 @@
       "acc-da-de-waard",
       "gem-x-ye"
     ],
-    "quarantinedPublications": 481,
+    "quarantinedPublications": 483,
     "identityRule": "Author links checked against the faculty registry; conflicting source identities excluded from denominators. Raw source records retained for review."
   },
   "people": [
@@ -79609,34 +79609,6 @@
       ]
     },
     {
-      "id": "doi:10.1364/oe.27.033436",
-      "year": 2011,
-      "title": "Optimizing Maintenance and Reliability Through Automatically Scrutinising Monitoring Data",
-      "doi": "10.1364/oe.27.033436",
-      "journal": "Optics Express",
-      "authors": [
-        "Aitor Amaiz",
-        "Erkki Jantunen",
-        "Andrew Strarr",
-        "Christos Emmanouilidis"
-      ],
-      "aip": 69.313,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-c-emmanouilidis"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-c-emmanouilidis"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1111/j.1540-5885.2011.00791.x",
       "year": 2011,
       "title": "Opinion Leaders' Role in Innovation Diffusion: A Simulation Study",
@@ -97186,32 +97158,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1159/000029392",
-      "year": 2005,
-      "title": "Innovative working behavior and stress as a response to role overload and role ambiguity",
-      "doi": "10.1159/000029392",
-      "journal": "Gedrag en Organisatie",
-      "authors": [
-        "Simon B. de Jong",
-        "Onne Janssen"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-o-janssen"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {

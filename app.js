@@ -47,7 +47,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260907-metrics3";
+const DATA_VERSION = "20260907-comparison4";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -1660,8 +1660,8 @@ function syncPublicationWindowControls() {
 function syncViewContext() {
   const roster = rosterModeLabel();
   const publicationWindow = activeWindowLabel();
-  const [metricsStart, metricsEnd] = activeWindowYears();
-  const metricsWindow = `${Math.max(2005, Number.isFinite(metricsStart) ? metricsStart : 2005)}-${Number.isFinite(metricsEnd) ? metricsEnd : new Date().getFullYear()}`;
+  const [metricsStart, metricsEnd] = metricComparisonWindow();
+  const metricsWindow = `${metricsStart}-${metricsEnd} completed years`;
   const contextByTab = {
     overview: `${roster} · Publications: ${publicationWindow}`,
     staff: `${roster} | Publication evidence: ${publicationWindow}`,
@@ -4444,13 +4444,23 @@ function personYearAverages(pubs, people, startYearOverride = null) {
   };
 }
 
+function metricComparisonWindow(mode=state.publicationWindow, currentYear=new Date().getFullYear()) {
+  const end=currentYear-1;
+  const normalized=normalizeWindowMode(mode);
+  return [normalized==="all"?METRICS_START_YEAR:Math.max(METRICS_START_YEAR,end-(normalized==="recent"?4:9)),end];
+}
+
+function departmentPublicationYear(pub) {
+  return Number.isInteger(pub.comparisonYear)?pub.comparisonYear:pub.year;
+}
+
 function departmentPublicationGroups(data, fromYear, toYear) {
   const staffRows=(data.people||[]).filter(p=>p.appointmentSection!=="office");
   const people = new Map(staffRows.map(p=>[p.id,p]));
   const records = new Map();
-  (data.publications || []).filter(p=>p.year>=fromYear&&p.year<=toYear).forEach(pub=>{
+  (data.publications || []).filter(p=>p.countedInComparison!==false&&departmentPublicationYear(p)>=fromYear&&departmentPublicationYear(p)<=toYear).forEach(pub=>{
     const key=normalizeDoi(pub.doi) || pub.id;
-    if(!records.has(key)) records.set(key,{...pub,people:new Set(),departments:new Set()});
+    if(!records.has(key)) records.set(key,{...pub,year:departmentPublicationYear(pub),people:new Set(),departments:new Set()});
     const row=records.get(key);
     if(!isNumber(row.aip)&&isNumber(pub.aip))row.aip=pub.aip;
     (pub.people||[]).filter(id=>people.has(id)).forEach(id=>{
@@ -4491,26 +4501,29 @@ function renderMetrics() {
   if(!data?.publications) {
     const failed=state.deferredDataStatus.department === "failed";
     els.benchmarkSummary.innerHTML="";
-    els.benchmarkPublicationTrend.innerHTML=`<p role="status">${failed?"Department publication data could not load. Reload to try again.":"Loading department publications..."}</p>`;
+    const status=`<p role="status">${failed?"Department publication data could not load. Reload to try again.":"Loading department publications..."}</p>`;
+    els.benchmarkPublicationTrend.innerHTML=status;
+    document.getElementById("benchmark-aip-trend").innerHTML=status;
     return;
   }
-  const [start,end]=activeWindowYears();
-  const from=Math.max(2005,Number.isFinite(start)?start:2005);
-  const to=Number.isFinite(end)?end:new Date().getFullYear();
+  const [from,to]=metricComparisonWindow();
   const groups=departmentPublicationGroups(data,from,to);
   const hrm=groups.find(g=>g.key==="HRM&OB");
   const number=value=>value===null?"N/A":value.toFixed(2);
   els.benchmarkSummary.innerHTML=[
-    metric("HRM&OB papers per person",number(hrm?.average??null)),
-    metric("HRM&OB AIP ≥ 95 per person",number(hrm?.aipAverage??null)),
-    metric("HRM&OB academic roster",hrm?.staff||0)
+    metric(`HRM&OB papers per person, ${from}-${to}`,number(hrm?.average??null)),
+    metric(`HRM&OB AIP ≥ 95 per person, ${from}-${to}`,number(hrm?.aipAverage??null)),
+    metric("HRM&OB current staff-list headcount",hrm?.staff||0)
   ].join("");
-  document.getElementById("benchmark-identity-note").textContent=`Period averages: ${from}-${to}. Unique departmental papers divided by current academic headcount, including PhDs and lecturers. Office staff excluded. ${to===new Date().getFullYear()?to+" is year to date. ":""}Public-source coverage varies by department; these are provisional comparisons.`;
+  document.getElementById("benchmark-identity-note").textContent=`Completed years: ${from}-${to}. Each paper counts once per department, divided by the current staff-list headcount. PhDs and lecturers are included; known office roles are excluded. The ongoing year is excluded from both graphs and their tables.`;
   els.benchmarkTrendTitle.textContent="All journal publications per person, by year";
   renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
   renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");
   els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}<small>${g.recordedAuthors} authors with records</small></span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
   els.benchmarkMethodNote.innerHTML=`<p><strong>Average per person:</strong> each paper counts once in a department, even with several departmental authors. Divide that count by the current academic roster, including PhDs and lecturers. Joint papers count once in each participating department. The denominator stays the same across years because historical headcounts and FTE are unavailable; this is current-roster output per head, including pre-appointment publications.</p><p><strong>AIP ≥ 95:</strong> the same calculation restricted to journals scoring at least 95 in the 2020-2024 average AIP workbook. Papers with an unknown AIP remain in the all-publication chart and are excluded from the high-AIP chart.</p><p><strong>Centralization among recorded authors:</strong> each paper contributes one credit, split equally among its departmental authors. The percentage describes how unequally those credits are shared among people with at least one linked paper in the selected period. 0% means equal shares; 100% is the limiting case of all credit going to one author. With fewer than two recorded authors, it is N/A. People without a linked paper are left out of this statistic because the records cannot distinguish missing data from no publications. This does not measure the whole department's centralization.</p><p>Official publication pages checked ${escapeHtml(data.meta.generatedOn)}. Pages may list selected output and some links are unavailable. All current academic roster members remain in the per-person denominator, including those without linked records. Uneven coverage can therefore depress departmental averages. The roster is broader than the HRM&OB staff selection on other pages.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>People</th><th>With records</th><th>No linked paper</th><th>Unknown AIP papers</th></tr></thead><tbody>${groups.map(g=>`<tr><th>${escapeHtml(g.label)}</th><td>${g.staff}</td><td>${g.recordedAuthors}</td><td>${g.missingPeople.length}</td><td>${g.aipUnknown}</td></tr>`).join("")}</tbody></table></div><details><summary>Roster members without a linked paper in this period</summary><p>This list identifies records to check. It cannot establish that a colleague has not published.</p>${groups.map(g=>`<p><strong>${escapeHtml(g.label)}:</strong> ${g.missingPeople.map(p=>escapeHtml(p.name||p.display)).join("; ")||"None"}</p>`).join("")}</details>`;
+  const audit=data.meta.comparisonAudit;
+  if(audit)els.benchmarkMethodNote.innerHTML+=`<h4>Source coverage audit</h4><p>The ${escapeHtml(audit.generatedOn)} audit checks arithmetic, publication years and journal matching. Complete publication lists and historical staffing data are still unavailable. Staff lists can include honorary or special appointments, and role information is incomplete. Department differences in career stage, appointment type, source coverage and missing AIP scores limit comparisons.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>Unavailable profile pages</th><th>Profiles with up to 10 parsed articles</th><th>Unspecified roles</th></tr></thead><tbody>${audit.departments.map(d=>`<tr><th>${escapeHtml(d.department)}</th><td>${d.unavailableProfiles} / ${d.currentHeadcount}</td><td>${d.profilesWithAtMost10ParsedArticles} / ${d.currentHeadcount}</td><td>${d.roleUnspecified} / ${d.currentHeadcount}</td></tr>`).join("")}</tbody></table></div><p>A short profile list gives a partial view of someone's output. ISSN or exact journal-name evidence is required for AIP assignment. ${audit.excludedOutputs?.length||0} records are excluded for publication type, duplicate identity or a mismatched DOI; the source records are retained.</p><p><strong>Publication year:</strong> the publisher's issue year takes precedence, followed by the official university reference year, the earliest publisher publication date, then the stored source year. Explicit corrections have publisher evidence. Original source years are retained. ${audit.yearBasisCounts?.['stored-unverified']||0} records still rely on an unverified stored year. The same rule applies to every department; online-first and issue years can differ.</p>`;
+  if(audit?.doiTitleChecks)els.benchmarkMethodNote.innerHTML+=`<p><strong>DOI title check:</strong> ${audit.doiTitleChecks['title-agreement']||0} records agree with the publisher title. ${audit.doiTitleChecks['excluded-mismatch']||0} mismatched DOI links are excluded. Publisher metadata was unavailable for ${audit.doiTitleChecks.unavailable||0} DOI-linked records; ${audit.doiTitleChecks['no-doi']||0} records have no DOI. These gaps remain part of the source-coverage limitation.</p>`;
 }
 
 function renderDepartmentPublicationChart(container,groups,from,to,key="average") {
@@ -4523,7 +4536,8 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   const x=year=>pad.left+(year-from)/Math.max(1,to-from)*(width-pad.left-pad.right);
   const y=value=>height-pad.bottom-value/ymax*(height-pad.top-pad.bottom);
   const colors={"HRM&OB":"#9b493b",Marketing:"#477875","IM&S":"#687b99",Operations:"#8a7548",GEM:"#7c6288",Accounting:"#527d51",EEF:"#515a65"};
-  const labels=groups.map(g=>({g,y:y(g.yearly.at(-1)?.[key]||0)})).sort((a,b)=>a.y-b.y);
+  const plotted=groups.filter(g=>g.staff>0);
+  const labels=plotted.filter(g=>isNumber(g.yearly.at(-1)?.[key])).map(g=>({g,y:y(g.yearly.at(-1)[key])})).sort((a,b)=>a.y-b.y);
   labels.forEach((l,i)=>{l.labelY=Math.max(l.y,i?labels[i-1].labelY+16:pad.top)});
   const excess=Math.max(0,(labels.at(-1)?.labelY||0)-(height-pad.bottom));
   labels.forEach(l=>l.labelY-=excess);
@@ -4531,13 +4545,13 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   const format=v=>v===null?"N/A":v.toFixed(2);
   container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}"><title>${title}</title>
     ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
-    ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${v}${v===new Date().getFullYear()?"*":""}</text>`).join("")}
-    ${groups.map(g=>`<polyline fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="${g.key==="HRM&OB"?3:1.8}" points="${g.yearly.map(r=>x(r.year)+","+y(r[key]||0)).join(" ")}"/>`).join("")}
+    ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${v}</text>`).join("")}
+    ${plotted.map(g=>`<polyline data-department="${escapeHtml(g.key)}" fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="2" points="${g.yearly.filter(r=>isNumber(r[key])).map(r=>x(r.year)+","+y(r[key])).join(" ")}"/>`).join("")}
     ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
     </svg>
-    <details class="metric-data-details"><summary>View per-person values</summary><div class="table-wrap"><table class="department-counts-table"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
+    <details class="metric-data-details"><summary>View department values</summary><p class="small-muted">Each value is a department's unique-paper count divided by its current staff-list headcount, rounded to two decimals. Hover over a yearly value to see the count and denominator.</p><div class="table-wrap"><table class="department-counts-table" aria-label="${title}, department values"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
     <tr><th>Current headcount</th>${groups.map(g=>`<td class="num">${g.staff}</td>`).join("")}</tr>
-    ${years.slice().reverse().map(year=>`<tr><th>${year}${year===new Date().getFullYear()?" (YTD)":""}</th>${groups.map(g=>`<td class="num">${format(g.yearly.find(r=>r.year===year)[key])}</td>`).join("")}</tr>`).join("")}
+    ${years.slice().reverse().map(year=>`<tr><th>${year}</th>${groups.map(g=>{const row=g.yearly.find(r=>r.year===year);return `<td class="num" title="${key==="aipAverage"?row.highAip:row.count} unique papers / ${g.staff} people">${format(row[key])}</td>`}).join("")}</tr>`).join("")}
     <tr><th>Period per person</th>${groups.map(g=>`<td class="num"><strong>${format(g[key])}</strong></td>`).join("")}</tr>
     <tr><th>Unique papers in period</th>${groups.map(g=>`<td class="num">${key==="aipAverage"?g.highAip:g.total}</td>`).join("")}</tr></tbody></table></div></details>`;
 }
