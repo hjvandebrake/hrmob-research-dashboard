@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260905-jvb-alias">
+  <link rel="stylesheet" href="styles.css?v=20260907-rework6">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -32,9 +32,9 @@
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
       <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
-        <button type="button" data-window-mode="recent" aria-pressed="false">Last 5</button>
-        <button class="on" type="button" data-window-mode="last10" aria-pressed="true">Last 10</button>
-        <button type="button" data-window-mode="all" aria-pressed="false">All</button>
+        <button type="button" data-window-mode="recent" aria-pressed="false">5 years</button>
+        <button class="on" type="button" data-window-mode="last10" aria-pressed="true">10 years</button>
+        <button type="button" data-window-mode="all" aria-pressed="false">All years</button>
       </div>
       <label class="switch" title="Adds affiliated researchers to counts, tables, metrics, and network views">
         <input id="fte-toggle" type="checkbox">
@@ -62,8 +62,8 @@
         <section class="overview-orientation" aria-label="Dashboard orientation">
           <div>
             <p class="eye">Research guide</p>
-            <h2 class="overview-orientation-title">Find expertise, projects, grant angles, resources, and records to correct.</h2>
-            <p>A starting point for HRM&amp;OB research activity.</p>
+            <h2 class="overview-orientation-title">Our research, people, and collaborations</h2>
+            <p>Explore the evidence behind our research activity. Use the year and roster controls to change the scope.</p>
           </div>
           <nav class="overview-use-cases" aria-label="Common dashboard uses">
             <a class="use-case-card" href="#staff">
@@ -371,6 +371,7 @@
           </div>
         </div>
         <div id="benchmark-summary" class="metric-grid"></div>
+        <p class="section-intro" id="benchmark-identity-note" role="note">Comparisons remain provisional because publication coverage and appointment dates are incomplete.</p>
         <div class="benchmark-grid">
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
@@ -417,7 +418,16 @@
         </div>
         <div class="publication-layout">
           <div class="publication-main">
+            <p class="section-intro">Each paper appears once. Department totals count journal articles; other visible outputs are available below. The roster and year controls at the top apply throughout the dashboard.</p>
             <div class="tool-row">
+              <label class="select-box">
+                <span>Outputs</span>
+                <select id="publication-kind-filter" aria-controls="publication-table">
+                  <option value="counted">Counted journal articles</option>
+                  <option value="all">All visible outputs</option>
+                  <option value="other">Other outputs</option>
+                </select>
+              </label>
               <label class="search-box">
                 <span>Search</span>
                 <input id="pub-search" type="search" placeholder="Title, journal, author" aria-controls="publication-table">
@@ -446,6 +456,7 @@
             <section class="table-wrap publication-results-table" aria-label="Publication results" aria-describedby="publication-results-summary" tabindex="0">
               <table id="publication-table" aria-describedby="publication-results-summary"></table>
             </section>
+            <div id="publication-pagination"></div>
           </div>
           <aside class="publication-side" aria-labelledby="publication-journals-title">
             <div class="overview-panel-head">
@@ -532,17 +543,10 @@
         <div class="sec-head compact network-page-head">
           <div>
             <p class="eye">Relationship network</p>
-            <h2 class="h2">Explore publication and teaching connections</h2>
-          </div>
-          <div class="network-mode-block">
-            <span id="network-mode-label" class="control-label">Relationship</span>
-            <div id="network-mode-toggle" class="metric-toggle network-mode-toggle" role="group" aria-labelledby="network-mode-label">
-              <button class="on" type="button" data-network-mode="publications" aria-pressed="true">Publications</button>
-              <button type="button" data-network-mode="teaching" aria-pressed="false">Teaching</button>
-            </div>
+            <h2 class="h2">Research collaborations</h2>
           </div>
         </div>
-        <p class="section-intro page-intro network-page-intro">Start with the department overview, then select a member to inspect their strongest internal and outside relationships. Line weight and numbered badges represent shared publications or course offerings&mdash;not relationship quality or research impact.</p>
+        <p class="section-intro page-intro network-page-intro">See who publishes together, within HRM&amp;OB and beyond. Select a person to inspect their shared papers. Counts describe coauthorship in the selected years.</p>
 
         <section class="network-controls" aria-labelledby="network-controls-title">
           <div class="network-controls-heading">
@@ -569,12 +573,12 @@
             <label class="switch network-external-toggle publication-network-control">
               <input id="network-external-toggle" type="checkbox" checked>
               <span class="switch-copy">
-                <span>Outside coauthors</span>
-                <small>Show for selected member</small>
+                <span>Additional coauthors</span>
+                <small>Beyond the dashboard roster</small>
               </span>
             </label>
             <label class="select-box network-min-tie-control publication-network-control" hidden>
-              <span>Minimum shared publications</span>
+              <span>Additional coauthor: minimum papers</span>
               <select id="network-min-tie-select">
                 <option value="1">1 or more</option>
                 <option value="2">2 or more</option>
@@ -604,7 +608,7 @@
               <svg id="network-svg" role="img" aria-label="Collaboration network"></svg>
               <div id="network-empty" class="empty" role="status" hidden>No coauthorship edges for the current filters.</div>
             </div>
-            <p id="network-map-description" class="visually-hidden" aria-hidden="true">Department members are shown as labelled circles. Larger circles represent more records. Lines connect people who share publications or course offerings; thicker lines represent more shared records. Position reflects the display layout, not quality, status, or impact. Use the evidence table below for a text alternative.</p>
+            <p id="network-map-description" class="visually-hidden" aria-hidden="true">Department members and outside coauthors are shown as labelled circles. Lines indicate shared papers. Use the searchable evidence table below for a text alternative.</p>
             <div class="network-legend-shell" role="group" aria-labelledby="network-legend-title">
               <p id="network-legend-title" class="network-legend-title">How to read the map</p>
               <div id="network-legend" class="legend">
@@ -630,13 +634,14 @@
         </div>
 
         <section class="network-evidence-panel" aria-labelledby="network-evidence-title">
+          <label class="search-box network-evidence-search"><span>Find a coauthor or paper</span><input id="network-search" type="search" placeholder="Name or publication title" aria-controls="network-table-wrap"></label>
           <div class="overview-panel-head">
             <div>
               <p class="eye">Evidence</p>
               <h3 id="network-evidence-title" class="overview-h3">Current network evidence</h3>
             </div>
           </div>
-          <p class="section-intro">Compare tie strength and inspect the publications or course offerings behind each connection. Counts follow the active time window and filters; the map may cap outside nodes for readability while qualifying evidence remains listed here.</p>
+          <p class="section-intro">Search every qualifying coauthor pair and open its supporting papers. The map shows the strongest outside connections; this table includes the rest.</p>
           <div id="network-evidence-table-wrap" class="network-evidence-table-wrap">
             <section id="network-table-wrap" class="table-wrap compact-table" aria-label="Scrollable relationship evidence table" tabindex="0"></section>
           </div>
@@ -776,6 +781,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260905-jvb-alias"></script>
+  <script src="app.js?v=20260907-rework6"></script>
 </body>
 </html>
