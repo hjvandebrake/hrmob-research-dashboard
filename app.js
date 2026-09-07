@@ -47,7 +47,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260907-streamlined2";
+const DATA_VERSION = "20260907-metrics3";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -1595,8 +1595,9 @@ function focusDashboardContent() {
 
 function syncFooterMeta(meta = {}) {
   if (!els.footerMeta) return;
-  els.footerMeta.textContent = meta.generatedOn
-    ? `Last updated ${meta.generatedOn} · Provisional public-source data`
+  const updated=[meta.generatedOn,meta.publicationDatesCheckedOn].filter(Boolean).sort().at(-1);
+  els.footerMeta.textContent = updated
+    ? `Data updated ${updated} · Provisional public-source data`
     : "Last updated date unavailable · Provisional public-source data";
   if (meta.publicationSource) {
     els.footerMeta.title = meta.publicationSource;
@@ -1668,7 +1669,7 @@ function syncViewContext() {
     collaboration: `${roster} | Publication-based signals: ${publicationWindow}`,
     publications: `${roster} | ${publicationWindow}`,
     network: `${roster} | Publication ties: ${publicationWindow}`,
-    metrics: `All departmental staff, including PhD students · ${metricsWindow}`,
+    metrics: `Academic staff and PhD students · ${metricsWindow}`,
     resources: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
     contact: "Corrections, suggestions, and staff profile updates",
   };
@@ -4055,6 +4056,25 @@ function renderOverview() {
   renderOverviewGrants(grants);
   renderOverviewPhds(theses);
   renderOverviewCurrentPhds(currentProjects);
+  renderOverviewPreviews(pubs, grants, currentProjects);
+}
+
+function renderOverviewPreviews(pubs, grants, projects) {
+  const container=document.getElementById("overview-previews");
+  if(!container)return;
+  const people=activePeople();
+  const ids=new Set(people.map(p=>p.id));
+  const joint=pubs.filter(p=>new Set((p.matchedPeople||[]).filter(id=>ids.has(id))).size>1).length;
+  const latest=(state.grantsData?.grants||[]).filter(g=>g.year===new Date().getFullYear()).sort(sortGrants);
+  const cards=[
+    {href:"#staff",title:"Staff & expertise",lead:`${people.length} researchers`,detail:people.slice(0,3).map(p=>p.name).join(" · ")+". Browse research interests and individual output."},
+    {href:"#phds",title:"PhD students",lead:`${projects.length} current projects`,detail:"Meet the current cohort, explore projects, and see supervision links."},
+    {href:"#network",title:"Research network",lead:`${joint} papers linking colleagues`,detail:"See departmental collaborations, other FEB colleagues, and external coauthors."},
+    {href:"#metrics",title:"Department comparison",lead:"All publications & AIP ≥ 95",detail:"Compare unique papers per person across seven departments, with coverage notes."},
+    {href:"#grants",title:"Grants",lead:latest.length?`${latest.length} recent awards`:`${grants.length} award records`,detail:latest.length?latest.map(g=>`${grantStaff(g,peopleById())} (${g.scheme.split(" ").at(-1)})`).join(" · "):"Awarded funding and upcoming grant opportunities."},
+    {href:"#opportunities",title:"Opportunities",lead:"Ideas for collaboration",detail:"Explore shared interests, potential partners, and reference materials."},
+  ];
+  container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><p>${escapeHtml(c.detail)}</p><span>Explore →</span></a>`).join("");
 }
 
 function renderPhds() {
@@ -4425,12 +4445,14 @@ function personYearAverages(pubs, people, startYearOverride = null) {
 }
 
 function departmentPublicationGroups(data, fromYear, toYear) {
-  const people = new Map((data.people || []).map(p=>[p.id,p]));
+  const staffRows=(data.people||[]).filter(p=>p.appointmentSection!=="office");
+  const people = new Map(staffRows.map(p=>[p.id,p]));
   const records = new Map();
   (data.publications || []).filter(p=>p.year>=fromYear&&p.year<=toYear).forEach(pub=>{
     const key=normalizeDoi(pub.doi) || pub.id;
     if(!records.has(key)) records.set(key,{...pub,people:new Set(),departments:new Set()});
     const row=records.get(key);
+    if(!isNumber(row.aip)&&isNumber(pub.aip))row.aip=pub.aip;
     (pub.people||[]).filter(id=>people.has(id)).forEach(id=>{
       row.people.add(id);
       (people.get(id).departments||[people.get(id).department]).forEach(d=>row.departments.add(d));
@@ -4438,16 +4460,27 @@ function departmentPublicationGroups(data, fromYear, toYear) {
   });
   const years=Array.from({length:Math.max(0,toYear-fromYear+1)},(_,i)=>fromYear+i);
   return (data.departments||[]).map(department=>{
-    const staff=(data.people||[]).filter(p=>(p.departments||[p.department]).includes(department));
+    const staff=staffRows.filter(p=>(p.departments||[p.department]).includes(department));
     const credits=new Map(staff.map(p=>[p.id,0]));
     const pubs=Array.from(records.values()).filter(p=>p.departments.has(department));
     pubs.forEach(pub=>{
       const authors=Array.from(pub.people).filter(id=>credits.has(id));
       authors.forEach(id=>credits.set(id,credits.get(id)+1/authors.length));
     });
-    return {key:department,label:department,total:pubs.length, staff:staff.length,
-      centralization:pubs.length ? outputCentralization(Array.from(credits.values())) : null,
-      yearly:years.map(year=>({year,count:pubs.filter(p=>p.year===year).length})),
+    const observed=Array.from(credits.values()).filter(v=>v>0);
+    const highAip=pubs.filter(p=>isNumber(p.aip)&&p.aip>=95).length;
+    const missing=staff.filter(p=>!credits.get(p.id));
+    const divide=count=>staff.length?count/staff.length:null;
+    return {key:department,label:department,total:pubs.length,staff:staff.length,
+      highAip,average:divide(pubs.length),aipAverage:divide(highAip),
+      aipUnknown:pubs.filter(p=>!isNumber(p.aip)).length,
+      recordedAuthors:observed.length,missingPeople:missing,
+      centralization:outputCentralization(observed),
+      yearly:years.map(year=>{
+        const rows=pubs.filter(p=>p.year===year);
+        const high=rows.filter(p=>isNumber(p.aip)&&p.aip>=95).length;
+        return {year,count:rows.length,highAip:high,average:divide(rows.length),aipAverage:divide(high)};
+      }),
       publicationIds:pubs.map(p=>p.id)};
   });
 }
@@ -4465,40 +4498,48 @@ function renderMetrics() {
   const from=Math.max(2005,Number.isFinite(start)?start:2005);
   const to=Number.isFinite(end)?end:new Date().getFullYear();
   const groups=departmentPublicationGroups(data,from,to);
-  const union=new Set(groups.flatMap(g=>g.publicationIds));
+  const hrm=groups.find(g=>g.key==="HRM&OB");
+  const number=value=>value===null?"N/A":value.toFixed(2);
   els.benchmarkSummary.innerHTML=[
-    metric("HRM&OB publications",groups.find(g=>g.key==="HRM&OB")?.total||0),
-    metric("Unique faculty publications",union.size),
-    metric("Departments",groups.length)
+    metric("HRM&OB papers per person",number(hrm?.average??null)),
+    metric("HRM&OB AIP ≥ 95 per person",number(hrm?.aipAverage??null)),
+    metric("HRM&OB academic roster",hrm?.staff||0)
   ].join("");
-  const note=document.getElementById("benchmark-identity-note");
-  note.textContent=`All staff ranks, including PhD students. Each paper counts once per department. ${to===new Date().getFullYear()?to+" is year to date. ":""}Public-source coverage varies by department.`;
-  els.benchmarkTrendTitle.textContent="Publications per department by year";
-  renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to);
-  els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}</span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
-  els.benchmarkMethodNote.innerHTML=`<p>Counts cover journal articles linked to people on the current departmental staff lists, including PhD students and other staff. A paper with several authors from one department counts once. Joint papers count once in each participating department; the faculty total counts each paper once.</p><p>Centralization describes how publication credit is shared within a department: 0% means an even distribution, and 100% means one person accounts for all credit. Each paper contributes one credit, split equally among its authors in that department. Staff with no recorded publications are included.</p><p>Official staff publication pages checked ${escapeHtml(data.meta.generatedOn)}. These are the publication records of the current roster, including work before people joined. Public-source coverage can be incomplete${data.meta.pagesFailed?"; "+data.meta.pagesFailed+" profile pages were unavailable":""}. The department roster is broader than the HRM&OB staff selection used on the other pages.</p>`;
+  document.getElementById("benchmark-identity-note").textContent=`Period averages: ${from}-${to}. Unique departmental papers divided by current academic headcount, including PhDs and lecturers. Office staff excluded. ${to===new Date().getFullYear()?to+" is year to date. ":""}Public-source coverage varies by department; these are provisional comparisons.`;
+  els.benchmarkTrendTitle.textContent="All journal publications per person, by year";
+  renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
+  renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");
+  els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}<small>${g.recordedAuthors} authors with records</small></span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
+  els.benchmarkMethodNote.innerHTML=`<p><strong>Average per person:</strong> each paper counts once in a department, even with several departmental authors. Divide that count by the current academic roster, including PhDs and lecturers. Joint papers count once in each participating department. The denominator stays the same across years because historical headcounts and FTE are unavailable; this is current-roster output per head, including pre-appointment publications.</p><p><strong>AIP ≥ 95:</strong> the same calculation restricted to journals scoring at least 95 in the 2020-2024 average AIP workbook. Papers with an unknown AIP remain in the all-publication chart and are excluded from the high-AIP chart.</p><p><strong>Centralization among recorded authors:</strong> each paper contributes one credit, split equally among its departmental authors. The percentage describes how unequally those credits are shared among people with at least one linked paper in the selected period. 0% means equal shares; 100% is the limiting case of all credit going to one author. With fewer than two recorded authors, it is N/A. People without a linked paper are left out of this statistic because the records cannot distinguish missing data from no publications. This does not measure the whole department's centralization.</p><p>Official publication pages checked ${escapeHtml(data.meta.generatedOn)}. Pages may list selected output and some links are unavailable. All current academic roster members remain in the per-person denominator, including those without linked records. Uneven coverage can therefore depress departmental averages. The roster is broader than the HRM&OB staff selection on other pages.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>People</th><th>With records</th><th>No linked paper</th><th>Unknown AIP papers</th></tr></thead><tbody>${groups.map(g=>`<tr><th>${escapeHtml(g.label)}</th><td>${g.staff}</td><td>${g.recordedAuthors}</td><td>${g.missingPeople.length}</td><td>${g.aipUnknown}</td></tr>`).join("")}</tbody></table></div><details><summary>Roster members without a linked paper in this period</summary><p>This list identifies records to check. It cannot establish that a colleague has not published.</p>${groups.map(g=>`<p><strong>${escapeHtml(g.label)}:</strong> ${g.missingPeople.map(p=>escapeHtml(p.name||p.display)).join("; ")||"None"}</p>`).join("")}</details>`;
 }
 
-function renderDepartmentPublicationChart(container,groups,from,to) {
+function renderDepartmentPublicationChart(container,groups,from,to,key="average") {
+  if(!container)return;
   const width=1000,height=310,pad={left:45,right:112,top:20,bottom:35};
   const years=Array.from({length:to-from+1},(_,i)=>from+i);
-  const ymax=niceMetricCeiling(Math.max(1,...groups.flatMap(g=>g.yearly.map(r=>r.count)))*1.08);
+  const peak=Math.max(.1,...groups.flatMap(g=>g.yearly.map(r=>r[key]||0)));
+  const step=peak<=1?.25:peak<=2?.5:peak<=5?1:2;
+  const ymax=Math.ceil(peak*1.08/step)*step;
   const x=year=>pad.left+(year-from)/Math.max(1,to-from)*(width-pad.left-pad.right);
   const y=value=>height-pad.bottom-value/ymax*(height-pad.top-pad.bottom);
   const colors={"HRM&OB":"#9b493b",Marketing:"#477875","IM&S":"#687b99",Operations:"#8a7548",GEM:"#7c6288",Accounting:"#527d51",EEF:"#515a65"};
-  const labels=groups.map(g=>({g,y:y(g.yearly.at(-1)?.count||0)})).sort((a,b)=>a.y-b.y);
+  const labels=groups.map(g=>({g,y:y(g.yearly.at(-1)?.[key]||0)})).sort((a,b)=>a.y-b.y);
   labels.forEach((l,i)=>{l.labelY=Math.max(l.y,i?labels[i-1].labelY+16:pad.top)});
   const excess=Math.max(0,(labels.at(-1)?.labelY||0)-(height-pad.bottom));
   labels.forEach(l=>l.labelY-=excess);
-  container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Unique publications per department per year"><title>Unique publications per department per year</title>
-    ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Math.round(v)}</text>`).join("")}
+  const title=key==="aipAverage"?"AIP ≥ 95 publications per person per year":"All journal publications per person per year";
+  const format=v=>v===null?"N/A":v.toFixed(2);
+  container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}"><title>${title}</title>
+    ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
     ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${v}${v===new Date().getFullYear()?"*":""}</text>`).join("")}
-    ${groups.map(g=>`<polyline fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="${g.key==="HRM&OB"?3:1.8}" points="${g.yearly.map(r=>x(r.year)+","+y(r.count)).join(" ")}"/>`).join("")}
+    ${groups.map(g=>`<polyline fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="${g.key==="HRM&OB"?3:1.8}" points="${g.yearly.map(r=>x(r.year)+","+y(r[key]||0)).join(" ")}"/>`).join("")}
     ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
     </svg>
-    <details class="metric-data-details"><summary>View publication counts</summary><div class="table-wrap"><table class="department-counts-table"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
-    ${years.slice().reverse().map(year=>`<tr><th>${year}${year===new Date().getFullYear()?" (YTD)":""}</th>${groups.map(g=>`<td class="num">${g.yearly.find(r=>r.year===year).count}</td>`).join("")}</tr>`).join("")}
-    <tr><th>Total</th>${groups.map(g=>`<td class="num"><strong>${g.total}</strong></td>`).join("")}</tr></tbody></table></div></details>`;
+    <details class="metric-data-details"><summary>View per-person values</summary><div class="table-wrap"><table class="department-counts-table"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
+    <tr><th>Current headcount</th>${groups.map(g=>`<td class="num">${g.staff}</td>`).join("")}</tr>
+    ${years.slice().reverse().map(year=>`<tr><th>${year}${year===new Date().getFullYear()?" (YTD)":""}</th>${groups.map(g=>`<td class="num">${format(g.yearly.find(r=>r.year===year)[key])}</td>`).join("")}</tr>`).join("")}
+    <tr><th>Period per person</th>${groups.map(g=>`<td class="num"><strong>${format(g[key])}</strong></td>`).join("")}</tr>
+    <tr><th>Unique papers in period</th>${groups.map(g=>`<td class="num">${key==="aipAverage"?g.highAip:g.total}</td>`).join("")}</tr></tbody></table></div></details>`;
 }
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
@@ -5521,7 +5562,9 @@ function titleCaseCategory(value) {
 function renderOverviewGrants(grants) {
   if (!els.grantList) return;
   const people = peopleById();
-  const rows = grants.slice().sort(sortGrants);
+  // Recent departmental and affiliated awards stay visible for the research day.
+  const recent=(state.grantsData?.grants||[]).filter(g=>g.year===new Date().getFullYear());
+  const rows = Array.from(new Map([...grants,...recent].map(g=>[g.id,g])).values()).sort(sortGrants);
   if (!rows.length) {
     els.grantList.innerHTML = `<p class="small-muted">No source-backed grant records for the current staff filter.</p>${dataNote(GRANT_DATA_NOTE)}`;
     return;
@@ -5572,6 +5615,9 @@ function renderGrantItem(grant, people) {
     <p class="grant-kicker">${escapeHtml(formatYear(grant.year))} - ${escapeHtml(grant.scheme)}</p>
     <p class="grant-title">${escapeHtml(grant.title)}</p>
     <p class="grant-meta">${escapeHtml(grantStaff(grant, people))}</p>
+    <p class="grant-meta">${escapeHtml(grant.amount || "Amount not listed")} · ${escapeHtml(grant.role || "")}</p>
+    ${(grant.personIds||[]).every(id=>!activePeopleSet().has(id))?'<p class="small-muted">Affiliated researcher award</p>':""}
+    <a class="source-link" href="${escapeHtml(grant.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(grant.sourceLabel || "Award announcement")}</a>
   </div>`;
 }
 
@@ -5724,7 +5770,7 @@ function sortTheses(a, b) {
 
 function grantStaff(grant, people) {
   return (grant.personIds || [])
-    .map((id) => people.get(id)?.display || id)
+    .map((id) => people.get(id)?.name || people.get(id)?.display || id)
     .sort()
     .join(", ");
 }
@@ -5733,6 +5779,8 @@ function sortGrants(a, b) {
   const yearA = isNumber(a.year) ? a.year : -Infinity;
   const yearB = isNumber(b.year) ? b.year : -Infinity;
   if (yearB !== yearA) return yearB - yearA;
+  const announced=String(b.announcedOn||"").localeCompare(String(a.announcedOn||""));
+  if(announced)return announced;
   const categoryA = grantCategoryRank(a.category);
   const categoryB = grantCategoryRank(b.category);
   if (categoryB !== categoryA) return categoryB - categoryA;
@@ -6529,7 +6577,7 @@ function syncNetworkControls(people) {
   if (els.networkSelectionStatus) els.networkSelectionStatus.textContent = selected ? `Network focus: ${selected.name}` : "Department network overview shown.";
   if (els.networkClearSelection) els.networkClearSelection.hidden = !selected;
   if (els.networkSelectionNote) els.networkSelectionNote.textContent = selected ? selected.name : "Select any person to inspect their publications.";
-  if (els.networkScopeHelp) els.networkScopeHelp.textContent = "Additional coauthors are people beyond the dashboard’s staff roster. Colours identify other FEB colleagues. The minimum applies to each coauthor’s unique shared papers; publications may predate current appointments.";
+  if (els.networkScopeHelp) els.networkScopeHelp.textContent = "Additional coauthors are outside the staff roster. Papers with 10 or more authors are excluded from their ties; departmental ties and publication counts retain those papers. The minimum uses unique shared papers. Up to 18 outside coauthors are shown; the evidence table includes all qualifying ties.";
   if (els.networkEmpty) els.networkEmpty.textContent = "No coauthorship ties match these filters.";
   renderNetworkLegend();
 }
@@ -6634,8 +6682,9 @@ function renderPublicationNetwork(people) {
     collaborationActiveIds = new Set([selectedPersonId]);
   }
   const showOuterCollaborators = state.networkExternal;
-  const faculty = buildFacultyCollaboration(collaborationPubs, collaborationActiveIds);
-  const external = buildExternalCollaboration(collaborationPubs, collaborationActiveIds);
+  const outsidePubs = outsideNetworkPublications(collaborationPubs);
+  const faculty = buildFacultyCollaboration(outsidePubs, collaborationActiveIds);
+  const external = buildExternalCollaboration(outsidePubs, collaborationActiveIds);
   const outsideView = buildOutsideCollaborationView(
     [...faculty.nodes, ...external.nodes],
     [...faculty.edges, ...external.edges],
@@ -6672,6 +6721,14 @@ function renderPublicationNetwork(people) {
 }
 
 
+
+function outsideNetworkPublications(pubs) {
+  return pubs.filter(pub=>Math.max(Number(pub.authorCount)||0,(pub.authors||[]).length)<10);
+}
+
+function networkEdgeWidth(count) {
+  return 0.8 + Math.sqrt(Math.max(0, Number(count)||0)) * 1.05;
+}
 
 function renderNetworkLegend() {
   if (!els.networkLegend) return;
@@ -6838,8 +6895,8 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     path.setAttribute("class", facultyEdge ? "faculty-edge" : "external-edge");
     path.dataset.edgeSource = edge.source;
     path.dataset.edgeTarget = edge.target;
-    path.setAttribute("stroke-width", String(Math.min(2.2, .6 + Math.sqrt(edge.count) * .35)));
-    path.style.opacity = edge.target === state.networkCollaboratorId ? "0.9" : "0.3";
+    path.setAttribute("stroke-width", String(networkEdgeWidth(edge.count)));
+    path.style.opacity = edge.target === state.networkCollaboratorId ? "0.9" : "0.55";
     path.setAttribute("aria-hidden", "true");
     const publicationLabel = `${edge.count} shared publication${edge.count === 1 ? "" : "s"}`;
     const title = facultyEdge
@@ -6940,7 +6997,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     path.setAttribute("class", `edge ${edge.count >= 5 ? "edge-strong" : edge.count >= 2 ? "edge-medium" : "edge-weak"}`);
     path.dataset.edgeSource = edge.source;
     path.dataset.edgeTarget = edge.target;
-    path.setAttribute("stroke-width", String(Math.min(4, .6 + Math.sqrt(edge.count) * .65)));
+    path.setAttribute("stroke-width", String(networkEdgeWidth(edge.count)));
     path.setAttribute("aria-hidden", "true");
     path.appendChild(svgTitle(`${a.label} + ${b.label}: ${edge.count} ${edge.metricLabel || "shared publications"}`));
     svg.appendChild(path);
@@ -7036,29 +7093,37 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
 function placeNetworkLabels(svg, width, height) {
   const nodes = Array.from(svg.querySelectorAll(".network-person-node, .network-collaborator-node"));
   const occupied = nodes.map(group => {
-    const circle = group.querySelector("circle.node, circle.faculty-node, circle.external-node");
-    const x=Number(circle.getAttribute("cx")), y=Number(circle.getAttribute("cy")), r=Number(circle.getAttribute("r"))+5;
-    return {x:x-r,y:y-r,width:r*2,height:r*2};
+    const circle=group.querySelector("circle.node, circle.faculty-node, circle.external-node");
+    const x=Number(circle.getAttribute("cx")),y=Number(circle.getAttribute("cy")),r=Number(circle.getAttribute("r"))+1;
+    return {x:x-r,y:y-r,width:r*2,height:r*2,node:true};
   });
-  const overlaps = (a,b) => a.x < b.x+b.width && a.x+a.width > b.x && a.y < b.y+b.height && a.y+a.height > b.y;
+  const overlaps=(a,b)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
   nodes.sort((a,b)=>Number(b.classList.contains("network-person-node"))-Number(a.classList.contains("network-person-node"))).forEach(group=>{
     const label=group.querySelector("text.node-label, text.faculty-label, text.external-label");
     const circle=group.querySelector("circle.node, circle.faculty-node, circle.external-node");
     if(!label||!circle)return;
-    const x=Number(circle.getAttribute("cx")), y=Number(circle.getAttribute("cy")), r=Number(circle.getAttribute("r"));
-    const candidates=[[0,r+16,"middle"],[0,-r-10,"middle"],[r+9,4,"start"],[-r-9,4,"end"],[r+8,r+15,"start"],[-r-8,-r-8,"end"],[0,r+30,"middle"],[0,-r-24,"middle"]];
+    const x=Number(circle.getAttribute("cx")),y=Number(circle.getAttribute("cy")),r=Number(circle.getAttribute("r"));
+    label.setAttribute("text-anchor","start");
+    label.setAttribute("x",0);label.setAttribute("y",0);
+    label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",0));
+    const box=label.getBBox(),w=box.width,h=box.height;
+    const candidates=[];
+    for(const gap of [5,10,16])candidates.push(
+      [x+r+gap,y-h/2],[x-r-gap-w,y-h/2],
+      [x-w/2,y+r+gap],[x-w/2,y-r-gap-h],
+      [x+r+gap,y+r],[x-r-gap-w,y-r-h],
+      [x+r+gap,y-r-h],[x-r-gap-w,y+r]
+    );
     let best=null;
-    for(const [dx,dy,anchor] of candidates){
-      label.setAttribute("x",x+dx); label.setAttribute("y",y+dy); label.setAttribute("text-anchor",anchor);
-      label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",x+dx));
-      const box=label.getBBox();
-      const area={x:box.x-3,y:box.y-3,width:box.width+6,height:box.height+6};
-      const score=occupied.filter(other=>overlaps(area,other)).length + (area.x<5||area.x+area.width>width-5||area.y<5||area.y+area.height>height-5 ? 10 : 0);
-      if(!best||score<best.score)best={dx,dy,anchor,area,score};
+    for(const [left,top] of candidates){
+      const area={x:left-2,y:top-2,width:w+4,height:h+4};
+      const score=occupied.reduce((n,other)=>n+(overlaps(area,other)?(other.node?10:1):0),0)
+        +(area.x<3||area.x+area.width>width-3||area.y<3||area.y+area.height>height-3?100:0);
+      if(!best||score<best.score)best={left,top,area,score};
       if(score===0)break;
     }
-    label.setAttribute("x",x+best.dx);label.setAttribute("y",y+best.dy);label.setAttribute("text-anchor",best.anchor);
-    label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",x+best.dx));
+    label.setAttribute("x",best.left-box.x);label.setAttribute("y",best.top-box.y);
+    label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",best.left-box.x));
     occupied.push(best.area);
   });
 }

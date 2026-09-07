@@ -2,12 +2,32 @@
   "meta": {
     "generatedOn": "2026-09-07",
     "rostersCheckedOn": "2026-09-07",
-    "people": 515,
+    "people": 498,
     "pagesChecked": 515,
     "pagesFailed": 157,
     "mergedWorkVersions": 3,
     "fromYear": 2005,
-    "method": "Unique journal publications linked to current departmental rosters, including PhD students and all staff ranks. One count per paper per department. Joint papers count once in each participating department. Historical affiliations are not reconstructed."
+    "method": "Unique journal publications linked to current departmental rosters, including PhD students and all staff ranks. One count per paper per department. Joint papers count once in each participating department. Historical affiliations are not reconstructed.",
+    "excludedOfficeStaff": [
+      "acc-g-kok",
+      "acc-rcj-oosterhoff-verbruggen",
+      "eef-a-veld-patje",
+      "eef-et-jelsema",
+      "eef-k-beute",
+      "gem-ad-boyer",
+      "gem-hcwe-van-der-vleuten",
+      "gem-si-luiken",
+      "hrmob-z-karakayali",
+      "ims-aj-meijer",
+      "ims-tj-beuker",
+      "mkt-b-wever",
+      "mkt-lc-molog-kwant",
+      "ops-d-van-lingen-elzinga",
+      "ops-me-rooks",
+      "ops-r-kooi-kamphuis",
+      "ops-sd-santos-moreira"
+    ],
+    "denominator": "Current academic roster headcount, including PhD students and lecturers; office staff excluded. Historical headcounts and FTE are unavailable."
   },
   "departments": [
     "HRM&OB",
@@ -47,7 +67,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "MA"
+      "coreId": "MA",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "hrmob-s-berger",
@@ -77,7 +101,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "SB"
+      "coreId": "SB",
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "hrmob-j-de-bloom",
@@ -108,7 +136,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JDB"
+      "coreId": "JDB",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "hrmob-hj-van-de-brake",
@@ -143,7 +175,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JVB"
+      "coreId": "JVB",
+      "appointmentSection": "associate_professor",
+      "role": "Associate professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "hrmob-o-janssen",
@@ -173,7 +209,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "OJ"
+      "coreId": "OJ",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "hrmob-jm-lees",
@@ -205,7 +245,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JL"
+      "coreId": "JL",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "hrmob-jm-mascareno-apodaca",
@@ -239,7 +283,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JMA"
+      "coreId": "JMA",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "hrmob-hbm-molleman",
@@ -270,7 +318,11 @@
         "hrmob-hbm-molleman"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "hrmob-lb-mulder",
@@ -301,7 +353,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "LM"
+      "coreId": "LM",
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor (with IUS promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "hrmob-nh-nguyen",
@@ -333,7 +389,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "NN"
+      "coreId": "NN",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor in Human Resource Management",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "hrmob-ba-nijstad",
@@ -365,7 +425,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "BN"
+      "coreId": "BN",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "hrmob-j-oedzes",
@@ -395,7 +459,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JO"
+      "coreId": "JO",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "hrmob-fa-rink",
@@ -426,7 +494,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "FR"
+      "coreId": "FR",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "hrmob-mk-ryan",
@@ -457,7 +529,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "MR"
+      "coreId": "MR",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "hrmob-ji-stoker",
@@ -488,7 +564,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JS"
+      "coreId": "JS",
+      "appointmentSection": "unknown",
+      "role": "Professor of Leadership and Organizational Change, Director centre of expertise In the LEAD",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "hrmob-gs-van-der-vegt",
@@ -520,7 +600,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "GVV"
+      "coreId": "GVV",
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "hrmob-ta-de-vries",
@@ -553,7 +637,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "TDV"
+      "coreId": "TDV",
+      "appointmentSection": "associate_professor",
+      "role": "Associate professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "hrmob-y-yuan",
@@ -583,7 +671,11 @@
       ],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "YY"
+      "coreId": "YY",
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "mkt-tha-bijmolt",
@@ -613,7 +705,11 @@
         "mkt-tha-bijmolt"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "head_of_department",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "mkt-j-van-doorn",
@@ -642,7 +738,11 @@
         "mkt-j-van-doorn"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "mkt-bm-fennis",
@@ -672,7 +772,11 @@
         "mkt-bm-fennis"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "mkt-mj-gijsenberg",
@@ -702,7 +806,11 @@
         "mkt-mj-gijsenberg"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "mkt-k-van-ittersum",
@@ -731,7 +839,11 @@
         "mkt-k-van-ittersum"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "mkt-e-shehu",
@@ -760,7 +872,11 @@
         "mkt-e-shehu"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "mkt-pc-verhoef",
@@ -790,7 +906,11 @@
         "mkt-pc-verhoef"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "mkt-je-wieringa",
@@ -820,7 +940,11 @@
         "mkt-je-wieringa"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "mkt-jw-bolderdijk",
@@ -849,7 +973,11 @@
         "mkt-jw-bolderdijk"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "mkt-h-risselada",
@@ -878,7 +1006,11 @@
         "mkt-h-risselada"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "mkt-mc-leliveld",
@@ -908,7 +1040,11 @@
         "mkt-mc-leliveld"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "mkt-m-moeini-jazani",
@@ -938,7 +1074,11 @@
         "mkt-m-moeini-jazani"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "mkt-saeg-albalooshi",
@@ -968,7 +1108,11 @@
         "mkt-saeg-albalooshi"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "mkt-c-calmasini",
@@ -995,7 +1139,11 @@
         "mkt-c-calmasini"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-ps-van-eck",
@@ -1025,7 +1173,11 @@
         "mkt-ps-van-eck"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "mkt-jim-de-groot",
@@ -1055,7 +1207,11 @@
         "mkt-jim-de-groot"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "mkt-rp-hars",
@@ -1085,7 +1241,11 @@
         "mkt-rp-hars"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "mkt-j-holthower",
@@ -1114,7 +1274,11 @@
         "mkt-j-holthower"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "mkt-m-keizer",
@@ -1143,7 +1307,11 @@
         "mkt-m-keizer"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "mkt-xs-luo",
@@ -1173,7 +1341,11 @@
         "mkt-xs-luo"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "mkt-a-minnema",
@@ -1202,7 +1374,11 @@
         "mkt-a-minnema"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "mkt-jem-van-nierop",
@@ -1233,7 +1409,11 @@
         "mkt-jem-van-nierop"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "mkt-sm-rizio",
@@ -1263,7 +1443,11 @@
         "mkt-sm-rizio"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "mkt-a-stepanova",
@@ -1293,7 +1477,11 @@
         "mkt-a-stepanova"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-jpr-thomassen",
@@ -1323,7 +1511,11 @@
         "mkt-jpr-thomassen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ims-pmm-de-faria",
@@ -1353,7 +1545,11 @@
         "ims-pmm-de-faria"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "head_of_department",
+      "role": "38454/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-a-boonstra",
@@ -1382,7 +1578,11 @@
         "ims-a-boonstra"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "37289/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ims-dj-langley",
@@ -1412,7 +1612,11 @@
         "ims-dj-langley"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "32931/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-f-noseleit",
@@ -1441,7 +1645,11 @@
         "ims-f-noseleit"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "38564/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-u-schultze",
@@ -1470,7 +1678,11 @@
         "ims-u-schultze"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "36543/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ims-m-wyrwich",
@@ -1499,7 +1711,11 @@
         "ims-m-wyrwich"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "36903/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-wg-biemans",
@@ -1529,7 +1745,11 @@
         "ims-wg-biemans"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "33834/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-mj-brand",
@@ -1559,7 +1779,11 @@
         "ims-mj-brand"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "37492/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ims-tlj-broekhuizen",
@@ -1589,7 +1813,11 @@
         "ims-tlj-broekhuizen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "33777/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ims-i-estrada-vaquero",
@@ -1621,7 +1849,11 @@
         "ims-i-estrada-vaquero"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "33245/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ims-m-hanisch",
@@ -1650,7 +1882,11 @@
         "ims-m-hanisch"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "32608/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-kre-huizingh",
@@ -1681,7 +1917,11 @@
         "ims-kre-huizingh"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "33779/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-mitzinneck",
@@ -1712,7 +1952,11 @@
         "ims-mitzinneck"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "33431/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ims-mag-van-offenbeek",
@@ -1746,7 +1990,11 @@
         "ims-mag-van-offenbeek"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "37189/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-op-roemeling",
@@ -1776,7 +2024,11 @@
         "ims-op-roemeling"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "38562/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ims-pj-steinberg",
@@ -1806,7 +2058,11 @@
         "ims-pj-steinberg"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "32666/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-s-asad",
@@ -1835,7 +2091,11 @@
         "ims-s-asad"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ims-a-ayvazyan",
@@ -1865,7 +2125,11 @@
         "ims-a-ayvazyan"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-o-belousova",
@@ -1894,7 +2158,11 @@
         "ims-o-belousova"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-c-carroll",
@@ -1924,7 +2192,11 @@
         "ims-c-carroll"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "33626/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ims-s-costa",
@@ -1955,7 +2227,11 @@
         "ims-s-costa"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ims-epm-croonen",
@@ -1985,7 +2261,11 @@
         "ims-epm-croonen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37236/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ims-j-duijsters",
@@ -2014,7 +2294,11 @@
         "ims-j-duijsters"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-ne-fabian",
@@ -2044,7 +2328,11 @@
         "ims-ne-fabian"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ims-a-fakha",
@@ -2073,7 +2361,11 @@
         "ims-a-fakha"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-aj-frederiks",
@@ -2103,7 +2395,11 @@
         "ims-aj-frederiks"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-ml-hage",
@@ -2134,7 +2430,11 @@
         "ims-ml-hage"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "33244/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-ks-heucher",
@@ -2164,7 +2464,11 @@
         "ims-ks-heucher"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "39586/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ims-pm-infantes-sanches",
@@ -2196,7 +2500,11 @@
         "ims-pm-infantes-sanches"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ims-m-kleine",
@@ -2225,7 +2533,11 @@
         "ims-m-kleine"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ims-i-kozlinska",
@@ -2254,7 +2566,11 @@
         "ims-i-kozlinska"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ims-pjo-kuusela",
@@ -2284,7 +2600,11 @@
         "ims-pjo-kuusela"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37525/32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ims-sjs-matr",
@@ -2314,7 +2634,11 @@
         "ims-sjs-matr"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32631/37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-i-maris-de-bresser",
@@ -2345,7 +2669,11 @@
         "ims-i-maris-de-bresser"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-m-ortiz",
@@ -2376,7 +2704,11 @@
         "ims-m-ortiz"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ims-c-silvestri",
@@ -2405,7 +2737,11 @@
         "ims-c-silvestri"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ims-e-smailhodzic",
@@ -2434,7 +2770,11 @@
         "ims-e-smailhodzic"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "39385/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-d-speldekamp",
@@ -2463,7 +2803,11 @@
         "ims-d-speldekamp"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "32025/37147",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ops-m-aerts-veenstra",
@@ -2493,7 +2837,11 @@
         "ops-m-aerts-veenstra"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-i-bakir",
@@ -2522,7 +2870,11 @@
         "ops-i-bakir"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-jac-bokhorst",
@@ -2552,7 +2904,11 @@
         "ops-jac-bokhorst"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ops-s-boscari",
@@ -2581,7 +2937,11 @@
         "ops-s-boscari"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-h-broekhuis",
@@ -2612,7 +2972,11 @@
         "ops-h-broekhuis"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "Full Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-p-buijs",
@@ -2641,7 +3005,11 @@
         "ops-p-buijs"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-m-dienstknecht",
@@ -2670,7 +3038,11 @@
         "ops-m-dienstknecht"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-dp-van-donk",
@@ -2699,7 +3071,11 @@
         "ops-dp-van-donk"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-aj-dreischerf",
@@ -2729,7 +3105,11 @@
         "ops-aj-dreischerf"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ops-c-emmanouilidis",
@@ -2758,7 +3138,11 @@
         "ops-c-emmanouilidis"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor with Ius Promovendi",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ops-nd-van-foreest",
@@ -2788,7 +3172,11 @@
         "ops-nd-van-foreest"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-lm-gelsomino",
@@ -2818,7 +3206,11 @@
         "ops-lm-gelsomino"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ops-gb-huitema",
@@ -2848,7 +3240,11 @@
         "ops-gb-huitema"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ops-b-de-jonge",
@@ -2877,7 +3273,11 @@
         "ops-b-de-jonge"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-oa-kilic",
@@ -2907,7 +3307,11 @@
         "ops-oa-kilic"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-mj-land",
@@ -2937,7 +3341,11 @@
         "ops-mj-land"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "ops-ja-lopez-alvarez",
@@ -2967,7 +3375,11 @@
         "ops-ja-lopez-alvarez"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ops-l-maruster",
@@ -2996,7 +3408,11 @@
         "ops-l-maruster"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-ei-metting",
@@ -3026,7 +3442,11 @@
         "ops-ei-metting"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ops-ac-noort",
@@ -3058,7 +3478,11 @@
         "ops-ac-noort"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-k-peters",
@@ -3087,7 +3511,11 @@
         "ops-k-peters"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor & profile coordinator Technology Management",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ops-ag-regts-walters",
@@ -3120,7 +3548,11 @@
         "ops-ag-regts-walters"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "ops-j-riezebos",
@@ -3149,7 +3581,11 @@
         "ops-j-riezebos"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "Full Professor Educational Innovation & Academic Lead Teaching Academy Groningen",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-a-rijal",
@@ -3178,7 +3614,11 @@
         "ops-a-rijal"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ops-w-romeijnders",
@@ -3207,7 +3647,11 @@
         "ops-w-romeijnders"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-kj-roodbergen",
@@ -3236,7 +3680,11 @@
         "ops-kj-roodbergen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Quantitative Logistics",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-e-rosca",
@@ -3265,7 +3713,11 @@
         "ops-e-rosca"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "ops-gc-ruel",
@@ -3295,7 +3747,11 @@
         "ops-gc-ruel"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-ap-seepma",
@@ -3325,7 +3781,11 @@
         "ops-ap-seepma"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ops-rh-teunter",
@@ -3355,7 +3815,11 @@
         "ops-rh-teunter"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "ops-e-ursavas",
@@ -3384,7 +3848,11 @@
         "ops-e-ursavas"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Energy Logistics",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "ops-jt-van-der-vaart",
@@ -3415,7 +3883,11 @@
         "ops-jt-van-der-vaart"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor, Department Chair",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-j-veldman",
@@ -3444,7 +3916,11 @@
         "ops-j-veldman"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-ifa-vis",
@@ -3473,7 +3949,11 @@
         "ops-ifa-vis"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Industrial Engineering",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-j-de-vries",
@@ -3502,7 +3982,11 @@
         "ops-j-de-vries"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-s-waschull",
@@ -3531,7 +4015,11 @@
         "ops-s-waschull"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-wmc-van-wezel",
@@ -3561,7 +4049,11 @@
         "ops-wmc-van-wezel"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ops-c-xiao",
@@ -3590,7 +4082,11 @@
         "ops-c-xiao"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate professor of sustainable supply chain management",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "ops-dj-van-der-zee",
@@ -3619,7 +4115,11 @@
         "ops-dj-van-der-zee"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "ops-x-zhu",
@@ -3651,7 +4151,11 @@
         "ops-x-zhu"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "gem-p-rao-sahib",
@@ -3681,7 +4185,11 @@
         "gem-p-rao-sahib"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-t-kohl",
@@ -3710,7 +4218,11 @@
         "gem-t-kohl"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor of International Economics (with ius promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-mj-klasing",
@@ -3740,7 +4252,11 @@
         "gem-mj-klasing"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-md-lameris",
@@ -3770,7 +4286,11 @@
         "gem-md-lameris"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor & Postdoctoral Researcher Centre of Expertise In the LEAD",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "gem-x-ye",
@@ -3799,7 +4319,11 @@
       "rejectedOpenAlexIds": [
         "A5088393129"
       ],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-hj-drogendijk",
@@ -3830,7 +4354,11 @@
         "gem-hj-drogendijk"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "Full Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-s-choi",
@@ -3859,7 +4387,11 @@
         "gem-s-choi"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-jr-de-wit",
@@ -3890,7 +4422,11 @@
         "gem-jr-de-wit"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-mhf-ridder-de-van-der-schueren",
@@ -3921,7 +4457,11 @@
         "gem-mhf-ridder-de-van-der-schueren"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor business administration and researcher empirical sociology",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-l-ge",
@@ -3951,7 +4491,11 @@
         "gem-l-ge"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-a-minasyan",
@@ -3980,7 +4524,11 @@
         "gem-a-minasyan"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor (ius promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-e-aral-kilic",
@@ -4010,7 +4558,11 @@
         "gem-e-aral-kilic"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-j-canello",
@@ -4039,7 +4591,11 @@
         "gem-j-canello"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "gem-a-kuiken-soetevent",
@@ -4068,7 +4624,11 @@
         "gem-a-kuiken-soetevent"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-mc-sestu",
@@ -4097,7 +4657,11 @@
         "gem-mc-sestu"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-a-skalli",
@@ -4127,7 +4691,11 @@
         "gem-a-skalli"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-f-wang",
@@ -4156,7 +4724,11 @@
         "gem-f-wang"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "gem-sm-perez-alvarez",
@@ -4189,7 +4761,11 @@
         "gem-sm-perez-alvarez"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-d-tusha",
@@ -4218,7 +4794,11 @@
         "gem-d-tusha"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-a-kellers",
@@ -4247,7 +4827,11 @@
         "gem-a-kellers"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-mp-schwan",
@@ -4277,7 +4861,11 @@
         "gem-mp-schwan"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor of Macro-finance and Sustainability (UD1)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-r-kashyap",
@@ -4306,7 +4894,11 @@
         "gem-r-kashyap"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-e-onoz",
@@ -4335,7 +4927,11 @@
         "gem-e-onoz"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-j-ross",
@@ -4366,7 +4962,11 @@
         "gem-j-ross"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-l-bellora-bienengraber",
@@ -4395,7 +4995,11 @@
         "acc-l-bellora-bienengraber"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor of Management Accounting and Control",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "acc-opg-bik",
@@ -4425,7 +5029,11 @@
         "acc-opg-bik"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Audit & Assurance",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-ijj-burgers",
@@ -4455,7 +5063,11 @@
         "acc-ijj-burgers"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "acc-b-crom",
@@ -4486,7 +5098,11 @@
         "acc-b-crom"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-kgkw-derfuss",
@@ -4517,7 +5133,11 @@
         "acc-kgkw-derfuss"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-pmg-dirks",
@@ -4547,7 +5167,11 @@
         "acc-pmg-dirks"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-ja-emanuels",
@@ -4577,7 +5201,11 @@
         "acc-ja-emanuels"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor Accounting Information Systems",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-s-firk",
@@ -4606,7 +5234,11 @@
         "acc-s-firk"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor in Management Accounting & Control (with Ius Promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-s-girdhar",
@@ -4635,7 +5267,11 @@
         "acc-s-girdhar"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "acc-cpa-heijes",
@@ -4665,7 +5301,11 @@
         "acc-cpa-heijes"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "acc-jc-hennig",
@@ -4695,7 +5335,11 @@
         "acc-jc-hennig"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor (with Ius Promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "acc-rl-ter-hoeven",
@@ -4725,7 +5369,11 @@
         "acc-rl-ter-hoeven"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-wgm-holterman",
@@ -4755,7 +5403,11 @@
         "acc-wgm-holterman"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor Business Valuation",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-rbh-hooghiemstra",
@@ -4785,7 +5437,11 @@
         "acc-rbh-hooghiemstra"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor in Financial Reporting and Corporate Governance",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-ca-huijgen",
@@ -4815,7 +5471,11 @@
         "acc-ca-huijgen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-n-hussain",
@@ -4844,7 +5504,11 @@
         "acc-n-hussain"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor of Sustainability Accounting",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "acc-aem-kamp-roelands",
@@ -4875,7 +5539,11 @@
         "acc-aem-kamp-roelands"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor non-financial information, integrated reporting and assurance - C.R. Rao foundation",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "acc-y-karaibrahimoglu",
@@ -4904,7 +5572,11 @@
         "acc-y-karaibrahimoglu"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor (with Ius Promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "acc-rgj-kuper",
@@ -4935,7 +5607,11 @@
         "acc-rgj-kuper"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Universitair docent Accountancy & Internal Control",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-k-linke",
@@ -4964,7 +5640,11 @@
         "acc-k-linke"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-s-mansouri",
@@ -4993,7 +5673,11 @@
         "acc-s-mansouri"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-ta-marra",
@@ -5023,7 +5707,11 @@
         "acc-ta-marra"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "acc-j-offerein",
@@ -5052,7 +5740,11 @@
         "acc-j-offerein"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "acc-jt-reilley",
@@ -5082,7 +5774,11 @@
         "acc-jt-reilley"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-t-sikkema",
@@ -5111,7 +5807,11 @@
         "acc-t-sikkema"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor Auditing",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-acw-sneller",
@@ -5142,7 +5842,11 @@
         "acc-acw-sneller"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Digitalization & AI in Accounting, Control, Governance, and Auditing",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-mp-van-der-steen",
@@ -5172,7 +5876,11 @@
         "acc-mp-van-der-steen"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor of Management Accounting",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "acc-ak-tank",
@@ -5202,7 +5910,11 @@
         "acc-ak-tank"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "Assistant Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "acc-s-tillema",
@@ -5231,7 +5943,11 @@
         "acc-s-tillema"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-db-veltrop",
@@ -5261,7 +5977,11 @@
         "acc-db-veltrop"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "Associate professor of Corporate Governance (with Ius Promovendi)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "acc-da-de-waard",
@@ -5293,7 +6013,11 @@
       "rejectedOpenAlexIds": [
         "A5062140023"
       ],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "hrmob-s-van-de-beek",
@@ -5320,7 +6044,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-he-bieselt",
@@ -5348,7 +6076,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "hrmob-c-chen",
@@ -5373,7 +6105,11 @@
       "orcid": "0000-0001-6339-6063",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "hrmob-mp-desai",
@@ -5398,7 +6134,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-g-fraros",
@@ -5425,7 +6165,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "hrmob-j-jordan",
@@ -5453,34 +6197,11 @@
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
-      "coreId": "JJ"
-    },
-    {
-      "id": "hrmob-z-karakayali",
-      "name": "Zedef Karakayali",
-      "display": "Karakayali, Z. (Zedef)",
-      "department": "HRM&OB",
-      "departments": [
-        "HRM&OB"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/z.karakayali/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/hrm-and-organizational-behavior/staff?lang=en",
-      "families": [
-        "karakayali"
-      ],
-      "givenNames": [
-        "zedef"
-      ],
-      "initialSequences": [
-        "z"
-      ],
-      "firstInitials": [
-        "z"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "coreId": "JJ",
+      "appointmentSection": "unknown",
+      "role": "Honorary Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "hrmob-hy-paryono",
@@ -5508,7 +6229,11 @@
       "orcid": "0000-0001-7144-3747",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "postdoc",
+      "role": "Postdoctoral Researcher",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "hrmob-j-van-polen",
@@ -5537,7 +6262,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-y-qu",
@@ -5564,7 +6293,11 @@
       "orcid": "0009-0006-4543-1236",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-b-saha",
@@ -5591,7 +6324,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-t-sari",
@@ -5618,7 +6355,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "hrmob-ma-smit",
@@ -5647,7 +6388,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-x-tang",
@@ -5672,7 +6417,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-e-veldhuis-paas-broekman",
@@ -5703,7 +6452,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-ghfj-de-vos",
@@ -5728,7 +6481,11 @@
       "orcid": "0009-0005-1523-7750",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "hrmob-fl-wermser",
@@ -5756,7 +6513,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "hrmob-t-zhao",
@@ -5781,7 +6542,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-psh-leeflang",
@@ -5809,7 +6574,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "mkt-cs-noordhoff",
@@ -5837,7 +6606,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "special_appointment",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "mkt-lm-sloot",
@@ -5865,7 +6638,11 @@
       "orcid": "0000-0002-1375-5109",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "special_appointment",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "mkt-gf-haanstra",
@@ -5890,7 +6667,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor_or_teacher",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-ejb-bakker",
@@ -5915,7 +6696,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "management_team",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-a-boluki",
@@ -5940,7 +6725,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-v-burbulea",
@@ -5965,7 +6754,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-y-cho",
@@ -5993,7 +6786,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-m-fu",
@@ -6018,7 +6815,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-r-ge",
@@ -6045,7 +6846,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "mkt-m-huang",
@@ -6072,7 +6877,11 @@
       "orcid": "0009-0004-4123-0299",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-j-koster",
@@ -6099,7 +6908,11 @@
       "orcid": "0000-0002-7582-5264",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "mkt-h-nezami",
@@ -6124,7 +6937,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-nn-numan",
@@ -6152,7 +6969,11 @@
       "orcid": "0009-0003-7922-5818",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "mkt-i-palko",
@@ -6177,7 +6998,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-h-smit",
@@ -6205,7 +7030,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-x-tan",
@@ -6232,7 +7061,11 @@
       "orcid": "0000-0003-4841-909X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "mkt-wc-de-vries",
@@ -6257,7 +7090,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "mkt-l-wang",
@@ -6282,57 +7119,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "mkt-lc-molog-kwant",
-      "name": "L C Molog-Kwant",
-      "display": "Molog-Kwant, L.C.",
-      "department": "Marketing",
-      "departments": [
-        "Marketing"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/l.c.molog-kwant/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/marketing/staff?lang=en",
-      "families": [
-        "molog kwant"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "lc"
-      ],
-      "firstInitials": [
-        "l"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "mkt-b-wever",
-      "name": "B Wever",
-      "display": "Wever, B.",
-      "department": "Marketing",
-      "departments": [
-        "Marketing"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/b.wever/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/marketing/staff?lang=en",
-      "families": [
-        "wever"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "b"
-      ],
-      "firstInitials": [
-        "b"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-b-j",
@@ -6357,7 +7148,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "32025",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-k-febrihadini",
@@ -6382,7 +7177,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "32025",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-sb-ko",
@@ -6411,7 +7210,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "32025",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-s-nijgh",
@@ -6436,7 +7239,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "32025",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "ims-o-o",
@@ -6461,7 +7268,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-j-kets",
@@ -6486,7 +7297,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "37147",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ims-j-thurion",
@@ -6511,57 +7326,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ims-tj-beuker",
-      "name": "T J Beuker",
-      "display": "Beuker, T.J.",
-      "department": "IM&S",
-      "departments": [
-        "IM&S"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/t.j.beuker/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/innovation-management-strategy/staff?lang=en",
-      "families": [
-        "beuker"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "tj"
-      ],
-      "firstInitials": [
-        "t"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ims-aj-meijer",
-      "name": "A J Meijer",
-      "display": "Meijer, A.J.",
-      "department": "IM&S",
-      "departments": [
-        "IM&S"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/a.l.meijer/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/innovation-management-strategy/staff?lang=en",
-      "families": [
-        "meijer"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "aj"
-      ],
-      "firstInitials": [
-        "a"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "32025",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-s-asgharieh-ahari",
@@ -6592,7 +7361,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ops-cgg-bakker",
@@ -6621,7 +7394,11 @@
       "orcid": "0009-0009-9119-531X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-j-bakker",
@@ -6648,7 +7425,11 @@
       "orcid": "0009-0000-0176-1555",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ops-t-bortolotti",
@@ -6675,7 +7456,11 @@
       "orcid": "0000-0001-6550-411X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "ops-m-buka",
@@ -6700,7 +7485,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-ha-cense",
@@ -6725,7 +7514,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Distinguished Chair Health System Innovation (C.R. Rao Foundation)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-l-elderhorst",
@@ -6750,7 +7543,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-jjw-eshuis",
@@ -6775,7 +7572,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-r-fardi-asrami",
@@ -6806,7 +7607,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-c-fasano",
@@ -6831,7 +7636,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-je-fokkema",
@@ -6856,7 +7665,11 @@
       "orcid": "0000-0001-9517-6276",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer and researcher",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "ops-m-frohlke",
@@ -6881,7 +7694,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "ops-g-gil-de-avalle-bellido",
@@ -6911,7 +7728,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "ops-k-van-der-heide",
@@ -6936,7 +7757,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-cf-ijpma",
@@ -6961,7 +7786,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Researcher",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-l-jansen",
@@ -6988,7 +7817,11 @@
       "orcid": "0009-0000-4104-9618",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD-Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-n-de-jong",
@@ -7015,7 +7848,11 @@
       "orcid": "0009-0009-0274-1535",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-j-joseph-ninan",
@@ -7044,7 +7881,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-t-karabas",
@@ -7069,7 +7910,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "Postdoctoral Researcher",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-ta-kasper",
@@ -7098,7 +7943,11 @@
       "orcid": "0000-0002-2642-0148",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "ops-a-klaassens",
@@ -7123,32 +7972,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ops-r-kooi-kamphuis",
-      "name": "R Kooi-Kamphuis",
-      "display": "Kooi-Kamphuis, R.",
-      "department": "Operations",
-      "departments": [
-        "Operations"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/r.kooi/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/operations/staff?lang=en",
-      "families": [
-        "kooi kamphuis"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "r"
-      ],
-      "firstInitials": [
-        "r"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-dkbg-kottagaha-walawwe-mudiyanselage",
@@ -7179,7 +8007,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-a-koukas",
@@ -7204,7 +8036,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-sm-kuipers",
@@ -7229,7 +8065,11 @@
       "orcid": "0009-0000-5144-2659",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-jt-laarman",
@@ -7254,7 +8094,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-j-lin",
@@ -7279,32 +8123,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ops-d-van-lingen-elzinga",
-      "name": "D van Lingen-Elzinga",
-      "display": "Lingen-Elzinga, D. van",
-      "department": "Operations",
-      "departments": [
-        "Operations"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/d.van.lingen-elzinga/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/operations/staff?lang=en",
-      "families": [
-        "van lingen elzinga"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "d"
-      ],
-      "firstInitials": [
-        "d"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-j-liu",
@@ -7333,7 +8156,11 @@
       "orcid": "0000-0002-2862-3221",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-p-mekel",
@@ -7358,7 +8185,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-e-miedema",
@@ -7385,7 +8216,11 @@
       "orcid": "0009-0001-2167-7227",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-sm-nikolakakis",
@@ -7410,7 +8245,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-f-nold",
@@ -7435,7 +8274,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-fp-oeben",
@@ -7460,7 +8303,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-da-osicka",
@@ -7485,7 +8332,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ops-lt-postma",
@@ -7513,7 +8364,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-dj-power",
@@ -7541,62 +8396,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ops-me-rooks",
-      "name": "M E Rooks",
-      "display": "Rooks, M.E.",
-      "department": "Operations",
-      "departments": [
-        "Operations"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/m.e.rooks/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/operations/staff?lang=en",
-      "families": [
-        "rooks"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "me"
-      ],
-      "firstInitials": [
-        "m"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "ops-sd-santos-moreira",
-      "name": "S D Santos Moreira",
-      "display": "Santos Moreira, drs. S.D.",
-      "department": "Operations",
-      "departments": [
-        "Operations"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/s.d.santos.moreira/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/operations/staff?lang=en",
-      "families": [
-        "moreira",
-        "santos moreira"
-      ],
-      "givenNames": [
-        "santos"
-      ],
-      "initialSequences": [
-        "s",
-        "sd",
-        "sds"
-      ],
-      "firstInitials": [
-        "s"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "Professor Emeritus",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-l-saraga",
@@ -7621,7 +8425,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-d-siemonsma",
@@ -7646,7 +8454,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-h-teune",
@@ -7671,7 +8483,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-dm-van-tricht",
@@ -7696,7 +8512,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-bg-uiterwijk",
@@ -7721,7 +8541,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-e-veliaj",
@@ -7746,7 +8570,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-j-vetters",
@@ -7771,7 +8599,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "postdoc",
+      "role": "Postdoctoral Researcher",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "ops-rf-de-vries",
@@ -7799,7 +8631,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Educational Developer / Grant Advisor / Skills Trainer",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-nh-vu",
@@ -7824,7 +8660,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-z-wang",
@@ -7851,7 +8691,11 @@
       "orcid": "0000-0002-0117-0381",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ops-p-van-der-wijk",
@@ -7876,7 +8720,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-ad-winthorst",
@@ -7901,7 +8749,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-s-wolf",
@@ -7928,7 +8780,11 @@
       "orcid": "0009-0001-8057-2097",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "ops-mj-zeelenberg",
@@ -7956,7 +8812,11 @@
       "orcid": "0009-0003-1547-5439",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "ops-x-zhang",
@@ -7983,7 +8843,11 @@
       "orcid": "0000-0002-9373-9204",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "ops-md-zweers",
@@ -8008,7 +8872,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-s-brakman",
@@ -8035,7 +8903,11 @@
       "orcid": "0000-0002-2088-7249",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "gem-hwa-dietzenbacher",
@@ -8060,7 +8932,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "gem-jh-garretsen",
@@ -8089,7 +8965,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor International Economics & Business; Director 'In the LEAD'; Professor Leadership & Sustainability Aarhus BSS, Aarhus University",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "gem-j-de-haan",
@@ -8116,7 +8996,11 @@
       "orcid": "0000-0002-5504-9448",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "gem-b-los",
@@ -8143,7 +9027,11 @@
       "orcid": "0000-0001-5850-4795",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of the Economics of Technological Progress and Structural Change",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-ae-steenge",
@@ -8168,7 +9056,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-mp-timmer",
@@ -8193,7 +9085,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of Economic growth and development",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "gem-rc-inklaar",
@@ -8218,7 +9114,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-aa-erumban",
@@ -8243,7 +9143,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Asst. Professor & GEM Fellow FEBRI",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-dj-bezemer",
@@ -8271,7 +9175,11 @@
       "orcid": "0000-0003-1049-9370",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-s-beugelsdijk",
@@ -8298,7 +9206,11 @@
       "orcid": "0000-0002-5282-738X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "gem-ar-muller",
@@ -8326,7 +9238,11 @@
       "orcid": "0000-0003-3806-2568",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of International Management",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-mv-nikolova",
@@ -8354,7 +9270,11 @@
       "orcid": "0000-0002-3247-760X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of the Economics of Well-being",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "gem-ch-slager",
@@ -8379,7 +9299,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Professor of International Sustainability Management",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-hh-van-ark",
@@ -8404,7 +9328,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Honorary Professor",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "gem-a-stemerding",
@@ -8429,32 +9357,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "gem-hcwe-van-der-vleuten",
-      "name": "H C W E van der Vleuten",
-      "display": "Vleuten, H.C.W.E. van der",
-      "department": "GEM",
-      "departments": [
-        "GEM"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/h.c.w.e.van.der.vleuten/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en",
-      "families": [
-        "van der vleuten"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "hcwe"
-      ],
-      "firstInitials": [
-        "h"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-rw-de-vries",
@@ -8479,32 +9386,11 @@
       "orcid": "0000-0003-4804-8882",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "gem-ad-boyer",
-      "name": "A D Boyer",
-      "display": "Boyer, A.D.",
-      "department": "GEM",
-      "departments": [
-        "GEM"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/a.d.boyer/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en",
-      "families": [
-        "boyer"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "ad"
-      ],
-      "firstInitials": [
-        "a"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer - dept. Global Economics and Management, program International Business",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-gj-de-vries",
@@ -8532,32 +9418,11 @@
       "orcid": "0000-0003-4166-8173",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "gem-si-luiken",
-      "name": "S I Luiken",
-      "display": "Luiken, S.I.",
-      "department": "GEM",
-      "departments": [
-        "GEM"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/s.i.luiken/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en",
-      "families": [
-        "luiken"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "si"
-      ],
-      "firstInitials": [
-        "s"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "gem-fr-gouma",
@@ -8582,7 +9447,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Researcher Groningen Growth and Development Centre (GGDC)",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-rht-wiese",
@@ -8610,7 +9479,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "gem-n-terzidis",
@@ -8637,7 +9510,11 @@
       "orcid": "0000-0001-7252-3810",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-v-milanova",
@@ -8662,7 +9539,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "gem-r-konietzny",
@@ -8687,7 +9568,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-x-tian",
@@ -8714,7 +9599,11 @@
       "orcid": "0000-0003-3028-9442",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-l-van-der-holt-beekhuis",
@@ -8739,7 +9628,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Programme assistant BSc International Business",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-rs-marapin",
@@ -8764,7 +9657,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-s-virsik",
@@ -8789,7 +9686,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-d-marchesi",
@@ -8815,7 +9716,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-t-de-leeuw",
@@ -8840,7 +9745,11 @@
       "orcid": "0009-0009-6374-7121",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-nj-lesterhuis",
@@ -8865,7 +9774,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-d-sampson",
@@ -8890,7 +9803,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-y-mu",
@@ -8915,7 +9832,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-d-singh",
@@ -8940,7 +9861,11 @@
       "orcid": "0000-0003-2837-8913",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-mb-leusen",
@@ -8965,7 +9890,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-jp-bolanos",
@@ -8990,7 +9919,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-j-kurz",
@@ -9015,7 +9948,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-mch-broekhoff",
@@ -9040,7 +9977,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "gem-hh-dijkstra",
@@ -9068,7 +10009,11 @@
       "orcid": "0009-0004-5112-0026",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-p-dasgupta",
@@ -9093,7 +10038,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-aj-mahapatra",
@@ -9118,7 +10067,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-a-domenech-romero",
@@ -9149,7 +10102,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-ka-poldner",
@@ -9174,7 +10131,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-jb-tirion",
@@ -9202,7 +10163,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-y-haji-ghassemi",
@@ -9233,7 +10198,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer, International Business",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-na-desdiani",
@@ -9258,7 +10227,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "gem-sn-maya-scarpeta",
@@ -9289,7 +10262,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-rs-massae",
@@ -9314,7 +10291,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-lj-kishimbo",
@@ -9339,7 +10320,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-aepe-evangelista",
@@ -9364,7 +10349,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-iv-thopte",
@@ -9389,7 +10378,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "gem-pn-gole",
@@ -9414,7 +10407,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-p-putri-nabilah",
@@ -9443,7 +10440,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-h-han",
@@ -9470,7 +10471,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-s-wijlens",
@@ -9495,7 +10500,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-mp-rader",
@@ -9520,7 +10529,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-f-borsotti",
@@ -9545,7 +10558,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "Junior Lecturer",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "gem-t-de-vries",
@@ -9570,7 +10587,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-as-afridi",
@@ -9595,7 +10616,11 @@
       "orcid": "0000-0002-8122-3710",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "acc-da-alfrink",
@@ -9620,7 +10645,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Docent Internal Control & Auditing.",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-v-breukelman-de-jong",
@@ -9651,7 +10680,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "MOA department Accounting and Auditing",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-tl-brouwer",
@@ -9679,7 +10712,11 @@
       "orcid": "0009-0004-0752-5341",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer Financial Reporting",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-r-de-bruin",
@@ -9706,7 +10743,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "acc-sm-busstra",
@@ -9731,7 +10772,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "MOA department Accounting and Auditing",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-gam-dassen",
@@ -9756,7 +10801,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-fa-duijm",
@@ -9781,7 +10830,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-r-van-duuren",
@@ -9806,7 +10859,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecturer Financial Reporting",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "acc-wmh-grooten",
@@ -9831,7 +10888,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Teacher",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "acc-djj-heslinga",
@@ -9856,7 +10917,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Teacher",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-fh-van-der-hoek",
@@ -9881,7 +10946,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Program director EMA, Coordinator BSc BDK profile A&C",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-a-hranovska",
@@ -9906,7 +10975,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-aje-jansman",
@@ -9931,7 +11004,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "acc-a-keizer",
@@ -9956,7 +11033,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-w-kevelam",
@@ -9983,7 +11064,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Lecture Financial Reporting",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "acc-ad-knoop",
@@ -10008,34 +11093,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "acc-g-kok",
-      "name": "Grietje Kok",
-      "display": "Kok, G.",
-      "department": "Accounting",
-      "departments": [
-        "Accounting"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/g.kok/",
-      "rosterSource": "https://www.rug.nl/feb/organization/departments/accounting-and-auditing/staff?lang=en",
-      "families": [
-        "kok"
-      ],
-      "givenNames": [
-        "grietje"
-      ],
-      "initialSequences": [
-        "g"
-      ],
-      "firstInitials": [
-        "g"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-di-lestari",
@@ -10060,7 +11122,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-ym-meng",
@@ -10088,7 +11154,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Ph.D. Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-acm-mens",
@@ -10113,7 +11183,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-wg-de-munnik",
@@ -10138,7 +11212,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "Parttime PhD student/Lecturer Accounting Information Systems (0.3 fte)",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-tc-nalci",
@@ -10163,7 +11241,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-m-nguyen-thi-thuy",
@@ -10194,32 +11276,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "acc-rcj-oosterhoff-verbruggen",
-      "name": "R C J Oosterhoff-Verbruggen",
-      "display": "Oosterhoff-Verbruggen, R.C.J.",
-      "department": "Accounting",
-      "departments": [
-        "Accounting"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/r.c.j.oosterhoff-verbruggen/",
-      "rosterSource": "https://www.rug.nl/feb/organization/departments/accounting-and-auditing/staff?lang=en",
-      "families": [
-        "oosterhoff verbruggen"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "rcj"
-      ],
-      "firstInitials": [
-        "r"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-pl-polhuis-van-deventer",
@@ -10249,7 +11310,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-mm-rittersma",
@@ -10274,7 +11339,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "Lecturer Law & PhD researcher",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-mr-roelink",
@@ -10299,7 +11368,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-s-rusanescu",
@@ -10324,7 +11397,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "acc-lm-sailer",
@@ -10349,7 +11426,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-w-schiphorst",
@@ -10374,7 +11455,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD student",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-z-sezici",
@@ -10399,7 +11484,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-d-somsen",
@@ -10424,7 +11513,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-ai-stanescu",
@@ -10449,7 +11542,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-s-tiggelaar",
@@ -10474,7 +11571,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-kh-tillema",
@@ -10499,7 +11600,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-c-tunakan",
@@ -10524,7 +11629,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "acc-jjt-wagenaar",
@@ -10552,7 +11661,11 @@
       "orcid": "0009-0006-3281-2961",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "University Lecturer Internal Control and PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-gh-wortelboer",
@@ -10577,7 +11690,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "PhD Candidate",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "acc-wk-zwaagman",
@@ -10602,7 +11719,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "Teacher Internal Control",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "eef-bjp-achou",
@@ -10630,7 +11751,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-a-bergemann",
@@ -10657,7 +11782,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-jm-berk",
@@ -10684,7 +11813,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-t-boot",
@@ -10711,7 +11844,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-jj-bosma",
@@ -10739,7 +11876,11 @@
       "orcid": "0000-0001-6263-0364",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-kw-chau",
@@ -10766,7 +11907,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-bfc-claassen",
@@ -10794,7 +11939,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-a-dalo",
@@ -10821,7 +11970,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-l-dam",
@@ -10848,7 +12001,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-ape-de-vicq-de-cumptich",
@@ -10877,7 +12034,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-hh-dijk",
@@ -10905,7 +12066,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-h-gonenc",
@@ -10932,7 +12097,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-jam-de-grefte",
@@ -10960,7 +12129,11 @@
       "orcid": "0000-0003-2433-952X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-m-groneck",
@@ -10987,7 +12160,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-rjrk-heijmans",
@@ -11015,7 +12192,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-p-heijnen",
@@ -11042,7 +12223,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-om-herrmann",
@@ -11070,7 +12255,11 @@
       "orcid": "0000-0002-0277-4283",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-s-homroy",
@@ -11097,7 +12286,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-ov-iftime",
@@ -11125,7 +12318,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-jpam-jacobs",
@@ -11153,7 +12350,11 @@
       "orcid": "0000-0002-7994-5175",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-dmo-jong",
@@ -11181,7 +12382,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-dm-kaat",
@@ -11208,7 +12413,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-m-kesina",
@@ -11235,7 +12444,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-l-kong",
@@ -11262,7 +12475,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-cgf-van-der-kwaak",
@@ -11290,7 +12507,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-vv-marinkov",
@@ -11318,7 +12539,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-zz-meder",
@@ -11346,7 +12571,11 @@
       "orcid": "0000-0002-0241-9433",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-p-milionis",
@@ -11373,7 +12602,11 @@
       "orcid": "0000-0001-9899-3925",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-am-mueller",
@@ -11401,7 +12634,11 @@
       "orcid": "0000-0002-6158-9272",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-r-van-ooijen",
@@ -11428,7 +12665,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-mk-osterhaus",
@@ -11456,7 +12697,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-y-peng",
@@ -11485,7 +12730,11 @@
       "orcid": "0000-0002-3188-1635",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-an-peter",
@@ -11514,7 +12763,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-cs-pfeil",
@@ -11543,7 +12796,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-s-pichler",
@@ -11570,7 +12827,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-a-plantinga",
@@ -11597,7 +12858,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-a-postepska",
@@ -11624,7 +12889,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-a-rauf",
@@ -11651,7 +12920,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-gj-romensen",
@@ -11678,7 +12951,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-pc-van-santen",
@@ -11706,7 +12983,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-al-schippers",
@@ -11734,7 +13015,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-sg-see",
@@ -11761,7 +13046,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-ar-soetevent",
@@ -11789,7 +13078,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "full_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-ls-stephan",
@@ -11816,7 +13109,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-m-treurniet",
@@ -11843,7 +13140,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-i-tziolas",
@@ -11870,7 +13171,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-sm-vergara-fernandez",
@@ -11900,7 +13205,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-l-viluma",
@@ -11927,7 +13236,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-d-vullings",
@@ -11954,7 +13267,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-w-westerman",
@@ -11981,7 +13298,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-y-xu",
@@ -12008,7 +13329,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-ros-zaal",
@@ -12036,7 +13361,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-w-zhu",
@@ -12063,7 +13392,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "assistant_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-gtj-zwart",
@@ -12091,7 +13424,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "associate_professor",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-t-abdulhamid",
@@ -12116,7 +13453,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-rjm-alessie",
@@ -12144,7 +13485,11 @@
       "orcid": "0000-0002-5128-6753",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-ma-allers",
@@ -12172,7 +13517,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-gag-alserda",
@@ -12200,7 +13549,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-v-angelini",
@@ -12227,7 +13580,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-sgh-van-beek",
@@ -12255,7 +13612,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-gj-van-berg",
@@ -12282,34 +13643,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "eef-k-beute",
-      "name": "Kim Beute",
-      "display": "Beute, K. (Kim)",
-      "department": "EEF",
-      "departments": [
-        "EEF"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/k.beute/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/economics-econometrics-finance/staff?lang=en",
-      "families": [
-        "beute"
-      ],
-      "givenNames": [
-        "kim"
-      ],
-      "initialSequences": [
-        "k"
-      ],
-      "firstInitials": [
-        "k"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-j-beverdam",
@@ -12334,7 +13672,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-m-bieleman",
@@ -12361,7 +13703,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-j-bolt",
@@ -12388,7 +13734,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-eo-de-brock",
@@ -12417,7 +13767,11 @@
       "orcid": "0000-0003-4400-0187",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "eef-bp-de-bruin",
@@ -12445,7 +13799,11 @@
       "orcid": "0000-0001-9930-6795",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-jm-chen-4853d695",
@@ -12473,7 +13831,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-jm-chen-224a6840",
@@ -12502,7 +13864,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-y-chen",
@@ -12529,7 +13895,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-k-czura",
@@ -12556,7 +13926,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-a-diannegara",
@@ -12583,7 +13957,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-sj-elgersma",
@@ -12611,7 +13989,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-jp-elhorst",
@@ -12640,7 +14022,11 @@
       "orcid": "0000-0001-6062-1202",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-m-fazzo-cusan",
@@ -12671,7 +14057,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-f-febbraro",
@@ -12698,7 +14088,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-a-febriady",
@@ -12725,7 +14119,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-j-fu",
@@ -12750,7 +14148,11 @@
       "orcid": "0009-0003-4296-9856",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-ym-gao",
@@ -12779,7 +14181,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-ma-geerlings-koolman",
@@ -12807,7 +14213,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-a-geis",
@@ -12834,7 +14244,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-fm-giesenow",
@@ -12862,7 +14276,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-ma-haan",
@@ -12890,7 +14308,11 @@
       "orcid": "0000-0003-2295-1854",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-q-han",
@@ -12915,7 +14337,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-bj-heijdra",
@@ -12943,7 +14369,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-me-helmantel",
@@ -12971,7 +14401,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-clm-hermes",
@@ -13000,7 +14434,11 @@
       "orcid": "0000-0002-8364-8026",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-c-hoeben",
@@ -13027,35 +14465,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "eef-et-jelsema",
-      "name": "Ellie Jelsema",
-      "display": "Jelsema, E.T. (Ellie)",
-      "department": "EEF",
-      "departments": [
-        "EEF"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/e.t.jelsema/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/economics-econometrics-finance/staff?lang=en",
-      "families": [
-        "jelsema"
-      ],
-      "givenNames": [
-        "ellie"
-      ],
-      "initialSequences": [
-        "e",
-        "et"
-      ],
-      "firstInitials": [
-        "e"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-a-de-jong",
@@ -13082,7 +14496,11 @@
       "orcid": "0000-0002-2809-5465",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-hj-de-jong",
@@ -13110,7 +14528,11 @@
       "orcid": "0000-0002-5213-4356",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "emeritus",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-ca-kamtoh-ndongmo",
@@ -13139,7 +14561,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-t-kantarci",
@@ -13166,7 +14592,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-ck-kiernan",
@@ -13194,7 +14624,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-j-klooster",
@@ -13221,7 +14655,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-khw-knot",
@@ -13249,7 +14687,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-rh-koning",
@@ -13277,7 +14719,11 @@
       "orcid": "0000-0002-3083-2284",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "special_appointment",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-el-kramer",
@@ -13306,7 +14752,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-mm-kramer",
@@ -13334,7 +14784,11 @@
       "orcid": "0000-0003-2636-8658",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-mg-langley",
@@ -13362,7 +14816,11 @@
       "orcid": "0009-0006-3883-6737",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-bw-lensink",
@@ -13391,7 +14849,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-m-malinowski",
@@ -13419,7 +14881,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-raj-mees",
@@ -13447,7 +14913,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-jo-mierau",
@@ -13475,7 +14945,11 @@
       "orcid": "0000-0002-9968-8807",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-mc-mills",
@@ -13503,7 +14977,11 @@
       "orcid": "0000-0003-1704-0001",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 7
     },
     {
       "id": "eef-m-mulder",
@@ -13530,7 +15008,11 @@
       "orcid": "0000-0003-4175-6915",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-mm-van-oldeniel",
@@ -13558,7 +15040,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-b-onderisinova",
@@ -13585,7 +15071,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-hh-ong",
@@ -13612,7 +15102,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-md-pen",
@@ -13640,7 +15134,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-smw-phlippen",
@@ -13668,7 +15166,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "eef-kf-roszbach",
@@ -13696,7 +15198,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-k-saxena",
@@ -13723,7 +15229,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 3
     },
     {
       "id": "eef-ljr-scholtens",
@@ -13752,7 +15262,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-l-schoonbeek",
@@ -13781,7 +15295,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "special_appointment",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-g-scotti-bentivoglio",
@@ -13810,7 +15328,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-a-shui",
@@ -13837,7 +15359,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-g-sloot-pol",
@@ -13864,7 +15390,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-l-stangenberg",
@@ -13891,7 +15421,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-cl-stein",
@@ -13919,7 +15453,11 @@
       "orcid": "0000-0002-5165-2901",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-e-sterken",
@@ -13946,7 +15484,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-lm-swank",
@@ -13974,7 +15516,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-la-toolsema-veldman",
@@ -14002,7 +15548,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 4
     },
     {
       "id": "eef-a-tort-carrera",
@@ -14033,7 +15583,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-aa-tsvetkov",
@@ -14061,7 +15615,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 2
     },
     {
       "id": "eef-at-veenstra",
@@ -14089,32 +15647,11 @@
       "orcid": "0009-0009-0042-2215",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
-    },
-    {
-      "id": "eef-a-veld-patje",
-      "name": "A Veld-Patje",
-      "display": "Veld-Patje, A.",
-      "department": "EEF",
-      "departments": [
-        "EEF"
-      ],
-      "staffUrl": "https://www.rug.nl/staff/a.veld/",
-      "rosterSource": "https://www.rug.nl/feb/organization/units/academic-departments/economics-econometrics-finance/staff?lang=en",
-      "families": [
-        "veld patje"
-      ],
-      "givenNames": [],
-      "initialSequences": [
-        "a"
-      ],
-      "firstInitials": [
-        "a"
-      ],
-      "orcid": "",
-      "benchmarkIds": [],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-ao-voloshyna",
@@ -14142,7 +15679,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-ap-van-vuuren",
@@ -14170,7 +15711,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 10
     },
     {
       "id": "eef-t-de-waal",
@@ -14195,7 +15740,11 @@
       "orcid": "0000-0002-2622-1667",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-ag-wakoya",
@@ -14220,7 +15769,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-gm-wang",
@@ -14248,7 +15801,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-w-wang",
@@ -14275,7 +15832,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "unknown",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-d-yan",
@@ -14301,7 +15862,11 @@
       "orcid": "0009-0002-1994-686X",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-a-yin",
@@ -14328,7 +15893,11 @@
       "orcid": "0000-0002-4129-9200",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 404,
+      "publicationPageArticles": null
     },
     {
       "id": "eef-l-zhu",
@@ -14355,7 +15924,11 @@
       "orcid": "",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "appointmentSection": "phd",
+      "role": "",
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     }
   ],
   "publications": [

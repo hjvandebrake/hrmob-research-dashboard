@@ -1,10 +1,52 @@
 {
   "meta": {
-    "generatedOn": "2026-06-05",
+    "generatedOn": "2026-09-07",
     "sourceNote": "Initial source-backed list of competitive external grants and major prize funding found during a public web pass. Missing staff entries should be read as not-yet-found, not confirmed absence.",
     "phdSupervisionNote": "Completed PhD supervision can be added with the same source-backed pattern: defended year, candidate, thesis title, supervisor role, and source link."
   },
   "grants": [
+    {
+      "id": "yy-nwo-xs-2026",
+      "personIds": ["YY"],
+      "year": 2026,
+      "announcedOn": "2026-08-17",
+      "scheme": "SSH Open Competition XS",
+      "funder": "NWO",
+      "category": "Competitive project grant",
+      "title": "Human leadership of Multi-Agent AI teams for Creative Problem-Solving",
+      "amount": "EUR 50,000",
+      "role": "Recipient / PI",
+      "sourceLabel": "RUG FEB news, 17 August 2026",
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260810nwo-xs-grants-for-six-feb-researchers?lang=en"
+    },
+    {
+      "id": "fr-js-mr-nwo-l-2026",
+      "personIds": ["FR", "JS", "MR"],
+      "year": 2026,
+      "announcedOn": "2026-07-01",
+      "scheme": "SSH Open Competition L",
+      "funder": "NWO",
+      "category": "Competitive project grant",
+      "title": "Leadership in a time of inclusion and resistance",
+      "amount": "about EUR 800,000 (whole project)",
+      "role": "Joint recipients: Floor Rink, Janka Stoker and Michelle Ryan",
+      "sourceLabel": "RUG FEB news, 1 July 2026",
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en"
+    },
+    {
+      "id": "cdd-nwo-l-2026",
+      "personIds": ["CDD"],
+      "year": 2026,
+      "announcedOn": "2026-07-01",
+      "scheme": "SSH Open Competition L",
+      "funder": "NWO",
+      "category": "Competitive project grant",
+      "title": "What drives cooperation across group-boundaries",
+      "amount": "about EUR 800,000 (whole project)",
+      "role": "Joint recipients: Carsten de Dreu and Zsombor Méder",
+      "sourceLabel": "RUG FEB news, 1 July 2026",
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en"
+    },
     {
       "id": "sb-nwo-veni-2023",
       "personIds": ["SB"],

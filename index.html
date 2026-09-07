@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260907-streamlined2">
+  <link rel="stylesheet" href="styles.css?v=20260907-metrics3">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -59,6 +59,7 @@
       <div class="wrap">
         <p class="view-context overview-view-context" data-view-context></p>
         <div id="metrics" class="metric-grid"></div>
+        <div id="overview-previews" class="overview-previews" aria-label="Explore the dashboard"></div>
         <div class="overview-grid">
           <section class="overview-panel overview-panel-wide">
             <div class="sec-head compact">
@@ -305,18 +306,23 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Faculty comparison</p>
-                <h3 id="benchmark-trend-title" class="overview-h3">Publications per department by year</h3>
+                <h3 id="benchmark-trend-title" class="overview-h3">All journal publications per person, by year</h3>
               </div>
             </div>
             <div id="benchmark-publication-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
+            <h3 class="overview-h3">AIP ≥ 95 publications per person, by year</h3>
+            <p class="section-intro">Unique papers in journals with an average AIP of at least 95, divided by the same academic headcount.</p>
+            <div id="benchmark-aip-trend" class="metric-chart"></div>
+          </section>
+          <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <h3 class="overview-h3">Publication centralization</h3>
+                <h3 class="overview-h3">Centralization among recorded authors</h3>
               </div>
             </div>
-            <p class="section-intro">How concentrated is publication activity? 0% means evenly shared; 100% means one person accounts for all publication credit.</p>
+            <p class="section-intro">How evenly is credit shared among authors with linked publications? Lower means more even. People without linked records are excluded here because missing data cannot establish that they published nothing. This is a partial view of the department.</p>
             <div id="benchmark-variety" class="variety-list"></div>
           </section>
           <details class="overview-panel benchmark-panel-wide"><summary>How the counts and centralization are calculated</summary><div id="benchmark-method-note" class="method-note"></div></details>
@@ -698,6 +704,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260907-streamlined2"></script>
+  <script src="app.js?v=20260907-metrics3"></script>
 </body>
 </html>
