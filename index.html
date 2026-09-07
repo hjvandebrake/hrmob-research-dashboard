@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260907-rework6">
+  <link rel="stylesheet" href="styles.css?v=20260907-streamlined2">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -28,7 +28,7 @@
         <button id="tab-publications" class="nav-tab" type="button" role="tab" aria-controls="view-publications" aria-selected="false" tabindex="-1" data-tab="publications">Publications</button>
         <button id="tab-network" class="nav-tab" type="button" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
         <button id="tab-metrics" class="nav-tab" type="button" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
-        <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
+        <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Grants</button>
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
       <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
@@ -47,8 +47,7 @@
 
   <header class="pg-hd">
     <div class="wrap">
-      <p class="eye">HRM&amp;OB dashboard</p>
-      <h1>HRM&amp;OB research activities dashboard</h1>
+      <h1>Research overview</h1>
       <p id="subtitle">Loading publication data...</p>
     </div>
   </header>
@@ -59,109 +58,32 @@
     <section id="view-overview" class="sec" role="tabpanel" aria-labelledby="tab-overview">
       <div class="wrap">
         <p class="view-context overview-view-context" data-view-context></p>
-        <section class="overview-orientation" aria-label="Dashboard orientation">
-          <div>
-            <p class="eye">Research guide</p>
-            <h2 class="overview-orientation-title">Our research, people, and collaborations</h2>
-            <p>Explore the evidence behind our research activity. Use the year and roster controls to change the scope.</p>
-          </div>
-          <nav class="overview-use-cases" aria-label="Common dashboard uses">
-            <a class="use-case-card" href="#staff">
-              <span>Find expertise</span>
-              <p>Search people and topic signals.</p>
-            </a>
-            <a class="use-case-card" href="#opportunities">
-              <span>Start a conversation</span>
-              <p>See interests and people links.</p>
-            </a>
-            <a class="use-case-card" href="#resources">
-              <span>Build around a grant call</span>
-              <p>Connect grant calls to people and topics.</p>
-            </a>
-            <a class="use-case-card" href="#contact">
-              <span>Suggest updates</span>
-              <p>Correct records or profile fields.</p>
-            </a>
-          </nav>
-        </section>
-        <p class="metric-context">Group-level indicators for orientation; details and definitions are in Metrics.</p>
         <div id="metrics" class="metric-grid"></div>
         <div class="overview-grid">
-          <section class="overview-panel overview-panel-wide overview-expertise-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Expertise</p>
-                <h2 class="overview-h3">Expertise overview</h2>
-              </div>
-              <div class="overview-panel-actions">
-                <a class="section-link" href="#staff">Open staff</a>
-                <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
-              </div>
-            </div>
-            <p class="section-intro">Signals come from publications, grants, PhD projects, and profile fields.</p>
-            <div id="overview-topic-cloud" class="topic-cloud topic-cloud-compact"></div>
-            <div id="overview-expertise-details" class="overview-expertise-details" hidden></div>
-          </section>
           <section class="overview-panel overview-panel-wide">
             <div class="sec-head compact">
               <div>
-                <p class="eye">Publication activity</p>
                 <h2 class="h2">Publications by year</h2>
               </div>
               <div class="overview-panel-actions">
                 <a class="section-link" href="#publications">View publications</a>
-                <a class="section-link" href="#metrics">Open Metrics</a>
               </div>
             </div>
             <div id="year-bars" class="bar-chart"></div>
-            <h3 class="sub-h2">AIP coverage and journal thresholds</h3>
-            <div id="aip-bars" class="aip-summary"></div>
           </section>
-          <section class="overview-panel">
+          <section class="overview-panel overview-panel-wide overview-expertise-panel">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Journals</p>
-                <h2 class="overview-h3">Publishing outlets</h2>
+                <h2 class="overview-h3">Research interests</h2>
               </div>
-              <a class="section-link" href="#publications">Open</a>
-            </div>
-            <div id="overview-journal-list" class="list-stack"></div>
-          </section>
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">PhDs</p>
-                <h2 class="overview-h3">Defended theses</h2>
+              <div class="overview-panel-actions">
+                <a class="section-link" href="#staff">Explore staff expertise</a>
+                <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
               </div>
-              <a class="section-link" href="#phds">Open</a>
             </div>
-            <div id="phd-list" class="grant-list"></div>
+            <div id="overview-topic-cloud" class="topic-cloud topic-cloud-compact"></div>
+            <div id="overview-expertise-details" class="overview-expertise-details" hidden></div>
           </section>
-          <section class="overview-panel overview-panel-wide">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">PhD pipeline</p>
-                <h2 class="overview-h3">Ongoing PhD projects</h2>
-              </div>
-              <a class="section-link" href="#phds">Open page</a>
-            </div>
-            <div id="current-phd-list" class="current-phd-list"></div>
-          </section>
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Grants</p>
-                <h2 class="overview-h3">Competitive funding</h2>
-              </div>
-              <a class="section-link" href="#resources">Open resources</a>
-            </div>
-            <div id="grant-list" class="grant-list"></div>
-          </section>
-        </div>
-        <div class="overview-contact">
-          <span>Contact</span>
-          <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>
-          <a href="#contact">Suggest a correction</a>
         </div>
       </div>
     </section>
@@ -215,10 +137,16 @@
             <p class="eye">Opportunities</p>
             <h2 class="h2">Shared interests, expertise, and opportunities</h2>
           </div>
-          <a class="section-link" href="#resources">Open grant resources</a>
+          <a class="section-link" href="#grants">Open grants</a>
         </div>
         <p class="section-intro page-intro">Use these signals to start conversations around shared topics, methods, projects, and calls.</p>
         <div id="collaboration-summary" class="collaboration-summary"></div>
+        <details class="shared-reference-files">
+          <summary>Shared reference files</summary>
+          <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
+            <strong>AIP workbook</strong><span>Average journal AIP scores, 2020-2024.</span>
+          </a>
+        </details>
         <section class="collaboration-section">
           <div class="overview-panel-head">
             <div>
@@ -246,7 +174,7 @@
               <p class="eye">Grant opportunities</p>
               <h3 class="overview-h3">Grant calls to build around</h3>
             </div>
-            <a class="section-link" href="#resources">Grant workbook</a>
+            <a class="section-link" href="#grants">Grant workbook</a>
           </div>
           <p class="section-intro">Calls are shown as starting points for discussion and proposal planning.</p>
           <div id="collaboration-grant-opportunities" class="collaboration-grant-grid"></div>
@@ -268,24 +196,24 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Resources</p>
-            <h2 class="h2">Resources</h2>
+            <p class="eye">Funding</p>
+            <h2 class="h2">Grants</h2>
           </div>
         </div>
         <p class="section-intro page-intro">Use this section to move from call scanning to possible collaboration and proposal preparation.</p>
         <div class="resource-grid">
+          <section class="overview-panel resource-panel-wide">
+            <div class="overview-panel-head"><h3 class="overview-h3">Awarded funding</h3></div>
+            <div id="grant-list" class="grant-list"></div>
+          </section>
           <section class="overview-panel">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Downloads</p>
-                <h3 class="overview-h3">Reference files</h3>
+                <h3 class="overview-h3">Grant planning</h3>
               </div>
             </div>
             <div class="download-list">
-              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
-                <strong>AIP workbook</strong>
-                <span>Average AIP scores, 2020-2024.</span>
-              </a>
               <a class="download-card" href="assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx" download>
                 <strong>Grant opportunities workbook</strong>
                 <span>Full grant overview, deadlines, notes, and sign-up sheet.</span>
@@ -366,22 +294,18 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Benchmarks</p>
-            <h2 class="h2">Group metrics</h2>
+            <p class="eye">Faculty</p>
+            <h2 class="h2">Department publications</h2>
           </div>
         </div>
         <div id="benchmark-summary" class="metric-grid"></div>
-        <p class="section-intro" id="benchmark-identity-note" role="note">Comparisons remain provisional because publication coverage and appointment dates are incomplete.</p>
+        <p class="section-intro" id="benchmark-identity-note" role="note">Each paper counts once per department, including all staff ranks and PhD students.</p>
         <div class="benchmark-grid">
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Faculty comparison</p>
-                <h3 id="benchmark-trend-title" class="overview-h3">Average counted publications per person per year by group</h3>
-              </div>
-              <div id="benchmark-trend-toggle" class="metric-toggle" role="group" aria-label="Trend metric">
-                <button class="on" type="button" data-metric-trend="pubRate" aria-pressed="true">All counted</button>
-                <button type="button" data-metric-trend="highAipRate" aria-pressed="false">AIP &ge; 95</button>
+                <h3 id="benchmark-trend-title" class="overview-h3">Publications per department by year</h3>
               </div>
             </div>
             <div id="benchmark-publication-trend" class="metric-chart"></div>
@@ -389,21 +313,13 @@
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Definitions</p>
-                <h3 class="overview-h3">How to read these metrics</h3>
+                <h3 class="overview-h3">Publication centralization</h3>
               </div>
             </div>
-            <div id="benchmark-method-note" class="method-note"></div>
-          </section>
-          <section class="overview-panel benchmark-panel-wide">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Variety</p>
-                <h3 class="overview-h3">Distribution of publication activity</h3>
-              </div>
-            </div>
+            <p class="section-intro">How concentrated is publication activity? 0% means evenly shared; 100% means one person accounts for all publication credit.</p>
             <div id="benchmark-variety" class="variety-list"></div>
           </section>
+          <details class="overview-panel benchmark-panel-wide"><summary>How the counts and centralization are calculated</summary><div id="benchmark-method-note" class="method-note"></div></details>
         </div>
       </div>
     </section>
@@ -456,7 +372,8 @@
             <section class="table-wrap publication-results-table" aria-label="Publication results" aria-describedby="publication-results-summary" tabindex="0">
               <table id="publication-table" aria-describedby="publication-results-summary"></table>
             </section>
-            <div id="publication-pagination"></div>
+        <div id="publication-pagination"></div>
+        <details class="metric-data-details"><summary>AIP coverage for the selected publication window</summary><div id="aip-bars" class="aip-summary"></div></details>
           </div>
           <aside class="publication-side" aria-labelledby="publication-journals-title">
             <div class="overview-panel-head">
@@ -781,6 +698,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260907-rework6"></script>
+  <script src="app.js?v=20260907-streamlined2"></script>
 </body>
 </html>

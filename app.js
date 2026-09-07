@@ -47,7 +47,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260907-rework6";
+const DATA_VERSION = "20260907-streamlined2";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -833,7 +833,7 @@ function attachEvents() {
   if (els.collaborationGrantOpportunities) {
     els.collaborationGrantOpportunities.addEventListener("click", handleCollaborationStaffClick);
   }
-  els.benchmarkTrendToggle.addEventListener("click", (event) => {
+  els.benchmarkTrendToggle?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-metric-trend]");
     if (!button) return;
     state.metricTrendKey = button.dataset.metricTrend;
@@ -1315,7 +1315,7 @@ async function loadData() {
     const meta = state.data.meta;
     hydrateTopicFamilies(meta.topicFamilies);
     applyGlobalStateFromUrl();
-    els.subtitle.textContent = "Publications, AIP, expertise, collaboration, grants, PhD supervision, and shared resources.";
+    els.subtitle.textContent = "Our people, publications, and research activity.";
     syncFooterMeta(meta);
     syncDataStatus();
     syncPublicationWindowControls();
@@ -1355,6 +1355,7 @@ function hydrateTopicFamilies(topicFamilies) {
 }
 
 const DEFERRED_DATA_FILES = {
+  department: { label: "department publications", filename: "department-publications.json", apply(data) { state.departmentData = data; } },
   faculty: {
     label: "faculty author identities",
     filename: "faculty-identity-data.json",
@@ -1383,7 +1384,7 @@ const DEFERRED_DATA_FILES = {
 };
 
 function deferredDataKeysForTab(tab = state.tab) {
-  if (tab === "metrics") return ["benchmark"];
+  if (tab === "metrics") return ["department"];
   if (tab === "publications") return ["faculty"];
   if (tab === "network") {
     return ["faculty", "externalPartners"];
@@ -1472,7 +1473,7 @@ function routeFromHash() {
     };
   }
   const [tab, detail = "", subdetail = ""] = raw.split("/");
-  const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
+  const aliasedTab = tab === "opportunities" ? "collaboration" : tab === "grants" ? "resources" : tab;
   const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
   return {
     tab: normalizedTab,
@@ -1488,6 +1489,7 @@ function routeHash() {
   if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}/${encodeURIComponent(normalizeStaffSubpage(state.staffSubpage))}`;
   if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
   if (state.tab === "collaboration") return "#opportunities";
+  if (state.tab === "resources") return "#grants";
   return `#${state.tab}`;
 }
 
@@ -1657,18 +1659,16 @@ function syncPublicationWindowControls() {
 function syncViewContext() {
   const roster = rosterModeLabel();
   const publicationWindow = activeWindowLabel();
-  const metricsYears = metricYears();
-  const metricsWindow = metricsYears.length
-    ? `${metricsYears[0]}-${metricsYears[metricsYears.length - 1]} completed years`
-    : "No completed years in the selected window";
+  const [metricsStart, metricsEnd] = activeWindowYears();
+  const metricsWindow = `${Math.max(2005, Number.isFinite(metricsStart) ? metricsStart : 2005)}-${Number.isFinite(metricsEnd) ? metricsEnd : new Date().getFullYear()}`;
   const contextByTab = {
-    overview: `${roster} | Publication indicators: ${publicationWindow} | PhD and grant cards: full available records`,
+    overview: `${roster} · Publications: ${publicationWindow}`,
     staff: `${roster} | Publication evidence: ${publicationWindow}`,
     phds: `${roster} | PhD records are not limited by the publication window`,
     collaboration: `${roster} | Publication-based signals: ${publicationWindow}`,
     publications: `${roster} | ${publicationWindow}`,
     network: `${roster} | Publication ties: ${publicationWindow}`,
-    metrics: `${roster} | ${metricsWindow} | Current-year records are excluded`,
+    metrics: `All departmental staff, including PhD students · ${metricsWindow}`,
     resources: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
     contact: "Corrections, suggestions, and staff profile updates",
   };
@@ -4042,11 +4042,10 @@ function renderOverview() {
   const theses = activeTheses();
   const currentProjects = currentPhdProjects();
   els.metrics.innerHTML = [
-    metric("Counted journal publications", pubs.length),
-    metric("Publishing outlets", journals.length),
+    metric("Researchers", activePeople().length),
+    metric("Journal articles", pubs.length),
     metric("Current PhDs", currentProjects.length),
-    metric("Defended PhDs", theses.length),
-    metric("Competitive grants", grants.length),
+    metric("Awarded funding records", grants.length),
   ].join("");
 
   renderYearBars(pubs);
@@ -4096,6 +4095,7 @@ function renderPhds() {
 
 function renderResources() {
   if (!els.resourceOpportunities || !els.resourceTips) return;
+  renderOverviewGrants(activeGrants());
   renderRecentGrantCalls();
   const allOpportunities = state.resourceData?.opportunities || [];
   const opportunities = state.resourceShowClosed
@@ -4424,54 +4424,82 @@ function personYearAverages(pubs, people, startYearOverride = null) {
   };
 }
 
-function renderMetrics() {
-  if (!state.data || !els.benchmarkSummary) return;
-  const identityNote = document.getElementById("benchmark-identity-note");
-  if (identityNote) {
-    const meta = state.benchmarkData?.meta || {};
-    identityNote.textContent = meta.identityReviewedOn
-      ? `Author identities reviewed ${meta.identityReviewedOn}: ${(meta.identityConflictPeople || []).length} conflicting identities and ${meta.quarantinedPublications || 0} affected records excluded. Comparisons remain provisional because publication coverage and appointment dates are incomplete. The benchmark covers six groups; the network identity directory covers all seven FEB departments.`
-      : "Comparisons remain provisional because publication coverage and appointment dates are incomplete.";
-  }
-  const benchmarkReady = state.deferredDataStatus.benchmark === "loaded" || (state.benchmarkData?.people || []).length > 0;
-  if (!benchmarkReady) {
-    const failed = state.deferredDataStatus.benchmark === "failed";
-    els.benchmarkSummary.innerHTML = metric(
-      "Benchmark comparison",
-      failed ? "Unavailable" : "Loading...",
-      failed ? "Comparison data did not load; no benchmark result is shown." : "Loading comparison people, publications, and coverage decisions.",
-    );
-    if (els.benchmarkPublicationTrend) {
-      els.benchmarkPublicationTrend.setAttribute("aria-busy", String(!failed));
-      els.benchmarkPublicationTrend.innerHTML = `<p class="panel-loading" role="status">${failed ? "Benchmark comparison data are unavailable." : "Loading benchmark comparison data..."}</p>`;
-    }
-    if (els.benchmarkVariety) els.benchmarkVariety.innerHTML = "";
-    if (els.benchmarkMethodNote) els.benchmarkMethodNote.innerHTML = "";
-    return;
-  }
-  els.benchmarkPublicationTrend?.removeAttribute("aria-busy");
-  const groups = buildMetricGroups();
-  if (!groups.length) {
-    els.benchmarkSummary.innerHTML = metric("Benchmark data", "NA", "No benchmark file loaded.");
-    return;
-  }
-  const hrm = groups.find((group) => group.key === "HRMOB") || groups[0];
-
-  els.benchmarkSummary.innerHTML = [
-    metric("Professor-rank pubs/year", formatMetricValue(hrm.avgPubs), "Mean counted journal publications for assistant, associate, and full professors.", isNumber(hrm.avgPubsSd) ? formatMetricValue(hrm.avgPubsSd) : ""),
-    metric("Professor-rank AIP >= 95 pubs/year", formatMetricValue(hrm.avgHighAip), "Mean professor-rank publications in AIP >= 95 journals.", isNumber(hrm.avgHighAipSd) ? formatMetricValue(hrm.avgHighAipSd) : ""),
-    metric("AIP >= 95 share", formatPercentValue(hrm.highAipShare), "Share of counted publications in AIP >= 95 journals."),
-    metric("Output centralization", formatPercentValue(hrm.outputCentralization, 1), `Gini-style concentration of publication rates across ${hrm.activePeople} active people.`, isNumber(hrm.highAipCentralization) ? formatPercentValue(hrm.highAipCentralization, 1) : "", "AIP >= 95 only"),
-  ].join("");
-
-  const comparisonGroups = groups.filter((group) => group.key !== "REST" && group.key !== "REST_HRM");
-  const trendKey = state.metricTrendKey === "highAipRate" ? "highAipRate" : "pubRate";
-  renderMetricTrendControls(trendKey);
-  renderMetricLineChart(els.benchmarkPublicationTrend, comparisonGroups, trendKey);
-  renderMetricVariety(els.benchmarkVariety, comparisonGroups);
-  renderMetricMethodNote(els.benchmarkMethodNote, hrm, null);
+function departmentPublicationGroups(data, fromYear, toYear) {
+  const people = new Map((data.people || []).map(p=>[p.id,p]));
+  const records = new Map();
+  (data.publications || []).filter(p=>p.year>=fromYear&&p.year<=toYear).forEach(pub=>{
+    const key=normalizeDoi(pub.doi) || pub.id;
+    if(!records.has(key)) records.set(key,{...pub,people:new Set(),departments:new Set()});
+    const row=records.get(key);
+    (pub.people||[]).filter(id=>people.has(id)).forEach(id=>{
+      row.people.add(id);
+      (people.get(id).departments||[people.get(id).department]).forEach(d=>row.departments.add(d));
+    });
+  });
+  const years=Array.from({length:Math.max(0,toYear-fromYear+1)},(_,i)=>fromYear+i);
+  return (data.departments||[]).map(department=>{
+    const staff=(data.people||[]).filter(p=>(p.departments||[p.department]).includes(department));
+    const credits=new Map(staff.map(p=>[p.id,0]));
+    const pubs=Array.from(records.values()).filter(p=>p.departments.has(department));
+    pubs.forEach(pub=>{
+      const authors=Array.from(pub.people).filter(id=>credits.has(id));
+      authors.forEach(id=>credits.set(id,credits.get(id)+1/authors.length));
+    });
+    return {key:department,label:department,total:pubs.length, staff:staff.length,
+      centralization:pubs.length ? outputCentralization(Array.from(credits.values())) : null,
+      yearly:years.map(year=>({year,count:pubs.filter(p=>p.year===year).length})),
+      publicationIds:pubs.map(p=>p.id)};
+  });
 }
 
+function renderMetrics() {
+  if(!state.data || !els.benchmarkSummary)return;
+  const data=state.departmentData;
+  if(!data?.publications) {
+    const failed=state.deferredDataStatus.department === "failed";
+    els.benchmarkSummary.innerHTML="";
+    els.benchmarkPublicationTrend.innerHTML=`<p role="status">${failed?"Department publication data could not load. Reload to try again.":"Loading department publications..."}</p>`;
+    return;
+  }
+  const [start,end]=activeWindowYears();
+  const from=Math.max(2005,Number.isFinite(start)?start:2005);
+  const to=Number.isFinite(end)?end:new Date().getFullYear();
+  const groups=departmentPublicationGroups(data,from,to);
+  const union=new Set(groups.flatMap(g=>g.publicationIds));
+  els.benchmarkSummary.innerHTML=[
+    metric("HRM&OB publications",groups.find(g=>g.key==="HRM&OB")?.total||0),
+    metric("Unique faculty publications",union.size),
+    metric("Departments",groups.length)
+  ].join("");
+  const note=document.getElementById("benchmark-identity-note");
+  note.textContent=`All staff ranks, including PhD students. Each paper counts once per department. ${to===new Date().getFullYear()?to+" is year to date. ":""}Public-source coverage varies by department.`;
+  els.benchmarkTrendTitle.textContent="Publications per department by year";
+  renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to);
+  els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}</span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
+  els.benchmarkMethodNote.innerHTML=`<p>Counts cover journal articles linked to people on the current departmental staff lists, including PhD students and other staff. A paper with several authors from one department counts once. Joint papers count once in each participating department; the faculty total counts each paper once.</p><p>Centralization describes how publication credit is shared within a department: 0% means an even distribution, and 100% means one person accounts for all credit. Each paper contributes one credit, split equally among its authors in that department. Staff with no recorded publications are included.</p><p>Official staff publication pages checked ${escapeHtml(data.meta.generatedOn)}. These are the publication records of the current roster, including work before people joined. Public-source coverage can be incomplete${data.meta.pagesFailed?"; "+data.meta.pagesFailed+" profile pages were unavailable":""}. The department roster is broader than the HRM&OB staff selection used on the other pages.</p>`;
+}
+
+function renderDepartmentPublicationChart(container,groups,from,to) {
+  const width=1000,height=310,pad={left:45,right:112,top:20,bottom:35};
+  const years=Array.from({length:to-from+1},(_,i)=>from+i);
+  const ymax=niceMetricCeiling(Math.max(1,...groups.flatMap(g=>g.yearly.map(r=>r.count)))*1.08);
+  const x=year=>pad.left+(year-from)/Math.max(1,to-from)*(width-pad.left-pad.right);
+  const y=value=>height-pad.bottom-value/ymax*(height-pad.top-pad.bottom);
+  const colors={"HRM&OB":"#9b493b",Marketing:"#477875","IM&S":"#687b99",Operations:"#8a7548",GEM:"#7c6288",Accounting:"#527d51",EEF:"#515a65"};
+  const labels=groups.map(g=>({g,y:y(g.yearly.at(-1)?.count||0)})).sort((a,b)=>a.y-b.y);
+  labels.forEach((l,i)=>{l.labelY=Math.max(l.y,i?labels[i-1].labelY+16:pad.top)});
+  const excess=Math.max(0,(labels.at(-1)?.labelY||0)-(height-pad.bottom));
+  labels.forEach(l=>l.labelY-=excess);
+  container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Unique publications per department per year"><title>Unique publications per department per year</title>
+    ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Math.round(v)}</text>`).join("")}
+    ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${v}${v===new Date().getFullYear()?"*":""}</text>`).join("")}
+    ${groups.map(g=>`<polyline fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="${g.key==="HRM&OB"?3:1.8}" points="${g.yearly.map(r=>x(r.year)+","+y(r.count)).join(" ")}"/>`).join("")}
+    ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
+    </svg>
+    <details class="metric-data-details"><summary>View publication counts</summary><div class="table-wrap"><table class="department-counts-table"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
+    ${years.slice().reverse().map(year=>`<tr><th>${year}${year===new Date().getFullYear()?" (YTD)":""}</th>${groups.map(g=>`<td class="num">${g.yearly.find(r=>r.year===year).count}</td>`).join("")}</tr>`).join("")}
+    <tr><th>Total</th>${groups.map(g=>`<td class="num"><strong>${g.total}</strong></td>`).join("")}</tr></tbody></table></div></details>`;
+}
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
     els.benchmarkTrendTitle.textContent = trendKey === "highAipRate"
@@ -5366,7 +5394,7 @@ function renderAipBars(pubs) {
 }
 
 function renderOverviewTopicCloud(pubs) {
-  renderWordCloud(els.overviewTopicCloud, globalTopicSignals(pubs).slice(0, 18), {
+  renderWordCloud(els.overviewTopicCloud, globalTopicSignals(pubs).slice(0, 8), {
     selected: state.expertiseTopic,
     clickable: true,
   });
@@ -5751,7 +5779,7 @@ function renderPublications() {
   }
 
   const rows = pubs.slice(start, start + TABLE_PAGE_SIZE).map((pub) => [
-    pub.year,
+    `${pub.year}${pub.publicationDate ? `<br><span class="publication-date-detail">${escapeHtml(publicationMonthDay(pub))}</span>` : '<br><span class="publication-date-detail">Year only</span>'}`,
     publicationCell(pub, { report: true }),
     escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
     aipBadge(pub.aip, pub),
@@ -5843,6 +5871,7 @@ function numericSortValue(value) {
 
 function setPublicationSort(key) {
   if (!key) return;
+  state.publicationPage = 1;
   if (state.publicationSortKey === key) {
     state.publicationSortDir = state.publicationSortDir === "asc" ? "desc" : "asc";
   } else {
@@ -5988,6 +6017,12 @@ function publicationDateValue(pub) {
     if (!Number.isNaN(parsed)) return parsed;
   }
   return isNumber(pub.year) ? Date.UTC(pub.year, 0, 1) : 0;
+}
+
+function publicationMonthDay(pub) {
+  const parts = String(pub.publicationDate || "").split("-").map(Number);
+  if (parts.length < 2) return "";
+  return new Intl.DateTimeFormat("en-GB", { month: "short", ...(parts.length > 2 ? { day: "numeric" } : {}), timeZone: "UTC" }).format(new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] || 1)));
 }
 
 function buildFacultyCollaboration(pubs, activeIds) {
@@ -6643,8 +6678,8 @@ function renderNetworkLegend() {
   els.networkLegend.innerHTML = `
     <span><i class="legend-node" aria-hidden="true"></i> HRM&OB: number = counted papers</span>
     <span><i class="legend-line" aria-hidden="true"></i> Thicker line = more shared papers</span>
-    ${state.networkExternal ? '<span><i class="legend-faculty" aria-hidden="true"></i> Other FEB colleagues (department shown)</span><span><i class="legend-external" aria-hidden="true"></i> Remaining coauthors</span>' : ""}
-    <span>Positions are for readability. Select a name to see the evidence.</span>`;
+    ${state.networkExternal ? '<span><i class="legend-faculty" aria-hidden="true"></i> Other FEB colleagues</span><span><i class="legend-external" aria-hidden="true"></i> Non-FEB coauthors</span>' : ""}
+    <span>More connected HRM&OB colleagues sit nearer the centre. Smaller nodes are coauthors beyond the roster.</span>`;
 }
 
 function renderNetworkSummaryCards(cards) {
@@ -6754,7 +6789,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
   const svg = els.networkSvg;
   const rect = svg.getBoundingClientRect();
   const width = Math.max(320, Math.round(rect.width || svg.clientWidth || 900));
-  const height = 650;
+  const height = 600;
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.setAttribute("role", "group");
   svg.setAttribute("aria-labelledby", "network-svg-title");
@@ -6770,23 +6805,18 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
   svg.appendChild(svgDescription);
   if (els.networkMapDescription) els.networkMapDescription.textContent = svgDescription.textContent;
   const withOutside = collaboratorNodes.length > 0;
-  const mapHeight = withOutside ? Math.max(height, Math.max(nodes.length, collaboratorNodes.length) * 38 + 72) : height;
+  const mapHeight = height;
   svg.setAttribute("viewBox", `0 0 ${width} ${mapHeight}`);
   svg.style.height = `${mapHeight}px`;
-  const placed = withOutside
-    ? nodes.slice().sort((a, b) => Number(b.focus) - Number(a.focus) || a.label.localeCompare(b.label)).map((node, i, list) => ({
-        ...node, x: width * 0.28, y: 44 + i * (mapHeight - 88) / Math.max(1, list.length - 1),
-      }))
-    : layoutNetwork(nodes, edges, width, height);
+  const layout = layoutNetwork(nodes, edges, width, height, collaboratorNodes, collaboratorEdges);
+  const placed = layout.filter(node => node.core);
   const byId = new Map(placed.map((node) => [node.id, node]));
   const visibleDegreeById = new Map(placed.map((node) => [node.id, 0]));
   edges.forEach((edge) => {
     visibleDegreeById.set(edge.source, (visibleDegreeById.get(edge.source) || 0) + 1);
     visibleDegreeById.set(edge.target, (visibleDegreeById.get(edge.target) || 0) + 1);
   });
-  const placedExternal = withOutside ? collaboratorNodes.map((node, i, list) => ({
-    ...node, x: width * 0.73, y: 44 + i * (mapHeight - 88) / Math.max(1, list.length - 1),
-  })) : [];
+  const placedExternal = layout.filter(node => !node.core);
   const externalById = new Map(placedExternal.map((node) => [node.id, node]));
   const highlightNetworkEdges = ({ personId = "", collaboratorId = "" }, active) => {
     svg.querySelectorAll(".edge, .external-edge, .faculty-edge").forEach((path) => {
@@ -6803,13 +6833,13 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     const b = externalById.get(edge.target);
     if (!a || !b) return;
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", externalEdgePath(a, b, width, height));
+    path.setAttribute("d", `M ${a.x} ${a.y} L ${b.x} ${b.y}`);
     const facultyEdge = edge.scope === "faculty";
     path.setAttribute("class", facultyEdge ? "faculty-edge" : "external-edge");
     path.dataset.edgeSource = edge.source;
     path.dataset.edgeTarget = edge.target;
-    path.setAttribute("stroke-width", String(collaboratorEdgeWidth(edge).toFixed(2)));
-    path.style.opacity = edge.target === state.networkCollaboratorId ? "0.96" : "0.28";
+    path.setAttribute("stroke-width", String(Math.min(2.2, .6 + Math.sqrt(edge.count) * .35)));
+    path.style.opacity = edge.target === state.networkCollaboratorId ? "0.9" : "0.3";
     path.setAttribute("aria-hidden", "true");
     const publicationLabel = `${edge.count} shared publication${edge.count === 1 ? "" : "s"}`;
     const title = facultyEdge
@@ -6822,11 +6852,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
   const appendCollaboratorNode = (node) => {
     const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
     const facultyNode = node.scope === "faculty";
-    const radius = facultyNode
-      ? Math.max(11, Math.min(21, 8.5 + Math.sqrt(node.count || 0) * 2.8))
-      : node.priority
-        ? Math.max(5.8, Math.min(10.5, 4.2 + Math.sqrt(node.count || 0) * 1.55))
-        : Math.max(3, Math.min(7, 2.6 + Math.sqrt(node.count || 0) * 1.2));
+    const radius = node.radius;
     const scopeLabel = facultyNode ? `FEB colleague (${node.department || "department unknown"})` : "coauthor beyond the staff roster";
     group.setAttribute("class", `network-collaborator-node${node.selected ? " selected" : ""}`);
     group.setAttribute("data-network-collaborator-id", node.id);
@@ -6867,7 +6893,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
 
     if (facultyNode || node.shortLabel) {
       const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      const labelPlacement = { x: node.x + radius + 9, y: node.y + 4, anchor: "start" };
+      const labelPlacement = { x: node.x, y: node.y + radius + 14, anchor: "middle" };
       label.setAttribute("x", labelPlacement.x);
       label.setAttribute("y", labelPlacement.y);
       label.setAttribute("text-anchor", labelPlacement.anchor);
@@ -6879,7 +6905,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
         nameLine.setAttribute("dy", "0");
         nameLine.textContent = shortFacultyName(node.label);
         label.appendChild(nameLine);
-        if (node.department) {
+        if (node.department && node.selected) {
           const departmentLine = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
           departmentLine.setAttribute("x", labelPlacement.x);
           departmentLine.setAttribute("dy", "1.08em");
@@ -6887,7 +6913,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
           label.appendChild(departmentLine);
         }
       } else {
-        label.textContent = `${node.shortLabel} · ${node.tieCount || node.count || 0}`;
+        label.textContent = node.shortLabel;
       }
       group.appendChild(label);
     }
@@ -6908,18 +6934,16 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     const a = byId.get(edge.source);
     const b = byId.get(edge.target);
     if (!a || !b) return;
-    const bend = Math.min(width * 0.19, 28 + Math.abs(a.y - b.y) * 0.23);
-    const geometry = withOutside ? { path: `M ${a.x} ${a.y} C ${a.x + bend} ${a.y}, ${b.x + bend} ${b.y}, ${b.x} ${b.y}` } : edgeGeometry(edge, a, b, placed);
+    const geometry = { path: `M ${a.x} ${a.y} L ${b.x} ${b.y}` };
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", geometry.path);
     path.setAttribute("class", `edge ${edge.count >= 5 ? "edge-strong" : edge.count >= 2 ? "edge-medium" : "edge-weak"}`);
     path.dataset.edgeSource = edge.source;
     path.dataset.edgeTarget = edge.target;
-    path.setAttribute("stroke-width", String((withOutside ? Math.min(4, 1 + Math.sqrt(edge.count)) : staffEdgeWidth(edge)).toFixed(2)));
+    path.setAttribute("stroke-width", String(Math.min(4, .6 + Math.sqrt(edge.count) * .65)));
     path.setAttribute("aria-hidden", "true");
     path.appendChild(svgTitle(`${a.label} + ${b.label}: ${edge.count} ${edge.metricLabel || "shared publications"}`));
     svg.appendChild(path);
-    if (!withOutside && labelledEdgeKeys.has(`${edge.source}|${edge.target}`)) edgeLabels.push({ edge, geometry });
   });
 
   edgeLabels.forEach(({ edge, geometry }) => {
@@ -6960,7 +6984,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     group.addEventListener("mouseleave", () => highlightNetworkEdges({ personId: node.id }, false));
     group.addEventListener("focus", () => highlightNetworkEdges({ personId: node.id }, true));
     group.addEventListener("blur", () => highlightNetworkEdges({ personId: node.id }, false));
-    const radius = withOutside ? Math.max(9, Math.min(15, 5 + Math.sqrt(node.count || 0))) : Math.max(10, Math.min(38, 8 + Math.sqrt(node.count || 0) * 3.8));
+    const radius = node.radius;
     const hitCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     hitCircle.setAttribute("cx", node.x);
     hitCircle.setAttribute("cy", node.y);
@@ -6995,7 +7019,7 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     countLabel.textContent = String(node.count || 0);
     group.appendChild(countLabel);
 
-    const labelPlacement = withOutside ? { x: node.x - radius - 10, y: node.y + 4, anchor: "end" } : internalNodeLabelPlacement(node, radius, width, height);
+    const labelPlacement = { x: node.x, y: node.y + radius + 16, anchor: "middle" };
     const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
     label.setAttribute("x", labelPlacement.x);
     label.setAttribute("y", labelPlacement.y);
@@ -7006,7 +7030,37 @@ function drawNetwork(nodes, edges, collaboratorNodes = [], collaboratorEdges = [
     group.appendChild(label);
     svg.appendChild(group);
   });
-  if (!withOutside) declutterCompactNetworkLabels(svg, width);
+  placeNetworkLabels(svg, width, height);
+}
+
+function placeNetworkLabels(svg, width, height) {
+  const nodes = Array.from(svg.querySelectorAll(".network-person-node, .network-collaborator-node"));
+  const occupied = nodes.map(group => {
+    const circle = group.querySelector("circle.node, circle.faculty-node, circle.external-node");
+    const x=Number(circle.getAttribute("cx")), y=Number(circle.getAttribute("cy")), r=Number(circle.getAttribute("r"))+5;
+    return {x:x-r,y:y-r,width:r*2,height:r*2};
+  });
+  const overlaps = (a,b) => a.x < b.x+b.width && a.x+a.width > b.x && a.y < b.y+b.height && a.y+a.height > b.y;
+  nodes.sort((a,b)=>Number(b.classList.contains("network-person-node"))-Number(a.classList.contains("network-person-node"))).forEach(group=>{
+    const label=group.querySelector("text.node-label, text.faculty-label, text.external-label");
+    const circle=group.querySelector("circle.node, circle.faculty-node, circle.external-node");
+    if(!label||!circle)return;
+    const x=Number(circle.getAttribute("cx")), y=Number(circle.getAttribute("cy")), r=Number(circle.getAttribute("r"));
+    const candidates=[[0,r+16,"middle"],[0,-r-10,"middle"],[r+9,4,"start"],[-r-9,4,"end"],[r+8,r+15,"start"],[-r-8,-r-8,"end"],[0,r+30,"middle"],[0,-r-24,"middle"]];
+    let best=null;
+    for(const [dx,dy,anchor] of candidates){
+      label.setAttribute("x",x+dx); label.setAttribute("y",y+dy); label.setAttribute("text-anchor",anchor);
+      label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",x+dx));
+      const box=label.getBBox();
+      const area={x:box.x-3,y:box.y-3,width:box.width+6,height:box.height+6};
+      const score=occupied.filter(other=>overlaps(area,other)).length + (area.x<5||area.x+area.width>width-5||area.y<5||area.y+area.height>height-5 ? 10 : 0);
+      if(!best||score<best.score)best={dx,dy,anchor,area,score};
+      if(score===0)break;
+    }
+    label.setAttribute("x",x+best.dx);label.setAttribute("y",y+best.dy);label.setAttribute("text-anchor",best.anchor);
+    label.querySelectorAll("tspan").forEach(span=>span.setAttribute("x",x+best.dx));
+    occupied.push(best.area);
+  });
 }
 
 function declutterCompactNetworkLabels(svg, width) {
@@ -7054,50 +7108,63 @@ function declutterCompactNetworkLabels(svg, width) {
   });
 }
 
-function layoutNetwork(nodes, edges, width, height) {
-  const cx = width / 2;
-  const cy = height / 2;
-  const compact = width < 560;
-  const margin = compact ? 46 : 76;
-  const innerRx = compact ? Math.max(70, width * 0.22) : Math.max(105, width * 0.16);
-  const innerRy = compact ? Math.max(88, height * 0.18) : Math.max(84, height * 0.145);
-  const outerRx = compact ? Math.max(124, width * 0.38) : Math.max(205, width * 0.34);
-  const outerRy = compact ? Math.max(158, height * 0.31) : Math.max(160, height * 0.29);
-  const centrality = networkLayoutCentrality(nodes);
-  const sorted = nodes.slice().map((node) => ({
-    ...node,
-    layoutCentrality: centrality.get(node.id) || 0,
-  })).sort((a, b) => {
-    if (a.focus !== b.focus) return a.focus ? -1 : 1;
-    if (b.layoutCentrality !== a.layoutCentrality) return b.layoutCentrality - a.layoutCentrality;
-    if (b.degree !== a.degree) return b.degree - a.degree;
-    if (b.strength !== a.strength) return b.strength - a.strength;
-    if (b.count !== a.count) return b.count - a.count;
-    return a.label.localeCompare(b.label);
+function layoutNetwork(nodes, edges, width, height, collaborators = [], collaboratorEdges = []) {
+  // Deterministic force layout with a degree-based radial constraint.
+  // HRM&OB centrality uses internal distinct coauthors, independent of outer-node caps.
+  const cx = width / 2, cy = height / 2;
+  const maxDegree = Math.max(1, ...nodes.map(n => n.degree || 0));
+  const core = nodes.slice().sort((a,b) => (b.degree || 0) - (a.degree || 0) || a.label.localeCompare(b.label));
+  const outerRadius = Math.min(width * .37, height * .40);
+  const all = core.map((n,i) => {
+    const centrality = (n.degree || 0) / maxDegree;
+    const angle = i * 2.399963;
+    const target = n.focus ? 0 : 30 + (1 - centrality) * outerRadius * .80;
+    return {...n, core: true, radius: 17 + Math.min(7, Math.sqrt(n.count || 0)), target,
+      x: cx + Math.cos(angle) * (target + 20), y: cy + Math.sin(angle) * (target + 20)};
   });
-  if (!sorted.length) return [];
-  const placed = [{ ...sorted[0], x: cx, y: cy }];
-  const inner = sorted.slice(1, Math.min(sorted.length, 7)).sort((a, b) => a.label.localeCompare(b.label));
-  const outer = sorted.slice(7).sort((a, b) => a.label.localeCompare(b.label));
-  inner.forEach((node, index) => {
-    const angle = -Math.PI / 2 + (Math.PI * 2 * index) / Math.max(1, inner.length);
-    placed.push({
-      ...node,
-      x: clamp(cx + Math.cos(angle) * innerRx, margin, width - margin),
-      y: clamp(cy + Math.sin(angle) * innerRy, margin, height - margin),
+  const byId = new Map(all.map(n => [n.id,n]));
+  collaborators.forEach((n,i) => {
+    const ties = collaboratorEdges.filter(e => e.target === n.id);
+    const parents = ties.map(e => ({node:byId.get(e.source), weight: e.count})).filter(p=>p.node);
+    const sum = parents.reduce((s,p)=>s+p.weight,0) || 1;
+    const ax = parents.reduce((s,p)=>s+(p.node.x-cx)*p.weight,0)/sum;
+    const ay = parents.reduce((s,p)=>s+(p.node.y-cy)*p.weight,0)/sum;
+    const angle = Math.atan2(ay,ax) + (i%3-1)*.27;
+    const target = outerRadius * (1.04 + (i%2)*.11);
+    const node = {...n, core:false, radius: n.scope === "faculty" ? 8 : 6, target,
+      x:cx+Math.cos(angle)*target, y:cy+Math.sin(angle)*target};
+    all.push(node); byId.set(node.id,node);
+  });
+  const links = [...edges,...collaboratorEdges].filter(e=>byId.has(e.source)&&byId.has(e.target));
+  for(let iteration=0; iteration<360; iteration++) {
+    const forces = new Map(all.map(n=>[n.id,{x:0,y:0}]));
+    for(let i=0;i<all.length;i++) for(let j=i+1;j<all.length;j++) {
+      const a=all[i], b=all[j], dx=a.x-b.x || .01, dy=a.y-b.y || .01;
+      const dist=Math.max(1,Math.hypot(dx,dy));
+      const clearance=(a.core&&b.core ? 115 : a.core||b.core ? 76 : 54);
+      const push=1300/(dist*dist) + Math.max(0,clearance-dist)*.12;
+      forces.get(a.id).x+=dx/dist*push; forces.get(a.id).y+=dy/dist*push;
+      forces.get(b.id).x-=dx/dist*push; forces.get(b.id).y-=dy/dist*push;
+    }
+    links.forEach(e=>{
+      const a=byId.get(e.source),b=byId.get(e.target),dx=b.x-a.x,dy=b.y-a.y;
+      const dist=Math.max(1,Math.hypot(dx,dy));
+      const ideal=a.core&&b.core ? 110 : 145;
+      const pull=(dist-ideal)*.012*Math.min(2,Math.sqrt(e.count||1));
+      forces.get(a.id).x+=dx/dist*pull; forces.get(a.id).y+=dy/dist*pull;
+      forces.get(b.id).x-=dx/dist*pull; forces.get(b.id).y-=dy/dist*pull;
     });
-  });
-  outer.forEach((node, index) => {
-    const angle = -Math.PI / 2 + Math.PI / Math.max(1, outer.length) + (Math.PI * 2 * index) / Math.max(1, outer.length);
-    placed.push({
-      ...node,
-      x: clamp(cx + Math.cos(angle) * outerRx, margin, width - margin),
-      y: clamp(cy + Math.sin(angle) * outerRy, margin, height - margin),
+    all.forEach(n=>{
+      const dx=n.x-cx,dy=n.y-cy,dist=Math.max(1,Math.hypot(dx,dy));
+      const radial=(n.target-dist)*(n.core ? .10 : .075);
+      const f=forces.get(n.id), cool=.7*(1-iteration/480);
+      n.x=clamp(n.x+(f.x+dx/dist*radial)*cool, 105, width-105);
+      n.y=clamp(n.y+(f.y+dy/dist*radial)*cool, 48, height-48);
+      if(n.focus) { n.x=cx; n.y=cy; }
     });
-  });
-  return placed;
+  }
+  return all;
 }
-
 function collaboratorEdgeWidth(edge) {
   const count = Math.max(1, Number(edge.count) || 1);
   return Math.min(9.5, 0.85 + Math.sqrt(count) * 1.55);
