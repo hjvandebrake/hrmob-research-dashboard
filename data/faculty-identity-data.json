@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-09-07",
+    "generatedOn": "2026-09-14",
     "people": 528,
-    "publicationsChecked": 4273,
+    "publicationsChecked": 4274,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 481,
     "additionalBenchmarkLinks": 39,
@@ -89405,6 +89405,41 @@
         {
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037/apl0001417",
+      "doi": "10.1037/apl0001417",
+      "publicationIds": [
+        "doi:10.1037/apl0001417"
+      ],
+      "people": [
+        "hrmob-nh-nguyen",
+        "hrmob-ta-de-vries",
+        "hrmob-gs-van-der-vegt",
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-nh-nguyen",
+          "author": "Ngoc Hân Nguyen",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas A. de Vries",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]

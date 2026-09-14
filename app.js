@@ -47,7 +47,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260907-affiliated5";
+const DATA_VERSION = "20260914-audit";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -1595,7 +1595,7 @@ function focusDashboardContent() {
 
 function syncFooterMeta(meta = {}) {
   if (!els.footerMeta) return;
-  const updated=[meta.generatedOn,meta.publicationDatesCheckedOn].filter(Boolean).sort().at(-1);
+  const updated=[meta.generatedOn,meta.publicationDatesCheckedOn,meta.targetedUpdateOn].filter(Boolean).sort().at(-1);
   els.footerMeta.textContent = updated
     ? `Data updated ${updated} · Provisional public-source data`
     : "Last updated date unavailable · Provisional public-source data";
@@ -6756,9 +6756,9 @@ function networkEdgeWidth(count) {
 function renderNetworkLegend() {
   if (!els.networkLegend) return;
   els.networkLegend.innerHTML = `
-    <span><i class="legend-node" aria-hidden="true"></i> HRM&OB: number = counted papers</span>
+    <span><i class="legend-node" aria-hidden="true"></i> HRM&OB: number = papers matching filters</span>
     <span><i class="legend-line" aria-hidden="true"></i> Thicker line = more shared papers</span>
-    ${state.networkExternal ? '<span><i class="legend-faculty" aria-hidden="true"></i> Other FEB colleagues</span><span><i class="legend-external" aria-hidden="true"></i> Non-FEB coauthors</span>' : ""}
+    ${state.networkExternal ? '<span><i class="legend-faculty" aria-hidden="true"></i> Other FEB colleagues</span><span><i class="legend-external" aria-hidden="true"></i> Other coauthors</span>' : ""}
     <span>More connected HRM&OB colleagues sit nearer the centre. Smaller nodes are coauthors beyond the roster.</span>`;
 }
 
@@ -6773,6 +6773,10 @@ function renderNetworkSummaryCards(cards) {
   </div>`;
 }
 
+function networkPublicationFilterLabel() {
+  return `${collaborationWindowLabel()} · ${state.networkAipHighOnly ? "AIP ≥ 95 only" : "All counted journals"}`;
+}
+
 function renderPublicationNetworkSummary(model) {
   const { people, edges, visibleEdges, selectedPerson, outsideView, nodes, collaborationPubs } = model;
   if (!selectedPerson) {
@@ -6783,7 +6787,7 @@ function renderPublicationNetworkSummary(model) {
     renderNetworkSummaryCards([
       { value: `${connectedMembers}/${people.length}`, label: "Members with an internal tie", detail: `${isolatedMembers} without a detected tie` },
       { value: edges.length, label: "Internal coauthor ties", detail: "At least one shared publication" },
-      { value: connectedPublicationCount, label: "Publications linking colleagues", detail: collaborationWindowLabel() },
+      { value: connectedPublicationCount, label: "Publications linking colleagues", detail: networkPublicationFilterLabel() },
       { value: outsideView.totalCount, label: "Coauthors beyond the roster", detail: state.networkExternal ? `${outsideView.renderedCount} shown; ${outsideView.qualifyingCount} meet the threshold` : "Hidden on map" },
     ]);
     return;
@@ -6797,7 +6801,7 @@ function renderPublicationNetworkSummary(model) {
     ? `${Math.round((internallyCoauthoredPubs / selectedNode.count) * 100)}% of counted publications`
     : "No counted publications";
   renderNetworkSummaryCards([
-    { value: selectedNode?.count || 0, label: "Counted publications", detail: collaborationWindowLabel() },
+    { value: selectedNode?.count || 0, label: "Recorded publications", detail: networkPublicationFilterLabel() },
     { value: visibleEdges.length, label: "Department coauthors", detail: "Active roster only" },
     { value: internallyCoauthoredPubs, label: "Publications with a colleague", detail: internalShare },
     { value: outsideView.totalCount, label: "Coauthors beyond the roster", detail: state.networkExternal ? `${outsideView.qualifyingCount} meet the ${state.networkMinTie}+ display threshold` : "Currently hidden on the map" },
@@ -6829,6 +6833,9 @@ function renderPublicationNetworkInspector(model) {
     <h3 class="network-inspector-title">${selectedPerson ? escapeHtml(selectedPerson.name) : "Who works with whom?"}</h3>
     <p>${state.networkExternal ? `The map shows ${outsideView.renderedCount} of ${outsideView.qualifyingCount} outside coauthors meeting the threshold. Search the table below to inspect every qualifying relationship.` : "Outside coauthors are hidden. Enable them above to see connections beyond the roster."}</p>
     ${top.length && state.networkExternal ? `<p><strong>Most shared papers with outside coauthors</strong></p><ul class="network-inspector-list">${top.map((node) => `<li><button class="section-link" type="button" data-network-collaborator-id="${escapeHtml(node.id)}">${escapeHtml(node.label)}</button> <span class="small-muted">${node.count} papers</span></li>`).join("")}</ul>` : ""}
+    <p class="small-muted">${escapeHtml(networkPublicationFilterLabel())}. ${outsideNetworkPublications(collaborationPubs).length} of ${collaborationPubs.length} recorded papers are eligible for outside ties; papers with 10 or more authors are excluded.</p>
+    <p>${selectedPerson ? `${outsideView.hiddenByThreshold} outside coauthors are below the minimum; ${outsideView.hiddenByLimit} more are hidden by the map limit. Set the minimum to 1 to include single-paper ties.` : "The overview can hide every outside tie of a member because its node limit is shared across the department. Select a member to see their own network."}</p>
+    <p class="small-muted">Public-source coverage is incomplete. Missing records or hidden ties do not establish an absence of collaboration.</p>
     <p>Select a department member to focus the map. Select an outside coauthor for their papers and links to colleagues.</p>
     ${selectedPerson ? `<button class="section-link" type="button" data-network-open-staff="${escapeHtml(selectedPerson.id)}">Open staff profile</button>` : ""}${caveat}`;
 }

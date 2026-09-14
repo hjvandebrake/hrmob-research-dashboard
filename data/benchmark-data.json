@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-09-07",
+    "generatedOn": "2026-09-14",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -18,7 +18,7 @@
       "associate_professor",
       "full_professor"
     ],
-    "identityReviewedOn": "2026-09-07",
+    "identityReviewedOn": "2026-09-14",
     "identityConflictPeople": [
       "acc-da-de-waard",
       "gem-x-ye"
@@ -98290,7 +98290,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-09-07",
+    "generatedOn": "2026-09-14",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 170,
     "qualityDecisionCounts": {
