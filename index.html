@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260914-audit">
+  <link rel="stylesheet" href="styles.css?v=20260916-expertise">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -22,6 +22,7 @@
       <div class="nav-sep"></div>
       <div class="nav-tabs" role="tablist" aria-label="Dashboard sections">
         <button id="tab-overview" class="nav-tab on" type="button" role="tab" aria-controls="view-overview" aria-selected="true" data-tab="overview">Overview</button>
+        <button id="tab-expertise" class="nav-tab" type="button" role="tab" aria-controls="view-expertise" aria-selected="false" tabindex="-1" data-tab="expertise">Search expertise</button>
         <button id="tab-staff" class="nav-tab" type="button" role="tab" aria-controls="view-staff" aria-selected="false" tabindex="-1" data-tab="staff">Staff</button>
         <button id="tab-phds" class="nav-tab" type="button" role="tab" aria-controls="view-phds" aria-selected="false" tabindex="-1" data-tab="phds">PhD students</button>
         <button id="tab-collaboration" class="nav-tab" type="button" role="tab" aria-controls="view-collaboration" aria-selected="false" tabindex="-1" data-tab="collaboration">Opportunities</button>
@@ -78,7 +79,7 @@
                 <h2 class="overview-h3">Research interests</h2>
               </div>
               <div class="overview-panel-actions">
-                <a class="section-link" href="#staff">Explore staff expertise</a>
+                <a class="section-link" href="#expertise">Search for expertise</a>
                 <button id="overview-expertise-collapse" class="section-link" type="button" hidden>Collapse</button>
               </div>
             </div>
@@ -152,11 +153,11 @@
           <div class="overview-panel-head">
             <div>
               <p class="eye">Staff input</p>
-              <h3 class="overview-h3">Current work, collaboration interests, and shared resources</h3>
+              <h3 class="overview-h3">Current work, methods help, and shared resources</h3>
             </div>
             <a class="section-link" href="#contact">Add or correct profile information</a>
           </div>
-          <p class="section-intro">Staff-submitted profile fields help surface current projects, collaboration interests, and resources that may otherwise stay informal.</p>
+          <p class="section-intro">Find datasets, participation opportunities, and methods help offered by colleagues. <a class="section-link" href="#expertise">Search expertise and resources</a></p>
           <div id="collaboration-staff-board" class="staff-input-board"></div>
         </section>
         <section class="collaboration-section">
@@ -411,6 +412,21 @@
       </div>
     </section>
 
+    <section id="view-expertise" class="sec" role="tabpanel" aria-labelledby="tab-expertise" hidden>
+      <div class="wrap">
+        <div class="sec-head compact"><div><p class="eye">Find a colleague</p><h2 class="h2">Search for expertise</h2></div><a class="section-link" href="#contact">Add your expertise or resources</a></div>
+        <p class="section-intro page-intro">Find someone to discuss a research topic, help with a method, or share a research opportunity.</p>
+        <div class="expertise-finder" role="search" aria-label="Search expertise and shared resources">
+          <label class="search-box"><span>Topic, method, resource, or name</span><input id="finder-query" type="search" placeholder="Try longitudinal analysis, social networks, or datasets"></label>
+          <label class="select-box"><span>Look for</span><select id="finder-kind"><option value="all">Everything</option><option value="topics">Research topics</option><option value="methods">Methods people can help with</option><option value="resources">Resources and participation</option></select></label>
+        </div>
+        <div class="finder-examples" aria-label="Example searches"><span>Try</span><button type="button" data-finder-query="longitudinal" data-finder-kind="methods">Longitudinal analysis</button><button type="button" data-finder-query="social network" data-finder-kind="methods">Social network analysis</button><button type="button" data-finder-query="" data-finder-kind="resources">Shared resources</button></div>
+        <p class="small-muted">Methods help and shared resources are provided by colleagues. Topic matches also use publication and project records. A missing entry means that no information has been added yet.</p>
+        <p id="finder-status" role="status" aria-live="polite"></p>
+        <div id="finder-results" class="finder-results"></div>
+      </div>
+    </section>
+
     <section id="view-staff" class="sec" role="tabpanel" aria-labelledby="tab-staff" hidden>
       <div class="wrap">
         <div class="sec-head compact">
@@ -422,7 +438,7 @@
         <div class="staff-search-panel" role="search" aria-label="Find staff expertise">
           <label class="search-box staff-expertise-search">
             <span>Find expertise</span>
-            <input id="staff-expertise-search" type="search" placeholder="Search stress, teamwork, virtual teams, status...">
+            <input id="staff-expertise-search" type="search" placeholder="Search topics, methods, resources, or names...">
           </label>
           <p id="staff-expertise-summary" class="staff-search-summary" role="status" aria-live="polite">Search publications, grants, PhD projects, and profile fields.</p>
         </div>
@@ -438,6 +454,8 @@
                 <div id="staff-current-work" class="staff-owned-panel"></div>
                 <div id="staff-collaboration-interests" class="staff-owned-panel"></div>
               </div>
+              <div id="staff-methods" class="staff-owned-panel"></div>
+              <div id="staff-shared-resources" class="staff-owned-panel"></div>
               <h3 class="sub-h2">Topic signals</h3>
               <div id="staff-topics" class="topic-cloud"></div>
               <h3 class="sub-h2">Possible research links</h3>
@@ -599,7 +617,7 @@
             <h2 class="h2">Corrections and suggestions</h2>
           </div>
         </div>
-        <p class="section-intro page-intro">Use this form to correct missing records, clarify profile information, or add current work, collaboration interests, and resources. Submissions are prepared as an email to Joost, so no GitHub account is needed.</p>
+        <p class="section-intro page-intro">Suggest a correction below, or use the profile form to share your research interests, methods help, datasets, and participation opportunities. Updates are emailed to Joost for review.</p>
         <div class="contact-grid">
           <div class="overview-panel contact-main-panel">
             <form id="feedback-form" class="feedback-form">
@@ -643,7 +661,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Staff input</p>
-                <h3 class="overview-h3">Profile fields</h3>
+                <h3 class="overview-h3">Your expertise and shared resources</h3>
               </div>
             </div>
             <form id="staff-update-form" class="feedback-form staff-update-form">
@@ -659,20 +677,25 @@
                   </select>
                 </label>
               </div>
+              <button id="staff-update-load" class="section-link" type="button">Load my current profile fields</button>
               <label class="feedback-comment">
                 <span>Currently working on</span>
                 <textarea id="staff-update-current" rows="4" placeholder="Projects, papers, datasets, grants, or themes currently in progress"></textarea>
               </label>
               <label class="feedback-comment">
-                <span>Interested in collaborating on</span>
+                <span>Research topics and collaboration interests</span>
                 <textarea id="staff-update-collaboration" rows="4" placeholder="Keywords, topics, questions, methods, or concrete collaboration ideas"></textarea>
               </label>
               <label class="feedback-comment">
-                <span>Resources to share</span>
-                <textarea id="staff-update-resources" rows="4" placeholder="Datasets, slides, workbooks, templates, methods, or links"></textarea>
+                <span>Methods I can help colleagues with</span>
+                <textarea id="staff-update-methods" rows="3" placeholder="For example: longitudinal analysis, multilevel modeling, qualitative interviews. Include the kind of help you can offer and any availability limits."></textarea>
               </label>
-              <p class="staff-resource-note">For datasets, slide decks, workbooks, or other files, email Joost directly at <a href="mailto:h.j.van.de.brake@rug.nl">h.j.van.de.brake@rug.nl</a>. Use the field above to describe the resource or paste a stable link.</p>
-              <p class="staff-resource-note">No GitHub account is needed. Your email app will open with these fields filled in; send that email to submit the update.</p>
+              <label class="feedback-comment">
+                <span>Resources and participation opportunities to share</span>
+                <textarea id="staff-update-resources" rows="4" placeholder="One item per paragraph: title, dataset or opportunity, a short description, access conditions, how to participate or contact you, and an optional link."></textarea>
+              </label>
+              <p class="staff-resource-note">Describe what you can share: datasets, study participation, recruitment opportunities, materials, code, or equipment. Include access conditions; share a description rather than confidential data.</p>
+              <p class="staff-resource-note">Send the prepared email to Joost to submit your update. After review, it will appear on your staff profile, in Search expertise, and under Opportunities. No GitHub account is needed.</p>
               <div class="feedback-actions">
                 <button class="primary-action" type="submit">Email profile update</button>
                 <button id="staff-update-copy" class="secondary-action" type="button">Copy email text</button>
@@ -712,6 +735,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260914-audit"></script>
+  <script src="app.js?v=20260916-expertise"></script>
 </body>
 </html>

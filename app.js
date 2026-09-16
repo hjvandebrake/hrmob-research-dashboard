@@ -18,7 +18,7 @@ const state = {
   networkScope: "department",
   networkAipHighOnly: false,
   networkExternal: true,
-  networkMinTie: 2,
+  networkMinTie: 1,
   networkSearch: "",
   networkPage: 1,
   publicationPage: 1,
@@ -32,6 +32,8 @@ const state = {
   publicationPersonFilter: "",
   publicationSortKey: "date",
   publicationSortDir: "desc",
+  finderQuery: "",
+  finderKind: "all",
   expertiseSearch: "",
   expertiseTopic: "",
   expertiseMode: "query",
@@ -47,7 +49,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260914-audit";
+const DATA_VERSION = "20260916-expertise";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -573,6 +575,13 @@ function cacheElements() {
   els.staffUpdatePerson = document.getElementById("staff-update-person");
   els.staffUpdateCurrent = document.getElementById("staff-update-current");
   els.staffUpdateCollaboration = document.getElementById("staff-update-collaboration");
+  els.staffUpdateMethods = document.getElementById("staff-update-methods");
+  els.staffMethods = document.getElementById("staff-methods");
+  els.staffSharedResources = document.getElementById("staff-shared-resources");
+  els.finderQuery = document.getElementById("finder-query");
+  els.finderKind = document.getElementById("finder-kind");
+  els.finderResults = document.getElementById("finder-results");
+  els.finderStatus = document.getElementById("finder-status");
   els.staffUpdateResources = document.getElementById("staff-update-resources");
   els.staffUpdateStatus = document.getElementById("staff-update-status");
   els.staffUpdateCopy = document.getElementById("staff-update-copy");
@@ -599,6 +608,20 @@ function cacheElements() {
 }
 
 function attachEvents() {
+  document.getElementById("staff-update-load")?.addEventListener("click", loadCurrentStaffUpdate);
+  els.finderQuery?.addEventListener("input", debounce(() => {
+    state.finderQuery = els.finderQuery.value.trim(); renderExpertiseFinder();
+  }, 180));
+  els.finderKind?.addEventListener("change", () => {
+    state.finderKind = els.finderKind.value; renderExpertiseFinder();
+  });
+  document.querySelectorAll("[data-finder-query]").forEach(button => button.addEventListener("click", () => {
+    state.finderQuery = button.dataset.finderQuery;
+    state.finderKind = button.dataset.finderKind;
+    renderExpertiseFinder();
+    els.finderQuery?.focus();
+  }));
+
   els.skipLink?.addEventListener("click", (event) => {
     event.preventDefault();
     focusDashboardContent();
@@ -678,7 +701,7 @@ function attachEvents() {
   if (els.networkMinTieSelect) {
     els.networkMinTieSelect.addEventListener("change", () => {
       const value = Number(els.networkMinTieSelect.value);
-      state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(value) ? value : 2;
+      state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(value) ? value : 1;
       state.networkCollaboratorId = "";
       updateRoute({ replace: true });
       renderNetwork();
@@ -1077,13 +1100,14 @@ function handleStaffUpdateSubmit(event) {
   const personId = (els.staffUpdatePerson?.value || "").trim();
   const currentWork = (els.staffUpdateCurrent?.value || "").trim();
   const collaboration = (els.staffUpdateCollaboration?.value || "").trim();
+  const methods = (els.staffUpdateMethods?.value || "").trim();
   const resources = (els.staffUpdateResources?.value || "").trim();
   if (!personId) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Select a staff member first.";
     els.staffUpdatePerson?.focus();
     return;
   }
-  if (!currentWork && !collaboration && !resources) {
+  if (!currentWork && !collaboration && !methods && !resources) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Add at least one profile update field.";
     els.staffUpdateCurrent?.focus();
     return;
@@ -1103,10 +1127,13 @@ function handleStaffUpdateSubmit(event) {
     "## Collaboration interests",
     collaboration || "Not provided",
     "",
-    "## Resources to share",
+    "## Methods I can help colleagues with",
+    methods || "Not provided",
+    "",
+    "## Resources and participation opportunities to share",
     resources || "Not provided",
     "",
-    "For datasets, slide decks, workbooks, or other files, email Joost directly at h.j.van.de.brake@rug.nl. File uploads are not accepted through the dashboard.",
+    "Publish resource descriptions and access conditions only. Do not attach confidential data. Please review these updates for the staff profile, expertise search, and Opportunities page.",
   ].join("\n");
   openEmailDraft(`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`[Staff profile update] ${personLabel}`)}&body=${encodeURIComponent(body)}`);
   if (els.staffUpdateStatus) {
@@ -1183,13 +1210,14 @@ async function copyStaffUpdateDraft() {
   const personId = (els.staffUpdatePerson?.value || "").trim();
   const currentWork = (els.staffUpdateCurrent?.value || "").trim();
   const collaboration = (els.staffUpdateCollaboration?.value || "").trim();
+  const methods = (els.staffUpdateMethods?.value || "").trim();
   const resources = (els.staffUpdateResources?.value || "").trim();
   if (!personId) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Select a staff member first.";
     els.staffUpdatePerson?.focus();
     return;
   }
-  if (!currentWork && !collaboration && !resources) {
+  if (!currentWork && !collaboration && !methods && !resources) {
     if (els.staffUpdateStatus) els.staffUpdateStatus.textContent = "Add at least one profile update field.";
     els.staffUpdateCurrent?.focus();
     return;
@@ -1210,7 +1238,10 @@ async function copyStaffUpdateDraft() {
     "## Collaboration interests",
     collaboration || "Not provided",
     "",
-    "## Resources to share",
+    "## Methods I can help colleagues with",
+    methods || "Not provided",
+    "",
+    "## Resources and participation opportunities to share",
     resources || "Not provided",
   ].join("\n");
   const copied = await copyTextWithFallback(`To: ${CONTACT_EMAIL}\nSubject: ${subject}\n\n${body}`);
@@ -1449,7 +1480,7 @@ function syncDataStatus() {
 }
 
 function validTab(tab) {
-  return ["overview", "staff", "phds", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
+  return ["overview", "expertise", "staff", "phds", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
 }
 
 function routeFromHash() {
@@ -1500,7 +1531,7 @@ function applyGlobalStateFromUrl() {
   state.networkAipHighOnly = params.get("aip") === "95";
   state.networkExternal = params.get("outside") !== "0";
   const requestedMinTie = Number(params.get("minTie"));
-  state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(requestedMinTie) ? requestedMinTie : 2;
+  state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(requestedMinTie) ? requestedMinTie : 1;
 }
 
 function routeUrl() {
@@ -1515,7 +1546,7 @@ function routeUrl() {
     else params.delete("aip");
     if (!state.networkExternal) params.set("outside", "0");
     else params.delete("outside");
-    if (Number(state.networkMinTie) !== 2) params.set("minTie", String(state.networkMinTie));
+    if (Number(state.networkMinTie) !== 1) params.set("minTie", String(state.networkMinTie));
     else params.delete("minTie");
   } else {
     ["network", "aip", "outside", "minTie"].forEach((key) => params.delete(key));
@@ -1608,6 +1639,7 @@ function renderAll() {
   renderOverview();
   renderMetrics();
   renderStaff();
+  renderExpertiseFinder();
   renderPhds();
   renderCollaboration();
   renderPublications();
@@ -1620,6 +1652,7 @@ function renderCurrentView() {
   syncViewContext();
   if (state.tab === "overview") renderOverview();
   else if (state.tab === "metrics") renderMetrics();
+  else if (state.tab === "expertise") renderExpertiseFinder();
   else if (state.tab === "staff") renderStaff();
   else if (state.tab === "phds") renderPhds();
   else if (state.tab === "collaboration") renderCollaboration();
@@ -1664,6 +1697,7 @@ function syncViewContext() {
   const metricsWindow = `${metricsStart}-${metricsEnd} completed years`;
   const contextByTab = {
     overview: `${roster} · Publications: ${publicationWindow}`,
+    expertise: `${roster} | Topic publication evidence: ${publicationWindow}; submitted methods and resources cover all years`,
     staff: `${roster} | Publication evidence: ${publicationWindow}`,
     phds: `${roster} | PhD records are not limited by the publication window`,
     collaboration: `${roster} | Publication-based signals: ${publicationWindow}`,
@@ -1678,7 +1712,7 @@ function syncViewContext() {
     context.textContent = contextByTab[tab] || `${roster} | ${publicationWindow}`;
   });
   if (els.publicationWindowToggle) {
-    const windowRelevant = new Set(["overview", "staff", "collaboration", "publications", "network", "metrics", "resources"]).has(state.tab);
+    const windowRelevant = new Set(["overview", "expertise", "staff", "collaboration", "publications", "network", "metrics", "resources"]).has(state.tab);
     els.publicationWindowToggle.hidden = !windowRelevant;
   }
   const rosterToggle = els.fteToggle?.closest("label");
@@ -2027,6 +2061,9 @@ function staffContributionDocs(personId) {
       text: contributionItemText(item),
     });
   });
+  ["methodsExpertise", "resources"].forEach(key => contributionItems(contribution, key).forEach((item, index) => {
+    docs.push({id: `staff-${key}-${personId}-${index}`, type: "staffContribution", category: key, year: 0, item, text: contributionItemText(item)});
+  }));
   return docs;
 }
 
@@ -2070,7 +2107,9 @@ function staffEvidenceDocs(personId) {
       (project.notes || []).join(" "),
     ].join(" "),
   }));
-  return [...pubs, ...grants, ...theses, ...currentProjects, ...staffContributionDocs(personId)];
+  const profile = staffProfileLookup().get(personId);
+  const profileDocs = profile ? [{id: `profile-${personId}`, type: "profile", year: 0, item: profile, text: [profile.expertise, ...(profile.fields || [])].filter(Boolean).join(" ")}] : [];
+  return [...pubs, ...grants, ...theses, ...currentProjects, ...profileDocs, ...staffContributionDocs(personId)];
 }
 
 function renderStaff() {
@@ -2107,7 +2146,7 @@ function staffRowsForSearch(bundle) {
 function renderStaffSearchSummary(rows, bundle) {
   if (!els.staffExpertiseSummary) return;
   if (!bundle.raw) {
-    els.staffExpertiseSummary.textContent = "Search publications, grants, PhD projects, and profile fields.";
+    els.staffExpertiseSummary.textContent = "Search topics, submitted methods help, shared resources, and research records.";
     return;
   }
   const matches = rows.filter((row) => row.score > 0);
@@ -2218,12 +2257,13 @@ function renderStaffInputBoard() {
   const groups = [
     ["workingOn", "Currently working on", "No submitted items yet. Add updates on the Contact page."],
     ["collaborationInterests", "Interested in collaborating on", "No submitted collaboration interests yet. Add updates on the Contact page."],
-    ["resources", "Resources to share", "No submitted resources yet. Add updates on the Contact page."],
+    ["methodsExpertise", "Methods we can help with", "Add methods you can help with on the Contact page."],
+    ["resources", "Resources and participation", "No submitted resources yet. Add updates on the Contact page."],
   ];
   els.collaborationStaffBoard.innerHTML = groups.map(([key, title, emptyText]) => {
     const items = profiles.flatMap((profile) => contributionItems(profile, key)
       .map((item) => ({ person: people.get(profile.personId), item, key })))
-      .filter((entry) => entry.person && entry.item);
+      .filter((entry) => entry.person && entry.item && (key !== "methodsExpertise" || entry.item.availableToHelp === true));
     return renderContributionGroup(title, items, emptyText);
   }).join("");
 }
@@ -2235,7 +2275,7 @@ function renderContributionGroup(title, items, emptyText) {
       <span>${items.length ? `${items.length} item${items.length === 1 ? "" : "s"}` : "Open"}</span>
     </div>
     <div class="staff-input-card-list">
-      ${items.length ? items.slice(0, 5).map(renderContributionCard).join("") : emptyStateHtml(emptyText, `<a class="section-link" href="#contact">Open Contact</a>`)}
+      ${items.length ? items.map(renderContributionCard).join("") : emptyStateHtml(emptyText, `<a class="section-link" href="#contact">Open Contact</a>`)}
     </div>
   </section>`;
 }
@@ -2243,14 +2283,15 @@ function renderContributionGroup(title, items, emptyText) {
 function renderContributionCard(entry) {
   const keywords = contributionKeywords(entry.item).slice(0, 4);
   const text = entry.item.description || entry.item.title || "";
+  const subpage = entry.key === "resources" ? "opportunities" : "research";
   return `<article class="staff-input-card">
     <div>
-      <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="research">${escapeHtml(entry.person.display)}</button>
+      <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="${subpage}">${escapeHtml(entry.person.display)}</button>
       <strong>${escapeHtml(entry.item.title || "Profile update")}</strong>
       ${text && text !== entry.item.title ? `<p>${escapeHtml(clipText(text, 150))}</p>` : ""}
     </div>
     ${keywords.length ? `<div class="chip-row">${keywords.map((keyword) => `<span class="chip">${escapeHtml(keyword)}</span>`).join("")}</div>` : ""}
-    <button class="section-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="research">Open profile</button>
+    <button class="section-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="${subpage}">Open profile</button>
   </article>`;
 }
 
@@ -3074,7 +3115,7 @@ function staffSearchStats(person, bundle) {
     grants: grants.length,
     phds: theses.length,
     currentPhds: currentPhds.length,
-    score: matchingDocs.reduce((sum, doc) => sum + doc.matchScore, 0),
+    score: matchingDocs.reduce((sum, doc) => sum + doc.matchScore, 0) + (bundle.raw && contributionMatchesQuery({title: `${person.name} ${person.display}`}, bundle.raw) ? 100 : 0),
     topicPubs: matchingPublicationDocs.length,
     topicPubPct: pubs.length ? matchingPublicationDocs.length / pubs.length : 0,
     topicGrants: matchingDocs.filter((doc) => doc.type === "grant").length,
@@ -3130,6 +3171,8 @@ function renderStaffProfile(row, bundle) {
   if (!row) {
     els.staffProfile.innerHTML = `<div class="staff-empty">No profile selected.</div>`;
     if (els.staffSubnav) els.staffSubnav.innerHTML = "";
+    if (els.staffMethods) els.staffMethods.innerHTML = "";
+    if (els.staffSharedResources) els.staffSharedResources.innerHTML = "";
     if (els.staffCurrentWork) els.staffCurrentWork.innerHTML = "";
     if (els.staffCollaborationInterests) els.staffCollaborationInterests.innerHTML = "";
     els.staffTopics.innerHTML = "";
@@ -3248,6 +3291,8 @@ function renderPublicStaffInfo(personId) {
 
 function renderStaffOwnedProfile(personId) {
   const contribution = staffContribution(personId);
+  if (els.staffMethods) els.staffMethods.innerHTML = renderStaffOwnedPanel({eye: "Colleague support", title: "Methods I can help with", visibleLimit: 6, itemNoun: "method", items: contributionItems(contribution, "methodsExpertise").filter(item => item.availableToHelp === true), empty: "No methods help added yet. Add your expertise on the Contact page."});
+  if (els.staffSharedResources) els.staffSharedResources.innerHTML = `<h3 class="overview-h3">Resources and participation opportunities</h3>${contributionItems(contribution, "resources").length ? contributionItems(contribution, "resources").map(renderStaffResource).join("") : '<p class="small-muted">No shared resources added yet.</p>'}<a class="section-link" href="#contact">Update your expertise and resources</a>`;
   if (els.staffCurrentWork) {
     els.staffCurrentWork.innerHTML = renderStaffOwnedPanel({
       eye: "Current work",
@@ -3266,10 +3311,10 @@ function renderStaffOwnedProfile(personId) {
   }
 }
 
-function renderStaffOwnedPanel({ eye, title, items, empty }) {
-  const visibleItems = items.slice(0, STAFF_OWNED_VISIBLE_ITEMS);
-  const extraItems = items.slice(STAFF_OWNED_VISIBLE_ITEMS);
-  const extraLabel = `${extraItems.length} more topic${extraItems.length === 1 ? "" : "s"}`;
+function renderStaffOwnedPanel({ eye, title, items, empty, visibleLimit = STAFF_OWNED_VISIBLE_ITEMS, itemNoun = "topic" }) {
+  const visibleItems = items.slice(0, visibleLimit);
+  const extraItems = items.slice(visibleLimit);
+  const extraLabel = `${extraItems.length} more ${itemNoun}${extraItems.length === 1 ? "" : "s"}`;
   return `
     <div class="overview-panel-head">
       <div>
@@ -3350,12 +3395,14 @@ function renderStaffDefendedPhds(personId) {
 }
 
 function renderStaffResource(resource) {
-  const href = resource.url || "";
+  const href = safeResourceUrl(resource.url);
   const meta = [resource.type, resource.format].filter(Boolean).join(" - ");
   const content = `
     ${meta ? `<span>${escapeHtml(meta)}</span>` : ""}
     <strong>${escapeHtml(resource.title || "Resource")}</strong>
     ${resource.description ? `<p>${escapeHtml(resource.description)}</p>` : ""}
+    ${resource.accessConditions ? `<p><strong>Access</strong> ${escapeHtml(resource.accessConditions)}</p>` : ""}
+    ${resource.contact ? `<p><strong>Contact</strong> ${escapeHtml(resource.contact)}</p>` : ""}
   `;
   if (!href) return `<article class="staff-resource-card">${content}</article>`;
   const attrs = /^https?:\/\//i.test(href)
@@ -3377,6 +3424,9 @@ function contributionItemText(item) {
   return [
     item?.title || "",
     item?.description || "",
+    item?.type || "",
+    item?.accessConditions || "",
+    item?.contact || "",
     contributionKeywords(item).join(" "),
   ].join(" ");
 }
@@ -3619,7 +3669,7 @@ function renderStaffRelated(personId, bundle, row) {
   }
   els.staffRelated.innerHTML = [
     relatedSection(bundle.raw ? `Journals matching "${bundle.raw}"` : "Journals", journalItems),
-    relatedSection(bundle.raw ? `Coauthors matching "${bundle.raw}"` : "Coauthors", coauthorItems),
+    relatedSection(bundle.raw ? `Coauthors matching "${bundle.raw}"` : "Frequent coauthors", coauthorItems) + `<a class="section-link" href="#network/${encodeURIComponent(personId)}">Explore all coauthors and shared papers</a>`,
     relatedSection(bundle.raw ? `Grants matching "${bundle.raw}"` : "Grants", grantItems),
   ].join("");
 }
@@ -6102,7 +6152,7 @@ function buildFacultyCollaboration(pubs, activeIds) {
   pubs.forEach((pub) => {
     const internalIds = [...new Set(pub.matchedPeople.filter((id) => activeIds.has(id)))].sort();
     if (!internalIds.length) return;
-    const facultyPeople = benchmarkOtherDepartmentPeopleForPublication(pub);
+    const facultyPeople = benchmarkOtherDepartmentPeopleForPublication(pub).filter(person => outsideAuthorsForPublication(pub).some(author => authorMatchesBenchmarkPerson(author, person)));
     if (!facultyPeople.length) return;
     internalIds.forEach((id) => {
       facultyPeople.forEach((person) => {
@@ -6247,7 +6297,7 @@ function externalAuthorsForPublication(pub, excludedBenchmarkPeople = []) {
   if (!candidates) {
     const roster = state.data?.people || [];
     const authors = new Map();
-    (pub.authors || []).forEach((rawAuthor) => {
+    outsideAuthorsForPublication(pub).forEach((rawAuthor) => {
       const author = canonicalExternalAuthor(rawAuthor);
       if (!author || authorIsRosterMember(author, roster)) return;
       const id = externalAuthorId(author);
@@ -6589,7 +6639,7 @@ function syncNetworkControls(people) {
       `<option value="person:${escapeHtml(p.id)}">${escapeHtml(p.name || p.display)}</option>`).join("");
     els.networkScopeSelect.value = selectedNetworkOptionValue(state.networkPersonId);
   }
-  state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(Number(state.networkMinTie)) ? Number(state.networkMinTie) : 2;
+  state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(Number(state.networkMinTie)) ? Number(state.networkMinTie) : 1;
   if (els.networkMinTieSelect) {
     els.networkMinTieSelect.value = String(state.networkMinTie);
     els.networkMinTieSelect.closest(".network-min-tie-control").hidden = !state.networkExternal;
@@ -6600,7 +6650,7 @@ function syncNetworkControls(people) {
   if (els.networkSelectionStatus) els.networkSelectionStatus.textContent = selected ? `Network focus: ${selected.name}` : "Department network overview shown.";
   if (els.networkClearSelection) els.networkClearSelection.hidden = !selected;
   if (els.networkSelectionNote) els.networkSelectionNote.textContent = selected ? selected.name : "Select any person to inspect their publications.";
-  if (els.networkScopeHelp) els.networkScopeHelp.textContent = "Additional coauthors are outside the staff roster. Papers with 10 or more authors are excluded from their ties; departmental ties and publication counts retain those papers. The minimum uses unique shared papers. Up to 18 outside coauthors are shown; the evidence table includes all qualifying ties.";
+  if (els.networkScopeHelp) els.networkScopeHelp.textContent = "Additional coauthors are outside the staff roster. For papers with more than 10 authors, outside ties use the first 10 listed authors. Departmental ties and publication counts retain all authors. The minimum uses unique shared papers. Up to 18 outside coauthors are shown; the evidence table includes all qualifying ties.";
   if (els.networkEmpty) els.networkEmpty.textContent = "No coauthorship ties match these filters.";
   renderNetworkLegend();
 }
@@ -6746,7 +6796,7 @@ function renderPublicationNetwork(people) {
 
 
 function outsideNetworkPublications(pubs) {
-  return pubs.filter(pub=>Math.max(Number(pub.authorCount)||0,(pub.authors||[]).length)<10);
+  return pubs;
 }
 
 function networkEdgeWidth(count) {
@@ -6832,9 +6882,9 @@ function renderPublicationNetworkInspector(model) {
   els.networkInspector.innerHTML = `<p class="eye">${selectedPerson ? "Selected member" : "Reading the map"}</p>
     <h3 class="network-inspector-title">${selectedPerson ? escapeHtml(selectedPerson.name) : "Who works with whom?"}</h3>
     <p>${state.networkExternal ? `The map shows ${outsideView.renderedCount} of ${outsideView.qualifyingCount} outside coauthors meeting the threshold. Search the table below to inspect every qualifying relationship.` : "Outside coauthors are hidden. Enable them above to see connections beyond the roster."}</p>
-    ${top.length && state.networkExternal ? `<p><strong>Most shared papers with outside coauthors</strong></p><ul class="network-inspector-list">${top.map((node) => `<li><button class="section-link" type="button" data-network-collaborator-id="${escapeHtml(node.id)}">${escapeHtml(node.label)}</button> <span class="small-muted">${node.count} papers</span></li>`).join("")}</ul>` : ""}
-    <p class="small-muted">${escapeHtml(networkPublicationFilterLabel())}. ${outsideNetworkPublications(collaborationPubs).length} of ${collaborationPubs.length} recorded papers are eligible for outside ties; papers with 10 or more authors are excluded.</p>
-    <p>${selectedPerson ? `${outsideView.hiddenByThreshold} outside coauthors are below the minimum; ${outsideView.hiddenByLimit} more are hidden by the map limit. Set the minimum to 1 to include single-paper ties.` : "The overview can hide every outside tie of a member because its node limit is shared across the department. Select a member to see their own network."}</p>
+    ${top.length && state.networkExternal ? `<p><strong>Most shared papers with outside coauthors</strong></p><ul class="network-inspector-list">${top.map((node) => `<li><button class="section-link" type="button" data-network-collaborator-id="${escapeHtml(node.id)}">${escapeHtml(node.label)}</button> <span class="small-muted">${node.count} ${node.count === 1 ? "paper" : "papers"}</span></li>`).join("")}</ul>` : ""}
+    <p class="small-muted">${escapeHtml(networkPublicationFilterLabel())}. ${outsideNetworkPublications(collaborationPubs).length} of ${collaborationPubs.length} recorded papers are eligible for outside ties; outside ties use the first 10 listed authors per paper; full author lists remain in Publications.</p>
+    <p>${selectedPerson ? `${outsideView.hiddenByThreshold} outside coauthors are below the minimum; ${outsideView.hiddenByLimit} more are hidden by the map limit.${state.networkMinTie > 1 ? " Set the minimum to 1 to include single-paper ties." : " Single-paper ties are included."}` : "The overview can hide every outside tie of a member because its node limit is shared across the department. Select a member to see their own network."}</p>
     <p class="small-muted">Public-source coverage is incomplete. Missing records or hidden ties do not establish an absence of collaboration.</p>
     <p>Select a department member to focus the map. Select an outside coauthor for their papers and links to colleagues.</p>
     ${selectedPerson ? `<button class="section-link" type="button" data-network-open-staff="${escapeHtml(selectedPerson.id)}">Open staff profile</button>` : ""}${caveat}`;
@@ -7669,4 +7719,75 @@ function debounce(fn, wait) {
     window.clearTimeout(timer);
     timer = window.setTimeout(() => fn(...args), wait);
   };
+}
+
+// Colleague-supplied expertise and resources remain independent of publication windows.
+function expertiseSearchText(value) {
+  return normalizeSearchText(value).replace(/modelling/g, "modeling")
+    .replace(/crossclassified/g, "cross classified").replace(/\bmodels\b/g, "modeling");
+}
+
+function contributionMatchesQuery(item, query) {
+  const terms = expertiseSearchText(query).split(" ").filter(Boolean);
+  const text = expertiseSearchText(contributionItemText(item));
+  return terms.every(term => text.includes(term));
+}
+
+function expertiseDirectoryRows(query = "", kind = "all") {
+  const bundle = expertiseBundle(query, "query");
+  return activePeople().map(person => {
+    const contribution = staffContribution(person.id);
+    const nameMatches = query && contributionMatchesQuery({title: `${person.display} ${person.name}`}, query);
+    const matches = item => !query || nameMatches || contributionMatchesQuery(item, query);
+    const methods = contributionItems(contribution, "methodsExpertise").filter(item => item.availableToHelp === true && matches(item));
+    const resources = contributionItems(contribution, "resources").filter(matches);
+    const interests = contributionItems(contribution, "collaborationInterests").filter(matches);
+    // Publications indicate a topic connection, never an offer of methods support.
+    const evidence = query && (kind === "all" || kind === "topics")
+      ? staffSearchStats(person, bundle).matchingDocs.filter(doc => !["methodsExpertise", "resources"].includes(doc.category)) : [];
+    const topics = interests.length > 0 || evidence.length > 0;
+    const include = kind === "methods" ? methods.length : kind === "resources" ? resources.length : kind === "topics" ? topics : methods.length || resources.length || topics || nameMatches;
+    return {person, methods, resources, interests, evidence, include};
+  }).filter(row => row.include).sort((a,b) => b.methods.length-a.methods.length || a.person.display.localeCompare(b.person.display));
+}
+
+function renderExpertiseFinder() {
+  if (!state.data || !els.finderResults) return;
+  const query = state.finderQuery || "";
+  const kind = state.finderKind || "all";
+  if (els.finderQuery) els.finderQuery.value = query;
+  if (els.finderKind) els.finderKind.value = kind;
+  const rows = expertiseDirectoryRows(query, kind);
+  els.finderStatus.textContent = `${rows.length} colleague${rows.length === 1 ? "" : "s"}${query ? ` matching “${query}”` : " with shared information"}`;
+  const chips = items => `<div class="chip-row">${items.map(item => `<span class="chip">${escapeHtml(item.title)}</span>`).join("")}</div>`;
+  els.finderResults.innerHTML = rows.length ? rows.map(row => `<article class="finder-card">
+    <div class="finder-card-heading"><h3>${escapeHtml(row.person.name || row.person.display)}</h3><a class="section-link" href="#staff/${encodeURIComponent(row.person.id)}/research">View profile and contact</a></div>
+    ${(kind === "all" || kind === "methods") && row.methods.length ? `<section><h4>Methods I can help with</h4>${row.methods.map(item => `<div class="finder-method"><strong>${escapeHtml(item.title)}</strong>${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}</div>`).join("")}</section>` : ""}
+    ${(kind === "all" || kind === "topics") && row.interests.length ? `<section><h4>Research interests</h4>${chips(row.interests)}</section>` : ""}
+    ${(kind === "all" || kind === "topics") && row.evidence.length ? `<section><h4>Related research</h4><p>${row.evidence.length} matching research record${row.evidence.length === 1 ? "" : "s"}.</p><ul class="finder-evidence">${row.evidence.slice(0,2).map(doc => `<li>${escapeHtml(doc.item.title || doc.item.expertise || "Public profile")}${doc.year ? ` (${doc.year})` : ""}</li>`).join("")}</ul></section>` : ""}
+    ${(kind === "all" || kind === "resources") && row.resources.length ? `<section><h4>Resources and participation</h4>${row.resources.map(renderStaffResource).join("")}<p class="small-muted">Contact the colleague to discuss access or participation.</p></section>` : ""}
+  </article>`).join("") : `<div class="empty-state"><h3>No matches yet</h3><p>Try a broader term or a different category. You can also add expertise or a resource you would like to share.</p><a class="section-link" href="#contact">Add expertise or resources</a></div>`;
+}
+
+function safeResourceUrl(value) {
+  const url = String(value || "").trim();
+  if (/^https?:\/\/[^\s]+$/i.test(url) || /^assets\/[a-z0-9_./% -]+$/i.test(url)) return url;
+  return "";
+}
+
+function outsideAuthorsForPublication(pub) {
+  return (pub.authors || []).slice(0, 10);
+}
+
+
+function loadCurrentStaffUpdate() {
+  const id = els.staffUpdatePerson?.value;
+  if (!id) { els.staffUpdateStatus.textContent = "Select a staff member first."; els.staffUpdatePerson?.focus(); return; }
+  const profile = staffContribution(id);
+  const format = key => contributionItems(profile, key).map(item => [item.title, item.description, item.accessConditions && `Access: ${item.accessConditions}`, item.contact && `Contact: ${item.contact}`, item.url].filter(Boolean).join("\n")).join("\n\n");
+  els.staffUpdateCurrent.value = format("workingOn");
+  els.staffUpdateCollaboration.value = format("collaborationInterests");
+  els.staffUpdateMethods.value = format("methodsExpertise");
+  els.staffUpdateResources.value = format("resources");
+  els.staffUpdateStatus.textContent = "Current fields loaded. Edit these and email your update to Joost. To remove an item, say so explicitly in your update.";
 }

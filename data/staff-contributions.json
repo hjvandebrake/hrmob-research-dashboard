@@ -1,14 +1,14 @@
 {
   "meta": {
-    "schemaVersion": 1,
-    "generatedOn": "2026-08-11",
+    "schemaVersion": 2,
+    "generatedOn": "2026-09-16",
     "source": "Staff-submitted profile contribution layer.",
     "people": 2
   },
   "people": [
     {
       "personId": "JVB",
-      "updatedOn": "2026-06-22",
+      "updatedOn": "2026-09-16",
       "workingOn": [
         {
           "title": "Multiple team membership projects",
@@ -90,6 +90,50 @@
           "description": "Full grant overview, deadlines, notes, and sign-up sheet.",
           "url": "assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx",
           "download": true
+        }
+      ],
+      "methodsExpertise": [
+        {
+          "title": "Longitudinal data analysis",
+          "description": "",
+          "keywords": [
+            "longitudinal analysis",
+            "longitudinal data",
+            "repeated measures",
+            "panel data"
+          ],
+          "availableToHelp": true
+        },
+        {
+          "title": "Social network analysis",
+          "description": "",
+          "keywords": [
+            "social networks",
+            "network analysis",
+            "SNA"
+          ],
+          "availableToHelp": true
+        },
+        {
+          "title": "Multilevel modeling",
+          "description": "",
+          "keywords": [
+            "multilevel modelling",
+            "multilevel analysis",
+            "mixed effects",
+            "hierarchical linear modeling"
+          ],
+          "availableToHelp": true
+        },
+        {
+          "title": "Cross-classified modeling",
+          "description": "Particular expertise in cross-classified modeling.",
+          "keywords": [
+            "crossclassified modeling",
+            "cross-classified modelling",
+            "cross classified models"
+          ],
+          "availableToHelp": true
         }
       ]
     },

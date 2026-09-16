@@ -3457,3 +3457,32 @@ footer {
   .nav-in > .switch { order: 2; margin-left: auto; }
   .network-control-grid { grid-template-columns: 1fr; }
 }
+
+/* Expertise and sharing, September 2026. */
+.expertise-finder { display: grid; grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr); gap: 20px; padding: 24px; background: var(--paper, #f5f3ee); border: 1px solid var(--line, #dedbd4); border-radius: 10px; }
+.expertise-finder label { min-width: 0; }
+.expertise-finder input, .expertise-finder select { width: 100%; min-height: 46px; box-sizing: border-box; }
+.finder-examples { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0; }
+.finder-examples button { border: 1px solid #d7d3cc; background: #fff; border-radius: 18px; padding: 6px 13px; color: #4b3434; cursor: pointer; font: inherit; font-size: 13px; }
+.finder-examples button:hover { background: #f4ebe8; }
+.finder-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 20px 0 36px; }
+.finder-card { border: 1px solid #ddd8d0; border-radius: 10px; padding: 24px; background: #fff; overflow-wrap: anywhere; }
+.finder-card-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.finder-card h3 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; margin: 0; }
+.finder-card section { margin-top: 22px; }
+.finder-card h4 { margin: 0 0 10px; font-size: 13px; color: #7b352c; }
+.finder-card p { margin: 5px 0 12px; font-size: 14px; line-height: 1.5; }
+.finder-method { margin-bottom: 12px; }
+.finder-method strong { font-size: 15px; }
+.finder-card .staff-resource-card { margin: 8px 0; }
+#staff-methods, #staff-shared-resources { margin: 20px 0; }
+.staff-input-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media(max-width: 700px) {
+  .expertise-finder, .finder-results, .staff-input-board { grid-template-columns: 1fr; }
+  .expertise-finder, .finder-card { padding: 18px; }
+}
+
+.finder-evidence { padding-left: 18px; font-size: 13px; line-height: 1.5; color: #54504b; }
+.finder-evidence li { margin-bottom: 6px; }
+
+.staff-update-form textarea { font: inherit; line-height: 1.5; }
