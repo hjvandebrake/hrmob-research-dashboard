@@ -49,7 +49,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260916-expertise";
+const DATA_VERSION = "20260916-expertise2";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -2255,10 +2255,10 @@ function renderStaffInputBoard() {
   const profiles = (state.staffContributionData?.people || [])
     .filter((profile) => profile?.personId && activeIds.has(profile.personId) && people.has(profile.personId));
   const groups = [
-    ["workingOn", "Currently working on", "No submitted items yet. Add updates on the Contact page."],
-    ["collaborationInterests", "Interested in collaborating on", "No submitted collaboration interests yet. Add updates on the Contact page."],
     ["methodsExpertise", "Methods we can help with", "Add methods you can help with on the Contact page."],
     ["resources", "Resources and participation", "No submitted resources yet. Add updates on the Contact page."],
+    ["workingOn", "Currently working on", "No submitted items yet. Add updates on the Contact page."],
+    ["collaborationInterests", "Interested in collaborating on", "No submitted collaboration interests yet. Add updates on the Contact page."],
   ];
   els.collaborationStaffBoard.innerHTML = groups.map(([key, title, emptyText]) => {
     const items = profiles.flatMap((profile) => contributionItems(profile, key)
@@ -2275,7 +2275,7 @@ function renderContributionGroup(title, items, emptyText) {
       <span>${items.length ? `${items.length} item${items.length === 1 ? "" : "s"}` : "Open"}</span>
     </div>
     <div class="staff-input-card-list">
-      ${items.length ? items.map(renderContributionCard).join("") : emptyStateHtml(emptyText, `<a class="section-link" href="#contact">Open Contact</a>`)}
+      ${items.length ? items.slice(0,4).map(renderContributionCard).join("") + (items.length > 4 ? `<details class="staff-owned-extra"><summary>Show ${items.length - 4} more items</summary>${items.slice(4).map(renderContributionCard).join("")}</details>` : "") : emptyStateHtml(emptyText, `<a class="section-link" href="#contact">Open Contact</a>`)}
     </div>
   </section>`;
 }
@@ -2286,7 +2286,7 @@ function renderContributionCard(entry) {
   const subpage = entry.key === "resources" ? "opportunities" : "research";
   return `<article class="staff-input-card">
     <div>
-      <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="${subpage}">${escapeHtml(entry.person.display)}</button>
+      <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="${subpage}">${escapeHtml(entry.person.name || entry.person.display)}</button>
       <strong>${escapeHtml(entry.item.title || "Profile update")}</strong>
       ${text && text !== entry.item.title ? `<p>${escapeHtml(clipText(text, 150))}</p>` : ""}
     </div>
