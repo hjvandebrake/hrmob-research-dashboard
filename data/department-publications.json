@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-09-14",
+    "generatedOn": "2026-09-18",
     "rostersCheckedOn": "2026-09-07",
     "people": 499,
     "pagesChecked": 515,
-    "pagesFailed": 157,
+    "pagesFailed": 155,
     "mergedWorkVersions": 2,
     "fromYear": 2005,
     "method": "Unique journal publications linked to current departmental rosters, including PhD students and all staff ranks. One count per paper per department. Joint papers count once in each participating department. Historical affiliations are not reconstructed.",
@@ -35,7 +35,7 @@
     ],
     "denominator": "Selected current academic roster headcount, including PhD students and lecturers; office staff excluded. HRM&OB affiliated researchers are optional and change both counts and headcount. Historical headcounts and FTE are unavailable.",
     "comparisonAudit": {
-      "generatedOn": "2026-09-14",
+      "generatedOn": "2026-09-18",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -45,8 +45,8 @@
       ],
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
-        "title": 624,
-        "issn": 2588,
+        "title": 625,
+        "issn": 2590,
         "unmatched": 590,
         "title-alias": 3,
         "excluded-doi-mismatch": 2
@@ -86,8 +86,8 @@
           "department": "Operations",
           "currentHeadcount": 91,
           "withAnyLinkedRecord": 58,
-          "unavailableProfiles": 32,
-          "profilesWithAtMost10ParsedArticles": 59,
+          "unavailableProfiles": 31,
+          "profilesWithAtMost10ParsedArticles": 60,
           "roleUnspecified": 21,
           "verifiedCompletePublicationLists": 0,
           "historicalHeadcountsAvailable": false
@@ -115,9 +115,9 @@
         {
           "department": "EEF",
           "currentHeadcount": 135,
-          "withAnyLinkedRecord": 109,
-          "unavailableProfiles": 26,
-          "profilesWithAtMost10ParsedArticles": 109,
+          "withAnyLinkedRecord": 110,
+          "unavailableProfiles": 25,
+          "profilesWithAtMost10ParsedArticles": 110,
           "roleUnspecified": 135,
           "verifiedCompletePublicationLists": 0,
           "historicalHeadcountsAvailable": false
@@ -256,15 +256,15 @@
         }
       ],
       "yearBasisCounts": {
-        "official-reference": 933,
+        "official-reference": 934,
         "publisher-issue": 2474,
-        "publisher-first-publication": 294,
+        "publisher-first-publication": 296,
         "stored-unverified": 105,
         "publisher-override": 1
       },
       "doiTitleChecks": {
-        "no-doi": 808,
-        "title-agreement": 2751,
+        "no-doi": 809,
+        "title-agreement": 2753,
         "unavailable": 246,
         "excluded-mismatch": 2
       },
@@ -305,8 +305,8 @@
               "department": "Operations",
               "currentHeadcount": 91,
               "withAnyLinkedRecord": 58,
-              "unavailableProfiles": 32,
-              "profilesWithAtMost10ParsedArticles": 59,
+              "unavailableProfiles": 31,
+              "profilesWithAtMost10ParsedArticles": 60,
               "roleUnspecified": 21,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -334,9 +334,9 @@
             {
               "department": "EEF",
               "currentHeadcount": 135,
-              "withAnyLinkedRecord": 109,
-              "unavailableProfiles": 26,
-              "profilesWithAtMost10ParsedArticles": 109,
+              "withAnyLinkedRecord": 110,
+              "unavailableProfiles": 25,
+              "profilesWithAtMost10ParsedArticles": 110,
               "roleUnspecified": 135,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -379,8 +379,8 @@
               "department": "Operations",
               "currentHeadcount": 91,
               "withAnyLinkedRecord": 58,
-              "unavailableProfiles": 32,
-              "profilesWithAtMost10ParsedArticles": 59,
+              "unavailableProfiles": 31,
+              "profilesWithAtMost10ParsedArticles": 60,
               "roleUnspecified": 21,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -408,9 +408,9 @@
             {
               "department": "EEF",
               "currentHeadcount": 135,
-              "withAnyLinkedRecord": 109,
-              "unavailableProfiles": 26,
-              "profilesWithAtMost10ParsedArticles": 109,
+              "withAnyLinkedRecord": 110,
+              "unavailableProfiles": 25,
+              "profilesWithAtMost10ParsedArticles": 110,
               "roleUnspecified": 135,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -9441,8 +9441,8 @@
       "affiliated": false,
       "appointmentSection": "phd",
       "role": "PhD Student",
-      "publicationPageStatus": 404,
-      "publicationPageArticles": null
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0
     },
     {
       "id": "ops-mj-zeelenberg",
@@ -15083,8 +15083,8 @@
       "affiliated": false,
       "appointmentSection": "phd",
       "role": "",
-      "publicationPageStatus": 404,
-      "publicationPageArticles": null
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1
     },
     {
       "id": "eef-fm-giesenow",
@@ -136186,6 +136186,94 @@
       "aipJournal": "JOURNAL OF APPLIED PSYCHOLOGY",
       "aipMatchMethod": "issn",
       "officialProfilePeople": []
+    },
+    {
+      "id": "doi:10.1037/apl0001399",
+      "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+      "year": 2026,
+      "doi": "10.1037/apl0001399",
+      "url": "https://doi.org/10.1037/apl0001399",
+      "journal": "Journal of Applied Psychology",
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "aip": 98.367,
+      "authors": [
+        "Jiaxin Xue",
+        "Jinghao Zhang",
+        "Yuhui Li",
+        "Gerben S. van der Vegt",
+        "Niannian Dong",
+        "Chenghao Men"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-first-publication",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1037/apl0001399",
+      "aipJournal": "JOURNAL OF APPLIED PSYCHOLOGY",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "id": "doi:10.1177/10596011261486495",
+      "title": "Juggling Hats and Ladders: A Social Identity and Social Status Framework for Multiple Team Membership",
+      "year": 2026,
+      "doi": "10.1177/10596011261486495",
+      "url": "https://doi.org/10.1177/10596011261486495",
+      "journal": "Group & Organization Management",
+      "people": [
+        "hrmob-hj-van-de-brake"
+      ],
+      "aip": 89.763,
+      "authors": [
+        "Hendrik J. van de Brake"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-first-publication",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1177/10596011261486495",
+      "aipJournal": "GROUP & ORGANIZATION MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "id": "work:c328c53b31f8c409d01b",
+      "title": "Protected or exposed: the impact of rainfall shocks on children's nutritional vulnerability and the role of women's empowerment",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2",
+      "journal": "World Development Perspectives",
+      "people": [
+        "eef-a-geis"
+      ],
+      "aip": 62.793,
+      "authors": [
+        "Geis, A."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/a.g.geis/research?lang=en",
+      "aipJournal": "World Development Perspectives",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-a-geis"
+      ]
     }
   ]
 }

@@ -647,8 +647,8 @@
     "identityReviewedOn": "2026-09-07",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers. No new publication scrape.",
     "publicationDatesCheckedOn": "2026-09-07",
-    "targetedUpdateOn": "2026-09-14",
-    "targetedUpdateNote": "Added publisher-verified JAP paper 10.1037/apl0001417. This is a targeted update, not a complete new publication scrape."
+    "targetedUpdateOn": "2026-09-18",
+    "targetedUpdateNote": "Added publisher-verified papers 10.1037/apl0001417, 10.1177/10596011261486495, 10.1037/apl0001399. These are targeted updates, not a complete new publication scrape."
   },
   "people": [
     {
@@ -49636,6 +49636,108 @@
       "display": true,
       "publicationDate": "2026-09-03",
       "publicationDateSource": "https://api.crossref.org/works/10.1037/apl0001417",
+      "publicationDateType": "published-online"
+    },
+    {
+      "id": "doi:10.1177/10596011261486495",
+      "doi": "10.1177/10596011261486495",
+      "title": "Juggling Hats and Ladders: A Social Identity and Social Status Framework for Multiple Team Membership",
+      "year": 2026,
+      "yearSource": "curated-reference",
+      "journal": "Group & Organization Management",
+      "issns": [
+        "1059-6011",
+        "1552-3993"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://doi.org/10.1177/10596011261486495",
+      "authors": [
+        "Hendrik J. van de Brake"
+      ],
+      "matchedPeople": [
+        "JVB"
+      ],
+      "sourcePeople": [
+        "JVB"
+      ],
+      "aip": 89.763,
+      "aipJournal": "GROUP & ORGANIZATION MANAGEMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Curated public web seed",
+      "evidence": [
+        "Publisher-deposited Crossref metadata verified 2026-09-18: https://api.crossref.org/works/10.1177/10596011261486495; published online 2026-09-11. Single-author paper by Hendrik J. van de Brake (ORCID 0000-0001-5690-404X, University of Groningen), linked to JVB."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "teams and groups",
+        "multiple team membership",
+        "status and prestige",
+        "identity and belonging"
+      ],
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "counted": true,
+      "display": true,
+      "publicationDate": "2026-09-11",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177/10596011261486495",
+      "publicationDateType": "published-online"
+    },
+    {
+      "id": "doi:10.1037/apl0001399",
+      "doi": "10.1037/apl0001399",
+      "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+      "year": 2026,
+      "yearSource": "curated-reference",
+      "journal": "Journal of Applied Psychology",
+      "issns": [
+        "1939-1854",
+        "0021-9010"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://doi.org/10.1037/apl0001399",
+      "authors": [
+        "Jiaxin Xue",
+        "Jinghao Zhang",
+        "Yuhui Li",
+        "Gerben S. van der Vegt",
+        "Niannian Dong",
+        "Chenghao Men"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 98.367,
+      "aipJournal": "JOURNAL OF APPLIED PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Curated public web seed",
+      "evidence": [
+        "Publisher-deposited Crossref metadata verified 2026-09-18: https://api.crossref.org/works/10.1037/apl0001399; published online 2026-09-17. Gerben S. van der Vegt is the fourth of six authors; given name and middle initial match the curated GVV identity and OpenAlex links the work to his author profile. The five other authors are outside the curated core roster."
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "teams and groups",
+        "leadership",
+        "diversity and inclusion"
+      ],
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "counted": true,
+      "display": true,
+      "publicationDate": "2026-09-17",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037/apl0001399",
       "publicationDateType": "published-online"
     }
   ]

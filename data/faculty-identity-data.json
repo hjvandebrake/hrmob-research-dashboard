@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-09-14",
+    "generatedOn": "2026-09-18",
     "people": 528,
-    "publicationsChecked": 4274,
+    "publicationsChecked": 4276,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 481,
     "additionalBenchmarkLinks": 39,
@@ -89440,6 +89440,40 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1177/10596011261486495",
+      "doi": "10.1177/10596011261486495",
+      "publicationIds": [
+        "doi:10.1177/10596011261486495"
+      ],
+      "people": [
+        "hrmob-hj-van-de-brake"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-hj-van-de-brake",
+          "author": "Hendrik J. van de Brake",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037/apl0001399",
+      "doi": "10.1037/apl0001399",
+      "publicationIds": [
+        "doi:10.1037/apl0001399"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
