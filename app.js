@@ -49,13 +49,13 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260918-pubs";
+const DATA_VERSION = "20260920-feedback";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
 const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "all"]);
-const STAFF_SUBPAGES = new Set(["research", "publications", "phds", "opportunities"]);
+const STAFF_SUBPAGES = new Set(["research", "publications", "phds"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
 const COLLABORATION_THEME_LIMIT = 6;
@@ -2230,7 +2230,7 @@ function renderExpertiseStaffResults(bundle) {
 function renderCollaboration() {
   if (!els.collaborationSummary) return;
   const interestOpportunities = collaborationInterestOpportunities();
-  const grantOpportunities = collaborativeGrantOpportunities().slice(0, 8);
+  const grantOpportunities = departmentGrantOpportunities();
   const pairOpportunities = collaborationPairOpportunities().slice(0, 8);
   const submittedPeople = new Set(staffInterestItems().map((entry) => entry.person.id));
   els.collaborationSummary.innerHTML = `
@@ -2238,7 +2238,7 @@ function renderCollaboration() {
       ${metric("Submitted interests", staffInterestItems().length, `${submittedPeople.size} staff member${submittedPeople.size === 1 ? "" : "s"}`)}
       ${metric("Conversation clusters", interestOpportunities.length, "Submitted interests plus expertise themes")}
       ${metric("Publication window", collaborationWindowLabel(), "Controlled by the global publication-window buttons")}
-      ${metric("Collaborative grant calls", grantOpportunities.length, "From the grant resources workbook")}
+      ${metric("Grant opportunities", grantOpportunities.length, "From the grant resources workbook")}
     </div>
     <p class="collaboration-note">Suggestions combine staff-submitted interests, public profile signals, counted publications from ${escapeHtml(collaborationWindowLabel())}, and the grant resources workbook. Treat them as starting points for conversations, not as final eligibility advice.</p>
   `;
@@ -2283,7 +2283,7 @@ function renderContributionGroup(title, items, emptyText) {
 function renderContributionCard(entry) {
   const keywords = contributionKeywords(entry.item).slice(0, 4);
   const text = entry.item.description || entry.item.title || "";
-  const subpage = entry.key === "resources" ? "opportunities" : "research";
+  const subpage = "research";
   return `<article class="staff-input-card">
     <div>
       <button class="person-link" type="button" data-collaboration-staff="${escapeHtml(entry.person.id)}" data-staff-subpage="${subpage}">${escapeHtml(entry.person.name || entry.person.display)}</button>
@@ -2741,7 +2741,6 @@ function renderCollaborationGrantOpportunities(calls) {
     return;
   }
   els.collaborationGrantOpportunities.innerHTML = calls.map((call) => {
-    const candidates = collaborativeGrantCandidates(call).slice(0, 5);
     const sourceUrl = call.sourceUrl || call.link || "";
     const title = sourceUrl
       ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>`
@@ -2752,15 +2751,13 @@ function renderCollaborationGrantOpportunities(calls) {
           <p class="eye">${escapeHtml(call.stage || "Grant")}</p>
           <h4>${title}</h4>
         </div>
-        <a class="section-link" href="#resources">Resources</a>
+        <a class="section-link" href="#grants">Grants</a>
       </div>
       ${renderGrantBadges(call)}
       <p class="recent-call-meta">${escapeHtml([call.funder, call.amount, call.deadline || call.timing].filter(Boolean).join(" - "))}</p>
       <p>${escapeHtml(clipText(call.tips || call.why || call.eligibility || "Collaborative grant opportunity from the resource workbook.", 260))}</p>
+      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(call.eligibility)}</p>` : ""}
       <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
-      <div class="collaboration-person-list">
-        ${candidates.length ? candidates.map(renderCollaborationPerson).join("") : `<span class="small-muted">Use this as a department-level scan item.</span>`}
-      </div>
     </article>`;
   }).join("");
 }
@@ -2842,6 +2839,14 @@ function grantNextStep(call) {
   if (/workbook|tips|note/.test(text)) return "Use workbook";
   if (/team|collaborat|network/.test(text)) return "Draft idea";
   return "Check fit";
+}
+
+function departmentGrantOpportunities() {
+  const byName = new Map();
+  [...(state.resourceData?.recentCalls || []), ...(state.resourceData?.opportunities || [])]
+    .filter(call => grantDeadlineState(call) !== "passed")
+    .forEach(call => { if (!byName.has(call.name)) byName.set(call.name, call); });
+  return [...byName.values()].sort((a, b) => String(a.name).localeCompare(String(b.name)));
 }
 
 function collaborativeGrantOpportunities() {
@@ -3152,7 +3157,7 @@ function renderStaffList(rows, bundle) {
     const hasMatch = row.score > 0;
     const meta = bundle.raw
       ? (hasMatch ? staffEvidenceSummary(row) : "No visible match")
-      : `${row.publications} pubs`;
+      : "";
     const matchClass = hasSearch ? (hasMatch ? " expertise-match" : " expertise-no-match") : "";
     return `<button class="staff-row${selected ? " on" : ""}${matchClass}" type="button" data-staff-id="${escapeHtml(row.person.id)}" aria-controls="staff-profile" aria-pressed="${selected ? "true" : "false"}">
       <span class="staff-row-main">
@@ -3162,7 +3167,7 @@ function renderStaffList(rows, bundle) {
           <em>${escapeHtml(row.person.name)}</em>
         </span>
       </span>
-      <span class="staff-row-meta">${escapeHtml(meta)}</span>
+      ${meta ? `<span class="staff-row-meta">${escapeHtml(meta)}</span>` : ""}
     </button>`;
   }).join("");
 }
@@ -3216,12 +3221,10 @@ function renderStaffProfile(row, bundle) {
   renderStaffOwnedProfile(person.id);
   renderStaffTopics(person.id);
   renderStaffSuggestions(person.id);
-  renderStaffGrantFit(person.id);
   renderStaffCurrentPhdProjects(person.id);
   renderStaffDefendedPhds(person.id);
   renderStaffRelated(person.id, bundle, row);
   renderStaffPublications(person.id, bundle, row);
-  renderStaffOwnedResources(person.id, row);
   renderStaffSubpageVisibility();
 }
 
@@ -3231,7 +3234,6 @@ function renderStaffSubnav() {
     ["research", "Research"],
     ["publications", "Publications & grants"],
     ["phds", "PhD supervision"],
-    ["opportunities", "Opportunities"],
   ];
   state.staffSubpage = normalizeStaffSubpage(state.staffSubpage);
   els.staffSubnav.innerHTML = pages.map(([key, label]) => `
@@ -3339,26 +3341,6 @@ function renderStaffOwnedItem(item) {
     ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
     ${keywords.length ? `<div class="staff-keyword-list">${keywords.map((keyword) => `<span>${escapeHtml(keyword)}</span>`).join("")}</div>` : ""}
   </article>`;
-}
-
-function renderStaffOwnedResources(personId, row) {
-  if (!els.staffOwnedResources) return;
-  const resources = contributionItems(staffContribution(personId), "resources");
-  els.staffOwnedResources.innerHTML = `
-    <h3 class="sub-h2">Shared resources</h3>
-    ${resources.length ? `<div class="staff-resource-list">${resources.map(renderStaffResource).join("")}</div>` : `<p class="small-muted staff-resource-empty">No profile update submitted yet.</p>`}
-    ${row ? `
-      <h3 class="sub-h2">Dashboard counts</h3>
-      <div class="staff-metrics staff-metrics-bottom">
-        ${staffMetric("Publications", row.publications)}
-        ${staffMetric("AIP >= 90", row.high90Aip)}
-        ${staffMetric("AIP >= 95", row.highAip)}
-        ${staffMetric("Grants", row.grants)}
-        ${staffMetric("Current PhDs", row.currentPhds || 0)}
-        ${staffMetric("Defended PhDs", row.phds)}
-      </div>
-    ` : ""}
-  `;
 }
 
 function renderStaffCurrentPhdProjects(personId) {
@@ -3771,7 +3753,7 @@ function renderStaffPublications(personId, bundle, row) {
     els.staffPublicationEye.textContent = "Publications";
     els.staffPublicationTitle.textContent = "Publications";
   }
-  pubs.sort((a, b) => b.year - a.year || (b.aip || -1) - (a.aip || -1));
+  pubs.sort((a, b) => publicationDateValue(b) - publicationDateValue(a) || String(a.title).localeCompare(String(b.title)));
   if (!pubs.length) {
     setEmptyTable(els.staffPublicationTable, bundle.raw ? "No publications match this query for this staff member." : "No publications for this staff member.");
     return;
@@ -3780,9 +3762,8 @@ function renderStaffPublications(personId, bundle, row) {
     pub.year,
     publicationCell(pub),
     escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
-    aipBadge(pub.aip, pub),
   ]);
-  setTable(els.staffPublicationTable, ["Year", "Publication", "Journal", "AIP"], rows, [true, false, false, true]);
+  setTable(els.staffPublicationTable, ["Year", "Publication", "Journal"], rows, [true, false, false]);
 }
 
 function topicSignals(personId) {
@@ -4228,7 +4209,6 @@ function renderRecentGrantCalls() {
     return;
   }
   els.resourceRecentCalls.innerHTML = calls.map((call) => {
-    const candidates = grantCallCandidates(call, 4);
     const title = call.sourceUrl
       ? `<a href="${escapeHtml(call.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>`
       : escapeHtml(call.name);
@@ -4237,8 +4217,8 @@ function renderRecentGrantCalls() {
       ${renderGrantBadges(call)}
       <p class="recent-call-meta">${escapeHtml([call.funder, call.timing, call.sourceCheckedDate ? `checked ${formatIsoDisplayDate(call.sourceCheckedDate)}` : ""].filter(Boolean).join(" - "))}</p>
       <p>${escapeHtml(clipText(call.why || call.fitNote || "", 180))}</p>
+      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(call.eligibility)}</p>` : ""}
       <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
-      ${candidates.length ? `<div class="recent-call-fit"><span>Possible profile links</span>${candidates.map((item) => `<button class="person-link" type="button" data-collaboration-staff="${escapeHtml(item.person.id)}" data-staff-subpage="opportunities">${escapeHtml(item.person.display)}</button>`).join("")}</div>` : ""}
     </article>`;
   }).join("");
 }
@@ -7675,8 +7655,7 @@ function aipBadge(value, source = {}) {
     if (source.aipComparable === false || source.aipStatus === "reviewed-not-in-aip-source") return `<span class="tag">Not in source</span>`;
     return `<span class="tag">NA</span>`;
   }
-  const cls = value >= 95 ? "red" : value >= 90 ? "teal" : "";
-  return `<span class="tag ${cls}">${value.toFixed(1)}</span>`;
+  return `<span class="tag">${value.toFixed(1)}</span>`;
 }
 
 function countBy(items, keyFn) {
