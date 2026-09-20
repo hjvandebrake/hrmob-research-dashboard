@@ -49,7 +49,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260920-feedback";
+const DATA_VERSION = "20260920-staff";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -3676,7 +3676,7 @@ function topStaffJournals(pubs) {
     .map((row) => ({
       type: `${row.count} ${row.count === 1 ? "pub" : "pubs"}`,
       year: "",
-      title: `${journalDisplayName(row)}${isNumber(row.aip) ? ` (AIP ${row.aip.toFixed(1)})` : ""}`,
+      title: journalDisplayName(row),
     }));
 }
 
@@ -3753,7 +3753,7 @@ function renderStaffPublications(personId, bundle, row) {
     els.staffPublicationEye.textContent = "Publications";
     els.staffPublicationTitle.textContent = "Publications";
   }
-  pubs.sort((a, b) => publicationDateValue(b) - publicationDateValue(a) || String(a.title).localeCompare(String(b.title)));
+  pubs.sort((a, b) => b.year - a.year || (b.aip ?? -1) - (a.aip ?? -1));
   if (!pubs.length) {
     setEmptyTable(els.staffPublicationTable, bundle.raw ? "No publications match this query for this staff member." : "No publications for this staff member.");
     return;
