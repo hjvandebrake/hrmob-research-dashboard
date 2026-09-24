@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedOn": "2026-09-18",
+    "generatedOn": "2026-09-24",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
     "eligiblePublications": 791,
     "cacheHits": 782,
-    "fetched": 0,
-    "coveredPublications": 781,
-    "missingCacheRecords": 9,
-    "offline": true,
-    "partnerCount": 792
+    "fetched": 9,
+    "coveredPublications": 790,
+    "missingCacheRecords": 0,
+    "offline": false,
+    "partnerCount": 797
   },
   "partners": [
     {
@@ -16,7 +16,7 @@
       "institution": "University of Amsterdam",
       "country": "NL",
       "type": "education",
-      "publicationCount": 146,
+      "publicationCount": 147,
       "staffIds": [
         "BN",
         "CDD",
@@ -44,6 +44,7 @@
         "Cameron Brick",
         "Christina Anastasopoulou",
         "Christopher McCusker",
+        "Chuk Yan Wong",
         "Claire E. Stevenson",
         "D. Berno Dussel",
         "Daan van Knippenberg",
@@ -58,8 +59,7 @@
         "Eveline A. Crone",
         "F.A.A.M. van Winden",
         "Femke S. Ten Velden",
-        "Fieke Harinck",
-        "Frans van Winden"
+        "Fieke Harinck"
       ],
       "publications": [
         {
@@ -98,6 +98,17 @@
             "Astrid C. Homan",
             "Marc W. Heerdink",
             "Gerben A. van Kleef"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70037",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Chuk Yan Wong"
           ]
         },
         {
@@ -4332,7 +4343,7 @@
       "institution": "Utrecht University",
       "country": "NL",
       "type": "education",
-      "publicationCount": 36,
+      "publicationCount": 37,
       "staffIds": [
         "BN",
         "CDD",
@@ -4392,6 +4403,17 @@
             "Lars Tummers",
             "Marcel van Assen",
             "Ruben van den Goorbergh"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lianne Aarntzen"
           ]
         },
         {
@@ -5601,7 +5623,7 @@
       "institution": "Australian National University",
       "country": "AU",
       "type": "education",
-      "publicationCount": 25,
+      "publicationCount": 26,
       "staffIds": [
         "JL",
         "MR"
@@ -5623,6 +5645,7 @@
         "Kate A. B. Western",
         "Katherine J. Reynolds",
         "Kristine E. Veenstra",
+        "Ligia Oliveria‐Silva",
         "Lígia Carolina Oliveira-Silva",
         "Michael J. Platow",
         "Olivia Evans",
@@ -5737,6 +5760,17 @@
           "authors": [
             "Brooke Franklin-Paddock",
             "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70037",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
           ]
         },
         {
@@ -7136,7 +7170,7 @@
       "institution": "University of Virginia",
       "country": "US",
       "type": "education",
-      "publicationCount": 14,
+      "publicationCount": 15,
       "staffIds": [
         "BN",
         "FR",
@@ -7147,6 +7181,7 @@
       "authors": [
         "Barbara A. Spellman",
         "Brian A. Nosek",
+        "Christopher T. Begeny",
         "Daniel P. Martin",
         "Daniela Fernández",
         "Daniela P. Fernández",
@@ -7155,7 +7190,8 @@
         "Luca Cian",
         "Nicholas R. Buttrick",
         "Phatthanakit Chobthamkit",
-        "Ryan Wright"
+        "Ryan Wright",
+        "Summer Bedford"
       ],
       "publications": [
         {
@@ -7203,6 +7239,19 @@
           ],
           "authors": [
             "Daniela Fernández"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70037",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Daniela Fernández",
+            "Summer Bedford",
+            "Christopher T. Begeny"
           ]
         },
         {
@@ -7493,6 +7542,364 @@
           ],
           "authors": [
             "Christine Syrek"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:justus liebig universit t gie en",
+      "institution": "Justus-Liebig-Universität Gießen",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 13,
+      "staffIds": [
+        "BN",
+        "FR",
+        "GVV",
+        "JJ",
+        "JO",
+        "JS",
+        "JVB",
+        "LM",
+        "TDV"
+      ],
+      "authors": [
+        "Elmar Schlüter",
+        "Frank H. Walter",
+        "Frank Walter"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s12144-025-08973-8",
+          "year": 2026,
+          "title": "Inspired by fish: How direct group interaction strengthens informal hierarchy transitivity in teams",
+          "staffIds": [
+            "FR",
+            "GVV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231206107",
+          "year": 2025,
+          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1177/13684302221135075",
+          "year": 2023,
+          "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
+          "staffIds": [
+            "FR",
+            "GVV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1287/orsc.2021.1436",
+          "year": 2021,
+          "title": "Managing Boundaries in Multiteam Structures: From Parochialism to Integrated Pluralism",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2020.01.005",
+          "year": 2020,
+          "title": "Antecedents of leaders' power sharing: The roles of power instability and distrust",
+          "staffIds": [
+            "JJ",
+            "JS"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1111/joms.12539",
+          "year": 2020,
+          "title": "Benefits and Disadvantages of Individuals’ Multiple Team Membership: The Moderating Role of Organizational Tenure",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JVB"
+          ],
+          "authors": [
+            "Frank H. Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1111/joop.12326",
+          "year": 2020,
+          "title": "Multiple team membership and job performance: The role of employees’ information‐sharing networks",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JVB"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1111/apps.12155",
+          "year": 2019,
+          "title": "Informal Hierarchy and Team Creativity: The Moderating Role of Empowering Leadership",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JO"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.2330",
+          "year": 2019,
+          "title": "On the origins of informal hierarchy: The interactive role of formal leadership and task complexity",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JO"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1177/2515245917747646",
+          "year": 2018,
+          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
+          "staffIds": [
+            "BN",
+            "FR",
+            "LM"
+          ],
+          "authors": [
+            "Elmar Schlüter"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.2260",
+          "year": 2018,
+          "title": "The dynamic relationship between multiple team membership and individual job performance in knowledge‐intensive work",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JVB"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1111/apps.12104",
+          "year": 2017,
+          "title": "The Hazard of Teetering at the Top and Being Tied to the Bottom: The Interactive Relationship of Power, Stability, and Social Dominance Orientation with Work Stress",
+          "staffIds": [
+            "JJ",
+            "JS"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:purdue university west lafayette",
+      "institution": "Purdue University West Lafayette",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 13,
+      "staffIds": [
+        "FR",
+        "JDB",
+        "LM",
+        "MR"
+      ],
+      "authors": [
+        "Deborah E. Rupp",
+        "Hoda Vaziri",
+        "Louis Tay",
+        "Miika Kujanpää",
+        "Teri A. Kirby",
+        "Thekla Morgenroth"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s43076-026-00522-x",
+          "year": 2026,
+          "title": "Do Boys and Girls Differ in their Perception of Ambition? Exploring the Conceptualisation of Adolescent Ambition",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Teri A. Kirby"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Louis Tay"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jasp.13075",
+          "year": 2025,
+          "title": "Overcoming or Removing Gendered Barriers? Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
+          "staffIds": [
+            "FR",
+            "MR"
+          ],
+          "authors": [
+            "Teri A. Kirby"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-024-01473-2",
+          "year": 2024,
+          "title": "Sex Wars and TERF Wars: The Divisiveness of Who is Included in Feminism",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth",
+            "Teri A. Kirby"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.3136",
+          "year": 2024,
+          "title": "The Moralization of Women's Bodies",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth"
+          ]
+        },
+        {
+          "id": "doi:10.1146/annurev-psych-032620-030938",
+          "year": 2024,
+          "title": "Why We Should Stop Trying to Fix Women: How Context Shapes and Constrains Women's Career Trajectories",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0044118x231204405",
+          "year": 2023,
+          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Teri A. Kirby"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.shaw.2021.12.936",
+          "year": 2022,
+          "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
+          "staffIds": [
+            "FR",
+            "JDB"
+          ],
+          "authors": [
+            "Louis Tay"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.791572",
+          "year": 2022,
+          "title": "Intersectional Invisibility in Women’s Diversity Interventions",
+          "staffIds": [
+            "FR",
+            "MR"
+          ],
+          "authors": [
+            "Teri A. Kirby"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.959296",
+          "year": 2022,
+          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Louis Tay"
+          ]
+        },
+        {
+          "id": "doi:10.1037/apl0000495",
+          "year": 2020,
+          "title": "An identity-based integrative needs model of crafting: Crafting within and across life domains.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Hoda Vaziri",
+            "Louis Tay",
+            "Miika Kujanpää"
+          ]
+        },
+        {
+          "id": "doi:10.1080/08870446.2014.969730",
+          "year": 2014,
+          "title": "Making snacking less sinful: (Counter-)moralising obesity in the public discourse differentially affects food choices of individuals with high and low perceived body mass",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Deborah E. Rupp"
           ]
         }
       ]
@@ -8383,339 +8790,6 @@
           ],
           "authors": [
             "Olga Epitropaki"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:justus liebig universit t gie en",
-      "institution": "Justus-Liebig-Universität Gießen",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 12,
-      "staffIds": [
-        "BN",
-        "FR",
-        "GVV",
-        "JJ",
-        "JO",
-        "JS",
-        "JVB",
-        "LM",
-        "TDV"
-      ],
-      "authors": [
-        "Elmar Schlüter",
-        "Frank Walter"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1007/s12144-025-08973-8",
-          "year": 2026,
-          "title": "Inspired by fish: How direct group interaction strengthens informal hierarchy transitivity in teams",
-          "staffIds": [
-            "FR",
-            "GVV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01492063231206107",
-          "year": 2025,
-          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1177/13684302221135075",
-          "year": 2023,
-          "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
-          "staffIds": [
-            "FR",
-            "GVV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1287/orsc.2021.1436",
-          "year": 2021,
-          "title": "Managing Boundaries in Multiteam Structures: From Parochialism to Integrated Pluralism",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2020.01.005",
-          "year": 2020,
-          "title": "Antecedents of leaders' power sharing: The roles of power instability and distrust",
-          "staffIds": [
-            "JJ",
-            "JS"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1111/joop.12326",
-          "year": 2020,
-          "title": "Multiple team membership and job performance: The role of employees’ information‐sharing networks",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "JVB"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1111/apps.12155",
-          "year": 2019,
-          "title": "Informal Hierarchy and Team Creativity: The Moderating Role of Empowering Leadership",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "JO"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1002/job.2330",
-          "year": 2019,
-          "title": "On the origins of informal hierarchy: The interactive role of formal leadership and task complexity",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "JO"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1177/2515245917747646",
-          "year": 2018,
-          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
-          "staffIds": [
-            "BN",
-            "FR",
-            "LM"
-          ],
-          "authors": [
-            "Elmar Schlüter"
-          ]
-        },
-        {
-          "id": "doi:10.1002/job.2260",
-          "year": 2018,
-          "title": "The dynamic relationship between multiple team membership and individual job performance in knowledge‐intensive work",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "JVB"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1111/apps.12104",
-          "year": 2017,
-          "title": "The Hazard of Teetering at the Top and Being Tied to the Bottom: The Interactive Relationship of Power, Stability, and Social Dominance Orientation with Work Stress",
-          "staffIds": [
-            "JJ",
-            "JS"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:purdue university west lafayette",
-      "institution": "Purdue University West Lafayette",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 12,
-      "staffIds": [
-        "FR",
-        "JDB",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Deborah E. Rupp",
-        "Hoda Vaziri",
-        "Louis Tay",
-        "Miika Kujanpää",
-        "Teri A. Kirby",
-        "Thekla Morgenroth"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1007/s43076-026-00522-x",
-          "year": 2026,
-          "title": "Do Boys and Girls Differ in their Perception of Ambition? Exploring the Conceptualisation of Adolescent Ambition",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Teri A. Kirby"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Louis Tay"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jasp.13075",
-          "year": 2025,
-          "title": "Overcoming or Removing Gendered Barriers? Support for Individualistic Diversity, Equity, and Inclusion Interventions Among Those in Power",
-          "staffIds": [
-            "FR",
-            "MR"
-          ],
-          "authors": [
-            "Teri A. Kirby"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-024-01473-2",
-          "year": 2024,
-          "title": "Sex Wars and TERF Wars: The Divisiveness of Who is Included in Feminism",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth",
-            "Teri A. Kirby"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.3136",
-          "year": 2024,
-          "title": "The Moralization of Women's Bodies",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
-          ]
-        },
-        {
-          "id": "doi:10.1146/annurev-psych-032620-030938",
-          "year": 2024,
-          "title": "Why We Should Stop Trying to Fix Women: How Context Shapes and Constrains Women's Career Trajectories",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth"
-          ]
-        },
-        {
-          "id": "doi:10.1177/0044118x231204405",
-          "year": 2023,
-          "title": "Understanding the Impact of Context on Ambition: Gender Role Conformity Negatively Influences Adolescent Boys’ Ambition Scores in an Educational Context",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Teri A. Kirby"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.shaw.2021.12.936",
-          "year": 2022,
-          "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Louis Tay"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.791572",
-          "year": 2022,
-          "title": "Intersectional Invisibility in Women’s Diversity Interventions",
-          "staffIds": [
-            "FR",
-            "MR"
-          ],
-          "authors": [
-            "Teri A. Kirby"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.959296",
-          "year": 2022,
-          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Louis Tay"
-          ]
-        },
-        {
-          "id": "doi:10.1037/apl0000495",
-          "year": 2020,
-          "title": "An identity-based integrative needs model of crafting: Crafting within and across life domains.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Hoda Vaziri",
-            "Louis Tay",
-            "Miika Kujanpää"
-          ]
-        },
-        {
-          "id": "doi:10.1080/08870446.2014.969730",
-          "year": 2014,
-          "title": "Making snacking less sinful: (Counter-)moralising obesity in the public discourse differentially affects food choices of individuals with high and low perceived body mass",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Deborah E. Rupp"
           ]
         }
       ]
@@ -11502,6 +11576,139 @@
       ]
     },
     {
+      "id": "be:ku leuven",
+      "institution": "KU Leuven",
+      "country": "BE",
+      "type": "education",
+      "publicationCount": 9,
+      "staffIds": [
+        "JL",
+        "JS",
+        "JVB",
+        "MR",
+        "NN",
+        "OJ"
+      ],
+      "authors": [
+        "André Grow",
+        "Bart Leten",
+        "Filip Boen",
+        "Florian Lange",
+        "Hein Wendt",
+        "Katrien Fransen",
+        "Loes Meeussen",
+        "Martin Euwema",
+        "Radhika Butalia",
+        "René Belderbos",
+        "Sarah Delcourt"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Loes Meeussen"
+          ]
+        },
+        {
+          "id": "doi:10.1057/s41267-023-00643-w",
+          "year": 2025,
+          "title": "Multinational firms and the quest for global talent: Employing (skilled) foreign workers at home and abroad",
+          "staffIds": [
+            "NN"
+          ],
+          "authors": [
+            "René Belderbos",
+            "Bart Leten"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Florian Lange",
+            "Radhika Butalia",
+            "Sarah Delcourt"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2022.101630",
+          "year": 2024,
+          "title": "The pandemic that shocked managers across the world: The impact of the COVID-19 crisis on leadership behavior",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Hein Wendt"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jasp.12750",
+          "year": 2022,
+          "title": "In traditionally male‐dominated fields, women are less willing to make sacrifices for their career because discrimination and lower fit with people up the ladder make sacrifices less worthwhile",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Loes Meeussen"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.respol.2020.104034",
+          "year": 2020,
+          "title": "Mounting corporate innovation performance: The effects of high-skilled migrant hires and integration capacity",
+          "staffIds": [
+            "NN"
+          ],
+          "authors": [
+            "Bart Leten"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.ssresearch.2016.12.006",
+          "year": 2017,
+          "title": "Status inconsistency in groups: How discrepancies between instrumental and expressive status result in symptoms of stress",
+          "staffIds": [
+            "JVB"
+          ],
+          "authors": [
+            "André Grow"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2014.05.002",
+          "year": 2014,
+          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katrien Fransen",
+            "Filip Boen"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1470595809335715",
+          "year": 2009,
+          "title": "Ecological Limits to Globalization of Managerial Situations",
+          "staffIds": [
+            "OJ"
+          ],
+          "authors": [
+            "Martin Euwema"
+          ]
+        }
+      ]
+    },
+    {
       "id": "sa:king saud university",
       "institution": "King Saud University",
       "country": "SA",
@@ -13188,128 +13395,6 @@
           ],
           "authors": [
             "Max H. Bazerman"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "be:ku leuven",
-      "institution": "KU Leuven",
-      "country": "BE",
-      "type": "education",
-      "publicationCount": 8,
-      "staffIds": [
-        "JL",
-        "JS",
-        "JVB",
-        "MR",
-        "NN",
-        "OJ"
-      ],
-      "authors": [
-        "André Grow",
-        "Bart Leten",
-        "Filip Boen",
-        "Florian Lange",
-        "Hein Wendt",
-        "Katrien Fransen",
-        "Loes Meeussen",
-        "Martin Euwema",
-        "Radhika Butalia",
-        "René Belderbos",
-        "Sarah Delcourt"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1057/s41267-023-00643-w",
-          "year": 2025,
-          "title": "Multinational firms and the quest for global talent: Employing (skilled) foreign workers at home and abroad",
-          "staffIds": [
-            "NN"
-          ],
-          "authors": [
-            "René Belderbos",
-            "Bart Leten"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Florian Lange",
-            "Radhika Butalia",
-            "Sarah Delcourt"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2022.101630",
-          "year": 2024,
-          "title": "The pandemic that shocked managers across the world: The impact of the COVID-19 crisis on leadership behavior",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Hein Wendt"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jasp.12750",
-          "year": 2022,
-          "title": "In traditionally male‐dominated fields, women are less willing to make sacrifices for their career because discrimination and lower fit with people up the ladder make sacrifices less worthwhile",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Loes Meeussen"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.respol.2020.104034",
-          "year": 2020,
-          "title": "Mounting corporate innovation performance: The effects of high-skilled migrant hires and integration capacity",
-          "staffIds": [
-            "NN"
-          ],
-          "authors": [
-            "Bart Leten"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.ssresearch.2016.12.006",
-          "year": 2017,
-          "title": "Status inconsistency in groups: How discrepancies between instrumental and expressive status result in symptoms of stress",
-          "staffIds": [
-            "JVB"
-          ],
-          "authors": [
-            "André Grow"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2014.05.002",
-          "year": 2014,
-          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katrien Fransen",
-            "Filip Boen"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1470595809335715",
-          "year": 2009,
-          "title": "Ecological Limits to Globalization of Managerial Situations",
-          "staffIds": [
-            "OJ"
-          ],
-          "authors": [
-            "Martin Euwema"
           ]
         }
       ]
@@ -15901,6 +15986,118 @@
       ]
     },
     {
+      "id": "br:universidade federal de uberl ndia",
+      "institution": "Universidade Federal de Uberlândia",
+      "country": "BR",
+      "type": "education",
+      "publicationCount": 7,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "A. Torres",
+        "Deniel Gomes Frutuoso",
+        "Heila Magali da Silva Veiga",
+        "Larissa Paula Martins",
+        "Laísla Araújo Pontes",
+        "Letícia Barbosa-Silva",
+        "Letícia Silva",
+        "Ligia Oliveria‐Silva",
+        "Lígia Carolina Oliveira-Silva",
+        "Olívia Pillar Perez Miziara"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/09593535251344621",
+          "year": 2026,
+          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1177/02134748261446390",
+          "year": 2026,
+          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Laísla Araújo Pontes",
+            "Deniel Gomes Frutuoso",
+            "Larissa Paula Martins",
+            "Heila Magali da Silva Veiga"
+          ]
+        },
+        {
+          "id": "doi:10.1080/09540253.2025.2568394",
+          "year": 2026,
+          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Silva",
+            "Lígia Carolina Oliveira-Silva",
+            "Olívia Pillar Perez Miziara"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Letícia Barbosa-Silva",
+            "Olívia Pillar Perez Miziara",
+            "A. Torres"
+          ]
+        },
+        {
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70037",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
+          ]
+        },
+        {
+          "id": "doi:10.3390/bs14040275",
+          "year": 2024,
+          "title": "The Impact of Motherhood on Women’s Career Progression: A Scoping Review of Evidence-Based Interventions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "A. Torres",
+            "Letícia Silva",
+            "Lígia Carolina Oliveira-Silva",
+            "Olívia Pillar Perez Miziara"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gb:university of cambridge",
       "institution": "University of Cambridge",
       "country": "GB",
@@ -16619,6 +16816,110 @@
           ],
           "authors": [
             "Miika Kujanpää"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch:university of st gallen",
+      "institution": "University of St.Gallen",
+      "country": "CH",
+      "type": "education",
+      "publicationCount": 7,
+      "staffIds": [
+        "GVV",
+        "JVB",
+        "MR",
+        "SB",
+        "TDV"
+      ],
+      "authors": [
+        "Heike Bruch",
+        "Jamie L. Gloor",
+        "Raphael Boemelburg",
+        "Ulrich Leicht‐Deobald"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.5465/amj.2023.0869",
+          "year": 2026,
+          "title": "The Connectivity Paradox of Flexible Team Arrangements",
+          "staffIds": [
+            "GVV",
+            "JVB",
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231206107",
+          "year": 2025,
+          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Ulrich Leicht‐Deobald"
+          ]
+        },
+        {
+          "id": "doi:10.1002/hrm.22203",
+          "year": 2024,
+          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231177976",
+          "year": 2023,
+          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Jamie L. Gloor"
+          ]
+        },
+        {
+          "id": "doi:10.1002/hrm.22155",
+          "year": 2023,
+          "title": "Regulatory focus climate, organizational structure, and employee ambidexterity: An interactive multilevel model",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Raphael Boemelburg",
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "doi:10.1037/apl0000889",
+          "year": 2022,
+          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
+          "staffIds": [
+            "JVB",
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.2521",
+          "year": 2021,
+          "title": "Role strain and role accumulation across multiple teams: The moderating role of employees' polychronic orientation",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Heike Bruch"
           ]
         }
       ]
@@ -17564,106 +17865,6 @@
           ],
           "authors": [
             "Mai Helmy"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "br:universidade federal de uberl ndia",
-      "institution": "Universidade Federal de Uberlândia",
-      "country": "BR",
-      "type": "education",
-      "publicationCount": 6,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "A. Torres",
-        "Deniel Gomes Frutuoso",
-        "Heila Magali da Silva Veiga",
-        "Larissa Paula Martins",
-        "Laísla Araújo Pontes",
-        "Letícia Barbosa-Silva",
-        "Letícia Silva",
-        "Lígia Carolina Oliveira-Silva",
-        "Olívia Pillar Perez Miziara"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/09593535251344621",
-          "year": 2026,
-          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1177/02134748261446390",
-          "year": 2026,
-          "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva",
-            "Laísla Araújo Pontes",
-            "Deniel Gomes Frutuoso",
-            "Larissa Paula Martins",
-            "Heila Magali da Silva Veiga"
-          ]
-        },
-        {
-          "id": "doi:10.1080/09540253.2025.2568394",
-          "year": 2026,
-          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Silva",
-            "Lígia Carolina Oliveira-Silva",
-            "Olívia Pillar Perez Miziara"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Letícia Barbosa-Silva",
-            "Olívia Pillar Perez Miziara",
-            "A. Torres"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.3390/bs14040275",
-          "year": 2024,
-          "title": "The Impact of Motherhood on Women’s Career Progression: A Scoping Review of Evidence-Based Interventions",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "A. Torres",
-            "Letícia Silva",
-            "Lígia Carolina Oliveira-Silva",
-            "Olívia Pillar Perez Miziara"
           ]
         }
       ]
@@ -18631,6 +18832,96 @@
       ]
     },
     {
+      "id": "us:division of human resource management",
+      "institution": "Division of Human Resource Management",
+      "country": "US",
+      "type": "government",
+      "publicationCount": 5,
+      "staffIds": [
+        "BN",
+        "FR",
+        "GVV",
+        "JDB",
+        "JVB",
+        "NN",
+        "SB",
+        "TDV"
+      ],
+      "authors": [
+        "Hendrik Johan Van De Brake",
+        "Josette Gevers",
+        "Merly Kosenkranius",
+        "Oliver Weigelt",
+        "Peter Essens",
+        "Yezi Kang"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001417",
+          "year": 2026,
+          "title": "Managing internal mobility: How social and human capital shape movers’ integration over time",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "NN",
+            "TDV"
+          ],
+          "authors": [
+            "Yezi Kang"
+          ]
+        },
+        {
+          "id": "doi:10.1037/apl0001168",
+          "year": 2024,
+          "title": "More Than Just a Number: Different Conceptualizations of Multiple Team Membership and Their Relationships With Emotional Exhaustion and Turnover",
+          "staffIds": [
+            "GVV",
+            "JVB"
+          ],
+          "authors": [
+            "Hendrik Johan Van De Brake",
+            "Peter Essens"
+          ]
+        },
+        {
+          "id": "doi:10.1037/ocp0000347",
+          "year": 2023,
+          "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
+          "staffIds": [
+            "FR",
+            "JDB"
+          ],
+          "authors": [
+            "Merly Kosenkranius",
+            "Oliver Weigelt"
+          ]
+        },
+        {
+          "id": "doi:10.1037/apl0000889",
+          "year": 2022,
+          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
+          "staffIds": [
+            "JVB",
+            "SB"
+          ],
+          "authors": [
+            "Hendrik Johan Van De Brake"
+          ]
+        },
+        {
+          "id": "doi:10.5117/2015.028.002.001",
+          "year": 2015,
+          "title": "Creativiteit en innovatie",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Josette Gevers"
+          ]
+        }
+      ]
+    },
+    {
       "id": "be:ghent university",
       "institution": "Ghent University",
       "country": "BE",
@@ -19253,86 +19544,6 @@
       ]
     },
     {
-      "id": "ch:university of st gallen",
-      "institution": "University of St.Gallen",
-      "country": "CH",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "GVV",
-        "JVB",
-        "MR",
-        "SB",
-        "TDV"
-      ],
-      "authors": [
-        "Heike Bruch",
-        "Jamie L. Gloor",
-        "Raphael Boemelburg",
-        "Ulrich Leicht‐Deobald"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/01492063231206107",
-          "year": 2025,
-          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Ulrich Leicht‐Deobald"
-          ]
-        },
-        {
-          "id": "doi:10.1002/hrm.22203",
-          "year": 2024,
-          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Heike Bruch"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01492063231177976",
-          "year": 2023,
-          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Jamie L. Gloor"
-          ]
-        },
-        {
-          "id": "doi:10.1002/hrm.22155",
-          "year": 2023,
-          "title": "Regulatory focus climate, organizational structure, and employee ambidexterity: An interactive multilevel model",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Raphael Boemelburg",
-            "Heike Bruch"
-          ]
-        },
-        {
-          "id": "doi:10.1037/apl0000889",
-          "year": 2022,
-          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
-          "staffIds": [
-            "JVB",
-            "SB"
-          ],
-          "authors": [
-            "Heike Bruch"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:universit t ulm",
       "institution": "Universität Ulm",
       "country": "DE",
@@ -19893,79 +20104,6 @@
             "Lea Jakob",
             "Jáchym Vintr",
             "Marek Vranka"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:division of human resource management",
-      "institution": "Division of Human Resource Management",
-      "country": "US",
-      "type": "government",
-      "publicationCount": 4,
-      "staffIds": [
-        "BN",
-        "FR",
-        "GVV",
-        "JDB",
-        "JVB",
-        "SB"
-      ],
-      "authors": [
-        "Hendrik Johan Van De Brake",
-        "Josette Gevers",
-        "Merly Kosenkranius",
-        "Oliver Weigelt",
-        "Peter Essens"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1037/apl0001168",
-          "year": 2024,
-          "title": "More Than Just a Number: Different Conceptualizations of Multiple Team Membership and Their Relationships With Emotional Exhaustion and Turnover",
-          "staffIds": [
-            "GVV",
-            "JVB"
-          ],
-          "authors": [
-            "Hendrik Johan Van De Brake",
-            "Peter Essens"
-          ]
-        },
-        {
-          "id": "doi:10.1037/ocp0000347",
-          "year": 2023,
-          "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Merly Kosenkranius",
-            "Oliver Weigelt"
-          ]
-        },
-        {
-          "id": "doi:10.1037/apl0000889",
-          "year": 2022,
-          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
-          "staffIds": [
-            "JVB",
-            "SB"
-          ],
-          "authors": [
-            "Hendrik Johan Van De Brake"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2015.028.002.001",
-          "year": 2015,
-          "title": "Creativiteit en innovatie",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Josette Gevers"
           ]
         }
       ]
@@ -20620,6 +20758,65 @@
           ],
           "authors": [
             "Pekka Santtila"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:northern arizona university",
+      "institution": "Northern Arizona University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "LM"
+      ],
+      "authors": [
+        "Luppo Kuilman"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1111/scs.13029",
+          "year": 2022,
+          "title": "The predictive values of a deliberative and a paternalistic attitude towards two situations of moral conflict: A study among Dutch nurse practitioners and physician assistants",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jep.13462",
+          "year": 2021,
+          "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jep.13353",
+          "year": 2020,
+          "title": "Re‐assessing the validity of the Moral Sensitivity Questionnaire (MSQ): Two new scales for moral deliberation and paternalism",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jan.13939",
+          "year": 2019,
+          "title": "Moral reasoning explained by personality traits and moral disengagement: A study among Dutch nurse practitioners and physician assistants",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
           ]
         }
       ]
@@ -22838,54 +23035,6 @@
       ]
     },
     {
-      "id": "us:northern arizona university",
-      "institution": "Northern Arizona University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "LM"
-      ],
-      "authors": [
-        "Luppo Kuilman"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1111/jep.13462",
-          "year": 2021,
-          "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jep.13353",
-          "year": 2020,
-          "title": "Re‐assessing the validity of the Moral Sensitivity Questionnaire (MSQ): Two new scales for moral deliberation and paternalism",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jan.13939",
-          "year": 2019,
-          "title": "Moral reasoning explained by personality traits and moral disengagement: A study among Dutch nurse practitioners and physician assistants",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
-          ]
-        }
-      ]
-    },
-    {
       "id": "no:norwegian school of economics",
       "institution": "Norwegian School of Economics",
       "country": "NO",
@@ -23097,6 +23246,60 @@
           ],
           "authors": [
             "Hannes Zacher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:renmin university of china",
+      "institution": "Renmin University of China",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "GVV",
+        "OJ",
+        "TDV"
+      ],
+      "authors": [
+        "Jiaxin Xue",
+        "Tingting Lang",
+        "Xiao‐Hua Wang",
+        "Yuhui Li"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001399",
+          "year": 2026,
+          "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Jiaxin Xue",
+            "Yuhui Li"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2024.0176",
+          "year": 2026,
+          "title": "The Dualities of Multiple Team Membership: Implications for Team Performance and Adaptability",
+          "staffIds": [
+            "TDV"
+          ],
+          "authors": [
+            "Tingting Lang"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.1994",
+          "year": 2015,
+          "title": "Understanding employee innovative behavior: Integrating the social network and leader–member exchange perspectives",
+          "staffIds": [
+            "OJ"
+          ],
+          "authors": [
+            "Xiao‐Hua Wang"
           ]
         }
       ]
@@ -24557,6 +24760,43 @@
           ],
           "authors": [
             "Jörg Gross"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:arizona department of health services",
+      "institution": "Arizona Department of Health Services",
+      "country": "US",
+      "type": "government",
+      "publicationCount": 2,
+      "staffIds": [
+        "LM"
+      ],
+      "authors": [
+        "Luppo Kuilman"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1111/scs.13029",
+          "year": 2022,
+          "title": "The predictive values of a deliberative and a paternalistic attitude towards two situations of moral conflict: A study among Dutch nurse practitioners and physician assistants",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jep.13462",
+          "year": 2021,
+          "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
           ]
         }
       ]
@@ -26591,45 +26831,6 @@
       ]
     },
     {
-      "id": "cn:renmin university of china",
-      "institution": "Renmin University of China",
-      "country": "CN",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "OJ",
-        "TDV"
-      ],
-      "authors": [
-        "Tingting Lang",
-        "Xiao‐Hua Wang"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.5465/amj.2024.0176",
-          "year": 2026,
-          "title": "The Dualities of Multiple Team Membership: Implications for Team Performance and Adaptability",
-          "staffIds": [
-            "TDV"
-          ],
-          "authors": [
-            "Tingting Lang"
-          ]
-        },
-        {
-          "id": "doi:10.1002/job.1994",
-          "year": 2015,
-          "title": "Understanding employee innovative behavior: Integrating the social network and leader–member exchange perspectives",
-          "staffIds": [
-            "OJ"
-          ],
-          "authors": [
-            "Xiao‐Hua Wang"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:ruhr university bochum",
       "institution": "Ruhr University Bochum",
       "country": "DE",
@@ -27474,6 +27675,44 @@
           ],
           "authors": [
             "Edona Berisha Kida"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl:university of applied sciences utrecht",
+      "institution": "University of Applied Sciences Utrecht",
+      "country": "NL",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Caspar J. Van Lissa",
+        "Lianne Aarntzen"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lianne Aarntzen"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.2572",
+          "year": 2021,
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
           ]
         }
       ]
@@ -30218,32 +30457,6 @@
           ],
           "authors": [
             "Samuel Shaki"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:arizona department of health services",
-      "institution": "Arizona Department of Health Services",
-      "country": "US",
-      "type": "government",
-      "publicationCount": 1,
-      "staffIds": [
-        "LM"
-      ],
-      "authors": [
-        "Luppo Kuilman"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1111/jep.13462",
-          "year": 2021,
-          "title": "Facilitating and motivating factors for reporting reprehensible conduct in care: A study among nurse practitioners and physician assistants in the Netherlands",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
           ]
         }
       ]
@@ -37005,6 +37218,58 @@
       ]
     },
     {
+      "id": "cn:shandong management university",
+      "institution": "Shandong Management University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "GVV"
+      ],
+      "authors": [
+        "Chenghao Men"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001399",
+          "year": 2026,
+          "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Chenghao Men"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:shandong university",
+      "institution": "Shandong University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "GVV"
+      ],
+      "authors": [
+        "Chenghao Men"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001399",
+          "year": 2026,
+          "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Chenghao Men"
+          ]
+        }
+      ]
+    },
+    {
       "id": "cn:shanghai jiao tong university",
       "institution": "Shanghai Jiao Tong University",
       "country": "CN",
@@ -37974,6 +38239,32 @@
           ],
           "authors": [
             "Kosuke Motoki"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "be:thomas more kempen",
+      "institution": "Thomas More Kempen",
+      "country": "BE",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Loes Meeussen"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Loes Meeussen"
           ]
         }
       ]
@@ -38972,32 +39263,6 @@
           ],
           "authors": [
             "Heike Bruch"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nl:university of applied sciences utrecht",
-      "institution": "University of Applied Sciences Utrecht",
-      "country": "NL",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Caspar J. Van Lissa"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1002/casp.2572",
-          "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
           ]
         }
       ]
@@ -40326,6 +40591,32 @@
             "Tam Luong Nguyen",
             "Dung Minh Nguyen",
             "Trieu Nguyen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:university of science and technology beijing",
+      "institution": "University of Science and Technology Beijing",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "GVV"
+      ],
+      "authors": [
+        "Niannian Dong"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001399",
+          "year": 2026,
+          "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Niannian Dong"
           ]
         }
       ]
@@ -41778,6 +42069,32 @@
           ],
           "authors": [
             "Jun Liu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:xi an jiaotong university",
+      "institution": "Xi'an Jiaotong University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "GVV"
+      ],
+      "authors": [
+        "Jing-hao Zhang"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001399",
+          "year": 2026,
+          "title": "How leaders respond to team time urgency diversity: A functional leadership perspective",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Jing-hao Zhang"
           ]
         }
       ]

@@ -4,8 +4,8 @@
     "updatedLabel": "26 March 2026",
     "sourceUpdatedDate": "2026-03-26",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "generatedDate": "2026-09-03",
-    "deadlineStatusAsOf": "2026-09-03",
+    "generatedDate": "2026-09-24",
+    "deadlineStatusAsOf": "2026-09-24",
     "recentCallsChecked": "2026-07-16",
     "deadlineStatusValues": {
       "upcoming": "Upcoming",
@@ -71,17 +71,17 @@
       "tips": "European or Global fellowship. Applicant and host supervisor write jointly. Requires a training and career development plan. Note: applications surged 65% in 2025, pushing success rates below 10%.",
       "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
       "deadlineDate": "2026-09-09",
-      "nextDeadlineDate": "2026-09-09",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-09",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -139,7 +139,7 @@
       "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
       "link": "https://www.nwo.nl/en/calls/ssh-open-competition-xs-2026-round-1",
       "deadlineDate": "2026-09-15",
-      "nextDeadlineDate": "2026-09-15",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-04-07",
@@ -147,13 +147,13 @@
         },
         {
           "date": "2026-09-15",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -237,17 +237,17 @@
       "tips": "Funds an entire research group. Pre-proposal stage closed March 2026. Full proposal then interview. The highest-prestige NWO individual grant. Expect intense competition from across all SSH disciplines.",
       "link": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026",
       "deadlineDate": "2026-09-08",
-      "nextDeadlineDate": "2026-09-08",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-08",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -310,17 +310,17 @@
       "tips": "Funds societal or commercial valorisation of ERC-funded research. Lump sum with light reporting. The highest success rate of any ERC scheme.",
       "link": "https://erc.europa.eu/apply-grant/proof-concept",
       "deadlineDate": "2026-09-17",
-      "nextDeadlineDate": "2026-09-17",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-17",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -378,17 +378,17 @@
       "tips": "Small exploratory grants for testing existing AI applications in organisations. Focus on labour savings and productivity gains. Practice-oriented. Excellent seed funding to prepare a larger KIC Human Capital bid.",
       "link": "https://www.nwo.nl/en/calls/kiem-arbeidsbesparende-ai",
       "deadlineDate": "2026-09-15",
-      "nextDeadlineDate": "2026-09-15",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-15",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -404,7 +404,7 @@
       "tips": "Exploratory applied research under the KIA Social Earning Capacity. Broad scope covering HRM, organisational innovation, and human capital development. Low barrier seed funding.",
       "link": "https://www.nwo.nl/en/calls/kiem-mv",
       "deadlineDate": "2026-09-15",
-      "nextDeadlineDate": "2026-09-15",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-03-24",
@@ -412,13 +412,13 @@
         },
         {
           "date": "2026-09-15",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -680,17 +680,17 @@
       "tips": "Thematically free as long as it aligns with a KIA. The S variant is designed for smaller consortia that want to grow into sustained partnerships. Information meeting 14 April 2026. Good entry point for building industry collaborations around HRM/OB topics.",
       "link": "https://www.nwo.nl/en/calls/kic-demand-driven-research-by-consortia-s-2026",
       "deadlineDate": "2026-09-22",
-      "nextDeadlineDate": "2026-09-22",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-22",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -758,17 +758,17 @@
       "tips": "Topic: Strengthen Europe's social model through productivity. Research and Innovation Action with 100% funding plus 25% flat rate for indirect costs.",
       "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
       "deadlineDate": "2026-09-23",
-      "nextDeadlineDate": "2026-09-23",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-23",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -784,17 +784,17 @@
       "tips": "Making Europe a global magnet for talent. Covers attracting and retaining researchers and high-skilled workers. Directly relevant to talent management and international HRM research.",
       "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
       "deadlineDate": "2026-09-23",
-      "nextDeadlineDate": "2026-09-23",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-23",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -810,17 +810,17 @@
       "tips": "Fostering competencies for the green transition. Covers workforce development, skills anticipation, and training system design.",
       "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
       "deadlineDate": "2026-09-23",
-      "nextDeadlineDate": "2026-09-23",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-23",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -836,17 +836,17 @@
       "tips": "How governments prepare the civil service for the future. Strong public sector management and HR angle. Workforce planning, digital skills in government, organisational transformation.",
       "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search;callCode=HORIZON-CL2-2026",
       "deadlineDate": "2026-09-23",
-      "nextDeadlineDate": "2026-09-23",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-23",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "workbook",
       "sourceCheckedDate": "2026-03-26"
     },
@@ -1052,18 +1052,18 @@
       "manualReason": "",
       "candidateMode": "",
       "deadlineDate": "2026-09-15",
-      "nextDeadlineDate": "2026-09-15",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-15",
           "label": "Round 3 full application",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-07-16"
     },
@@ -1090,19 +1090,19 @@
       "manualReason": "",
       "candidateMode": "",
       "deadlineDate": "2026-09-09",
-      "nextDeadlineDate": "2026-09-09",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-09-09",
           "label": "Proposal",
           "timeLabel": "17:00 CEST",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-07-16"
     },
@@ -1167,7 +1167,7 @@
       "manualReason": "",
       "candidateMode": "none",
       "deadlineDate": "2026-09-10",
-      "nextDeadlineDate": "2026-09-10",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-06-23",
@@ -1177,13 +1177,13 @@
         {
           "date": "2026-09-10",
           "label": "Other three NWO Awards",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-07-16"
     }

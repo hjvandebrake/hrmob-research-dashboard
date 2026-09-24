@@ -622,7 +622,6 @@
       "Die Unternehmung",
       "Equal Opportunities International",
       "Frontiers in Organizational Psychology",
-      "Gedrag en Organisatie",
       "German Journal of Human Resource Management Zeitschrift für Personalforschung",
       "German Journal of Human Resource Management: Zeitschrift für Personalforschung",
       "Gothic.net",
@@ -3774,8 +3773,8 @@
       ],
       "counted": false,
       "display": false,
-      "aipComparable": false,
-      "aipStatus": "not-rankable",
+      "aipComparable": true,
+      "aipStatus": "matched",
       "previousIds": [
         "rug:9ca2e827cfb8a802"
       ],
@@ -22048,8 +22047,8 @@
       ],
       "counted": false,
       "display": false,
-      "aipComparable": false,
-      "aipStatus": "not-rankable",
+      "aipComparable": true,
+      "aipStatus": "matched",
       "previousIds": []
     },
     {
@@ -32946,8 +32945,8 @@
       ],
       "counted": false,
       "display": false,
-      "aipComparable": false,
-      "aipStatus": "not-rankable",
+      "aipComparable": true,
+      "aipStatus": "matched",
       "previousIds": [],
       "publicationDate": "2011-09-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1098%2Frspb.2011.1444",

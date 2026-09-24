@@ -14,7 +14,7 @@ const state = {
   dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
-  publicationWindow: "last10",
+  publicationWindow: "recent",
   networkScope: "department",
   networkAipHighOnly: false,
   networkExternal: true,
@@ -49,7 +49,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260920-staff";
+const DATA_VERSION = "20260924-1119";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -1677,7 +1677,7 @@ function rosterModeLabel() {
 }
 
 function normalizeWindowMode(mode) {
-  return PUBLICATION_WINDOW_MODES.has(mode) ? mode : "last10";
+  return PUBLICATION_WINDOW_MODES.has(mode) ? mode : "recent";
 }
 
 function syncPublicationWindowControls() {
