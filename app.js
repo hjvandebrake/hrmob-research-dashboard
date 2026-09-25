@@ -44,7 +44,6 @@ const state = {
   collaborationClustersExpanded: false,
   dotTracePerson: "",
   dotTraceTopic: "",
-  attentionSmooth: false,
   selectedCallKey: "",
   appStarted: false,
   dataLoading: false,
@@ -53,7 +52,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260925-window20";
+const DATA_VERSION = "20260925-lean";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -487,7 +486,6 @@ function cacheElements() {
   els.dataStatus = document.getElementById("data-status");
   els.subtitle = document.getElementById("subtitle");
   els.footerMeta = document.getElementById("footer-meta");
-  els.metrics = document.getElementById("metrics");
   els.benchmarkSummary = document.getElementById("benchmark-summary");
   els.benchmarkPublicationTrend = document.getElementById("benchmark-publication-trend");
   els.benchmarkTrendTitle = document.getElementById("benchmark-trend-title");
@@ -1361,7 +1359,8 @@ async function loadData() {
     const meta = state.data.meta;
     hydrateTopicFamilies(meta.topicFamilies);
     applyGlobalStateFromUrl();
-    els.subtitle.textContent = "Our people, publications, and research activity.";
+    els.subtitle.textContent = "";
+    els.subtitle.hidden = true;
     syncFooterMeta(meta);
     syncDataStatus();
     syncPublicationWindowControls();
@@ -4089,13 +4088,6 @@ function renderOverview() {
   const grants = activeGrants();
   const theses = activeTheses();
   const currentProjects = currentPhdProjects();
-  els.metrics.innerHTML = [
-    metric("Researchers", activePeople().length),
-    metric("Journal articles", pubs.length),
-    metric("Current PhDs", currentProjects.length),
-    metric("Awarded funding records", grants.length),
-  ].join("");
-
   renderYearBars(pubs);
   renderAttentionRiver(pubs);
   renderAipBars(pubs);
@@ -4122,7 +4114,7 @@ function renderOverviewPreviews(pubs, grants, projects) {
     {href:"#grants",title:"Grants",lead:latest.length?`${latest.length} recent awards`:`${grants.length} award records`,detail:latest.length?latest.map(g=>`${grantStaff(g,peopleById())} (${g.scheme.split(" ").at(-1)})`).join(" · "):"Awarded funding and upcoming grant opportunities."},
     {href:"#opportunities",title:"Opportunities",lead:"Ideas for collaboration",detail:"Explore shared interests, potential partners, and reference materials."},
   ];
-  container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><p>${escapeHtml(c.detail)}</p><span>Explore →</span></a>`).join("");
+  container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><span>Explore →</span></a>`).join("");
 }
 
 function renderPhds() {
@@ -7897,7 +7889,7 @@ function renderYearBars(pubs) {
   const topics = publicationFamilySignals(shown).slice(0, 6).map((signal) => signal.label);
   if (state.dotTraceTopic && !topics.includes(state.dotTraceTopic)) state.dotTraceTopic = "";
   const bandCounts = AIP_DOT_BANDS.map((_, index) => shown.filter((pub) => aipBandIndex(pub) === index).length);
-  publicationDotsView = { years, byYear, max, currentYear, total };
+  publicationDotsView = { years, byYear, max, currentYear, total, counts };
   els.yearBars.innerHTML = `<div class="pub-dots">
     <div class="pub-dots-controls">
       <label class="pub-dots-field"><span>Highlight</span>
@@ -7916,17 +7908,6 @@ function renderYearBars(pubs) {
       ${AIP_DOT_BANDS.map((band, index) => `<span><i style="background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}"></i>${escapeHtml(band.label)} <b>${bandCounts[index]}</b></span>`).join("")}
       <span class="pub-dots-status" data-dots-status role="status" aria-live="polite"></span>
     </div>
-    <p class="year-chart-note">${escapeHtml(`${total} publication${total === 1 ? "" : "s"} across ${publicationWindowLabel()}; peak ${max} in ${peakLabel}.${includesYearToDate ? ` ${currentYear} is year to date.` : ""} Each dot is one counted journal article, shaded by the journal's average AIP 2020-2024. Hover for details; select a dot to open the publisher record.`)}</p>
-    <details class="metric-data-details year-data-details">
-      <summary>View annual data as a table</summary>
-      <div class="table-wrap year-data-table-wrap" role="region" aria-label="Annual publication counts" tabindex="0">
-        <table>
-          <caption class="visually-hidden">Counted journal publications by year for ${escapeHtml(publicationWindowLabel())}.</caption>
-          <thead><tr><th scope="col">Year</th><th scope="col" class="num">Publications</th><th scope="col" class="num">AIP &ge; 95</th></tr></thead>
-          <tbody>${years.map((year) => `<tr><th scope="row">${year}${year === currentYear ? " (YTD)" : ""}</th><td class="num">${counts.get(year) || 0}</td><td class="num">${byYear.get(year).filter((pub) => aipBandIndex(pub) === 0).length}</td></tr>`).join("")}</tbody>
-        </table>
-      </div>
-    </details>
   </div>`;
   drawPublicationDots();
 }
@@ -7980,7 +7961,7 @@ function drawPublicationDots() {
     viewBox: `0 0 ${width} ${height}`,
     role: "img",
     tabindex: 0,
-    "aria-label": `Unit chart of ${view.total} counted publications by year, one dot per publication. Use the arrow keys to move between publications and Enter to open one.`,
+    "aria-label": `${view.total} counted publications by year, one dot each: ${years.map((year) => `${year}${year === currentYear ? " to date" : ""} ${view.counts.get(year) || 0}`).join(", ")}. Use the arrow keys to move between publications and Enter to open one.`,
   });
   vizSvg("line", { class: "pub-dots-base", x1: offsetX.toFixed(1), x2: (width - offsetX).toFixed(1), y1: top + plotHeight + 5, y2: top + plotHeight + 5 }, svg);
   const points = [];
@@ -8198,9 +8179,8 @@ function renderAttentionRiver(pubs) {
     });
     return { year, weights, families, tagged, untagged };
   });
-  const smooth = Boolean(state.attentionSmooth);
   const cell = (clusterIndex, yearIndex) => {
-    const span = smooth ? perYear.slice(Math.max(0, yearIndex - 1), yearIndex + 2) : [perYear[yearIndex]];
+    const span = [perYear[yearIndex]];
     const weight = span.reduce((sum, row) => sum + row.weights[clusterIndex], 0);
     const tagged = span.reduce((sum, row) => sum + row.tagged, 0);
     return { share: tagged ? weight / tagged : 0, weight, tagged, span };
@@ -8219,8 +8199,7 @@ function renderAttentionRiver(pubs) {
   })).sort((a, b) => b.overall - a.overall || a.label.localeCompare(b.label));
   const maxShare = Math.max(0.1, ...clusters.flatMap((cluster) => cluster.cells.map((item) => item.share)));
   const taggedTotal = perYear.reduce((sum, row) => sum + row.tagged, 0);
-  const untaggedTotal = perYear.reduce((sum, row) => sum + row.untagged, 0);
-  attentionRiverView = { years, perYear, clusters, smooth };
+  attentionRiverView = { years, perYear, clusters };
   const range = `${years[0]}-${years[years.length - 1]}`;
   const changeLabel = years.length >= 6 ? `${years[0]}-${years[2]} vs ${years[years.length - 3]}-${years[years.length - 1]}` : `${years[0]} vs ${years[years.length - 1]}`;
   const yearLabel = (year, index) => (years.length > 12 && index % 2 === 1 && index !== years.length - 1 ? "" : years.length > 12 ? `’${String(year).slice(2)}` : String(year));
@@ -8230,30 +8209,19 @@ function renderAttentionRiver(pubs) {
     return `${points > 0 ? "▲" : "▼"} ${Math.abs(points)}`;
   };
   els.attentionRiver.innerHTML = `
-    <div class="attention-head">
-      <p class="attention-subtitle">Share of each year's topic-tagged publications in eleven research clusters, ${escapeHtml(range)}. Every year's column adds up to 100%.</p>
-      <div class="metric-toggle attention-toggle" role="group" aria-label="Smoothing">
-        <button type="button" data-attention-mode="year" class="${smooth ? "" : "on"}" aria-pressed="${!smooth}">Each year</button>
-        <button type="button" data-attention-mode="rolling" class="${smooth ? "on" : ""}" aria-pressed="${smooth}">3-year average</button>
-      </div>
-    </div>
-    <div class="table-wrap attention-wrap" role="region" aria-label="Research cluster shares by year" tabindex="0">
+    <div class="table-wrap attention-wrap" role="region" aria-label="Research topics by year" tabindex="0">
       <table class="attention-heatmap${years.length > 12 ? " is-dense" : ""}">
-        <caption class="visually-hidden">Percent of each year's topic-tagged publications in each research cluster, ${escapeHtml(range)}${smooth ? ", three-year averages" : ""}.</caption>
-        <thead><tr><th scope="col" class="attention-label-col">Research cluster</th>${years.map((year, index) => `<th scope="col" aria-label="${year}">${escapeHtml(yearLabel(year, index))}</th>`).join("")}<th scope="col" class="attention-summary">All years</th><th scope="col" class="attention-summary" title="${escapeHtml(`Percentage points, ${changeLabel}`)}">Change</th></tr></thead>
+        <caption class="visually-hidden">Percent of each year's topic-tagged publications in each research cluster, ${escapeHtml(range)}. Each column adds up to 100%.</caption>
+        <thead><tr><th scope="col" class="attention-label-col">% of the year's papers</th>${years.map((year, index) => `<th scope="col" aria-label="${year}">${escapeHtml(yearLabel(year, index))}</th>`).join("")}<th scope="col" class="attention-summary" title="Share of all topic-tagged papers in ${escapeHtml(range)}">Total</th><th scope="col" class="attention-summary" title="${escapeHtml(`Percentage points, ${changeLabel}`)}">Change</th></tr></thead>
         <tbody>${clusters.map((cluster) => `<tr>
-          <th scope="row">${escapeHtml(cluster.label)}</th>
+          <th scope="row" title="${escapeHtml(cluster.families.join(", "))}">${escapeHtml(cluster.label)}</th>
           ${cluster.cells.map((item, yearIndex) => `<td class="attention-cell" style="${attentionCellStyle(item.share / maxShare)}" data-cluster="${cluster.index}" data-year-index="${yearIndex}">${Math.round(item.share * 100)}<span class="visually-hidden">%</span></td>`).join("")}
           <td class="attention-summary">${Math.round(cluster.overall * 100)}%</td>
           <td class="attention-summary">${changeText(cluster.change)}</td>
         </tr>`).join("")}</tbody>
+        <tfoot><tr><th scope="row">Papers</th>${perYear.map((row) => `<td class="attention-count">${row.tagged}</td>`).join("")}<td class="attention-summary">${taggedTotal}</td><td class="attention-summary"></td></tr></tfoot>
       </table>
-    </div>
-    <p class="attention-note">${escapeHtml(`Numbers are percentages of the year's topic-tagged publications${smooth ? ", averaged over the year before and after" : ""}. A paper whose topics span several clusters is split equally, so each column adds up to 100%. Change compares ${changeLabel} in percentage points. ${untaggedTotal} of ${taggedTotal + untaggedTotal} publications in these years carry no topic tag and are left out.`)}</p>
-    <details class="metric-data-details">
-      <summary>Which topics belong to each cluster</summary>
-      <ul class="attention-theme-key">${ATTENTION_CLUSTERS.map((cluster) => `<li><strong>${escapeHtml(cluster.label)}</strong> ${escapeHtml(cluster.families.join(", "))}</li>`).join("")}</ul>
-    </details>`;
+    </div>`;
 }
 
 function attentionCellTooltip(clusterIndex, yearIndex) {
@@ -8262,7 +8230,7 @@ function attentionCellTooltip(clusterIndex, yearIndex) {
   if (!cluster) return "";
   const item = cluster.cells[yearIndex];
   const year = view.years[yearIndex];
-  const spanLabel = view.smooth && item.span.length > 1 ? `${item.span[0].year}-${item.span[item.span.length - 1].year} average` : String(year);
+  const spanLabel = String(year);
   const families = new Map();
   item.span.forEach((row) => row.families[clusterIndex].forEach((count, label) => families.set(label, (families.get(label) || 0) + count)));
   const familyText = Array.from(families.entries()).sort((a, b) => b[1] - a[1]).map(([label, count]) => `${label} ${count}`).join(", ");
@@ -8399,20 +8367,8 @@ function renderCallCalendar() {
     state.selectedCallKey = (onTimeline.find((record) => record.timing.kind !== "passed") || onTimeline[0] || undated[0])?.key || "";
   }
   callCalendarView = { start, end, today, items: onTimeline, records };
-  const meta = state.resourceData?.meta || {};
-  const sources = [
-    meta.sourceUpdatedDate ? `grant workbook updated ${formatIsoDisplayDate(meta.sourceUpdatedDate)}` : "",
-    meta.recentCallsChecked ? `highlighted calls checked ${formatIsoDisplayDate(meta.recentCallsChecked)}` : "",
-  ].filter(Boolean).join("; ");
   const chip = (record) => `<button type="button" class="viz-chip${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
-  const datedCount = onTimeline.filter((record) => record.timing.kind !== "passed").length;
-  const summary = [
-    `${datedCount} call${datedCount === 1 ? "" : "s"} with a date in the next twelve months`,
-    later.length ? `${later.length} later` : "",
-    undated.length ? `${undated.length} without a confirmed date, listed under the timeline` : "",
-  ].filter(Boolean).join(" \u00b7 ");
   els.callCalendar.innerHTML = `
-    <p class="call-calendar-summary">${escapeHtml(summary)}.</p>
     <div class="call-legend" aria-hidden="true">
       <span><i class="tone-soon"></i>Within 30 days</span>
       <span><i class="tone-upcoming"></i>Within 120 days</span>
@@ -8424,17 +8380,7 @@ function renderCallCalendar() {
     <div data-call-detail aria-live="polite"></div>
     ${later.length ? `<div class="call-calendar-extra"><strong>Beyond twelve months</strong><div class="chip-row">${later.map(chip).join("")}</div></div>` : ""}
     ${undated.length ? `<div class="call-calendar-extra"><strong>Date not confirmed</strong><div class="chip-row">${undated.map(chip).join("")}</div></div>` : ""}
-    <p class="call-calendar-note">${escapeHtml(`${onTimeline.length} call${onTimeline.length === 1 ? "" : "s"} on the calendar${sources ? `; ${sources}` : ""}. Check the funder page before planning around a date.`)}</p>
-    <details class="metric-data-details">
-      <summary>View the calendar as a list</summary>
-      <div class="table-wrap" role="region" aria-label="Grant call deadlines" tabindex="0">
-        <table>
-          <caption class="visually-hidden">Grant call deadlines in the calendar window.</caption>
-          <thead><tr><th scope="col">Deadline</th><th scope="col">Call</th><th scope="col">Funder</th></tr></thead>
-          <tbody>${[...onTimeline, ...later, ...undated].map((record) => `<tr><td>${escapeHtml(callWhenText(record.timing, today))}</td><th scope="row">${escapeHtml(record.call.name)}</th><td>${escapeHtml(record.call.funder || "")}</td></tr>`).join("")}</tbody>
-        </table>
-      </div>
-    </details>`;
+`;
   drawCallCalendar();
   renderCallDetail();
 }
@@ -8746,14 +8692,6 @@ function attachVisualUpgradeEvents() {
       refreshPublicationDotControls();
       els.yearBars.querySelector("[data-dot-person]")?.focus();
     }
-  });
-  els.attentionRiver?.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-attention-mode]");
-    if (!button) return;
-    state.attentionSmooth = button.dataset.attentionMode === "rolling";
-    hideVizTooltip();
-    renderAttentionRiver(overviewPublications());
-    els.attentionRiver.querySelector(`[data-attention-mode="${button.dataset.attentionMode}"]`)?.focus();
   });
   els.attentionRiver?.addEventListener("pointerover", (event) => {
     const cell = event.target.closest("[data-cluster]");

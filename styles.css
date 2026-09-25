@@ -3751,3 +3751,7 @@ footer {
 .attention-heatmap .attention-summary { color: var(--ink-700); font-size: 0.74rem; font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; white-space: nowrap; width: 62px; }
 .attention-heatmap thead .attention-summary { color: var(--ink-500); font-size: 0.66rem; }
 @media (max-width: 700px) { .attention-heatmap .attention-label-col, .attention-heatmap tbody th { width: 130px; } }
+.attention-heatmap tfoot th { color: var(--ink-500); font-size: 0.7rem; font-weight: 600; padding-top: 4px; text-align: left; }
+.attention-heatmap tfoot td { color: var(--ink-500); font-size: 0.66rem; font-variant-numeric: tabular-nums; padding-top: 4px; text-align: center; }
+.attention-heatmap tfoot .attention-summary { color: var(--ink-500); }
+.attention-heatmap thead th.attention-label-col { color: var(--ink-500); font-weight: 600; }
