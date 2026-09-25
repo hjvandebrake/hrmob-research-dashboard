@@ -14,7 +14,7 @@ const state = {
   dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
-  publicationWindow: "recent",
+  publicationWindow: "last10",
   networkScope: "department",
   networkAipHighOnly: false,
   networkExternal: true,
@@ -44,7 +44,7 @@ const state = {
   collaborationClustersExpanded: false,
   dotTracePerson: "",
   dotTraceTopic: "",
-  attentionHidden: new Set(),
+  attentionFocus: "",
   selectedCallKey: "",
   appStarted: false,
   dataLoading: false,
@@ -53,7 +53,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260925-visuals";
+const DATA_VERSION = "20260925-refine";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -1688,7 +1688,7 @@ function rosterModeLabel() {
 }
 
 function normalizeWindowMode(mode) {
-  return PUBLICATION_WINDOW_MODES.has(mode) ? mode : "recent";
+  return PUBLICATION_WINDOW_MODES.has(mode) ? mode : "last10";
 }
 
 function syncPublicationWindowControls() {
@@ -7739,15 +7739,12 @@ const AIP_DOT_BANDS = [
   { label: "AIP below 90", color: "#7fb5b8" },
   { label: "No AIP match", color: "#ffffff", stroke: "#98a0a8" },
 ];
-const ATTENTION_COLORS = ["#129390", "#bd592f", "#5b6cb2", "#b8892d", "#984979", "#54803a"];
-const ATTENTION_FAMILY_LIMIT = 6;
 const CALL_CALENDAR_MONTHS = 12;
 const VIZ_SVG_NS = "http://www.w3.org/2000/svg";
 const publicationFamilyLabelCache = new WeakMap();
 let publicationDotsView = null;
 let attentionRiverView = null;
 let callCalendarView = null;
-let attentionColorCache = { key: "", map: new Map() };
 let vizTooltipElement = null;
 let vizTextContext = null;
 const quickFindState = { items: [], results: [], index: 0, opener: null };
@@ -7953,10 +7950,20 @@ function drawPublicationDots() {
   if (!view || !canvas) return;
   const { years, byYear, max, currentYear } = view;
   const width = Math.max(280, Math.floor(canvas.clientWidth || els.yearBars.clientWidth || 640));
-  const colWidth = width / years.length;
-  const perRow = colWidth >= 160 ? 4 : colWidth >= 46 ? 3 : colWidth >= 16 ? 2 : 1;
-  const pitch = Math.max(5, Math.min(14, (colWidth * 0.72) / perRow));
-  const radius = Math.max(1.8, pitch * 0.38);
+  // Columns stay close together: each year's block fills about 80% of its slot, slots are capped, and the grid is centred.
+  const colWidth = Math.min(width / years.length, 120);
+  const offsetX = (width - colWidth * years.length) / 2;
+  let layout = null;
+  for (let candidate = 1; candidate <= 10; candidate += 1) {
+    const candidatePitch = Math.min(18, (colWidth * 0.8) / candidate);
+    if (candidatePitch < 6) break;
+    const plot = Math.ceil(max / candidate) * candidatePitch;
+    const score = Math.abs(plot - 160) + (colWidth - candidate * candidatePitch) * 0.5;
+    if (!layout || score < layout.score) layout = { perRow: candidate, pitch: candidatePitch, score };
+  }
+  if (!layout) layout = { perRow: 1, pitch: Math.max(3, colWidth * 0.8) };
+  const { perRow, pitch } = layout;
+  const radius = Math.max(1.4, pitch * 0.4);
   const top = 22;
   const plotHeight = Math.ceil(max / perRow) * pitch;
   const height = top + plotHeight + 30;
@@ -7970,12 +7977,12 @@ function drawPublicationDots() {
     tabindex: 0,
     "aria-label": `Unit chart of ${view.total} counted publications by year, one dot per publication. Use the arrow keys to move between publications and Enter to open one.`,
   });
-  vizSvg("line", { class: "pub-dots-base", x1: 0, x2: width, y1: top + plotHeight + 5, y2: top + plotHeight + 5 }, svg);
+  vizSvg("line", { class: "pub-dots-base", x1: offsetX.toFixed(1), x2: (width - offsetX).toFixed(1), y1: top + plotHeight + 5, y2: top + plotHeight + 5 }, svg);
   const points = [];
   let highlighted = 0;
   years.forEach((year, yearIndex) => {
     const list = byYear.get(year) || [];
-    const centre = colWidth * yearIndex + colWidth / 2;
+    const centre = offsetX + colWidth * yearIndex + colWidth / 2;
     const firstX = centre - ((perRow - 1) * pitch) / 2;
     let matches = 0;
     list.forEach((pub, stackIndex) => {
@@ -8109,25 +8116,27 @@ function publicationDotTooltip(pub) {
     ${publicationLink(pub) ? "<em>Select to open the publisher record</em>" : ""}`;
 }
 
-/* ---------- How research attention shifts: topic-family streams ---------- */
+/* ---------- How research attention shifts: yearly theme shares that add up to 100% ---------- */
 
-function attentionColorMap() {
-  // Colours follow each family's rank over the five most recent completed years (the default view), so shared topics keep their colour when the window changes.
-  const lastCompleted = new Date().getFullYear() - 1;
-  const recentFrom = windowBoundaryYear(state.data?.meta?.recentWindow?.from);
-  const firstYear = Number.isFinite(recentFrom) ? recentFrom : lastCompleted - 4;
-  const coreIds = new Set((state.data?.people || []).filter((person) => !person.affiliated).map((person) => person.id));
-  const pubs = (state.data?.publications || []).filter((pub) => {
-    const year = publicationChartYear(pub);
-    return countedPublication(pub) && Number.isFinite(year) && year >= firstYear && year <= lastCompleted
-      && (pub.matchedPeople || []).some((id) => coreIds.has(id));
+const ATTENTION_OTHER_COLOR = "#c9ced4";
+// Six broad research themes group the 47 topic families. Order follows the validated colour order, which is also the stacking order.
+const ATTENTION_THEMES = [
+  { label: "Teams, collaboration, and conflict", color: "#129390", families: ["teams and groups", "multiple team membership", "collaboration and coordination", "boundary spanning and external ties", "intergroup relations", "social networks", "psychological safety", "conflict", "negotiation and bargaining", "competition"] },
+  { label: "Leadership, power, and status", color: "#bd592f", families: ["leadership", "shared leadership", "power and hierarchy", "status and prestige", "governance and boards"] },
+  { label: "Creativity, innovation, and decisions", color: "#5b6cb2", families: ["creativity", "innovation", "decision making", "entrepreneurship", "voice and silence"] },
+  { label: "Stress, health, and wellbeing", color: "#b8892d", families: ["stress and strain", "occupational health", "wellbeing", "recovery and leisure", "emotions and affect", "crisis and resilience", "work-family and roles"] },
+  { label: "Identity, fairness, and ethics", color: "#984979", families: ["identity and belonging", "stereotypes and bias", "gender and leadership", "diversity and inclusion", "justice and fairness", "ethics and morality", "trust and distrust", "prosocial behavior", "sustainability and csr"] },
+  { label: "Work design, motivation, and careers", color: "#54803a", families: ["job crafting", "work design", "remote and hybrid work", "motivation and goals", "learning and feedback", "careers and employability", "performance management", "people management practices", "selection and recruitment", "age and aging", "technology and AI"] },
+];
+const ATTENTION_THEME_BY_FAMILY = new Map(ATTENTION_THEMES.flatMap((theme, index) => theme.families.map((family) => [family, index])));
+
+// Each publication counts once: a paper whose families span several themes is split equally between those themes.
+function publicationThemeWeights(pub) {
+  const themes = new Set();
+  publicationFamilyLabels(pub).forEach((label) => {
+    if (ATTENTION_THEME_BY_FAMILY.has(label)) themes.add(ATTENTION_THEME_BY_FAMILY.get(label));
   });
-  const key = `${pubs.length}:${firstYear}-${lastCompleted}:${state.data?.meta?.targetedUpdateOn || ""}`;
-  if (attentionColorCache.key === key) return attentionColorCache.map;
-  const map = new Map();
-  publicationFamilySignals(pubs).slice(0, ATTENTION_COLORS.length).forEach((signal, index) => map.set(signal.label, index));
-  attentionColorCache = { key, map };
-  return map;
+  return Array.from(themes).map((index) => [index, 1 / themes.size]);
 }
 
 function renderAttentionRiver(pubs) {
@@ -8149,40 +8158,40 @@ function renderAttentionRiver(pubs) {
     return;
   }
   const inRange = completed.filter((pub) => publicationChartYear(pub) >= years[0]);
-  const colorMap = attentionColorMap();
-  const labels = publicationFamilySignals(inRange).slice(0, ATTENTION_FAMILY_LIMIT).map((signal) => signal.label);
-  const taken = new Set(labels.map((label) => colorMap.get(label)).filter(Number.isInteger));
-  const spare = ATTENTION_COLORS.map((_, index) => index).filter((index) => !taken.has(index));
-  const families = labels
-    .map((label) => ({ label, colorIndex: colorMap.has(label) ? colorMap.get(label) : spare.shift() }))
-    .sort((a, b) => a.colorIndex - b.colorIndex);
-  Array.from(state.attentionHidden).forEach((label) => { if (!labels.includes(label)) state.attentionHidden.delete(label); });
-  if (families.every((family) => state.attentionHidden.has(family.label))) state.attentionHidden.clear();
+  if (state.attentionFocus && !ATTENTION_THEMES.some((theme) => theme.label === state.attentionFocus)) state.attentionFocus = "";
   const rows = years.map((year) => {
     const yearPubs = inRange.filter((pub) => publicationChartYear(pub) === year);
-    return {
-      year,
-      total: yearPubs.length,
-      counts: families.map((family) => yearPubs.filter((pub) => publicationFamilyLabels(pub).has(family.label)).length),
-    };
+    const weights = ATTENTION_THEMES.map(() => 0);
+    let untagged = 0;
+    yearPubs.forEach((pub) => {
+      const parts = publicationThemeWeights(pub);
+      if (!parts.length) untagged += 1;
+      parts.forEach(([index, weight]) => { weights[index] += weight; });
+    });
+    const total = yearPubs.length || 1;
+    return { year, total: yearPubs.length, weights, other: untagged, shares: weights.map((weight) => weight / total), otherShare: untagged / total };
   });
-  attentionRiverView = { years, families, rows };
+  attentionRiverView = { years, rows };
   const range = `${years[0]}-${years[years.length - 1]}`;
+  const percent = (value) => `${Math.round(value * 100)}%`;
   els.attentionRiver.innerHTML = `
-    <div class="attention-legend" role="group" aria-label="Show or hide topic families">
-      ${families.map((family) => `<button type="button" class="viz-chip" data-attention-topic="${escapeHtml(family.label)}" aria-pressed="${!state.attentionHidden.has(family.label)}"><i style="background:${ATTENTION_COLORS[family.colorIndex]}"></i>${escapeHtml(family.label)}</button>`).join("")}
+    <p class="attention-subtitle">Share of each year's publications by research theme, ${escapeHtml(range)}. Every year adds up to 100%.</p>
+    <div class="attention-legend" role="group" aria-label="Highlight a research theme">
+      ${ATTENTION_THEMES.map((theme) => `<button type="button" class="viz-chip" data-attention-topic="${escapeHtml(theme.label)}" aria-pressed="${theme.label === state.attentionFocus}"><i style="background:${theme.color}"></i>${escapeHtml(theme.label)}</button>`).join("")}
+      <span class="viz-chip is-static"><i style="background:${ATTENTION_OTHER_COLOR}"></i>No topic family</span>
     </div>
     <div class="attention-canvas" data-attention-canvas></div>
-    <p class="attention-note">${escapeHtml(`Stream width counts publications tagged with each of the six largest topic families in completed years, ${range}. A publication can belong to several families, so the streams can add up to more than the number of papers. Select a stream to see matching researchers and publications.`)}</p>
+    <p class="attention-note">${escapeHtml("Each publication counts once. A paper whose topics span several themes is split equally between them, so each year adds up to 100%. Grey marks papers with no topic family. Select a theme to highlight it.")}</p>
     <details class="metric-data-details">
-      <summary>View topic counts as a table</summary>
-      <div class="table-wrap" role="region" aria-label="Topic family counts by year" tabindex="0">
+      <summary>View theme shares as a table</summary>
+      <div class="table-wrap" role="region" aria-label="Research theme shares by year" tabindex="0">
         <table>
-          <caption class="visually-hidden">Publications tagged with each topic family by year, ${escapeHtml(range)}.</caption>
-          <thead><tr><th scope="col">Year</th>${families.map((family) => `<th scope="col" class="num">${escapeHtml(family.label)}</th>`).join("")}<th scope="col" class="num">Publications</th></tr></thead>
-          <tbody>${rows.map((row) => `<tr><th scope="row">${row.year}</th>${row.counts.map((count) => `<td class="num">${count}</td>`).join("")}<td class="num">${row.total}</td></tr>`).join("")}</tbody>
+          <caption class="visually-hidden">Share of each year's publications by research theme, ${escapeHtml(range)}.</caption>
+          <thead><tr><th scope="col">Year</th>${ATTENTION_THEMES.map((theme) => `<th scope="col" class="num">${escapeHtml(theme.label)}</th>`).join("")}<th scope="col" class="num">No topic family</th><th scope="col" class="num">Publications</th></tr></thead>
+          <tbody>${rows.map((row) => `<tr><th scope="row">${row.year}</th>${row.shares.map((share) => `<td class="num">${percent(share)}</td>`).join("")}<td class="num">${percent(row.otherShare)}</td><td class="num">${row.total}</td></tr>`).join("")}</tbody>
         </table>
       </div>
+      <ul class="attention-theme-key">${ATTENTION_THEMES.map((theme) => `<li><strong>${escapeHtml(theme.label)}</strong> ${escapeHtml(theme.families.join(", "))}</li>`).join("")}</ul>
     </details>`;
   drawAttentionRiver();
 }
@@ -8201,8 +8210,7 @@ function bumpPath(points, continuing = false) {
 function vizInkOn(hex) {
   const channel = (offset) => {
     const value = parseInt(hex.slice(offset, offset + 2), 16) / 255;
-    const blended = value * 0.9 + 0.1;
-    return blended <= 0.04045 ? blended / 12.92 : ((blended + 0.055) / 1.055) ** 2.4;
+    return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
   };
   const luminance = 0.2126 * channel(1) + 0.7152 * channel(3) + 0.0722 * channel(5);
   return (luminance + 0.05) / 0.066 >= 1.05 / (luminance + 0.05) ? "#1c222a" : "#ffffff";
@@ -8212,34 +8220,35 @@ function drawAttentionRiver() {
   const view = attentionRiverView;
   const canvas = els.attentionRiver?.querySelector("[data-attention-canvas]");
   if (!view || !canvas) return;
-  const { years, families, rows } = view;
-  const visible = families.map((family, index) => ({ ...family, index })).filter((family) => !state.attentionHidden.has(family.label));
+  const { years, rows } = view;
   const width = Math.max(300, Math.floor(canvas.clientWidth || 640));
-  const height = width < 560 ? 240 : 290;
-  const margin = { top: 8, right: 14, bottom: 30, left: 14 };
+  const height = width < 560 ? 250 : 300;
+  const margin = { top: 8, right: 12, bottom: 28, left: 40 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
-  const totals = rows.map((row) => visible.reduce((sum, family) => sum + row.counts[family.index], 0));
-  const scale = innerHeight / Math.max(1, ...totals);
-  const middle = margin.top + innerHeight / 2;
   const step = years.length > 1 ? innerWidth / (years.length - 1) : innerWidth;
   const x = (index) => margin.left + (years.length > 1 ? index * step : innerWidth / 2);
-  const layers = visible.map((family) => ({ ...family, top: [], bottom: [] }));
-  rows.forEach((row, index) => {
-    let accumulated = -totals[index] / 2;
-    layers.forEach((layer) => {
-      layer.bottom.push(middle - accumulated * scale);
-      accumulated += row.counts[layer.index];
-      layer.top.push(middle - accumulated * scale);
-    });
+  const y = (share) => margin.top + innerHeight * (1 - share);
+  const bands = [
+    ...ATTENTION_THEMES.map((theme, index) => ({ label: theme.label, color: theme.color, shares: rows.map((row) => row.shares[index]), weights: rows.map((row) => row.weights[index]), topic: true })),
+    { label: "No topic family", color: ATTENTION_OTHER_COLOR, shares: rows.map((row) => row.otherShare), weights: rows.map((row) => row.other), topic: false },
+  ];
+  const cumulative = rows.map(() => 0);
+  bands.forEach((band) => {
+    band.bottom = cumulative.slice();
+    band.shares.forEach((share, index) => { cumulative[index] += share; });
+    band.top = cumulative.slice();
   });
   const svg = vizSvg("svg", {
-    class: "attention-svg",
+    class: `attention-svg${state.attentionFocus ? " is-focused" : ""}`,
     width,
     height,
     viewBox: `0 0 ${width} ${height}`,
     role: "img",
-    "aria-label": `Streamgraph of ${visible.length} topic families from ${years[0]} to ${years[years.length - 1]}.`,
+    "aria-label": `Stacked shares of six research themes from ${years[0]} to ${years[years.length - 1]}; each year adds up to 100 percent.`,
+  });
+  [0, 0.25, 0.5, 0.75, 1].forEach((tick) => {
+    vizSvg("text", { class: "attention-tick", x: margin.left - 8, y: y(tick).toFixed(1), dy: "0.32em", "text-anchor": "end" }, svg).textContent = `${tick * 100}%`;
   });
   const labelEvery = step >= 44 ? 1 : step >= 24 ? 2 : step >= 12 ? 5 : 10;
   years.forEach((year, index) => {
@@ -8247,46 +8256,58 @@ function drawAttentionRiver() {
     vizSvg("text", {
       class: "attention-year",
       x: x(index).toFixed(1),
-      y: height - 9,
+      y: height - 8,
       "text-anchor": index === 0 ? "start" : index === years.length - 1 ? "end" : "middle",
     }, svg).textContent = String(year);
   });
-  const layerNodes = layers.map((layer) => {
-    const topPoints = layer.top.map((y, index) => [x(index), y]);
-    const bottomPoints = layer.bottom.map((y, index) => [x(index), y]).reverse();
+  const bandNodes = bands.map((band) => {
+    const topPoints = band.top.map((share, index) => [x(index), y(share)]);
+    const bottomPoints = band.bottom.map((share, index) => [x(index), y(share)]).reverse();
     const d = `${bumpPath(topPoints)} L${bottomPoints[0][0].toFixed(1)},${bottomPoints[0][1].toFixed(1)}${bumpPath(bottomPoints, true)} Z`;
     return vizSvg("path", {
-      class: "attention-layer",
+      class: `attention-layer${band.label === state.attentionFocus ? " is-focus" : ""}`,
       d,
-      fill: ATTENTION_COLORS[layer.colorIndex],
-      "fill-opacity": 0.9,
+      fill: band.color,
       stroke: "#ffffff",
-      "stroke-width": 1.5,
+      "stroke-width": 1.2,
     }, svg);
   });
+  [0.25, 0.5, 0.75].forEach((tick) => {
+    vizSvg("line", { class: "attention-grid", x1: margin.left, x2: width - margin.right, y1: y(tick).toFixed(1), y2: y(tick).toFixed(1) }, svg);
+  });
+  vizSvg("line", { class: "attention-base", x1: margin.left, x2: width - margin.right, y1: y(0).toFixed(1), y2: y(0).toFixed(1) }, svg);
   const labelFont = "700 11.5px 'Source Sans 3', system-ui, sans-serif";
-  layers.forEach((layer) => {
+  bands.forEach((band) => {
     let bestIndex = 0;
     let bestThickness = -1;
-    layer.top.forEach((y, index) => {
-      const thickness = layer.bottom[index] - y;
+    band.top.forEach((top, index) => {
+      const thickness = (top - band.bottom[index]) * innerHeight;
       const interior = index > 0 && index < years.length - 1;
       if (thickness > bestThickness && (interior || years.length < 3)) {
         bestThickness = thickness;
         bestIndex = index;
       }
     });
-    const textWidth = measureVizText(layer.label, labelFont);
-    if (bestThickness < 16 || innerWidth < 340 || textWidth > innerWidth / 2) return;
+    const textWidth = measureVizText(band.label, labelFont);
+    if (bestThickness < 17 || innerWidth < 340 || textWidth > innerWidth / 2) return;
     const centre = Math.max(margin.left + textWidth / 2 + 4, Math.min(width - margin.right - textWidth / 2 - 4, x(bestIndex)));
+    // Only label a band where it stays thick enough, and keeps its vertical position, across the whole label width.
+    const span = [];
+    for (let index = 0; index < years.length; index += 1) {
+      if (x(index) >= centre - textWidth / 2 - step / 2 && x(index) <= centre + textWidth / 2 + step / 2) span.push(index);
+    }
+    const labelShare = (band.top[bestIndex] + band.bottom[bestIndex]) / 2;
+    const fits = span.every((index) => (band.top[index] - band.bottom[index]) * innerHeight >= 17
+      && labelShare <= band.top[index] - 8 / innerHeight && labelShare >= band.bottom[index] + 8 / innerHeight);
+    if (!fits) return;
     vizSvg("text", {
       class: "attention-label",
       x: centre.toFixed(1),
-      y: ((layer.top[bestIndex] + layer.bottom[bestIndex]) / 2).toFixed(1),
+      y: y(labelShare).toFixed(1),
       dy: "0.35em",
       "text-anchor": "middle",
-      fill: vizInkOn(ATTENTION_COLORS[layer.colorIndex]),
-    }, svg).textContent = layer.label;
+      fill: vizInkOn(band.color),
+    }, svg).textContent = band.label;
   });
   const cross = vizSvg("line", { class: "attention-cross", x1: 0, x2: 0, y1: margin.top, y2: margin.top + innerHeight, opacity: 0 }, svg);
   const hit = vizSvg("rect", {
@@ -8298,16 +8319,16 @@ function drawAttentionRiver() {
     fill: "transparent",
     tabindex: 0,
     role: "button",
-    "aria-label": "Topic streams by year. Use the left and right arrow keys to read each year.",
+    "aria-label": "Research theme shares by year. Use the left and right arrow keys to read each year.",
   }, svg);
   canvas.replaceChildren(svg);
   let current = years.length - 1;
   let hot = -1;
-  const setHot = (layerIndex) => {
-    hot = layerIndex;
-    svg.classList.toggle("is-hovering", layerIndex >= 0);
-    layerNodes.forEach((node, index) => node.classList.toggle("is-hot", index === layerIndex));
-    hit.style.cursor = layerIndex >= 0 ? "pointer" : "default";
+  const setHot = (bandIndex) => {
+    hot = bandIndex;
+    svg.classList.toggle("is-hovering", bandIndex >= 0);
+    bandNodes.forEach((node, index) => node.classList.toggle("is-hot", index === bandIndex));
+    hit.style.cursor = bandIndex >= 0 && bands[bandIndex].topic ? "pointer" : "default";
   };
   const show = (index, point) => {
     current = index;
@@ -8315,12 +8336,12 @@ function drawAttentionRiver() {
     cross.setAttribute("x1", x(index).toFixed(1));
     cross.setAttribute("x2", x(index).toFixed(1));
     cross.setAttribute("opacity", "1");
-    const lines = [...layers].reverse().map((layer) => {
-      const count = row.counts[layer.index];
-      const share = row.total ? Math.round((count / row.total) * 100) : 0;
-      return `<span class="viz-tip-row${layers.indexOf(layer) === hot ? " is-hot" : ""}"><i style="background:${ATTENTION_COLORS[layer.colorIndex]}"></i><b>${count}</b>${escapeHtml(layer.label)} <small>${share}%</small></span>`;
+    const lines = bands.slice().reverse().map((band) => {
+      const bandIndex = bands.indexOf(band);
+      const papers = band.weights[index];
+      return `<span class="viz-tip-row${bandIndex === hot ? " is-hot" : ""}"><i style="background:${band.color}"></i><b>${Math.round(band.shares[index] * 100)}%</b>${escapeHtml(band.label)} <small>${papers.toFixed(papers % 1 ? 1 : 0)} papers</small></span>`;
     }).join("");
-    showVizTooltip(point || svgClientPoint(svg, x(index), margin.top + 10), `<strong class="viz-tip-title">${row.year}</strong>${lines}<em>${row.total} publication${row.total === 1 ? "" : "s"} that year; percentages are shares of those papers.</em>`);
+    showVizTooltip(point || svgClientPoint(svg, x(index), margin.top + 10), `<strong class="viz-tip-title">${row.year} &middot; ${row.total} publication${row.total === 1 ? "" : "s"}</strong>${lines}<em>Papers spanning several themes are split equally, so fractions of papers appear.</em>`);
   };
   const clear = () => {
     cross.setAttribute("opacity", "0");
@@ -8330,19 +8351,22 @@ function drawAttentionRiver() {
   hit.addEventListener("pointermove", (event) => {
     const { x: localX, y: localY } = svgLocalPoint(svg, event);
     const index = Math.max(0, Math.min(years.length - 1, Math.round((localX - margin.left) / (step || 1))));
-    const layerIndex = layers.findIndex((layer) => localY >= layer.top[index] && localY <= layer.bottom[index]);
-    setHot(layerIndex);
+    const share = 1 - (localY - margin.top) / innerHeight;
+    const bandIndex = bands.findIndex((band) => share >= band.bottom[index] && share <= band.top[index]);
+    setHot(bandIndex);
     show(index, event);
   });
   hit.addEventListener("pointerleave", clear);
   hit.addEventListener("blur", clear);
   hit.addEventListener("focus", () => show(current));
   hit.addEventListener("click", () => {
-    if (hot < 0) return;
-    const label = layers[hot].label;
-    clear();
-    setOverviewExpertiseSelection(label, "family");
-    requestAnimationFrame(() => els.overviewExpertiseDetails?.scrollIntoView({ block: "nearest", behavior: "smooth" }));
+    if (hot < 0 || !bands[hot].topic) return;
+    state.attentionFocus = state.attentionFocus === bands[hot].label ? "" : bands[hot].label;
+    els.attentionRiver.querySelectorAll("[data-attention-topic]").forEach((node) => {
+      node.setAttribute("aria-pressed", String(node.dataset.attentionTopic === state.attentionFocus));
+    });
+    hideVizTooltip();
+    drawAttentionRiver();
   });
   hit.addEventListener("keydown", (event) => {
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
@@ -8413,7 +8437,7 @@ function grantCallTiming(call, today) {
 function grantCallCalendarRecords(today = todayIsoDate()) {
   const merged = new Map();
   const fillable = ["amount", "duration", "eligibility", "tips", "why", "fitNote", "sourceUrl", "link", "successRate", "timing", "deadline", "scheme", "funder"];
-  [...(state.resourceData?.recentCalls || []), ...(state.resourceData?.opportunities || [])].forEach((call) => {
+  [...(state.resourceData?.recentCalls || []), ...(state.resourceData?.opportunities || []), ...(state.resourceData?.additionalCalls || [])].forEach((call) => {
     if (!call?.name) return;
     const key = grantCallKey(call) || String(call.name);
     const timing = grantCallTiming(call, today);
@@ -8484,7 +8508,14 @@ function renderCallCalendar() {
     meta.recentCallsChecked ? `highlighted calls checked ${formatIsoDisplayDate(meta.recentCallsChecked)}` : "",
   ].filter(Boolean).join("; ");
   const chip = (record) => `<button type="button" class="viz-chip${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
+  const datedCount = onTimeline.filter((record) => record.timing.kind !== "passed").length;
+  const summary = [
+    `${datedCount} call${datedCount === 1 ? "" : "s"} with a date in the next twelve months`,
+    later.length ? `${later.length} later` : "",
+    undated.length ? `${undated.length} without a confirmed date, listed under the timeline` : "",
+  ].filter(Boolean).join(" \u00b7 ");
   els.callCalendar.innerHTML = `
+    <p class="call-calendar-summary">${escapeHtml(summary)}.</p>
     <div class="call-legend" aria-hidden="true">
       <span><i class="tone-soon"></i>Within 30 days</span>
       <span><i class="tone-upcoming"></i>Within 120 days</span>
@@ -8823,12 +8854,9 @@ function attachVisualUpgradeEvents() {
     const button = event.target.closest("[data-attention-topic]");
     if (!button) return;
     const label = button.dataset.attentionTopic;
-    if (state.attentionHidden.has(label)) state.attentionHidden.delete(label);
-    else state.attentionHidden.add(label);
-    const visible = attentionRiverView?.families.filter((family) => !state.attentionHidden.has(family.label)) || [];
-    if (!visible.length) state.attentionHidden.delete(label);
+    state.attentionFocus = state.attentionFocus === label ? "" : label;
     els.attentionRiver.querySelectorAll("[data-attention-topic]").forEach((node) => {
-      node.setAttribute("aria-pressed", String(!state.attentionHidden.has(node.dataset.attentionTopic)));
+      node.setAttribute("aria-pressed", String(node.dataset.attentionTopic === state.attentionFocus));
     });
     drawAttentionRiver();
   });

@@ -3587,10 +3587,18 @@ footer {
 .viz-tip-row.is-hot { color: var(--ink-900); font-weight: 700; }
 .viz-tooltip em { color: var(--ink-500); font-size: 0.7rem; font-style: normal; margin-top: 3px; }
 .attention-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
-.attention-legend .viz-chip[aria-pressed="false"] { color: var(--ink-400); }
-.attention-legend .viz-chip[aria-pressed="false"] i { background: transparent !important; box-shadow: inset 0 0 0 1.5px var(--ink-300); }
+.attention-legend .viz-chip[aria-pressed="true"] { background: #faf7f3; border-color: var(--red); color: var(--red-dk); }
+.attention-legend .viz-chip.is-static { cursor: default; }
+.attention-legend .viz-chip.is-static:hover { border-color: var(--ink-200); color: var(--ink-700); }
+.attention-theme-key { color: var(--ink-500); display: grid; font-size: 0.74rem; gap: 4px; line-height: 1.45; list-style: none; margin: 12px 0 0; padding: 0; }
+.attention-theme-key strong { color: var(--ink-900); margin-right: 4px; }
+.attention-subtitle { color: var(--ink-500); font-size: 0.82rem; margin: -6px 0 12px; }
 .attention-layer { transition: opacity .15s ease; }
-.attention-svg.is-hovering .attention-layer:not(.is-hot) { opacity: 0.45; }
+.attention-svg.is-focused .attention-layer:not(.is-focus) { opacity: 0.3; }
+.attention-svg.is-hovering .attention-layer:not(.is-hot) { opacity: 0.5; }
+.attention-grid { shape-rendering: crispEdges; stroke: rgba(255, 255, 255, 0.55); stroke-width: 1; pointer-events: none; }
+.attention-base { shape-rendering: crispEdges; stroke: var(--ink-300); stroke-width: 1; }
+.attention-tick { fill: var(--ink-500); font-size: 10.5px; font-variant-numeric: tabular-nums; }
 .attention-label { font-size: 11.5px; font-weight: 700; pointer-events: none; }
 .attention-year { fill: var(--ink-500); font-size: 10.5px; font-weight: 600; }
 .attention-cross { pointer-events: none; shape-rendering: crispEdges; stroke: var(--ink-700); stroke-width: 1; }
@@ -3604,6 +3612,7 @@ footer {
 }
 .resource-grid > .call-calendar-panel { grid-column: 1 / -1; }
 .call-calendar-intro { color: var(--ink-500); font-size: 0.82rem; margin: -4px 0 14px; max-width: 720px; }
+.call-calendar-summary { color: var(--ink-900); font-size: 0.82rem; font-weight: 600; margin: 0 0 10px; }
 .call-legend { color: var(--ink-700); display: flex; flex-wrap: wrap; font-size: 0.74rem; gap: 6px 18px; margin: 0 0 8px; }
 .call-legend span { align-items: center; display: inline-flex; gap: 7px; }
 .call-legend i { border-radius: 50%; display: inline-block; height: 9px; width: 9px; }
