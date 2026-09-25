@@ -52,7 +52,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260925-topics";
+const DATA_VERSION = "20260925-nocounts";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -7886,7 +7886,6 @@ function renderYearBars(pubs) {
     .sort((a, b) => String(a.display || a.name).localeCompare(String(b.display || b.name)));
   if (state.dotTracePerson && !people.some((person) => person.id === state.dotTracePerson)) state.dotTracePerson = "";
   if (state.dotTraceTopic && !ATTENTION_CLUSTERS[Number(state.dotTraceTopic)]) state.dotTraceTopic = "";
-  const bandCounts = AIP_DOT_BANDS.map((_, index) => shown.filter((pub) => aipBandIndex(pub) === index).length);
   publicationDotsView = { years, byYear, max, currentYear, total, counts };
   els.yearBars.innerHTML = `<div class="pub-dots">
     <div class="pub-dots-controls">
@@ -7906,7 +7905,7 @@ function renderYearBars(pubs) {
     </div>
     <div class="pub-dots-canvas" data-dots-canvas></div>
     <div class="pub-dots-legend">
-      ${AIP_DOT_BANDS.map((band, index) => `<span><i style="background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}"></i>${escapeHtml(band.label)} <b>${bandCounts[index]}</b></span>`).join("")}
+      ${AIP_DOT_BANDS.map((band, index) => `<span><i style="background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}"></i>${escapeHtml(band.label)}</span>`).join("")}
       <span class="pub-dots-status" data-dots-status role="status" aria-live="polite"></span>
     </div>
   </div>`;
@@ -7950,7 +7949,7 @@ function drawPublicationDots() {
   if (!layout) layout = { perRow: 1, pitch: Math.max(3, colWidth * 0.8) };
   const { perRow, pitch } = layout;
   const radius = Math.max(1.4, pitch * 0.4);
-  const top = 22;
+  const top = 8;
   const plotHeight = Math.ceil(max / perRow) * pitch;
   const height = top + plotHeight + 30;
   const tracing = Boolean(state.dotTracePerson || state.dotTraceTopic);
@@ -7989,14 +7988,6 @@ function drawPublicationDots() {
       points.push({ x, y, pub, yearIndex, stackIndex });
     });
     highlighted += matches;
-    if (list.length && (colWidth >= 18 || list.length === max)) {
-      vizSvg("text", {
-        class: `pub-dots-count${tracing ? " is-traced" : ""}`,
-        x: centre.toFixed(1),
-        y: (top + plotHeight - Math.ceil(list.length / perRow) * pitch - 7).toFixed(1),
-        "text-anchor": "middle",
-      }, svg).textContent = String(tracing ? matches : list.length);
-    }
     const label = yearChartLabel(year, yearIndex, years);
     if (label) {
       vizSvg("text", { class: "pub-dots-year", x: centre.toFixed(1), y: top + plotHeight + 23, "text-anchor": "middle" }, svg)
