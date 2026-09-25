@@ -3735,3 +3735,19 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .pub-dot, .attention-layer, .call-pill-shape { transition: none; }
 }
+
+/* Research-attention heatmap, 25 September 2026. */
+.attention-head { align-items: start; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; margin: -4px 0 12px; }
+.attention-head .attention-subtitle { margin: 0; max-width: 640px; }
+.attention-wrap { border-top: 0; }
+.attention-heatmap { border-collapse: separate; border-spacing: 2px; min-width: 640px; table-layout: fixed; }
+.attention-heatmap th, .attention-heatmap td { border: 0; letter-spacing: 0; padding: 0; text-transform: none; }
+.attention-heatmap thead th { color: var(--ink-500); font-size: 0.66rem; font-weight: 600; padding-bottom: 4px; text-align: center; }
+.attention-heatmap thead th.attention-label-col { text-align: left; }
+.attention-heatmap .attention-label-col, .attention-heatmap tbody th { width: 200px; }
+.attention-heatmap tbody th { background: var(--white); color: var(--ink-900); font-size: 0.78rem; font-weight: 600; left: 0; line-height: 1.2; padding-right: 10px; position: sticky; white-space: normal; z-index: 1; }
+.attention-cell { border-radius: 2px; cursor: default; font-size: 0.68rem; font-variant-numeric: tabular-nums; font-weight: 600; height: 30px; text-align: center; }
+.attention-heatmap.is-dense .attention-cell { font-size: 0.6rem; }
+.attention-heatmap .attention-summary { color: var(--ink-700); font-size: 0.74rem; font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; white-space: nowrap; width: 62px; }
+.attention-heatmap thead .attention-summary { color: var(--ink-500); font-size: 0.66rem; }
+@media (max-width: 700px) { .attention-heatmap .attention-label-col, .attention-heatmap tbody th { width: 130px; } }
