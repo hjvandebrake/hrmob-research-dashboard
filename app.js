@@ -42,6 +42,10 @@ const state = {
   selectedStaffId: "",
   staffSubpage: "research",
   collaborationClustersExpanded: false,
+  dotTracePerson: "",
+  dotTraceTopic: "",
+  attentionHidden: new Set(),
+  selectedCallKey: "",
   appStarted: false,
   dataLoading: false,
 };
@@ -49,7 +53,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260924-1119";
+const DATA_VERSION = "20260925-visuals";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -493,6 +497,12 @@ function cacheElements() {
   els.journalPublishedList = document.getElementById("journal-published-list");
   els.journalOpenAccessList = document.getElementById("journal-open-access-list");
   els.yearBars = document.getElementById("year-bars");
+  els.attentionRiver = document.getElementById("attention-river");
+  els.callCalendar = document.getElementById("call-calendar");
+  els.quickFind = document.getElementById("quick-find");
+  els.quickFindInput = document.getElementById("quick-find-input");
+  els.quickFindList = document.getElementById("quick-find-list");
+  els.quickFindOpen = document.getElementById("quick-find-open");
   els.aipBars = document.getElementById("aip-bars");
   els.grantList = document.getElementById("grant-list");
   els.phdList = document.getElementById("phd-list");
@@ -1045,6 +1055,7 @@ function attachEvents() {
     if (els.fteToggle) els.fteToggle.checked = state.includeAffiliatedResearchers;
     applyRouteFromHash();
   });
+  attachVisualUpgradeEvents();
 }
 
 function handleInlineStaffLink(event) {
@@ -1536,7 +1547,7 @@ function applyGlobalStateFromUrl() {
 
 function routeUrl() {
   const params = new URLSearchParams(location.search);
-  if (normalizeWindowMode(state.publicationWindow) === "last10") params.delete("window");
+  if (normalizeWindowMode(state.publicationWindow) === normalizeWindowMode("")) params.delete("window");
   else params.set("window", normalizeWindowMode(state.publicationWindow));
   if (state.includeAffiliatedResearchers) params.set("affiliated", "1");
   else params.delete("affiliated");
@@ -4081,6 +4092,7 @@ function renderOverview() {
   ].join("");
 
   renderYearBars(pubs);
+  renderAttentionRiver(pubs);
   renderAipBars(pubs);
   renderOverviewTopicCloud(pubs);
   renderOverviewJournals(journals);
@@ -4147,6 +4159,7 @@ function renderPhds() {
 function renderResources() {
   if (!els.resourceOpportunities || !els.resourceTips) return;
   renderOverviewGrants(activeGrants());
+  renderCallCalendar();
   renderRecentGrantCalls();
   const allOpportunities = state.resourceData?.opportunities || [];
   const opportunities = state.resourceShowClosed
@@ -5394,58 +5407,6 @@ function isRecentPublication(pub) {
   const toYear = windowBoundaryYear(window.to);
   if (!Number.isFinite(fromYear) || !Number.isFinite(toYear)) return false;
   return Number.isFinite(pub.year) && pub.year >= fromYear && pub.year <= toYear;
-}
-
-function renderYearBars(pubs) {
-  const validYears = pubs.map(publicationChartYear).filter(Number.isFinite);
-  if (!validYears.length) {
-    els.yearBars.innerHTML = `<div class="staff-empty">No publication years available for this window.</div>`;
-    return;
-  }
-  const counts = countBy(validYears, (year) => year);
-  const startYear = overviewStartYear(pubs);
-  const endYear = Math.max(startYear, ...validYears);
-  const years = [];
-  for (let year = startYear; year <= endYear; year += 1) years.push(year);
-  const max = Math.max(1, ...years.map((year) => counts.get(year) || 0));
-  const total = years.reduce((sum, year) => sum + (counts.get(year) || 0), 0);
-  const density = yearChartDensity(years.length);
-  const peakYears = years.filter((year) => (counts.get(year) || 0) === max);
-  const peakLabel = peakYears.slice(0, 3).join(", ");
-  const currentYear = new Date().getFullYear();
-  const includesYearToDate = years.includes(currentYear);
-  els.yearBars.innerHTML = `<div class="year-chart">
-    <div class="year-chart-scale" aria-hidden="true">
-      <span>${escapeHtml(String(max))}</span>
-      <span>${escapeHtml(String(Math.round(max / 2)))}</span>
-    </div>
-    <div class="year-histogram year-histogram-${density}" style="--year-count:${years.length}" role="img" aria-label="${escapeHtml(`Publications by year, ${publicationWindowLabel()}. Peak ${max} publication${max === 1 ? "" : "s"} in ${peakLabel}.`)}">
-      ${years.map((year, index) => {
-      const count = counts.get(year) || 0;
-      const label = yearChartLabel(year, index, years);
-      const height = count ? Math.max(4, (count / max) * 100) : 0;
-      const displayLabel = label ? `${label}${year === currentYear ? " YTD" : ""}` : "";
-      return `<span class="year-bar" title="${year}${year === currentYear ? " year to date" : ""}: ${count} publication${count === 1 ? "" : "s"}">
-        <span class="year-bar-stack">
-          <em>${escapeHtml(String(count))}</em>
-          <i style="height:${height}%"></i>
-        </span>
-        <b class="${displayLabel ? "" : "year-label-hidden"}">${escapeHtml(displayLabel)}</b>
-      </span>`;
-    }).join("")}
-    </div>
-    <p class="year-chart-note">${escapeHtml(`${total} publication${total === 1 ? "" : "s"} across ${publicationWindowLabel()}; peak ${max} in ${peakLabel}.${includesYearToDate ? ` ${currentYear} is year to date.` : ""}`)}</p>
-    <details class="metric-data-details year-data-details">
-      <summary>View annual data as a table</summary>
-      <div class="table-wrap year-data-table-wrap" role="region" aria-label="Annual publication counts" tabindex="0">
-        <table>
-          <caption class="visually-hidden">Counted journal publications by year for ${escapeHtml(publicationWindowLabel())}.</caption>
-          <thead><tr><th scope="col">Year</th><th scope="col" class="num">Publications</th></tr></thead>
-          <tbody>${years.map((year) => `<tr><th scope="row">${year}${year === currentYear ? " (YTD)" : ""}</th><td class="num">${counts.get(year) || 0}</td></tr>`).join("")}</tbody>
-        </table>
-      </div>
-    </details>
-  </div>`;
 }
 
 function yearChartDensity(yearCount) {
@@ -7769,4 +7730,1166 @@ function loadCurrentStaffUpdate() {
   els.staffUpdateMethods.value = format("methodsExpertise");
   els.staffUpdateResources.value = format("resources");
   els.staffUpdateStatus.textContent = "Current fields loaded. Edit these and email your update to Joost. To remove an item, say so explicitly in your update.";
+}
+
+// Overview publication dots, research attention river, grant call calendar, and quick find (25 September 2026).
+const AIP_DOT_BANDS = [
+  { label: "AIP ≥ 95", color: "#1c565d" },
+  { label: "AIP 90–95", color: "#3f868c" },
+  { label: "AIP below 90", color: "#7fb5b8" },
+  { label: "No AIP match", color: "#ffffff", stroke: "#98a0a8" },
+];
+const ATTENTION_COLORS = ["#129390", "#bd592f", "#5b6cb2", "#b8892d", "#984979", "#54803a"];
+const ATTENTION_FAMILY_LIMIT = 6;
+const CALL_CALENDAR_MONTHS = 12;
+const VIZ_SVG_NS = "http://www.w3.org/2000/svg";
+const publicationFamilyLabelCache = new WeakMap();
+let publicationDotsView = null;
+let attentionRiverView = null;
+let callCalendarView = null;
+let attentionColorCache = { key: "", map: new Map() };
+let vizTooltipElement = null;
+let vizTextContext = null;
+const quickFindState = { items: [], results: [], index: 0, opener: null };
+
+function vizSvg(tag, attrs = {}, parent = null) {
+  const node = document.createElementNS(VIZ_SVG_NS, tag);
+  Object.entries(attrs).forEach(([key, value]) => {
+    if (value !== null && value !== undefined && value !== false) node.setAttribute(key, String(value));
+  });
+  if (parent) parent.appendChild(node);
+  return node;
+}
+
+function measureVizText(text, font) {
+  if (!vizTextContext) vizTextContext = document.createElement("canvas").getContext("2d");
+  if (!vizTextContext) return String(text).length * 6.4;
+  vizTextContext.font = font;
+  return vizTextContext.measureText(String(text)).width;
+}
+
+function vizTooltip() {
+  if (!vizTooltipElement) {
+    vizTooltipElement = document.createElement("div");
+    vizTooltipElement.className = "viz-tooltip";
+    vizTooltipElement.hidden = true;
+    document.body.appendChild(vizTooltipElement);
+  }
+  return vizTooltipElement;
+}
+
+function showVizTooltip(point, html) {
+  const tip = vizTooltip();
+  tip.innerHTML = html;
+  tip.hidden = false;
+  moveVizTooltip(point);
+}
+
+function moveVizTooltip(point) {
+  const tip = vizTooltipElement;
+  if (!tip || tip.hidden || !point) return;
+  const box = tip.getBoundingClientRect();
+  let left = point.clientX + 14;
+  let top = point.clientY + 14;
+  if (left + box.width > window.innerWidth - 8) left = point.clientX - box.width - 14;
+  if (top + box.height > window.innerHeight - 8) top = point.clientY - box.height - 14;
+  tip.style.transform = `translate(${Math.max(8, Math.round(left))}px, ${Math.max(8, Math.round(top))}px)`;
+}
+
+function hideVizTooltip() {
+  if (vizTooltipElement) vizTooltipElement.hidden = true;
+}
+
+function svgClientPoint(svg, x, y) {
+  const rect = svg.getBoundingClientRect();
+  const viewWidth = Number(svg.getAttribute("width")) || rect.width || 1;
+  const viewHeight = Number(svg.getAttribute("height")) || rect.height || 1;
+  return {
+    clientX: rect.left + (x * rect.width) / viewWidth,
+    clientY: rect.top + (y * rect.height) / viewHeight,
+  };
+}
+
+function svgLocalPoint(svg, event) {
+  const rect = svg.getBoundingClientRect();
+  const viewWidth = Number(svg.getAttribute("width")) || rect.width || 1;
+  const viewHeight = Number(svg.getAttribute("height")) || rect.height || 1;
+  return {
+    x: ((event.clientX - rect.left) * viewWidth) / (rect.width || 1),
+    y: ((event.clientY - rect.top) * viewHeight) / (rect.height || 1),
+  };
+}
+
+function aipBandIndex(pub) {
+  if (!isNumber(pub?.aip)) return 3;
+  if (pub.aip >= 95) return 0;
+  if (pub.aip >= 90) return 1;
+  return 2;
+}
+
+function publicationFamilyLabels(pub) {
+  if (publicationFamilyLabelCache.has(pub)) return publicationFamilyLabelCache.get(pub);
+  const labels = new Set(pub.topicFamilies || []);
+  if (!labels.size) {
+    const text = publicationTopicText(pub);
+    EXPERTISE_FAMILIES.forEach(([label, terms]) => {
+      if (scoreTextAgainstBundle(text, familyBundle(label, terms)) > 0) labels.add(label);
+    });
+  }
+  publicationFamilyLabelCache.set(pub, labels);
+  return labels;
+}
+
+function publicationLink(pub) {
+  const doi = normalizeDoi(pub?.doi);
+  if (doi) return `https://doi.org/${doi.split("/").map(encodeURIComponent).join("/")}`;
+  return /^https?:\/\//i.test(pub?.url || "") ? pub.url : "";
+}
+
+function openPublicationLink(pub) {
+  const link = publicationLink(pub);
+  if (link) window.open(link, "_blank", "noopener");
+}
+
+function formatPersonRank(rank) {
+  const text = String(rank || "").replace(/_/g, " ").trim();
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : "";
+}
+
+/* ---------- Publications by year: one dot per counted article ---------- */
+
+function renderYearBars(pubs) {
+  if (!els.yearBars) return;
+  const validYears = pubs.map(publicationChartYear).filter(Number.isFinite);
+  if (!validYears.length) {
+    publicationDotsView = null;
+    els.yearBars.innerHTML = `<div class="staff-empty">No publication years available for this window.</div>`;
+    return;
+  }
+  const counts = countBy(validYears, (year) => year);
+  const startYear = overviewStartYear(pubs);
+  const endYear = Math.max(startYear, ...validYears);
+  const years = [];
+  for (let year = startYear; year <= endYear; year += 1) years.push(year);
+  const byYear = new Map(years.map((year) => [year, []]));
+  pubs.forEach((pub) => {
+    const year = publicationChartYear(pub);
+    if (byYear.has(year)) byYear.get(year).push(pub);
+  });
+  byYear.forEach((list) => list.sort((a, b) => (
+    aipBandIndex(a) - aipBandIndex(b)
+    || publicationDateValue(a) - publicationDateValue(b)
+    || String(a.id).localeCompare(String(b.id))
+  )));
+  const max = Math.max(1, ...years.map((year) => counts.get(year) || 0));
+  const total = years.reduce((sum, year) => sum + (counts.get(year) || 0), 0);
+  const peakYears = years.filter((year) => (counts.get(year) || 0) === max);
+  const peakLabel = peakYears.slice(0, 3).join(", ");
+  const currentYear = new Date().getFullYear();
+  const includesYearToDate = years.includes(currentYear);
+  const shown = years.flatMap((year) => byYear.get(year));
+  const people = activePeople()
+    .slice()
+    .sort((a, b) => String(a.display || a.name).localeCompare(String(b.display || b.name)));
+  if (state.dotTracePerson && !people.some((person) => person.id === state.dotTracePerson)) state.dotTracePerson = "";
+  const topics = publicationFamilySignals(shown).slice(0, 6).map((signal) => signal.label);
+  if (state.dotTraceTopic && !topics.includes(state.dotTraceTopic)) state.dotTraceTopic = "";
+  const bandCounts = AIP_DOT_BANDS.map((_, index) => shown.filter((pub) => aipBandIndex(pub) === index).length);
+  publicationDotsView = { years, byYear, max, currentYear, total };
+  els.yearBars.innerHTML = `<div class="pub-dots">
+    <div class="pub-dots-controls">
+      <label class="pub-dots-field"><span>Highlight</span>
+        <select data-dot-person aria-label="Highlight one researcher's publications">
+          <option value="">All researchers</option>
+          ${people.map((person) => `<option value="${escapeHtml(person.id)}"${person.id === state.dotTracePerson ? " selected" : ""}>${escapeHtml(person.name || person.display)}</option>`).join("")}
+        </select>
+      </label>
+      <div class="pub-dots-topics" role="group" aria-label="Highlight a topic family">
+        ${topics.map((label) => `<button type="button" class="viz-chip" data-dot-topic="${escapeHtml(label)}" aria-pressed="${label === state.dotTraceTopic}">${escapeHtml(label)}</button>`).join("")}
+      </div>
+      <button type="button" class="section-link pub-dots-clear" data-dot-clear${state.dotTracePerson || state.dotTraceTopic ? "" : " hidden"}>Clear highlight</button>
+    </div>
+    <div class="pub-dots-canvas" data-dots-canvas></div>
+    <div class="pub-dots-legend">
+      ${AIP_DOT_BANDS.map((band, index) => `<span><i style="background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}"></i>${escapeHtml(band.label)} <b>${bandCounts[index]}</b></span>`).join("")}
+      <span class="pub-dots-status" data-dots-status role="status" aria-live="polite"></span>
+    </div>
+    <p class="year-chart-note">${escapeHtml(`${total} publication${total === 1 ? "" : "s"} across ${publicationWindowLabel()}; peak ${max} in ${peakLabel}.${includesYearToDate ? ` ${currentYear} is year to date.` : ""} Each dot is one counted journal article, shaded by the journal's average AIP 2020-2024. Hover for details; select a dot to open the publisher record.`)}</p>
+    <details class="metric-data-details year-data-details">
+      <summary>View annual data as a table</summary>
+      <div class="table-wrap year-data-table-wrap" role="region" aria-label="Annual publication counts" tabindex="0">
+        <table>
+          <caption class="visually-hidden">Counted journal publications by year for ${escapeHtml(publicationWindowLabel())}.</caption>
+          <thead><tr><th scope="col">Year</th><th scope="col" class="num">Publications</th><th scope="col" class="num">AIP &ge; 95</th></tr></thead>
+          <tbody>${years.map((year) => `<tr><th scope="row">${year}${year === currentYear ? " (YTD)" : ""}</th><td class="num">${counts.get(year) || 0}</td><td class="num">${byYear.get(year).filter((pub) => aipBandIndex(pub) === 0).length}</td></tr>`).join("")}</tbody>
+        </table>
+      </div>
+    </details>
+  </div>`;
+  drawPublicationDots();
+}
+
+function publicationDotMatches(pub) {
+  if (state.dotTracePerson && !(pub.matchedPeople || []).includes(state.dotTracePerson)) return false;
+  if (state.dotTraceTopic && !publicationFamilyLabels(pub).has(state.dotTraceTopic)) return false;
+  return true;
+}
+
+function refreshPublicationDotControls() {
+  if (!els.yearBars) return;
+  els.yearBars.querySelectorAll("[data-dot-topic]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.dotTopic === state.dotTraceTopic));
+  });
+  const select = els.yearBars.querySelector("[data-dot-person]");
+  if (select && select.value !== state.dotTracePerson) select.value = state.dotTracePerson;
+  const clear = els.yearBars.querySelector("[data-dot-clear]");
+  if (clear) clear.hidden = !(state.dotTracePerson || state.dotTraceTopic);
+  drawPublicationDots();
+}
+
+function drawPublicationDots() {
+  const view = publicationDotsView;
+  const canvas = els.yearBars?.querySelector("[data-dots-canvas]");
+  if (!view || !canvas) return;
+  const { years, byYear, max, currentYear } = view;
+  const width = Math.max(280, Math.floor(canvas.clientWidth || els.yearBars.clientWidth || 640));
+  const colWidth = width / years.length;
+  const perRow = colWidth >= 160 ? 4 : colWidth >= 46 ? 3 : colWidth >= 16 ? 2 : 1;
+  const pitch = Math.max(5, Math.min(14, (colWidth * 0.72) / perRow));
+  const radius = Math.max(1.8, pitch * 0.38);
+  const top = 22;
+  const plotHeight = Math.ceil(max / perRow) * pitch;
+  const height = top + plotHeight + 30;
+  const tracing = Boolean(state.dotTracePerson || state.dotTraceTopic);
+  const svg = vizSvg("svg", {
+    class: "pub-dots-svg",
+    width,
+    height,
+    viewBox: `0 0 ${width} ${height}`,
+    role: "img",
+    tabindex: 0,
+    "aria-label": `Unit chart of ${view.total} counted publications by year, one dot per publication. Use the arrow keys to move between publications and Enter to open one.`,
+  });
+  vizSvg("line", { class: "pub-dots-base", x1: 0, x2: width, y1: top + plotHeight + 5, y2: top + plotHeight + 5 }, svg);
+  const points = [];
+  let highlighted = 0;
+  years.forEach((year, yearIndex) => {
+    const list = byYear.get(year) || [];
+    const centre = colWidth * yearIndex + colWidth / 2;
+    const firstX = centre - ((perRow - 1) * pitch) / 2;
+    let matches = 0;
+    list.forEach((pub, stackIndex) => {
+      const x = firstX + (stackIndex % perRow) * pitch;
+      const y = top + plotHeight - Math.floor(stackIndex / perRow) * pitch - pitch / 2;
+      const band = AIP_DOT_BANDS[aipBandIndex(pub)];
+      const on = !tracing || publicationDotMatches(pub);
+      if (on) matches += 1;
+      vizSvg("circle", {
+        class: `pub-dot${on ? "" : " is-dimmed"}`,
+        cx: x.toFixed(1),
+        cy: y.toFixed(1),
+        r: radius.toFixed(2),
+        fill: band.color,
+        stroke: band.stroke || null,
+        "stroke-width": band.stroke ? 1.2 : null,
+      }, svg);
+      points.push({ x, y, pub, yearIndex, stackIndex });
+    });
+    highlighted += matches;
+    if (list.length && (colWidth >= 18 || list.length === max)) {
+      vizSvg("text", {
+        class: `pub-dots-count${tracing ? " is-traced" : ""}`,
+        x: centre.toFixed(1),
+        y: (top + plotHeight - Math.ceil(list.length / perRow) * pitch - 7).toFixed(1),
+        "text-anchor": "middle",
+      }, svg).textContent = String(tracing ? matches : list.length);
+    }
+    const label = yearChartLabel(year, yearIndex, years);
+    if (label) {
+      vizSvg("text", { class: "pub-dots-year", x: centre.toFixed(1), y: top + plotHeight + 23, "text-anchor": "middle" }, svg)
+        .textContent = `${label}${year === currentYear && colWidth >= 40 ? " YTD" : ""}`;
+    }
+  });
+  const status = els.yearBars.querySelector("[data-dots-status]");
+  if (status) status.textContent = tracing ? `${highlighted} of ${view.total} highlighted` : "";
+  const ring = vizSvg("circle", { class: "pub-dots-ring", r: (radius + 3.5).toFixed(2), cx: -40, cy: -40, opacity: 0 }, svg);
+  canvas.replaceChildren(svg);
+
+  let active = -1;
+  const hitRadius = Math.max(10, pitch * 1.3);
+  const focusPoint = (index, event) => {
+    const point = points[index];
+    if (!point) return;
+    active = index;
+    ring.setAttribute("cx", point.x.toFixed(1));
+    ring.setAttribute("cy", point.y.toFixed(1));
+    ring.setAttribute("opacity", "1");
+    showVizTooltip(event || svgClientPoint(svg, point.x, point.y), publicationDotTooltip(point.pub));
+  };
+  const clear = () => {
+    active = -1;
+    ring.setAttribute("opacity", "0");
+    svg.style.cursor = "";
+    hideVizTooltip();
+  };
+  svg.addEventListener("pointermove", (event) => {
+    const { x, y } = svgLocalPoint(svg, event);
+    let best = -1;
+    let bestDistance = Infinity;
+    points.forEach((point, index) => {
+      const distance = (point.x - x) ** 2 + (point.y - y) ** 2;
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        best = index;
+      }
+    });
+    if (best < 0 || Math.sqrt(bestDistance) > hitRadius) {
+      clear();
+      return;
+    }
+    svg.style.cursor = publicationLink(points[best].pub) ? "pointer" : "default";
+    if (best !== active) focusPoint(best, event);
+    else moveVizTooltip(event);
+  });
+  svg.addEventListener("pointerleave", clear);
+  svg.addEventListener("blur", clear);
+  svg.addEventListener("click", () => {
+    if (active >= 0) openPublicationLink(points[active].pub);
+  });
+  svg.addEventListener("keydown", (event) => {
+    const keys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "Enter", " ", "Escape"];
+    if (!keys.includes(event.key) || !points.length) return;
+    if (event.key === "Escape") {
+      clear();
+      return;
+    }
+    event.preventDefault();
+    if (active < 0) {
+      focusPoint(points.length - 1);
+      return;
+    }
+    const current = points[active];
+    if (event.key === "Enter" || event.key === " ") {
+      openPublicationLink(current.pub);
+      return;
+    }
+    let next = active;
+    if (event.key === "Home") next = 0;
+    if (event.key === "End") next = points.length - 1;
+    if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+      const target = current.stackIndex + (event.key === "ArrowUp" ? perRow : -perRow);
+      const found = points.findIndex((point) => point.yearIndex === current.yearIndex && point.stackIndex === target);
+      if (found >= 0) next = found;
+    }
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      const step = event.key === "ArrowRight" ? 1 : -1;
+      for (let yearIndex = current.yearIndex + step; yearIndex >= 0 && yearIndex < years.length; yearIndex += step) {
+        const column = points.filter((point) => point.yearIndex === yearIndex);
+        if (!column.length) continue;
+        const target = column.find((point) => point.stackIndex === current.stackIndex) || column[column.length - 1];
+        next = points.indexOf(target);
+        break;
+      }
+    }
+    focusPoint(next);
+  });
+}
+
+function publicationDotTooltip(pub) {
+  const band = AIP_DOT_BANDS[aipBandIndex(pub)];
+  const people = peopleById();
+  const names = activeMatchedPeople(pub, activePeopleSet()).map((id) => people.get(id)?.name || people.get(id)?.display || id);
+  const journal = displayJournalName(pub.journal || pub.aipJournal || "Unknown journal");
+  const aip = isNumber(pub.aip) ? `AIP ${Number(pub.aip).toFixed(1)}` : "No AIP match";
+  const swatch = `background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}`;
+  return `<strong class="viz-tip-title">${escapeHtml(pub.title || "Untitled publication")}</strong>
+    <span class="viz-tip-meta">${escapeHtml(journal)} &middot; ${escapeHtml(String(pub.year || ""))}</span>
+    <span class="viz-tip-row"><i style="${swatch}"></i>${escapeHtml(aip)}</span>
+    ${names.length ? `<span class="viz-tip-meta">${escapeHtml(names.join(", "))}</span>` : ""}
+    ${publicationLink(pub) ? "<em>Select to open the publisher record</em>" : ""}`;
+}
+
+/* ---------- How research attention shifts: topic-family streams ---------- */
+
+function attentionColorMap() {
+  // Colours follow each family's rank over the five most recent completed years (the default view), so shared topics keep their colour when the window changes.
+  const lastCompleted = new Date().getFullYear() - 1;
+  const recentFrom = windowBoundaryYear(state.data?.meta?.recentWindow?.from);
+  const firstYear = Number.isFinite(recentFrom) ? recentFrom : lastCompleted - 4;
+  const coreIds = new Set((state.data?.people || []).filter((person) => !person.affiliated).map((person) => person.id));
+  const pubs = (state.data?.publications || []).filter((pub) => {
+    const year = publicationChartYear(pub);
+    return countedPublication(pub) && Number.isFinite(year) && year >= firstYear && year <= lastCompleted
+      && (pub.matchedPeople || []).some((id) => coreIds.has(id));
+  });
+  const key = `${pubs.length}:${firstYear}-${lastCompleted}:${state.data?.meta?.targetedUpdateOn || ""}`;
+  if (attentionColorCache.key === key) return attentionColorCache.map;
+  const map = new Map();
+  publicationFamilySignals(pubs).slice(0, ATTENTION_COLORS.length).forEach((signal, index) => map.set(signal.label, index));
+  attentionColorCache = { key, map };
+  return map;
+}
+
+function renderAttentionRiver(pubs) {
+  if (!els.attentionRiver) return;
+  const currentYear = new Date().getFullYear();
+  const startYear = overviewStartYear(pubs);
+  const completed = pubs.filter((pub) => {
+    const year = publicationChartYear(pub);
+    return Number.isFinite(year) && year >= startYear && year < currentYear;
+  });
+  const counts = countBy(completed.map(publicationChartYear), (year) => year);
+  const allYears = [];
+  for (let year = startYear; year < currentYear; year += 1) allYears.push(year);
+  const firstIndex = allYears.findIndex((year) => (counts.get(year) || 0) >= 3);
+  const years = firstIndex < 0 ? [] : allYears.slice(firstIndex);
+  if (years.length < 3) {
+    attentionRiverView = null;
+    els.attentionRiver.innerHTML = `<div class="staff-empty">Choose 10 years or All years to follow research attention across at least three completed years.</div>`;
+    return;
+  }
+  const inRange = completed.filter((pub) => publicationChartYear(pub) >= years[0]);
+  const colorMap = attentionColorMap();
+  const labels = publicationFamilySignals(inRange).slice(0, ATTENTION_FAMILY_LIMIT).map((signal) => signal.label);
+  const taken = new Set(labels.map((label) => colorMap.get(label)).filter(Number.isInteger));
+  const spare = ATTENTION_COLORS.map((_, index) => index).filter((index) => !taken.has(index));
+  const families = labels
+    .map((label) => ({ label, colorIndex: colorMap.has(label) ? colorMap.get(label) : spare.shift() }))
+    .sort((a, b) => a.colorIndex - b.colorIndex);
+  Array.from(state.attentionHidden).forEach((label) => { if (!labels.includes(label)) state.attentionHidden.delete(label); });
+  if (families.every((family) => state.attentionHidden.has(family.label))) state.attentionHidden.clear();
+  const rows = years.map((year) => {
+    const yearPubs = inRange.filter((pub) => publicationChartYear(pub) === year);
+    return {
+      year,
+      total: yearPubs.length,
+      counts: families.map((family) => yearPubs.filter((pub) => publicationFamilyLabels(pub).has(family.label)).length),
+    };
+  });
+  attentionRiverView = { years, families, rows };
+  const range = `${years[0]}-${years[years.length - 1]}`;
+  els.attentionRiver.innerHTML = `
+    <div class="attention-legend" role="group" aria-label="Show or hide topic families">
+      ${families.map((family) => `<button type="button" class="viz-chip" data-attention-topic="${escapeHtml(family.label)}" aria-pressed="${!state.attentionHidden.has(family.label)}"><i style="background:${ATTENTION_COLORS[family.colorIndex]}"></i>${escapeHtml(family.label)}</button>`).join("")}
+    </div>
+    <div class="attention-canvas" data-attention-canvas></div>
+    <p class="attention-note">${escapeHtml(`Stream width counts publications tagged with each of the six largest topic families in completed years, ${range}. A publication can belong to several families, so the streams can add up to more than the number of papers. Select a stream to see matching researchers and publications.`)}</p>
+    <details class="metric-data-details">
+      <summary>View topic counts as a table</summary>
+      <div class="table-wrap" role="region" aria-label="Topic family counts by year" tabindex="0">
+        <table>
+          <caption class="visually-hidden">Publications tagged with each topic family by year, ${escapeHtml(range)}.</caption>
+          <thead><tr><th scope="col">Year</th>${families.map((family) => `<th scope="col" class="num">${escapeHtml(family.label)}</th>`).join("")}<th scope="col" class="num">Publications</th></tr></thead>
+          <tbody>${rows.map((row) => `<tr><th scope="row">${row.year}</th>${row.counts.map((count) => `<td class="num">${count}</td>`).join("")}<td class="num">${row.total}</td></tr>`).join("")}</tbody>
+        </table>
+      </div>
+    </details>`;
+  drawAttentionRiver();
+}
+
+function bumpPath(points, continuing = false) {
+  let d = continuing ? "" : `M${points[0][0].toFixed(1)},${points[0][1].toFixed(1)}`;
+  for (let index = 1; index < points.length; index += 1) {
+    const [x0, y0] = points[index - 1];
+    const [x1, y1] = points[index];
+    const xm = ((x0 + x1) / 2).toFixed(1);
+    d += ` C${xm},${y0.toFixed(1)} ${xm},${y1.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)}`;
+  }
+  return d;
+}
+
+function vizInkOn(hex) {
+  const channel = (offset) => {
+    const value = parseInt(hex.slice(offset, offset + 2), 16) / 255;
+    const blended = value * 0.9 + 0.1;
+    return blended <= 0.04045 ? blended / 12.92 : ((blended + 0.055) / 1.055) ** 2.4;
+  };
+  const luminance = 0.2126 * channel(1) + 0.7152 * channel(3) + 0.0722 * channel(5);
+  return (luminance + 0.05) / 0.066 >= 1.05 / (luminance + 0.05) ? "#1c222a" : "#ffffff";
+}
+
+function drawAttentionRiver() {
+  const view = attentionRiverView;
+  const canvas = els.attentionRiver?.querySelector("[data-attention-canvas]");
+  if (!view || !canvas) return;
+  const { years, families, rows } = view;
+  const visible = families.map((family, index) => ({ ...family, index })).filter((family) => !state.attentionHidden.has(family.label));
+  const width = Math.max(300, Math.floor(canvas.clientWidth || 640));
+  const height = width < 560 ? 240 : 290;
+  const margin = { top: 8, right: 14, bottom: 30, left: 14 };
+  const innerWidth = width - margin.left - margin.right;
+  const innerHeight = height - margin.top - margin.bottom;
+  const totals = rows.map((row) => visible.reduce((sum, family) => sum + row.counts[family.index], 0));
+  const scale = innerHeight / Math.max(1, ...totals);
+  const middle = margin.top + innerHeight / 2;
+  const step = years.length > 1 ? innerWidth / (years.length - 1) : innerWidth;
+  const x = (index) => margin.left + (years.length > 1 ? index * step : innerWidth / 2);
+  const layers = visible.map((family) => ({ ...family, top: [], bottom: [] }));
+  rows.forEach((row, index) => {
+    let accumulated = -totals[index] / 2;
+    layers.forEach((layer) => {
+      layer.bottom.push(middle - accumulated * scale);
+      accumulated += row.counts[layer.index];
+      layer.top.push(middle - accumulated * scale);
+    });
+  });
+  const svg = vizSvg("svg", {
+    class: "attention-svg",
+    width,
+    height,
+    viewBox: `0 0 ${width} ${height}`,
+    role: "img",
+    "aria-label": `Streamgraph of ${visible.length} topic families from ${years[0]} to ${years[years.length - 1]}.`,
+  });
+  const labelEvery = step >= 44 ? 1 : step >= 24 ? 2 : step >= 12 ? 5 : 10;
+  years.forEach((year, index) => {
+    if ((years.length - 1 - index) % labelEvery !== 0) return;
+    vizSvg("text", {
+      class: "attention-year",
+      x: x(index).toFixed(1),
+      y: height - 9,
+      "text-anchor": index === 0 ? "start" : index === years.length - 1 ? "end" : "middle",
+    }, svg).textContent = String(year);
+  });
+  const layerNodes = layers.map((layer) => {
+    const topPoints = layer.top.map((y, index) => [x(index), y]);
+    const bottomPoints = layer.bottom.map((y, index) => [x(index), y]).reverse();
+    const d = `${bumpPath(topPoints)} L${bottomPoints[0][0].toFixed(1)},${bottomPoints[0][1].toFixed(1)}${bumpPath(bottomPoints, true)} Z`;
+    return vizSvg("path", {
+      class: "attention-layer",
+      d,
+      fill: ATTENTION_COLORS[layer.colorIndex],
+      "fill-opacity": 0.9,
+      stroke: "#ffffff",
+      "stroke-width": 1.5,
+    }, svg);
+  });
+  const labelFont = "700 11.5px 'Source Sans 3', system-ui, sans-serif";
+  layers.forEach((layer) => {
+    let bestIndex = 0;
+    let bestThickness = -1;
+    layer.top.forEach((y, index) => {
+      const thickness = layer.bottom[index] - y;
+      const interior = index > 0 && index < years.length - 1;
+      if (thickness > bestThickness && (interior || years.length < 3)) {
+        bestThickness = thickness;
+        bestIndex = index;
+      }
+    });
+    const textWidth = measureVizText(layer.label, labelFont);
+    if (bestThickness < 16 || innerWidth < 340 || textWidth > innerWidth / 2) return;
+    const centre = Math.max(margin.left + textWidth / 2 + 4, Math.min(width - margin.right - textWidth / 2 - 4, x(bestIndex)));
+    vizSvg("text", {
+      class: "attention-label",
+      x: centre.toFixed(1),
+      y: ((layer.top[bestIndex] + layer.bottom[bestIndex]) / 2).toFixed(1),
+      dy: "0.35em",
+      "text-anchor": "middle",
+      fill: vizInkOn(ATTENTION_COLORS[layer.colorIndex]),
+    }, svg).textContent = layer.label;
+  });
+  const cross = vizSvg("line", { class: "attention-cross", x1: 0, x2: 0, y1: margin.top, y2: margin.top + innerHeight, opacity: 0 }, svg);
+  const hit = vizSvg("rect", {
+    class: "attention-hit",
+    x: margin.left - step / 2,
+    y: margin.top,
+    width: innerWidth + step,
+    height: innerHeight,
+    fill: "transparent",
+    tabindex: 0,
+    role: "button",
+    "aria-label": "Topic streams by year. Use the left and right arrow keys to read each year.",
+  }, svg);
+  canvas.replaceChildren(svg);
+  let current = years.length - 1;
+  let hot = -1;
+  const setHot = (layerIndex) => {
+    hot = layerIndex;
+    svg.classList.toggle("is-hovering", layerIndex >= 0);
+    layerNodes.forEach((node, index) => node.classList.toggle("is-hot", index === layerIndex));
+    hit.style.cursor = layerIndex >= 0 ? "pointer" : "default";
+  };
+  const show = (index, point) => {
+    current = index;
+    const row = rows[index];
+    cross.setAttribute("x1", x(index).toFixed(1));
+    cross.setAttribute("x2", x(index).toFixed(1));
+    cross.setAttribute("opacity", "1");
+    const lines = [...layers].reverse().map((layer) => {
+      const count = row.counts[layer.index];
+      const share = row.total ? Math.round((count / row.total) * 100) : 0;
+      return `<span class="viz-tip-row${layers.indexOf(layer) === hot ? " is-hot" : ""}"><i style="background:${ATTENTION_COLORS[layer.colorIndex]}"></i><b>${count}</b>${escapeHtml(layer.label)} <small>${share}%</small></span>`;
+    }).join("");
+    showVizTooltip(point || svgClientPoint(svg, x(index), margin.top + 10), `<strong class="viz-tip-title">${row.year}</strong>${lines}<em>${row.total} publication${row.total === 1 ? "" : "s"} that year; percentages are shares of those papers.</em>`);
+  };
+  const clear = () => {
+    cross.setAttribute("opacity", "0");
+    setHot(-1);
+    hideVizTooltip();
+  };
+  hit.addEventListener("pointermove", (event) => {
+    const { x: localX, y: localY } = svgLocalPoint(svg, event);
+    const index = Math.max(0, Math.min(years.length - 1, Math.round((localX - margin.left) / (step || 1))));
+    const layerIndex = layers.findIndex((layer) => localY >= layer.top[index] && localY <= layer.bottom[index]);
+    setHot(layerIndex);
+    show(index, event);
+  });
+  hit.addEventListener("pointerleave", clear);
+  hit.addEventListener("blur", clear);
+  hit.addEventListener("focus", () => show(current));
+  hit.addEventListener("click", () => {
+    if (hot < 0) return;
+    const label = layers[hot].label;
+    clear();
+    setOverviewExpertiseSelection(label, "family");
+    requestAnimationFrame(() => els.overviewExpertiseDetails?.scrollIntoView({ block: "nearest", behavior: "smooth" }));
+  });
+  hit.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    show(Math.max(0, Math.min(years.length - 1, current + (event.key === "ArrowRight" ? 1 : -1))));
+  });
+}
+
+/* ---------- Grant call calendar: the next twelve months ---------- */
+
+function todayIsoDate(now = new Date()) {
+  return [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
+}
+
+function isoDateUtc(iso) {
+  const [year, month, day] = String(iso).split("-").map(Number);
+  return Date.UTC(year, (month || 1) - 1, day || 1);
+}
+
+function addMonthsIso(iso, months) {
+  const [year, month, day] = String(iso).split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1 + months, 1));
+  const lastDay = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 0)).getUTCDate();
+  return [date.getUTCFullYear(), String(date.getUTCMonth() + 1).padStart(2, "0"), String(Math.min(day || 1, lastDay)).padStart(2, "0")].join("-");
+}
+
+function monthEndIso(month) {
+  const [year, monthNumber] = month.split("-").map(Number);
+  return `${month}-${String(new Date(Date.UTC(year, monthNumber, 0)).getUTCDate()).padStart(2, "0")}`;
+}
+
+function daysBetweenIso(fromIso, toIso) {
+  return Math.round((isoDateUtc(toIso) - isoDateUtc(fromIso)) / 86400000);
+}
+
+function formatIsoMonth(month) {
+  const [year, monthNumber] = month.split("-").map(Number);
+  return new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(year, monthNumber - 1, 1)));
+}
+
+function grantCallKey(call) {
+  return String(call?.name || "")
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\b(19|20)\d{2}\b/g, " ")
+    .replace(/\b(next round|round)\b/g, " ")
+    .replace(/[^a-z0-9&:/ ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function grantCallTiming(call, today) {
+  const exact = Array.from(new Set([
+    call.nextDeadlineDate,
+    call.deadlineDate,
+    ...(call.deadlineDates || []).map((item) => (typeof item === "string" ? item : item?.date)),
+  ].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))))).sort();
+  const next = exact.find((date) => date >= today);
+  if (next) return { kind: "exact", date: next, rank: 0, sortKey: next };
+  if (/^\d{4}-\d{2}$/.test(String(call.deadlineMonth || "")) && call.deadlineMonth >= today.slice(0, 7)) {
+    return { kind: "month", month: call.deadlineMonth, rank: 1, sortKey: `${call.deadlineMonth}-01` };
+  }
+  const last = exact[exact.length - 1];
+  if (last) return { kind: "passed", date: last, rank: 3, sortKey: last };
+  return { kind: "undated", rank: 2, sortKey: "9999" };
+}
+
+function grantCallCalendarRecords(today = todayIsoDate()) {
+  const merged = new Map();
+  const fillable = ["amount", "duration", "eligibility", "tips", "why", "fitNote", "sourceUrl", "link", "successRate", "timing", "deadline", "scheme", "funder"];
+  [...(state.resourceData?.recentCalls || []), ...(state.resourceData?.opportunities || [])].forEach((call) => {
+    if (!call?.name) return;
+    const key = grantCallKey(call) || String(call.name);
+    const timing = grantCallTiming(call, today);
+    const entry = merged.get(key);
+    if (!entry) {
+      merged.set(key, { key, call: { ...call }, timing, others: [] });
+      return;
+    }
+    if (timing.rank < entry.timing.rank) {
+      entry.others.push(entry.call);
+      entry.call = { ...call };
+      entry.timing = timing;
+    } else {
+      entry.others.push(call);
+    }
+  });
+  return Array.from(merged.values()).map((entry) => {
+    entry.others.forEach((other) => {
+      fillable.forEach((field) => { if (!entry.call[field] && other[field]) entry.call[field] = other[field]; });
+    });
+    return entry;
+  }).sort((a, b) => a.timing.sortKey.localeCompare(b.timing.sortKey) || a.call.name.localeCompare(b.call.name));
+}
+
+function callWhenText(timing, today) {
+  if (timing.kind === "exact") {
+    const days = daysBetweenIso(today, timing.date);
+    return `Closes ${formatIsoDisplayDate(timing.date)} · ${days === 0 ? "today" : `in ${days} day${days === 1 ? "" : "s"}`}`;
+  }
+  if (timing.kind === "month") return `Expected ${formatIsoMonth(timing.month)} · exact date not confirmed`;
+  if (timing.kind === "passed") return `Closed ${formatIsoDisplayDate(timing.date)}`;
+  return "Date not confirmed";
+}
+
+function callTone(record, today) {
+  const timing = record.timing;
+  if (timing.kind === "passed") return "passed";
+  if (timing.kind === "undated") return "later";
+  const days = daysBetweenIso(today, timing.kind === "month" ? `${timing.month}-01` : timing.date);
+  if (days <= 30) return "soon";
+  if (days <= 120) return "upcoming";
+  return "later";
+}
+
+function renderCallCalendar() {
+  if (!els.callCalendar) return;
+  const today = todayIsoDate();
+  const records = grantCallCalendarRecords(today);
+  const start = state.resourceShowClosed ? addMonthsIso(today, -3) : today;
+  const end = addMonthsIso(today, CALL_CALENDAR_MONTHS);
+  const onTimeline = [];
+  const later = [];
+  const undated = [];
+  records.forEach((record) => {
+    const timing = record.timing;
+    if (timing.kind === "exact") (timing.date <= end ? onTimeline : later).push(record);
+    else if (timing.kind === "month") (`${timing.month}-01` <= end ? onTimeline : later).push(record);
+    else if (timing.kind === "passed") { if (state.resourceShowClosed && timing.date >= start) onTimeline.push(record); }
+    else undated.push(record);
+  });
+  if (!records.some((record) => record.key === state.selectedCallKey)) {
+    state.selectedCallKey = (onTimeline.find((record) => record.timing.kind !== "passed") || onTimeline[0] || undated[0])?.key || "";
+  }
+  callCalendarView = { start, end, today, items: onTimeline, records };
+  const meta = state.resourceData?.meta || {};
+  const sources = [
+    meta.sourceUpdatedDate ? `grant workbook updated ${formatIsoDisplayDate(meta.sourceUpdatedDate)}` : "",
+    meta.recentCallsChecked ? `highlighted calls checked ${formatIsoDisplayDate(meta.recentCallsChecked)}` : "",
+  ].filter(Boolean).join("; ");
+  const chip = (record) => `<button type="button" class="viz-chip${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
+  els.callCalendar.innerHTML = `
+    <div class="call-legend" aria-hidden="true">
+      <span><i class="tone-soon"></i>Within 30 days</span>
+      <span><i class="tone-upcoming"></i>Within 120 days</span>
+      <span><i class="tone-later"></i>Later</span>
+      <span><i class="tone-month"></i>Month known, day not confirmed</span>
+      ${state.resourceShowClosed ? `<span><i class="tone-passed"></i>Closed</span>` : ""}
+    </div>
+    <div class="call-calendar-scroll" tabindex="-1"><div class="call-calendar-canvas" data-call-canvas></div></div>
+    <div data-call-detail aria-live="polite"></div>
+    ${later.length ? `<div class="call-calendar-extra"><strong>Beyond twelve months</strong><div class="chip-row">${later.map(chip).join("")}</div></div>` : ""}
+    ${undated.length ? `<div class="call-calendar-extra"><strong>Date not confirmed</strong><div class="chip-row">${undated.map(chip).join("")}</div></div>` : ""}
+    <p class="call-calendar-note">${escapeHtml(`${onTimeline.length} call${onTimeline.length === 1 ? "" : "s"} on the calendar${sources ? `; ${sources}` : ""}. Check the funder page before planning around a date.`)}</p>
+    <details class="metric-data-details">
+      <summary>View the calendar as a list</summary>
+      <div class="table-wrap" role="region" aria-label="Grant call deadlines" tabindex="0">
+        <table>
+          <caption class="visually-hidden">Grant call deadlines in the calendar window.</caption>
+          <thead><tr><th scope="col">Deadline</th><th scope="col">Call</th><th scope="col">Funder</th></tr></thead>
+          <tbody>${[...onTimeline, ...later, ...undated].map((record) => `<tr><td>${escapeHtml(callWhenText(record.timing, today))}</td><th scope="row">${escapeHtml(record.call.name)}</th><td>${escapeHtml(record.call.funder || "")}</td></tr>`).join("")}</tbody>
+        </table>
+      </div>
+    </details>`;
+  drawCallCalendar();
+  renderCallDetail();
+}
+
+function drawCallCalendar() {
+  const view = callCalendarView;
+  const canvas = els.callCalendar?.querySelector("[data-call-canvas]");
+  if (!view || !canvas) return;
+  const width = Math.max(720, Math.floor(canvas.parentElement?.clientWidth || 900));
+  const margin = { top: 30, right: 18, bottom: 28, left: 18 };
+  const innerWidth = width - margin.left - margin.right;
+  const t0 = isoDateUtc(view.start);
+  const t1 = isoDateUtc(view.end);
+  const x = (iso) => margin.left + ((isoDateUtc(iso) - t0) / (t1 - t0)) * innerWidth;
+  const laneHeight = 36;
+  const pillHeight = 26;
+  const font = "600 12px 'Source Sans 3', system-ui, sans-serif";
+  const placed = view.items.map((record) => {
+    const label = clipText(record.call.name, 44);
+    const textWidth = measureVizText(label, font);
+    if (record.timing.kind === "month") {
+      const monthStart = `${record.timing.month}-01`;
+      const monthEnd = monthEndIso(record.timing.month);
+      const xa = x(monthStart < view.start ? view.start : monthStart);
+      const xb = x(monthEnd > view.end ? view.end : monthEnd);
+      const bandWidth = Math.max(xb - xa, 12);
+      if (xb - xa >= textWidth + 26) return { record, label, a: xa, b: xa + bandWidth, bandA: xa, bandB: xa + bandWidth, labelSide: "inside" };
+      if (xa + bandWidth + textWidth + 10 <= width - margin.right) return { record, label, a: xa, b: xa + bandWidth + textWidth + 10, bandA: xa, bandB: xa + bandWidth, labelSide: "right" };
+      return { record, label, a: xa - textWidth - 10, b: xa + bandWidth, bandA: xa, bandB: xa + bandWidth, labelSide: "left" };
+    }
+    const xd = x(record.timing.date);
+    const pillWidth = textWidth + 34;
+    const flip = xd + pillWidth - 13 > width - margin.right;
+    const a = flip ? xd - pillWidth + 13 : xd - 13;
+    return { record, label, a, b: a + pillWidth, xd, flip };
+  });
+  const lanes = [];
+  placed.forEach((item) => {
+    let lane = 0;
+    while (lanes[lane] && lanes[lane].some(([a, b]) => item.a < b + 8 && item.b > a - 8)) lane += 1;
+    (lanes[lane] = lanes[lane] || []).push([item.a, item.b]);
+    item.lane = lane;
+  });
+  const height = margin.top + Math.max(1, lanes.length) * laneHeight + margin.bottom;
+  const svg = vizSvg("svg", {
+    class: "call-calendar-svg",
+    width,
+    height,
+    viewBox: `0 0 ${width} ${height}`,
+    role: "group",
+    "aria-label": `Grant call deadlines from ${formatIsoDisplayDate(view.start)} to ${formatIsoDisplayDate(view.end)}`,
+  });
+  let month = addMonthsIso(`${view.start.slice(0, 7)}-01`, view.start.endsWith("-01") ? 0 : 1);
+  while (month <= view.end) {
+    const mx = x(month);
+    vizSvg("line", { class: "call-grid", x1: mx.toFixed(1), x2: mx.toFixed(1), y1: margin.top - 6, y2: height - margin.bottom }, svg);
+    const [year, monthNumber] = month.split("-").map(Number);
+    const name = new Intl.DateTimeFormat("en-GB", { month: "short", timeZone: "UTC" }).format(new Date(Date.UTC(year, monthNumber - 1, 1)));
+    vizSvg("text", { class: "call-month-label", x: (mx + 5).toFixed(1), y: height - 9 }, svg).textContent = monthNumber === 1 ? `${name} ${year}` : name;
+    month = addMonthsIso(month, 1);
+  }
+  const todayX = x(view.today);
+  vizSvg("line", { class: "call-today", x1: todayX.toFixed(1), x2: todayX.toFixed(1), y1: margin.top - 16, y2: height - margin.bottom }, svg);
+  vizSvg("text", { class: "call-today-label", x: (todayX + (todayX > width - 90 ? -6 : 6)).toFixed(1), y: margin.top - 18, "text-anchor": todayX > width - 90 ? "end" : "start" }, svg)
+    .textContent = `Today · ${formatIsoDisplayDate(view.today)}`;
+  placed.forEach((item) => {
+    const y = margin.top + item.lane * laneHeight + (laneHeight - pillHeight) / 2;
+    const tone = callTone(item.record, view.today);
+    const isMonth = item.record.timing.kind === "month";
+    const selected = item.record.key === state.selectedCallKey;
+    const when = callWhenText(item.record.timing, view.today);
+    const group = vizSvg("g", {
+      class: `call-pill tone-${tone}${isMonth ? " is-month" : ""}${selected ? " is-selected" : ""}`,
+      "data-call-key": item.record.key,
+      tabindex: 0,
+      role: "button",
+      "aria-pressed": String(selected),
+      "aria-label": `${item.record.call.name}. ${when}.`,
+    }, svg);
+    if (isMonth) {
+      vizSvg("rect", { class: "call-pill-shape", x: item.bandA.toFixed(1), y: y.toFixed(1), width: (item.bandB - item.bandA).toFixed(1), height: pillHeight, rx: 13 }, group);
+      vizSvg("text", {
+        x: (item.labelSide === "inside" ? item.bandA + 13 : item.labelSide === "right" ? item.bandB + 8 : item.bandA - 8).toFixed(1),
+        y: (y + pillHeight / 2).toFixed(1),
+        dy: "0.35em",
+        "text-anchor": item.labelSide === "left" ? "end" : "start",
+      }, group).textContent = item.label;
+    } else {
+      vizSvg("rect", { class: "call-pill-shape", x: item.a.toFixed(1), y: y.toFixed(1), width: (item.b - item.a).toFixed(1), height: pillHeight, rx: 13 }, group);
+      vizSvg("circle", { class: "call-pill-dot", cx: item.xd.toFixed(1), cy: (y + pillHeight / 2).toFixed(1), r: 4.5 }, group);
+      vizSvg("text", {
+        x: (item.flip ? item.xd - 12 : item.xd + 12).toFixed(1),
+        y: (y + pillHeight / 2).toFixed(1),
+        dy: "0.35em",
+        "text-anchor": item.flip ? "end" : "start",
+      }, group).textContent = item.label;
+    }
+    const tip = `<strong class="viz-tip-title">${escapeHtml(item.record.call.name)}</strong><span class="viz-tip-meta">${escapeHtml(when)}</span><span class="viz-tip-meta">${escapeHtml([item.record.call.funder, item.record.call.amount].filter(Boolean).join(" · "))}</span><em>Select for details</em>`;
+    group.addEventListener("pointerenter", (event) => showVizTooltip(event, tip));
+    group.addEventListener("pointermove", moveVizTooltip);
+    group.addEventListener("pointerleave", hideVizTooltip);
+    group.addEventListener("focus", () => showVizTooltip(svgClientPoint(svg, (isMonth ? item.bandA : item.xd) + 10, y), tip));
+    group.addEventListener("blur", hideVizTooltip);
+  });
+  canvas.replaceChildren(svg);
+}
+
+function renderCallDetail() {
+  const host = els.callCalendar?.querySelector("[data-call-detail]");
+  if (!host || !callCalendarView) return;
+  const record = callCalendarView.records.find((item) => item.key === state.selectedCallKey);
+  if (!record) {
+    host.innerHTML = "";
+    return;
+  }
+  const call = record.call;
+  const link = call.sourceUrl || call.link || "";
+  const facts = [call.funder, call.amount, call.duration, call.successRate ? `Success: ${call.successRate}` : ""].filter(Boolean);
+  const context = call.why || call.fitNote || call.tips || "";
+  host.innerHTML = `<article class="call-detail">
+    <div>
+      <p class="eye">${escapeHtml(call.stage || "Grant call")}</p>
+      <h4>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>` : escapeHtml(call.name)}</h4>
+      <p class="call-when">${escapeHtml(callWhenText(record.timing, callCalendarView.today))}</p>
+      ${renderGrantBadges(call)}
+      ${call.timing || call.deadline ? `<p class="call-timing">${escapeHtml(call.timing || call.deadline)}</p>` : ""}
+    </div>
+    <div>
+      ${facts.length ? `<p class="grant-opportunity-meta">${escapeHtml(facts.join(" - "))}</p>` : ""}
+      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(call.eligibility, 220))}</p>` : ""}
+      ${context ? `<p>${escapeHtml(clipText(context, 260))}</p>` : ""}
+      <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
+    </div>
+  </article>`;
+}
+
+function selectCalendarCall(key, { focus = false } = {}) {
+  if (!key || !callCalendarView) return;
+  state.selectedCallKey = key;
+  hideVizTooltip();
+  els.callCalendar.querySelectorAll("[data-call-key]").forEach((node) => {
+    const selected = node.dataset.callKey === key;
+    node.classList.toggle("is-selected", selected);
+    node.setAttribute("aria-pressed", String(selected));
+  });
+  renderCallDetail();
+  if (focus) els.callCalendar.querySelector(`.call-pill[data-call-key="${CSS.escape(key)}"]`)?.focus({ preventScroll: true });
+}
+
+/* ---------- Quick find (Ctrl/Cmd K or /) ---------- */
+
+function quickFindCandidates() {
+  const items = [];
+  const add = (group, label, detail, search, run) => items.push({ group, label, detail, run, search: normalizeSearchText(`${label} ${search || ""}`) });
+  document.querySelectorAll(".nav-tab").forEach((tab) => {
+    add("Sections", tab.textContent.trim(), "", "", () => setTab(tab.dataset.tab));
+  });
+  activePeople().forEach((person) => {
+    add("People", person.name || person.display, formatPersonRank(person.rank), person.display, () => {
+      state.selectedStaffId = person.id;
+      state.staffSubpage = "research";
+      setTab("staff");
+    });
+  });
+  const familyCounts = new Map(publicationFamilySignals(activePublications()).map((signal) => [signal.label, signal.count]));
+  EXPERTISE_FAMILIES.forEach(([label, terms]) => {
+    const count = familyCounts.get(label) || 0;
+    add("Topics", label, `${count} publication${count === 1 ? "" : "s"}`, terms.join(" "), () => showTopicOverlay(label, "family"));
+  });
+  const today = todayIsoDate();
+  grantCallCalendarRecords(today).forEach((record) => {
+    const when = record.timing.kind === "exact" ? formatIsoDisplayDate(record.timing.date) : record.timing.kind === "month" ? formatIsoMonth(record.timing.month) : record.timing.kind === "passed" ? "Closed" : "Date not confirmed";
+    add("Grant calls", record.call.name, when, record.call.funder, () => {
+      state.selectedCallKey = record.key;
+      setTab("resources");
+      requestAnimationFrame(() => {
+        els.callCalendar?.scrollIntoView({ block: "start" });
+        els.callCalendar?.querySelector(`.call-pill[data-call-key="${CSS.escape(record.key)}"]`)?.focus({ preventScroll: true });
+      });
+    });
+  });
+  aggregateJournals(activeOutletPublications()).forEach((journal) => {
+    const name = journalDisplayName(journal);
+    add("Journals", name, `${journal.count} publication${journal.count === 1 ? "" : "s"}`, journal.journal, () => searchPublicationsFor(name));
+  });
+  activePublications().forEach((pub) => {
+    add("Publications", pub.title || "Untitled publication", String(pub.year || ""), `${pub.journal || ""} ${(pub.authors || []).join(" ")}`, () => searchPublicationsFor(pub.title || ""));
+  });
+  return items;
+}
+
+function searchPublicationsFor(text) {
+  state.search = normalizeSearchText(text);
+  state.publicationPage = 1;
+  if (els.pubSearch) els.pubSearch.value = text;
+  setTab("publications");
+}
+
+function openQuickFind(initial = "") {
+  if (!els.quickFind || !state.data) return;
+  quickFindState.opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  quickFindState.items = quickFindCandidates();
+  els.quickFind.hidden = false;
+  document.body.classList.add("overlay-open");
+  els.quickFindInput.value = initial;
+  els.quickFindInput.focus();
+  updateQuickFindResults();
+}
+
+function closeQuickFind({ restoreFocus = true } = {}) {
+  if (!els.quickFind || els.quickFind.hidden) return;
+  els.quickFind.hidden = true;
+  if (els.topicOverlay?.hidden !== false) document.body.classList.remove("overlay-open");
+  if (restoreFocus && quickFindState.opener?.isConnected) quickFindState.opener.focus();
+}
+
+function updateQuickFindResults() {
+  const query = normalizeSearchText(els.quickFindInput.value);
+  const tokens = query.split(" ").filter(Boolean);
+  const limits = { Sections: 10, People: 6, Topics: 5, "Grant calls": 4, Journals: 4, Publications: 6 };
+  const groups = Object.keys(limits);
+  let results;
+  if (!tokens.length) {
+    results = [
+      ...quickFindState.items.filter((item) => item.group === "Sections"),
+      ...quickFindState.items.filter((item) => item.group === "Grant calls" && /\d/.test(item.detail) && item.detail !== "Closed").slice(0, 3),
+    ];
+  } else {
+    const scored = quickFindState.items
+      .filter((item) => (item.group !== "Publications" || query.length >= 3) && tokens.every((token) => item.search.includes(token)))
+      .map((item) => {
+        const label = normalizeSearchText(item.label);
+        const score = label.startsWith(query) ? 0 : label.split(" ").some((word) => word.startsWith(tokens[0])) ? 1 : 2;
+        return { item, score };
+      });
+    results = groups.flatMap((group) => scored
+      .filter((entry) => entry.item.group === group)
+      .sort((a, b) => a.score - b.score || a.item.label.localeCompare(b.item.label))
+      .slice(0, limits[group])
+      .map((entry) => entry.item));
+  }
+  quickFindState.results = results;
+  quickFindState.index = 0;
+  renderQuickFindList();
+}
+
+function renderQuickFindList() {
+  const list = els.quickFindList;
+  if (!list) return;
+  const results = quickFindState.results;
+  if (!results.length) {
+    list.innerHTML = `<p class="quick-find-empty">No match. Try a surname, a topic such as “leadership”, a journal, or a grant scheme.</p>`;
+    els.quickFindInput.removeAttribute("aria-activedescendant");
+    return;
+  }
+  let group = "";
+  list.innerHTML = results.map((item, index) => {
+    const heading = item.group !== group ? `<p class="quick-find-group">${escapeHtml(item.group)}</p>` : "";
+    group = item.group;
+    return `${heading}<button type="button" class="quick-find-item" id="quick-find-option-${index}" role="option" data-quick-find-index="${index}" aria-selected="${index === quickFindState.index}"><span>${escapeHtml(item.label)}</span><small>${escapeHtml(item.detail || "")}</small></button>`;
+  }).join("");
+  els.quickFindInput.setAttribute("aria-activedescendant", `quick-find-option-${quickFindState.index}`);
+}
+
+function moveQuickFind(step) {
+  const count = quickFindState.results.length;
+  if (!count) return;
+  quickFindState.index = (quickFindState.index + step + count) % count;
+  els.quickFindList.querySelectorAll("[data-quick-find-index]").forEach((node) => {
+    node.setAttribute("aria-selected", String(Number(node.dataset.quickFindIndex) === quickFindState.index));
+  });
+  els.quickFindInput.setAttribute("aria-activedescendant", `quick-find-option-${quickFindState.index}`);
+  document.getElementById(`quick-find-option-${quickFindState.index}`)?.scrollIntoView({ block: "nearest" });
+}
+
+function runQuickFind(index) {
+  const item = quickFindState.results[index];
+  if (!item) return;
+  closeQuickFind({ restoreFocus: false });
+  item.run();
+}
+
+function isTypingTarget(target) {
+  return Boolean(target?.closest?.("input, textarea, select, [contenteditable='true']"));
+}
+
+function attachVisualUpgradeEvents() {
+  if (/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent || "")) {
+    const hint = els.quickFindOpen?.querySelector("kbd");
+    if (hint) hint.textContent = "\u2318K";
+    els.quickFindOpen?.setAttribute("title", "Jump to a person, publication, topic, journal, grant call, or section (\u2318K or /)");
+  }
+  els.yearBars?.addEventListener("change", (event) => {
+    const select = event.target.closest("[data-dot-person]");
+    if (!select) return;
+    state.dotTracePerson = select.value;
+    refreshPublicationDotControls();
+  });
+  els.yearBars?.addEventListener("click", (event) => {
+    const topic = event.target.closest("[data-dot-topic]");
+    if (topic) {
+      state.dotTraceTopic = state.dotTraceTopic === topic.dataset.dotTopic ? "" : topic.dataset.dotTopic;
+      refreshPublicationDotControls();
+      return;
+    }
+    if (event.target.closest("[data-dot-clear]")) {
+      state.dotTracePerson = "";
+      state.dotTraceTopic = "";
+      refreshPublicationDotControls();
+      els.yearBars.querySelector("[data-dot-person]")?.focus();
+    }
+  });
+  els.attentionRiver?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-attention-topic]");
+    if (!button) return;
+    const label = button.dataset.attentionTopic;
+    if (state.attentionHidden.has(label)) state.attentionHidden.delete(label);
+    else state.attentionHidden.add(label);
+    const visible = attentionRiverView?.families.filter((family) => !state.attentionHidden.has(family.label)) || [];
+    if (!visible.length) state.attentionHidden.delete(label);
+    els.attentionRiver.querySelectorAll("[data-attention-topic]").forEach((node) => {
+      node.setAttribute("aria-pressed", String(!state.attentionHidden.has(node.dataset.attentionTopic)));
+    });
+    drawAttentionRiver();
+  });
+  els.callCalendar?.addEventListener("click", (event) => {
+    const target = event.target.closest("[data-call-key]");
+    if (target) selectCalendarCall(target.dataset.callKey, { focus: target.classList.contains("call-pill") });
+  });
+  els.callCalendar?.addEventListener("keydown", (event) => {
+    const pill = event.target.closest(".call-pill");
+    if (!pill || (event.key !== "Enter" && event.key !== " ")) return;
+    event.preventDefault();
+    selectCalendarCall(pill.dataset.callKey, { focus: true });
+  });
+  els.quickFindOpen?.addEventListener("click", () => openQuickFind());
+  els.quickFindInput?.addEventListener("input", updateQuickFindResults);
+  els.quickFindInput?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") { event.preventDefault(); moveQuickFind(1); }
+    else if (event.key === "ArrowUp") { event.preventDefault(); moveQuickFind(-1); }
+    else if (event.key === "Enter") { event.preventDefault(); runQuickFind(quickFindState.index); }
+    else if (event.key === "Tab") event.preventDefault();
+  });
+  els.quickFindList?.addEventListener("click", (event) => {
+    const option = event.target.closest("[data-quick-find-index]");
+    if (option) runQuickFind(Number(option.dataset.quickFindIndex));
+  });
+  els.quickFindList?.addEventListener("pointermove", (event) => {
+    const option = event.target.closest("[data-quick-find-index]");
+    if (!option || Number(option.dataset.quickFindIndex) === quickFindState.index) return;
+    moveQuickFind(Number(option.dataset.quickFindIndex) - quickFindState.index);
+  });
+  els.quickFind?.addEventListener("pointerdown", (event) => {
+    if (event.target === els.quickFind) closeQuickFind();
+  });
+  document.addEventListener("keydown", (event) => {
+    if ((event.metaKey || event.ctrlKey) && !event.altKey && String(event.key).toLowerCase() === "k") {
+      event.preventDefault();
+      if (els.quickFind?.hidden) openQuickFind();
+      else closeQuickFind();
+      return;
+    }
+    if (!els.quickFind || els.quickFind.hidden) {
+      if (event.key === "/" && !event.metaKey && !event.ctrlKey && !event.altKey && !isTypingTarget(event.target) && els.topicOverlay?.hidden !== false) {
+        event.preventDefault();
+        openQuickFind();
+      }
+      return;
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeQuickFind();
+    }
+  });
+  let lastWidth = window.innerWidth;
+  window.addEventListener("resize", debounce(() => {
+    if (window.innerWidth === lastWidth) return;
+    lastWidth = window.innerWidth;
+    hideVizTooltip();
+    if (state.tab === "overview") {
+      drawPublicationDots();
+      drawAttentionRiver();
+    }
+    if (state.tab === "resources") drawCallCalendar();
+  }, 160));
 }
