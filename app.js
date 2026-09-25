@@ -52,7 +52,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260925-lean";
+const DATA_VERSION = "20260925-topics";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
 const METRICS_START_YEAR = 2005;
@@ -4091,7 +4091,6 @@ function renderOverview() {
   renderYearBars(pubs);
   renderAttentionRiver(pubs);
   renderAipBars(pubs);
-  renderOverviewTopicCloud(pubs);
   renderOverviewJournals(journals);
   renderOverviewGrants(grants);
   renderOverviewPhds(theses);
@@ -7886,8 +7885,7 @@ function renderYearBars(pubs) {
     .slice()
     .sort((a, b) => String(a.display || a.name).localeCompare(String(b.display || b.name)));
   if (state.dotTracePerson && !people.some((person) => person.id === state.dotTracePerson)) state.dotTracePerson = "";
-  const topics = publicationFamilySignals(shown).slice(0, 6).map((signal) => signal.label);
-  if (state.dotTraceTopic && !topics.includes(state.dotTraceTopic)) state.dotTraceTopic = "";
+  if (state.dotTraceTopic && !ATTENTION_CLUSTERS[Number(state.dotTraceTopic)]) state.dotTraceTopic = "";
   const bandCounts = AIP_DOT_BANDS.map((_, index) => shown.filter((pub) => aipBandIndex(pub) === index).length);
   publicationDotsView = { years, byYear, max, currentYear, total, counts };
   els.yearBars.innerHTML = `<div class="pub-dots">
@@ -7898,9 +7896,12 @@ function renderYearBars(pubs) {
           ${people.map((person) => `<option value="${escapeHtml(person.id)}"${person.id === state.dotTracePerson ? " selected" : ""}>${escapeHtml(person.name || person.display)}</option>`).join("")}
         </select>
       </label>
-      <div class="pub-dots-topics" role="group" aria-label="Highlight a topic family">
-        ${topics.map((label) => `<button type="button" class="viz-chip" data-dot-topic="${escapeHtml(label)}" aria-pressed="${label === state.dotTraceTopic}">${escapeHtml(label)}</button>`).join("")}
-      </div>
+      <label class="pub-dots-field"><span class="visually-hidden">Topic</span>
+        <select data-dot-topic aria-label="Highlight one research topic">
+          <option value="">All topics</option>
+          ${ATTENTION_CLUSTERS.map((cluster, index) => `<option value="${index}"${String(index) === state.dotTraceTopic ? " selected" : ""}>${escapeHtml(cluster.label)}</option>`).join("")}
+        </select>
+      </label>
       <button type="button" class="section-link pub-dots-clear" data-dot-clear${state.dotTracePerson || state.dotTraceTopic ? "" : " hidden"}>Clear highlight</button>
     </div>
     <div class="pub-dots-canvas" data-dots-canvas></div>
@@ -7914,15 +7915,14 @@ function renderYearBars(pubs) {
 
 function publicationDotMatches(pub) {
   if (state.dotTracePerson && !(pub.matchedPeople || []).includes(state.dotTracePerson)) return false;
-  if (state.dotTraceTopic && !publicationFamilyLabels(pub).has(state.dotTraceTopic)) return false;
+  if (state.dotTraceTopic && !publicationClusterWeights(pub).some(([index]) => String(index) === state.dotTraceTopic)) return false;
   return true;
 }
 
 function refreshPublicationDotControls() {
   if (!els.yearBars) return;
-  els.yearBars.querySelectorAll("[data-dot-topic]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.dotTopic === state.dotTraceTopic));
-  });
+  const topicSelect = els.yearBars.querySelector("[data-dot-topic]");
+  if (topicSelect && topicSelect.value !== state.dotTraceTopic) topicSelect.value = state.dotTraceTopic;
   const select = els.yearBars.querySelector("[data-dot-person]");
   if (select && select.value !== state.dotTracePerson) select.value = state.dotTracePerson;
   const clear = els.yearBars.querySelector("[data-dot-clear]");
@@ -8214,7 +8214,7 @@ function renderAttentionRiver(pubs) {
         <caption class="visually-hidden">Percent of each year's topic-tagged publications in each research cluster, ${escapeHtml(range)}. Each column adds up to 100%.</caption>
         <thead><tr><th scope="col" class="attention-label-col">% of the year's papers</th>${years.map((year, index) => `<th scope="col" aria-label="${year}">${escapeHtml(yearLabel(year, index))}</th>`).join("")}<th scope="col" class="attention-summary" title="Share of all topic-tagged papers in ${escapeHtml(range)}">Total</th><th scope="col" class="attention-summary" title="${escapeHtml(`Percentage points, ${changeLabel}`)}">Change</th></tr></thead>
         <tbody>${clusters.map((cluster) => `<tr>
-          <th scope="row" title="${escapeHtml(cluster.families.join(", "))}">${escapeHtml(cluster.label)}</th>
+          <th scope="row"><button type="button" class="attention-row-button" data-cluster-open="${cluster.index}" title="${escapeHtml(cluster.families.join(", "))}">${escapeHtml(cluster.label)}</button></th>
           ${cluster.cells.map((item, yearIndex) => `<td class="attention-cell" style="${attentionCellStyle(item.share / maxShare)}" data-cluster="${cluster.index}" data-year-index="${yearIndex}">${Math.round(item.share * 100)}<span class="visually-hidden">%</span></td>`).join("")}
           <td class="attention-summary">${Math.round(cluster.overall * 100)}%</td>
           <td class="attention-summary">${changeText(cluster.change)}</td>
@@ -8222,6 +8222,41 @@ function renderAttentionRiver(pubs) {
         <tfoot><tr><th scope="row">Papers</th>${perYear.map((row) => `<td class="attention-count">${row.tagged}</td>`).join("")}<td class="attention-summary">${taggedTotal}</td><td class="attention-summary"></td></tr></tfoot>
       </table>
     </div>`;
+}
+
+function clusterPublications(index, pubs = overviewPublications()) {
+  return pubs.filter((pub) => publicationClusterWeights(pub).some(([clusterIndex]) => clusterIndex === index));
+}
+
+function showClusterOverlay(index) {
+  const cluster = ATTENTION_CLUSTERS[index];
+  if (!els.topicOverlay || !cluster) return;
+  topicOverlayOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  const pubs = clusterPublications(index);
+  const people = peopleById();
+  const activeIds = activePeopleSet();
+  const staffCounts = new Map();
+  pubs.forEach((pub) => activeMatchedPeople(pub, activeIds).forEach((id) => staffCounts.set(id, (staffCounts.get(id) || 0) + 1)));
+  const staff = Array.from(staffCounts.entries())
+    .sort((a, b) => b[1] - a[1] || String(people.get(a[0])?.display || a[0]).localeCompare(String(people.get(b[0])?.display || b[0])))
+    .slice(0, 8);
+  const recent = pubs.slice().sort((a, b) => publicationDateValue(b) - publicationDateValue(a)).slice(0, 8);
+  els.topicOverlayTitle.textContent = cluster.label;
+  els.topicOverlaySummary.textContent = `${pubs.length} paper${pubs.length === 1 ? "" : "s"}, ${publicationWindowLabel()}. Topics: ${cluster.families.join(", ")}.`;
+  els.topicOverlayStaff.innerHTML = staff.length ? staff.map(([id, count]) => `
+    <div class="topic-detail-row">
+      <strong>${escapeHtml(people.get(id)?.name || people.get(id)?.display || id)}</strong>
+      <span>${count} paper${count === 1 ? "" : "s"}</span>
+    </div>`).join("") : `<p class="small-muted">No researchers in this window.</p>`;
+  els.topicOverlayPublications.innerHTML = recent.length ? recent.map((pub) => {
+    const names = activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.name || id).join(", ");
+    const link = publicationLink(pub);
+    const title = link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(pub.title)}</a>` : escapeHtml(pub.title);
+    return `<div class="topic-detail-row"><strong>${title}</strong><span>${escapeHtml([pub.year, displayJournalName(pub.journal || pub.aipJournal || ""), names].filter(Boolean).join(" - "))}</span></div>`;
+  }).join("") : `<p class="small-muted">No publications in this window.</p>`;
+  els.topicOverlay.hidden = false;
+  document.body.classList.add("overlay-open");
+  requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
 }
 
 function attentionCellTooltip(clusterIndex, yearIndex) {
@@ -8545,10 +8580,11 @@ function quickFindCandidates() {
       setTab("staff");
     });
   });
-  const familyCounts = new Map(publicationFamilySignals(activePublications()).map((signal) => [signal.label, signal.count]));
-  EXPERTISE_FAMILIES.forEach(([label, terms]) => {
-    const count = familyCounts.get(label) || 0;
-    add("Topics", label, `${count} publication${count === 1 ? "" : "s"}`, terms.join(" "), () => showTopicOverlay(label, "family"));
+  const familyTerms = new Map(EXPERTISE_FAMILIES.map(([label, terms]) => [label, terms]));
+  ATTENTION_CLUSTERS.forEach((cluster, index) => {
+    const count = clusterPublications(index, activePublications()).length;
+    const terms = cluster.families.flatMap((family) => [family, ...(familyTerms.get(family) || [])]).join(" ");
+    add("Topics", cluster.label, `${count} paper${count === 1 ? "" : "s"}`, terms, () => showClusterOverlay(index));
   });
   const today = todayIsoDate();
   grantCallCalendarRecords(today).forEach((record) => {
@@ -8674,24 +8710,26 @@ function attachVisualUpgradeEvents() {
     els.quickFindOpen?.setAttribute("title", "Jump to a person, publication, topic, journal, grant call, or section (\u2318K or /)");
   }
   els.yearBars?.addEventListener("change", (event) => {
-    const select = event.target.closest("[data-dot-person]");
-    if (!select) return;
-    state.dotTracePerson = select.value;
+    const person = event.target.closest("[data-dot-person]");
+    const topic = event.target.closest("[data-dot-topic]");
+    if (person) state.dotTracePerson = person.value;
+    else if (topic) state.dotTraceTopic = topic.value;
+    else return;
     refreshPublicationDotControls();
   });
   els.yearBars?.addEventListener("click", (event) => {
-    const topic = event.target.closest("[data-dot-topic]");
-    if (topic) {
-      state.dotTraceTopic = state.dotTraceTopic === topic.dataset.dotTopic ? "" : topic.dataset.dotTopic;
-      refreshPublicationDotControls();
-      return;
-    }
     if (event.target.closest("[data-dot-clear]")) {
       state.dotTracePerson = "";
       state.dotTraceTopic = "";
       refreshPublicationDotControls();
       els.yearBars.querySelector("[data-dot-person]")?.focus();
     }
+  });
+  els.attentionRiver?.addEventListener("click", (event) => {
+    const target = event.target.closest("[data-cluster-open], [data-cluster]");
+    if (!target) return;
+    hideVizTooltip();
+    showClusterOverlay(Number(target.dataset.clusterOpen ?? target.dataset.cluster));
   });
   els.attentionRiver?.addEventListener("pointerover", (event) => {
     const cell = event.target.closest("[data-cluster]");

@@ -3755,3 +3755,6 @@ footer {
 .attention-heatmap tfoot td { color: var(--ink-500); font-size: 0.66rem; font-variant-numeric: tabular-nums; padding-top: 4px; text-align: center; }
 .attention-heatmap tfoot .attention-summary { color: var(--ink-500); }
 .attention-heatmap thead th.attention-label-col { color: var(--ink-500); font-weight: 600; }
+.attention-row-button { background: transparent; border: 0; color: var(--ink-900); cursor: pointer; font: inherit; font-weight: 600; line-height: 1.2; padding: 0; text-align: left; }
+.attention-row-button:hover { color: var(--red); }
+.attention-cell { cursor: pointer; }
