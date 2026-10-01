@@ -2860,6 +2860,11 @@ body:not([data-active-tab="overview"]) .pg-hd { display: none; }
   width: 100%;
   height: 650px;
 }
+#teaching-network-svg {
+  display: block;
+  width: 100%;
+  height: 540px;
+}
 .external-edge {
   fill: none;
   stroke: var(--ink-400);
@@ -3346,6 +3351,7 @@ footer {
   .topic-close { position: static; float: right; margin: 0 0 10px 10px; }
   .network-shell { min-height: 520px; }
   #network-svg { height: 520px; }
+  #teaching-network-svg { height: 520px; }
   .node-label { font-size: 0.82rem; }
   .network-legend-shell { padding: 10px; }
   .network-evidence-table-wrap table { min-width: 600px; }

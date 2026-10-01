@@ -1,13 +1,30 @@
 {
   "meta": {
-    "generatedOn": "2026-06-06",
-    "sourceNote": "Initial source-backed list of defended PhD theses where supplied department members are listed as supervisor/promotor or co-supervisor/copromotor. Missing staff entries should be read as not-yet-found, not confirmed absence.",
+    "generatedOn": "2026-10-01",
+    "sourceNote": "Source-backed defended PhD supervision records were reviewed against RUG research-portal records and FEB Research News through 2026-10-01. Missing staff entries should be read as not-yet-found, not confirmed absence.",
     "scope": "Completed/defended PhDs only; committee/examiner roles are excluded.",
     "currentProjectsGeneratedOn": "2026-08-11",
     "currentProjectsSourceNote": "Current/ongoing PhD status and supervisor mappings are based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23 and subsequent staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.",
     "currentProjectsScope": "Current/ongoing PhD projects supervised by supplied department members; defended theses remain in theses[]."
   },
   "theses": [
+    {
+      "id": "phd-fastje-2026-social-context",
+      "year": 2026,
+      "defenseDate": "2026-09-17",
+      "candidate": "Franzisca Fastje",
+      "title": "The Role of Social Context in Hybrid Working-From-Home Arrangements",
+      "institution": "University of Groningen",
+      "department": "Organisational Behaviour",
+      "roles": [
+        {
+          "personId": "JVB",
+          "role": "Co-supervisor"
+        }
+      ],
+      "sourceLabel": "RUG research portal",
+      "sourceUrl": "https://research.rug.nl/en/publications/the-role-of-social-context-in-hybrid-working-from-home-arrangemen/"
+    },
     {
       "id": "phd-zhang-2025-objectification",
       "year": 2025,

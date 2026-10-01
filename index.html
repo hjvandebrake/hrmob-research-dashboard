@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260925-nocounts">
+  <link rel="stylesheet" href="styles.css?v=20261001-1119">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -33,9 +33,9 @@
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
       <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
-        <button type="button" data-window-mode="recent" aria-pressed="false">Last 5 years</button>
+        <button class="on" type="button" data-window-mode="recent" aria-pressed="true">Last 5 years</button>
         <button type="button" data-window-mode="last10" aria-pressed="false">10 years</button>
-        <button class="on" type="button" data-window-mode="last20" aria-pressed="true">20 years</button>
+        <button type="button" data-window-mode="last20" aria-pressed="false">20 years</button>
       </div>
       <label class="switch" title="Adds affiliated researchers to counts, tables, metrics, and network views">
         <input id="fte-toggle" type="checkbox">
@@ -230,6 +230,10 @@
                 <strong>Grant opportunities workbook</strong>
                 <span>Full grant overview, deadlines, notes, and sign-up sheet.</span>
               </a>
+              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
+                <strong>Average AIP workbook, 2020-2024</strong>
+                <span>Journal scores used for the dashboard comparisons.</span>
+              </a>
             </div>
           </section>
 
@@ -251,6 +255,13 @@
               </label>
             </div>
             <section id="resource-recent-calls" class="recent-call-list" aria-labelledby="resource-calls-title" aria-describedby="resource-calls-meta"></section>
+          </section>
+
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div><p class="eye">Research News</p><h3 class="overview-h3">Research resources</h3></div>
+            </div>
+            <div id="research-news-resources" class="resource-links"></div>
           </section>
 
           <section class="overview-panel">
@@ -324,7 +335,7 @@
                 <h3 id="benchmark-trend-title" class="overview-h3">All journal publications per person, by year</h3>
               </div>
             </div>
-            <p class="section-intro metric-chart-subtitle">Unique journal papers in each completed year, divided by each department's selected roster headcount.</p>
+            <p class="section-intro metric-chart-subtitle">Unique journal papers per person. The current-year value is year-to-date.</p>
             <div id="benchmark-publication-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
@@ -332,7 +343,7 @@
               <p class="eye">Available publication records</p>
               <h3 class="overview-h3">AIP ≥ 95 publications per person, by year</h3>
             </div></div>
-            <p class="section-intro metric-chart-subtitle">Unique AIP ≥ 95 journal papers in each completed year, divided by each department's selected roster headcount.</p>
+            <p class="section-intro metric-chart-subtitle">Unique AIP ≥ 95 journal papers per person. The current-year value is year-to-date.</p>
             <div id="benchmark-aip-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
@@ -544,10 +555,33 @@
           <p id="network-scope-help" class="network-control-help">Choose the department overview or focus a named member. You can also select a node in the map.</p>
         </section>
 
+        <div id="network-mode-toggle" class="network-mode-block" role="group" aria-label="Network data">
+          <span class="control-label">Network data</span>
+          <div class="metric-toggle network-mode-toggle">
+            <button class="on" type="button" data-network-mode="publications" aria-pressed="true">Publications</button>
+            <button type="button" data-network-mode="teaching" aria-pressed="false">Teaching</button>
+          </div>
+        </div>
+
         <p id="network-selection-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
         <div id="network-summary" class="network-summary">
           <p class="network-summary-placeholder">Network counts will appear when the data are ready.</p>
         </div>
+
+        <section id="teaching-network-panel" class="teaching-network-panel" aria-label="Teaching network" hidden>
+          <div id="teaching-network-summary" class="network-summary"></div>
+          <div id="publication-network-workspace" class="network-workspace">
+            <section class="network-visual-column" aria-labelledby="teaching-network-title">
+              <div class="network-section-heading"><div><p class="eye">Shared teaching</p><h3 id="teaching-network-title" class="overview-h3">Courses taught together</h3></div></div>
+              <div class="network-shell"><svg id="teaching-network-svg" role="img" aria-label="Teaching collaborations"></svg><div id="teaching-network-empty" class="empty" role="status" hidden>No shared teaching courses for this focus.</div></div>
+              <p class="small-muted">Edges count non-thesis course offerings where both colleagues are listed as lecturer or coordinator.</p>
+            </section>
+          </div>
+          <section class="network-evidence-panel" aria-labelledby="teaching-network-evidence-title">
+            <div class="overview-panel-head"><div><p class="eye">Evidence</p><h3 id="teaching-network-evidence-title" class="overview-h3">Shared course offerings</h3></div></div>
+            <div id="teaching-network-table" class="table-wrap compact-table"></div>
+          </section>
+        </section>
 
         <div class="network-workspace">
           <section class="network-visual-column" aria-labelledby="network-map-title">
@@ -587,7 +621,7 @@
           </aside>
         </div>
 
-        <section class="network-evidence-panel" aria-labelledby="network-evidence-title">
+        <section id="publication-network-evidence-panel" class="network-evidence-panel" aria-labelledby="network-evidence-title">
           <label class="search-box network-evidence-search"><span>Find a coauthor or paper</span><input id="network-search" type="search" placeholder="Name or publication title" aria-controls="network-table-wrap"></label>
           <div class="overview-panel-head">
             <div>
@@ -601,7 +635,7 @@
           </div>
         </section>
 
-        <section class="external-partner-panel" aria-labelledby="coauthor-institutions-title">
+        <section id="publication-network-partner-panel" class="external-partner-panel" aria-labelledby="coauthor-institutions-title">
           <div class="overview-panel-head">
             <div>
               <p class="eye">Coauthor affiliations</p>
@@ -752,6 +786,6 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="app.js?v=20260925-nocounts"></script>
+  <script src="app.js?v=20261001-1119"></script>
 </body>
 </html>

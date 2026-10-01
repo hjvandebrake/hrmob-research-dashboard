@@ -647,7 +647,9 @@
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers. No new publication scrape.",
     "publicationDatesCheckedOn": "2026-09-07",
     "targetedUpdateOn": "2026-09-18",
-    "targetedUpdateNote": "Added publisher-verified papers 10.1037/apl0001417, 10.1177/10596011261486495, 10.1037/apl0001399. These are targeted updates, not a complete new publication scrape."
+    "targetedUpdateNote": "Added publisher-verified papers 10.1037/apl0001417, 10.1177/10596011261486495, 10.1037/apl0001399. These are targeted updates, not a complete new publication scrape.",
+    "dashboardRefreshAttemptOn": "2026-10-01",
+    "publicationRefreshStatus": "Full Crossref crawl timed out; no new publication changes were saved in this run."
   },
   "people": [
     {

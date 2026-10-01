@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-09-24",
+    "generatedOn": "2026-10-01",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
     "eligiblePublications": 791,
-    "cacheHits": 782,
-    "fetched": 9,
+    "cacheHits": 791,
+    "fetched": 0,
     "coveredPublications": 790,
     "missingCacheRecords": 0,
     "offline": false,

@@ -1,13 +1,16 @@
 {
   "meta": {
-    "generatedOn": "2026-09-07",
-    "sourceNote": "Initial source-backed list of competitive external grants and major prize funding found during a public web pass. Missing staff entries should be read as not-yet-found, not confirmed absence.",
-    "phdSupervisionNote": "Completed PhD supervision can be added with the same source-backed pattern: defended year, candidate, thesis title, supervisor role, and source link."
+    "generatedOn": "2026-10-01",
+    "sourceNote": "Source-backed grants were checked against current FEB Research News and official RUG/NWO/ERC records on 2026-10-01. Recent awards for roster members were already represented; no additional roster-linked grant met the inclusion threshold. Missing staff entries remain not-yet-found, not confirmed absence.",
+    "phdSupervisionNote": "Completed PhD supervision can be added with the same source-backed pattern: defended year, candidate, thesis title, supervisor role, and source link.",
+    "reviewedOn": "2026-10-01"
   },
   "grants": [
     {
       "id": "yy-nwo-xs-2026",
-      "personIds": ["YY"],
+      "personIds": [
+        "YY"
+      ],
       "year": 2026,
       "announcedOn": "2026-08-17",
       "scheme": "SSH Open Competition XS",
@@ -21,7 +24,11 @@
     },
     {
       "id": "fr-js-mr-nwo-l-2026",
-      "personIds": ["FR", "JS", "MR"],
+      "personIds": [
+        "FR",
+        "JS",
+        "MR"
+      ],
       "year": 2026,
       "announcedOn": "2026-07-01",
       "scheme": "SSH Open Competition L",
@@ -35,7 +42,9 @@
     },
     {
       "id": "cdd-nwo-l-2026",
-      "personIds": ["CDD"],
+      "personIds": [
+        "CDD"
+      ],
       "year": 2026,
       "announcedOn": "2026-07-01",
       "scheme": "SSH Open Competition L",
@@ -49,7 +58,9 @@
     },
     {
       "id": "sb-nwo-veni-2023",
-      "personIds": ["SB"],
+      "personIds": [
+        "SB"
+      ],
       "year": 2023,
       "scheme": "Veni",
       "funder": "NWO",
@@ -62,7 +73,9 @@
     },
     {
       "id": "bn-nwo-open-2022",
-      "personIds": ["BN"],
+      "personIds": [
+        "BN"
+      ],
       "year": 2022,
       "scheme": "NWO SSH Domain Board grant",
       "funder": "NWO",
@@ -75,7 +88,9 @@
     },
     {
       "id": "jvb-nwo-veni-2022",
-      "personIds": ["JVB"],
+      "personIds": [
+        "JVB"
+      ],
       "year": 2022,
       "scheme": "Veni",
       "funder": "NWO",
@@ -88,7 +103,10 @@
     },
     {
       "id": "jvb-gvv-zonmw-2021",
-      "personIds": ["JVB", "GVV"],
+      "personIds": [
+        "JVB",
+        "GVV"
+      ],
       "year": 2021,
       "scheme": "COVID-19 programme",
       "funder": "ZonMw",
@@ -101,7 +119,9 @@
     },
     {
       "id": "jdb-snsf-nwo-2021",
-      "personIds": ["JDB"],
+      "personIds": [
+        "JDB"
+      ],
       "year": 2021,
       "scheme": "International Co-Investigator Scheme",
       "funder": "Swiss National Science Foundation / NWO",
@@ -114,7 +134,9 @@
     },
     {
       "id": "tdv-nwo-veni-2018",
-      "personIds": ["TDV"],
+      "personIds": [
+        "TDV"
+      ],
       "year": 2018,
       "scheme": "Veni",
       "funder": "NWO",
@@ -127,7 +149,9 @@
     },
     {
       "id": "cdd-erc-advanced-2018",
-      "personIds": ["CDD"],
+      "personIds": [
+        "CDD"
+      ],
       "year": 2018,
       "scheme": "Advanced Grant",
       "funder": "European Research Council",
@@ -140,7 +164,9 @@
     },
     {
       "id": "cdd-nwo-spinoza-2018",
-      "personIds": ["CDD"],
+      "personIds": [
+        "CDD"
+      ],
       "year": 2018,
       "scheme": "Spinoza Prize",
       "funder": "NWO",
@@ -153,7 +179,9 @@
     },
     {
       "id": "mr-erc-cic-2017",
-      "personIds": ["MR"],
+      "personIds": [
+        "MR"
+      ],
       "year": 2017,
       "scheme": "ERC project",
       "funder": "European Research Council",
@@ -166,7 +194,9 @@
     },
     {
       "id": "jdb-academy-finland-2017",
-      "personIds": ["JDB"],
+      "personIds": [
+        "JDB"
+      ],
       "year": 2017,
       "scheme": "Academy Researcher project",
       "funder": "Academy of Finland",
@@ -179,7 +209,9 @@
     },
     {
       "id": "jdb-fwef-2017",
-      "personIds": ["JDB"],
+      "personIds": [
+        "JDB"
+      ],
       "year": 2017,
       "scheme": "Research project",
       "funder": "Finnish Work Environment Fund",
@@ -192,7 +224,9 @@
     },
     {
       "id": "bn-nwo-vici-2016",
-      "personIds": ["BN"],
+      "personIds": [
+        "BN"
+      ],
       "year": 2016,
       "scheme": "Vici",
       "funder": "NWO",
@@ -205,7 +239,9 @@
     },
     {
       "id": "fr-nwo-vidi-2016",
-      "personIds": ["FR"],
+      "personIds": [
+        "FR"
+      ],
       "year": 2016,
       "scheme": "Vidi",
       "funder": "NWO",
@@ -218,7 +254,10 @@
     },
     {
       "id": "tdv-gvv-nwo-2014",
-      "personIds": ["TDV", "GVV"],
+      "personIds": [
+        "TDV",
+        "GVV"
+      ],
       "year": 2014,
       "scheme": "NWO grant",
       "funder": "NWO",
@@ -231,7 +270,9 @@
     },
     {
       "id": "tdv-nginfra-nwo",
-      "personIds": ["TDV"],
+      "personIds": [
+        "TDV"
+      ],
       "year": null,
       "scheme": "NGINFRA/NWO grant",
       "funder": "NGInfra / NWO",

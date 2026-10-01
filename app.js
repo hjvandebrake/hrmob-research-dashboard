@@ -4,8 +4,9 @@ const state = {
   facultyData: { meta: {}, people: [], publications: [] },
   grantsData: { meta: {}, grants: [] },
   phdsData: { meta: {}, theses: [], currentProjects: [] },
-  resourceData: { meta: {}, opportunities: [], tips: [] },
+  resourceData: { meta: {}, opportunities: [], tips: [], researchNewsResources: [] },
   externalPartnersData: { meta: {}, partners: [] },
+  teachingData: { meta: {}, records: [], courses: [], edges: [] },
   staffProfileData: { meta: {}, people: [] },
   staffProfileLookupCache: null,
   staffContributionData: { meta: {}, people: [] },
@@ -14,8 +15,10 @@ const state = {
   dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
-  publicationWindow: "last20",
+  publicationWindow: "recent",
   networkScope: "department",
+  networkMode: "publications",
+  teachingDataStatus: "idle",
   networkAipHighOnly: false,
   networkExternal: true,
   networkMinTie: 1,
@@ -52,16 +55,16 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20260925-nocounts";
+const DATA_VERSION = "20261001-1119";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
-const DEFAULT_PUBLICATION_WINDOW_YEARS = 10;
+const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
 const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "last20"]);
 // Records before the 20-year window stay in the data, but the dashboard no longer offers an all-years view; legacy
 // window=all links open the 20-year window.
 const PUBLICATION_WINDOW_YEARS = { last10: 10, last20: 20 };
-const DEFAULT_WINDOW_MODE = "last20";
+const DEFAULT_WINDOW_MODE = "recent";
 const STAFF_SUBPAGES = new Set(["research", "publications", "phds"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
@@ -771,6 +774,24 @@ function attachEvents() {
       requestDeferredDataForCurrentView();
     });
   }
+  document.getElementById("network-mode-toggle")?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-network-mode]");
+    if (!button) return;
+    state.networkMode = button.dataset.networkMode === "teaching" ? "teaching" : "publications";
+    state.networkCollaboratorId = "";
+    renderNetwork();
+  });
+  document.getElementById("teaching-network-svg")?.addEventListener("click", (event) => {
+    const node = event.target.closest("[data-network-person-id]");
+    if (node) activateNetworkTarget(node);
+  });
+  document.getElementById("teaching-network-svg")?.addEventListener("keydown", (event) => {
+    const node = event.target.closest("[data-network-person-id]");
+    if (node && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      activateNetworkTarget(node);
+    }
+  });
   if (els.networkSelectionNote) {
     els.networkSelectionNote.addEventListener("click", (event) => {
       const button = event.target.closest("[data-network-open-staff]");
@@ -1640,6 +1661,12 @@ function focusDashboardContent() {
 
 function syncFooterMeta(meta = {}) {
   if (!els.footerMeta) return;
+  if (meta.dashboardRefreshAttemptOn) {
+    const publicationDate = meta.targetedUpdateOn || meta.generatedOn || "unknown";
+    els.footerMeta.textContent = `Supporting data refreshed ${meta.dashboardRefreshAttemptOn} · publications last changed ${publicationDate} (full crawl timed out) · Provisional public-source data`;
+    if (meta.publicationSource) els.footerMeta.title = meta.publicationSource;
+    return;
+  }
   const updated=[meta.generatedOn,meta.publicationDatesCheckedOn,meta.targetedUpdateOn].filter(Boolean).sort().at(-1);
   els.footerMeta.textContent = updated
     ? `Data updated ${updated} · Provisional public-source data`
@@ -1709,7 +1736,7 @@ function syncViewContext() {
   const roster = rosterModeLabel();
   const publicationWindow = activeWindowLabel();
   const [metricsStart, metricsEnd] = metricComparisonWindow();
-  const metricsWindow = `${metricsStart}-${metricsEnd} completed years`;
+  const metricsWindow = `${metricsStart}-${metricsEnd} (current year YTD)`;
   const contextByTab = {
     overview: `${roster} · Publications: ${publicationWindow}`,
     expertise: `${roster} | Topic publication evidence: ${publicationWindow}; submitted methods and resources cover all years`,
@@ -4190,6 +4217,12 @@ function renderResources() {
         <p>${escapeHtml(clipText(tip.detail, 280))}</p>
       </article>`).join("")
     : `<div class="staff-empty">No workbook tips loaded.</div>`;
+
+  const newsResources = state.resourceData?.researchNewsResources || [];
+  const newsResourceContainer = document.getElementById("research-news-resources");
+  if (newsResourceContainer) newsResourceContainer.innerHTML = newsResources.length
+    ? newsResources.map((item) => `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.sourceLabel)}${item.timing ? ` · ${escapeHtml(item.timing)}` : ""}</span></a>`).join("")
+    : `<p class="small-muted">No verified resource links from Research News are loaded.</p>`;
 }
 
 function renderRecentGrantCalls() {
@@ -4484,7 +4517,7 @@ function personYearAverages(pubs, people, startYearOverride = null) {
 }
 
 function metricComparisonWindow(mode=state.publicationWindow, currentYear=new Date().getFullYear()) {
-  const end=currentYear-1;
+  const end=currentYear;
   const normalized=normalizeWindowMode(mode);
   const span=normalized==="recent"?5:PUBLICATION_WINDOW_YEARS[normalized]||20;
   return [Math.max(METRICS_START_YEAR,end-span+1),end];
@@ -4563,7 +4596,7 @@ function renderMetrics() {
     metric(`HRM&OB AIP ≥ 95 per person, ${from}-${to}`,number(hrm?.aipAverage??null)),
     metric("HRM&OB selected headcount",hrm?.staff||0)
   ].join("");
-  document.getElementById("benchmark-identity-note").textContent=`Completed years: ${from}-${to}. Each paper counts once per department, divided by the selected roster headcount. PhDs and lecturers are included; known office roles are excluded. The affiliated-researchers switch ${state.includeAffiliatedResearchers?"includes":"excludes"} Carsten de Dreu, Michelle Ryan and Jennifer Jordan in HRM&OB paper counts and headcount. Other departments are unchanged.`;
+  document.getElementById("benchmark-identity-note").textContent=`Annual coverage: ${from}-${to}, with ${to} year-to-date through available source coverage. Each paper counts once per department, divided by the selected roster headcount. PhDs and lecturers are included; known office roles are excluded. The affiliated-researchers switch ${state.includeAffiliatedResearchers?"includes":"excludes"} Carsten de Dreu, Michelle Ryan and Jennifer Jordan in HRM&OB paper counts and headcount. Other departments are unchanged.`;
   els.benchmarkTrendTitle.textContent="All journal publications per person, by year";
   renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
   renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");
@@ -4642,15 +4675,12 @@ function metricYears() {
 }
 
 function latestCompletedMetricYear() {
-  const currentCompletedYear = new Date().getFullYear() - 1;
+  const currentYear = new Date().getFullYear();
   const coverageEnd = String(state.data?.meta?.publicationWindow?.to || "");
   const match = coverageEnd.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (!match) return currentCompletedYear;
+  if (!match) return currentYear;
   const coverageYear = Number(match[1]);
-  const coverageCompletedYear = match[2] === "12" && match[3] === "31"
-    ? coverageYear
-    : coverageYear - 1;
-  return Math.min(currentCompletedYear, coverageCompletedYear);
+  return Math.min(currentYear, coverageYear);
 }
 
 function metricDataYears() {
@@ -5068,7 +5098,7 @@ function renderMetricMethodNote(container, hrm, rest) {
   const usablePeople = (state.benchmarkData?.people || []).filter((person) => person.includedInDenominator && person.department !== "HRM&OB").length;
   const trendYears = metricYears();
   const latestTrendYear = trendYears.length ? Math.max(...trendYears) : latestCompletedMetricYear();
-  const currentYearNote = ` Trend lines end with the latest completed year (${latestTrendYear}).`;
+  const currentYearNote = ` The latest year (${latestTrendYear}) is year-to-date through available source coverage; earlier years are complete.`;
   const benchmarkSourceMethod = state.benchmarkData?.meta?.benchmarkSourceMethod || "";
   const benchmarkComparabilityText = benchmarkSourceMethod === "openalex-author-id"
     ? "Benchmark records now use the same OpenAlex author-profile source family as HRM&OB where a staff identity could be accepted. Treat levels as provisional because this is still a public-source seed, not a Pure export."
@@ -6586,8 +6616,10 @@ function syncNetworkControls(people) {
   const selected = people.find((p) => p.id === state.networkPersonId);
   if (els.networkSelectionStatus) els.networkSelectionStatus.textContent = selected ? `Network focus: ${selected.name}` : "Department network overview shown.";
   if (els.networkClearSelection) els.networkClearSelection.hidden = !selected;
-  if (els.networkSelectionNote) els.networkSelectionNote.textContent = selected ? selected.name : "Select any person to inspect their publications.";
-  if (els.networkScopeHelp) els.networkScopeHelp.textContent = "Additional coauthors are outside the staff roster. For papers with more than 10 authors, outside ties use the first 10 listed authors. Departmental ties and publication counts retain all authors. The minimum uses unique shared papers. Up to 18 outside coauthors are shown; the evidence table includes all qualifying ties.";
+  if (els.networkSelectionNote) els.networkSelectionNote.textContent = selected ? selected.name : state.networkMode === "teaching" ? "Select any person to focus their shared courses." : "Select any person to inspect their publications.";
+  if (els.networkScopeHelp) els.networkScopeHelp.textContent = state.networkMode === "teaching"
+    ? "Choose a department overview or focus one member's shared course offerings."
+    : "Additional coauthors are outside the staff roster. For papers with more than 10 authors, outside ties use the first 10 listed authors. Departmental ties and publication counts retain all authors. The minimum uses unique shared papers. Up to 18 outside coauthors are shown; the evidence table includes all qualifying ties.";
   if (els.networkEmpty) els.networkEmpty.textContent = "No coauthorship ties match these filters.";
   renderNetworkLegend();
 }
@@ -6600,6 +6632,34 @@ function renderNetwork() {
   if (!state.data || !els.networkSvg) return;
   const people = activePeople();
   syncNetworkControls(people);
+  const teachingMode = state.networkMode === "teaching";
+  document.getElementById("network-summary").hidden = teachingMode;
+  document.getElementById("publication-network-workspace").hidden = teachingMode;
+  document.getElementById("publication-network-evidence-panel").hidden = teachingMode;
+  document.getElementById("publication-network-partner-panel").hidden = teachingMode;
+  document.getElementById("teaching-network-panel").hidden = !teachingMode;
+  document.querySelectorAll("#network-mode-toggle [data-network-mode]").forEach((button) => {
+    const active = button.dataset.networkMode === state.networkMode;
+    button.classList.toggle("on", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  document.querySelectorAll(".publication-network-control").forEach((control) => { control.hidden = teachingMode; });
+  if (teachingMode) {
+    if (state.teachingDataStatus === "loaded") renderTeachingNetwork(people);
+    else if (state.teachingDataStatus === "failed") {
+      document.getElementById("teaching-network-summary").innerHTML = `<p class="staff-empty">Teaching records could not load. Reload the page to try again.</p>`;
+      document.getElementById("teaching-network-svg").innerHTML = "";
+    } else if (state.teachingDataStatus === "idle") {
+      state.teachingDataStatus = "loading";
+      document.getElementById("teaching-network-summary").innerHTML = `<p class="network-summary-placeholder">Loading teaching records…</p>`;
+      fetchDataFile("teaching-data.json").then((data) => {
+        state.teachingDataStatus = data ? "loaded" : "failed";
+        if (data) state.teachingData = data;
+        renderNetwork();
+      });
+    }
+    return;
+  }
   const required = ["faculty", "externalPartners"];
   const pending = required.filter((key) => !["loaded", "failed"].includes(state.deferredDataStatus[key]));
   if (pending.length) {
@@ -6608,6 +6668,60 @@ function renderNetwork() {
   }
   els.networkSvg.removeAttribute("aria-busy");
   renderPublicationNetwork(people);
+}
+
+function renderTeachingNetwork(people) {
+  const allowed = new Set(people.map((person) => person.id));
+  const peopleById = new Map(people.map((person) => [person.id, person]));
+  const edges = (state.teachingData.edges || []).filter((edge) => (
+    allowed.has(edge.source) && allowed.has(edge.target)
+    && (!state.networkPersonId || edge.source === state.networkPersonId || edge.target === state.networkPersonId)
+  ));
+  const nodeIds = [...new Set(edges.flatMap((edge) => [edge.source, edge.target]))];
+  const courseCount = new Set(edges.flatMap((edge) => edge.courseCodes || [])).size;
+  const sharedOfferings = edges.reduce((sum, edge) => sum + Number(edge.count || 0), 0);
+  document.getElementById("teaching-network-summary").innerHTML = `<div class="network-summary-grid">
+    <div class="network-summary-card"><span class="network-summary-value">${nodeIds.length}</span><span class="network-summary-label">Members in a shared course tie</span></div>
+    <div class="network-summary-card"><span class="network-summary-value">${edges.length}</span><span class="network-summary-label">Teaching ties</span><span class="small-muted">Two roster members listed as lecturer/coordinator</span></div>
+    <div class="network-summary-card"><span class="network-summary-value">${courseCount}</span><span class="network-summary-label">Shared courses</span><span class="small-muted">${sharedOfferings} shared course-offering links</span></div>
+  </div>`;
+  const svg = document.getElementById("teaching-network-svg");
+  const empty = document.getElementById("teaching-network-empty");
+  if (!edges.length) {
+    svg.innerHTML = "";
+    empty.hidden = false;
+    document.getElementById("teaching-network-table").innerHTML = `<p class="staff-empty">No shared course offerings for this focus.</p>`;
+    return;
+  }
+  empty.hidden = true;
+  const width = 900, height = 540, cx = width / 2, cy = height / 2, radius = Math.min(205, 120 + nodeIds.length * 4);
+  const positions = new Map(nodeIds.map((id, index) => {
+    const angle = -Math.PI / 2 + (Math.PI * 2 * index / Math.max(1, nodeIds.length));
+    return [id, [cx + radius * Math.cos(angle), cy + radius * Math.sin(angle)]];
+  }));
+  const edgeMarkup = edges.map((edge) => {
+    const [x1,y1] = positions.get(edge.source), [x2,y2] = positions.get(edge.target);
+    const a = peopleById.get(edge.source), b = peopleById.get(edge.target);
+    return `<g><title>${escapeHtml(a?.name || a?.display)} and ${escapeHtml(b?.name || b?.display)}: ${Number(edge.count || 0)} shared course offerings</title><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#82949a" stroke-opacity=".55" stroke-width="${Math.min(7, 1.5 + Number(edge.count || 0))}"/></g>`;
+  }).join("");
+  const nodeMarkup = nodeIds.map((id) => {
+    const person = peopleById.get(id), [x,y] = positions.get(id);
+    const label = person?.name || person?.display || id;
+    return `<g data-network-person-id="${escapeHtml(id)}" tabindex="0" role="button" aria-label="Focus teaching ties for ${escapeHtml(label)}" style="cursor:pointer"><title>${escapeHtml(label)}</title><circle cx="${x}" cy="${y}" r="18" fill="#326d70" stroke="#fff" stroke-width="3"/><text x="${x}" y="${y+34}" text-anchor="middle" font-size="13" fill="#253b3d">${escapeHtml(label)}</text></g>`;
+  }).join("");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("aria-label", `Teaching network with ${nodeIds.length} people and ${edges.length} ties`);
+  svg.innerHTML = `<title>Shared teaching courses</title>${edgeMarkup}${nodeMarkup}`;
+  const courseByCode = new Map((state.teachingData.courses || []).map((course) => [course.code, course]));
+  document.getElementById("teaching-network-table").innerHTML = `<table><thead><tr><th>Colleagues</th><th>Shared offerings</th><th>Courses</th></tr></thead><tbody>${edges.map((edge) => {
+    const a = peopleById.get(edge.source), b = peopleById.get(edge.target);
+    const names = [a?.name || a?.display || edge.source, b?.name || b?.display || edge.target].sort((x,y) => x.localeCompare(y));
+    const courses = (edge.courseCodes || []).map((code, i) => {
+      const course = courseByCode.get(code), title = course?.title || edge.courseTitles?.[i] || code;
+      return course?.courseUrl ? `<a href="${escapeHtml(course.courseUrl)}" target="_blank" rel="noopener">${escapeHtml(title)}</a>` : escapeHtml(title);
+    }).join("; ");
+    return `<tr><td>${names.map(escapeHtml).join(" · ")}</td><td>${Number(edge.count || 0)}</td><td>${courses}</td></tr>`;
+  }).join("")}</tbody></table>`;
 }
 
 function renderNetworkLoading(keys) {
