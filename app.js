@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261006-aiguide";
+const DATA_VERSION = "20261006-resources";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
@@ -1555,7 +1555,7 @@ function routeHash() {
   if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}/${encodeURIComponent(normalizeStaffSubpage(state.staffSubpage))}`;
   if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
   if (state.tab === "collaboration") return "#opportunities";
-  if (state.tab === "resources") return "#grants";
+  if (state.tab === "resources") return "#resources";
   return `#${state.tab}`;
 }
 
