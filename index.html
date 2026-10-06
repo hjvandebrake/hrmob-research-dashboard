@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261006-grantsplit">
+  <link rel="stylesheet" href="styles.css?v=20261006-grantspage">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -209,39 +209,16 @@
           <section class="overview-panel resource-panel-wide call-calendar-panel" aria-labelledby="call-calendar-title">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Next twelve months</p>
+                <p class="eye">Next eighteen months</p>
                 <h3 id="call-calendar-title" class="overview-h3">Call calendar</h3>
               </div>
             </div>
             <div id="call-calendar" class="call-calendar"></div>
           </section>
-          <section class="overview-panel resource-panel-wide">
-            <div class="overview-panel-head"><h3 class="overview-h3">Awarded funding</h3></div>
-            <div id="grant-list" class="grant-list"></div>
-          </section>
-          <section class="overview-panel">
+          <section class="overview-panel grants-full grants-calls-panel">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Downloads</p>
-                <h3 class="overview-h3">Grant planning</h3>
-              </div>
-            </div>
-            <div class="download-list">
-              <a class="download-card" href="assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx" download>
-                <strong>Grant opportunities workbook</strong>
-                <span>Full grant overview, deadlines, notes, and sign-up sheet.</span>
-              </a>
-              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
-                <strong>Average AIP workbook, 2020-2024</strong>
-                <span>Journal scores used for the dashboard comparisons.</span>
-              </a>
-            </div>
-          </section>
-
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Recent calls</p>
+                <p class="eye">Open calls</p>
                 <h3 id="resource-calls-title" class="overview-h3">Grant calls to watch</h3>
               </div>
             </div>
@@ -258,32 +235,17 @@
             <section id="resource-recent-calls" class="recent-call-list" aria-labelledby="resource-calls-title" aria-describedby="resource-calls-meta"></section>
           </section>
 
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Links</p>
-                <h3 class="overview-h3">Funding pages</h3>
-              </div>
-            </div>
-            <div class="resource-links">
-              <a href="https://www.nwo.nl/en/calls/nwo-talent-programme" target="_blank" rel="noopener">NWO Talent Programme</a>
-              <a href="https://erc.europa.eu/apply-grant" target="_blank" rel="noopener">ERC grants</a>
-              <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener">MSCA Postdoctoral Fellowships</a>
-              <a href="https://www.rug.nl/research/research-support-portal/before/funding/?lang=en" target="_blank" rel="noopener">UG external funding support</a>
-            </div>
-          </section>
-
-          <section class="overview-panel resource-panel-wide">
+          <section class="overview-panel grants-full">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Grants</p>
-                <h3 class="overview-h3">Opportunities from the workbook</h3>
+                <h3 class="overview-h3">More opportunities from the workbook</h3>
               </div>
             </div>
             <div id="resource-opportunities" class="grant-opportunity-list"></div>
           </section>
 
-          <section class="overview-panel">
+          <section class="overview-panel resource-panel-wide grants-tips-panel">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Proposal tips</p>
@@ -293,7 +255,31 @@
             <div id="resource-tips" class="resource-tip-list"></div>
           </section>
 
-          <section class="overview-panel resource-contact-panel resource-panel-wide">
+          <section class="overview-panel grants-links-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Links and downloads</p>
+                <h3 class="overview-h3">Funding pages</h3>
+              </div>
+            </div>
+            <div class="resource-links">
+              <a href="https://www.nwo.nl/en/calls/nwo-talent-programme" target="_blank" rel="noopener">NWO Talent Programme</a>
+              <a href="https://erc.europa.eu/apply-grant" target="_blank" rel="noopener">ERC grants</a>
+              <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener">MSCA Postdoctoral Fellowships</a>
+              <a href="https://www.rug.nl/research/research-support-portal/before/funding/?lang=en" target="_blank" rel="noopener">UG external funding support</a>
+            </div>
+            <div class="download-list grants-download">
+              <a class="download-card" href="assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx" download>
+                <strong>Grant opportunities workbook</strong>
+                <span>Full grant overview, deadlines, notes, and sign-up sheet.</span>
+              </a>
+            </div>
+          </section>
+          <section class="overview-panel grants-full">
+            <div class="overview-panel-head"><h3 class="overview-h3">Awarded funding</h3></div>
+            <div id="grant-list" class="grant-list"></div>
+          </section>
+          <section class="overview-panel resource-contact-panel grants-full">
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Contact</p>
@@ -831,6 +817,6 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="app.js?v=20261006-grantsplit"></script>
+  <script src="app.js?v=20261006-grantspage"></script>
 </body>
 </html>

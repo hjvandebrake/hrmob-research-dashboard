@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261006-grantsplit";
+const DATA_VERSION = "20261006-grantspage";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
@@ -4197,20 +4197,20 @@ function renderResources() {
       .map((stage) => {
         const rows = opportunities.filter((item) => item.stage === stage);
         if (!rows.length) return "";
-        return `<section class="grant-stage">
-          <div class="grant-stage-head">
+        return `<details class="grant-stage">
+          <summary class="grant-stage-head">
             <h4>${escapeHtml(stage)}</h4>
             <span>${rows.length} option${rows.length === 1 ? "" : "s"}</span>
-          </div>
+          </summary>
           <div class="grant-stage-grid">
             ${rows.map(resourceOpportunityCard).join("")}
           </div>
-        </section>`;
+        </details>`;
       })
       .join("");
   }
 
-  const tips = (state.resourceData?.tips || []).filter((tip) => tip.topic && tip.detail).slice(0, 12);
+  const tips = (state.resourceData?.tips || []).filter((tip) => tip.topic && tip.detail).slice(0, 6);
   els.resourceTips.innerHTML = tips.length
     ? tips.map((tip) => `<article class="resource-tip">
         <strong>${escapeHtml(tip.topic)}</strong>
@@ -4257,11 +4257,8 @@ function renderRecentGrantCalls() {
       : escapeHtml(call.name);
     return `<article class="recent-call-card">
       <h4>${title}</h4>
-      ${renderGrantBadges(call)}
-      <p class="recent-call-meta">${escapeHtml([call.funder, call.timing, call.sourceCheckedDate ? `checked ${formatIsoDisplayDate(call.sourceCheckedDate)}` : ""].filter(Boolean).join(" - "))}</p>
-      <p>${escapeHtml(clipText(call.why || call.fitNote || "", 180))}</p>
-      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(call.eligibility)}</p>` : ""}
-      <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
+      <p class="recent-call-meta">${escapeHtml([call.funder, call.timing].filter(Boolean).join(" · "))}</p>
+      <p>${escapeHtml(clipText(call.why || call.fitNote || "", 150))}</p>
     </article>`;
   }).join("");
 }
@@ -4286,11 +4283,8 @@ function resourceOpportunityCard(item) {
   ].filter(Boolean);
   return `<article class="grant-opportunity-card">
     <h5>${title}</h5>
-    ${renderGrantBadges(item)}
-    <p class="grant-opportunity-meta">${escapeHtml(facts.join(" - "))}</p>
-    ${item.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(item.eligibility, 150))}</p>` : ""}
-    ${item.tips ? `<p><strong>Tip</strong> ${escapeHtml(clipText(item.tips, 260))}</p>` : ""}
-    <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(item))}</p>
+    <p class="grant-opportunity-meta">${escapeHtml(facts.join(" · "))}</p>
+    ${item.eligibility ? `<p>${escapeHtml(clipText(item.eligibility, 130))}</p>` : ""}
   </article>`;
 }
 
@@ -7850,7 +7844,7 @@ const AIP_DOT_BANDS = [
   { label: "AIP below 90", color: "#7fb5b8" },
   { label: "No AIP match", color: "#ffffff", stroke: "#98a0a8" },
 ];
-const CALL_CALENDAR_MONTHS = 12;
+const CALL_CALENDAR_MONTHS = 18;
 const VIZ_SVG_NS = "http://www.w3.org/2000/svg";
 const publicationFamilyLabelCache = new WeakMap();
 let publicationDotsView = null;
@@ -8381,7 +8375,7 @@ function attentionCellTooltip(clusterIndex, yearIndex) {
     ${familyText ? `<span class="viz-tip-meta">${escapeHtml(`Papers by topic: ${familyText}`)}</span>` : ""}`;
 }
 
-/* ---------- Grant call calendar: the next twelve months ---------- */
+/* ---------- Grant call calendar: the next eighteen months ---------- */
 
 function todayIsoDate(now = new Date()) {
   return [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
@@ -8516,10 +8510,11 @@ function renderCallCalendar() {
       <span><i class="tone-later"></i>Later</span>
       <span><i class="tone-month"></i>Month known, day not confirmed</span>
       ${state.resourceShowClosed ? `<span><i class="tone-passed"></i>Closed</span>` : ""}
+      <span class="call-legend-hint">Select a call for its details</span>
     </div>
     <div class="call-calendar-scroll" tabindex="-1"><div class="call-calendar-canvas" data-call-canvas></div></div>
     <div data-call-detail aria-live="polite"></div>
-    ${later.length ? `<div class="call-calendar-extra"><strong>Beyond twelve months</strong><div class="chip-row">${later.map(chip).join("")}</div></div>` : ""}
+    ${later.length ? `<div class="call-calendar-extra"><strong>Beyond eighteen months</strong><div class="chip-row">${later.map(chip).join("")}</div></div>` : ""}
     ${undated.length ? `<div class="call-calendar-extra"><strong>Date not confirmed</strong><div class="chip-row">${undated.map(chip).join("")}</div></div>` : ""}
 `;
   drawCallCalendar();
@@ -8646,12 +8641,11 @@ function renderCallDetail() {
       <p class="eye">${escapeHtml(call.stage || "Grant call")}</p>
       <h4>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(call.name)}</a>` : escapeHtml(call.name)}</h4>
       <p class="call-when">${escapeHtml(callWhenText(record.timing, callCalendarView.today))}</p>
-      ${renderGrantBadges(call)}
       ${call.timing || call.deadline ? `<p class="call-timing">${escapeHtml(call.timing || call.deadline)}</p>` : ""}
     </div>
     <div>
-      ${facts.length ? `<p class="grant-opportunity-meta">${escapeHtml(facts.join(" - "))}</p>` : ""}
-      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(call.eligibility, 220))}</p>` : ""}
+      ${facts.length ? `<p class="grant-opportunity-meta">${escapeHtml(facts.join(" · "))}</p>` : ""}
+      ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(clipText(call.eligibility, 160))}</p>` : ""}
       ${context ? `<p>${escapeHtml(clipText(context, 260))}</p>` : ""}
       <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
     </div>

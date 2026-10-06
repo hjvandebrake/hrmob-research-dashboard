@@ -3778,3 +3778,31 @@ footer {
 @media (max-width: 760px) { .ai-guidance { grid-template-columns: 1fr; } }
 
 .ai-guidance-panel { grid-column: 1 / -1; }
+
+/* Grants page layout (6 October 2026): calendar and open calls first, awarded funding last */
+.resource-grid > .grants-full { grid-column: 1 / -1; }
+.grants-calls-panel .recent-call-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.grants-full .grant-stage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grant-opportunity-list { gap: 0; }
+details.grant-stage, details.grant-stage:first-child { border-top: 1px solid var(--ink-200); padding: 0; }
+details.grant-stage > summary { cursor: pointer; list-style: none; padding: 12px 0; margin: 0; }
+details.grant-stage > summary::-webkit-details-marker { display: none; }
+details.grant-stage > summary h4::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 10px; border-right: 2px solid var(--red); border-bottom: 2px solid var(--red); transform: rotate(-45deg); transition: transform .15s; vertical-align: 2px; }
+details.grant-stage[open] > summary h4::before { transform: rotate(45deg); }
+details.grant-stage > summary:hover h4 { color: var(--red); }
+details.grant-stage[open] > .grant-stage-grid { padding-bottom: 16px; }
+.grants-tips-panel .resource-tip-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+.grants-links-panel .grants-download { margin-top: 16px; }
+/* subtle cues that something can be clicked */
+#view-grants .recent-call-card h4 a::after, #view-grants .grant-opportunity-card h5 a::after, #view-grants .resource-links a::after { content: " \2197"; font-size: .8em; color: var(--ink-400); }
+#view-grants .recent-call-card h4 a:hover, #view-grants .grant-opportunity-card h5 a:hover { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+.call-legend-hint { margin-left: auto; color: var(--ink-400); font-style: italic; }
+.call-pill:hover .call-pill-shape { stroke: var(--red); }
+@media (max-width: 1000px) {
+  .grants-calls-panel .recent-call-list, .grants-full .grant-stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .grants-calls-panel .recent-call-list, .grants-full .grant-stage-grid, .grants-tips-panel .resource-tip-list { grid-template-columns: 1fr; }
+  .call-legend-hint { margin-left: 0; }
+}
+
