@@ -3764,3 +3764,17 @@ footer {
 .attention-row-button { background: transparent; border: 0; color: var(--ink-900); cursor: pointer; font: inherit; font-weight: 600; line-height: 1.2; padding: 0; text-align: left; }
 .attention-row-button:hover { color: var(--red); }
 .attention-cell { cursor: pointer; }
+
+/* Guidance panel: Using AI well in research (6 October 2026) */
+.ai-guidance { display: grid; grid-template-columns: minmax(220px, 380px) 1fr; gap: 28px; align-items: center; }
+.ai-guidance-preview img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--ink-200); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
+.ai-guidance-preview:hover img { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14); }
+.ai-guidance-copy p { margin: 0.35rem 0 0; color: var(--ink-700); }
+.ai-guidance-copy .eye { margin: 0 0 6px; }
+.ai-guidance-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 16px; }
+.ai-guidance-open { display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 999px; background: var(--red); color: var(--white); font-weight: 600; text-decoration: none; }
+.ai-guidance-open:hover { background: var(--red-dk); }
+.ai-guidance-open:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+@media (max-width: 760px) { .ai-guidance { grid-template-columns: 1fr; } }
+
+.ai-guidance-panel { grid-column: 1 / -1; }
