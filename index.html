@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261006-aiguide3">
+  <link rel="stylesheet" href="styles.css?v=20261006-grantsplit">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -29,6 +29,7 @@
         <button id="tab-publications" class="nav-tab" type="button" role="tab" aria-controls="view-publications" aria-selected="false" tabindex="-1" data-tab="publications">Publications</button>
         <button id="tab-network" class="nav-tab" type="button" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
         <button id="tab-metrics" class="nav-tab" type="button" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
+        <button id="tab-grants" class="nav-tab" type="button" role="tab" aria-controls="view-grants" aria-selected="false" tabindex="-1" data-tab="grants">Grants</button>
         <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
@@ -195,32 +196,16 @@
       </div>
     </section>
 
-    <section id="view-resources" class="sec" role="tabpanel" aria-labelledby="tab-resources" hidden>
+    <section id="view-grants" class="sec" role="tabpanel" aria-labelledby="tab-grants" hidden>
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Guidance and funding</p>
-            <h2 class="h2">Resources</h2>
+            <p class="eye">Funding</p>
+            <h2 class="h2">Grants</h2>
           </div>
         </div>
-        <p class="section-intro page-intro">Guidance for our research, followed by grant calls, awarded funding, and material for proposal preparation.</p>
+        <p class="section-intro page-intro">Use this section to move from call scanning to possible collaboration and proposal preparation.</p>
         <div class="resource-grid">
-          <section class="overview-panel resource-panel-wide ai-guidance-panel" aria-labelledby="ai-guidance-title">
-            <div class="ai-guidance">
-              <a class="ai-guidance-preview" href="resources/ai-in-research/" aria-label="Open the presentation Using AI well in research">
-                <img src="resources/ai-in-research/preview.webp" width="960" height="540" alt="Opening slide of the presentation Using AI well in research" loading="lazy">
-              </a>
-              <div class="ai-guidance-copy">
-                <p class="eye">Guidance</p>
-                <h3 id="ai-guidance-title" class="overview-h3">Using AI well in research</h3>
-                <p>A follow-up to the research day, in which I describe what we want AI to do for our research, how AI changes research along three dimensions, and where it helps most and where we need to be careful. At the end I ask for your input for FEB&rsquo;s plan for AI in research. The presentation is interactive, so you can click on its tabs, heatmap cells, and sources.</p>
-                <div class="ai-guidance-actions">
-                  <a class="ai-guidance-open" href="resources/ai-in-research/">Open the presentation</a>
-                  <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Input%20on%20AI%20in%20research">Send your input</a>
-                </div>
-              </div>
-            </div>
-          </section>
           <section class="overview-panel resource-panel-wide call-calendar-panel" aria-labelledby="call-calendar-title">
             <div class="overview-panel-head">
               <div>
@@ -275,13 +260,6 @@
 
           <section class="overview-panel">
             <div class="overview-panel-head">
-              <div><p class="eye">Research News</p><h3 class="overview-h3">Research resources</h3></div>
-            </div>
-            <div id="research-news-resources" class="resource-links"></div>
-          </section>
-
-          <section class="overview-panel">
-            <div class="overview-panel-head">
               <div>
                 <p class="eye">Links</p>
                 <h3 class="overview-h3">Funding pages</h3>
@@ -324,6 +302,57 @@
             </div>
             <p class="quiet-contact-copy">For corrections, missing records, or suggestions, use the contact page.</p>
             <a class="section-link" href="#contact">Open contact page</a>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-resources" class="sec" role="tabpanel" aria-labelledby="tab-resources" hidden>
+      <div class="wrap">
+        <div class="sec-head compact">
+          <div>
+            <p class="eye">Guidance</p>
+            <h2 class="h2">Resources</h2>
+          </div>
+        </div>
+        <p class="section-intro page-intro">Guidance for our research, journal scores, and useful resources from Research News.</p>
+        <div class="resource-grid">
+          <section class="overview-panel resource-panel-wide ai-guidance-panel" aria-labelledby="ai-guidance-title">
+            <div class="ai-guidance">
+              <a class="ai-guidance-preview" href="resources/ai-in-research/" aria-label="Open the presentation Using AI well in research">
+                <img src="resources/ai-in-research/preview.webp" width="960" height="540" alt="Opening slide of the presentation Using AI well in research" loading="lazy">
+              </a>
+              <div class="ai-guidance-copy">
+                <p class="eye">Guidance</p>
+                <h3 id="ai-guidance-title" class="overview-h3">Using AI well in research</h3>
+                <p>A follow-up to the research day, in which I describe what we want AI to do for our research, how AI changes research along three dimensions, and where it helps most and where we need to be careful. At the end I ask for your input for FEB&rsquo;s plan for AI in research. The presentation is interactive, so you can click on its tabs, heatmap cells, and sources.</p>
+                <div class="ai-guidance-actions">
+                  <a class="ai-guidance-open" href="resources/ai-in-research/">Open the presentation</a>
+                  <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Input%20on%20AI%20in%20research">Send your input</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div><p class="eye">Research News</p><h3 class="overview-h3">Research resources</h3></div>
+            </div>
+            <div id="research-news-resources" class="resource-links"></div>
+          </section>
+
+          <section class="overview-panel">
+            <div class="overview-panel-head">
+              <div>
+                <p class="eye">Downloads</p>
+                <h3 class="overview-h3">Journal scores</h3>
+              </div>
+            </div>
+            <div class="download-list">
+              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
+                <strong>Average AIP workbook, 2020-2024</strong>
+                <span>Journal scores used for the dashboard comparisons.</span>
+              </a>
+            </div>
           </section>
         </div>
       </div>
@@ -802,6 +831,6 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="app.js?v=20261006-aiguide3"></script>
+  <script src="app.js?v=20261006-grantsplit"></script>
 </body>
 </html>

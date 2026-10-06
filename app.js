@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261006-aiguide3";
+const DATA_VERSION = "20261006-grantsplit";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
@@ -1515,7 +1515,7 @@ function syncDataStatus() {
 }
 
 function validTab(tab) {
-  return ["overview", "expertise", "staff", "phds", "collaboration", "publications", "network", "metrics", "resources", "contact"].includes(tab);
+  return ["overview", "expertise", "staff", "phds", "collaboration", "publications", "network", "metrics", "grants", "resources", "contact"].includes(tab);
 }
 
 function routeFromHash() {
@@ -1539,7 +1539,7 @@ function routeFromHash() {
     };
   }
   const [tab, detail = "", subdetail = ""] = raw.split("/");
-  const aliasedTab = tab === "opportunities" ? "collaboration" : tab === "grants" ? "resources" : tab;
+  const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
   const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
   return {
     tab: normalizedTab,
@@ -1699,7 +1699,7 @@ function renderCurrentView() {
   else if (state.tab === "collaboration") renderCollaboration();
   else if (state.tab === "publications") renderPublications();
   else if (state.tab === "network") renderNetwork();
-  else if (state.tab === "resources") renderResources();
+  else if (state.tab === "grants" || state.tab === "resources") renderResources();
   requestDeferredDataForCurrentView();
 }
 
@@ -1746,7 +1746,8 @@ function syncViewContext() {
     publications: `${roster} | ${publicationWindow}`,
     network: `${roster} | Publication ties: ${publicationWindow}`,
     metrics: `Academic staff and PhD students · HRM&OB affiliates ${state.includeAffiliatedResearchers?"included":"excluded"} · ${metricsWindow}`,
-    resources: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
+    grants: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
+    resources: "Guidance for research, journal scores, and links from Research News",
     contact: "Corrections, suggestions, and staff profile updates",
   };
   (els.viewContexts || []).forEach((context) => {
@@ -1754,7 +1755,7 @@ function syncViewContext() {
     context.textContent = contextByTab[tab] || `${roster} | ${publicationWindow}`;
   });
   if (els.publicationWindowToggle) {
-    const windowRelevant = new Set(["overview", "expertise", "staff", "collaboration", "publications", "network", "metrics", "resources"]).has(state.tab);
+    const windowRelevant = new Set(["overview", "expertise", "staff", "collaboration", "publications", "network", "metrics", "grants"]).has(state.tab);
     els.publicationWindowToggle.hidden = !windowRelevant;
   }
   const rosterToggle = els.fteToggle?.closest("label");
@@ -8696,7 +8697,7 @@ function quickFindCandidates() {
     const when = record.timing.kind === "exact" ? formatIsoDisplayDate(record.timing.date) : record.timing.kind === "month" ? formatIsoMonth(record.timing.month) : record.timing.kind === "passed" ? "Closed" : "Date not confirmed";
     add("Grant calls", record.call.name, when, record.call.funder, () => {
       state.selectedCallKey = record.key;
-      setTab("resources");
+      setTab("grants");
       requestAnimationFrame(() => {
         els.callCalendar?.scrollIntoView({ block: "start" });
         els.callCalendar?.querySelector(`.call-pill[data-call-key="${CSS.escape(record.key)}"]`)?.focus({ preventScroll: true });
@@ -8902,6 +8903,6 @@ function attachVisualUpgradeEvents() {
     lastWidth = window.innerWidth;
     hideVizTooltip();
     if (state.tab === "overview") drawPublicationDots();
-    if (state.tab === "resources") drawCallCalendar();
+    if (state.tab === "grants") drawCallCalendar();
   }, 160));
 }
