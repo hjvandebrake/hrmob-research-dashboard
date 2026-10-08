@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedOn": "2026-10-01",
-    "sourceNote": "Source-backed grants were checked against current FEB Research News and official RUG/NWO/ERC records on 2026-10-01. Recent awards for roster members were already represented; no additional roster-linked grant met the inclusion threshold. Missing staff entries remain not-yet-found, not confirmed absence.",
+    "generatedOn": "2026-10-08",
+    "sourceNote": "Public RUG profiles/projects, grant award pages, thesis sources and FEB Research News were checked on 2026-10-08 for every supplied roster identity. No new competitive grant or completed PhD met the source-verification threshold. Future defenses remain excluded. Missing entries mean not yet found, not confirmed absence.",
     "phdSupervisionNote": "Completed PhD supervision can be added with the same source-backed pattern: defended year, candidate, thesis title, supervisor role, and source link.",
-    "reviewedOn": "2026-10-01"
+    "reviewedOn": "2026-10-08"
   },
   "grants": [
     {
@@ -20,7 +20,8 @@
       "amount": "EUR 50,000",
       "role": "Recipient / PI",
       "sourceLabel": "RUG FEB news, 17 August 2026",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260810nwo-xs-grants-for-six-feb-researchers?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260810nwo-xs-grants-for-six-feb-researchers?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "fr-js-mr-nwo-l-2026",
@@ -38,7 +39,13 @@
       "amount": "about EUR 800,000 (whole project)",
       "role": "Joint recipients: Floor Rink, Janka Stoker and Michelle Ryan",
       "sourceLabel": "RUG FEB news, 1 July 2026",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en",
+      "sourceCheckedOn": "2026-10-08",
+      "projectNumber": "406.L.25EB.013",
+      "formalTitle": "Beyond access: A career trajectory perspective on gender equality at the top",
+      "additionalSourceUrls": [
+        "https://werkenbij.rug.nl/vacature/phd-position-in-the-field-of-organizational-behavior-2427/?lang=nl"
+      ]
     },
     {
       "id": "cdd-nwo-l-2026",
@@ -54,7 +61,8 @@
       "amount": "about EUR 800,000 (whole project)",
       "role": "Joint recipients: Carsten de Dreu and Zsombor Méder",
       "sourceLabel": "RUG FEB news, 1 July 2026",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2026/260701-nwo-l-grants-for-three-projects-by-feb-researchers?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "sb-nwo-veni-2023",
@@ -69,7 +77,8 @@
       "amount": "EUR 280,000",
       "role": "Recipient / PI",
       "sourceLabel": "RUG news",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2023/veni-grant-for-stefan-berger?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2023/veni-grant-for-stefan-berger?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "bn-nwo-open-2022",
@@ -99,7 +108,9 @@
       "amount": "not listed",
       "role": "Recipient / PI",
       "sourceLabel": "RUG news",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2022/veni-grants-for-joost-van-de-brake-and-daniel-te-kaat?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/news/2022/veni-grants-for-joost-van-de-brake-and-daniel-te-kaat?lang=en",
+      "previousSourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2022/veni-grants-for-joost-van-de-brake-and-daniel-te-kaat?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "jvb-gvv-zonmw-2021",
@@ -115,7 +126,8 @@
       "amount": "EUR 200,000",
       "role": "Project team",
       "sourceLabel": "RUG FEB Research News",
-      "sourceUrl": "https://www.rug.nl/feb/research/frn/blog/feb-researchers-want-to-help-solve-covid-19-problems-in-healthcare?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/frn/blog/feb-researchers-want-to-help-solve-covid-19-problems-in-healthcare?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "jdb-snsf-nwo-2021",
@@ -130,7 +142,8 @@
       "amount": "not listed",
       "role": "Co-PI",
       "sourceLabel": "RUG staff projects",
-      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en"
+      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "tdv-nwo-veni-2018",
@@ -145,7 +158,8 @@
       "amount": "up to EUR 250,000",
       "role": "Recipient / PI",
       "sourceLabel": "RUG news",
-      "sourceUrl": "https://www.rug.nl/news/2018/07/twelve-veni-grants-for-ug-researchers?lang=en"
+      "sourceUrl": "https://www.rug.nl/news/2018/07/twelve-veni-grants-for-ug-researchers?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "cdd-erc-advanced-2018",
@@ -160,7 +174,8 @@
       "amount": "EUR 2,500,000",
       "role": "Recipient / PI",
       "sourceLabel": "Leiden University news",
-      "sourceUrl": "https://www.universiteitleiden.nl/en/news/2018/04/carsten-de-dreu-receives-erc-advanced-grant"
+      "sourceUrl": "https://www.universiteitleiden.nl/en/news/2018/04/carsten-de-dreu-receives-erc-advanced-grant",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "cdd-nwo-spinoza-2018",
@@ -175,7 +190,8 @@
       "amount": "EUR 2,500,000",
       "role": "Laureate",
       "sourceLabel": "Leiden University news",
-      "sourceUrl": "https://www.universiteitleiden.nl/en/news/2018/09/carsten-de-dreu-receives-spinoza-prize"
+      "sourceUrl": "https://www.universiteitleiden.nl/en/news/2018/09/carsten-de-dreu-receives-spinoza-prize",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "mr-erc-cic-2017",
@@ -190,7 +206,8 @@
       "amount": "EUR 1,998,722",
       "role": "Principal investigator",
       "sourceLabel": "CORDIS",
-      "sourceUrl": "https://cordis.europa.eu/project/id/725128/results"
+      "sourceUrl": "https://cordis.europa.eu/project/id/725128/results",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "jdb-academy-finland-2017",
@@ -205,7 +222,8 @@
       "amount": "not listed",
       "role": "PI",
       "sourceLabel": "RUG staff projects",
-      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en"
+      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "jdb-fwef-2017",
@@ -220,7 +238,8 @@
       "amount": "not listed",
       "role": "Co-PI",
       "sourceLabel": "RUG staff projects",
-      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en"
+      "sourceUrl": "https://www.rug.nl/staff/j.de.bloom/projects?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "bn-nwo-vici-2016",
@@ -235,7 +254,8 @@
       "amount": "EUR 1,500,000",
       "role": "Recipient / PI",
       "sourceLabel": "RUG news",
-      "sourceUrl": "https://www.rug.nl/news/2016/02/large-vici-grant-for-bernard-nijstad-?lang=en"
+      "sourceUrl": "https://www.rug.nl/news/2016/02/large-vici-grant-for-bernard-nijstad-?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "fr-nwo-vidi-2016",
@@ -250,7 +270,8 @@
       "amount": "not listed",
       "role": "Recipient / PI",
       "sourceLabel": "RUG awarded grants",
-      "sourceUrl": "https://www.rug.nl/feb/research/grants-prizes/?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/grants-prizes/?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "tdv-gvv-nwo-2014",
@@ -266,7 +287,8 @@
       "amount": "not listed",
       "role": "Project team",
       "sourceLabel": "RUG awarded grants / staff projects",
-      "sourceUrl": "https://www.rug.nl/feb/research/grants-prizes/?lang=en"
+      "sourceUrl": "https://www.rug.nl/feb/research/grants-prizes/?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     },
     {
       "id": "tdv-nginfra-nwo",
@@ -281,7 +303,8 @@
       "amount": "not listed",
       "role": "Project team",
       "sourceLabel": "RUG staff projects",
-      "sourceUrl": "https://www.rug.nl/staff/thom.de.vries/projects?lang=en"
+      "sourceUrl": "https://www.rug.nl/staff/thom.de.vries/projects?lang=en",
+      "sourceCheckedOn": "2026-10-08"
     }
   ]
 }

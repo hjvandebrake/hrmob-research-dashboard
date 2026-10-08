@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-09-18",
+    "generatedOn": "2026-10-08",
     "people": 528,
-    "publicationsChecked": 4276,
+    "publicationsChecked": 4301,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 481,
     "additionalBenchmarkLinks": 39,
@@ -16267,6 +16267,16 @@
           "personId": "eef-rjm-alessie",
           "author": "Rob Alessie",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "eef-rjm-alessie",
+          "author": "Rob J.M. Alessie",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -17405,12 +17415,12 @@
         },
         {
           "personId": "acc-db-veltrop",
-          "author": "Veltrop, D.",
+          "author": "Dennis B. Veltrop",
           "method": "unique compatible author name"
         },
         {
           "personId": "hrmob-fa-rink",
-          "author": "Rink, F.",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -18648,11 +18658,6 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Ryan, M. K.",
           "method": "unique compatible author name"
         }
       ]
@@ -21594,6 +21599,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -23232,6 +23242,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -23662,6 +23677,11 @@
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-jm-lees",
+          "author": "Lees, J.",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -24016,11 +24036,6 @@
         {
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Jeffrey Lees",
           "method": "unique compatible author name"
         }
       ]
@@ -24766,6 +24781,11 @@
           "personId": "hrmob-j-de-bloom",
           "author": "Jessica de Bloom",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -25019,6 +25039,21 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis B. Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -25414,6 +25449,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -26110,6 +26150,11 @@
         {
           "personId": "gem-jh-garretsen",
           "author": "Harry Garretsen",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -26980,6 +27025,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -27128,6 +27178,21 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis B. Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-rbh-hooghiemstra",
+          "author": "Reggy B. H. Hooghiemstra",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -27373,6 +27438,11 @@
         {
           "personId": "hrmob-j-de-bloom",
           "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -27971,6 +28041,11 @@
           "personId": "gem-jh-garretsen",
           "author": "Harry Garretsen",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -28437,11 +28512,6 @@
         {
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Jeffrey Lees",
           "method": "unique compatible author name"
         }
       ]
@@ -29821,6 +29891,16 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -30231,6 +30311,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -30342,6 +30427,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -30432,6 +30522,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -30557,6 +30652,11 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -30745,6 +30845,11 @@
         {
           "personId": "ops-dp-van-donk",
           "author": "Dirk Pieter van Donk",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         }
       ]
@@ -31928,6 +32033,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -32588,6 +32698,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -32775,6 +32890,16 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis B. Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -33312,11 +33437,6 @@
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Jeffrey Lees",
-          "method": "unique compatible author name"
         }
       ]
     },
@@ -33559,6 +33679,11 @@
         {
           "personId": "hrmob-ta-de-vries",
           "author": "Thomas A. de Vries",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         }
       ]
@@ -33953,6 +34078,11 @@
           "personId": "ops-dp-van-donk",
           "author": "Dirk Pieter van Donk",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -33992,6 +34122,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -34483,6 +34618,11 @@
           "personId": "hrmob-j-de-bloom",
           "author": "Jessica de Bloom",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -34639,6 +34779,21 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis B. Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -34661,6 +34816,11 @@
         {
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         }
       ]
@@ -34801,6 +34961,11 @@
         {
           "personId": "gem-jh-garretsen",
           "author": "Harry Garretsen",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -35352,6 +35517,11 @@
         {
           "personId": "ops-dp-van-donk",
           "author": "Dirk Pieter van Donk",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         }
       ]
@@ -37485,6 +37655,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -37965,6 +38140,11 @@
           "personId": "hrmob-j-de-bloom",
           "author": "Jessica de Bloom",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -38285,6 +38465,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -40547,6 +40732,16 @@
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -41685,6 +41880,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -42032,6 +42232,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -43024,11 +43229,6 @@
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Jeffrey Lees",
-          "method": "unique compatible author name"
         }
       ]
     },
@@ -43288,6 +43488,16 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -43967,6 +44177,11 @@
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -44255,6 +44470,11 @@
         {
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -44651,6 +44871,11 @@
         {
           "personId": "gem-jh-garretsen",
           "author": "Harry Garretsen",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -45720,6 +45945,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -45893,6 +46123,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -46501,6 +46736,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -46975,6 +47215,16 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -47059,6 +47309,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -49043,6 +49298,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -50272,11 +50532,6 @@
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Jeffrey Lees",
-          "method": "unique compatible author name"
         }
       ]
     },
@@ -50859,6 +51114,21 @@
         {
           "personId": "acc-db-veltrop",
           "author": "Dennis Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-rbh-hooghiemstra",
+          "author": "Reggy B. H. Hooghiemstra",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis B. Veltrop",
           "method": "unique compatible author name"
         }
       ]
@@ -52269,6 +52539,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -52285,6 +52560,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -52562,6 +52842,16 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -54100,6 +54390,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -54706,6 +55001,16 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -54983,6 +55288,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -56474,6 +56784,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -57194,6 +57509,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -57504,6 +57824,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -58075,6 +58400,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -58572,6 +58902,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -59304,6 +59639,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -59385,6 +59725,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -59424,6 +59769,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -60590,6 +60940,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -60814,6 +61169,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -61645,6 +62005,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -62371,6 +62736,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -62596,6 +62966,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -62767,6 +63142,16 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -63457,6 +63842,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -64367,6 +64757,11 @@
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas Arend De Vries",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -64572,6 +64967,11 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -65325,6 +65725,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -66274,6 +66679,16 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -66743,6 +67158,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -68410,6 +68830,11 @@
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -69297,6 +69722,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -69792,6 +70222,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -72228,6 +72663,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -72822,6 +73262,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -73123,6 +73568,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -73920,6 +74370,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -73936,6 +74391,11 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -74021,6 +74481,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -75770,6 +76235,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -76791,6 +77261,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -77725,6 +78200,11 @@
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -78142,6 +78622,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -78766,6 +79251,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -79298,6 +79788,11 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -80305,6 +80800,11 @@
           "personId": "hrmob-ji-stoker",
           "author": "Janka I. Stoker",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
         }
       ]
     },
@@ -81195,10 +81695,10 @@
       ]
     },
     {
-      "id": "rug:474cd98e1d93d997",
-      "doi": "",
+      "id": "doi:10.1016/j.respol.2025.105391",
+      "doi": "10.1016/j.respol.2025.105391",
       "publicationIds": [
-        "rug:474cd98e1d93d997"
+        "doi:10.1016/j.respol.2025.105391"
       ],
       "people": [
         "hrmob-ba-nijstad",
@@ -81247,40 +81747,6 @@
       ]
     },
     {
-      "id": "doi:10.1073/pnas.2611331123",
-      "doi": "10.1073/pnas.2611331123",
-      "publicationIds": [
-        "doi:10.1073/pnas.2611331123"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "De Dreu, C. K. W.",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "rug:5614822473c2761b",
-      "doi": "",
-      "publicationIds": [
-        "rug:5614822473c2761b"
-      ],
-      "people": [
-        "hrmob-jm-lees"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-jm-lees",
-          "author": "Lees, J.",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1038/s41586-025-10078-y",
       "doi": "10.1038/s41586-025-10078-y",
       "publicationIds": [
@@ -81298,10 +81764,10 @@
       ]
     },
     {
-      "id": "openalex:W7204744618",
-      "doi": "",
+      "id": "doi:10.1016/j.leaqua.2026.101991",
+      "doi": "10.1016/j.leaqua.2026.101991",
       "publicationIds": [
-        "openalex:W7204744618"
+        "doi:10.1016/j.leaqua.2026.101991"
       ],
       "people": [
         "hrmob-mk-ryan"
@@ -81418,6 +81884,81 @@
       ]
     },
     {
+      "id": "doi:10.1037/apl0001417",
+      "doi": "10.1037/apl0001417",
+      "publicationIds": [
+        "doi:10.1037/apl0001417"
+      ],
+      "people": [
+        "hrmob-nh-nguyen",
+        "hrmob-ta-de-vries",
+        "hrmob-gs-van-der-vegt",
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-nh-nguyen",
+          "author": "Ngoc Hân Nguyen",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas A. de Vries",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037/apl0001399",
+      "doi": "10.1037/apl0001399",
+      "publicationIds": [
+        "doi:10.1037/apl0001399"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037/apl0001410",
+      "doi": "10.1037/apl0001410",
+      "publicationIds": [
+        "doi:10.1037/apl0001410"
+      ],
+      "people": [
+        "mkt-l-wang",
+        "hrmob-y-yuan"
+      ],
+      "matches": [
+        {
+          "personId": "mkt-l-wang",
+          "author": "Wang, L.",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-y-yuan",
+          "author": "Yuan, Y.",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1037/str0000403",
       "doi": "10.1037/str0000403",
       "publicationIds": [
@@ -81469,10 +82010,27 @@
       ]
     },
     {
-      "id": "rug:fc5761e7fd641204",
-      "doi": "",
+      "id": "doi:10.1177/10596011261486495",
+      "doi": "10.1177/10596011261486495",
       "publicationIds": [
-        "rug:fc5761e7fd641204"
+        "doi:10.1177/10596011261486495"
+      ],
+      "people": [
+        "hrmob-hj-van-de-brake"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-hj-van-de-brake",
+          "author": "Hendrik J. van de Brake",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.3389/fdgth.2026.1698339",
+      "doi": "10.3389/fdgth.2026.1698339",
+      "publicationIds": [
+        "doi:10.3389/fdgth.2026.1698339"
       ],
       "people": [
         "hrmob-j-de-bloom"
@@ -81544,6 +82102,23 @@
         {
           "personId": "hrmob-j-de-bloom",
           "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W7206975579",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W7206975579"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
           "method": "unique compatible author name"
         }
       ]
@@ -81651,23 +82226,6 @@
       ]
     },
     {
-      "id": "doi:10.1017/s0140525x24000657",
-      "doi": "10.1017/s0140525x24000657",
-      "publicationIds": [
-        "doi:10.1017/s0140525x24000657"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K.W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1017/s0140525x2510040x",
       "doi": "10.1017/s0140525x2510040x",
       "publicationIds": [
@@ -81736,23 +82294,6 @@
       ]
     },
     {
-      "id": "doi:10.1126/sciadv.adm7968",
-      "doi": "10.1126/sciadv.adm7968",
-      "publicationIds": [
-        "doi:10.1126/sciadv.adm7968"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "rug:e375a0c05bda477e",
       "doi": "",
       "publicationIds": [
@@ -81782,26 +82323,9 @@
       "matches": [
         {
           "personId": "eef-zz-meder",
-          "author": "Zsombor Z. Méder",
+          "author": "Zsombor Zoltán Méder",
           "method": "unique compatible author name"
         },
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1177/17456916231179156",
-      "doi": "10.1177/17456916231179156",
-      "publicationIds": [
-        "doi:10.1177/17456916231179156"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
@@ -81895,23 +82419,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.copsyc.2024.101922",
-      "doi": "10.1016/j.copsyc.2024.101922",
-      "publicationIds": [
-        "doi:10.1016/j.copsyc.2024.101922"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1017/s0140525x23002698",
       "doi": "10.1017/s0140525x23002698",
       "publicationIds": [
@@ -81992,7 +82499,7 @@
       "matches": [
         {
           "personId": "eef-zz-meder",
-          "author": "Zsombor Z. Méder",
+          "author": "Zsombor Zoltán Méder",
           "method": "unique compatible author name"
         },
         {
@@ -82015,23 +82522,6 @@
         {
           "personId": "hrmob-m-arnold",
           "author": "Arnold, M.",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1177/09567976221104037",
-      "doi": "10.1177/09567976221104037",
-      "publicationIds": [
-        "doi:10.1177/09567976221104037"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -82069,6 +82559,23 @@
           "author": "Bernard A. Nijstad",
           "method": "unique compatible author name"
         },
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1177/17456916231179156",
+      "doi": "10.1177/17456916231179156",
+      "publicationIds": [
+        "doi:10.1177/17456916231179156"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
@@ -82208,23 +82715,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2023.4004",
-      "doi": "10.5465/amj.2023.4004",
-      "publicationIds": [
-        "doi:10.5465/amj.2023.4004"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5465/amj.2023.4006",
       "doi": "10.5465/amj.2023.4006",
       "publicationIds": [
@@ -82236,7 +82726,24 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1177/09567976221104037",
+      "doi": "10.1177/09567976221104037",
+      "publicationIds": [
+        "doi:10.1177/09567976221104037"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -82424,23 +82931,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.copsyc.2021.09.002",
-      "doi": "10.1016/j.copsyc.2021.09.002",
-      "publicationIds": [
-        "doi:10.1016/j.copsyc.2021.09.002"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1111/bjso.12501",
       "doi": "10.1111/bjso.12501",
       "publicationIds": [
@@ -82453,23 +82943,6 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1017/s0140525x22000917",
-      "doi": "10.1017/s0140525x22000917",
-      "publicationIds": [
-        "doi:10.1017/s0140525x22000917"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -82509,7 +82982,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -82544,29 +83017,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1098/rstb.2020.0135",
-      "doi": "10.1098/rstb.2020.0135",
-      "publicationIds": [
-        "doi:10.1098/rstb.2020.0135"
-      ],
-      "people": [
-        "hrmob-core-cdd",
-        "eef-zz-meder"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "eef-zz-meder",
-          "author": "Zsombor Méder",
           "method": "unique compatible author name"
         }
       ]
@@ -82618,35 +83068,6 @@
         {
           "personId": "hrmob-mk-ryan",
           "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/ambpp.2021.11374abstract",
-      "doi": "10.5465/ambpp.2021.11374abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2021.11374abstract"
-      ],
-      "people": [
-        "hrmob-lb-mulder",
-        "acc-db-veltrop",
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-lb-mulder",
-          "author": "Laetitia Mulder",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "acc-db-veltrop",
-          "author": "Dennis Veltrop",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -82721,7 +83142,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -82744,18 +83165,30 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.tics.2020.06.005",
-      "doi": "10.1016/j.tics.2020.06.005",
+      "id": "openalex:W3043319934",
+      "doi": "",
       "publicationIds": [
-        "doi:10.1016/j.tics.2020.06.005"
+        "openalex:W3043319934"
       ],
       "people": [
-        "hrmob-core-cdd"
+        "hrmob-hj-van-de-brake",
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
       ],
       "matches": [
         {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
+          "personId": "hrmob-hj-van-de-brake",
+          "author": "Hendrik Johan Van De Brake",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -82765,23 +83198,6 @@
       "doi": "10.1038/s41598-020-64592-2",
       "publicationIds": [
         "doi:10.1038/s41598-020-64592-2"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1073/pnas.1922106117",
-      "doi": "10.1073/pnas.1922106117",
-      "publicationIds": [
-        "doi:10.1073/pnas.1922106117"
       ],
       "people": [
         "hrmob-core-cdd"
@@ -82880,74 +83296,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.copsyc.2019.07.019",
-      "doi": "10.1016/j.copsyc.2019.07.019",
-      "publicationIds": [
-        "doi:10.1016/j.copsyc.2019.07.019"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1146/annurev-psych-081420-110718",
-      "doi": "10.1146/annurev-psych-081420-110718",
-      "publicationIds": [
-        "doi:10.1146/annurev-psych-081420-110718"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/ambpp.2020.11399symposium",
-      "doi": "10.5465/ambpp.2020.11399symposium",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2020.11399symposium"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/ambpp.2020.12306symposium",
-      "doi": "10.5465/ambpp.2020.12306symposium",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2020.12306symposium"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.7554/elife.40698",
       "doi": "10.7554/elife.40698",
       "publicationIds": [
@@ -82977,23 +83325,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1126/sciadv.aau7296",
-      "doi": "10.1126/sciadv.aau7296",
-      "publicationIds": [
-        "doi:10.1126/sciadv.aau7296"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K.W. De Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -83090,23 +83421,6 @@
       ]
     },
     {
-      "id": "doi:10.1017/s0140525x18002170",
-      "doi": "10.1017/s0140525x18002170",
-      "publicationIds": [
-        "doi:10.1017/s0140525x18002170"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1017/s0140525x1900116x",
       "doi": "10.1017/s0140525x1900116x",
       "publicationIds": [
@@ -83158,23 +83472,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/ambpp.2019.13479symposium",
-      "doi": "10.5465/ambpp.2019.13479symposium",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2019.13479symposium"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5465/amd.2018.0230",
       "doi": "10.5465/amd.2018.0230",
       "publicationIds": [
@@ -83204,40 +83501,6 @@
         {
           "personId": "hrmob-nh-nguyen",
           "author": "Ngoc Hân Nguyen",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1523/jneurosci.1242-17.2018",
-      "doi": "10.1523/jneurosci.1242-17.2018",
-      "publicationIds": [
-        "doi:10.1523/jneurosci.1242-17.2018"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K.W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1073/pnas.1815545115",
-      "doi": "10.1073/pnas.1815545115",
-      "publicationIds": [
-        "doi:10.1073/pnas.1815545115"
-      ],
-      "people": [
-        "hrmob-core-cdd"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -83362,18 +83625,35 @@
       ]
     },
     {
-      "id": "doi:10.1002/ejsp.2336",
-      "doi": "10.1002/ejsp.2336",
+      "id": "doi:10.1017/s0140525x18002170",
+      "doi": "10.1017/s0140525x18002170",
       "publicationIds": [
-        "doi:10.1002/ejsp.2336"
+        "doi:10.1017/s0140525x18002170"
       ],
       "people": [
-        "hrmob-j-jordan"
+        "hrmob-core-cdd"
       ],
       "matches": [
         {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W7208183509",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W7208183509"
+      ],
+      "people": [
+        "hrmob-s-berger"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-s-berger",
+          "author": "Stefan Berger",
           "method": "unique compatible author name"
         }
       ]
@@ -83396,18 +83676,18 @@
       ]
     },
     {
-      "id": "openalex:W2911822188",
+      "id": "openalex:W2887036473",
       "doi": "",
       "publicationIds": [
-        "openalex:W2911822188"
+        "openalex:W2887036473"
       ],
       "people": [
-        "hrmob-j-jordan"
+        "hrmob-jm-lees"
       ],
       "matches": [
         {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
+          "personId": "hrmob-jm-lees",
+          "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
         }
       ]
@@ -83532,18 +83812,35 @@
       ]
     },
     {
-      "id": "doi:10.1146/annurev-orgpsych-032117-104500",
-      "doi": "10.1146/annurev-orgpsych-032117-104500",
+      "id": "doi:10.1002/ejsp.2336",
+      "doi": "10.1002/ejsp.2336",
       "publicationIds": [
-        "doi:10.1146/annurev-orgpsych-032117-104500"
+        "doi:10.1002/ejsp.2336"
       ],
       "people": [
-        "hrmob-gs-van-der-vegt"
+        "hrmob-j-jordan"
       ],
       "matches": [
         {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2752759852",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2752759852"
+      ],
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-jm-lees",
+          "author": "Jeffrey Martin Lees",
           "method": "unique compatible author name"
         }
       ]
@@ -83657,7 +83954,7 @@
         },
         {
           "personId": "eef-zz-meder",
-          "author": "Zsombor Z. Méder",
+          "author": "Zsombor Zoltán Méder",
           "method": "unique compatible author name"
         }
       ]
@@ -83850,35 +84147,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/ambpp.2016.10488abstract",
-      "doi": "10.5465/ambpp.2016.10488abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2016.10488abstract"
-      ],
-      "people": [
-        "hrmob-hj-van-de-brake",
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-hj-van-de-brake",
-          "author": "Hendrik Johan van de Brake",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5465/ambpp.2016.15630abstract",
       "doi": "10.5465/ambpp.2016.15630abstract",
       "publicationIds": [
@@ -83931,23 +84199,6 @@
       ]
     },
     {
-      "id": "openalex:W2807818075",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2807818075"
-      ],
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-de-bloom",
-          "author": "Jessica de Bloom",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1002/wcs.1354",
       "doi": "10.1002/wcs.1354",
       "publicationIds": [
@@ -83960,23 +84211,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "openalex:W3123533829",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W3123533829"
-      ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]
@@ -83995,7 +84229,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         },
         {
@@ -84005,7 +84239,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -84024,17 +84258,17 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         },
         {
           "personId": "hrmob-mk-ryan",
-          "author": "Michelle Ryan",
+          "author": "Michelle K. Ryan",
           "method": "unique compatible author name"
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -84091,6 +84325,40 @@
       ]
     },
     {
+      "id": "doi:10.5553/geno/092150772015028002006",
+      "doi": "10.5553/geno/092150772015028002006",
+      "publicationIds": [
+        "doi:10.5553/geno/092150772015028002006"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5553/geno/092150772015028002001",
+      "doi": "10.5553/geno/092150772015028002001",
+      "publicationIds": [
+        "doi:10.5553/geno/092150772015028002001"
+      ],
+      "people": [
+        "hrmob-ba-nijstad"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ba-nijstad",
+          "author": "Bernard A. Nijstad",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.3389/fpsyg.2015.00572",
       "doi": "10.3389/fpsyg.2015.00572",
       "publicationIds": [
@@ -84137,23 +84405,6 @@
         {
           "personId": "hrmob-j-jordan",
           "author": "Jordan, J.",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.copsyc.2015.03.029",
-      "doi": "10.1016/j.copsyc.2015.03.029",
-      "publicationIds": [
-        "doi:10.1016/j.copsyc.2015.03.029"
-      ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]
@@ -84251,23 +84502,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2015.4004",
-      "doi": "10.5465/amj.2015.4004",
-      "publicationIds": [
-        "doi:10.5465/amj.2015.4004"
-      ],
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2577792461",
       "doi": "",
       "publicationIds": [
@@ -84302,7 +84536,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -84365,7 +84599,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -84400,23 +84634,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1201/9781317909712-12",
-      "doi": "10.1201/9781317909712-12",
-      "publicationIds": [
-        "doi:10.1201/9781317909712-12"
-      ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
           "method": "unique compatible author name"
         }
       ]
@@ -84569,7 +84786,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -84592,6 +84809,23 @@
       ]
     },
     {
+      "id": "doi:10.1201/9781317909712-12",
+      "doi": "10.1201/9781317909712-12",
+      "publicationIds": [
+        "doi:10.1201/9781317909712-12"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "openalex:W2569390867",
       "doi": "",
       "publicationIds": [
@@ -84609,7 +84843,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -84706,7 +84940,7 @@
         },
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -84814,58 +85048,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/ambpp.2013.16319abstract",
-      "doi": "10.5465/ambpp.2013.16319abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2013.16319abstract"
-      ],
-      "people": [
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/ambpp.2013.12185abstract",
-      "doi": "10.5465/ambpp.2013.12185abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2013.12185abstract"
-      ],
-      "people": [
-        "hrmob-j-jordan",
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5465/ambpp.2013.15834abstract",
       "doi": "10.5465/ambpp.2013.15834abstract",
       "publicationIds": [
@@ -84878,6 +85060,29 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1080/19416520.2013.766405",
+      "doi": "10.1080/19416520.2013.766405",
+      "publicationIds": [
+        "doi:10.1080/19416520.2013.766405"
+      ],
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -84896,7 +85101,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         },
         {
@@ -84906,7 +85111,7 @@
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -85116,58 +85321,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/ambpp.2012.16275abstract",
-      "doi": "10.5465/ambpp.2012.16275abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2012.16275abstract"
-      ],
-      "people": [
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/ambpp.2012.15970abstract",
-      "doi": "10.5465/ambpp.2012.15970abstract",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2012.15970abstract"
-      ],
-      "people": [
-        "hrmob-lb-mulder",
-        "hrmob-j-jordan",
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-lb-mulder",
-          "author": "Laetitia Mulder",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.5465/ambpp.2012.110",
       "doi": "10.5465/ambpp.2012.110",
       "publicationIds": [
@@ -85237,29 +85390,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "openalex:W2557043721",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2557043721"
-      ],
-      "people": [
-        "hrmob-ta-de-vries",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-ta-de-vries",
-          "author": "Thomas De Vries",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -85509,23 +85639,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/ambpp.2011.65869733",
-      "doi": "10.5465/ambpp.2011.65869733",
-      "publicationIds": [
-        "doi:10.5465/ambpp.2011.65869733"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.4324/9780203846957-23",
       "doi": "10.4324/9780203846957-23",
       "publicationIds": [
@@ -85561,7 +85674,7 @@
       "matches": [
         {
           "personId": "hrmob-ta-de-vries",
-          "author": "Thomas A. de Vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         },
         {
@@ -85908,7 +86021,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         },
         {
@@ -85932,12 +86045,12 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         },
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         },
         {
@@ -85982,7 +86095,7 @@
         },
         {
           "personId": "hrmob-core-cdd",
-          "author": "C.K.W. De Dreu",
+          "author": "C.K.W. de Dreu",
           "method": "unique compatible author name"
         }
       ]
@@ -86260,7 +86373,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -86341,29 +86454,6 @@
         {
           "personId": "hrmob-lb-mulder",
           "author": "Laetitia B. Mulder",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1037/a0012815",
-      "doi": "10.1037/a0012815",
-      "publicationIds": [
-        "doi:10.1037/a0012815"
-      ],
-      "people": [
-        "hrmob-core-cdd",
-        "hrmob-ba-nijstad"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-core-cdd",
-          "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-ba-nijstad",
-          "author": "Bernard A. Nijstad",
           "method": "unique compatible author name"
         }
       ]
@@ -86511,6 +86601,23 @@
       ]
     },
     {
+      "id": "openalex:W625673672",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W625673672"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "openalex:W2587053572",
       "doi": "",
       "publicationIds": [
@@ -86545,23 +86652,6 @@
       ]
     },
     {
-      "id": "openalex:W7135327520",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W7135327520"
-      ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2489951380",
       "doi": "",
       "publicationIds": [
@@ -86573,7 +86663,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -87589,6 +87679,40 @@
       ]
     },
     {
+      "id": "doi:10.1177/1368430204046107",
+      "doi": "10.1177/1368430204046107",
+      "publicationIds": [
+        "doi:10.1177/1368430204046107"
+      ],
+      "people": [
+        "hrmob-ba-nijstad"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ba-nijstad",
+          "author": "Bernard A. Nijstad",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5117/2004.17.006.003",
+      "doi": "10.5117/2004.17.006.003",
+      "publicationIds": [
+        "doi:10.5117/2004.17.006.003"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.5117/2004.017.003.003",
       "doi": "10.5117/2004.017.003.003",
       "publicationIds": [
@@ -87640,18 +87764,18 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.brat.2004.07.004",
-      "doi": "10.1016/j.brat.2004.07.004",
+      "id": "doi:10.5465/20159587",
+      "doi": "10.5465/20159587",
       "publicationIds": [
-        "doi:10.1016/j.brat.2004.07.004"
+        "doi:10.5465/20159587"
       ],
       "people": [
-        "hrmob-j-jordan"
+        "hrmob-o-janssen"
       ],
       "matches": [
         {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
           "method": "unique compatible author name"
         }
       ]
@@ -87754,7 +87878,7 @@
       "matches": [
         {
           "personId": "hrmob-gs-van-der-vegt",
-          "author": "G. S. Van der Vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         },
         {
@@ -88100,6 +88224,23 @@
       ]
     },
     {
+      "id": "doi:10.5465/3069431",
+      "doi": "10.5465/3069431",
+      "publicationIds": [
+        "doi:10.5465/3069431"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.2307/3069431",
       "doi": "10.2307/3069431",
       "publicationIds": [
@@ -88202,7 +88343,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -88321,7 +88462,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -88331,6 +88472,23 @@
       "doi": "10.1037/0021-9010.86.6.1191",
       "publicationIds": [
         "doi:10.1037/0021-9010.86.6.1191"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037//0021-9010.86.6.1191",
+      "doi": "10.1037//0021-9010.86.6.1191",
+      "publicationIds": [
+        "doi:10.1037//0021-9010.86.6.1191"
       ],
       "people": [
         "hrmob-core-cdd"
@@ -88407,6 +88565,23 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/3069447",
+      "doi": "10.5465/3069447",
+      "publicationIds": [
+        "doi:10.5465/3069447"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
           "method": "unique compatible author name"
         }
       ]
@@ -88520,7 +88695,7 @@
       "matches": [
         {
           "personId": "hrmob-ta-de-vries",
-          "author": "Thomas A. de Vries",
+          "author": "Thomas Arend De Vries",
           "method": "unique compatible author name"
         }
       ]
@@ -88560,10 +88735,44 @@
       ]
     },
     {
+      "id": "doi:10.1037//0022-3514.79.6.975",
+      "doi": "10.1037//0022-3514.79.6.975",
+      "publicationIds": [
+        "doi:10.1037//0022-3514.79.6.975"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1037/0022-3514.78.5.889",
       "doi": "10.1037/0022-3514.78.5.889",
       "publicationIds": [
         "doi:10.1037/0022-3514.78.5.889"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037//0022-3514.78.5.889",
+      "doi": "10.1037//0022-3514.78.5.889",
+      "publicationIds": [
+        "doi:10.1037//0022-3514.78.5.889"
       ],
       "people": [
         "hrmob-core-cdd"
@@ -88589,6 +88798,23 @@
         {
           "personId": "hrmob-o-janssen",
           "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/s0149-2063(00)00050-7",
+      "doi": "10.1016/s0149-2063(00)00050-7",
+      "publicationIds": [
+        "doi:10.1016/s0149-2063(00)00050-7"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -88645,23 +88871,6 @@
       ]
     },
     {
-      "id": "doi:10.1111/0045-3609.00082",
-      "doi": "10.1111/0045-3609.00082",
-      "publicationIds": [
-        "doi:10.1111/0045-3609.00082"
-      ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2584255136",
       "doi": "",
       "publicationIds": [
@@ -88673,7 +88882,7 @@
       "matches": [
         {
           "personId": "hrmob-fa-rink",
-          "author": "Floor Rink",
+          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -88734,6 +88943,23 @@
       "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g",
       "publicationIds": [
         "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "publicationIds": [
+        "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7"
       ],
       "people": [
         "hrmob-o-janssen"
@@ -88815,6 +89041,23 @@
       ]
     },
     {
+      "id": "doi:10.1002/(sici)1099-0992(199903/05)29:2/3<329::aid-ejsp930>3.3.co;2-y",
+      "doi": "10.1002/(sici)1099-0992(199903/05)29:2/3<329::aid-ejsp930>3.3.co;2-y",
+      "publicationIds": [
+        "doi:10.1002/(sici)1099-0992(199903/05)29:2/3<329::aid-ejsp930>3.3.co;2-y"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1080/10429247.1999.11415036",
       "doi": "10.1080/10429247.1999.11415036",
       "publicationIds": [
@@ -88826,7 +89069,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -88917,6 +89160,23 @@
       ]
     },
     {
+      "id": "doi:10.1037//0021-9010.83.3.408",
+      "doi": "10.1037//0021-9010.83.3.408",
+      "publicationIds": [
+        "doi:10.1037//0021-9010.83.3.408"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1108/eb022802",
       "doi": "10.1108/eb022802",
       "publicationIds": [
@@ -88985,10 +89245,44 @@
       ]
     },
     {
+      "id": "doi:10.1080/026999498377935",
+      "doi": "10.1080/026999498377935",
+      "publicationIds": [
+        "doi:10.1080/026999498377935"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1111/j.1464-0597.1998.tb00028.x",
       "doi": "10.1111/j.1464-0597.1998.tb00028.x",
       "publicationIds": [
         "doi:10.1111/j.1464-0597.1998.tb00028.x"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1080/026999498377845",
+      "doi": "10.1080/026999498377845",
+      "publicationIds": [
+        "doi:10.1080/026999498377845"
       ],
       "people": [
         "hrmob-core-cdd"
@@ -89064,7 +89358,7 @@
       "matches": [
         {
           "personId": "hrmob-ji-stoker",
-          "author": "Janka I. Stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -89108,6 +89402,23 @@
       "doi": "10.1080/14792779643000001",
       "publicationIds": [
         "doi:10.1080/14792779643000001"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1002/(sici)1099-0992(199603)26:2<315::aid-ejsp759>3.3.co;2-q",
+      "doi": "10.1002/(sici)1099-0992(199603)26:2<315::aid-ejsp759>3.3.co;2-q",
+      "publicationIds": [
+        "doi:10.1002/(sici)1099-0992(199603)26:2<315::aid-ejsp759>3.3.co;2-q"
       ],
       "people": [
         "hrmob-core-cdd"
@@ -89376,6 +89687,713 @@
       ]
     },
     {
+      "id": "doi:10.1073/pnas.2611331123",
+      "doi": "10.1073/pnas.2611331123",
+      "publicationIds": [
+        "doi:10.1073/pnas.2611331123"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "De Dreu, C. K. W.",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W7204744618",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W7204744618"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1017/s0140525x24000657",
+      "doi": "10.1017/s0140525x24000657",
+      "publicationIds": [
+        "doi:10.1017/s0140525x24000657"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K.W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1126/sciadv.adm7968",
+      "doi": "10.1126/sciadv.adm7968",
+      "publicationIds": [
+        "doi:10.1126/sciadv.adm7968"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.copsyc.2024.101922",
+      "doi": "10.1016/j.copsyc.2024.101922",
+      "publicationIds": [
+        "doi:10.1016/j.copsyc.2024.101922"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2023.4004",
+      "doi": "10.5465/amj.2023.4004",
+      "publicationIds": [
+        "doi:10.5465/amj.2023.4004"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.copsyc.2021.09.002",
+      "doi": "10.1016/j.copsyc.2021.09.002",
+      "publicationIds": [
+        "doi:10.1016/j.copsyc.2021.09.002"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1017/s0140525x22000917",
+      "doi": "10.1017/s0140525x22000917",
+      "publicationIds": [
+        "doi:10.1017/s0140525x22000917"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1098/rstb.2020.0135",
+      "doi": "10.1098/rstb.2020.0135",
+      "publicationIds": [
+        "doi:10.1098/rstb.2020.0135"
+      ],
+      "people": [
+        "hrmob-core-cdd",
+        "eef-zz-meder"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "eef-zz-meder",
+          "author": "Zsombor Méder",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2021.11374abstract",
+      "doi": "10.5465/ambpp.2021.11374abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2021.11374abstract"
+      ],
+      "people": [
+        "hrmob-lb-mulder",
+        "acc-db-veltrop",
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-lb-mulder",
+          "author": "Laetitia Mulder",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-db-veltrop",
+          "author": "Dennis Veltrop",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.tics.2020.06.005",
+      "doi": "10.1016/j.tics.2020.06.005",
+      "publicationIds": [
+        "doi:10.1016/j.tics.2020.06.005"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1073/pnas.1922106117",
+      "doi": "10.1073/pnas.1922106117",
+      "publicationIds": [
+        "doi:10.1073/pnas.1922106117"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.copsyc.2019.07.019",
+      "doi": "10.1016/j.copsyc.2019.07.019",
+      "publicationIds": [
+        "doi:10.1016/j.copsyc.2019.07.019"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1146/annurev-psych-081420-110718",
+      "doi": "10.1146/annurev-psych-081420-110718",
+      "publicationIds": [
+        "doi:10.1146/annurev-psych-081420-110718"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2020.11399symposium",
+      "doi": "10.5465/ambpp.2020.11399symposium",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2020.11399symposium"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2020.12306symposium",
+      "doi": "10.5465/ambpp.2020.12306symposium",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2020.12306symposium"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1126/sciadv.aau7296",
+      "doi": "10.1126/sciadv.aau7296",
+      "publicationIds": [
+        "doi:10.1126/sciadv.aau7296"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K.W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2019.13479symposium",
+      "doi": "10.5465/ambpp.2019.13479symposium",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2019.13479symposium"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1523/jneurosci.1242-17.2018",
+      "doi": "10.1523/jneurosci.1242-17.2018",
+      "publicationIds": [
+        "doi:10.1523/jneurosci.1242-17.2018"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K.W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1073/pnas.1815545115",
+      "doi": "10.1073/pnas.1815545115",
+      "publicationIds": [
+        "doi:10.1073/pnas.1815545115"
+      ],
+      "people": [
+        "hrmob-core-cdd"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2911822188",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2911822188"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1146/annurev-orgpsych-032117-104500",
+      "doi": "10.1146/annurev-orgpsych-032117-104500",
+      "publicationIds": [
+        "doi:10.1146/annurev-orgpsych-032117-104500"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2016.10488abstract",
+      "doi": "10.5465/ambpp.2016.10488abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2016.10488abstract"
+      ],
+      "people": [
+        "hrmob-hj-van-de-brake",
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-hj-van-de-brake",
+          "author": "Hendrik Johan van de Brake",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2807818075",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2807818075"
+      ],
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-de-bloom",
+          "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W3123533829",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W3123533829"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.copsyc.2015.03.029",
+      "doi": "10.1016/j.copsyc.2015.03.029",
+      "publicationIds": [
+        "doi:10.1016/j.copsyc.2015.03.029"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "doi": "10.5465/amj.2015.4004",
+      "publicationIds": [
+        "doi:10.5465/amj.2015.4004"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2013.16319abstract",
+      "doi": "10.5465/ambpp.2013.16319abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2013.16319abstract"
+      ],
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2013.12185abstract",
+      "doi": "10.5465/ambpp.2013.12185abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2013.12185abstract"
+      ],
+      "people": [
+        "hrmob-j-jordan",
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2012.16275abstract",
+      "doi": "10.5465/ambpp.2012.16275abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2012.16275abstract"
+      ],
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2012.15970abstract",
+      "doi": "10.5465/ambpp.2012.15970abstract",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2012.15970abstract"
+      ],
+      "people": [
+        "hrmob-lb-mulder",
+        "hrmob-j-jordan",
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-lb-mulder",
+          "author": "Laetitia Mulder",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2557043721",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2557043721"
+      ],
+      "people": [
+        "hrmob-ta-de-vries",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ta-de-vries",
+          "author": "Thomas De Vries",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/ambpp.2011.65869733",
+      "doi": "10.5465/ambpp.2011.65869733",
+      "publicationIds": [
+        "doi:10.5465/ambpp.2011.65869733"
+      ],
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1037/a0012815",
+      "doi": "10.1037/a0012815",
+      "publicationIds": [
+        "doi:10.1037/a0012815"
+      ],
+      "people": [
+        "hrmob-core-cdd",
+        "hrmob-ba-nijstad"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-core-cdd",
+          "author": "Carsten K. W. De Dreu",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ba-nijstad",
+          "author": "Bernard A. Nijstad",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W7135327520",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W7135327520"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.brat.2004.07.004",
+      "doi": "10.1016/j.brat.2004.07.004",
+      "publicationIds": [
+        "doi:10.1016/j.brat.2004.07.004"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1111/0045-3609.00082",
+      "doi": "10.1111/0045-3609.00082",
+      "publicationIds": [
+        "doi:10.1111/0045-3609.00082"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1123/jsep.12.1.48",
       "doi": "10.1123/jsep.12.1.48",
       "publicationIds": [
@@ -89405,75 +90423,6 @@
         {
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1037/apl0001417",
-      "doi": "10.1037/apl0001417",
-      "publicationIds": [
-        "doi:10.1037/apl0001417"
-      ],
-      "people": [
-        "hrmob-nh-nguyen",
-        "hrmob-ta-de-vries",
-        "hrmob-gs-van-der-vegt",
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-nh-nguyen",
-          "author": "Ngoc Hân Nguyen",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-ta-de-vries",
-          "author": "Thomas A. de Vries",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor A. Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1177/10596011261486495",
-      "doi": "10.1177/10596011261486495",
-      "publicationIds": [
-        "doi:10.1177/10596011261486495"
-      ],
-      "people": [
-        "hrmob-hj-van-de-brake"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-hj-van-de-brake",
-          "author": "Hendrik J. van de Brake",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1037/apl0001399",
-      "doi": "10.1037/apl0001399",
-      "publicationIds": [
-        "doi:10.1037/apl0001399"
-      ],
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]

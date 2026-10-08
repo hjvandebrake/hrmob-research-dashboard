@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261006-grantspage";
+const DATA_VERSION = "20261008-1148";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
@@ -628,6 +628,7 @@ function attachEvents() {
     state.finderQuery = els.finderQuery.value.trim(); renderExpertiseFinder();
   }, 180));
   els.finderKind?.addEventListener("change", () => {
+    state.finderQuery = els.finderQuery?.value.trim() || "";
     state.finderKind = els.finderKind.value; renderExpertiseFinder();
   });
   document.querySelectorAll("[data-finder-query]").forEach(button => button.addEventListener("click", () => {
@@ -1795,7 +1796,7 @@ function activeOutletPublications() {
 }
 
 function outletPublicationRecord(pub) {
-  if (!pub || !(pub.journal || pub.aipJournal)) return false;
+  if (!countedPublication(pub) || !(pub.journal || pub.aipJournal)) return false;
   const kind = normalizeSearchText(pub.publicationKind || "");
   const sourceType = normalizeSearchText(pub.sourceType || "");
   const source = normalizeSearchText([
@@ -3226,6 +3227,7 @@ function renderStaffProfile(row, bundle) {
     els.staffTopics.innerHTML = "";
     if (els.staffSuggestions) els.staffSuggestions.innerHTML = "";
     if (els.staffGrantFit) els.staffGrantFit.innerHTML = "";
+    if (document.getElementById('staff-grant-fit-panel')) document.getElementById('staff-grant-fit-panel').hidden = true;
     els.staffRelated.innerHTML = "";
     if (els.staffCurrentPhdProjects) els.staffCurrentPhdProjects.innerHTML = "";
     if (els.staffDefendedPhds) els.staffDefendedPhds.innerHTML = "";
@@ -3262,6 +3264,8 @@ function renderStaffProfile(row, bundle) {
   `;
   renderStaffSubnav();
   renderStaffOwnedProfile(person.id);
+  renderStaffGrantFit(person.id);
+  if (document.getElementById('staff-grant-fit-panel')) document.getElementById('staff-grant-fit-panel').hidden = false;
   renderStaffTopics(person.id);
   renderStaffSuggestions(person.id);
   renderStaffCurrentPhdProjects(person.id);
@@ -4132,7 +4136,7 @@ function renderOverviewPreviews(pubs, grants, projects) {
   const people=activePeople();
   const ids=new Set(people.map(p=>p.id));
   const joint=pubs.filter(p=>new Set((p.matchedPeople||[]).filter(id=>ids.has(id))).size>1).length;
-  const latest=(state.grantsData?.grants||[]).filter(g=>g.year===new Date().getFullYear()).sort(sortGrants);
+  const latest=grants.filter(g=>g.year===new Date().getFullYear()).sort(sortGrants);
   const cards=[
     {href:"#staff",title:"Staff & expertise",lead:`${people.length} researchers`,detail:people.slice(0,3).map(p=>p.name).join(" · ")+". Browse research interests and individual output."},
     {href:"#phds",title:"PhD students",lead:`${projects.length} current projects`,detail:"Meet the current cohort, explore projects, and see supervision links."},
@@ -4340,7 +4344,8 @@ function grantFitScore(personId, call) {
   const stage = normalizeSearchText(call.fitStage || call.stage || "");
   const name = normalizeSearchText(call.name || "");
   const currentYear = new Date().getFullYear();
-  const phdAge = isNumber(profile.phdYear) ? currentYear - profile.phdYear : null;
+  const referenceYear = Number(call.eligibilityReferenceYear) || currentYear;
+  const phdAge = isNumber(profile.phdYear) ? referenceYear - profile.phdYear : null;
   const firstPublicationAge = isNumber(profile.firstYear) ? currentYear - profile.firstYear : null;
   const manualShortlist = Array.isArray(call.includePersonIds) && call.includePersonIds.includes(personId);
   const window = grantEligibilityWindow(call);
@@ -4350,7 +4355,7 @@ function grantFitScore(personId, call) {
   if (name.includes("starting grant") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 4;
   if ((stage.includes("mid") || name.includes("vidi")) && (manualShortlist || (phdAge !== null && phdAge >= 4 && phdAge <= 9))) score += 5;
   if (name.includes("consolidator") && phdAge !== null && window && ageInEligibilityWindow(phdAge, window)) score += 5;
-  if (name.includes("xs") && (phdAge !== null ? phdAge >= 5 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 3;
+  if (name.includes("xs") || name.includes("explore")) score += 3;
   if (stage.includes("senior") && (profile.grants > 0 || profile.phds > 0 || profile.highAip >= 6)) score += 5;
   if (stage.includes("established") && (phdAge !== null ? phdAge >= 10 : firstPublicationAge !== null && firstPublicationAge >= 5)) score += 4;
   if (stage.includes("supervisor") && (profile.phds > 0 || profile.publications >= 10)) score += 4;
@@ -4368,19 +4373,12 @@ function grantCareerWindowPossible(profile, call, phdAge, firstPublicationAge, m
   if (manualShortlist) return true;
   const role = normalizeSearchText(profile.role || "");
   const callName = normalizeSearchText(typeof call === "string" ? call : call?.name || "");
-  const clearlySenior = role.includes("professor") && !role.includes("assistant");
   const window = grantEligibilityWindow(call);
   if (window) {
     if (phdAge === null) return false;
     return ageInEligibilityWindow(phdAge, window);
   }
-  if (phdAge === null) {
-    if (callName.includes("open competition xs")) {
-      return firstPublicationAge === null || firstPublicationAge >= 5;
-    }
-    return true;
-  }
-  if (callName.includes("open competition xs")) return phdAge >= 5;
+  if (phdAge === null) return true;
   if (callName.includes("open competition m")) return phdAge >= 10;
   if (callName.includes("open competition l")) return phdAge >= 15;
   return true;
@@ -4399,10 +4397,10 @@ function grantEligibilityWindow(call) {
     call?.tips,
   ].filter(Boolean).join(" "));
   if (callName.includes("veni") || callName.includes("van der gaag")) {
-    return { label: "PhD <= 4 years", min: null, max: 4 };
+    return { label: "PhD <= 3 years (year-level signal)", min: null, max: 3 };
   }
   if (callName.includes("vidi")) {
-    return { label: "PhD <= 9 years", min: null, max: 9 };
+    return { label: "PhD <= 8 years (year-level signal)", min: null, max: 8 };
   }
   if (callName.includes("vici")) {
     return { label: "PhD <= 16 years", min: null, max: 16 };
@@ -4448,7 +4446,7 @@ function grantFitReasons(personId, call) {
 
 function grantStaffProfile(personId) {
   const pubs = staffPublicationRecords(personId);
-  const years = pubs.map((pub) => pub.year).filter(Number.isFinite);
+  const years = (state.data?.publications || []).filter(pub => countedPublication(pub) && pub.matchedPeople.includes(personId)).map(pub => pub.year).filter(Number.isFinite);
   const publicProfile = staffPublicProfile(personId);
   return {
     publications: pubs.length,
@@ -4596,7 +4594,7 @@ function renderMetrics() {
   renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
   renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");
   els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}<small>${g.recordedAuthors} authors with records</small></span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
-  els.benchmarkMethodNote.innerHTML=`<p><strong>Average per person:</strong> each paper counts once in a department, even with several departmental authors. Divide that count by the selected current academic roster, including PhDs and lecturers. The affiliated-researchers switch changes both HRM&OB paper counts and headcount; the other departments retain their full roster. Joint papers count once in each participating department. The denominator stays the same across years because historical headcounts and FTE are unavailable; this is current-roster output per head, including pre-appointment publications.</p><p><strong>AIP ≥ 95:</strong> the same calculation restricted to journals scoring at least 95 in the 2020-2024 average AIP workbook. Papers with an unknown AIP remain in the all-publication chart and are excluded from the high-AIP chart.</p><p><strong>Centralization among recorded authors:</strong> each paper contributes one credit, split equally among its departmental authors. The percentage describes how unequally those credits are shared among people with at least one linked paper in the selected period. 0% means equal shares; 100% is the limiting case of all credit going to one author. With fewer than two recorded authors, it is N/A. People without a linked paper are left out of this statistic because the records cannot distinguish missing data from no publications. This does not measure the whole department's centralization.</p><p>Official publication pages checked ${escapeHtml(data.meta.generatedOn)}. Pages may list selected output and some links are unavailable. All selected academic roster members remain in the per-person denominator, including those without linked records. Uneven coverage can therefore depress departmental averages. The roster is broader than the HRM&OB staff selection on other pages.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>People</th><th>With records</th><th>No linked paper</th><th>Unknown AIP papers</th></tr></thead><tbody>${groups.map(g=>`<tr><th>${escapeHtml(g.label)}</th><td>${g.staff}</td><td>${g.recordedAuthors}</td><td>${g.missingPeople.length}</td><td>${g.aipUnknown}</td></tr>`).join("")}</tbody></table></div><details><summary>Roster members without a linked paper in this period</summary><p>This list identifies records to check. It cannot establish that a colleague has not published.</p>${groups.map(g=>`<p><strong>${escapeHtml(g.label)}:</strong> ${g.missingPeople.map(p=>escapeHtml(p.name||p.display)).join("; ")||"None"}</p>`).join("")}</details>`;
+  els.benchmarkMethodNote.innerHTML=`<p><strong>Average per person:</strong> each paper counts once in a department, even with several departmental authors. Divide that count by the selected current academic roster, including PhDs and lecturers. The affiliated-researchers switch changes both HRM&OB paper counts and headcount; the other departments retain their full roster. Joint papers count once in each participating department. The denominator stays the same across years because historical headcounts and FTE are unavailable; this is current-roster output per head, including pre-appointment publications.</p><p><strong>AIP ≥ 95:</strong> the same calculation restricted to journals scoring at least 95 in the 2020-2024 average AIP workbook. Papers with an unknown AIP remain in the all-publication chart and are excluded from the high-AIP chart.</p><p><strong>Centralization among recorded authors:</strong> each paper contributes one credit, split equally among its departmental authors. The percentage describes how unequally those credits are shared among people with at least one linked paper in the selected period. 0% means equal shares; 100% is the limiting case of all credit going to one author. With fewer than two recorded authors, it is N/A. People without a linked paper are left out of this statistic because the records cannot distinguish missing data from no publications. This does not measure the whole department's centralization.</p><p>Dataset rebuilt ${escapeHtml(data.meta.generatedOn)} from available public-source snapshots. Pages may list selected output and some links are unavailable. All selected academic roster members remain in the per-person denominator, including those without linked records. Uneven coverage can therefore depress departmental averages. The roster is broader than the HRM&OB staff selection on other pages.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>People</th><th>With records</th><th>No linked paper</th><th>Unknown AIP papers</th></tr></thead><tbody>${groups.map(g=>`<tr><th>${escapeHtml(g.label)}</th><td>${g.staff}</td><td>${g.recordedAuthors}</td><td>${g.missingPeople.length}</td><td>${g.aipUnknown}</td></tr>`).join("")}</tbody></table></div><details><summary>Roster members without a linked paper in this period</summary><p>This list identifies records to check. It cannot establish that a colleague has not published.</p>${groups.map(g=>`<p><strong>${escapeHtml(g.label)}:</strong> ${g.missingPeople.map(p=>escapeHtml(p.name||p.display)).join("; ")||"None"}</p>`).join("")}</details>`;
   const audit=data.meta.comparisonAudit;
   const auditDepartments=audit?.rosterModes?.[state.includeAffiliatedResearchers?"affiliated":"department"]?.departments||audit?.departments||[];
   if(audit)els.benchmarkMethodNote.innerHTML+=`<h4>Source coverage audit</h4><p>The ${escapeHtml(audit.generatedOn)} audit checks arithmetic, publication years and journal matching. Complete publication lists and historical staffing data are still unavailable. Staff lists can include honorary or special appointments, and role information is incomplete. Department differences in career stage, appointment type, source coverage and missing AIP scores limit comparisons.</p><div class="table-wrap"><table><thead><tr><th>Department</th><th>Unavailable profile pages</th><th>Profiles with up to 10 parsed articles</th><th>Unspecified roles</th></tr></thead><tbody>${auditDepartments.map(d=>`<tr><th>${escapeHtml(d.department)}</th><td>${d.unavailableProfiles} / ${d.currentHeadcount}</td><td>${d.profilesWithAtMost10ParsedArticles} / ${d.currentHeadcount}</td><td>${d.roleUnspecified} / ${d.currentHeadcount}</td></tr>`).join("")}</tbody></table></div><p>A short profile list gives a partial view of someone's output. ISSN or exact journal-name evidence is required for AIP assignment. ${audit.excludedOutputs?.length||0} records are excluded for publication type, duplicate identity or a mismatched DOI; the source records are retained.</p><p><strong>Publication year:</strong> the publisher's issue year takes precedence, followed by the official university reference year, the earliest publisher publication date, then the stored source year. Explicit corrections have publisher evidence. Original source years are retained. ${audit.yearBasisCounts?.['stored-unverified']||0} records still rely on an unverified stored year. The same rule applies to every department; online-first and issue years can differ.</p>`;
@@ -5547,7 +5545,7 @@ function renderOverviewJournals(journals) {
     visibleCount: 5,
     noun: "journals with at least 2 outlet records",
     renderItem: renderJournalItem,
-    note: "Overview outlet list includes source-backed journal outlet records in the current publication window. Metrics and publication totals still count journal articles only.",
+    note: "Journal lists and publication totals include counted journal articles in the selected publication window.",
     noteMode: "plain",
   });
 }
@@ -5597,9 +5595,7 @@ function titleCaseCategory(value) {
 function renderOverviewGrants(grants) {
   if (!els.grantList) return;
   const people = peopleById();
-  // Recent departmental and affiliated awards stay visible for the research day.
-  const recent=(state.grantsData?.grants||[]).filter(g=>g.year===new Date().getFullYear());
-  const rows = Array.from(new Map([...grants,...recent].map(g=>[g.id,g])).values()).sort(sortGrants);
+  const rows = grants.slice().sort(sortGrants);
   if (!rows.length) {
     els.grantList.innerHTML = `<p class="small-muted">No source-backed grant records for the current staff filter.</p>${dataNote(GRANT_DATA_NOTE)}`;
     return;
@@ -5896,8 +5892,7 @@ function syncPublicationPersonFilter() {
 function filteredPublications() {
   const people = peopleById();
   const activeIds = activePeopleSet();
-  let pubs = state.publicationKindFilter === "counted" ? activePublications() : activeDisplayPublications();
-  if (state.publicationKindFilter === "other") pubs = pubs.filter((pub) => !countedPublication(pub));
+  let pubs = activePublications();
   if (state.publicationPersonFilter) {
     pubs = pubs.filter((pub) => pub.matchedPeople.includes(state.publicationPersonFilter));
   }

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261006-grantspage">
+  <link rel="stylesheet" href="styles.css?v=20261008-1148">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -401,14 +401,12 @@
         </div>
         <div class="publication-layout">
           <div class="publication-main">
-            <p class="section-intro">Each paper appears once. Department totals count journal articles; other visible outputs are available below. The roster and year controls at the top apply throughout the dashboard.</p>
+            <p class="section-intro">Each counted journal article appears once. The roster and year controls at the top apply throughout the dashboard. Other source-backed works are labelled on Staff profiles.</p>
             <div class="tool-row">
-              <label class="select-box">
+              <label class="select-box" hidden>
                 <span>Outputs</span>
                 <select id="publication-kind-filter" aria-controls="publication-table">
                   <option value="counted">Counted journal articles</option>
-                  <option value="all">All visible outputs</option>
-                  <option value="other">Other outputs</option>
                 </select>
               </label>
               <label class="search-box">
@@ -508,6 +506,11 @@
               </div>
               <div id="staff-methods" class="staff-owned-panel"></div>
               <div id="staff-shared-resources" class="staff-owned-panel"></div>
+              <details id="staff-grant-fit-panel" class="staff-owned-panel" hidden>
+                <summary>Possible grant fits</summary>
+                <p class="small-muted">Possible fits from public evidence. Check the call's eligibility and appointment conditions.</p>
+                <div id="staff-grant-fit" class="suggestion-list"></div>
+              </details>
               <h3 class="sub-h2">Topic signals</h3>
               <div id="staff-topics" class="topic-cloud"></div>
               <h3 class="sub-h2">Possible research links</h3>
@@ -601,7 +604,7 @@
 
         <section id="teaching-network-panel" class="teaching-network-panel" aria-label="Teaching network" hidden>
           <div id="teaching-network-summary" class="network-summary"></div>
-          <div id="publication-network-workspace" class="network-workspace">
+          <div class="network-workspace">
             <section class="network-visual-column" aria-labelledby="teaching-network-title">
               <div class="network-section-heading"><div><p class="eye">Shared teaching</p><h3 id="teaching-network-title" class="overview-h3">Courses taught together</h3></div></div>
               <div class="network-shell"><svg id="teaching-network-svg" role="img" aria-label="Teaching collaborations"></svg><div id="teaching-network-empty" class="empty" role="status" hidden>No shared teaching courses for this focus.</div></div>
@@ -614,7 +617,7 @@
           </section>
         </section>
 
-        <div class="network-workspace">
+        <div id="publication-network-workspace" class="network-workspace">
           <section class="network-visual-column" aria-labelledby="network-map-title">
             <div class="network-section-heading">
               <div>
@@ -817,6 +820,6 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="app.js?v=20261006-grantspage"></script>
+  <script src="app.js?v=20261008-1148"></script>
 </body>
 </html>

@@ -1,14 +1,17 @@
 {
   "meta": {
-    "generatedOn": "2026-10-01",
+    "generatedOn": "2026-10-08",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 791,
-    "cacheHits": 791,
+    "eligiblePublications": 796,
+    "cacheHits": 796,
     "fetched": 0,
-    "coveredPublications": 790,
+    "coveredPublications": 795,
     "missingCacheRecords": 0,
-    "offline": false,
-    "partnerCount": 797
+    "offline": true,
+    "partnerCount": 805,
+    "heldInstitutionIds": [
+      "https://openalex.org/I4210153428"
+    ]
   },
   "partners": [
     {
@@ -16,7 +19,7 @@
       "institution": "University of Amsterdam",
       "country": "NL",
       "type": "education",
-      "publicationCount": 147,
+      "publicationCount": 148,
       "staffIds": [
         "BN",
         "CDD",
@@ -33,6 +36,7 @@
         "A.E.M. van Vianen",
         "Agneta H. Fischer",
         "Alexander Ly",
+        "Annelies E. M. Van Vianen",
         "Antony S. R. Manstead",
         "Arne Evers",
         "Astrid C. Homan",
@@ -58,8 +62,7 @@
         "Ernestine Gordijn",
         "Eveline A. Crone",
         "F.A.A.M. van Winden",
-        "Femke S. Ten Velden",
-        "Fieke Harinck"
+        "Femke S. Ten Velden"
       ],
       "publications": [
         {
@@ -301,7 +304,7 @@
           ],
           "authors": [
             "Bojana Većkalov",
-            "Sandra J. Geiger"
+            "Sandra Jeanette Geiger"
           ]
         },
         {
@@ -341,20 +344,6 @@
           ]
         },
         {
-          "id": "doi:10.1037/aca0000223",
-          "year": 2020,
-          "title": "Vulnerability to psychopathology and creativity: The role of approach-avoidance motivation and novelty seeking.",
-          "staffIds": [
-            "BN",
-            "CDD"
-          ],
-          "authors": [
-            "Matthijs Baas",
-            "Jessie Koen",
-            "Nathalie Boot"
-          ]
-        },
-        {
           "id": "doi:10.1073/pnas.1820133116",
           "year": 2019,
           "title": "On the psychology and economics of antisocial personality",
@@ -366,17 +355,6 @@
           ]
         },
         {
-          "id": "doi:10.1017/s0140525x18002170",
-          "year": 2019,
-          "title": "Revisiting the form and function of conflict: Neurobiological, psychological, and cultural mechanisms for attack and defense within and between groups",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
           "id": "doi:10.1037/xge0000508",
           "year": 2019,
           "title": "The power of pupil size in establishing trust and reciprocity.",
@@ -385,6 +363,20 @@
           ],
           "authors": [
             "Mariska E. Kret"
+          ]
+        },
+        {
+          "id": "doi:10.1037/aca0000223",
+          "year": 2019,
+          "title": "Vulnerability to psychopathology and creativity: The role of approach-avoidance motivation and novelty seeking.",
+          "staffIds": [
+            "BN",
+            "CDD"
+          ],
+          "authors": [
+            "Matthijs Baas",
+            "Jessie Koen",
+            "Nathalie Boot"
           ]
         },
         {
@@ -445,6 +437,17 @@
           ],
           "authors": [
             "H. Steven Scholte"
+          ]
+        },
+        {
+          "id": "doi:10.1017/s0140525x18002170",
+          "year": 2018,
+          "title": "Revisiting the form and function of conflict: Neurobiological, psychological, and cultural mechanisms for attack and defense within and between groups",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
           ]
         },
         {
@@ -1543,6 +1546,17 @@
           ]
         },
         {
+          "id": "doi:10.1177/1368430204046107",
+          "year": 2004,
+          "title": "Persistence in Brainstorming: Exploring Stop Rules in Same-Sex Groups",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Annelies E. M. Van Vianen"
+          ]
+        },
+        {
           "id": "doi:10.1037/0022-3514.86.3.419",
           "year": 2004,
           "title": "Social Motives and Strategic Misrepresentation in Social Decision Making.",
@@ -1892,17 +1906,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/17456916231179156",
-          "year": 2024,
-          "title": "Group Formation and the Evolution of Human Social Organization",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Angelo Romano"
-          ]
-        },
-        {
           "id": "doi:10.1073/pnas.2409894121",
           "year": 2024,
           "title": "Indirect reciprocity can foster large-scale cooperation",
@@ -1951,18 +1954,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/09567976221104037",
-          "year": 2023,
-          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Maria Lojowska",
-            "Jörg Gross"
-          ]
-        },
-        {
           "id": "doi:10.1111/spc3.12909",
           "year": 2023,
           "title": "Conceptual replication and extension of health behavior theories' predictions in the context of COVID‐19: Evidence across countries and over time",
@@ -1984,6 +1975,17 @@
             "Welmer E. Molenmaker",
             "Erik W. de Kwaadsteniet",
             "Eric van Dijk"
+          ]
+        },
+        {
+          "id": "doi:10.1177/17456916231179156",
+          "year": 2023,
+          "title": "Group Formation and the Evolution of Human Social Organization",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Angelo Romano"
           ]
         },
         {
@@ -2057,6 +2059,18 @@
             "Angelo Romano",
             "Welmer E. Molenmaker",
             "Laura C. Hoenig"
+          ]
+        },
+        {
+          "id": "doi:10.1177/09567976221104037",
+          "year": 2022,
+          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Maria Lojowska",
+            "Jörg Gross"
           ]
         },
         {
@@ -2339,17 +2353,6 @@
           ]
         },
         {
-          "id": "doi:10.1017/s0140525x18002170",
-          "year": 2019,
-          "title": "Revisiting the form and function of conflict: Neurobiological, psychological, and cultural mechanisms for attack and defense within and between groups",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
           "id": "doi:10.1037/xge0000508",
           "year": 2019,
           "title": "The power of pupil size in establishing trust and reciprocity.",
@@ -2405,6 +2408,17 @@
             "Luisa Prochazkova",
             "Michael Giffin",
             "Mariska E. Kret"
+          ]
+        },
+        {
+          "id": "doi:10.1017/s0140525x18002170",
+          "year": 2018,
+          "title": "Revisiting the form and function of conflict: Neurobiological, psychological, and cultural mechanisms for attack and defense within and between groups",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
           ]
         },
         {
@@ -2528,7 +2542,7 @@
         },
         {
           "id": "doi:10.1177/1368430214550339",
-          "year": 2015,
+          "year": 2014,
           "title": "The pernicious effects of unstable work group membership: How work group changes undermine unique task contributions and newcomer acceptance",
           "staffIds": [
             "FR"
@@ -3227,19 +3241,6 @@
           ]
         },
         {
-          "id": "doi:10.1111/bjso.12411",
-          "year": 2021,
-          "title": "The (in)compatibility of identities: Understanding gender differences in work–life conflict through the fit with leaders",
-          "staffIds": [
-            "FR",
-            "MR"
-          ],
-          "authors": [
-            "Thekla Morgenroth",
-            "Christopher T. Begeny"
-          ]
-        },
-        {
           "id": "doi:10.1177/09567976211015942",
           "year": 2021,
           "title": "When Helping Is Risky: The Behavioral and Neurobiological Trade-off of Social and Risk Preferences",
@@ -3296,6 +3297,19 @@
             "MR"
           ],
           "authors": [
+            "Christopher T. Begeny"
+          ]
+        },
+        {
+          "id": "doi:10.1111/bjso.12411",
+          "year": 2020,
+          "title": "The (in)compatibility of identities: Understanding gender differences in work–life conflict through the fit with leaders",
+          "staffIds": [
+            "FR",
+            "MR"
+          ],
+          "authors": [
+            "Thekla Morgenroth",
             "Christopher T. Begeny"
           ]
         },
@@ -3834,6 +3848,496 @@
       ]
     },
     {
+      "id": "nl:utrecht university",
+      "institution": "Utrecht University",
+      "country": "NL",
+      "type": "education",
+      "publicationCount": 38,
+      "staffIds": [
+        "BN",
+        "CDD",
+        "FR",
+        "GVV",
+        "JDB",
+        "JL",
+        "JS",
+        "LM",
+        "MR"
+      ],
+      "authors": [
+        "An-Chiao Liu",
+        "Anne Margit Reitsema",
+        "Belle Derks",
+        "Caspar J. Van Lissa",
+        "Elianne van Steenbergen",
+        "Esther S. Kluwer",
+        "Flávio S. Azevedo",
+        "Gaby Reijseger",
+        "Hein F. M. Lodewijkx",
+        "Iris M. Engelhard",
+        "Karlijn L. van den Broek",
+        "Katharina Herte",
+        "Larisa Riedijk",
+        "Lars Tummers",
+        "Laura Boeschoten",
+        "Lianne Aarntzen",
+        "M. van der Velde",
+        "Marcel van Assen",
+        "Marco Ramljak",
+        "Marieke Smit",
+        "Martin Euwema",
+        "Melissa Vink",
+        "Naomi Ellemers",
+        "Rendel D. de Jong",
+        "Roland W. B. Blonk",
+        "Ruben van den Goorbergh",
+        "Tanja van der Lippe",
+        "Toon W. Taris",
+        "Veerle Brenninkmeijer",
+        "Wim Savenije"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Flávio S. Azevedo",
+            "Laura Boeschoten",
+            "An-Chiao Liu",
+            "Marco Ramljak",
+            "Lars Tummers",
+            "Marcel van Assen",
+            "Ruben van den Goorbergh"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-026-01663-0",
+          "year": 2026,
+          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lianne Aarntzen"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s12144-024-06989-0",
+          "year": 2025,
+          "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Anne Margit Reitsema"
+          ]
+        },
+        {
+          "id": "doi:10.11144/javeriana.upsy23.pdcp",
+          "year": 2024,
+          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Karlijn L. van den Broek",
+            "Iris M. Engelhard"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-024-01453-6",
+          "year": 2024,
+          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Larisa Riedijk",
+            "Anne Margit Reitsema"
+          ]
+        },
+        {
+          "id": "doi:10.1037/emo0001118",
+          "year": 2023,
+          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cresp.2021.100028",
+          "year": 2022,
+          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.paid.2020.110535",
+          "year": 2021,
+          "title": "Intergenerational conflicts of interest and prosocial behavior during the COVID-19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01461672211036602",
+          "year": 2021,
+          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Katharina Herte"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.2572",
+          "year": 2021,
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Caspar J. Van Lissa"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jvb.2019.103336",
+          "year": 2019,
+          "title": "Work-family guilt as a straightjacket. An interview and diary study on consequences of mothers' work-family guilt",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lianne Aarntzen",
+            "Belle Derks",
+            "Elianne van Steenbergen",
+            "Tanja van der Lippe"
+          ]
+        },
+        {
+          "id": "doi:10.1080/1359432x.2018.1540467",
+          "year": 2018,
+          "title": "Regulatory fit at work: gravitational effects and associations with employee well-being",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Veerle Brenninkmeijer",
+            "Melissa Vink"
+          ]
+        },
+        {
+          "id": "doi:10.1111/ncmr.12092",
+          "year": 2017,
+          "title": "Conflict and Culture Across Time and Space: Work and Legacy of Evert van de Vliert",
+          "staffIds": [
+            "CDD",
+            "GVV"
+          ],
+          "authors": [
+            "Esther S. Kluwer",
+            "Martin Euwema"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.copsyc.2016.06.001",
+          "year": 2016,
+          "title": "Diversity in work groups",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Naomi Ellemers"
+          ]
+        },
+        {
+          "id": "doi:10.1080/10400419.2014.901084",
+          "year": 2014,
+          "title": "Effects of Problem Scope and Creativity Instructions on Idea Generation and Selection",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.5117/2013.026.003.277",
+          "year": 2013,
+          "title": "Initiatiefrijk en functie-inhoudelijk presteren",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Roland W. B. Blonk"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.joep.2012.03.002",
+          "year": 2012,
+          "title": "Pay to walk away: Prevention buyers prefer to avoid negotiation",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Gaby Reijseger"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10869-011-9210-0",
+          "year": 2011,
+          "title": "Factors Relating to Managerial Stereotypes: The Role of Gender of the Employee and the Manager and Management Gender Ratio",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "M. van der Velde"
+          ]
+        },
+        {
+          "id": "doi:10.1080/08870446.2010.546860",
+          "year": 2011,
+          "title": "How does a vacation from work affect employee health and well-being?",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Toon W. Taris"
+          ]
+        },
+        {
+          "id": "doi:10.1080/02678373.2010.493385",
+          "year": 2010,
+          "title": "Effects of vacation from work on health and well-being: Lots of fun, quickly gone",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Toon W. Taris"
+          ]
+        },
+        {
+          "id": "doi:10.1037/a0016090",
+          "year": 2009,
+          "title": "Do our psychological laws apply only to Americans?",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1348/000712609x414204",
+          "year": 2009,
+          "title": "The selection of creative ideas after individual idea generation: Choosing between creativity and impact",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430208090646",
+          "year": 2008,
+          "title": "The Structure and Management of Conflict: Fighting or Defending the Status Quo",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Esther S. Kluwer"
+          ]
+        },
+        {
+          "id": "doi:10.1207/s15327957pspr1003_1",
+          "year": 2006,
+          "title": "How the Group Affects the Mind: A Cognitive Model of Idea Generation in Groups",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1037/0022-3514.90.6.927",
+          "year": 2006,
+          "title": "Motivated information processing, strategic choice, and the quality of negotiated agreement.",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Martin Euwema"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2006.10.014",
+          "year": 2006,
+          "title": "Relative accessibility of domain knowledge and creativity: The effects of knowledge activation on the quantity and originality of generated ideas",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2005.04.005",
+          "year": 2005,
+          "title": "Productivity is not enough: A comparison of interactive and nominal brainstorming groups on idea generation and selection",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.295",
+          "year": 2005,
+          "title": "The illusion of group productivity: a reduction of failures explanation",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe",
+            "Hein F. M. Lodewijkx"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430204046107",
+          "year": 2004,
+          "title": "Persistence in Brainstorming: Exploring Stop Rules in Same-Sex Groups",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Hein F. M. Lodewijkx"
+          ]
+        },
+        {
+          "id": "doi:10.1026/0033-3042.55.1.2",
+          "year": 2004,
+          "title": "Warum Brainstorming in Gruppen Kreativität vermindert:",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe"
+          ]
+        },
+        {
+          "id": "doi:10.1016/s0022-1031(03)00040-4",
+          "year": 2003,
+          "title": "Production blocking and idea generation: Does blocking interfere with cognitive processes?",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe",
+            "Hein F. M. Lodewijkx"
+          ]
+        },
+        {
+          "id": "doi:10.1016/s0022-1031(02)00500-0",
+          "year": 2002,
+          "title": "Cognitive stimulation and interference in groups: Exposure effects in an idea generation task",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe",
+            "Hein F. M. Lodewijkx"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.107",
+          "year": 2001,
+          "title": "A theory‐based measure of conflict management strategies in the workplace",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Esther S. Kluwer"
+          ]
+        },
+        {
+          "id": "doi:10.1023/a:1012527808620",
+          "year": 2001,
+          "title": "In a Violent World a Just World Makes Sense: The Case of “Senseless Violence” in The Netherlands",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Hein F. M. Lodewijkx",
+            "Wim Savenije",
+            "Marieke Smit"
+          ]
+        },
+        {
+          "id": "doi:10.1080/09585190110068359",
+          "year": 2001,
+          "title": "Leadership and innovation: relations between leadership, individual characteristics and the functioning of R&D teams",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Rendel D. de Jong"
+          ]
+        },
+        {
+          "id": "doi:10.1006/jesp.1998.1374",
+          "year": 1999,
+          "title": "Persistence of Brainstorming Groups: How Do People Know When to Stop?",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Wolfgang Stroebe",
+            "Hein F. M. Lodewijkx"
+          ]
+        }
+      ]
+    },
+    {
       "id": "fi:tampere university",
       "institution": "Tampere University",
       "country": "FI",
@@ -4339,485 +4843,6 @@
       ]
     },
     {
-      "id": "nl:utrecht university",
-      "institution": "Utrecht University",
-      "country": "NL",
-      "type": "education",
-      "publicationCount": 37,
-      "staffIds": [
-        "BN",
-        "CDD",
-        "FR",
-        "GVV",
-        "JDB",
-        "JL",
-        "JS",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "An-Chiao Liu",
-        "Anne Margit Reitsema",
-        "Belle Derks",
-        "Caspar J. Van Lissa",
-        "Elianne van Steenbergen",
-        "Esther S. Kluwer",
-        "Flávio S. Azevedo",
-        "Gaby Reijseger",
-        "Hein F. M. Lodewijkx",
-        "Iris M. Engelhard",
-        "Karlijn L. van den Broek",
-        "Katharina Herte",
-        "Larisa Riedijk",
-        "Lars Tummers",
-        "Laura Boeschoten",
-        "Lianne Aarntzen",
-        "M. van der Velde",
-        "Marcel van Assen",
-        "Marco Ramljak",
-        "Marieke Smit",
-        "Martin Euwema",
-        "Melissa Vink",
-        "Naomi Ellemers",
-        "Rendel D. de Jong",
-        "Roland W. B. Blonk",
-        "Ruben van den Goorbergh",
-        "Tanja van der Lippe",
-        "Toon W. Taris",
-        "Veerle Brenninkmeijer",
-        "Wim Savenije"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Flávio S. Azevedo",
-            "Laura Boeschoten",
-            "An-Chiao Liu",
-            "Marco Ramljak",
-            "Lars Tummers",
-            "Marcel van Assen",
-            "Ruben van den Goorbergh"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-026-01663-0",
-          "year": 2026,
-          "title": "Prioritizing Work or Family?: Investigating Women’s and Men’s Work-Family Decisions",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lianne Aarntzen"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s12144-024-06989-0",
-          "year": 2025,
-          "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Anne Margit Reitsema"
-          ]
-        },
-        {
-          "id": "doi:10.11144/javeriana.upsy23.pdcp",
-          "year": 2024,
-          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Karlijn L. van den Broek",
-            "Iris M. Engelhard"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-024-01453-6",
-          "year": 2024,
-          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Larisa Riedijk",
-            "Anne Margit Reitsema"
-          ]
-        },
-        {
-          "id": "doi:10.1037/emo0001118",
-          "year": 2023,
-          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.cresp.2021.100028",
-          "year": 2022,
-          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.paid.2020.110535",
-          "year": 2021,
-          "title": "Intergenerational conflicts of interest and prosocial behavior during the COVID-19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01461672211036602",
-          "year": 2021,
-          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Katharina Herte"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.2572",
-          "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Caspar J. Van Lissa"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jvb.2019.103336",
-          "year": 2019,
-          "title": "Work-family guilt as a straightjacket. An interview and diary study on consequences of mothers' work-family guilt",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lianne Aarntzen",
-            "Belle Derks",
-            "Elianne van Steenbergen",
-            "Tanja van der Lippe"
-          ]
-        },
-        {
-          "id": "doi:10.1080/1359432x.2018.1540467",
-          "year": 2018,
-          "title": "Regulatory fit at work: gravitational effects and associations with employee well-being",
-          "staffIds": [
-            "FR"
-          ],
-          "authors": [
-            "Veerle Brenninkmeijer",
-            "Melissa Vink"
-          ]
-        },
-        {
-          "id": "doi:10.1111/ncmr.12092",
-          "year": 2017,
-          "title": "Conflict and Culture Across Time and Space: Work and Legacy of Evert van de Vliert",
-          "staffIds": [
-            "CDD",
-            "GVV"
-          ],
-          "authors": [
-            "Esther S. Kluwer",
-            "Martin Euwema"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.copsyc.2016.06.001",
-          "year": 2016,
-          "title": "Diversity in work groups",
-          "staffIds": [
-            "FR"
-          ],
-          "authors": [
-            "Naomi Ellemers"
-          ]
-        },
-        {
-          "id": "doi:10.1080/10400419.2014.901084",
-          "year": 2014,
-          "title": "Effects of Problem Scope and Creativity Instructions on Idea Generation and Selection",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2013.026.003.277",
-          "year": 2013,
-          "title": "Initiatiefrijk en functie-inhoudelijk presteren",
-          "staffIds": [
-            "FR"
-          ],
-          "authors": [
-            "Roland W. B. Blonk"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.joep.2012.03.002",
-          "year": 2012,
-          "title": "Pay to walk away: Prevention buyers prefer to avoid negotiation",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Gaby Reijseger"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10869-011-9210-0",
-          "year": 2011,
-          "title": "Factors Relating to Managerial Stereotypes: The Role of Gender of the Employee and the Manager and Management Gender Ratio",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "M. van der Velde"
-          ]
-        },
-        {
-          "id": "doi:10.1080/08870446.2010.546860",
-          "year": 2011,
-          "title": "How does a vacation from work affect employee health and well-being?",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Toon W. Taris"
-          ]
-        },
-        {
-          "id": "doi:10.1080/02678373.2010.493385",
-          "year": 2010,
-          "title": "Effects of vacation from work on health and well-being: Lots of fun, quickly gone",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Toon W. Taris"
-          ]
-        },
-        {
-          "id": "doi:10.1037/a0016090",
-          "year": 2009,
-          "title": "Do our psychological laws apply only to Americans?",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1348/000712609x414204",
-          "year": 2009,
-          "title": "The selection of creative ideas after individual idea generation: Choosing between creativity and impact",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430208090646",
-          "year": 2008,
-          "title": "The Structure and Management of Conflict: Fighting or Defending the Status Quo",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Esther S. Kluwer"
-          ]
-        },
-        {
-          "id": "doi:10.1207/s15327957pspr1003_1",
-          "year": 2006,
-          "title": "How the Group Affects the Mind: A Cognitive Model of Idea Generation in Groups",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1037/0022-3514.90.6.927",
-          "year": 2006,
-          "title": "Motivated information processing, strategic choice, and the quality of negotiated agreement.",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Martin Euwema"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2006.10.014",
-          "year": 2006,
-          "title": "Relative accessibility of domain knowledge and creativity: The effects of knowledge activation on the quantity and originality of generated ideas",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2005.04.005",
-          "year": 2005,
-          "title": "Productivity is not enough: A comparison of interactive and nominal brainstorming groups on idea generation and selection",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.295",
-          "year": 2005,
-          "title": "The illusion of group productivity: a reduction of failures explanation",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe",
-            "Hein F. M. Lodewijkx"
-          ]
-        },
-        {
-          "id": "doi:10.1026/0033-3042.55.1.2",
-          "year": 2004,
-          "title": "Warum Brainstorming in Gruppen Kreativität vermindert:",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe"
-          ]
-        },
-        {
-          "id": "doi:10.1016/s0022-1031(03)00040-4",
-          "year": 2003,
-          "title": "Production blocking and idea generation: Does blocking interfere with cognitive processes?",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe",
-            "Hein F. M. Lodewijkx"
-          ]
-        },
-        {
-          "id": "doi:10.1016/s0022-1031(02)00500-0",
-          "year": 2002,
-          "title": "Cognitive stimulation and interference in groups: Exposure effects in an idea generation task",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe",
-            "Hein F. M. Lodewijkx"
-          ]
-        },
-        {
-          "id": "doi:10.1002/job.107",
-          "year": 2001,
-          "title": "A theory‐based measure of conflict management strategies in the workplace",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Esther S. Kluwer"
-          ]
-        },
-        {
-          "id": "doi:10.1023/a:1012527808620",
-          "year": 2001,
-          "title": "In a Violent World a Just World Makes Sense: The Case of “Senseless Violence” in The Netherlands",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Hein F. M. Lodewijkx",
-            "Wim Savenije",
-            "Marieke Smit"
-          ]
-        },
-        {
-          "id": "doi:10.1080/09585190110068359",
-          "year": 2001,
-          "title": "Leadership and innovation: relations between leadership, individual characteristics and the functioning of R&D teams",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Rendel D. de Jong"
-          ]
-        },
-        {
-          "id": "doi:10.1006/jesp.1998.1374",
-          "year": 1999,
-          "title": "Persistence of Brainstorming Groups: How Do People Know When to Stop?",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Wolfgang Stroebe",
-            "Hein F. M. Lodewijkx"
-          ]
-        }
-      ]
-    },
-    {
       "id": "ch:university of zurich",
       "institution": "University of Zurich",
       "country": "CH",
@@ -4905,17 +4930,6 @@
           "id": "doi:10.1038/s41598-024-67080-z",
           "year": 2024,
           "title": "Cooperation and social organization depend on weighing private and public reputations",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1177/17456916231179156",
-          "year": 2024,
-          "title": "Group Formation and the Evolution of Human Social Organization",
           "staffIds": [
             "CDD"
           ],
@@ -5016,9 +5030,9 @@
           ]
         },
         {
-          "id": "doi:10.1177/09567976221104037",
+          "id": "doi:10.1038/s41598-023-33167-2",
           "year": 2023,
-          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
+          "title": "Discriminatory punishment undermines the enforcement of group cooperation",
           "staffIds": [
             "CDD"
           ],
@@ -5027,9 +5041,9 @@
           ]
         },
         {
-          "id": "doi:10.1038/s41598-023-33167-2",
+          "id": "doi:10.1177/17456916231179156",
           "year": 2023,
-          "title": "Discriminatory punishment undermines the enforcement of group cooperation",
+          "title": "Group Formation and the Evolution of Human Social Organization",
           "staffIds": [
             "CDD"
           ],
@@ -5063,6 +5077,17 @@
           "id": "doi:10.1126/sciadv.add8289",
           "year": 2023,
           "title": "The evolution of universal cooperation",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jörg Gross"
+          ]
+        },
+        {
+          "id": "doi:10.1177/09567976221104037",
+          "year": 2022,
+          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
           "staffIds": [
             "CDD"
           ],
@@ -6919,7 +6944,7 @@
       "institution": "Sapienza University of Rome",
       "country": "IT",
       "type": "education",
-      "publicationCount": 18,
+      "publicationCount": 19,
       "staffIds": [
         "CDD",
         "JJ",
@@ -6934,6 +6959,7 @@
         "Conrad Baldner",
         "Daniela Di Santo",
         "Elena Resta",
+        "Francesca Federico",
         "Lucia Mannetti",
         "Maria Serena Panasiti",
         "Mauro Giacomantonio",
@@ -7082,6 +7108,18 @@
           ],
           "authors": [
             "Mauro Giacomantonio"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.2336",
+          "year": 2017,
+          "title": "The evil eye: Eye gaze and competitiveness in social decision making",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Mauro Giacomantonio",
+            "Francesca Federico"
           ]
         },
         {
@@ -7376,7 +7414,7 @@
       "institution": "Hochschule Bonn-Rhein-Sieg",
       "country": "DE",
       "type": "education",
-      "publicationCount": 13,
+      "publicationCount": 14,
       "staffIds": [
         "FR",
         "JDB"
@@ -7392,6 +7430,17 @@
         "Ute Stephan"
       ],
       "publications": [
+        {
+          "id": "doi:10.3389/fdgth.2026.1698339",
+          "year": 2026,
+          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
@@ -7606,7 +7655,7 @@
         },
         {
           "id": "doi:10.1177/13684302221135075",
-          "year": 2023,
+          "year": 2022,
           "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
           "staffIds": [
             "FR",
@@ -7641,19 +7690,6 @@
           ]
         },
         {
-          "id": "doi:10.1111/joms.12539",
-          "year": 2020,
-          "title": "Benefits and Disadvantages of Individuals’ Multiple Team Membership: The Moderating Role of Organizational Tenure",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "JVB"
-          ],
-          "authors": [
-            "Frank H. Walter"
-          ]
-        },
-        {
           "id": "doi:10.1111/joop.12326",
           "year": 2020,
           "title": "Multiple team membership and job performance: The role of employees’ information‐sharing networks",
@@ -7664,6 +7700,19 @@
           ],
           "authors": [
             "Frank Walter"
+          ]
+        },
+        {
+          "id": "doi:10.1111/joms.12539",
+          "year": 2019,
+          "title": "Benefits and Disadvantages of Individuals’ Multiple Team Membership: The Moderating Role of Organizational Tenure",
+          "staffIds": [
+            "FR",
+            "GVV",
+            "JVB"
+          ],
+          "authors": [
+            "Frank H. Walter"
           ]
         },
         {
@@ -7748,6 +7797,7 @@
         "Deborah E. Rupp",
         "Hoda Vaziri",
         "Louis Tay",
+        "Madisyn F. Arnold",
         "Miika Kujanpää",
         "Teri A. Kirby",
         "Thekla Morgenroth"
@@ -7818,7 +7868,8 @@
             "MR"
           ],
           "authors": [
-            "Thekla Morgenroth"
+            "Thekla Morgenroth",
+            "Madisyn F. Arnold"
           ]
         },
         {
@@ -8470,7 +8521,6 @@
         "Alberto López Ortega",
         "André Krouwel",
         "Daniel Balliet",
-        "Dennie van Dolder",
         "Felenka Phillips",
         "Giuliana Spadaro",
         "Jameela T. E. Lijkwan",
@@ -8582,14 +8632,13 @@
         },
         {
           "id": "doi:10.1002/ejsp.2336",
-          "year": 2018,
-          "title": "The Evil Eye: Eye Gaze and Competitiveness in Social Decision Making",
+          "year": 2017,
+          "title": "The evil eye: Eye gaze and competitiveness in social decision making",
           "staffIds": [
             "JJ"
           ],
           "authors": [
-            "Martijn J. van den Assem",
-            "Dennie van Dolder"
+            "Martijn J. van den Assem"
           ]
         },
         {
@@ -9694,6 +9743,167 @@
       ]
     },
     {
+      "id": "de:leuphana university of l neburg",
+      "institution": "Leuphana University of Lüneburg",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 10,
+      "staffIds": [
+        "JDB",
+        "JL",
+        "LM",
+        "MR"
+      ],
+      "authors": [
+        "Alexandra Smyth",
+        "Alexandra Thomsen",
+        "Anniina Virtanen",
+        "Arobindu Dash",
+        "Christine Syrek",
+        "David D. Loschelder",
+        "Dirk Lehr",
+        "Hanna Brückner",
+        "Hannes M. Petrowsky",
+        "Jo Annika Reins",
+        "Lea Boecker",
+        "Markus Domin",
+        "Martina Grunow",
+        "Meikel Soliman",
+        "Oliver Genschow",
+        "Ulla Kinnunen",
+        "Yannik A. Escher"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fdgth.2026.1698339",
+          "year": 2026,
+          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Alexandra Thomsen",
+            "Hanna Brückner",
+            "Markus Domin",
+            "Jo Annika Reins",
+            "Dirk Lehr"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Martina Grunow"
+          ]
+        },
+        {
+          "id": "doi:10.11144/javeriana.upsy23.pdcp",
+          "year": 2024,
+          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Lea Boecker",
+            "Yannik A. Escher",
+            "Oliver Genschow",
+            "David D. Loschelder",
+            "Hannes M. Petrowsky",
+            "Meikel Soliman"
+          ]
+        },
+        {
+          "id": "doi:10.1037/emo0001118",
+          "year": 2023,
+          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cresp.2021.100028",
+          "year": 2022,
+          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Arobindu Dash"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2021.784844",
+          "year": 2021,
+          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Dirk Lehr"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12889-020-09354-5",
+          "year": 2020,
+          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Alexandra Smyth",
+            "Markus Domin",
+            "Jo Annika Reins",
+            "Dirk Lehr"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10902-020-00247-3",
+          "year": 2020,
+          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Dirk Lehr",
+            "Jo Annika Reins"
+          ]
+        },
+        {
+          "id": "doi:10.5117/2019.032.004.003",
+          "year": 2019,
+          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Anniina Virtanen",
+            "Jo Annika Reins",
+            "Christine Syrek",
+            "Dirk Lehr",
+            "Ulla Kinnunen"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ua:taras shevchenko national university of kyiv",
       "institution": "Taras Shevchenko National University of Kyiv",
       "country": "UA",
@@ -10573,7 +10783,7 @@
         },
         {
           "id": "doi:10.5465/amj.2020.1136",
-          "year": 2023,
+          "year": 2022,
           "title": "Leveraging Knowledge Diversity in Hierarchically Differentiated Teams: The Critical Role of Hierarchy Stability",
           "staffIds": [
             "FR",
@@ -10608,7 +10818,7 @@
         },
         {
           "id": "doi:10.5465/amj.2014.0601",
-          "year": 2016,
+          "year": 2015,
           "title": "Different Views of Hierarchy and Why They Matter: Hierarchy as Inequality or as Cascading Influence",
           "staffIds": [
             "FR",
@@ -11080,16 +11290,16 @@
         "Kai Ruggeri",
         "Katherine W. Phillips",
         "Kirstin C. Appelt",
-        "Lauren Wilkins",
+        "Lauren J. Wilkins",
         "Marquis Guillory",
         "Matthew R. Sisco",
         "Maya Esberg",
         "Michael L. Slepian",
         "Nélida Ayacaxli",
-        "Peggah Khorrami",
+        "Peggah R. Khorrami",
         "Sandy Zeng",
         "Seval Gündemir",
-        "Tatianna Dugué",
+        "Tatianna M. Dugue",
         "Thiago Otto",
         "Tomas Folke",
         "Twinkle Dwarkanath",
@@ -11140,7 +11350,7 @@
           "authors": [
             "Kai Ruggeri",
             "Nélida Ayacaxli",
-            "Tatianna Dugué",
+            "Tatianna M. Dugue",
             "Maya Esberg",
             "Ezra N. Felder",
             "Allegra Girardello",
@@ -11148,11 +11358,11 @@
             "Anastasia Gracheva",
             "Marquis Guillory",
             "William Ingalls",
-            "Peggah Khorrami",
+            "Peggah R. Khorrami",
             "Thiago Otto",
             "Vivian Samuels",
             "Irem Soysal",
-            "Lauren Wilkins",
+            "Lauren J. Wilkins",
             "Elizabeth Wisdom",
             "Sandy Zeng",
             "Twinkle Dwarkanath",
@@ -11542,7 +11752,7 @@
         },
         {
           "id": "doi:10.1177/0149206307309263",
-          "year": 2008,
+          "year": 2007,
           "title": "Us and Me: Team Identification and Individual Differentiation as Complementary Drivers of Team Members' Citizenship and Creative Behaviors",
           "staffIds": [
             "OJ"
@@ -11818,150 +12028,6 @@
           ],
           "authors": [
             "Heyla A. Selim"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:leuphana university of l neburg",
-      "institution": "Leuphana University of Lüneburg",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 9,
-      "staffIds": [
-        "JDB",
-        "JL",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Alexandra Smyth",
-        "Anniina Virtanen",
-        "Arobindu Dash",
-        "Christine Syrek",
-        "David D. Loschelder",
-        "Dirk Lehr",
-        "Hannes M. Petrowsky",
-        "Jo Annika Reins",
-        "Lea Boecker",
-        "Markus Domin",
-        "Martina Grunow",
-        "Meikel Soliman",
-        "Oliver Genschow",
-        "Ulla Kinnunen",
-        "Yannik A. Escher"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Martina Grunow"
-          ]
-        },
-        {
-          "id": "doi:10.11144/javeriana.upsy23.pdcp",
-          "year": 2024,
-          "title": "Prosociality During COVID-19: Pathways Through Affect, Financial Stress, Well-being, and Collective Disempowerment across 39 Countries",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Lea Boecker",
-            "Yannik A. Escher",
-            "Oliver Genschow",
-            "David D. Loschelder",
-            "Hannes M. Petrowsky",
-            "Meikel Soliman"
-          ]
-        },
-        {
-          "id": "doi:10.1037/emo0001118",
-          "year": 2023,
-          "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.cresp.2021.100028",
-          "year": 2022,
-          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Arobindu Dash"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2021.784844",
-          "year": 2021,
-          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Dirk Lehr"
-          ]
-        },
-        {
-          "id": "doi:10.1186/s12889-020-09354-5",
-          "year": 2020,
-          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Alexandra Smyth",
-            "Markus Domin",
-            "Jo Annika Reins",
-            "Dirk Lehr"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10902-020-00247-3",
-          "year": 2020,
-          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Dirk Lehr",
-            "Jo Annika Reins"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2019.032.004.003",
-          "year": 2019,
-          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Anniina Virtanen",
-            "Jo Annika Reins",
-            "Christine Syrek",
-            "Dirk Lehr",
-            "Ulla Kinnunen"
           ]
         }
       ]
@@ -13299,7 +13365,7 @@
         "Kara Luo",
         "Max H. Bazerman",
         "Mina Cikara",
-        "Peggah Khorrami"
+        "Peggah R. Khorrami"
       ],
       "publications": [
         {
@@ -13349,7 +13415,7 @@
             "JL"
           ],
           "authors": [
-            "Peggah Khorrami",
+            "Peggah R. Khorrami",
             "Mina Cikara"
           ]
         },
@@ -13603,6 +13669,123 @@
           ],
           "authors": [
             "Ding–Yu Jiang"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:northwestern university",
+      "institution": "Northwestern University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 8,
+      "staffIds": [
+        "JJ",
+        "JL",
+        "JS",
+        "LM"
+      ],
+      "authors": [
+        "Adam D. Galinsky",
+        "Adam G. Waytz",
+        "Alice H. Eagly",
+        "Curtis Puryear",
+        "Daniel C. Molden",
+        "J. Keith Murnighan",
+        "Nour Kteily",
+        "Richard M. Shafranek",
+        "Victoria Ashley Parker",
+        "Xian Zhao"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/01461672241288332",
+          "year": 2026,
+          "title": "Alluring or Alarming? The Polarizing Effect of Forbidden Knowledge in Political Discourse",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Victoria Ashley Parker"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Daniel C. Molden",
+            "Richard M. Shafranek"
+          ]
+        },
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Nour Kteily",
+            "Curtis Puryear"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Xian Zhao"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2022.104371",
+          "year": 2022,
+          "title": "Morally questionable actors' meta-perceptions are accurate but overly positive",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Adam G. Waytz"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2019.01.001",
+          "year": 2019,
+          "title": "The Leadership Quarterly: State of the journal",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Alice H. Eagly"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0001839212441928",
+          "year": 2011,
+          "title": "Something to Lose and Nothing to Gain",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Adam D. Galinsky"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0146167211400208",
+          "year": 2011,
+          "title": "Striving for the Moral Self: The Effects of Recalling Past Moral Actions on Future Moral Behavior",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "J. Keith Murnighan"
           ]
         }
       ]
@@ -15410,8 +15593,8 @@
         },
         {
           "id": "doi:10.1177/14761270251334044",
-          "year": 2026,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
+          "year": 2025,
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
           "staffIds": [
             "FR"
           ],
@@ -15455,7 +15638,7 @@
         },
         {
           "id": "doi:10.1111/apps.12248",
-          "year": 2021,
+          "year": 2020,
           "title": "Is it Getting Better or Worse? Health‐Oriented Leadership and Psychological Capital as Resources for Sustained Health in Newcomers",
           "staffIds": [
             "MA"
@@ -15566,7 +15749,7 @@
         },
         {
           "id": "doi:10.1111/apps.12248",
-          "year": 2021,
+          "year": 2020,
           "title": "Is it Getting Better or Worse? Health‐Oriented Leadership and Psychological Capital as Resources for Sustained Health in Newcomers",
           "staffIds": [
             "MA"
@@ -16943,7 +17126,7 @@
         "Jana Kühnel",
         "Jonas P. Nitschke",
         "Kimberly C Doell",
-        "Markus R. Tünte",
+        "Markus Roman Tünte",
         "Nace Mikuš",
         "Sandra J. Geiger",
         "Sari R. R. Nijssen",
@@ -17024,7 +17207,7 @@
           ],
           "authors": [
             "Vanessa Bühler",
-            "Markus R. Tünte"
+            "Markus Roman Tünte"
           ]
         },
         {
@@ -17173,18 +17356,6 @@
           ]
         },
         {
-          "id": "doi:10.1177/09567976221104037",
-          "year": 2023,
-          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Maria Lojowska",
-            "Jörg Gross"
-          ]
-        },
-        {
           "id": "doi:10.1037/emo0001118",
           "year": 2023,
           "title": "Pandemic boredom: Little evidence that lockdown-related boredom affects risky public health behaviors across 116 countries.",
@@ -17193,6 +17364,18 @@
           ],
           "authors": [
             "Marta Maj"
+          ]
+        },
+        {
+          "id": "doi:10.1177/09567976221104037",
+          "year": 2022,
+          "title": "Anticipatory Threat Mitigates the Breakdown of Group Cooperation",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Maria Lojowska",
+            "Jörg Gross"
           ]
         },
         {
@@ -17215,98 +17398,6 @@
           ],
           "authors": [
             "Mariska E. Kret"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:harvard university press",
-      "institution": "Harvard University Press",
-      "country": "US",
-      "type": "other",
-      "publicationCount": 6,
-      "staffIds": [
-        "CDD",
-        "JJ",
-        "JL"
-      ],
-      "authors": [
-        "Amit Goldenberg",
-        "Eric Shuman",
-        "James Sidanius",
-        "Joseph B Bak Coleman",
-        "Julia A. Minson",
-        "Malavika Srinivasan",
-        "Martin Surbeck",
-        "Mina Cikara"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/19485506251383988",
-          "year": 2026,
-          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "James Sidanius"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Martin Surbeck"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Joseph B Bak Coleman",
-            "Amit Goldenberg",
-            "Eric Shuman"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2023.104257",
-          "year": 2023,
-          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Julia A. Minson"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-019-0766-4",
-          "year": 2019,
-          "title": "Inaccurate group meta-perceptions drive negative out-group attributions in competitive contexts",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Mina Cikara"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2015.10.001",
-          "year": 2016,
-          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Malavika Srinivasan"
           ]
         }
       ]
@@ -17691,99 +17782,6 @@
           "authors": [
             "Maureen A. Craig",
             "Ryan F. Lei"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:northwestern university",
-      "institution": "Northwestern University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 6,
-      "staffIds": [
-        "JJ",
-        "JL",
-        "JS",
-        "LM"
-      ],
-      "authors": [
-        "Adam D. Galinsky",
-        "Alice H. Eagly",
-        "Curtis Puryear",
-        "Daniel C. Molden",
-        "J. Keith Murnighan",
-        "Nour Kteily",
-        "Richard M. Shafranek",
-        "Xian Zhao"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Daniel C. Molden",
-            "Richard M. Shafranek"
-          ]
-        },
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Nour Kteily",
-            "Curtis Puryear"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Xian Zhao"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2019.01.001",
-          "year": 2019,
-          "title": "The Leadership Quarterly: State of the journal",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Alice H. Eagly"
-          ]
-        },
-        {
-          "id": "doi:10.1177/0001839212441928",
-          "year": 2011,
-          "title": "Something to Lose and Nothing to Gain",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Adam D. Galinsky"
-          ]
-        },
-        {
-          "id": "doi:10.1177/0146167211400208",
-          "year": 2011,
-          "title": "Striving for the Moral Self: The Effects of Recalling Past Moral Actions on Future Moral Behavior",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "J. Keith Murnighan"
           ]
         }
       ]
@@ -18832,96 +18830,6 @@
       ]
     },
     {
-      "id": "us:division of human resource management",
-      "institution": "Division of Human Resource Management",
-      "country": "US",
-      "type": "government",
-      "publicationCount": 5,
-      "staffIds": [
-        "BN",
-        "FR",
-        "GVV",
-        "JDB",
-        "JVB",
-        "NN",
-        "SB",
-        "TDV"
-      ],
-      "authors": [
-        "Hendrik Johan Van De Brake",
-        "Josette Gevers",
-        "Merly Kosenkranius",
-        "Oliver Weigelt",
-        "Peter Essens",
-        "Yezi Kang"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1037/apl0001417",
-          "year": 2026,
-          "title": "Managing internal mobility: How social and human capital shape movers’ integration over time",
-          "staffIds": [
-            "FR",
-            "GVV",
-            "NN",
-            "TDV"
-          ],
-          "authors": [
-            "Yezi Kang"
-          ]
-        },
-        {
-          "id": "doi:10.1037/apl0001168",
-          "year": 2024,
-          "title": "More Than Just a Number: Different Conceptualizations of Multiple Team Membership and Their Relationships With Emotional Exhaustion and Turnover",
-          "staffIds": [
-            "GVV",
-            "JVB"
-          ],
-          "authors": [
-            "Hendrik Johan Van De Brake",
-            "Peter Essens"
-          ]
-        },
-        {
-          "id": "doi:10.1037/ocp0000347",
-          "year": 2023,
-          "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Merly Kosenkranius",
-            "Oliver Weigelt"
-          ]
-        },
-        {
-          "id": "doi:10.1037/apl0000889",
-          "year": 2022,
-          "title": "Resource Leverage, Resource Depletion: A Multilevel Perspective on Multiple Team Membership",
-          "staffIds": [
-            "JVB",
-            "SB"
-          ],
-          "authors": [
-            "Hendrik Johan Van De Brake"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2015.028.002.001",
-          "year": 2015,
-          "title": "Creativiteit en innovatie",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Josette Gevers"
-          ]
-        }
-      ]
-    },
-    {
       "id": "be:ghent university",
       "institution": "Ghent University",
       "country": "BE",
@@ -18994,6 +18902,86 @@
           ],
           "authors": [
             "Frederik Anseel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:harvard university press",
+      "institution": "Harvard University Press",
+      "country": "US",
+      "type": "other",
+      "publicationCount": 5,
+      "staffIds": [
+        "CDD",
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Amit Goldenberg",
+        "Eric Shuman",
+        "James Sidanius",
+        "Joseph B Bak Coleman",
+        "Julia A. Minson",
+        "Malavika Srinivasan",
+        "Martin Surbeck"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/19485506251383988",
+          "year": 2026,
+          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "James Sidanius"
+          ]
+        },
+        {
+          "id": "doi:10.1017/s0140525x2510040x",
+          "year": 2025,
+          "title": "Group-mindedness as evolved solution to deal with group-living",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Martin Surbeck"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Joseph B Bak Coleman",
+            "Amit Goldenberg",
+            "Eric Shuman"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2023.104257",
+          "year": 2023,
+          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Julia A. Minson"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Malavika Srinivasan"
           ]
         }
       ]
@@ -20053,6 +20041,7 @@
         "Jáchym Vintr",
         "Kamila Urban",
         "Lea Jakob",
+        "Marek Albert Vranka",
         "Marek Vranka",
         "Matúš Adamkovič",
         "Sven Hoeppner"
@@ -20103,7 +20092,7 @@
           "authors": [
             "Lea Jakob",
             "Jáchym Vintr",
-            "Marek Vranka"
+            "Marek Albert Vranka"
           ]
         }
       ]
@@ -21607,6 +21596,74 @@
       ]
     },
     {
+      "id": "us:university of notre dame",
+      "institution": "University of Notre Dame",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "JJ",
+        "JL",
+        "LM"
+      ],
+      "authors": [
+        "Ahmed Farhan Abbasi",
+        "Ann E. Tenbrunsel",
+        "James R. G. Kirk",
+        "Matthew E. K. Hall",
+        "Matthew Facciani",
+        "Nicholas Berente"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/01461672241288332",
+          "year": 2026,
+          "title": "Alluring or Alarming? The Polarizing Effect of Forbidden Knowledge in Political Discourse",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Matthew Facciani"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Ahmed Farhan Abbasi",
+            "Nicholas Berente"
+          ]
+        },
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Matthew E. K. Hall",
+            "James R. G. Kirk"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2015.01878",
+          "year": 2015,
+          "title": "The Moral Self-Image Scale: Measuring and Understanding the Malleability of the Moral Self",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Ann E. Tenbrunsel"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:university of t bingen",
       "institution": "University of Tübingen",
       "country": "DE",
@@ -22164,6 +22221,58 @@
           "authors": [
             "Abigail McCarter",
             "Dawn M. Sarno"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dk:copenhagen business school",
+      "institution": "Copenhagen Business School",
+      "country": "DK",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "BN",
+        "LM",
+        "NN"
+      ],
+      "authors": [
+        "Christoph Grimpe",
+        "Constant Pieters",
+        "Keld Laursen"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.respol.2025.105391",
+          "year": 2026,
+          "title": "Connecting creativity and innovation research: Building bridges to cross divides",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Christoph Grimpe"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Constant Pieters"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.respol.2020.104034",
+          "year": 2020,
+          "title": "Mounting corporate innovation performance: The effects of high-skilled migrant hires and integration capacity",
+          "staffIds": [
+            "NN"
+          ],
+          "authors": [
+            "Keld Laursen"
           ]
         }
       ]
@@ -23619,7 +23728,7 @@
         },
         {
           "id": "doi:10.5465/amj.2020.1136",
-          "year": 2023,
+          "year": 2022,
           "title": "Leveraging Knowledge Diversity in Hierarchically Differentiated Teams: The Critical Role of Hierarchy Stability",
           "staffIds": [
             "FR",
@@ -23716,8 +23825,8 @@
         },
         {
           "id": "doi:10.1177/14761270251334044",
-          "year": 2026,
-          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and firm strategy uniqueness",
+          "year": 2025,
+          "title": "Reaching for the stars and knowing how to get there: CEO promotion focus, CEO organizational experience, and strategy uniqueness",
           "staffIds": [
             "FR"
           ],
@@ -23727,7 +23836,7 @@
         },
         {
           "id": "doi:10.1111/apps.12248",
-          "year": 2021,
+          "year": 2020,
           "title": "Is it Getting Better or Worse? Health‐Oriented Leadership and Psychological Capital as Resources for Sustained Health in Newcomers",
           "staffIds": [
             "MA"
@@ -24346,62 +24455,6 @@
       ]
     },
     {
-      "id": "us:university of notre dame",
-      "institution": "University of Notre Dame",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "JJ",
-        "JL",
-        "LM"
-      ],
-      "authors": [
-        "Ahmed Farhan Abbasi",
-        "Ann E. Tenbrunsel",
-        "James R. G. Kirk",
-        "Matthew E. K. Hall",
-        "Nicholas Berente"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Ahmed Farhan Abbasi",
-            "Nicholas Berente"
-          ]
-        },
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Matthew E. K. Hall",
-            "James R. G. Kirk"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2015.01878",
-          "year": 2015,
-          "title": "The Moral Self-Image Scale: Measuring and Understanding the Malleability of the Moral Self",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Ann E. Tenbrunsel"
-          ]
-        }
-      ]
-    },
-    {
       "id": "it:university of pisa",
       "institution": "University of Pisa",
       "country": "IT",
@@ -24882,6 +24935,44 @@
       ]
     },
     {
+      "id": "us:boston college",
+      "institution": "Boston College",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Gregg Sparkman",
+        "Liane Young"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Gregg Sparkman"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2022.104371",
+          "year": 2022,
+          "title": "Morally questionable actors' meta-perceptions are accurate but overly positive",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Liane Young"
+          ]
+        }
+      ]
+    },
+    {
       "id": "us:bowdoin college",
       "institution": "Bowdoin College",
       "country": "US",
@@ -25256,45 +25347,6 @@
       ]
     },
     {
-      "id": "dk:copenhagen business school",
-      "institution": "Copenhagen Business School",
-      "country": "DK",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "LM",
-        "NN"
-      ],
-      "authors": [
-        "Constant Pieters",
-        "Keld Laursen"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Constant Pieters"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.respol.2020.104034",
-          "year": 2020,
-          "title": "Mounting corporate innovation performance: The effects of high-skilled migrant hires and integration capacity",
-          "staffIds": [
-            "NN"
-          ],
-          "authors": [
-            "Keld Laursen"
-          ]
-        }
-      ]
-    },
-    {
       "id": "au:curtin university",
       "institution": "Curtin University",
       "country": "AU",
@@ -25371,46 +25423,6 @@
           ],
           "authors": [
             "Elmar Schlüter"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:dana farber harvard cancer center",
-      "institution": "Dana-Farber/Harvard Cancer Center",
-      "country": "US",
-      "type": "healthcare",
-      "publicationCount": 2,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Amit Goldenberg",
-        "Eric Shuman",
-        "Francesca Gino"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Amit Goldenberg",
-            "Eric Shuman"
-          ]
-        },
-        {
-          "id": "doi:10.1111/spc3.12327",
-          "year": 2017,
-          "title": "Is the moral domain unique? A social influence perspective for the study of moral cognition",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Francesca Gino"
           ]
         }
       ]
@@ -25705,7 +25717,7 @@
       "publications": [
         {
           "id": "doi:10.1177/13684302221135075",
-          "year": 2023,
+          "year": 2022,
           "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
           "staffIds": [
             "FR",
@@ -25717,7 +25729,7 @@
         },
         {
           "id": "doi:10.5465/amj.2020.1136",
-          "year": 2023,
+          "year": 2022,
           "title": "Leveraging Knowledge Diversity in Hierarchically Differentiated Teams: The Critical Role of Hierarchy Stability",
           "staffIds": [
             "FR",
@@ -25828,7 +25840,7 @@
       "publications": [
         {
           "id": "doi:10.1177/13684302221135075",
-          "year": 2023,
+          "year": 2022,
           "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
           "staffIds": [
             "FR",
@@ -26919,6 +26931,45 @@
       ]
     },
     {
+      "id": "cn:shanghai jiao tong university",
+      "institution": "Shanghai Jiao Tong University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "MR",
+        "YY"
+      ],
+      "authors": [
+        "Xinxin Li",
+        "Zhigang Song"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001410",
+          "year": 2026,
+          "title": "Do family rituals help or hurt? The ripple effect of family rituals on employee change-oriented behaviors",
+          "staffIds": [
+            "YY"
+          ],
+          "authors": [
+            "Zhigang Song"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01492063231177976",
+          "year": 2023,
+          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Xinxin Li"
+          ]
+        }
+      ]
+    },
+    {
       "id": "pl:sopot university of applied science",
       "institution": "Sopot University of Applied Science",
       "country": "PL",
@@ -27110,6 +27161,48 @@
           ],
           "authors": [
             "Shian‐Ling Keng"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:technical university of applied sciences l beck",
+      "institution": "Technical University of Applied Sciences Lübeck",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Jo Annika Reins",
+        "Markus Domin",
+        "Monique Janneck"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fdgth.2026.1698339",
+          "year": 2026,
+          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Monique Janneck",
+            "Markus Domin",
+            "Jo Annika Reins"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12889-020-09354-5",
+          "year": 2020,
+          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Markus Domin",
+            "Monique Janneck"
           ]
         }
       ]
@@ -27315,45 +27408,6 @@
           ],
           "authors": [
             "Michael S. Cole"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nl:tinbergen institute",
-      "institution": "Tinbergen Institute",
-      "country": "NL",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "CDD",
-        "JJ"
-      ],
-      "authors": [
-        "Dennie van Dolder",
-        "Jan B. Engelmann"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1073/pnas.1820133116",
-          "year": 2019,
-          "title": "On the psychology and economics of antisocial personality",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jan B. Engelmann"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.2336",
-          "year": 2018,
-          "title": "The Evil Eye: Eye Gaze and Competitiveness in Social Decision Making",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Dennie van Dolder"
           ]
         }
       ]
@@ -27854,7 +27908,8 @@
         "Jamie Cummins",
         "Michael Schulte-Mecklenbeck",
         "Noel Strahm",
-        "Radoslaw Panczak"
+        "Radoslaw Panczak",
+        "Sebastian Berger"
       ],
       "publications": [
         {
@@ -27878,6 +27933,7 @@
             "JL"
           ],
           "authors": [
+            "Sebastian Berger",
             "Noel Strahm"
           ]
         }
@@ -28923,8 +28979,8 @@
         },
         {
           "id": "doi:10.1002/ejsp.2336",
-          "year": 2018,
-          "title": "The Evil Eye: Eye Gaze and Competitiveness in Social Decision Making",
+          "year": 2017,
+          "title": "The evil eye: Eye gaze and competitiveness in social decision making",
           "staffIds": [
             "JJ"
           ],
@@ -29698,44 +29754,6 @@
           ],
           "authors": [
             "Roseanne R. Foti"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:walker united states",
-      "institution": "Walker (United States)",
-      "country": "US",
-      "type": "company",
-      "publicationCount": 2,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Haley Todd",
-        "Patrick L. Warren"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1093/pnasnexus/pgad094",
-          "year": 2023,
-          "title": "The Spot the Troll Quiz game increases accuracy in discerning between real and inauthentic social media accounts",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Patrick L. Warren"
-          ]
-        },
-        {
-          "id": "doi:10.1093/pnasnexus/pgad143",
-          "year": 2023,
-          "title": "Women, the intellectually humble, and liberals write more persuasive political arguments",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Haley Todd"
           ]
         }
       ]
@@ -30691,7 +30709,8 @@
         "JL"
       ],
       "authors": [
-        "Noel Strahm"
+        "Noel Strahm",
+        "Sebastian Berger"
       ],
       "publications": [
         {
@@ -30702,6 +30721,7 @@
             "JL"
           ],
           "authors": [
+            "Sebastian Berger",
             "Noel Strahm"
           ]
         }
@@ -30813,32 +30833,6 @@
           ],
           "authors": [
             "Chiara Longoni"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:boston college",
-      "institution": "Boston College",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Gregg Sparkman"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Gregg Sparkman"
           ]
         }
       ]
@@ -31229,6 +31223,32 @@
           ],
           "authors": [
             "Austin Lee Nichols"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:centre for european economic research",
+      "institution": "Centre for European Economic Research",
+      "country": "DE",
+      "type": "nonprofit",
+      "publicationCount": 1,
+      "staffIds": [
+        "BN"
+      ],
+      "authors": [
+        "Christoph Grimpe"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.respol.2025.105391",
+          "year": 2026,
+          "title": "Connecting creativity and innovation research: Building bridges to cross divides",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Christoph Grimpe"
           ]
         }
       ]
@@ -31882,6 +31902,34 @@
       ]
     },
     {
+      "id": "us:dana farber harvard cancer center",
+      "institution": "Dana-Farber/Harvard Cancer Center",
+      "country": "US",
+      "type": "healthcare",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Amit Goldenberg",
+        "Eric Shuman"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Amit Goldenberg",
+            "Eric Shuman"
+          ]
+        }
+      ]
+    },
+    {
       "id": "dk:danish pain research center",
       "institution": "Danish Pain Research Center",
       "country": "DK",
@@ -32223,34 +32271,6 @@
           "authors": [
             "Klarita Gërxhani",
             "Arthur Schram"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "it:european university of rome",
-      "institution": "European University of Rome",
-      "country": "IT",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JJ"
-      ],
-      "authors": [
-        "Francesca Federico",
-        "Mauro Giacomantonio"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1002/ejsp.2336",
-          "year": 2018,
-          "title": "The Evil Eye: Eye Gaze and Competitiveness in Social Decision Making",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Mauro Giacomantonio",
-            "Francesca Federico"
           ]
         }
       ]
@@ -32876,6 +32896,32 @@
       ]
     },
     {
+      "id": "fi:hanken school of economics",
+      "institution": "Hanken School of Economics",
+      "country": "FI",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "BN"
+      ],
+      "authors": [
+        "Olli‐Pekka Kauppila"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.respol.2025.105391",
+          "year": 2026,
+          "title": "Connecting creativity and innovation research: Building bridges to cross divides",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Olli‐Pekka Kauppila"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:heidelberg university of education",
       "institution": "Heidelberg University of Education",
       "country": "DE",
@@ -33248,32 +33294,6 @@
       ]
     },
     {
-      "id": "us:iit harvard",
-      "institution": "IIT@Harvard",
-      "country": "US",
-      "type": "facility",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Francesca Gino"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1111/spc3.12327",
-          "year": 2017,
-          "title": "Is the moral domain unique? A social influence perspective for the study of moral cognition",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Francesca Gino"
-          ]
-        }
-      ]
-    },
-    {
       "id": "fr:insead",
       "institution": "INSEAD",
       "country": "FR",
@@ -33451,6 +33471,32 @@
           ],
           "authors": [
             "Jean Daunizeau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hr:institut dru tvenih znanosti ivo pilar",
+      "institution": "Institut Društvenih Znanosti Ivo Pilar",
+      "country": "HR",
+      "type": "facility",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Josip Razum"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Josip Razum"
           ]
         }
       ]
@@ -33782,6 +33828,32 @@
       ]
     },
     {
+      "id": "pt:instituto de ci ncias sociais da universidade de lisboa",
+      "institution": "Instituto de Ciências Sociais da Universidade de Lisboa",
+      "country": "PT",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Mafalda F. Mascarenhas"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Mafalda F. Mascarenhas"
+          ]
+        }
+      ]
+    },
+    {
       "id": "es:instituto de salud carlos iii",
       "institution": "Instituto de Salud Carlos III",
       "country": "ES",
@@ -34009,7 +34081,7 @@
       "publications": [
         {
           "id": "doi:10.5465/amj.2014.0601",
-          "year": 2016,
+          "year": 2015,
           "title": "Different Views of Hierarchy and Why They Matter: Hierarchy as Inequality or as Cascading Influence",
           "staffIds": [
             "FR",
@@ -35114,6 +35186,32 @@
       ]
     },
     {
+      "id": "ca:mcmaster university",
+      "institution": "McMaster University",
+      "country": "CA",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "BN"
+      ],
+      "authors": [
+        "Goran Calic"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.respol.2025.105391",
+          "year": 2026,
+          "title": "Connecting creativity and innovation research: Building bridges to cross divides",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Goran Calic"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gb:medical research council",
       "institution": "Medical Research Council",
       "country": "GB",
@@ -35355,6 +35453,32 @@
           ],
           "authors": [
             "Femke S. Ten Velden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:nankai university",
+      "institution": "Nankai University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "YY"
+      ],
+      "authors": [
+        "Linlin Wang"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001410",
+          "year": 2026,
+          "title": "Do family rituals help or hurt? The ripple effect of family rituals on employee change-oriented behaviors",
+          "staffIds": [
+            "YY"
+          ],
+          "authors": [
+            "Linlin Wang"
           ]
         }
       ]
@@ -36065,32 +36189,6 @@
           "authors": [
             "Philip J. Cowen",
             "Michael Browning"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gb:oxford policy management",
-      "institution": "Oxford Policy Management",
-      "country": "GB",
-      "type": "other",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Inés Sanguino"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Inés Sanguino"
           ]
         }
       ]
@@ -36840,6 +36938,32 @@
       ]
     },
     {
+      "id": "us:rice university",
+      "institution": "Rice University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "YY"
+      ],
+      "authors": [
+        "Daan van Knippenberg"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001410",
+          "year": 2026,
+          "title": "Do family rituals help or hurt? The ripple effect of family rituals on employee change-oriented behaviors",
+          "staffIds": [
+            "YY"
+          ],
+          "authors": [
+            "Daan van Knippenberg"
+          ]
+        }
+      ]
+    },
+    {
       "id": "nl:rijksmuseum",
       "institution": "Rijksmuseum",
       "country": "NL",
@@ -36889,6 +37013,32 @@
           ],
           "authors": [
             "Julia Lee"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl:royal dutch pharmacists association",
+      "institution": "Royal Dutch Pharmacists Association",
+      "country": "NL",
+      "type": "other",
+      "publicationCount": 1,
+      "staffIds": [
+        "OJ"
+      ],
+      "authors": [
+        "Thea de Vries"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/001872679805100705",
+          "year": 1998,
+          "title": "Voicing by Adapting and Innovating Employees: An Empirical Study on How Personality and Environment Interact to Affect Voice Behavior",
+          "staffIds": [
+            "OJ"
+          ],
+          "authors": [
+            "Thea de Vries"
           ]
         }
       ]
@@ -37270,27 +37420,27 @@
       ]
     },
     {
-      "id": "cn:shanghai jiao tong university",
-      "institution": "Shanghai Jiao Tong University",
+      "id": "cn:shanghai university",
+      "institution": "Shanghai University",
       "country": "CN",
       "type": "education",
       "publicationCount": 1,
       "staffIds": [
-        "MR"
+        "YY"
       ],
       "authors": [
-        "Xinxin Li"
+        "Bingqian Liang"
       ],
       "publications": [
         {
-          "id": "doi:10.1177/01492063231177976",
-          "year": 2023,
-          "title": "How Identity Impacts Bystander Responses to Workplace Mistreatment",
+          "id": "doi:10.1037/apl0001410",
+          "year": 2026,
+          "title": "Do family rituals help or hurt? The ripple effect of family rituals on employee change-oriented behaviors",
           "staffIds": [
-            "MR"
+            "YY"
           ],
           "authors": [
-            "Xinxin Li"
+            "Bingqian Liang"
           ]
         }
       ]
@@ -37722,6 +37872,40 @@
       ]
     },
     {
+      "id": "za:sustainability institute",
+      "institution": "Sustainability Institute",
+      "country": "ZA",
+      "type": "nonprofit",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Alexandra Thomsen",
+        "Dirk Lehr",
+        "Hanna Brückner",
+        "Jo Annika Reins",
+        "Markus Domin"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fdgth.2026.1698339",
+          "year": 2026,
+          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Alexandra Thomsen",
+            "Hanna Brückner",
+            "Markus Domin",
+            "Jo Annika Reins",
+            "Dirk Lehr"
+          ]
+        }
+      ]
+    },
+    {
       "id": "dk:svendborg sygehus",
       "institution": "Svendborg Sygehus",
       "country": "DK",
@@ -37935,34 +38119,6 @@
           "authors": [
             "Joseph Luomba",
             "Fenant Laurent Mhagama"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:technical university of applied sciences l beck",
-      "institution": "Technical University of Applied Sciences Lübeck",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JDB"
-      ],
-      "authors": [
-        "Markus Domin",
-        "Monique Janneck"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1186/s12889-020-09354-5",
-          "year": 2020,
-          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Markus Domin",
-            "Monique Janneck"
           ]
         }
       ]
@@ -38265,6 +38421,60 @@
           ],
           "authors": [
             "Loes Meeussen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cn:tianjin university",
+      "institution": "Tianjin University",
+      "country": "CN",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "YY"
+      ],
+      "authors": [
+        "Wan Jiang",
+        "Xueting Qin"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/apl0001410",
+          "year": 2026,
+          "title": "Do family rituals help or hurt? The ripple effect of family rituals on employee change-oriented behaviors",
+          "staffIds": [
+            "YY"
+          ],
+          "authors": [
+            "Wan Jiang",
+            "Xueting Qin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl:tinbergen institute",
+      "institution": "Tinbergen Institute",
+      "country": "NL",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "CDD"
+      ],
+      "authors": [
+        "Jan B. Engelmann"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1073/pnas.1820133116",
+          "year": 2019,
+          "title": "On the psychology and economics of antisocial personality",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jan B. Engelmann"
           ]
         }
       ]
@@ -39112,7 +39322,7 @@
       ],
       "authors": [
         "Bettina Moltrecht",
-        "Celia Esteban‐Serna",
+        "Celia Esteban Serna",
         "Leya George",
         "Vanessa Bühler"
       ],
@@ -39126,7 +39336,7 @@
           ],
           "authors": [
             "Vanessa Bühler",
-            "Celia Esteban‐Serna",
+            "Celia Esteban Serna",
             "Leya George",
             "Bettina Moltrecht"
           ]
@@ -41612,6 +41822,32 @@
       ]
     },
     {
+      "id": "us:walker united states",
+      "institution": "Walker (United States)",
+      "country": "US",
+      "type": "company",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Patrick L. Warren"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1093/pnasnexus/pgad094",
+          "year": 2023,
+          "title": "The Spot the Troll Quiz game increases accuracy in discerning between real and inauthentic social media accounts",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Patrick L. Warren"
+          ]
+        }
+      ]
+    },
+    {
       "id": "jp:waseda university",
       "institution": "Waseda University",
       "country": "JP",
@@ -41937,6 +42173,34 @@
           ],
           "authors": [
             "Mariah G. Schug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca:wilfrid laurier university",
+      "institution": "Wilfrid Laurier University",
+      "country": "CA",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Ann Elizabeth Wilson",
+        "E. Kehoe"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/01461672241288332",
+          "year": 2026,
+          "title": "Alluring or Alarming? The Polarizing Effect of Forbidden Knowledge in Political Discourse",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "E. Kehoe",
+            "Ann Elizabeth Wilson"
           ]
         }
       ]

@@ -3745,7 +3745,7 @@ footer {
 /* Research-attention heatmap, 25 September 2026. */
 .attention-head { align-items: start; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; margin: -4px 0 12px; }
 .attention-head .attention-subtitle { margin: 0; max-width: 640px; }
-.attention-wrap { border-top: 0; }
+.attention-wrap { border-top: 0; position: relative; }
 .attention-heatmap { border-collapse: separate; border-spacing: 2px; min-width: 640px; table-layout: fixed; }
 .attention-heatmap th, .attention-heatmap td { border: 0; letter-spacing: 0; padding: 0; text-transform: none; }
 .attention-heatmap thead th { color: var(--ink-500); font-size: 0.66rem; font-weight: 600; padding-bottom: 4px; text-align: center; }
@@ -3805,4 +3805,3 @@ details.grant-stage[open] > .grant-stage-grid { padding-bottom: 16px; }
   .grants-calls-panel .recent-call-list, .grants-full .grant-stage-grid, .grants-tips-panel .resource-tip-list { grid-template-columns: 1fr; }
   .call-legend-hint { margin-left: 0; }
 }
-
