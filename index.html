@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261010-gate3">
+  <link rel="stylesheet" href="styles.css?v=20261010-overview">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -37,12 +37,12 @@
       <div class="nav-sep"></div>
       <div class="nav-tabs" role="tablist" aria-label="Dashboard sections">
         <button id="tab-overview" class="nav-tab on" type="button" role="tab" aria-controls="view-overview" aria-selected="true" data-tab="overview">Overview</button>
-        <button id="tab-expertise" class="nav-tab" type="button" role="tab" aria-controls="view-expertise" aria-selected="false" tabindex="-1" data-tab="expertise">Search expertise</button>
-        <button id="tab-staff" class="nav-tab" type="button" role="tab" aria-controls="view-staff" aria-selected="false" tabindex="-1" data-tab="staff">Staff</button>
-        <button id="tab-phds" class="nav-tab" type="button" role="tab" aria-controls="view-phds" aria-selected="false" tabindex="-1" data-tab="phds">PhD students</button>
-        <button id="tab-collaboration" class="nav-tab" type="button" role="tab" aria-controls="view-collaboration" aria-selected="false" tabindex="-1" data-tab="collaboration">Opportunities</button>
+        <button id="tab-expertise" class="nav-tab" hidden type="button" role="tab" aria-controls="view-expertise" aria-selected="false" tabindex="-1" data-tab="expertise">Search expertise</button>
+        <button id="tab-staff" class="nav-tab" type="button" role="tab" aria-controls="view-staff" aria-selected="false" tabindex="-1" data-tab="staff">Staff and expertise</button>
+        <button id="tab-phds" class="nav-tab" type="button" role="tab" aria-controls="view-phds" aria-selected="false" tabindex="-1" data-tab="phds">PhD projects</button>
+        <button id="tab-collaboration" class="nav-tab" hidden type="button" role="tab" aria-controls="view-collaboration" aria-selected="false" tabindex="-1" data-tab="collaboration">Opportunities</button>
         <button id="tab-publications" class="nav-tab" type="button" role="tab" aria-controls="view-publications" aria-selected="false" tabindex="-1" data-tab="publications">Publications</button>
-        <button id="tab-network" class="nav-tab" type="button" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
+        <button id="tab-network" class="nav-tab" hidden type="button" role="tab" aria-controls="view-network" aria-selected="false" tabindex="-1" data-tab="network">Network</button>
         <button id="tab-metrics" class="nav-tab" type="button" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
         <button id="tab-grants" class="nav-tab" type="button" role="tab" aria-controls="view-grants" aria-selected="false" tabindex="-1" data-tab="grants">Grants</button>
         <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
@@ -50,8 +50,8 @@
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
       <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
-        <button class="on" type="button" data-window-mode="recent" aria-pressed="true">Last 5 years</button>
-        <button type="button" data-window-mode="last10" aria-pressed="false">10 years</button>
+        <button type="button" data-window-mode="recent" aria-pressed="false">Last 5 years</button>
+        <button class="on" type="button" data-window-mode="last10" aria-pressed="true">10 years</button>
         <button type="button" data-window-mode="last20" aria-pressed="false">20 years</button>
       </div>
       <label class="switch" title="Adds affiliated researchers to counts, tables, metrics, and network views">
@@ -99,10 +99,27 @@
                 <h2 class="h2">Research topics</h2>
               </div>
               <div class="overview-panel-actions">
-                <a class="section-link" href="#expertise">Search for expertise</a>
+                <a class="section-link" href="#staff">Find expertise</a>
               </div>
             </div>
             <div id="attention-river" class="attention-river"></div>
+          </section>
+          <section id="overview-network" class="overview-panel overview-panel-wide overview-network-panel" aria-labelledby="overview-network-title">
+            <div class="sec-head compact">
+              <div>
+                <h2 id="overview-network-title" class="h2">Research network</h2>
+              </div>
+            </div>
+            <p id="overview-network-note" class="overview-network-note" role="status" aria-live="polite">Loading coauthor records…</p>
+            <div class="overview-network-shell">
+              <svg id="overview-network-svg" role="img" aria-labelledby="overview-network-title overview-network-note"></svg>
+            </div>
+            <div class="legend overview-network-legend" aria-label="How to read the map">
+              <span><i class="legend-node" aria-hidden="true"></i> HRM&amp;OB researcher (number = papers)</span>
+              <span class="legend-strength"><span class="legend-strength-scale" aria-hidden="true"><i class="legend-line legend-line-weak"></i><i class="legend-line legend-line-strong"></i></span> Thicker line = more shared papers</span>
+              <span><i class="legend-faculty" aria-hidden="true"></i> Other FEB departments</span>
+              <span><i class="legend-external" aria-hidden="true"></i> Other coauthors</span>
+            </div>
           </section>
         </div>
       </div>
@@ -112,7 +129,7 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">PhD students</p>
+            <p class="eye">PhD projects</p>
             <h2 class="h2">Current PhD projects and supervision</h2>
           </div>
           <a class="section-link" href="https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en" target="_blank" rel="noopener">RUG source</a>
@@ -175,7 +192,7 @@
             </div>
             <a class="section-link" href="#contact">Add or correct profile information</a>
           </div>
-          <p class="section-intro">Find datasets, participation opportunities, and methods help offered by colleagues. <a class="section-link" href="#expertise">Search expertise and resources</a></p>
+          <p class="section-intro">Find datasets, participation opportunities, and methods help offered by colleagues. <a class="section-link" href="#staff">Search expertise and resources</a></p>
           <div id="collaboration-staff-board" class="staff-input-board"></div>
         </section>
         <section class="collaboration-section">
@@ -452,8 +469,8 @@
       <div class="wrap">
         <div class="sec-head compact">
           <div>
-            <p class="eye">Staff</p>
-            <h2 class="h2">People, topics, and publication records</h2>
+            <p class="eye">Staff and expertise</p>
+            <h2 class="h2">People, expertise, and publication records</h2>
           </div>
         </div>
         <div class="staff-search-panel" role="search" aria-label="Find staff expertise">
@@ -791,7 +808,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="resources/pages/resources.js?v=20261010-gate3"></script>
-  <script src="app.js?v=20261010-gate3"></script>
+  <script src="resources/pages/resources.js?v=20261010-overview"></script>
+  <script src="app.js?v=20261010-overview"></script>
 </body>
 </html>

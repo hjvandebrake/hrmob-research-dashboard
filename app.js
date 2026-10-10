@@ -15,7 +15,7 @@ const state = {
   dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
-  publicationWindow: "recent",
+  publicationWindow: "last10",
   networkScope: "department",
   networkMode: "publications",
   teachingDataStatus: "idle",
@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261010-gate3";
+const DATA_VERSION = "20261010-overview";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -67,7 +67,7 @@ const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "last20"]);
 // Records before the 20-year window stay in the data, but the dashboard no longer offers an all-years view; legacy
 // window=all links open the 20-year window.
 const PUBLICATION_WINDOW_YEARS = { last10: 10, last20: 20 };
-const DEFAULT_WINDOW_MODE = "recent";
+const DEFAULT_WINDOW_MODE = "last10";
 const STAFF_SUBPAGES = new Set(["research", "publications", "phds"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
@@ -1525,6 +1525,7 @@ const DEFERRED_DATA_FILES = {
 };
 
 function deferredDataKeysForTab(tab = state.tab) {
+  if (tab === "overview") return ["faculty"];
   if (tab === "metrics") return ["department"];
   if (tab === "publications") return ["faculty"];
   if (tab === "network") {
@@ -1614,6 +1615,9 @@ function routeFromHash() {
     };
   }
   const [tab, detail = "", subdetail = ""] = raw.split("/");
+  // Search expertise now lives on Staff and expertise; the network map sits at the bottom of the Overview.
+  if (tab === "expertise") return { tab: "staff", detail: "", subdetail: "", invalidTab: false, legacyTab: true, skipTarget: false };
+  if (tab === "network") return { tab: "overview", detail: "", subdetail: "", invalidTab: false, legacyTab: true, skipTarget: false, scrollTo: "overview-network" };
   const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
   const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
   return {
@@ -1694,6 +1698,7 @@ function applyRouteFromHash() {
   const routeChangedDuringRender = location.hash !== routeHash();
   if (route.invalidTab || route.legacyTab || route.skipTarget || routeChangedDuringRender) updateRoute({ replace: true });
   if (route.skipTarget) requestAnimationFrame(focusDashboardContent);
+  if (route.scrollTo) setTimeout(() => document.getElementById(route.scrollTo)?.scrollIntoView({ behavior: "smooth", block: "start" }), 300);
 }
 
 function validResourcePage(value, view) {
@@ -3343,7 +3348,6 @@ function renderStaffProfile(row, bundle) {
         <h3 id="staff-profile-title" tabindex="-1">${escapeHtml(person.name)}</h3>
         ${renderPublicStaffInfo(person.id)}
         <div class="staff-profile-actions">
-          <button class="section-link" type="button" data-open-network-person="${escapeHtml(person.id)}">View in network</button>
           <button class="section-link" type="button" data-staff-update-person="${escapeHtml(person.id)}">Update profile fields</button>
           <button class="section-link staff-directory-link" type="button" data-staff-list>Choose another staff member</button>
         </div>
@@ -3787,7 +3791,7 @@ function renderStaffRelated(personId, bundle, row) {
   }
   els.staffRelated.innerHTML = [
     relatedSection(bundle.raw ? `Journals matching "${bundle.raw}"` : "Journals", journalItems),
-    relatedSection(bundle.raw ? `Coauthors matching "${bundle.raw}"` : "Frequent coauthors", coauthorItems) + `<a class="section-link" href="#network/${encodeURIComponent(personId)}">Explore all coauthors and shared papers</a>`,
+    relatedSection(bundle.raw ? `Coauthors matching "${bundle.raw}"` : "Frequent coauthors", coauthorItems),
     relatedSection(bundle.raw ? `Grants matching "${bundle.raw}"` : "Grants", grantItems),
   ].join("");
 }
@@ -4217,24 +4221,318 @@ function renderOverview() {
   renderOverviewPhds(theses);
   renderOverviewCurrentPhds(currentProjects);
   renderOverviewPreviews(pubs, grants, currentProjects);
+  renderOverviewNetwork();
 }
 
 function renderOverviewPreviews(pubs, grants, projects) {
   const container=document.getElementById("overview-previews");
   if(!container)return;
   const people=activePeople();
-  const ids=new Set(people.map(p=>p.id));
-  const joint=pubs.filter(p=>new Set((p.matchedPeople||[]).filter(id=>ids.has(id))).size>1).length;
-  const latest=grants.filter(g=>g.year===new Date().getFullYear()).sort(sortGrants);
+  const topJournal=pubs.filter(p=>isNumber(p.aip)&&p.aip>=95).length;
+  const openCalls=openGrantCallCount();
+  const faqCount=(window.HRMOBResources?.pages||[]).filter(page=>page.view==="faq"&&page.status!=="pending").length;
   const cards=[
-    {href:"#staff",title:"Staff & expertise",lead:`${people.length} researchers`,detail:people.slice(0,3).map(p=>p.name).join(" · ")+". Browse research interests and individual output."},
-    {href:"#phds",title:"PhD students",lead:`${projects.length} current projects`,detail:"Meet the current cohort, explore projects, and see supervision links."},
-    {href:"#network",title:"Research network",lead:`${joint} papers linking colleagues`,detail:"See departmental collaborations, other FEB colleagues, and external coauthors."},
-    {href:"#metrics",title:"Department comparison",lead:"All publications & AIP ≥ 95",detail:"Compare unique papers per person across seven departments, with coverage notes."},
-    {href:"#grants",title:"Grants",lead:latest.length?`${latest.length} recent awards`:`${grants.length} award records`,detail:latest.length?latest.map(g=>`${grantStaff(g,peopleById())} (${g.scheme.split(" ").at(-1)})`).join(" · "):"Awarded funding and upcoming grant opportunities."},
-    {href:"#opportunities",title:"Opportunities",lead:"Ideas for collaboration",detail:"Explore shared interests, potential partners, and reference materials."},
+    {href:"#staff",title:"Staff and expertise",lead:`${people.length} researchers`},
+    {href:"#phds",title:"PhD projects",lead:`${projects.length} current projects`},
+    {href:"#publications",title:"Publications",lead:`${pubs.length} papers, ${topJournal} with AIP ≥ 95`},
+    {href:"#metrics",title:"Department comparison",lead:"All publications & AIP ≥ 95"},
+    {href:"#grants",title:"Grants",lead:`${openCalls} open grant call${openCalls===1?"":"s"}`},
+    {href:"#faq",title:"FAQ",lead:`${faqCount||4} common questions answered`},
   ];
   container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><span>Explore →</span></a>`).join("");
+}
+
+// Overview network: every HRM&OB researcher with every coauthor in the selected years.
+// Follows the publication-window and affiliated-researcher controls; outside ties use the
+// first ten listed authors of each paper (see buildExternalCollaboration).
+let overviewNetworkCache = { key: "", markup: "", note: "" };
+
+function renderOverviewNetwork() {
+  const svg = document.getElementById("overview-network-svg");
+  const note = document.getElementById("overview-network-note");
+  if (!svg || !state.data) return;
+  const facultyStatus = state.deferredDataStatus?.faculty;
+  if (!["loaded", "failed"].includes(facultyStatus)) {
+    if (note) note.textContent = "Loading coauthor records…";
+    return;
+  }
+  const people = activePeople();
+  const pubs = activePublications();
+  const key = [state.publicationWindow, state.includeAffiliatedResearchers ? 1 : 0, facultyStatus, people.length, pubs.length].join("|");
+  if (overviewNetworkCache.key !== key) overviewNetworkCache = { key, ...buildOverviewNetworkMarkup(people, pubs) };
+  svg.setAttribute("viewBox", `0 0 ${OVERVIEW_NETWORK_SIZE.width} ${OVERVIEW_NETWORK_SIZE.height}`);
+  svg.innerHTML = overviewNetworkCache.markup;
+  if (note) note.textContent = overviewNetworkCache.note;
+  bindOverviewNetworkHover(svg);
+}
+
+const OVERVIEW_NETWORK_SIZE = { width: 1100, height: 680 };
+
+function buildOverviewNetworkMarkup(people, pubs) {
+  const ids = new Set(people.map((person) => person.id));
+  const counts = new Map();
+  const internalEdges = new Map();
+  pubs.forEach((pub) => {
+    const members = [...new Set((pub.matchedPeople || []).filter((id) => ids.has(id)))].sort();
+    members.forEach((id) => counts.set(id, (counts.get(id) || 0) + 1));
+    for (let i = 0; i < members.length; i += 1) {
+      for (let j = i + 1; j < members.length; j += 1) {
+        const k = `${members[i]}|${members[j]}`;
+        internalEdges.set(k, (internalEdges.get(k) || 0) + 1);
+      }
+    }
+  });
+  const faculty = buildFacultyCollaboration(pubs, ids);
+  const external = buildExternalCollaboration(pubs, ids);
+  const nodes = [];
+  const index = new Map();
+  const addNode = (node) => { index.set(node.id, nodes.length); nodes.push(node); };
+  people.filter((person) => counts.get(person.id)).forEach((person) => addNode({
+    id: person.id, label: person.name || person.display, kind: "member", count: counts.get(person.id),
+  }));
+  [...faculty.nodes, ...external.nodes].forEach((node) => {
+    if (!index.has(node.id)) addNode({ id: node.id, label: node.label, kind: node.scope === "faculty" ? "faculty" : "external", count: node.count, department: node.department });
+  });
+  const edges = [];
+  internalEdges.forEach((count, k) => {
+    const [a, b] = k.split("|");
+    if (index.has(a) && index.has(b)) edges.push({ s: index.get(a), t: index.get(b), count, internal: true });
+  });
+  [...faculty.edges, ...external.edges].forEach((edge) => {
+    if (index.has(edge.source) && index.has(edge.target)) edges.push({ s: index.get(edge.source), t: index.get(edge.target), count: edge.count, internal: false });
+  });
+  const members = nodes.filter((node) => node.kind === "member").length;
+  const facultyCount = nodes.filter((node) => node.kind === "faculty").length;
+  const outside = nodes.length - members;
+  const noteText = nodes.length
+    ? `${members} HRM&OB researcher${members === 1 ? "" : "s"} and ${outside} coauthor${outside === 1 ? "" : "s"} (${facultyCount} at other FEB departments), ${activeWindowLabel()}. Hover over a researcher to highlight their coauthors.`
+    : "No publications in the selected years.";
+  if (!nodes.length) return { markup: "", note: noteText };
+
+  layoutOverviewNetwork(nodes, edges);
+  const memberRadius = (node) => node.r || 9 + Math.sqrt(node.count) * 2.3;
+  const outsideRadius = (node) => 2.6 + Math.min(4, Math.sqrt(node.count) * 1.1);
+  const edgeMarkup = edges
+    .slice()
+    .sort((a, b) => Number(a.internal) - Number(b.internal))
+    .map((edge) => {
+      const a = nodes[edge.s];
+      const b = nodes[edge.t];
+      return `<line class="onet-edge${edge.internal ? " is-internal" : ""}" data-s="${edge.s}" data-t="${edge.t}" x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke-width="${(edge.internal ? networkEdgeWidth(edge.count) : 0.5 + Math.min(2, edge.count * 0.35)).toFixed(2)}"/>`;
+    }).join("");
+  const outsideMarkup = nodes.map((node, i) => {
+    if (node.kind === "member") return "";
+    const tip = `${node.label}${node.department ? `, ${node.department}` : ""}: ${node.count} shared paper${node.count === 1 ? "" : "s"}`;
+    return `<circle class="onet-node is-${node.kind}" data-i="${i}" cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${outsideRadius(node).toFixed(1)}"><title>${escapeHtml(tip)}</title></circle>`;
+  }).join("");
+  const memberMarkup = nodes.map((node, i) => {
+    if (node.kind !== "member") return "";
+    const r = memberRadius(node);
+    return `<g class="onet-member" data-i="${i}" tabindex="0" role="img" aria-label="${escapeHtml(`${node.label}, ${node.count} papers`)}">
+      <title>${escapeHtml(`${node.label}: ${node.count} paper${node.count === 1 ? "" : "s"}`)}</title>
+      <circle cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${r.toFixed(1)}"/>
+      <text class="onet-count" x="${node.x.toFixed(1)}" y="${(node.y + 4).toFixed(1)}">${node.count}</text>
+      <text class="onet-label" x="${node.x.toFixed(1)}" y="${(node.y + r + 13).toFixed(1)}">${escapeHtml(node.label)}</text>
+    </g>`;
+  }).join("");
+  return { markup: `<g class="onet-edges">${edgeMarkup}</g><g class="onet-outside">${outsideMarkup}</g><g class="onet-members">${memberMarkup}</g>`, note: noteText };
+}
+
+// Deterministic "flower" layout. Members are placed first (internal ties pull them together, their
+// coauthor rings push them apart); coauthors of one member form rings around that member, and
+// coauthors shared by several members sit between them.
+function layoutOverviewNetwork(nodes, edges) {
+  const { width, height } = OVERVIEW_NETWORK_SIZE;
+  const pad = 18;
+  const cx = width / 2;
+  const cy = height / 2;
+  const ringGap = 8.5;
+  let seed = 11;
+  const random = () => {
+    seed = (seed * 16807) % 2147483647;
+    return seed / 2147483647;
+  };
+  const memberNeighbours = nodes.map(() => new Set());
+  edges.forEach((edge) => {
+    if (nodes[edge.s].kind === "member") memberNeighbours[edge.t].add(edge.s);
+    if (nodes[edge.t].kind === "member") memberNeighbours[edge.s].add(edge.t);
+  });
+  const members = nodes.map((node, i) => (node.kind === "member" ? i : -1)).filter((i) => i >= 0);
+  const petals = new Map(members.map((i) => [i, []]));
+  const shared = [];
+  nodes.forEach((node, i) => {
+    if (node.kind === "member") return;
+    const owners = [...memberNeighbours[i]];
+    if (owners.length === 1) petals.get(owners[0]).push(i);
+    else if (owners.length > 1) shared.push(i);
+  });
+  // Ring geometry per member.
+  const rings = new Map();
+  members.forEach((m) => {
+    const node = nodes[m];
+    node.r = 9 + Math.sqrt(node.count) * 2.3;
+    const list = petals.get(m).sort((x, y) => nodes[y].count - nodes[x].count);
+    const slots = [];
+    let radius = node.r + 9;
+    let placed = 0;
+    while (placed < list.length) {
+      const capacity = Math.max(6, Math.floor((2 * Math.PI * radius) / ringGap));
+      const take = Math.min(capacity, list.length - placed);
+      const offset = random() * Math.PI * 2;
+      for (let k = 0; k < take; k += 1) slots.push({ radius, angle: offset + (2 * Math.PI * k) / take });
+      placed += take;
+      radius += ringGap;
+    }
+    rings.set(m, slots);
+    node.R = list.length ? radius : node.r + 6;
+  });
+  // Stage 1: members.
+  members.forEach((m, k) => {
+    const angle = (2 * Math.PI * k) / Math.max(1, members.length);
+    nodes[m].x = cx + Math.cos(angle) * width * 0.25;
+    nodes[m].y = cy + Math.sin(angle) * height * 0.25;
+  });
+  const internal = edges.filter((edge) => edge.internal);
+  for (let iter = 0; iter < 500; iter += 1) {
+    const cool = 1 - iter / 500;
+    const fx = new Map(members.map((m) => [m, 0]));
+    const fy = new Map(members.map((m) => [m, 0]));
+    for (let a = 0; a < members.length; a += 1) {
+      for (let b = a + 1; b < members.length; b += 1) {
+        const p = nodes[members[a]];
+        const q = nodes[members[b]];
+        let dx = p.x - q.x;
+        let dy = p.y - q.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 0.1) { dx = random() - 0.5; dy = random() - 0.5; dist = 0.5; }
+        const minimum = p.R + q.R + 6;
+        let push = 4200 / (dist * dist);
+        if (dist < minimum) push += (minimum - dist) * 0.5;
+        fx.set(members[a], fx.get(members[a]) + (dx / dist) * push);
+        fy.set(members[a], fy.get(members[a]) + (dy / dist) * push);
+        fx.set(members[b], fx.get(members[b]) - (dx / dist) * push);
+        fy.set(members[b], fy.get(members[b]) - (dy / dist) * push);
+      }
+    }
+    internal.forEach((edge) => {
+      const p = nodes[edge.s];
+      const q = nodes[edge.t];
+      const dx = q.x - p.x;
+      const dy = q.y - p.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+      const ideal = p.R + q.R + 26;
+      const pull = (dist - ideal) * 0.02 * (1 + Math.min(4, edge.count) * 0.25);
+      fx.set(edge.s, fx.get(edge.s) + (dx / dist) * pull);
+      fy.set(edge.s, fy.get(edge.s) + (dy / dist) * pull);
+      fx.set(edge.t, fx.get(edge.t) - (dx / dist) * pull);
+      fy.set(edge.t, fy.get(edge.t) - (dy / dist) * pull);
+    });
+    members.forEach((m) => {
+      const node = nodes[m];
+      const gx = (cx - node.x) * 0.006;
+      const gy = (cy - node.y) * 0.014;
+      const step = 6 * cool + 0.5;
+      const mx = fx.get(m) + gx;
+      const my = fy.get(m) + gy;
+      const len = Math.sqrt(mx * mx + my * my) || 1;
+      node.x += (mx / len) * Math.min(step, len);
+      node.y += (my / len) * Math.min(step, len);
+      node.x = Math.min(width - pad - node.R, Math.max(pad + node.R, node.x));
+      node.y = Math.min(height - pad - node.R, Math.max(pad + node.R, node.y));
+    });
+  }
+  // Stage 2: rings of single-member coauthors.
+  members.forEach((m) => {
+    const node = nodes[m];
+    petals.get(m).forEach((i, k) => {
+      const slot = rings.get(m)[k];
+      nodes[i].x = node.x + Math.cos(slot.angle) * slot.radius;
+      nodes[i].y = node.y + Math.sin(slot.angle) * slot.radius;
+    });
+  });
+  // Stage 3: shared coauthors between their members, nudged off member discs and each other.
+  shared.forEach((i) => {
+    const owners = [...memberNeighbours[i]];
+    nodes[i].x = owners.reduce((sum, m) => sum + nodes[m].x, 0) / owners.length + (random() - 0.5) * 20;
+    nodes[i].y = owners.reduce((sum, m) => sum + nodes[m].y, 0) / owners.length + (random() - 0.5) * 20;
+  });
+  for (let iter = 0; iter < 80; iter += 1) {
+    shared.forEach((i) => {
+      const node = nodes[i];
+      members.forEach((m) => {
+        const member = nodes[m];
+        const dx = node.x - member.x;
+        const dy = node.y - member.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+        const minimum = member.r + 7;
+        if (dist < minimum) {
+          node.x = member.x + (dx / dist) * minimum;
+          node.y = member.y + (dy / dist) * minimum;
+        }
+      });
+      shared.forEach((j) => {
+        if (j <= i) return;
+        const other = nodes[j];
+        const dx = node.x - other.x;
+        const dy = node.y - other.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+        if (dist < 8) {
+          const shift = (8 - dist) / 2;
+          node.x += (dx / dist) * shift; node.y += (dy / dist) * shift;
+          other.x -= (dx / dist) * shift; other.y -= (dy / dist) * shift;
+        }
+      });
+    });
+  }
+  // Fit: scale positions uniformly so the whole map fills the canvas (dot sizes stay fixed).
+  const labelRoom = 16;
+  const minX = Math.min(...nodes.map((node) => node.x - (node.r || 4)));
+  const maxX = Math.max(...nodes.map((node) => node.x + (node.r || 4)));
+  const minY = Math.min(...nodes.map((node) => node.y - (node.r || 4)));
+  const maxY = Math.max(...nodes.map((node) => node.y + (node.r || 4) + (node.kind === "member" ? labelRoom : 0)));
+  const scale = Math.min((width - 2 * pad) / Math.max(1, maxX - minX), (height - 2 * pad) / Math.max(1, maxY - minY), 2.2);
+  const offsetX = (width - (maxX - minX) * scale) / 2;
+  const offsetY = (height - (maxY - minY) * scale) / 2;
+  nodes.forEach((node) => {
+    node.x = offsetX + (node.x - minX) * scale;
+    node.y = offsetY + (node.y - minY) * scale;
+  });
+}
+
+function bindOverviewNetworkHover(svg) {
+  if (svg.dataset.hoverBound) return;
+  svg.dataset.hoverBound = "1";
+  const focus = (index) => {
+    svg.classList.toggle("has-focus", index !== null);
+    const hot = new Set(index === null ? [] : [String(index)]);
+    svg.querySelectorAll(".onet-edge").forEach((line) => {
+      const on = index !== null && (line.dataset.s === String(index) || line.dataset.t === String(index));
+      line.classList.toggle("is-hot", on);
+      if (on) { hot.add(line.dataset.s); hot.add(line.dataset.t); }
+    });
+    svg.querySelectorAll("[data-i]").forEach((el) => el.classList.toggle("is-hot", hot.has(el.dataset.i)));
+  };
+  svg.addEventListener("mouseover", (event) => {
+    const member = event.target.closest(".onet-member");
+    focus(member ? Number(member.dataset.i) : null);
+  });
+  svg.addEventListener("mouseleave", () => focus(null));
+  svg.addEventListener("focusin", (event) => {
+    const member = event.target.closest(".onet-member");
+    if (member) focus(Number(member.dataset.i));
+  });
+  svg.addEventListener("focusout", () => focus(null));
+}
+
+// Calls with an upcoming deadline in the Grants call calendar window (same merged records as the calendar).
+function openGrantCallCount(today = todayIsoDate()) {
+  const end = addMonthsIso(today, CALL_CALENDAR_MONTHS);
+  return grantCallCalendarRecords(today).filter((record) => {
+    const timing = record.timing;
+    if (timing.kind === "exact") return timing.date >= today && timing.date <= end;
+    if (timing.kind === "month") return `${timing.month}-01` <= end;
+    return false;
+  }).length;
 }
 
 function renderPhds() {
@@ -8752,7 +9050,7 @@ function selectCalendarCall(key, { focus = false } = {}) {
 function quickFindCandidates() {
   const items = [];
   const add = (group, label, detail, search, run) => items.push({ group, label, detail, run, search: normalizeSearchText(`${label} ${search || ""}`) });
-  document.querySelectorAll(".nav-tab").forEach((tab) => {
+  document.querySelectorAll(".nav-tab:not([hidden])").forEach((tab) => {
     add("Sections", tab.textContent.trim(), "", "", () => setTab(tab.dataset.tab));
   });
   activePeople().forEach((person) => {
