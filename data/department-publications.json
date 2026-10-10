@@ -11,6 +11,7 @@
     "affiliatedResearchers": [
       "CDD",
       "JJ",
+      "JS",
       "MR"
     ],
     "affiliationSelection": "Off by default. The HRM&OB selection adds Carsten de Dreu, Michelle Ryan and Jennifer Jordan to both paper counts and headcount. Other departments are unchanged.",
@@ -35,7 +36,7 @@
     ],
     "denominator": "Selected current academic roster headcount, including PhD students and lecturers; office staff excluded. HRM&OB affiliated researchers are optional and change both counts and headcount. Historical headcounts and FTE are unavailable.",
     "comparisonAudit": {
-      "generatedOn": "2026-10-08",
+      "generatedOn": "2026-10-10",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -54,10 +55,10 @@
       "departments": [
         {
           "department": "HRM&OB",
-          "currentHeadcount": 33,
-          "withAnyLinkedRecord": 20,
+          "currentHeadcount": 32,
+          "withAnyLinkedRecord": 19,
           "unavailableProfiles": 10,
-          "profilesWithAtMost10ParsedArticles": 23,
+          "profilesWithAtMost10ParsedArticles": 22,
           "roleUnspecified": 6,
           "verifiedCompletePublicationLists": 0,
           "historicalHeadcountsAvailable": false
@@ -283,10 +284,10 @@
           "departments": [
             {
               "department": "HRM&OB",
-              "currentHeadcount": 33,
-              "withAnyLinkedRecord": 20,
+              "currentHeadcount": 32,
+              "withAnyLinkedRecord": 19,
               "unavailableProfiles": 10,
-              "profilesWithAtMost10ParsedArticles": 23,
+              "profilesWithAtMost10ParsedArticles": 22,
               "roleUnspecified": 6,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -980,7 +981,7 @@
       "rejectedOpenAlexIds": [],
       "listedOnCurrentRoster": true,
       "coreId": "JS",
-      "affiliated": false,
+      "affiliated": true,
       "appointmentSection": "unknown",
       "role": "Professor of Leadership and Organizational Change, Director centre of expertise In the LEAD",
       "publicationPageStatus": 200,

@@ -1043,7 +1043,7 @@
       "photo": "assets/people/stoker.png",
       "rank": "full_professor",
       "joinedYear": 2003,
-      "affiliated": false
+      "affiliated": true
     },
     {
       "id": "GVV",
@@ -10343,7 +10343,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A."
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
       "previousIds": [],
@@ -10354,10 +10355,11 @@
         "technology and AI",
         "age and aging"
       ],
-      "counted": false,
-      "display": false,
+      "counted": true,
+      "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "outputType": "Editorial"
     },
     {
       "id": "doi:10.1108/scm-06-2022-0243",
@@ -13245,15 +13247,17 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Crossref author affiliation mentions Groningen for Rink, F.A."
+        "Crossref author affiliation mentions Groningen for Rink, F.A.",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
       "previousIds": [],
       "topicFamilies": [],
-      "counted": false,
-      "display": false,
+      "counted": true,
+      "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "outputType": "Editorial"
     },
     {
       "id": "doi:10.1108/scm-03-2021-0136",
@@ -49458,18 +49462,20 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A."
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
       "topicFamilies": [],
-      "counted": false,
-      "display": false,
+      "counted": true,
+      "display": true,
       "aipComparable": true,
       "aipStatus": "matched",
       "previousIds": [],
       "publicationDate": "2023-08",
       "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2023.4004",
-      "publicationDateType": "published-print"
+      "publicationDateType": "published-print",
+      "outputType": "Editorial"
     },
     {
       "id": "doi:10.1016/j.copsyc.2021.09.002",
@@ -50707,20 +50713,22 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
       "topicFamilies": [
         "crisis and resilience"
       ],
-      "counted": false,
-      "display": false,
+      "counted": true,
+      "display": true,
       "aipComparable": true,
       "aipStatus": "matched",
       "previousIds": [],
       "publicationDate": "2015-08",
       "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
-      "publicationDateType": "published-print"
+      "publicationDateType": "published-print",
+      "outputType": "Editorial"
     },
     {
       "id": "doi:10.5465/ambpp.2013.16319abstract",
@@ -51355,6 +51363,110 @@
       "aipComparable": true,
       "aipStatus": "matched",
       "previousIds": []
+    },
+    {
+      "id": "doi:10.1177/10596011261415739",
+      "doi": "10.1177/10596011261415739",
+      "title": "Getting Published in, and Reviewing for, Group & Organization Management",
+      "year": 2026,
+      "yearSource": "curated-reference",
+      "journal": "Group & Organization Management",
+      "issns": [
+        "1059-6011",
+        "1552-3993"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://doi.org/10.1177/10596011261415739",
+      "authors": [
+        "Yannick Griep",
+        "William “Billy” Obenauer",
+        "Kevin S. Cruz",
+        "W. Bruce Davis",
+        "Paul Harvey",
+        "Jonathan Pinto",
+        "Tammy Rapp",
+        "Devaki Rau",
+        "Moran Anisman-Razin",
+        "Andrew Bennett",
+        "Neva Bojovic",
+        "Layla Branicki",
+        "Turanay Caner",
+        "Rich DeJordy",
+        "Emilija Djurdjevic",
+        "Achiel Fenneman",
+        "Jesse Fenneman",
+        "Amanda M Ferguson",
+        "Roberta Fida",
+        "Kayla B. Follmer",
+        "Marion Fortin",
+        "Yvonne Garbers",
+        "Patrick Garcia",
+        "Mark Geiger",
+        "Peter T. Gianiodis",
+        "Ray Gibney",
+        "Dana L. Haggard",
+        "Anya Johnson",
+        "Dustin K. Jundt",
+        "Maria Kakarika",
+        "Deanna M. Kennedy",
+        "Christian Kiewitz",
+        "Kai N. Klasmeier",
+        "Wieke Knol",
+        "Gamze Koseoglu",
+        "Johannes Marcelus Kraak",
+        "Lyonel Laulié",
+        "Nale Lehmann-Willenbrock",
+        "James Lemoine",
+        "Marcie LePine",
+        "Xander Lub",
+        "Zhu Luke",
+        "Joshua E. Marineau",
+        "Jeremy D. Meuser",
+        "Curt B. Moore",
+        "Amanda M. Peticca-Harris",
+        "Sebastian Raetze",
+        "Cort W. Rudolph",
+        "Ultan Sherman",
+        "Aditya Simha",
+        "Maria Simosi",
+        "Jarvis Smallfield",
+        "Amanuel G. Tekleab",
+        "Benjamin J. Thomas",
+        "Joost van de Brake",
+        "Christian Vandenberghe",
+        "Ivana Vranješ",
+        "Gang Wang"
+      ],
+      "matchedPeople": [
+        "JVB"
+      ],
+      "sourcePeople": [
+        "JVB"
+      ],
+      "aip": 89.763,
+      "aipJournal": "GROUP & ORGANIZATION MANAGEMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Curated public web seed",
+      "evidence": [
+        "OpenAlex record (type editorial) in source/update-2026-09-18/raw-queries.json; Group & Organization Management 51(3), 1153-1199, published 2026-02-05; Joost van de Brake is author 54 of 58. Screened out on 18 September 2026 under the former editorial exclusion.",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
+      ],
+      "provisional": true,
+      "publicationDate": "2026-02-05",
+      "authorCount": 58,
+      "topicFamilies": [
+        "teams and groups"
+      ],
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "counted": true,
+      "display": true,
+      "outputType": "Editorial"
     }
   ]
 }

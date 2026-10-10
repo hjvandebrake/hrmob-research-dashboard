@@ -4181,6 +4181,9 @@ html:not(.auth-locked) .auth-gate {
 .onet-node { stroke-width: 1; }
 .onet-node.is-faculty { fill: #9bafca; stroke: #5e7596; }
 .onet-node.is-external { fill: #bed8d2; stroke: #538479; }
+.onet-faculty-label { font: 600 10.5px var(--sans); fill: #3f5675; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+#overview-network-svg.has-focus .onet-faculty-label { opacity: .22; }
+#overview-network-svg.has-focus .onet-faculty-label.is-hot { opacity: 1; }
 .onet-member { cursor: default; outline: none; }
 .onet-member circle { fill: #fbf1ea; stroke: var(--red); stroke-width: 2; }
 .onet-member:focus-visible circle { stroke-width: 3.5; }

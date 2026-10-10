@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261010-15default";
+const DATA_VERSION = "20261010-editorials";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -4242,7 +4242,8 @@ function renderOverviewPreviews(pubs, grants, projects) {
   container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><span>Explore →</span></a>`).join("");
 }
 
-// Overview network: every HRM&OB researcher with every coauthor in the selected years.
+// Overview network: every HRM&OB researcher with every coauthor who shares at least
+// OVERVIEW_NETWORK_MIN_SHARED papers with the department in the selected years.
 // Follows the publication-window and affiliated-researcher controls; outside ties use the
 // first ten listed authors of each paper (see buildExternalCollaboration).
 let overviewNetworkCache = { key: "", markup: "", note: "" };
@@ -4267,6 +4268,7 @@ function renderOverviewNetwork() {
 }
 
 const OVERVIEW_NETWORK_SIZE = { width: 1100, height: 680 };
+const OVERVIEW_NETWORK_MIN_SHARED = 2;
 
 function buildOverviewNetworkMarkup(people, pubs) {
   const ids = new Set(people.map((person) => person.id));
@@ -4291,7 +4293,8 @@ function buildOverviewNetworkMarkup(people, pubs) {
     id: person.id, label: person.name || person.display, kind: "member", count: counts.get(person.id),
   }));
   [...faculty.nodes, ...external.nodes].forEach((node) => {
-    if (!index.has(node.id)) addNode({ id: node.id, label: node.label, kind: node.scope === "faculty" ? "faculty" : "external", count: node.count, department: node.department });
+    if (node.count < OVERVIEW_NETWORK_MIN_SHARED) return;
+    if (!index.has(node.id)) addNode({ id: node.id, label: node.label, short: node.shortLabel, kind: node.scope === "faculty" ? "faculty" : "external", count: node.count, department: node.department });
   });
   const edges = [];
   internalEdges.forEach((count, k) => {
@@ -4305,7 +4308,7 @@ function buildOverviewNetworkMarkup(people, pubs) {
   const facultyCount = nodes.filter((node) => node.kind === "faculty").length;
   const outside = nodes.length - members;
   const noteText = nodes.length
-    ? `${members} HRM&OB researcher${members === 1 ? "" : "s"} and ${outside} coauthor${outside === 1 ? "" : "s"} (${facultyCount} at other FEB departments), ${activeWindowLabel()}. Hover over a researcher to highlight their coauthors.`
+    ? `${members} HRM&OB researcher${members === 1 ? "" : "s"} and ${outside} coauthor${outside === 1 ? "" : "s"} who share more than one paper with the department (${facultyCount} of them FEB colleagues), ${activeWindowLabel()}. Hover over a researcher to highlight their coauthors.`
     : "No publications in the selected years.";
   if (!nodes.length) return { markup: "", note: noteText };
 
@@ -4323,7 +4326,11 @@ function buildOverviewNetworkMarkup(people, pubs) {
   const outsideMarkup = nodes.map((node, i) => {
     if (node.kind === "member") return "";
     const tip = `${node.label}${node.department ? `, ${node.department}` : ""}: ${node.count} shared paper${node.count === 1 ? "" : "s"}`;
-    return `<circle class="onet-node is-${node.kind}" data-i="${i}" cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${outsideRadius(node).toFixed(1)}"><title>${escapeHtml(tip)}</title></circle>`;
+    const r = outsideRadius(node);
+    const name = node.kind === "faculty"
+      ? `<text class="onet-faculty-label" data-i="${i}" x="${node.x.toFixed(1)}" y="${(node.y - r - 3).toFixed(1)}">${escapeHtml(facultyMapLabel(node))}</text>`
+      : "";
+    return `<circle class="onet-node is-${node.kind}" data-i="${i}" cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${r.toFixed(1)}"><title>${escapeHtml(tip)}</title></circle>${name}`;
   }).join("");
   const memberMarkup = nodes.map((node, i) => {
     if (node.kind !== "member") return "";
@@ -4336,6 +4343,16 @@ function buildOverviewNetworkMarkup(people, pubs) {
     </g>`;
   }).join("");
   return { markup: `<g class="onet-edges">${edgeMarkup}</g><g class="onet-outside">${outsideMarkup}</g><g class="onet-members">${memberMarkup}</g>`, note: noteText };
+}
+
+// Short name for a coauthor in another FEB department: surname plus department code.
+function facultyMapLabel(node) {
+  const parts = String(node.label || "").trim().split(/\s+/);
+  const particles = new Set(["van", "de", "der", "den", "von", "ten", "ter", "la", "le", "du", "da"]);
+  let start = parts.length - 1;
+  while (start > 0 && particles.has(parts[start - 1].toLowerCase())) start -= 1;
+  const surname = parts.slice(start).join(" ") || node.label;
+  return node.department ? `${surname} (${node.department})` : surname;
 }
 
 // Deterministic "flower" layout. Members are placed first (internal ties pull them together, their
@@ -6467,6 +6484,7 @@ function publicationCell(pub, options = {}) {
 }
 
 function publicationStatusBadge(pub) {
+  if (pub.outputType === "Editorial") return ` <span class="tag">Editorial</span>`;
   if (countedPublication(pub)) return "";
   const kind = String(pub.publicationKind || pub.sourceType || "").trim();
   const label = kind && !/journal/i.test(kind) ? `${kind} - not counted` : "Not counted";
@@ -8576,7 +8594,7 @@ function publicationDotTooltip(pub) {
   const aip = isNumber(pub.aip) ? `AIP ${Number(pub.aip).toFixed(1)}` : "No AIP match";
   const swatch = `background:${band.color};${band.stroke ? `box-shadow:inset 0 0 0 1.5px ${band.stroke};` : ""}`;
   return `<strong class="viz-tip-title">${escapeHtml(pub.title || "Untitled publication")}</strong>
-    <span class="viz-tip-meta">${escapeHtml(journal)} &middot; ${escapeHtml(String(pub.year || ""))}</span>
+    <span class="viz-tip-meta">${pub.outputType === "Editorial" ? "Editorial &middot; " : ""}${escapeHtml(journal)} &middot; ${escapeHtml(String(pub.year || ""))}</span>
     <span class="viz-tip-row"><i style="${swatch}"></i>${escapeHtml(aip)}</span>
     ${names.length ? `<span class="viz-tip-meta">${escapeHtml(names.join(", "))}</span>` : ""}
     ${publicationLink(pub) ? "<em>Select to open the publisher record</em>" : ""}`;
