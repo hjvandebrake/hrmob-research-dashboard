@@ -82,16 +82,7 @@
           ]
         }
       ],
-      "resources": [
-        {
-          "title": "Grant opportunities workbook",
-          "type": "Excel workbook",
-          "format": "XLSX",
-          "description": "Full grant overview, deadlines, notes, and sign-up sheet.",
-          "url": "assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx",
-          "download": true
-        }
-      ],
+      "resources": [],
       "methodsExpertise": [
         {
           "title": "Longitudinal data analysis",

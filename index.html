@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>HRM&amp;OB Research Activities Dashboard</title>
+  <script>document.documentElement.classList.add("auth-locked");</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261008-1148">
+  <link rel="stylesheet" href="styles.css?v=20261010-gate3">
 </head>
 <body>
+  <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <form id="auth-form" class="auth-card">
+      <p class="eye">Restricted access</p>
+      <h1 id="auth-title">HRM&amp;OB dashboard</h1>
+      <p>Enter the department password to open the dashboard.</p>
+      <label>
+        <span>Password</span>
+        <input id="auth-password" type="password" autocomplete="current-password" required>
+      </label>
+      <button type="submit">Open dashboard</button>
+      <p id="auth-status" class="auth-status" aria-live="polite"></p>
+    </form>
+  </div>
+
   <a class="skip-link" href="#main-content">Skip to dashboard content</a>
   <nav class="nav" aria-label="Primary dashboard navigation">
     <div class="nav-in">
@@ -31,6 +46,7 @@
         <button id="tab-metrics" class="nav-tab" type="button" role="tab" aria-controls="view-metrics" aria-selected="false" tabindex="-1" data-tab="metrics">Metrics</button>
         <button id="tab-grants" class="nav-tab" type="button" role="tab" aria-controls="view-grants" aria-selected="false" tabindex="-1" data-tab="grants">Grants</button>
         <button id="tab-resources" class="nav-tab" type="button" role="tab" aria-controls="view-resources" aria-selected="false" tabindex="-1" data-tab="resources">Resources</button>
+        <button id="tab-faq" class="nav-tab" type="button" role="tab" aria-controls="view-faq" aria-selected="false" tabindex="-1" data-tab="faq">FAQ</button>
         <button id="tab-contact" class="nav-tab contact-tab" type="button" role="tab" aria-controls="view-contact" aria-selected="false" tabindex="-1" data-tab="contact">Contact</button>
       </div>
       <div id="publication-window-toggle" class="metric-toggle window-toggle" role="group" aria-label="Publication window">
@@ -178,7 +194,7 @@
               <p class="eye">Grant opportunities</p>
               <h3 class="overview-h3">Funding opportunities for the department</h3>
             </div>
-            <a class="section-link" href="#grants">Grant workbook</a>
+            <a class="section-link" href="#grants">Open the Grants page</a>
           </div>
           <p class="section-intro">Browse funding opportunities together. Calls are not assigned to individual colleagues; check each funder’s eligibility and deadline before planning an application.</p>
           <div id="collaboration-grant-opportunities" class="collaboration-grant-grid"></div>
@@ -239,7 +255,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Grants</p>
-                <h3 class="overview-h3">More opportunities from the workbook</h3>
+                <h3 class="overview-h3">More opportunities by career stage</h3>
               </div>
             </div>
             <div id="resource-opportunities" class="grant-opportunity-list"></div>
@@ -258,7 +274,7 @@
           <section class="overview-panel grants-links-panel">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Links and downloads</p>
+                <p class="eye">Links</p>
                 <h3 class="overview-h3">Funding pages</h3>
               </div>
             </div>
@@ -267,12 +283,6 @@
               <a href="https://erc.europa.eu/apply-grant" target="_blank" rel="noopener">ERC grants</a>
               <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener">MSCA Postdoctoral Fellowships</a>
               <a href="https://www.rug.nl/research/research-support-portal/before/funding/?lang=en" target="_blank" rel="noopener">UG external funding support</a>
-            </div>
-            <div class="download-list grants-download">
-              <a class="download-card" href="assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx" download>
-                <strong>Grant opportunities workbook</strong>
-                <span>Full grant overview, deadlines, notes, and sign-up sheet.</span>
-              </a>
             </div>
           </section>
           <section class="overview-panel grants-full">
@@ -295,52 +305,13 @@
 
     <section id="view-resources" class="sec" role="tabpanel" aria-labelledby="tab-resources" hidden>
       <div class="wrap">
-        <div class="sec-head compact">
-          <div>
-            <p class="eye">Guidance</p>
-            <h2 class="h2">Resources</h2>
-          </div>
-        </div>
-        <p class="section-intro page-intro">Guidance for our research, journal scores, and useful resources from Research News.</p>
-        <div class="resource-grid">
-          <section class="overview-panel resource-panel-wide ai-guidance-panel" aria-labelledby="ai-guidance-title">
-            <div class="ai-guidance">
-              <a class="ai-guidance-preview" href="resources/ai-in-research/" aria-label="Open the presentation Using AI well in research">
-                <img src="resources/ai-in-research/preview.webp" width="960" height="540" alt="Opening slide of the presentation Using AI well in research" loading="lazy">
-              </a>
-              <div class="ai-guidance-copy">
-                <p class="eye">Guidance</p>
-                <h3 id="ai-guidance-title" class="overview-h3">Using AI well in research</h3>
-                <p>A follow-up to the research day, in which I describe what we want AI to do for our research, how AI changes research along three dimensions, and where it helps most and where we need to be careful. At the end I ask for your input for FEB&rsquo;s plan for AI in research. The presentation is interactive, so you can click on its tabs, heatmap cells, and sources.</p>
-                <div class="ai-guidance-actions">
-                  <a class="ai-guidance-open" href="resources/ai-in-research/">Open the presentation</a>
-                  <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Input%20on%20AI%20in%20research">Send your input</a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div><p class="eye">Research News</p><h3 class="overview-h3">Research resources</h3></div>
-            </div>
-            <div id="research-news-resources" class="resource-links"></div>
-          </section>
+        <div id="resources-root" class="resources-root"></div>
+      </div>
+    </section>
 
-          <section class="overview-panel">
-            <div class="overview-panel-head">
-              <div>
-                <p class="eye">Downloads</p>
-                <h3 class="overview-h3">Journal scores</h3>
-              </div>
-            </div>
-            <div class="download-list">
-              <a class="download-card" href="assets/downloads/aip-2020-2024-average.xlsx" download>
-                <strong>Average AIP workbook, 2020-2024</strong>
-                <span>Journal scores used for the dashboard comparisons.</span>
-              </a>
-            </div>
-          </section>
-        </div>
+    <section id="view-faq" class="sec" role="tabpanel" aria-labelledby="tab-faq" hidden>
+      <div class="wrap">
+        <div id="faq-root" class="resources-root"></div>
       </div>
     </section>
 
@@ -820,6 +791,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="app.js?v=20261008-1148"></script>
+  <script src="resources/pages/resources.js?v=20261010-gate3"></script>
+  <script src="app.js?v=20261010-gate3"></script>
 </body>
 </html>

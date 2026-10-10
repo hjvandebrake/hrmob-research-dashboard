@@ -55,7 +55,10 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261008-1148";
+const DATA_VERSION = "20261010-gate3";
+// Convenience gate only: the hash and all data files are publicly served by the static host.
+const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
+const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
 const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
@@ -466,14 +469,81 @@ const OPEN_ACCESS_JOURNAL_PATTERNS = [
 
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
-  startDashboard();
+  setupAuthGate();
+  if (dashboardHasAccess()) startDashboard();
+  else lockDashboard();
 });
 
 async function startDashboard() {
+  unlockDashboard();
   if (state.appStarted) return;
   state.appStarted = true;
   attachEvents();
   await loadData();
+}
+
+function setupAuthGate() {
+  if (!els.authForm) return;
+  els.authForm.addEventListener("submit", handleAuthSubmit);
+}
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+  const password = (els.authPassword?.value || "").trim();
+  if (!password) {
+    if (els.authStatus) els.authStatus.textContent = "Enter the dashboard password.";
+    els.authPassword?.focus();
+    return;
+  }
+  if (els.authStatus) els.authStatus.textContent = "Checking password...";
+  try {
+    const hash = await sha256Hex(password);
+    if (hash !== AUTH_PASSWORD_HASH) {
+      if (els.authStatus) els.authStatus.textContent = "No match. Check the password and try again.";
+      if (els.authPassword) {
+        els.authPassword.value = "";
+        els.authPassword.focus();
+      }
+      return;
+    }
+    try {
+      sessionStorage.setItem(AUTH_STORAGE_KEY, AUTH_PASSWORD_HASH);
+    } catch (_) {
+      // Session storage can be unavailable in hardened browser modes; continue for this page load.
+    }
+    if (els.authStatus) els.authStatus.textContent = "";
+    await startDashboard();
+  } catch (_) {
+    if (els.authStatus) els.authStatus.textContent = "Password check is unavailable in this browser.";
+  }
+}
+
+function dashboardHasAccess() {
+  try {
+    return sessionStorage.getItem(AUTH_STORAGE_KEY) === AUTH_PASSWORD_HASH;
+  } catch (_) {
+    return false;
+  }
+}
+
+function lockDashboard() {
+  document.documentElement.classList.add("auth-locked");
+  if (els.authGate) els.authGate.hidden = false;
+  requestAnimationFrame(() => els.authPassword?.focus());
+}
+
+function unlockDashboard() {
+  document.documentElement.classList.remove("auth-locked");
+  if (els.authGate) els.authGate.hidden = true;
+}
+
+async function sha256Hex(value) {
+  if (!globalThis.crypto?.subtle) throw new Error("WebCrypto unavailable");
+  const bytes = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
 }
 
 function focusDashboardHeading() {
@@ -484,6 +554,10 @@ function focusDashboardHeading() {
 }
 
 function cacheElements() {
+  els.authGate = document.getElementById("auth-gate");
+  els.authForm = document.getElementById("auth-form");
+  els.authPassword = document.getElementById("auth-password");
+  els.authStatus = document.getElementById("auth-status");
   els.skipLink = document.querySelector(".skip-link");
   els.mainContent = document.getElementById("main-content");
   els.dataStatus = document.getElementById("data-status");
@@ -1516,7 +1590,7 @@ function syncDataStatus() {
 }
 
 function validTab(tab) {
-  return ["overview", "expertise", "staff", "phds", "collaboration", "publications", "network", "metrics", "grants", "resources", "contact"].includes(tab);
+  return ["overview", "expertise", "staff", "phds", "collaboration", "publications", "network", "metrics", "grants", "resources", "faq", "contact"].includes(tab);
 }
 
 function routeFromHash() {
@@ -1556,7 +1630,8 @@ function routeHash() {
   if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}/${encodeURIComponent(normalizeStaffSubpage(state.staffSubpage))}`;
   if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
   if (state.tab === "collaboration") return "#opportunities";
-  if (state.tab === "resources") return "#resources";
+  if (state.tab === "resources") return state.resourcePage ? `#resources/${encodeURIComponent(state.resourcePage)}` : "#resources";
+  if (state.tab === "faq") return state.faqPage ? `#faq/${encodeURIComponent(state.faqPage)}` : "#faq";
   return `#${state.tab}`;
 }
 
@@ -1603,6 +1678,13 @@ function applyRouteFromHash() {
     state.selectedStaffId = route.detail || "";
     state.staffSubpage = normalizeStaffSubpage(route.subdetail || "research");
   }
+  if (route.tab === "resources" && validResourcePage(route.detail, "faq")) {
+    // Earlier FAQ links lived under #resources.
+    route.tab = "faq";
+    route.legacyTab = true;
+  }
+  if (route.tab === "resources") state.resourcePage = validResourcePage(route.detail, "resources") ? route.detail : "";
+  if (route.tab === "faq") state.faqPage = validResourcePage(route.detail, "faq") ? route.detail : "";
   if (route.tab === "network") {
     state.networkPersonId = route.detail || "";
     state.networkScope = state.networkPersonId ? "selected" : "department";
@@ -1612,6 +1694,10 @@ function applyRouteFromHash() {
   const routeChangedDuringRender = location.hash !== routeHash();
   if (route.invalidTab || route.legacyTab || route.skipTarget || routeChangedDuringRender) updateRoute({ replace: true });
   if (route.skipTarget) requestAnimationFrame(focusDashboardContent);
+}
+
+function validResourcePage(value, view) {
+  return Boolean(value) && Boolean(window.HRMOBResources?.pages?.some((page) => page.key === value && page.view === view));
 }
 
 function normalizeStaffSubpage(value) {
@@ -1700,7 +1786,9 @@ function renderCurrentView() {
   else if (state.tab === "collaboration") renderCollaboration();
   else if (state.tab === "publications") renderPublications();
   else if (state.tab === "network") renderNetwork();
-  else if (state.tab === "grants" || state.tab === "resources") renderResources();
+  else if (state.tab === "grants") renderResources();
+  else if (state.tab === "resources") window.HRMOBResources?.render("resources", state.resourcePage || "");
+  else if (state.tab === "faq") window.HRMOBResources?.render("faq", state.faqPage || "");
   requestDeferredDataForCurrentView();
 }
 
@@ -1748,7 +1836,8 @@ function syncViewContext() {
     network: `${roster} | Publication ties: ${publicationWindow}`,
     metrics: `Academic staff and PhD students · HRM&OB affiliates ${state.includeAffiliatedResearchers?"included":"excluded"} · ${metricsWindow}`,
     grants: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
-    resources: "Guidance for research, journal scores, and links from Research News",
+    resources: "Presentations and downloads",
+    faq: "Frequently asked questions about research in our department",
     contact: "Corrections, suggestions, and staff profile updates",
   };
   (els.viewContexts || []).forEach((context) => {
@@ -2282,9 +2371,9 @@ function renderCollaboration() {
       ${metric("Submitted interests", staffInterestItems().length, `${submittedPeople.size} staff member${submittedPeople.size === 1 ? "" : "s"}`)}
       ${metric("Conversation clusters", interestOpportunities.length, "Submitted interests plus expertise themes")}
       ${metric("Publication window", collaborationWindowLabel(), "Controlled by the global publication-window buttons")}
-      ${metric("Grant opportunities", grantOpportunities.length, "From the grant resources workbook")}
+      ${metric("Grant opportunities", grantOpportunities.length, "From the Grants page")}
     </div>
-    <p class="collaboration-note">Suggestions combine staff-submitted interests, public profile signals, counted publications from ${escapeHtml(collaborationWindowLabel())}, and the grant resources workbook. Treat them as starting points for conversations, not as final eligibility advice.</p>
+    <p class="collaboration-note">Suggestions combine staff-submitted interests, public profile signals, counted publications from ${escapeHtml(collaborationWindowLabel())}, and the grant calls on the Grants page. Treat them as starting points for conversations, not as final eligibility advice.</p>
   `;
   renderStaffInputBoard();
   renderCollaborationInterestOpportunities(interestOpportunities);
@@ -2781,7 +2870,7 @@ function renderCollaborationGrantMini(call) {
 function renderCollaborationGrantOpportunities(calls) {
   if (!els.collaborationGrantOpportunities) return;
   if (!calls.length) {
-    els.collaborationGrantOpportunities.innerHTML = `<div class="staff-empty">No grant calls are loaded for this view yet. Open Resources to check the workbook and grant-call pages.</div>`;
+    els.collaborationGrantOpportunities.innerHTML = `<div class="staff-empty">No grant calls are loaded for this view yet. Open Grants to check the grant-call pages.</div>`;
     return;
   }
   els.collaborationGrantOpportunities.innerHTML = calls.map((call) => {
@@ -2799,7 +2888,7 @@ function renderCollaborationGrantOpportunities(calls) {
       </div>
       ${renderGrantBadges(call)}
       <p class="recent-call-meta">${escapeHtml([call.funder, call.amount, call.deadline || call.timing].filter(Boolean).join(" - "))}</p>
-      <p>${escapeHtml(clipText(call.tips || call.why || call.eligibility || "Collaborative grant opportunity from the resource workbook.", 260))}</p>
+      <p>${escapeHtml(clipText(call.tips || call.why || call.eligibility || "Collaborative grant opportunity.", 260))}</p>
       ${call.eligibility ? `<p><strong>Eligibility</strong> ${escapeHtml(call.eligibility)}</p>` : ""}
       <p class="grant-next-step"><strong>Useful next step</strong> ${escapeHtml(grantNextStep(call))}</p>
     </article>`;
@@ -2880,7 +2969,7 @@ function grantNextStep(call) {
   const text = normalizeSearchText(collaborativeGrantText(call));
   if (/consortium|horizon|cost|partner|partnership/.test(text)) return "Find partners";
   if (/deadline|call|eligibility/.test(text)) return "Review call";
-  if (/workbook|tips|note/.test(text)) return "Use workbook";
+  if (/tips|note/.test(text)) return "Read the notes";
   if (/team|collaborat|network/.test(text)) return "Draft idea";
   return "Check fit";
 }
@@ -4221,7 +4310,7 @@ function renderResources() {
         ${tip.appliesTo ? `<span>${escapeHtml(tip.appliesTo)}</span>` : ""}
         <p>${escapeHtml(clipText(tip.detail, 280))}</p>
       </article>`).join("")
-    : `<div class="staff-empty">No workbook tips loaded.</div>`;
+    : `<div class="staff-empty">No application notes loaded.</div>`;
 
   const newsResources = state.resourceData?.researchNewsResources || [];
   const newsResourceContainer = document.getElementById("research-news-resources");
@@ -4241,14 +4330,12 @@ function renderRecentGrantCalls() {
     ...(state.resourceData?.opportunities || []),
   ].filter((call) => grantDeadlineState(call) === "passed").length;
   const checkedDate = state.resourceData?.meta?.recentCallsChecked || "";
-  const workbookDate = state.resourceData?.meta?.sourceUpdatedDate || "";
   if (els.resourceCallsMeta) {
     const checked = checkedDate ? `Highlighted calls checked ${formatIsoDisplayDate(checkedDate)}` : "Call check date unavailable";
-    const workbook = workbookDate ? `workbook updated ${formatIsoDisplayDate(workbookDate)}` : "workbook date unavailable";
     const closed = hiddenClosed
       ? state.resourceShowClosed ? `${hiddenClosed} passed record${hiddenClosed === 1 ? "" : "s"} shown` : `${hiddenClosed} passed record${hiddenClosed === 1 ? "" : "s"} hidden`
       : "no passed records in this snapshot";
-    els.resourceCallsMeta.textContent = `${checked}; ${workbook}; ${closed}.`;
+    els.resourceCallsMeta.textContent = `${checked}; ${closed}.`;
   }
   if (els.resourceShowClosed) els.resourceShowClosed.checked = state.resourceShowClosed;
   if (!calls.length) {
