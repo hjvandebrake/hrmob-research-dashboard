@@ -15,7 +15,7 @@ const state = {
   dataLoadFailures: new Set(),
   tab: "overview",
   includeAffiliatedResearchers: false,
-  publicationWindow: "last10",
+  publicationWindow: "last15",
   networkScope: "department",
   networkMode: "publications",
   teachingDataStatus: "idle",
@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261010-overview";
+const DATA_VERSION = "20261010-15default";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -63,11 +63,11 @@ const CONTACT_EMAIL = "h.j.van.de.brake@rug.nl";
 const DEFAULT_PUBLICATION_WINDOW_YEARS = 5;
 const METRICS_START_YEAR = 2005;
 const METRIC_ROSTER_RANKS = new Set(["assistant_professor", "associate_professor", "full_professor"]);
-const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "last20"]);
+const PUBLICATION_WINDOW_MODES = new Set(["recent", "last10", "last15", "last20"]);
 // Records before the 20-year window stay in the data, but the dashboard no longer offers an all-years view; legacy
-// window=all links open the 20-year window.
-const PUBLICATION_WINDOW_YEARS = { last10: 10, last20: 20 };
-const DEFAULT_WINDOW_MODE = "last10";
+// window=all links open the 20-year window. 15 years is the default.
+const PUBLICATION_WINDOW_YEARS = { last10: 10, last15: 15, last20: 20 };
+const DEFAULT_WINDOW_MODE = "last15";
 const STAFF_SUBPAGES = new Set(["research", "publications", "phds"]);
 const STAFF_OWNED_VISIBLE_ITEMS = 2;
 const COLLABORATION_MIN_SCORE = 3;
@@ -4897,7 +4897,7 @@ function personYearAverages(pubs, people, startYearOverride = null) {
 function metricComparisonWindow(mode=state.publicationWindow, currentYear=new Date().getFullYear()) {
   const end=currentYear;
   const normalized=normalizeWindowMode(mode);
-  const span=normalized==="recent"?5:PUBLICATION_WINDOW_YEARS[normalized]||20;
+  const span=normalized==="recent"?5:PUBLICATION_WINDOW_YEARS[normalized]||15;
   return [Math.max(METRICS_START_YEAR,end-span+1),end];
 }
 
@@ -8634,7 +8634,7 @@ function renderAttentionRiver(pubs) {
   const years = firstIndex < 0 ? [] : allYears.slice(firstIndex);
   if (years.length < 3) {
     attentionRiverView = null;
-    els.attentionRiver.innerHTML = `<div class="staff-empty">Choose 10 or 20 years to follow research attention across at least three completed years.</div>`;
+    els.attentionRiver.innerHTML = `<div class="staff-empty">Choose 10 years or more to follow research attention across at least three completed years.</div>`;
     return;
   }
   const inRange = completed.filter((pub) => publicationChartYear(pub) >= years[0]);
