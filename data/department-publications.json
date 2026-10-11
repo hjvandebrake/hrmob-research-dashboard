@@ -47,7 +47,7 @@
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
         "title": 637,
-        "issn": 2603,
+        "issn": 2615,
         "unmatched": 557,
         "title-alias": 3,
         "excluded-doi-mismatch": 2
@@ -134,6 +134,11 @@
           "id": "doi:10.1093/eurpub/ckaf161.629",
           "title": "Governing the long-term: platforms and complex public health risks",
           "reason": "No retained departmental author link after source review."
+        },
+        {
+          "id": "doi:10.1038/s41558-025-02267-4",
+          "title": "Local fossil fuel ad ban as a catalyst for global change",
+          "reason": "The Nature Climate Change publisher explicitly classifies this contribution as Comment. Comments remain excluded under the current policy; valid author associations are preserved. https://www.nature.com/articles/s41558-025-02267-4"
         },
         {
           "id": "doi:10.1177/15570851241250313",
@@ -711,6 +716,11 @@
           "reason": "No retained departmental author link after source review."
         },
         {
+          "id": "doi:10.1017/s0140525x24000657",
+          "title": "Why some coalitions benefit from historical myths more than others",
+          "reason": "The publisher explicitly classifies this as Open Peer Commentary; the official Groningen Pure record independently classifies it as Comment/Letter to the editor. Commentaries remain excluded under the current policy; valid author associations are preserved. https://www.cambridge.org/core/product/8DD6A765D74BA929E8AF2D7D226055F0 https://research.rug.nl/en/publications/why-some-coalitions-benefit-from-historical-myths-more-than-other/"
+        },
+        {
           "id": "doi:10.1093/occmed/kqae023.0423",
           "title": "SS74-03 NEEDS-BASED CRAFTING: HOW WORKERS’ PROACTIVE SHAPING OF WORK AND LEISURE EXPERIENCES AFFECTS THEIR HEALTH, WELLBEING AND PERFORMANCE",
           "reason": "Conference presentation abstract: Occupational Medicine 74 Supplement 1, SS74-03. https://academic.oup.com/occmed/article/74/Supplement_1/0/7706909"
@@ -833,16 +843,16 @@
       ],
       "yearBasisCounts": {
         "official-reference": 950,
-        "publisher-issue": 2435,
+        "publisher-issue": 2443,
         "publisher-first-publication": 293,
         "stored-unverified": 106,
         "publisher-override": 1,
         "reviewed-original-issue": 1,
-        "reviewed-official-record": 16
+        "reviewed-official-record": 20
       },
       "doiTitleChecks": {
         "no-doi": 822,
-        "title-agreement": 2711,
+        "title-agreement": 2723,
         "unavailable": 267,
         "excluded-mismatch": 2
       },
@@ -34801,15 +34811,23 @@
       "departments": [
         "Marketing"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "The Nature Climate Change publisher explicitly classifies this contribution as Comment. Comments remain excluded under the current policy; valid author associations are preserved. https://www.nature.com/articles/s41558-025-02267-4",
+      "countedInComparison": false,
       "aipJournal": "Nature Climate Change",
       "aipMatchMethod": "issn",
       "officialProfilePeople": [],
       "comparisonYear": 2025,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1038%2Fs41558-025-02267-4",
-      "doiTitleCheck": "title-agreement"
+      "doiTitleCheck": "title-agreement",
+      "reviewHold": true,
+      "rankableJournal": false,
+      "publicationKind": "Comment",
+      "counted": false,
+      "display": false,
+      "evidence": [
+        "Public-source review: The Nature Climate Change publisher explicitly classifies this contribution as Comment. Comments remain excluded under the current policy; valid author associations are preserved. Source: https://www.nature.com/articles/s41558-025-02267-4"
+      ]
     },
     {
       "id": "doi:10.1016/j.jretai.2025.12.002",
@@ -135420,14 +135438,22 @@
         "HRM&OB"
       ],
       "doiTitleCheck": "title-agreement",
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "The publisher explicitly classifies this as Open Peer Commentary; the official Groningen Pure record independently classifies it as Comment/Letter to the editor. Commentaries remain excluded under the current policy; valid author associations are preserved. https://www.cambridge.org/core/product/8DD6A765D74BA929E8AF2D7D226055F0 https://research.rug.nl/en/publications/why-some-coalitions-benefit-from-historical-myths-more-than-other/",
+      "countedInComparison": false,
       "comparisonYear": 2024,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1017%2Fs0140525x24000657",
       "aipJournal": "BEHAVIORAL AND BRAIN SCIENCES",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": []
+      "officialProfilePeople": [],
+      "reviewHold": true,
+      "rankableJournal": false,
+      "publicationKind": "Open peer commentary",
+      "counted": false,
+      "display": false,
+      "evidence": [
+        "Public-source review: The publisher explicitly classifies this as Open Peer Commentary; the official Groningen Pure record independently classifies it as Comment/Letter to the editor. Commentaries remain excluded under the current policy; valid author associations are preserved. Source: https://www.cambridge.org/core/product/8DD6A765D74BA929E8AF2D7D226055F0"
+      ]
     },
     {
       "title": "Group-mindedness as evolved solution to deal with group-living",
@@ -144287,6 +144313,690 @@
       "comparisonYearSource": "https://esb.nu/redactioneel-bevrijd-de-deeleconomie/",
       "aipJournal": "",
       "aipMatchMethod": "unmatched"
+    },
+    {
+      "title": "What drives trust in the financial sector supervisor? New empirical evidence for the Netherlands",
+      "year": 2025,
+      "journal": "Empirica",
+      "authors": [
+        "Carin van der Cruijsen",
+        "Maurice Doll",
+        "Jakob de Haan"
+      ],
+      "url": "https://research.rug.nl/en/publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+      "issns": [
+        "1573-6911",
+        "0340-8744"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-02",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "dfcb3b04-687c-47ac-8d09-90e20e54b775",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1007/s10663-024-09627-x",
+      "doi": "10.1007/s10663-024-09627-x",
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "aip": 36.943,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+        "https://api.crossref.org/works/10.1007%2Fs10663-024-09627-x"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-j-de-haan"
+      ],
+      "officialProfilePeople": [
+        "gem-j-de-haan"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1007%2Fs10663-024-09627-x",
+      "aipJournal": "Empirica",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "The association of overweight, obesity, and long-term obesity with SARS-CoV-2 infection: a meta-analysis of 9 population-based cohorts from the Netherlands Cohorts Consortium",
+      "year": 2025,
+      "journal": "International Journal of Obesity",
+      "authors": [
+        "Lifelines Corona Research initiative",
+        "Bette Loef",
+        "Jolanda M.A. Boer",
+        "Marian Beekman",
+        "Sophie L. Campman",
+        "Emiel O. Hoogendijk",
+        "Floris Huider",
+        "Demi M.E. Pagen",
+        "Marije J. Splinter",
+        "Jeroen H.P.M. van der Velde",
+        "Dorret I. Boomsma",
+        "Pieter C. Dagnelie",
+        "Jenny van Dongen",
+        "Eco J.C. de Geus",
+        "Martijn Huisman",
+        "M. Arfan Ikram",
+        "Annemarie Koster",
+        "Silvan Licher",
+        "Jochen O. Mierau",
+        "Renée de Mutsert",
+        "H. Susan J. Picavet",
+        "Frits R. Rosendaal",
+        "Miranda T. Schram",
+        "P. Eline Slagboom",
+        "Evie van der Spoel",
+        "Karien Stronks",
+        "W. M.Monique Verschuren",
+        "Saskia W. van den Berg"
+      ],
+      "url": "https://research.rug.nl/en/publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+      "issns": [
+        "0307-0565",
+        "1476-5497"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-04",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1038/s41366-024-01660-x",
+      "doi": "10.1038/s41366-024-01660-x",
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "aip": 89.476,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+        "https://api.crossref.org/works/10.1038%2Fs41366-024-01660-x"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-jo-mierau"
+      ],
+      "officialProfilePeople": [
+        "eef-jo-mierau"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1038%2Fs41366-024-01660-x",
+      "aipJournal": "INTERNATIONAL JOURNAL OF OBESITY",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "The association of high perceived inflation with trust in national politics and central banks",
+      "year": 2025,
+      "journal": "Journal of Banking & Finance",
+      "authors": [
+        "Carin van der Cruijsen",
+        "Jakob de Haan",
+        "Maarten van Rooij"
+      ],
+      "url": "https://research.rug.nl/en/publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+      "issns": [
+        "0378-4266",
+        "1872-6372"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-02",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "b126dca4-bd93-493a-957a-892a67f5b5e1",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1016/j.jbankfin.2024.107368",
+      "doi": "10.1016/j.jbankfin.2024.107368",
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "aip": 88.55,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+        "https://api.crossref.org/works/10.1016%2Fj.jbankfin.2024.107368"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-j-de-haan"
+      ],
+      "officialProfilePeople": [
+        "gem-j-de-haan"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jbankfin.2024.107368",
+      "aipJournal": "JOURNAL OF BANKING & FINANCE",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Investment accelerations",
+      "year": 2025,
+      "journal": "Structural Change and Economic Dynamics",
+      "authors": [
+        "Jakob de Haan",
+        "Kersten Stamm",
+        "Shu Yu"
+      ],
+      "url": "https://research.rug.nl/en/publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+      "issns": [
+        "1873-6017",
+        "0954-349X"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-06",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "f0e55546-d9bb-4dba-8938-eb6fceebd376",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1016/j.strueco.2025.01.007",
+      "doi": "10.1016/j.strueco.2025.01.007",
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "aip": 74.002,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+        "https://api.crossref.org/works/10.1016%2Fj.strueco.2025.01.007"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-j-de-haan"
+      ],
+      "officialProfilePeople": [
+        "gem-j-de-haan"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.strueco.2025.01.007",
+      "aipJournal": "Structural Change and Economic Dynamics",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "No Way Back? ECB’s Forward Guidance and Policy Normalisation",
+      "year": 2025,
+      "journal": "Politics and Governance",
+      "authors": [
+        "Jakob de Haan"
+      ],
+      "url": "https://research.rug.nl/en/publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+      "issns": [
+        "1944-2688",
+        "2183-2463"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-01-30",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.17645/pag.8953",
+      "doi": "10.17645/pag.8953",
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "aip": 81.658,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+        "https://api.crossref.org/works/10.17645%2Fpag.8953"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-j-de-haan"
+      ],
+      "officialProfilePeople": [
+        "gem-j-de-haan"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+      "aipJournal": "Politics and Governance",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Health Outcomes in EU Cross-Border Regions: A Scoping Review",
+      "year": 2025,
+      "journal": "Public Health Reviews",
+      "authors": [
+        "Sophie Stroisch",
+        "Viola Angelini",
+        "Sebastian Schnettler",
+        "Tobias Vogt"
+      ],
+      "url": "https://research.rug.nl/en/publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+      "issns": [
+        "0301-0422",
+        "2107-6952"
+      ],
+      "publicationKind": "Review",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-02-24",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "87146c0c-e5d8-488d-ad04-8ece9063fabb",
+      "pureOutputClassification": "Contribution to journal > Review > Academic > peer-review",
+      "id": "doi:10.3389/phrs.2025.1608170",
+      "doi": "10.3389/phrs.2025.1608170",
+      "people": [
+        "eef-v-angelini"
+      ],
+      "aip": 95.375,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+        "https://api.crossref.org/works/10.3389%2Fphrs.2025.1608170"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-v-angelini"
+      ],
+      "officialProfilePeople": [
+        "eef-v-angelini"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+      "aipJournal": "PUBLIC HEALTH REVIEWS",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "eHealth tools to assess the neurological function for research, in absence of the neurologist: a systematic review, part II (hardware)",
+      "year": 2025,
+      "journal": "Journal of Neurology",
+      "authors": [
+        "Vasco Ribeiro Ferreira",
+        "Aoife O’Mahony",
+        "Esther Metting",
+        "Valentina Gallo"
+      ],
+      "url": "https://research.rug.nl/en/publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+      "issns": [
+        "0340-5354",
+        "1432-1459"
+      ],
+      "publicationKind": "Review",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-02",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "e56c1df7-c146-404c-8c31-48ac31109a43",
+      "pureOutputClassification": "Contribution to journal > Review > Academic > peer-review",
+      "id": "doi:10.1007/s00415-024-12857-5",
+      "doi": "10.1007/s00415-024-12857-5",
+      "people": [
+        "ops-ei-metting"
+      ],
+      "aip": 89.508,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+        "https://api.crossref.org/works/10.1007%2Fs00415-024-12857-5"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourcePeople": [
+        "ops-ei-metting"
+      ],
+      "officialProfilePeople": [
+        "ops-ei-metting"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1007%2Fs00415-024-12857-5",
+      "aipJournal": "JOURNAL OF NEUROLOGY",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Election-induced fiscal policy cycles in democratic and non-democratic emerging market and developing economies",
+      "year": 2025,
+      "journal": "Electoral Studies",
+      "authors": [
+        "Jakob de Haan",
+        "Franziska Ohnsorge",
+        "Shu Yu"
+      ],
+      "url": "https://research.rug.nl/en/publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+      "issns": [
+        "1873-6890",
+        "0261-3794"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-06",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1016/j.electstud.2025.102936",
+      "doi": "10.1016/j.electstud.2025.102936",
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "aip": 90.893,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+        "https://api.crossref.org/works/10.1016%2Fj.electstud.2025.102936"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-j-de-haan"
+      ],
+      "officialProfilePeople": [
+        "gem-j-de-haan"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.electstud.2025.102936",
+      "aipJournal": "ELECTORAL STUDIES",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Living in an unhealthy neighbourhood impacts individual employment status",
+      "year": 2025,
+      "journal": "BMC Public Health",
+      "authors": [
+        "Patricia Ots",
+        "Sander K.R. van Zon",
+        "Jochen O. Mierau",
+        "Sandra Brouwer"
+      ],
+      "url": "https://research.rug.nl/en/publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+      "issns": [
+        "1471-2458"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-07-02",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1186/s12889-025-23345-4",
+      "doi": "10.1186/s12889-025-23345-4",
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "aip": 84.12,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+        "https://api.crossref.org/works/10.1186%2Fs12889-025-23345-4"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-jo-mierau"
+      ],
+      "officialProfilePeople": [
+        "eef-jo-mierau"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+      "aipJournal": "BMC PUBLIC HEALTH",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Socio-economic status is a social construct with heritable components and genetic consequences",
+      "year": 2025,
+      "journal": "Nature Human Behaviour",
+      "authors": [
+        "Abdel Abdellaoui",
+        "Hilary C. Martin",
+        "Martin Kolk",
+        "Adam Rutherford",
+        "Michael Muthukrishna",
+        "Felix C. Tropf",
+        "Melinda C. Mills",
+        "Brendan P. Zietsch",
+        "Karin J.H. Verweij",
+        "Peter M. Visscher"
+      ],
+      "url": "https://research.rug.nl/en/publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+      "issns": [
+        "2397-3374"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-05",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "a7a09748-aa4c-4237-b057-1911231d1b47",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1038/s41562-025-02150-4",
+      "doi": "10.1038/s41562-025-02150-4",
+      "people": [
+        "eef-mc-mills"
+      ],
+      "aip": 99.353,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+        "https://api.crossref.org/works/10.1038%2Fs41562-025-02150-4"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-mc-mills"
+      ],
+      "officialProfilePeople": [
+        "eef-mc-mills"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+      "aipJournal": "Nature Human Behaviour",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Frequent Emergency Medical Services Utilization Among Older Patients: Exploration and Automatic Identification Using Natural Language Processing",
+      "year": 2025,
+      "journal": "Journal of the American Medical Directors Association",
+      "authors": [
+        "Maaike A Pouw",
+        "Hidde Dijkstra",
+        "Eduard-Raul Köntös",
+        "Annemarieke de Jonghe",
+        "Bert Dercksen",
+        "Laura Maruster",
+        "Durk-Jouke van der Zee",
+        "Barbara C van Munster"
+      ],
+      "url": "https://research.rug.nl/en/publications/b46507be-a522-4c88-b674-4559b234ee54",
+      "issns": [
+        "1525-8610"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-11",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "b46507be-a522-4c88-b674-4559b234ee54",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1016/j.jamda.2025.105814",
+      "doi": "10.1016/j.jamda.2025.105814",
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "aip": 91.594,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/b46507be-a522-4c88-b674-4559b234ee54",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b46507be-a522-4c88-b674-4559b234ee54",
+        "https://api.crossref.org/works/10.1016%2Fj.jamda.2025.105814"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourcePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "officialProfilePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jamda.2025.105814",
+      "aipJournal": "Journal of the American Medical Directors Association",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Influence of socioeconomic position on surgical outcomes after resection of colorectal liver metastases",
+      "year": 2025,
+      "journal": "European Journal of Surgical Oncology",
+      "authors": [
+        "Dutch Hepato Biliary Audit Group",
+        "M. R. de Graaff",
+        "N. F.M. Kok",
+        "D. J. Grunhagen",
+        "M. Nielen",
+        "H. A. Marsman",
+        "Steven W.M. Olde Damink",
+        "K. Bosscha",
+        "E. J.T. Belt",
+        "A. Rijken",
+        "P. D. Gobardhan",
+        "V. Nieuwenhuijs",
+        "J. O. Mierau",
+        "J. Bruinsma",
+        "J. M. Klaase",
+        "M. den Dulk",
+        "Carlijn Buis",
+        "Hendrik A. Marsman",
+        "Steven Olde Damink",
+        "Wouter K. G. Leclercq",
+        "Jeroen Hagendoorn",
+        "Koert F. D. Kuhlmann",
+        "Maarten Vermaas",
+        "Rutger J. Swijnenburg",
+        "Hans Torrenga",
+        "J Sven D Mieog",
+        "Andries Braat",
+        "Peter B. van den Boezem",
+        "Steven J. Oosterling",
+        "Gijs A. Patijn",
+        "Paul D. Gobardhan",
+        "Mike S. L. Liem",
+        "Wouter Te Riele",
+        "N. Tjarda van Heek",
+        "Koop Bosscha",
+        "Eric J. Th. Belt",
+        "Esther Consten",
+        "Peter van Duijvendijk",
+        "Eric M Manusama",
+        "Cees Verhoef"
+      ],
+      "url": "https://research.rug.nl/en/publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+      "issns": [
+        "0748-7983",
+        "1532-2157"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2025-12",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "bc498ebd-4b66-4280-9477-6a4290fbddc8",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1016/j.ejso.2025.110459",
+      "doi": "10.1016/j.ejso.2025.110459",
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "aip": 82.079,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+        "https://api.crossref.org/works/10.1016%2Fj.ejso.2025.110459"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-jo-mierau"
+      ],
+      "officialProfilePeople": [
+        "eef-jo-mierau"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.ejso.2025.110459",
+      "aipJournal": "EJSO",
+      "aipMatchMethod": "issn"
     }
   ]
 }

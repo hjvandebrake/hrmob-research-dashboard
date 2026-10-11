@@ -3427,8 +3427,14 @@ footer {
 .network-shell .edge.edge-strong { stroke: #927057; opacity: .62; }
 .network-shell .edge.edge-weak { opacity: .42; }
 .department-counts-table { width: 100%; }
-#metric-charts .metric-chart { overflow-x: auto; }
-#metric-charts .metric-chart > svg { min-width: 650px; }
+#metric-charts .metric-chart { min-width: 0; }
+.metric-plot-wrap { overflow-x: auto; }
+.metric-plot-wrap > svg { display: block; width: 100%; min-width: 650px; }
+.metric-plot-wrap > svg:focus-visible { outline: 2px solid var(--red); outline-offset: -2px; }
+.metric-chart-readout { min-height: 3.4em; margin: 8px 0; color: var(--ink-700); font-size: .8rem; line-height: 1.5; }
+.metric-chart-readout strong { font-weight: 600; }
+.metric-control-row { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 0 14px; }
+.metric-trend-caption { margin: -5px 0 22px; }
 .metric-publication-filter { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; margin: 0 0 20px; border: 1px solid var(--ink-200); border-radius: 8px; background: #f5f4f1; }
 .metric-publication-filter button { border: 0; border-radius: 5px; padding: 9px 15px; background: transparent; color: var(--ink-700); font: inherit; font-size: .85rem; cursor: pointer; }
 .metric-publication-filter button[aria-pressed="true"] { background: var(--red); color: white; }
@@ -4224,10 +4230,10 @@ html:not(.auth-locked) .auth-gate {
 .rp-back:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
 .rp-back-bottom { margin: 22px 0 0; }
 .rp-head-title { display: flex; align-items: center; gap: 14px; }
-.rp-head-icon { flex: 0 0 auto; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--red-lt); color: var(--red); }
+.rp-head-icon { flex: 0 0 auto; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, var(--red) 8%, var(--white)); color: var(--red); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 10%, transparent); }
 .rp-head-icon .rp-icon { width: 28px; height: 28px; }
-.rp-card-icon { flex: 0 0 40px; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--red-lt); color: var(--red); }
-.rp-card-icon .rp-icon { width: 24px; height: 24px; }
+.rp-card-icon { flex: 0 0 44px; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; background: color-mix(in srgb, var(--red) 8%, var(--white)); color: var(--red); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 10%, transparent); }
+.rp-card-icon .rp-icon { width: 26px; height: 26px; }
 .rp-card:hover .rp-card-icon { background: var(--red); color: var(--white); }
 @media (max-width: 640px) { .rp-head-icon { width: 40px; height: 40px; } .rp-head-icon .rp-icon { width: 22px; height: 22px; } }
 .onet-info { position: absolute; top: 12px; left: 12px; max-width: 280px; padding: 12px 14px; background: rgba(255,255,255,.96); border: 1px solid var(--ink-200); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.08); font-size: 0.84rem; line-height: 1.4; pointer-events: none; }

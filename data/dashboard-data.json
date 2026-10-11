@@ -646,7 +646,7 @@
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately.",
     "publicationDatesCheckedOn": "2026-10-08",
     "sourceReviewOn": "2026-10-11",
-    "publicationReviewHolds": 29
+    "publicationReviewHolds": 30
   },
   "people": [
     {
@@ -49163,8 +49163,8 @@
         "1469-1825"
       ],
       "sourceType": "journal-article",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Open peer commentary",
+      "rankableJournal": false,
       "publisher": "Cambridge University Press (CUP)",
       "url": "https://doi.org/10.1017/s0140525x24000657",
       "authors": [
@@ -49185,18 +49185,20 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Dreu, C. de",
-        "RUG staff publication page lists this reference in 2025."
+        "RUG staff publication page lists this reference in 2025.",
+        "Public-source review: The publisher explicitly classifies this as Open Peer Commentary; the official Groningen Pure record independently classifies it as Comment/Letter to the editor. Commentaries remain excluded under the current policy; valid author associations are preserved. Source: https://www.cambridge.org/core/product/8DD6A765D74BA929E8AF2D7D226055F0"
       ],
       "provisional": true,
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
       "previousIds": [],
       "publicationDate": "2025-01-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x24000657",
-      "publicationDateType": "published-online"
+      "publicationDateType": "published-online",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1126/sciadv.adm7968",

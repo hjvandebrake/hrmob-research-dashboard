@@ -2,10 +2,10 @@
   "meta": {
     "generatedOn": "2026-10-11",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 790,
-    "cacheHits": 788,
+    "eligiblePublications": 789,
+    "cacheHits": 787,
     "fetched": 0,
-    "coveredPublications": 787,
+    "coveredPublications": 786,
     "missingCacheRecords": 2,
     "offline": true,
     "partnerCount": 800,
@@ -1815,7 +1815,7 @@
       "institution": "Leiden University",
       "country": "NL",
       "type": "education",
-      "publicationCount": 86,
+      "publicationCount": 85,
       "staffIds": [
         "BN",
         "CDD",
@@ -1880,17 +1880,6 @@
           ],
           "authors": [
             "Mirre Stallen"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x24000657",
-          "year": 2025,
-          "title": "Why some coalitions benefit from historical myths more than others",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Luuk L. Snijder"
           ]
         },
         {

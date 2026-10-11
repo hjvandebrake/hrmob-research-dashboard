@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-11",
     "people": 528,
-    "publicationsChecked": 4301,
+    "publicationsChecked": 4327,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 481,
     "additionalBenchmarkLinks": 39,
@@ -92151,6 +92151,330 @@
         "https://esb.nu/wp-content/uploads/2022/11/225-225_reds-1.pdf",
         "https://esb.nu/inhoudsopgave-3/d_002-003_inhoud/",
         "https://research.rug.nl/en/persons/sandra-phlippen/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1007/s10663-024-09627-x",
+      "doi": "10.1007/s10663-024-09627-x",
+      "publicationIds": [
+        "doi:10.1007/s10663-024-09627-x"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+            "https://api.crossref.org/works/10.1007%2Fs10663-024-09627-x"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/dfcb3b04-687c-47ac-8d09-90e20e54b775",
+        "https://api.crossref.org/works/10.1007%2Fs10663-024-09627-x"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1038/s41366-024-01660-x",
+      "doi": "10.1038/s41366-024-01660-x",
+      "publicationIds": [
+        "doi:10.1038/s41366-024-01660-x"
+      ],
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "matches": [
+        {
+          "personId": "eef-jo-mierau",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+            "https://api.crossref.org/works/10.1038%2Fs41366-024-01660-x"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/d2c9bd68-c0ee-42fa-bf75-6948f9929103",
+        "https://api.crossref.org/works/10.1038%2Fs41366-024-01660-x"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.jbankfin.2024.107368",
+      "doi": "10.1016/j.jbankfin.2024.107368",
+      "publicationIds": [
+        "doi:10.1016/j.jbankfin.2024.107368"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+            "https://api.crossref.org/works/10.1016%2Fj.jbankfin.2024.107368"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b126dca4-bd93-493a-957a-892a67f5b5e1",
+        "https://api.crossref.org/works/10.1016%2Fj.jbankfin.2024.107368"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.strueco.2025.01.007",
+      "doi": "10.1016/j.strueco.2025.01.007",
+      "publicationIds": [
+        "doi:10.1016/j.strueco.2025.01.007"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+            "https://api.crossref.org/works/10.1016%2Fj.strueco.2025.01.007"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f0e55546-d9bb-4dba-8938-eb6fceebd376",
+        "https://api.crossref.org/works/10.1016%2Fj.strueco.2025.01.007"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.17645/pag.8953",
+      "doi": "10.17645/pag.8953",
+      "publicationIds": [
+        "doi:10.17645/pag.8953"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+            "https://api.crossref.org/works/10.17645%2Fpag.8953"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/f67b3cd0-9391-42d8-aff9-c8e367a274f5",
+        "https://api.crossref.org/works/10.17645%2Fpag.8953"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.3389/phrs.2025.1608170",
+      "doi": "10.3389/phrs.2025.1608170",
+      "publicationIds": [
+        "doi:10.3389/phrs.2025.1608170"
+      ],
+      "people": [
+        "eef-v-angelini"
+      ],
+      "matches": [
+        {
+          "personId": "eef-v-angelini",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+            "https://api.crossref.org/works/10.3389%2Fphrs.2025.1608170"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/87146c0c-e5d8-488d-ad04-8ece9063fabb",
+        "https://api.crossref.org/works/10.3389%2Fphrs.2025.1608170"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1007/s00415-024-12857-5",
+      "doi": "10.1007/s00415-024-12857-5",
+      "publicationIds": [
+        "doi:10.1007/s00415-024-12857-5"
+      ],
+      "people": [
+        "ops-ei-metting"
+      ],
+      "matches": [
+        {
+          "personId": "ops-ei-metting",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+            "https://api.crossref.org/works/10.1007%2Fs00415-024-12857-5"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/e56c1df7-c146-404c-8c31-48ac31109a43",
+        "https://api.crossref.org/works/10.1007%2Fs00415-024-12857-5"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.electstud.2025.102936",
+      "doi": "10.1016/j.electstud.2025.102936",
+      "publicationIds": [
+        "doi:10.1016/j.electstud.2025.102936"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+            "https://api.crossref.org/works/10.1016%2Fj.electstud.2025.102936"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/ff8ae9dd-9d06-4332-b7b8-1378df08a89e",
+        "https://api.crossref.org/works/10.1016%2Fj.electstud.2025.102936"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1186/s12889-025-23345-4",
+      "doi": "10.1186/s12889-025-23345-4",
+      "publicationIds": [
+        "doi:10.1186/s12889-025-23345-4"
+      ],
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "matches": [
+        {
+          "personId": "eef-jo-mierau",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+            "https://api.crossref.org/works/10.1186%2Fs12889-025-23345-4"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/081137c9-7c3d-41ed-bf12-cf95a3a50a55",
+        "https://api.crossref.org/works/10.1186%2Fs12889-025-23345-4"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1038/s41562-025-02150-4",
+      "doi": "10.1038/s41562-025-02150-4",
+      "publicationIds": [
+        "doi:10.1038/s41562-025-02150-4"
+      ],
+      "people": [
+        "eef-mc-mills"
+      ],
+      "matches": [
+        {
+          "personId": "eef-mc-mills",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+            "https://api.crossref.org/works/10.1038%2Fs41562-025-02150-4"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/a7a09748-aa4c-4237-b057-1911231d1b47",
+        "https://api.crossref.org/works/10.1038%2Fs41562-025-02150-4"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.jamda.2025.105814",
+      "doi": "10.1016/j.jamda.2025.105814",
+      "publicationIds": [
+        "doi:10.1016/j.jamda.2025.105814"
+      ],
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "matches": [
+        {
+          "personId": "ops-dj-van-der-zee",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/b46507be-a522-4c88-b674-4559b234ee54",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b46507be-a522-4c88-b674-4559b234ee54",
+            "https://api.crossref.org/works/10.1016%2Fj.jamda.2025.105814"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/b46507be-a522-4c88-b674-4559b234ee54",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/b46507be-a522-4c88-b674-4559b234ee54",
+        "https://api.crossref.org/works/10.1016%2Fj.jamda.2025.105814"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.ejso.2025.110459",
+      "doi": "10.1016/j.ejso.2025.110459",
+      "publicationIds": [
+        "doi:10.1016/j.ejso.2025.110459"
+      ],
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "matches": [
+        {
+          "personId": "eef-jo-mierau",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+            "https://api.crossref.org/works/10.1016%2Fj.ejso.2025.110459"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai:pure.rug.nl:publications/bc498ebd-4b66-4280-9477-6a4290fbddc8",
+        "https://api.crossref.org/works/10.1016%2Fj.ejso.2025.110459"
       ],
       "curatedSourceCheckedOn": "2026-10-11"
     }

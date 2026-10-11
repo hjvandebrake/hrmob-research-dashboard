@@ -359,15 +359,16 @@
       ${share}`;
   }
 
-  // Simple line icons (24 x 24, stroke = currentColor) that tell the FAQ topics apart.
+  // One consistent rounded-line set, with a quiet tint and equal optical weight.
+  // The same topic icon appears on its FAQ card and question page.
   const ICONS = {
-    clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
-    grant: '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4"/><path d="M10 12.5h5M10 16h5"/>',
-    cap: '<path d="M2.5 9 12 5l9.5 4-9.5 4z"/><path d="M6.5 11v4.2c0 1.3 2.5 2.8 5.5 2.8s5.5-1.5 5.5-2.8V11"/><path d="M21.5 9v5"/>',
-    plane: '<path d="M10.5 13.5 3 11l1.5-1.5 8 1 4.5-5c.8-.8 2.2-.8 3 0s.8 2.2 0 3l-5 4.5 1 8L14.5 22 12 14.5"/>',
+    clock: '<circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".06"/><path d="M12 6.5V12l3.5 2.2"/><circle cx="12" cy="12" r=".8" fill="currentColor" stroke="none"/>',
+    grant: '<path d="M14 3H6a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V8.5Z" fill="currentColor" fill-opacity=".06"/><path d="M14 3v5.5h5.5M8 11h4M8 14h3M12 17l2 2 4-4"/>',
+    cap: '<path d="m2 8.5 10-4.5 10 4.5L12 13Z" fill="currentColor" fill-opacity=".06"/><path d="M6 10.3v6.2c3.4 2.7 8.6 2.7 12 0v-6.2M22 8.5v7"/><circle cx="22" cy="17.5" r=".8" fill="currentColor" stroke="none"/>',
+    plane: '<g transform="rotate(35 12 12)"><path d="M12 2.75c-.8 0-1.25.6-1.25 1.4v4.6L3 13.2v2l7.75-2.2v4.4L8.2 19v1.7l3.8-1 3.8 1V19l-2.55-1.6V13L21 15.2v-2l-7.75-4.45v-4.6c0-.8-.45-1.4-1.25-1.4Z" fill="currentColor" fill-opacity=".06"/></g>',
   };
   const icon = (name, cls = "rp-icon") => (ICONS[name]
-    ? `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`
+    ? `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`
     : "");
 
   function faqCard(page, index) {

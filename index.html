@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-cohort">
+  <link rel="stylesheet" href="styles.css?v=20261011-smooth2">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -352,10 +352,15 @@
           <button type="button" data-metric-rank="associate_professor" aria-pressed="false">Associate professors</button>
           <button type="button" data-metric-rank="professor" aria-pressed="false">Full professors</button>
         </div>
-        <div id="metric-publication-filter" class="metric-publication-filter" role="group" aria-label="Publication filter">
+        <div class="metric-control-row"><div id="metric-publication-filter" class="metric-publication-filter" role="group" aria-label="Publication filter">
           <button type="button" class="active" data-metric-aip="all" aria-pressed="true">All publications</button>
           <button type="button" data-metric-aip="high" aria-pressed="false">AIP ≥95</button>
         </div>
+        <div id="metric-trend-mode" class="metric-publication-filter" role="group" aria-label="Trend display">
+          <button type="button" data-metric-trend-mode="annual" aria-pressed="false">Annual</button>
+          <button type="button" data-metric-trend-mode="smoothed" aria-pressed="true">Smoothed</button>
+        </div></div>
+        <p class="small-muted metric-trend-caption">Hover or tap for annual values. Smoothed lines show the trend; the partial latest year stays separate.</p>
         <div id="metric-charts" class="benchmark-grid">
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
@@ -822,7 +827,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="resources/pages/resources.js?v=20261011-cohort"></script>
-  <script src="app.js?v=20261011-cohort"></script>
+  <script src="resources/pages/resources.js?v=20261011-smooth2"></script>
+  <script src="app.js?v=20261011-smooth2"></script>
 </body>
 </html>

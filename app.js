@@ -30,6 +30,7 @@ const state = {
   networkCollaboratorId: "",
   metricTrendKey: "pubRate",
   metricAipFilter: "all",
+  metricTrendMode: "smoothed",
   metricPage: "",
   metricRank: "assistant_professor",
   resourceShowClosed: false,
@@ -58,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261011-cohort";
+const DATA_VERSION = "20261011-smooth2";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -573,6 +574,7 @@ function cacheElements() {
   els.benchmarkMethodNote = document.getElementById("benchmark-method-note");
   els.benchmarkVariety = document.getElementById("benchmark-variety");
   els.metricPublicationFilter = document.getElementById("metric-publication-filter");
+  els.metricTrendMode = document.getElementById("metric-trend-mode");
   els.overviewTopicCloud = document.getElementById("overview-topic-cloud");
   els.overviewExpertiseDetails = document.getElementById("overview-expertise-details");
   els.overviewExpertiseCollapse = document.getElementById("overview-expertise-collapse");
@@ -987,6 +989,13 @@ function attachEvents() {
     state.metricRank = normalizeMetricRank(button.dataset.metricRank);
     updateRoute();
     syncViewContext();
+    renderMetrics();
+  });
+  els.metricTrendMode?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-metric-trend-mode]");
+    if (!button) return;
+    state.metricTrendMode = normalizeMetricTrendMode(button.dataset.metricTrendMode);
+    updateRoute();
     renderMetrics();
   });
   document.getElementById("publication-kind-filter").addEventListener("change", (event) => {
@@ -1666,6 +1675,7 @@ function applyGlobalStateFromUrl() {
   state.includeAffiliatedResearchers = ["1", "true", "yes"].includes((params.get("affiliated") || "").toLowerCase());
   state.networkAipHighOnly = params.get("aip") === "95";
   state.metricAipFilter = normalizeMetricAipFilter(params.get("metricAip"));
+  state.metricTrendMode = normalizeMetricTrendMode(params.get("metricTrend"));
   state.metricRank = normalizeMetricRank(params.get("metricRank"));
   state.networkExternal = params.get("outside") !== "0";
   const requestedMinTie = Number(params.get("minTie"));
@@ -1680,6 +1690,8 @@ function routeUrl() {
   else params.delete("affiliated");
   if (state.metricAipFilter === "high") params.set("metricAip", "high");
   else params.delete("metricAip");
+  if (state.metricTrendMode === "annual") params.set("metricTrend", "annual");
+  else params.delete("metricTrend");
   if (state.tab === "metrics" && state.metricPage === "subgroups" && state.metricRank !== "assistant_professor") params.set("metricRank", state.metricRank);
   else params.delete("metricRank");
   if (state.tab === "network") {
@@ -5172,6 +5184,10 @@ function metricPublicationSeries(filter=state.metricAipFilter) {
     : ["count","individualAverage","average"];
 }
 
+function normalizeMetricTrendMode(value) {
+  return value === "annual" ? "annual" : "smoothed";
+}
+
 function renderMetrics() {
   if(!state.data || !els.benchmarkSummary)return;
   const subgroups=state.metricPage==="subgroups";
@@ -5183,6 +5199,7 @@ function renderMetrics() {
   document.getElementById("metric-rank-filter").hidden=!subgroups;
   document.getElementById("metric-coverage").hidden=subgroups;
   document.querySelectorAll("[data-metric-rank]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.metricRank===rank)));
+  els.metricTrendMode?.querySelectorAll("[data-metric-trend-mode]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.metricTrendMode===state.metricTrendMode)));
   const containers=[els.benchmarkPublicationTrend,document.getElementById("benchmark-individual-trend"),document.getElementById("benchmark-unique-trend")];
   state.metricAipFilter=normalizeMetricAipFilter(state.metricAipFilter);
   els.metricPublicationFilter?.querySelectorAll("[data-metric-aip]").forEach(button=>{
@@ -5206,7 +5223,7 @@ function renderMetrics() {
   document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
   els.benchmarkTrendTitle.textContent="Total publications";
   metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
-  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p>`;
+  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The partial latest year is shown separately and does not affect the fit.</p>`;
 }
 
 
@@ -5228,35 +5245,184 @@ function departmentMetricSeriesDefinition(key) {
   return definitions[key]||definitions.average;
 }
 
+function smoothMetricAnnualValues(rows,key,partialYear=metricComparisonHorizonYear()) {
+  const result=rows.map(()=>null);
+  let segment=[];
+  const fit=()=>{
+    const n=segment.length,neighbors=Math.min(n,Math.max(5,Math.ceil(n*.5)));
+    segment.forEach(({row,index})=>{
+      if(n<3){result[index]=row[key];return;}
+      const distances=segment.map(point=>Math.abs(point.row.year-row.year)).sort((a,b)=>a-b);
+      // Slight expansion keeps the outer neighbor's tricube weight finite.
+      const bandwidth=distances[neighbors-1]*(1+1e-7);
+      let sw=0,sx=0,sy=0,sxx=0,sxy=0;
+      segment.forEach(point=>{
+        const dx=point.row.year-row.year,ratio=Math.abs(dx)/bandwidth;
+        const weight=ratio<1?(1-ratio**3)**3:0;
+        sw+=weight;sx+=weight*dx;sy+=weight*point.row[key];sxx+=weight*dx*dx;sxy+=weight*dx*point.row[key];
+      });
+      const determinant=sw*sxx-sx*sx;
+      const estimate=determinant>1e-12?(sy*sxx-sx*sxy)/determinant:sw?sy/sw:row[key];
+      result[index]=Math.max(0,estimate);
+    });
+    segment=[];
+  };
+  rows.forEach((row,index)=>{
+    if(row.year===partialYear||!isNumber(row[key])){fit();return;}
+    if(segment.length&&row.year!==segment.at(-1).row.year+1)fit();
+    segment.push({row,index});
+  });
+  fit();
+  return result;
+}
+
+function metricChartSeries(groups,key,mode=state.metricTrendMode,partialYear=metricComparisonHorizonYear()) {
+  return groups.filter(group=>group.staff>0).map(group=>{
+    const smooth=smoothMetricAnnualValues(group.yearly,key,partialYear);
+    const allKey={highAip:"count",highAipIndividualAverage:"individualAverage",aipAverage:"average"}[key];
+    const allSmooth=allKey?smoothMetricAnnualValues(group.yearly,allKey,partialYear):null;
+    const individual=key==="individualAverage"||key==="highAipIndividualAverage";
+    const unique=individual?smoothMetricAnnualValues(group.yearly,"average",partialYear):null;
+    const highUnique=key==="highAipIndividualAverage"?smoothMetricAnnualValues(group.yearly,"aipAverage",partialYear):null;
+    // Independent endpoint fits can cross. Preserve both credit and subset relationships.
+    smooth.forEach((value,index)=>{
+      if(!isNumber(value))return;
+      if(individual&&isNumber(unique[index])){
+        if(highUnique&&isNumber(highUnique[index]))value=Math.max(value,Math.min(highUnique[index],unique[index]));
+        else if(!highUnique)value=Math.max(value,unique[index]);
+        if(allSmooth&&isNumber(allSmooth[index]))allSmooth[index]=Math.max(allSmooth[index],unique[index]);
+      }
+      smooth[index]=allSmooth&&isNumber(allSmooth[index])?Math.min(value,allSmooth[index]):value;
+    });
+    return {group,points:group.yearly.map((row,index)=>({year:row.year,raw:row[key],smooth:smooth[index],partial:row.year===partialYear,row,
+      value:mode==="annual"||row.year===partialYear?row[key]:smooth[index]}))};
+  });
+}
+
+function metricChartSegments(points) {
+  const segments=[];let segment=[];
+  points.forEach(point=>{
+    if(!isNumber(point.value)){if(segment.length)segments.push(segment);segment=[];return;}
+    if(segment.length&&point.year!==segment.at(-1).year+1){segments.push(segment);segment=[];}
+    segment.push(point);
+  });
+  if(segment.length)segments.push(segment);
+  return segments;
+}
+
+function nearestMetricChartPoint(series,yearPosition,value,department="") {
+  const year=Math.round(yearPosition);
+  let best=null;
+  series.forEach((entry,seriesIndex)=>{
+    if(department&&entry.group.key!==department)return;
+    const point=entry.points.find(point=>point.year===year&&isNumber(point.raw)&&isNumber(point.value));
+    if(!point)return;
+    const lower=entry.points.find(point=>point.year===Math.floor(yearPosition));
+    const upper=entry.points.find(point=>point.year===Math.ceil(yearPosition));
+    const lineValue=isNumber(lower?.value)&&isNumber(upper?.value)?lower.value+(upper.value-lower.value)*(yearPosition-Math.floor(yearPosition)):point.value;
+    const distance=Math.abs(lineValue-value);
+    if(!best||distance<best.distance)best={entry,point,seriesIndex,distance};
+  });
+  return best;
+}
+
+function metricChartReadout(entry,point,key,mode) {
+  const definition=departmentMetricSeriesDefinition(key);
+  const value=definition.perPerson?point.raw.toFixed(3).replace(/0+$/,'').replace(/\.$/,''):String(point.raw);
+  const calculation=definition.perPerson?` (${point.row[definition.numerator]} ${definition.unit} / ${entry.group.staff} people)`:"";
+  const fitted=mode!=="annual"&&isNumber(point.smooth)?` · Smoothed estimate: ${Number(point.smooth.toFixed(3))}`:"";
+  const partial=point.partial?" · Partial year; excluded from smoothing":"";
+  return `<strong>${escapeHtml(entry.group.label)} · ${metricComparisonYearLabel(point.year)}</strong> · Annual: ${value}${calculation}${fitted}${partial}`;
+}
+
+function attachMetricChartInteraction(container,series,key,mode,geometry) {
+  const svg=container.querySelector?.("svg"),readout=container.querySelector?.(".metric-chart-readout"),marker=container.querySelector?.(".metric-chart-marker");
+  if(!svg||!readout)return;
+  const {width,height,pad,from,to,ymax,x,y}=geometry;
+  let selected=null,lastSelection="";
+  const clear=()=>{selected=null;lastSelection="";readout.textContent="";if(marker)marker.setAttribute("visibility","hidden");};
+  const show=(entry,point,seriesIndex)=>{
+    if(!point||!isNumber(point.raw)||!isNumber(point.value))return;
+    selected={entry,point,seriesIndex};
+    const signature=`${entry.group.key}:${point.year}`;
+    if(signature!==lastSelection){readout.innerHTML=metricChartReadout(entry,point,key,mode);lastSelection=signature;}
+    if(marker){marker.setAttribute("cx",x(point.year));marker.setAttribute("cy",y(point.value));marker.setAttribute("visibility","visible");}
+  };
+  const pointer=event=>{
+    let px,py;
+    const matrix=svg.getScreenCTM?.();
+    if(matrix&&svg.createSVGPoint){const point=svg.createSVGPoint();point.x=event.clientX;point.y=event.clientY;const local=point.matrixTransform(matrix.inverse());px=local.x;py=local.y;}
+    else {const bounds=svg.getBoundingClientRect();px=(event.clientX-bounds.left)*width/bounds.width;py=(event.clientY-bounds.top)*height/bounds.height;}
+    const yearPosition=from+Math.max(0,Math.min(1,(px-pad.left)/(width-pad.left-pad.right)))*(to-from);
+    const value=(height-pad.bottom-py)/(height-pad.top-pad.bottom)*ymax;
+    const department=event.target.closest?.("[data-department]")?.dataset.department||"";
+    const nearest=nearestMetricChartPoint(series,yearPosition,value,department);
+    if(nearest)show(nearest.entry,nearest.point,nearest.seriesIndex);
+  };
+  svg.addEventListener("pointermove",event=>{if(event.pointerType!=="touch")pointer(event);});
+  svg.addEventListener("click",pointer);
+  svg.addEventListener("focus",()=>{const entry=series.find(entry=>entry.points.some(point=>isNumber(point.value)));if(entry)show(entry,entry.points.filter(point=>isNumber(point.value)).at(-1),series.indexOf(entry));});
+  svg.addEventListener("blur",clear);
+  svg.addEventListener("keydown",event=>{
+    if(event.key==="Escape"){clear();return;}
+    if(!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","Home","End"].includes(event.key))return;
+    event.preventDefault();
+    if(!selected){const entry=series.find(entry=>entry.points.some(point=>isNumber(point.value)));if(entry)show(entry,entry.points.find(point=>isNumber(point.value)),series.indexOf(entry));return;}
+    const {entry,point,seriesIndex}=selected;
+    if(event.key==="ArrowUp"||event.key==="ArrowDown"){
+      const direction=event.key==="ArrowUp"?-1:1;
+      for(let step=1;step<series.length;step++){
+        const nextIndex=(seriesIndex+direction*step+series.length)%series.length,next=series[nextIndex],nextPoint=next.points.find(nextPoint=>nextPoint.year===point.year&&isNumber(nextPoint.value));
+        if(nextPoint){show(next,nextPoint,nextIndex);break;}
+      }
+    }else{
+      const points=entry.points.filter(point=>isNumber(point.value)),index=points.indexOf(point);
+      const next=event.key==="Home"?0:event.key==="End"?points.length-1:Math.max(0,Math.min(points.length-1,index+(event.key==="ArrowLeft"?-1:1)));
+      show(entry,points[next],seriesIndex);
+    }
+  });
+}
+
 function renderDepartmentPublicationChart(container,groups,from,to,key="average") {
   if(!container)return;
   const width=1000,height=310,pad={left:45,right:112,top:20,bottom:35};
   const years=Array.from({length:to-from+1},(_,i)=>from+i);
-  const peak=Math.max(.1,...groups.flatMap(g=>g.yearly.map(r=>r[key]||0)));
+  const mode=normalizeMetricTrendMode(state.metricTrendMode),series=metricChartSeries(groups,key,mode);
+  const peak=Math.max(.1,...series.flatMap(entry=>entry.points.flatMap(point=>[point.raw,point.value].filter(isNumber))));
   const step=peak<=1?.25:peak<=2?.5:peak<=5?1:2;
   const ymax=Math.ceil(peak*1.08/step)*step;
   const x=year=>pad.left+(year-from)/Math.max(1,to-from)*(width-pad.left-pad.right);
   const y=value=>height-pad.bottom-value/ymax*(height-pad.top-pad.bottom);
   const colors={"HRM&OB":"#9b493b",Marketing:"#477875","IM&S":"#687b99",Operations:"#8a7548",GEM:"#7c6288",Accounting:"#527d51",EEF:"#515a65"};
-  const plotted=groups.filter(g=>g.staff>0);
-  const labels=plotted.filter(g=>isNumber(g.yearly.at(-1)?.[key])).map(g=>({g,y:y(g.yearly.at(-1)[key])})).sort((a,b)=>a.y-b.y);
+  const labels=series.filter(entry=>isNumber(entry.points.at(-1)?.value)).map(entry=>({g:entry.group,y:y(entry.points.at(-1).value)})).sort((a,b)=>a.y-b.y);
   labels.forEach((l,i)=>{l.labelY=Math.max(l.y,i?labels[i-1].labelY+16:pad.top)});
   const excess=Math.max(0,(labels.at(-1)?.labelY||0)-(height-pad.bottom));
   labels.forEach(l=>l.labelY-=excess);
   const definition=departmentMetricSeriesDefinition(key);
   const title=`${definition.title}, by year`;
   const format=v=>!isNumber(v)?"N/A":definition.perPerson?v.toFixed(2):String(v);
-  container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}"><title>${title}</title>
+  const readoutId=`metric-readout-${key}`;
+  container.innerHTML=`<div class="metric-plot-wrap"><svg viewBox="0 0 ${width} ${height}" tabindex="0" role="group" aria-label="${title}; ${mode} view. Left/right: years; up/down: departments. Home/End: first/last year; Escape: clear." aria-describedby="${readoutId}"><title>${title}</title>
     ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
     ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${metricComparisonYearLabel(v)}</text>`).join("")}
-    ${plotted.map(g=>`<polyline data-department="${escapeHtml(g.key)}" fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="2" points="${g.yearly.filter(r=>isNumber(r[key])).map(r=>x(r.year)+","+y(r[key])).join(" ")}"/>`).join("")}
+    ${series.map(entry=>{
+      const color=colors[entry.group.key]||"#666",department=escapeHtml(entry.group.key),points=entry.points;
+      const linePoints=mode==="annual"?points:points.map(point=>point.partial?{...point,value:null}:point);
+      const lines=metricChartSegments(linePoints).map(segment=>`<polyline data-department="${department}" fill="none" stroke="${color}" stroke-width="2" points="${segment.map(point=>x(point.year)+","+y(point.value)).join(" ")}"/>`).join("");
+      const partial=points.find(point=>point.partial&&isNumber(point.raw)),prior=partial&&points.find(point=>point.year===partial.year-1&&isNumber(point.value));
+      const connector=mode!=="annual"&&partial&&prior?`<line data-department="${department}" x1="${x(prior.year)}" y1="${y(prior.value)}" x2="${x(partial.year)}" y2="${y(partial.raw)}" stroke="${color}" stroke-dasharray="3 5" opacity=".55"/>`:"";
+      const dots=points.filter(point=>isNumber(point.raw)).map(point=>`<circle data-department="${department}" cx="${x(point.year)}" cy="${y(point.raw)}" r="${point.partial?3:2}" fill="${color}" opacity="${point.partial?1:mode==="annual"?.6:.25}"/>`).join("");
+      return lines+connector+dots;
+    }).join("")}
     ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]||"#666"}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]||"#666"}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
-    </svg>
+    <circle class="metric-chart-marker" r="5" fill="white" stroke="#222" stroke-width="2" visibility="hidden" pointer-events="none"/>
+    </svg></div><p id="${readoutId}" class="metric-chart-readout" role="status" aria-live="polite" aria-atomic="true"></p>
     <details class="metric-data-details"><summary>View department values</summary><p class="small-muted">Counts use the selected staff; yearly values show the calculation on hover.</p><div class="table-wrap"><table class="department-counts-table" aria-label="${title}, department values"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
     <tr><th>Selected headcount</th>${groups.map(g=>`<td class="num">${g.staff}</td>`).join("")}</tr>
     ${years.slice().reverse().map(year=>`<tr><th>${metricComparisonYearLabel(year)}</th>${groups.map(g=>{const row=g.yearly.find(r=>r.year===year);return `<td class="num" title="${row[definition.numerator]} ${definition.unit}${definition.perPerson?` / ${g.staff} people`:""}">${format(row[key])}</td>`}).join("")}</tr>`).join("")}
     <tr><th>${definition.perPerson?"Period per person":"Period total"}</th>${groups.map(g=>`<td class="num"><strong>${format(g[definition.groupKey])}</strong></td>`).join("")}</tr>
     ${definition.perPerson?`<tr><th>${definition.unit==="unique papers"?"Unique papers":"Author-paper credits"} in period</th>${groups.map(g=>`<td class="num">${g[definition.groupNumerator]}</td>`).join("")}</tr>`:""}</tbody></table></div></details>`;
+  attachMetricChartInteraction(container,series,key,mode,{width,height,pad,from,to,ymax,x,y});
 }
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
