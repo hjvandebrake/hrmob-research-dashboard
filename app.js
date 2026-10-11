@@ -29,6 +29,9 @@ const state = {
   networkPersonId: "",
   networkCollaboratorId: "",
   metricTrendKey: "pubRate",
+  metricAipFilter: "all",
+  metricPage: "",
+  metricRank: "assistant_professor",
   resourceShowClosed: false,
   search: "",
   aipFilter: "all",
@@ -55,7 +58,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261011-metrics-audit";
+const DATA_VERSION = "20261011-cohort";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -569,6 +572,7 @@ function cacheElements() {
   els.benchmarkTrendToggle = document.getElementById("benchmark-trend-toggle");
   els.benchmarkMethodNote = document.getElementById("benchmark-method-note");
   els.benchmarkVariety = document.getElementById("benchmark-variety");
+  els.metricPublicationFilter = document.getElementById("metric-publication-filter");
   els.overviewTopicCloud = document.getElementById("overview-topic-cloud");
   els.overviewExpertiseDetails = document.getElementById("overview-expertise-details");
   els.overviewExpertiseCollapse = document.getElementById("overview-expertise-collapse");
@@ -970,6 +974,21 @@ function attachEvents() {
     state.metricTrendKey = button.dataset.metricTrend;
     renderMetrics();
   });
+  els.metricPublicationFilter?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-metric-aip]");
+    if (!button) return;
+    state.metricAipFilter = normalizeMetricAipFilter(button.dataset.metricAip);
+    updateRoute();
+    renderMetrics();
+  });
+  document.getElementById("metric-rank-filter")?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-metric-rank]");
+    if (!button) return;
+    state.metricRank = normalizeMetricRank(button.dataset.metricRank);
+    updateRoute();
+    syncViewContext();
+    renderMetrics();
+  });
   document.getElementById("publication-kind-filter").addEventListener("change", (event) => {
     state.publicationKindFilter = event.target.value;
     renderPublications();
@@ -1145,6 +1164,7 @@ function attachEvents() {
     if (state.tab === "network") renderNetwork();
   }, 180));
   window.addEventListener("hashchange", () => {
+    applyGlobalStateFromUrl();
     applyRouteFromHash();
   });
   window.addEventListener("popstate", () => {
@@ -1631,6 +1651,7 @@ function routeFromHash() {
 }
 
 function routeHash() {
+  if (state.tab === "metrics" && state.metricPage === "subgroups") return "#metrics/subgroups";
   if (state.tab === "staff" && state.selectedStaffId) return `#staff/${encodeURIComponent(state.selectedStaffId)}/${encodeURIComponent(normalizeStaffSubpage(state.staffSubpage))}`;
   if (state.tab === "network" && state.networkPersonId) return `#network/${encodeURIComponent(state.networkPersonId)}`;
   if (state.tab === "collaboration") return "#opportunities";
@@ -1641,9 +1662,11 @@ function routeHash() {
 
 function applyGlobalStateFromUrl() {
   const params = new URLSearchParams(location.search);
-  state.publicationWindow = normalizeWindowMode(params.get("window") || state.publicationWindow);
+  state.publicationWindow = normalizeWindowMode(params.get("window") || DEFAULT_WINDOW_MODE);
   state.includeAffiliatedResearchers = ["1", "true", "yes"].includes((params.get("affiliated") || "").toLowerCase());
   state.networkAipHighOnly = params.get("aip") === "95";
+  state.metricAipFilter = normalizeMetricAipFilter(params.get("metricAip"));
+  state.metricRank = normalizeMetricRank(params.get("metricRank"));
   state.networkExternal = params.get("outside") !== "0";
   const requestedMinTie = Number(params.get("minTie"));
   state.networkMinTie = NETWORK_MIN_TIE_OPTIONS.has(requestedMinTie) ? requestedMinTie : 1;
@@ -1655,6 +1678,10 @@ function routeUrl() {
   else params.set("window", normalizeWindowMode(state.publicationWindow));
   if (state.includeAffiliatedResearchers) params.set("affiliated", "1");
   else params.delete("affiliated");
+  if (state.metricAipFilter === "high") params.set("metricAip", "high");
+  else params.delete("metricAip");
+  if (state.tab === "metrics" && state.metricPage === "subgroups" && state.metricRank !== "assistant_professor") params.set("metricRank", state.metricRank);
+  else params.delete("metricRank");
   if (state.tab === "network") {
     params.delete("network");
     if (state.networkAipHighOnly) params.set("aip", "95");
@@ -1694,8 +1721,8 @@ function applyRouteFromHash() {
     state.networkScope = state.networkPersonId ? "selected" : "department";
     state.networkCollaboratorId = "";
   }
-  setTab(route.tab, { updateHistory: false });
-  const routeChangedDuringRender = location.hash !== routeHash();
+  setTab(route.tab, { updateHistory: false, metricPage: route.tab === "metrics" && route.detail === "subgroups" ? "subgroups" : "" });
+  const routeChangedDuringRender = `${location.pathname}${location.search}${location.hash}` !== routeUrl();
   if (route.invalidTab || route.legacyTab || route.skipTarget || routeChangedDuringRender) updateRoute({ replace: true });
   if (route.skipTarget) requestAnimationFrame(focusDashboardContent);
   if (route.scrollTo) setTimeout(() => document.getElementById(route.scrollTo)?.scrollIntoView({ behavior: "smooth", block: "start" }), 300);
@@ -1711,7 +1738,9 @@ function normalizeStaffSubpage(value) {
 
 function setTab(tab, options = {}) {
   const previousTab = state.tab;
+  const previousMetricPage = state.metricPage;
   state.tab = validTab(tab) ? tab : "overview";
+  if (state.tab === "metrics") state.metricPage = options.metricPage === "subgroups" ? "subgroups" : "";
   document.body.dataset.activeTab = state.tab;
   document.querySelectorAll(".nav-tab").forEach((btn) => {
     const active = btn.dataset.tab === state.tab;
@@ -1726,7 +1755,7 @@ function setTab(tab, options = {}) {
   });
   if (options.updateHistory !== false) updateRoute({ replace: Boolean(options.replace) });
   if (state.data) renderCurrentView();
-  if (state.tab !== previousTab && options.focusView !== false) {
+  if ((state.tab !== previousTab || state.tab === "metrics" && state.metricPage !== previousMetricPage) && options.focusView !== false) {
     requestAnimationFrame(() => focusActiveView(state.tab));
   }
 }
@@ -1839,7 +1868,7 @@ function syncViewContext() {
     collaboration: `${roster} | Publication-based signals: ${publicationWindow}`,
     publications: `${roster} | ${publicationWindow}`,
     network: `${roster} | Publication ties: ${publicationWindow}`,
-    metrics: `Academic staff and PhD students · HRM&OB affiliates ${state.includeAffiliatedResearchers?"included":"excluded"} · ${metricsWindow}`,
+    metrics: `${metricCohortLabel()} · HRM&OB affiliates ${state.includeAffiliatedResearchers?"included":"excluded"} · ${metricsWindow}`,
     grants: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
     resources: "Presentations and downloads",
     faq: "Frequently asked questions about research in our department",
@@ -5065,16 +5094,16 @@ function departmentPublicationYear(pub) {
   return Number.isInteger(pub.comparisonYear)?pub.comparisonYear:pub.year;
 }
 
-function departmentMetricStaffRows(data, includeAffiliated=false) {
-  return (data.people||[]).filter(p=>p.appointmentSection!=="office").map(person=>({
+function departmentMetricStaffRows(data, includeAffiliated=false, rank="") {
+  return (data.people||[]).filter(p=>p.comparisonEligible===true&&p.appointmentSection!=="office"&&(!rank||p.comparisonRoleCategory===rank)).map(person=>({
     ...person,
     departments:(person.departments||[person.department]).filter(department=>
       department!=="HRM&OB"||includeAffiliated||!person.affiliated)
   })).filter(person=>person.departments.length);
 }
 
-function departmentPublicationGroups(data, fromYear, toYear, includeAffiliated=false) {
-  const staffRows=departmentMetricStaffRows(data,includeAffiliated);
+function departmentPublicationGroups(data, fromYear, toYear, includeAffiliated=false, rank="") {
+  const staffRows=departmentMetricStaffRows(data,includeAffiliated,rank);
   const people = new Map(staffRows.map(p=>[p.id,p]));
   const records = new Map();
   (data.publications || []).filter(p=>p.countedInComparison!==false&&departmentPublicationYear(p)>=fromYear&&departmentPublicationYear(p)<=toYear).forEach(pub=>{
@@ -5092,8 +5121,12 @@ function departmentPublicationGroups(data, fromYear, toYear, includeAffiliated=f
     const staff=staffRows.filter(p=>(p.departments||[p.department]).includes(department));
     const credits=new Map(staff.map(p=>[p.id,0]));
     const pubs=Array.from(records.values()).filter(p=>p.departments.has(department));
+    const selectedAuthorCount=pub=>Array.from(pub.people).filter(id=>credits.has(id)).length;
+    let authorshipCount=0,highAipAuthorshipCount=0;
     pubs.forEach(pub=>{
       const authors=Array.from(pub.people).filter(id=>credits.has(id));
+      authorshipCount+=authors.length;
+      if(isNumber(pub.aip)&&pub.aip>=95)highAipAuthorshipCount+=authors.length;
       authors.forEach(id=>credits.set(id,credits.get(id)+1/authors.length));
     });
     const observed=Array.from(credits.values()).filter(v=>v>0);
@@ -5102,58 +5135,97 @@ function departmentPublicationGroups(data, fromYear, toYear, includeAffiliated=f
     const divide=count=>staff.length?count/staff.length:null;
     return {key:department,label:department,total:pubs.length,staff:staff.length,
       highAip,average:divide(pubs.length),aipAverage:divide(highAip),
+      authorshipCount,individualAverage:divide(authorshipCount),
+      highAipAuthorshipCount,highAipIndividualAverage:divide(highAipAuthorshipCount),
       aipUnknown:pubs.filter(p=>!isNumber(p.aip)).length,
       recordedAuthors:observed.length,missingPeople:missing,
       centralization:outputCentralization(observed),
       yearly:years.map(year=>{
         const rows=pubs.filter(p=>p.year===year);
         const high=rows.filter(p=>isNumber(p.aip)&&p.aip>=95).length;
-        return {year,count:rows.length,highAip:high,average:divide(rows.length),aipAverage:divide(high)};
+        const fullCredits=rows.reduce((sum,pub)=>sum+selectedAuthorCount(pub),0);
+        const highCredits=rows.filter(p=>isNumber(p.aip)&&p.aip>=95).reduce((sum,pub)=>sum+selectedAuthorCount(pub),0);
+        return {year,count:rows.length,highAip:high,average:divide(rows.length),aipAverage:divide(high),
+          authorshipCount:fullCredits,individualAverage:divide(fullCredits),
+          highAipAuthorshipCount:highCredits,highAipIndividualAverage:divide(highCredits)};
       }),
       publicationIds:pubs.map(p=>p.id)};
   });
 }
 
+function normalizeMetricAipFilter(value) {
+  return value==="high"?"high":"all";
+}
+
+function normalizeMetricRank(value) {
+  return ["assistant_professor","associate_professor","professor"].includes(value) ? value : "assistant_professor";
+}
+
+function metricCohortLabel() {
+  if(state.metricPage!=="subgroups")return "Professors and postdocs";
+  return {assistant_professor:"Assistant professors",associate_professor:"Associate professors",professor:"Full professors"}[normalizeMetricRank(state.metricRank)];
+}
+
+function metricPublicationSeries(filter=state.metricAipFilter) {
+  return normalizeMetricAipFilter(filter)==="high"
+    ? ["highAip","highAipIndividualAverage","aipAverage"]
+    : ["count","individualAverage","average"];
+}
+
 function renderMetrics() {
   if(!state.data || !els.benchmarkSummary)return;
+  const subgroups=state.metricPage==="subgroups";
+  const rank=subgroups?normalizeMetricRank(state.metricRank):"";
+  const rankLabels={assistant_professor:"Assistant professors",associate_professor:"Associate professors",professor:"Full professors"};
+  document.getElementById("metric-page-title").textContent=subgroups?"Publications by academic rank":"Department publications";
+  document.getElementById("metric-back").hidden=!subgroups;
+  document.getElementById("metric-subgroup-link").hidden=subgroups;
+  document.getElementById("metric-rank-filter").hidden=!subgroups;
+  document.getElementById("metric-coverage").hidden=subgroups;
+  document.querySelectorAll("[data-metric-rank]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.metricRank===rank)));
+  const containers=[els.benchmarkPublicationTrend,document.getElementById("benchmark-individual-trend"),document.getElementById("benchmark-unique-trend")];
+  state.metricAipFilter=normalizeMetricAipFilter(state.metricAipFilter);
+  els.metricPublicationFilter?.querySelectorAll("[data-metric-aip]").forEach(button=>{
+    const selected=button.dataset.metricAip===state.metricAipFilter;
+    button.classList.toggle("on",selected);
+    button.setAttribute("aria-pressed",String(selected));
+  });
   const data=state.departmentData;
   if(!data?.publications) {
     const failed=state.deferredDataStatus.department === "failed";
     els.benchmarkSummary.innerHTML="";
     const status=`<p role="status">${failed?"Department publication data could not load. Reload to try again.":"Loading department publications..."}</p>`;
-    els.benchmarkPublicationTrend.innerHTML=status;
-    document.getElementById("benchmark-aip-trend").innerHTML=status;
+    containers.filter(Boolean).forEach(container=>{container.innerHTML=status;});
     return;
   }
   const [from,to]=metricComparisonWindow();
-  const groups=departmentPublicationGroups(data,from,to,state.includeAffiliatedResearchers);
+  const groups=departmentPublicationGroups(data,from,to,state.includeAffiliatedResearchers,rank);
   const audit=data.meta?.comparisonAudit;
   const auditDepartments=audit?.rosterModes?.[state.includeAffiliatedResearchers?"affiliated":"department"]?.departments||audit?.departments||[];
   renderMetricCoverage(els.benchmarkSummary,groups,auditDepartments,data,from,to);
-  document.getElementById("benchmark-identity-note").textContent="Staff counts include PhD students and lecturers.";
-  els.benchmarkTrendTitle.textContent="Publications per person";
-  renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
-  renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");
-  els.benchmarkVariety.innerHTML=`<div class="concentration-list">${groups.map(g=>`<div class="concentration-row"><span>${escapeHtml(g.label)}<small>${g.recordedAuthors} authors with records</small></span><span class="concentration-track"><i style="width:${g.centralization===null?0:g.centralization*100}%"></i></span><strong>${g.centralization===null?"N/A":Math.round(g.centralization*100)+"%"}</strong></div>`).join("")}</div>`;
-  els.benchmarkMethodNote.innerHTML=`<p><strong>Counts:</strong> each article or editorial counts once per department, divided by current staff numbers. This includes publications before someone joined.</p><p><strong>AIP:</strong> average journal scores for 2020–2024. Unknown scores are excluded only from the AIP chart.</p><p><strong>Centralization:</strong> paper credit is split between departmental coauthors. The score measures inequality among authors with records, from 0% (even) to 100% (concentrated).</p><p><strong>Scope:</strong> Metrics uses a broader roster than Publications and prefers issue or university reference years. The latest year is partial.</p>`;
+  document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
+  els.benchmarkTrendTitle.textContent="Total publications";
+  metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
+  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p>`;
 }
 
 
 function renderMetricCoverage(container,groups,auditDepartments,data,from,to) {
   if(!container)return;
-  const rows=groups.map(group=>{
-    const audit=auditDepartments.find(row=>row.department===group.key);
-    const auditMatches=audit?.currentHeadcount===group.staff;
-    const unavailable=auditMatches&&isNumber(audit?.unavailableProfiles)
-      ? `${audit.unavailableProfiles} / ${group.staff}` : "Unknown";
-    const complete=auditMatches&&isNumber(audit?.verifiedCompletePublicationLists)
-      ? String(audit.verifiedCompletePublicationLists) : "Unknown";
-    return `<tr><th>${escapeHtml(group.label)}</th><td>${group.recordedAuthors} / ${group.staff}</td><td>${group.total}</td><td>${group.total?`${group.aipUnknown} / ${group.total}`:"N/A (no records)"}</td><td>${unavailable}</td><td>${complete}</td></tr>`;
-  }).join("");
-  const review=data.meta?.authorshipReview;
-  const reviewNote=review&&(isNumber(review.heldPersonWorkLinks)||isNumber(review.rejectedPersonWorkLinks))
-    ? `<p class="small-muted">Source review${review.checkedOn?` (${escapeHtml(review.checkedOn)})`:""}: ${isNumber(review.heldPersonWorkLinks)?review.heldPersonWorkLinks:"unknown"} unverified links excluded; ${isNumber(review.rejectedPersonWorkLinks)?review.rejectedPersonWorkLinks:"unknown"} wrong-person links removed.</p>` : "";
-  container.innerHTML=`<section class="method-note"><p>Captured records in ${from}–${metricComparisonYearLabel(to)}. Missing records do not mean zero publications.</p><div class="table-wrap"><table class="department-counts-table"><caption class="visually-hidden">Publication record coverage by department in the selected window and roster mode</caption><thead><tr><th>Department</th><th>People / roster</th><th>Publications</th><th>Without AIP</th><th>Unavailable profiles / roster</th><th>Complete lists</th></tr></thead><tbody>${rows}</tbody></table></div><p class="small-muted">Roster checked: ${escapeHtml(data.meta?.rostersCheckedOn||"unknown")}. Dataset rebuilt: ${escapeHtml(data.meta?.generatedOn||"unknown")}. Complete publication lists have not been verified.</p>${reviewNote}</section>`;
+  const rows=groups.map(group=>`<tr><th>${escapeHtml(group.label)}</th><td>${group.recordedAuthors} / ${group.staff}</td><td>${group.total}</td><td>${group.total?`${group.aipUnknown} / ${group.total}`:"N/A (no records)"}</td></tr>`).join("");
+  container.innerHTML=`<section class="method-note"><div class="table-wrap"><table class="department-counts-table"><caption class="visually-hidden">All-publication coverage in ${from}–${metricComparisonYearLabel(to)} for the selected cohort</caption><thead><tr><th>Department</th><th>People with records / cohort</th><th>Publications</th><th>Without AIP</th></tr></thead><tbody>${rows}</tbody></table></div><p class="small-muted">All publications, ${from}–${metricComparisonYearLabel(to)}. Roster checked: ${escapeHtml(data.meta?.rostersCheckedOn||"unknown")}. Dataset rebuilt: ${escapeHtml(data.meta?.generatedOn||"unknown")}.</p></section>`;
+}
+
+function departmentMetricSeriesDefinition(key) {
+  const definitions={
+    count:{title:"Total recorded publications",groupKey:"total",numerator:"count",groupNumerator:"total",unit:"unique papers",perPerson:false},
+    highAip:{title:"Total recorded AIP ≥ 95 publications",groupKey:"highAip",numerator:"highAip",groupNumerator:"highAip",unit:"unique papers",perPerson:false},
+    individualAverage:{title:"Average publications per staff member",groupKey:"individualAverage",numerator:"authorshipCount",groupNumerator:"authorshipCount",unit:"author-paper credits",perPerson:true},
+    highAipIndividualAverage:{title:"Average AIP ≥ 95 publications per staff member",groupKey:"highAipIndividualAverage",numerator:"highAipAuthorshipCount",groupNumerator:"highAipAuthorshipCount",unit:"author-paper credits",perPerson:true},
+    average:{title:"Unique publications per staff member",groupKey:"average",numerator:"count",groupNumerator:"total",unit:"unique papers",perPerson:true},
+    aipAverage:{title:"Unique AIP ≥ 95 publications per staff member",groupKey:"aipAverage",numerator:"highAip",groupNumerator:"highAip",unit:"unique papers",perPerson:true},
+  };
+  return definitions[key]||definitions.average;
 }
 
 function renderDepartmentPublicationChart(container,groups,from,to,key="average") {
@@ -5171,19 +5243,20 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   labels.forEach((l,i)=>{l.labelY=Math.max(l.y,i?labels[i-1].labelY+16:pad.top)});
   const excess=Math.max(0,(labels.at(-1)?.labelY||0)-(height-pad.bottom));
   labels.forEach(l=>l.labelY-=excess);
-  const title=key==="aipAverage"?"Recorded AIP ≥ 95 articles and editorials per current roster member, by year":"Recorded articles and editorials per current roster member, by year";
-  const format=v=>v===null?"N/A":v.toFixed(2);
+  const definition=departmentMetricSeriesDefinition(key);
+  const title=`${definition.title}, by year`;
+  const format=v=>!isNumber(v)?"N/A":definition.perPerson?v.toFixed(2):String(v);
   container.innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}"><title>${title}</title>
     ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
     ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${metricComparisonYearLabel(v)}</text>`).join("")}
     ${plotted.map(g=>`<polyline data-department="${escapeHtml(g.key)}" fill="none" stroke="${colors[g.key]||"#666"}" stroke-width="2" points="${g.yearly.filter(r=>isNumber(r[key])).map(r=>x(r.year)+","+y(r[key])).join(" ")}"/>`).join("")}
-    ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
+    ${labels.map(l=>`<line x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]||"#666"}" stroke-width="1"/><text x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]||"#666"}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
     </svg>
-    <details class="metric-data-details"><summary>View department values</summary><p class="small-muted">Each value is a department's unique-paper count divided by its selected roster headcount, rounded to two decimals. Hover over a yearly value to see the count and denominator.</p><div class="table-wrap"><table class="department-counts-table" aria-label="${title}, department values"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
+    <details class="metric-data-details"><summary>View department values</summary><p class="small-muted">Counts use the selected staff; yearly values show the calculation on hover.</p><div class="table-wrap"><table class="department-counts-table" aria-label="${title}, department values"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
     <tr><th>Selected headcount</th>${groups.map(g=>`<td class="num">${g.staff}</td>`).join("")}</tr>
-    ${years.slice().reverse().map(year=>`<tr><th>${metricComparisonYearLabel(year)}</th>${groups.map(g=>{const row=g.yearly.find(r=>r.year===year);return `<td class="num" title="${key==="aipAverage"?row.highAip:row.count} unique papers / ${g.staff} people">${format(row[key])}</td>`}).join("")}</tr>`).join("")}
-    <tr><th>Period per person</th>${groups.map(g=>`<td class="num"><strong>${format(g[key])}</strong></td>`).join("")}</tr>
-    <tr><th>Unique papers in period</th>${groups.map(g=>`<td class="num">${key==="aipAverage"?g.highAip:g.total}</td>`).join("")}</tr></tbody></table></div></details>`;
+    ${years.slice().reverse().map(year=>`<tr><th>${metricComparisonYearLabel(year)}</th>${groups.map(g=>{const row=g.yearly.find(r=>r.year===year);return `<td class="num" title="${row[definition.numerator]} ${definition.unit}${definition.perPerson?` / ${g.staff} people`:""}">${format(row[key])}</td>`}).join("")}</tr>`).join("")}
+    <tr><th>${definition.perPerson?"Period per person":"Period total"}</th>${groups.map(g=>`<td class="num"><strong>${format(g[definition.groupKey])}</strong></td>`).join("")}</tr>
+    ${definition.perPerson?`<tr><th>${definition.unit==="unique papers"?"Unique papers":"Author-paper credits"} in period</th>${groups.map(g=>`<td class="num">${g[definition.groupNumerator]}</td>`).join("")}</tr>`:""}</tbody></table></div></details>`;
 }
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {

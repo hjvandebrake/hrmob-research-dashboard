@@ -3427,8 +3427,24 @@ footer {
 .network-shell .edge.edge-strong { stroke: #927057; opacity: .62; }
 .network-shell .edge.edge-weak { opacity: .42; }
 .department-counts-table { width: 100%; }
-#benchmark-publication-trend, #benchmark-aip-trend { overflow-x: auto; }
-#benchmark-publication-trend > svg, #benchmark-aip-trend > svg { min-width: 650px; }
+#metric-charts .metric-chart { overflow-x: auto; }
+#metric-charts .metric-chart > svg { min-width: 650px; }
+.metric-publication-filter { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; margin: 0 0 20px; border: 1px solid var(--ink-200); border-radius: 8px; background: #f5f4f1; }
+.metric-publication-filter button { border: 0; border-radius: 5px; padding: 9px 15px; background: transparent; color: var(--ink-700); font: inherit; font-size: .85rem; cursor: pointer; }
+.metric-publication-filter button[aria-pressed="true"] { background: var(--red); color: white; }
+.metric-publication-filter button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.metric-rank-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.metric-rank-filter[hidden], .metric-back[hidden], .metric-subgroup-link[hidden] { display: none; }
+.metric-rank-filter button { padding: 10px 16px; border: 1px solid var(--ink-200); border-radius: 6px; background: #fff; color: var(--ink-700); font: inherit; font-size: .9rem; cursor: pointer; }
+.metric-rank-filter button[aria-pressed="true"] { border-color: var(--red); background: #faf0ed; color: var(--red); }
+.metric-rank-filter button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.metric-back { display: inline-block; margin-bottom: 18px; color: var(--red); font-size: .85rem; }
+.metric-subgroup-link { margin: 18px 0 24px; }
+.metric-subgroup-link a { color: var(--red); }
+@media (max-width: 480px) {
+  .metric-rank-filter { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; }
+  .metric-rank-filter button { padding: 10px 5px; font-size: .8rem; }
+}
 .concentration-list { display: grid; gap: 14px; }
 .concentration-row { display: grid; grid-template-columns: 110px minmax(80px,1fr) 45px; gap: 16px; align-items: center; font-size: .85rem; }
 .concentration-track { height: 8px; background: #eeefed; border-radius: 4px; overflow: hidden; }
@@ -4223,4 +4239,3 @@ html:not(.auth-locked) .auth-gate {
 .onet-info li b { color: #7a3d1b; }
 .onet-info p { margin: 6px 0 0; color: var(--ink-700); }
 @media (max-width: 640px) { .onet-info { position: static; max-width: none; border-radius: 0; border-width: 1px 0 0; box-shadow: none; } }
-

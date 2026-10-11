@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-metrics-audit">
+  <link rel="stylesheet" href="styles.css?v=20261011-cohort">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -336,43 +336,54 @@
 
     <section id="view-metrics" class="sec" role="tabpanel" aria-labelledby="tab-metrics" hidden>
       <div class="wrap">
+        <a id="metric-back" class="metric-back" href="#metrics" hidden>← Back to department publications</a>
         <div class="sec-head compact">
           <div>
             <p class="eye">Faculty</p>
-            <h2 class="h2">Department publications</h2>
+            <h2 id="metric-page-title" class="h2">Department publications</h2>
           </div>
         </div>
         <aside class="metric-comparison-note" role="note">
           <p>Comparisons are provisional: public records are incomplete and use current staff numbers.</p>
         </aside>
-        <p class="section-intro" id="benchmark-identity-note" role="note">Each paper counts once per department, including all staff ranks and PhD students.</p>
+        <p class="section-intro" id="benchmark-identity-note" role="note">Assistant, associate and full professors, plus postdocs.</p>
+        <div id="metric-rank-filter" class="metric-rank-filter" role="group" aria-label="Academic rank" hidden>
+          <button type="button" data-metric-rank="assistant_professor" aria-pressed="true">Assistant professors</button>
+          <button type="button" data-metric-rank="associate_professor" aria-pressed="false">Associate professors</button>
+          <button type="button" data-metric-rank="professor" aria-pressed="false">Full professors</button>
+        </div>
+        <div id="metric-publication-filter" class="metric-publication-filter" role="group" aria-label="Publication filter">
+          <button type="button" class="active" data-metric-aip="all" aria-pressed="true">All publications</button>
+          <button type="button" data-metric-aip="high" aria-pressed="false">AIP ≥95</button>
+        </div>
         <div id="metric-charts" class="benchmark-grid">
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <h3 id="benchmark-trend-title" class="overview-h3">Publications per person</h3>
+                <h3 id="benchmark-trend-title" class="overview-h3">Total publications</h3>
               </div>
             </div>
-            <p class="section-intro metric-chart-subtitle">Articles and editorials per year.</p>
+            <p class="section-intro metric-chart-subtitle">Each paper counts once per department.</p>
             <div id="benchmark-publication-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head"><div>
-              <h3 class="overview-h3">AIP ≥ 95 publications per person</h3>
+              <h3 class="overview-h3">Average per staff member</h3>
             </div></div>
-            <p class="section-intro metric-chart-subtitle">Journals with an AIP score of at least 95.</p>
-            <div id="benchmark-aip-trend" class="metric-chart"></div>
+            <p class="section-intro metric-chart-subtitle">Shared papers count for each departmental coauthor.</p>
+            <div id="benchmark-individual-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <h3 class="overview-h3">Centralization</h3>
+                <h3 class="overview-h3">Unique publications per staff member</h3>
               </div>
             </div>
-            <p class="section-intro">How concentrated publications are among recorded authors. Lower means more even.</p>
-            <div id="benchmark-variety" class="variety-list"></div>
+            <p class="section-intro metric-chart-subtitle">Each paper counts once, divided by department headcount.</p>
+            <div id="benchmark-unique-trend" class="metric-chart"></div>
           </section>
         </div>
+        <p id="metric-subgroup-link" class="small-muted metric-subgroup-link">Explore the same plots <a href="#metrics/subgroups">by academic rank →</a></p>
         <details id="metric-coverage" class="overview-panel benchmark-panel-wide"><summary>Data coverage</summary><div id="benchmark-summary"></div></details>
         <details class="overview-panel benchmark-panel-wide"><summary>How it works</summary><div id="benchmark-method-note" class="method-note"></div></details>
       </div>
@@ -388,7 +399,7 @@
         </div>
         <div class="publication-layout">
           <div class="publication-main">
-            <p class="section-intro">Journal articles and editorials by the selected HRM&amp;OB researchers. Metrics uses a broader academic roster.</p>
+            <p class="section-intro">Journal articles and editorials by the selected HRM&amp;OB researchers. Metrics compares professors and postdocs across departments.</p>
             <div class="tool-row">
               <label class="select-box" hidden>
                 <span>Outputs</span>
@@ -811,7 +822,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="resources/pages/resources.js?v=20261011-metrics-audit"></script>
-  <script src="app.js?v=20261011-metrics-audit"></script>
+  <script src="resources/pages/resources.js?v=20261011-cohort"></script>
+  <script src="app.js?v=20261011-cohort"></script>
 </body>
 </html>

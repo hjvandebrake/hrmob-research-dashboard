@@ -1439,18 +1439,38 @@
         "anna"
       ],
       "initialSequences": [
-        "a",
-        "an"
+        "a"
       ],
       "firstInitials": [
         "a"
       ],
-      "orcid": "0000-0003-1018-4758",
+      "orcid": "",
       "benchmarkIds": [
         "mkt-a-stepanova"
       ],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "rejectedOpenAlexIds": [
+        "A5087217264"
+      ],
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "Local benchmark seed selected Anna N. Stepanova of North Carolina State University by name score and copied candidate ORCID. Primary Plant Cell paper explicitly identifies Anna N. Stepanova, Department of Plant and Microbial Biology, NCState email and this ORCID. Fresh RUG profile has no ORCID link. BI documents the focal marketing scholar dissertation defence in April 2024. No verified replacement ORCID found.",
+        "sources": [
+          "https://www.rug.nl/staff/a.stepanova/",
+          "https://pub.orcid.org/v3.0/0000-0003-1018-4758/person",
+          "https://par.nsf.gov/servlets/purl/10167966",
+          "https://www.bi.no/en/about-bi/events/2024/april/phd-defence-anna-stepanova/"
+        ],
+        "removedValues": {
+          "orcid": "0000-0003-1018-4758",
+          "initialSequences": [
+            "an"
+          ]
+        }
+      },
+      "rejectedOrcids": [
+        "0000-0003-1018-4758"
+      ]
     },
     {
       "id": "mkt-jpr-thomassen",
@@ -2038,18 +2058,38 @@
         "araks"
       ],
       "initialSequences": [
-        "a",
-        "ag"
+        "a"
       ],
       "firstInitials": [
         "a"
       ],
-      "orcid": "0000-0002-3224-0549",
+      "orcid": "",
       "benchmarkIds": [
         "ims-a-ayvazyan"
       ],
-      "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "rejectedOpenAlexIds": [
+        "A5022100645"
+      ],
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "The stored ORCID public person record names Armen Ayvazyan, and publisher author details explicitly give Armen Grigoryevich Ayvazyan at the Armenian organic chemistry institute with this ORCID. Focal RUG Araks has UC3M Business and Finance PhD; dissertation identifies Araksya and links her personal site. Fresh official pages have no ORCID link. Local seed chose A. G. Ayvazyan from name-only OpenAlex query and copied the candidate ORCID. No verified replacement ORCID found.",
+        "sources": [
+          "https://www.rug.nl/staff/a.ayvazyan/cv",
+          "https://pub.orcid.org/v3.0/0000-0002-3224-0549/person",
+          "https://kazanmedjournal.ru/0514-7492/article/view/684333",
+          "https://e-archivo.uc3m.es/bitstreams/bb9c86d3-7600-4dd4-b97f-213979a0727d/download"
+        ],
+        "removedValues": {
+          "orcid": "0000-0002-3224-0549",
+          "initialSequences": [
+            "ag"
+          ]
+        }
+      },
+      "rejectedOrcids": [
+        "0000-0002-3224-0549"
+      ]
     },
     {
       "id": "ims-o-belousova",
@@ -2193,12 +2233,26 @@
       "firstInitials": [
         "j"
       ],
-      "orcid": "",
+      "orcid": "0000-0003-4015-6221",
       "benchmarkIds": [
         "ims-j-duijsters"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "HTTP200; public researcher URL links exact RUG staff page; one work is explicitly a preprint10.2139/ssrn.7123505. This reviewed identifier correction imports no publications.",
+        "sources": [
+          "https://pub.orcid.org/v3.0/0000-0003-4015-6221/record",
+          "https://www.rug.nl/staff/j.duijsters/?lang=en"
+        ],
+        "provenance": "Targeted public ORCID identity reconciliation; not asserted to be linked from the RUG staff page.",
+        "removedValues": {},
+        "verifiedValues": {
+          "orcid": "0000-0003-4015-6221"
+        }
+      },
+      "rejectedOrcids": []
     },
     {
       "id": "ims-ne-fabian",
@@ -2553,12 +2607,26 @@
       "firstInitials": [
         "s"
       ],
-      "orcid": "",
+      "orcid": "0000-0002-6658-282X",
       "benchmarkIds": [
         "ims-sjs-matr"
       ],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "HTTP200 public ORCID names Said Matr and links exact RUG staff URL; current RUG assistant-professor employment; public works list empty. This reviewed identifier correction imports no publications.",
+        "sources": [
+          "https://pub.orcid.org/v3.0/0000-0002-6658-282X/record",
+          "https://www.rug.nl/staff/s.j.s.matr/?lang=en"
+        ],
+        "provenance": "Targeted public ORCID identity reconciliation; not asserted to be linked from the RUG staff page.",
+        "removedValues": {},
+        "verifiedValues": {
+          "orcid": "0000-0002-6658-282X"
+        }
+      },
+      "rejectedOrcids": []
     },
     {
       "id": "ims-i-maris-de-bresser",
@@ -7433,10 +7501,24 @@
       "firstInitials": [
         "t"
       ],
-      "orcid": "",
+      "orcid": "0000-0002-6183-8582",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "HTTP200; full name and RUG Operations postdoctoral employment fromJuly2025 match RUG staff profile; public works empty. This reviewed identifier correction imports no publications.",
+        "sources": [
+          "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+          "https://www.rug.nl/staff/t.karabas/?lang=en"
+        ],
+        "provenance": "Targeted public ORCID identity reconciliation; not asserted to be linked from the RUG staff page.",
+        "removedValues": {},
+        "verifiedValues": {
+          "orcid": "0000-0002-6183-8582"
+        }
+      },
+      "rejectedOrcids": []
     },
     {
       "id": "ops-ta-kasper",
@@ -11682,10 +11764,24 @@
       "firstInitials": [
         "v"
       ],
-      "orcid": "",
+      "orcid": "0009-0002-5246-9436",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "The official RUG staff profile directly links ORCID 0009-0002-5246-9436. Its public record and official Pure profile agree. Add the verified identifier only to this exact staff identity when absent or already identical; this correction imports no publications.",
+        "sources": [
+          "https://www.rug.nl/staff/viktor.marinkov/?lang=en",
+          "https://pub.orcid.org/v3.0/0009-0002-5246-9436/record"
+        ],
+        "provenance": "Official RUG staff profile directly links the verified ORCID.",
+        "removedValues": {},
+        "verifiedValues": {
+          "orcid": "0009-0002-5246-9436"
+        }
+      },
+      "rejectedOrcids": []
     },
     {
       "id": "eef-zz-meder",
@@ -13585,10 +13681,24 @@
       "firstInitials": [
         "j"
       ],
-      "orcid": "",
+      "orcid": "0000-0003-4784-3104",
       "benchmarkIds": [],
       "rejectedOpenAlexIds": [],
-      "listedOnCurrentRoster": true
+      "listedOnCurrentRoster": true,
+      "identitySourceReview": {
+        "checkedOn": "2026-10-11",
+        "reason": "HTTP200; links exact RUG staff page in Groningen appointment, Erasmus PhD history and one journal article. This reviewed identifier correction imports no publications.",
+        "sources": [
+          "https://pub.orcid.org/v3.0/0000-0003-4784-3104/record",
+          "https://www.rug.nl/staff/j.klooster/?lang=en"
+        ],
+        "provenance": "Targeted public ORCID identity reconciliation; not asserted to be linked from the RUG staff page.",
+        "removedValues": {},
+        "verifiedValues": {
+          "orcid": "0000-0003-4784-3104"
+        }
+      },
+      "rejectedOrcids": []
     },
     {
       "id": "eef-khw-knot",
@@ -31694,8 +31804,23 @@
           "personId": "acc-acw-sneller",
           "author": "Lineke Sneller",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-acw-sneller",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.vu.nl/en/publications/efficiency-gains-in-public-service-delivery-through-information-t/",
+            "https://www.sciencedirect.com/science/article/abs/pii/S0740624X22000570",
+            "https://www.rug.nl/business-school/news-items/lineke-sneller-appointed-as-professor-of-practice-of-digitalization-ai-in-accounting-and-audit"
+          ]
         }
-      ]
+      ],
+      "curatedSourceEvidence": [
+        "https://research.vu.nl/en/publications/efficiency-gains-in-public-service-delivery-through-information-t/",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0740624X22000570",
+        "https://www.rug.nl/business-school/news-items/lineke-sneller-appointed-as-professor-of-practice-of-digitalization-ai-in-accounting-and-audit"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
     },
     {
       "id": "doi:10.3390/land11060782",
@@ -55748,8 +55873,21 @@
           "personId": "acc-acw-sneller",
           "author": "Lineke Sneller",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "acc-acw-sneller",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://link.springer.com/article/10.1057/s41310-016-0017-0",
+            "https://www.rug.nl/business-school/news-items/lineke-sneller-appointed-as-professor-of-practice-of-digitalization-ai-in-accounting-and-audit"
+          ]
         }
-      ]
+      ],
+      "curatedSourceEvidence": [
+        "https://link.springer.com/article/10.1057/s41310-016-0017-0",
+        "https://www.rug.nl/business-school/news-items/lineke-sneller-appointed-as-professor-of-practice-of-digitalization-ai-in-accounting-and-audit"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
     },
     {
       "id": "doi:10.1016/j.copsyc.2016.06.001",
@@ -91767,6 +91905,252 @@
       ],
       "curatedSourceEvidence": [
         "https://research.rug.nl/en/publications/the-forgotten-middle-class-an-analysis-of-the-effects-of-globalis/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1007/s13369-012-0346-7",
+      "doi": "10.1007/s13369-012-0346-7",
+      "publicationIds": [
+        "doi:10.1007/s13369-012-0346-7"
+      ],
+      "people": [
+        "ims-sjs-matr"
+      ],
+      "matches": [
+        {
+          "personId": "ims-sjs-matr",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://www.rug.nl/staff/s.j.s.matr/cv",
+            "https://link.springer.com/article/10.1007/s13369-012-0346-7"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://www.rug.nl/staff/s.j.s.matr/cv",
+        "https://link.springer.com/article/10.1007/s13369-012-0346-7"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.cie.2022.108876",
+      "doi": "10.1016/j.cie.2022.108876",
+      "publicationIds": [
+        "doi:10.1016/j.cie.2022.108876"
+      ],
+      "people": [
+        "ops-t-karabas"
+      ],
+      "matches": [
+        {
+          "personId": "ops-t-karabas",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://open.metu.edu.tr/handle/11511/102215",
+            "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+            "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+            "https://www.rug.nl/staff/t.karabas/?lang=en"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://open.metu.edu.tr/handle/11511/102215",
+        "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+        "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+        "https://www.rug.nl/staff/t.karabas/?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.cie.2024.110853",
+      "doi": "10.1016/j.cie.2024.110853",
+      "publicationIds": [
+        "doi:10.1016/j.cie.2024.110853"
+      ],
+      "people": [
+        "ops-t-karabas"
+      ],
+      "matches": [
+        {
+          "personId": "ops-t-karabas",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+            "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+            "https://www.rug.nl/staff/t.karabas/?lang=en",
+            "https://doi.org/10.1016/j.cie.2024.110853",
+            "https://ie.metu.edu.tr/tr/dergi-makaleleri"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+        "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+        "https://www.rug.nl/staff/t.karabas/?lang=en",
+        "https://doi.org/10.1016/j.cie.2024.110853",
+        "https://ie.metu.edu.tr/tr/dergi-makaleleri"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "work:dergipark:584119",
+      "doi": "",
+      "publicationIds": [
+        "work:dergipark:584119"
+      ],
+      "people": [
+        "ops-t-karabas"
+      ],
+      "matches": [
+        {
+          "personId": "ops-t-karabas",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://dergipark.org.tr/tr/pub/endustrimuhendisligi/article/584119",
+            "https://dergipark.org.tr/tr/download/article-file/747499",
+            "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+            "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+            "https://www.rug.nl/staff/t.karabas/?lang=en"
+          ]
+        }
+      ],
+      "title": "BİR SAVUNMA SANAYİ ŞİRKETİNDE MALZEME ENVANTER YÖNETİM SİSTEMİNİN YENİDEN TASARLANMASI",
+      "url": "https://dergipark.org.tr/tr/pub/endustrimuhendisligi/article/584119",
+      "curatedSourceEvidence": [
+        "https://dergipark.org.tr/tr/pub/endustrimuhendisligi/article/584119",
+        "https://dergipark.org.tr/tr/download/article-file/747499",
+        "https://avesis.metu.edu.tr/tkarabas/yayinlar",
+        "https://pub.orcid.org/v3.0/0000-0002-6183-8582/record",
+        "https://www.rug.nl/staff/t.karabas/?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1002/jae.3012",
+      "doi": "10.1002/jae.3012",
+      "publicationIds": [
+        "doi:10.1002/jae.3012"
+      ],
+      "people": [
+        "eef-j-klooster"
+      ],
+      "matches": [
+        {
+          "personId": "eef-j-klooster",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://pub.orcid.org/v3.0/0000-0003-4784-3104/record",
+            "https://doi.org/10.1002/jae.3012",
+            "https://api.crossref.org/works/10.1002/jae.3012",
+            "https://www.rug.nl/staff/j.klooster/",
+            "https://www.eur.nl/nieuws/jens-klooster-wint-willem-r-van-zwet-award"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://pub.orcid.org/v3.0/0000-0003-4784-3104/record",
+        "https://doi.org/10.1002/jae.3012",
+        "https://api.crossref.org/works/10.1002/jae.3012",
+        "https://www.rug.nl/staff/j.klooster/",
+        "https://www.eur.nl/nieuws/jens-klooster-wint-willem-r-van-zwet-award"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.2307/27650053",
+      "doi": "10.2307/27650053",
+      "publicationIds": [
+        "doi:10.2307/27650053"
+      ],
+      "people": [
+        "eef-smw-phlippen"
+      ],
+      "matches": [
+        {
+          "personId": "eef-smw-phlippen",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://annals.ensae.fr/archives-1986-2009/",
+            "https://api.crossref.org/works/10.2307/27650053",
+            "https://www.rug.nl/staff/s.m.w.phlippen/",
+            "https://research.rug.nl/en/persons/sandra-phlippen/",
+            "https://pure.eur.nl/en/publications/come-close-and-co-create-proximities-in-pharmaceutical-innovation/",
+            "https://repub.eur.nl/pub/13754/18%20dissertation.pdf",
+            "https://repub.eur.nl/pub/13754/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://annals.ensae.fr/archives-1986-2009/",
+        "https://api.crossref.org/works/10.2307/27650053",
+        "https://www.rug.nl/staff/s.m.w.phlippen/",
+        "https://research.rug.nl/en/persons/sandra-phlippen/",
+        "https://pure.eur.nl/en/publications/come-close-and-co-create-proximities-in-pharmaceutical-innovation/",
+        "https://repub.eur.nl/pub/13754/18%20dissertation.pdf",
+        "https://repub.eur.nl/pub/13754/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "work:publisher-37082293472590ba6c05",
+      "doi": "",
+      "publicationIds": [
+        "work:publisher-37082293472590ba6c05"
+      ],
+      "people": [
+        "eef-smw-phlippen"
+      ],
+      "matches": [
+        {
+          "personId": "eef-smw-phlippen",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://esb.nu/koopkrachteffecten-energie-inflatie-vooralsnog-kleiner-dan-geraamd/",
+            "https://esb.nu/wp-content/uploads/2023/07/Bladerpdf-4813.pdf",
+            "https://esb.nu/wp-content/uploads/2024/03/Bladerpdf-4831v3.pdf",
+            "https://research.rug.nl/en/persons/sandra-phlippen/"
+          ]
+        }
+      ],
+      "title": "Koopkrachteffecten energie-inflatie vooralsnog kleiner dan geraamd",
+      "url": "https://esb.nu/koopkrachteffecten-energie-inflatie-vooralsnog-kleiner-dan-geraamd/",
+      "curatedSourceEvidence": [
+        "https://esb.nu/koopkrachteffecten-energie-inflatie-vooralsnog-kleiner-dan-geraamd/",
+        "https://esb.nu/wp-content/uploads/2023/07/Bladerpdf-4813.pdf",
+        "https://esb.nu/wp-content/uploads/2024/03/Bladerpdf-4831v3.pdf",
+        "https://research.rug.nl/en/persons/sandra-phlippen/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "work:publisher-201ef51119feffc38294",
+      "doi": "",
+      "publicationIds": [
+        "work:publisher-201ef51119feffc38294"
+      ],
+      "people": [
+        "eef-smw-phlippen"
+      ],
+      "matches": [
+        {
+          "personId": "eef-smw-phlippen",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://esb.nu/redactioneel-bevrijd-de-deeleconomie/",
+            "https://esb.nu/wp-content/uploads/2022/11/225-225_reds-1.pdf",
+            "https://esb.nu/inhoudsopgave-3/d_002-003_inhoud/",
+            "https://research.rug.nl/en/persons/sandra-phlippen/"
+          ]
+        }
+      ],
+      "title": "Bevrijd de deeleconomie",
+      "url": "https://esb.nu/redactioneel-bevrijd-de-deeleconomie/",
+      "curatedSourceEvidence": [
+        "https://esb.nu/redactioneel-bevrijd-de-deeleconomie/",
+        "https://esb.nu/wp-content/uploads/2022/11/225-225_reds-1.pdf",
+        "https://esb.nu/inhoudsopgave-3/d_002-003_inhoud/",
+        "https://research.rug.nl/en/persons/sandra-phlippen/"
       ],
       "curatedSourceCheckedOn": "2026-10-11"
     }
