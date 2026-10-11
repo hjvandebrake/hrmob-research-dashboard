@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-10",
     "rostersCheckedOn": "2026-09-07",
     "people": 499,
     "pagesChecked": 515,
@@ -14,7 +14,7 @@
       "JS",
       "MR"
     ],
-    "affiliationSelection": "Off by default. The HRM&OB selection adds Carsten de Dreu, Michelle Ryan and Jennifer Jordan to both paper counts and headcount. Other departments are unchanged.",
+    "affiliationSelection": "Off by default. The HRM&OB selection adds Carsten de Dreu, Michelle Ryan, Janka Stoker and Jennifer Jordan to both paper counts and headcount. Other departments are unchanged.",
     "excludedOfficeStaff": [
       "acc-g-kok",
       "acc-rcj-oosterhoff-verbruggen",
@@ -46,9 +46,9 @@
       ],
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
-        "title": 626,
-        "issn": 2587,
-        "unmatched": 551,
+        "title": 636,
+        "issn": 2591,
+        "unmatched": 553,
         "title-alias": 3,
         "excluded-doi-mismatch": 2
       },
@@ -116,7 +116,7 @@
         {
           "department": "EEF",
           "currentHeadcount": 135,
-          "withAnyLinkedRecord": 110,
+          "withAnyLinkedRecord": 111,
           "unavailableProfiles": 24,
           "profilesWithAtMost10ParsedArticles": 111,
           "roleUnspecified": 135,
@@ -267,16 +267,16 @@
         }
       ],
       "yearBasisCounts": {
-        "official-reference": 934,
-        "publisher-issue": 2432,
-        "publisher-first-publication": 297,
-        "stored-unverified": 105,
+        "official-reference": 950,
+        "publisher-issue": 2434,
+        "publisher-first-publication": 294,
+        "stored-unverified": 106,
         "publisher-override": 1
       },
       "doiTitleChecks": {
-        "no-doi": 807,
+        "no-doi": 819,
         "title-agreement": 2711,
-        "unavailable": 249,
+        "unavailable": 253,
         "excluded-mismatch": 2
       },
       "rosterModes": {
@@ -345,7 +345,7 @@
             {
               "department": "EEF",
               "currentHeadcount": 135,
-              "withAnyLinkedRecord": 110,
+              "withAnyLinkedRecord": 111,
               "unavailableProfiles": 24,
               "profilesWithAtMost10ParsedArticles": 111,
               "roleUnspecified": 135,
@@ -419,7 +419,7 @@
             {
               "department": "EEF",
               "currentHeadcount": 135,
-              "withAnyLinkedRecord": 110,
+              "withAnyLinkedRecord": 111,
               "unavailableProfiles": 24,
               "profilesWithAtMost10ParsedArticles": 111,
               "roleUnspecified": 135,
@@ -585,7 +585,7 @@
       "appointmentSection": "associate_professor",
       "role": "Associate professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 6
+      "publicationPageArticles": 7
     },
     {
       "id": "hrmob-o-janssen",
@@ -1164,7 +1164,7 @@
       "appointmentSection": "full_professor",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 8
+      "publicationPageArticles": 9
     },
     {
       "id": "mkt-bm-fennis",
@@ -1234,7 +1234,7 @@
       "appointmentSection": "full_professor",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 6
+      "publicationPageArticles": 7
     },
     {
       "id": "mkt-k-van-ittersum",
@@ -2132,7 +2132,7 @@
       "appointmentSection": "full_professor",
       "role": "36543/37147",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 5
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-m-wyrwich",
@@ -2271,7 +2271,7 @@
       "appointmentSection": "associate_professor",
       "role": "33777/37147",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 5
+      "publicationPageArticles": 6
     },
     {
       "id": "ims-i-estrada-vaquero",
@@ -2453,7 +2453,7 @@
       "appointmentSection": "associate_professor",
       "role": "37189/37147",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 8
+      "publicationPageArticles": 10
     },
     {
       "id": "ims-op-roemeling",
@@ -2801,7 +2801,7 @@
       "appointmentSection": "assistant_professor",
       "role": "37147",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 3
+      "publicationPageArticles": 4
     },
     {
       "id": "ims-a-fakha",
@@ -3046,7 +3046,7 @@
       "appointmentSection": "assistant_professor",
       "role": "32025",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 8
+      "publicationPageArticles": 9
     },
     {
       "id": "ims-pjo-kuusela",
@@ -3498,7 +3498,7 @@
       "appointmentSection": "associate_professor",
       "role": "Associate Professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 8
+      "publicationPageArticles": 9
     },
     {
       "id": "ops-m-dienstknecht",
@@ -3740,7 +3740,7 @@
       "appointmentSection": "unknown",
       "role": "Professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 5
+      "publicationPageArticles": 6
     },
     {
       "id": "ops-b-de-jonge",
@@ -5724,7 +5724,7 @@
       "appointmentSection": "unknown",
       "role": "Professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 7
+      "publicationPageArticles": 8
     },
     {
       "id": "acc-ja-emanuels",
@@ -6349,7 +6349,7 @@
       "appointmentSection": "assistant_professor",
       "role": "Assistant Professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 7
+      "publicationPageArticles": 9
     },
     {
       "id": "acc-t-sikkema",
@@ -8990,7 +8990,7 @@
       "appointmentSection": "unknown",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 3
+      "publicationPageArticles": 4
     },
     {
       "id": "ops-lt-postma",
@@ -9644,7 +9644,7 @@
       "appointmentSection": "unknown",
       "role": "Professor International Economics & Business; Director 'In the LEAD'; Professor Leadership & Sustainability Aarhus BSS, Aarhus University",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 6
+      "publicationPageArticles": 7
     },
     {
       "id": "gem-j-de-haan",
@@ -9798,7 +9798,7 @@
       "appointmentSection": "unknown",
       "role": "Professor",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 7
+      "publicationPageArticles": 8
     },
     {
       "id": "gem-aa-erumban",
@@ -14866,7 +14866,7 @@
       "appointmentSection": "emeritus",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 6
+      "publicationPageArticles": 9
     },
     {
       "id": "eef-m-fazzo-cusan",
@@ -15224,7 +15224,7 @@
       "appointmentSection": "emeritus",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 6
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-me-helmantel",
@@ -15291,7 +15291,7 @@
       "appointmentSection": "unknown",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 4
+      "publicationPageArticles": 5
     },
     {
       "id": "eef-c-hoeben",
@@ -15752,7 +15752,7 @@
       "appointmentSection": "phd",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 5
+      "publicationPageArticles": 6
     },
     {
       "id": "eef-raj-mees",
@@ -15818,7 +15818,7 @@
       "appointmentSection": "unknown",
       "role": "",
       "publicationPageStatus": 200,
-      "publicationPageArticles": 7
+      "publicationPageArticles": 8
     },
     {
       "id": "eef-mc-mills",
@@ -22241,7 +22241,9 @@
       "countedInComparison": true,
       "aipJournal": "Journal of Management Control",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "acc-pmg-dirks"
+      ],
       "comparisonYear": 2026,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1007%2Fs00187-026-00416-0",
@@ -29808,7 +29810,9 @@
       "countedInComparison": true,
       "aipJournal": "JOURNAL OF SERVICE RESEARCH",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "mkt-j-van-doorn"
+      ],
       "comparisonYear": 2025,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1177%2F10946705241311210",
@@ -30087,7 +30091,9 @@
       "countedInComparison": true,
       "aipJournal": "TRANSPORTATION PLANNING AND TECHNOLOGY",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ops-p-buijs"
+      ],
       "comparisonYear": 2026,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1080%2F03081060.2025.2606513",
@@ -34112,7 +34118,10 @@
       "countedInComparison": true,
       "aipJournal": "Journal of Business Research",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ims-ne-fabian",
+        "ims-tlj-broekhuizen"
+      ],
       "comparisonYear": 2024,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jbusres.2024.114632",
@@ -34612,10 +34621,12 @@
       "countedInComparison": true,
       "aipJournal": "",
       "aipMatchMethod": "unmatched",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "acc-jt-reilley"
+      ],
       "comparisonYear": 2024,
-      "comparisonYearBasis": "publisher-first-publication",
-      "comparisonYearSource": "https://api.crossref.org/works/10.3384%2Fvs.2001-5992.2024.11.1.1-8",
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.t.reilley/research?lang=en",
       "doiTitleCheck": "title-agreement"
     },
     {
@@ -39452,7 +39463,9 @@
       "countedInComparison": true,
       "aipJournal": "INFORMATION SYSTEMS JOURNAL",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ims-mag-van-offenbeek"
+      ],
       "comparisonYear": 2024,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1111%2Fisj.12504",
@@ -45516,10 +45529,12 @@
       "countedInComparison": true,
       "aipJournal": "Administrative Sciences",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ims-i-kozlinska"
+      ],
       "comparisonYear": 2023,
-      "comparisonYearBasis": "publisher-first-publication",
-      "comparisonYearSource": "https://api.crossref.org/works/10.3390%2Fadmsci13010013",
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/i.kozlinska/research?lang=en",
       "doiTitleCheck": "title-agreement"
     },
     {
@@ -46372,7 +46387,9 @@
       "countedInComparison": true,
       "aipJournal": "JOURNAL OF INFORMATION TECHNOLOGY",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ims-u-schultze"
+      ],
       "comparisonYear": 2023,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1177%2F02683962231217348",
@@ -51330,10 +51347,12 @@
       "countedInComparison": true,
       "aipJournal": "",
       "aipMatchMethod": "unmatched",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "acc-jt-reilley"
+      ],
       "comparisonYear": 2022,
-      "comparisonYearBasis": "publisher-first-publication",
-      "comparisonYearSource": "https://api.crossref.org/works/10.3384%2Fvs.2001-5992.2022.9.1.1-10",
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.t.reilley/research?lang=en",
       "doiTitleCheck": "title-agreement"
     },
     {
@@ -69614,7 +69633,9 @@
       "countedInComparison": true,
       "aipJournal": "Journal of Business Research",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "mkt-mj-gijsenberg"
+      ],
       "comparisonYear": 2021,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jbusres.2020.04.014",
@@ -85940,7 +85961,9 @@
       "countedInComparison": true,
       "aipJournal": "APPLIED ENERGY",
       "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
+      "officialProfilePeople": [
+        "ops-gb-huitema"
+      ],
       "comparisonYear": 2017,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2017.02.038",
@@ -135147,6 +135170,563 @@
       "doiTitleCheck": "title-agreement",
       "publicationKind": "Conference proceedings",
       "rankableJournal": false
+    },
+    {
+      "id": "doi:10.1177/10596011261415739",
+      "title": "Getting Published in, and Reviewing for, Group & Organization Management",
+      "year": 2026,
+      "doi": "10.1177/10596011261415739",
+      "url": "https://doi.org/10.1177/10596011261415739",
+      "journal": "Group & Organization Management",
+      "people": [
+        "eef-gm-wang",
+        "hrmob-hj-van-de-brake"
+      ],
+      "aip": 89.763,
+      "authors": [
+        "Yannick Griep",
+        "William “Billy” Obenauer",
+        "Kevin S. Cruz",
+        "W. Bruce Davis",
+        "Paul Harvey",
+        "Jonathan Pinto",
+        "Tammy Rapp",
+        "Devaki Rau",
+        "Moran Anisman-Razin",
+        "Andrew Bennett",
+        "Neva Bojovic",
+        "Layla Branicki",
+        "Turanay Caner",
+        "Rich DeJordy",
+        "Emilija Djurdjevic",
+        "Achiel Fenneman",
+        "Jesse Fenneman",
+        "Amanda M Ferguson",
+        "Roberta Fida",
+        "Kayla B. Follmer",
+        "Marion Fortin",
+        "Yvonne Garbers",
+        "Patrick Garcia",
+        "Mark Geiger",
+        "Peter T. Gianiodis",
+        "Ray Gibney",
+        "Dana L. Haggard",
+        "Anya Johnson",
+        "Dustin K. Jundt",
+        "Maria Kakarika",
+        "Deanna M. Kennedy",
+        "Christian Kiewitz",
+        "Kai N. Klasmeier",
+        "Wieke Knol",
+        "Gamze Koseoglu",
+        "Johannes Marcelus Kraak",
+        "Lyonel Laulié",
+        "Nale Lehmann-Willenbrock",
+        "James Lemoine",
+        "Marcie LePine",
+        "Xander Lub",
+        "Zhu Luke",
+        "Joshua E. Marineau",
+        "Jeremy D. Meuser",
+        "Curt B. Moore",
+        "Amanda M. Peticca-Harris",
+        "Sebastian Raetze",
+        "Cort W. Rudolph",
+        "Ultan Sherman",
+        "Aditya Simha",
+        "Maria Simosi",
+        "Jarvis Smallfield",
+        "Amanuel G. Tekleab",
+        "Benjamin J. Thomas",
+        "Joost van de Brake",
+        "Christian Vandenberghe",
+        "Ivana Vranješ",
+        "Gang Wang"
+      ],
+      "departments": [
+        "EEF",
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/h.j.van.de.brake/research?lang=en",
+      "aipJournal": "GROUP & ORGANIZATION MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": [
+        "hrmob-hj-van-de-brake"
+      ]
+    },
+    {
+      "id": "work:26a995173de3c94a80c0",
+      "title": "Public health in the age of longevity interventions: from prevention to system-wide resilience",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/70609828-a891-4d0a-831a-fb1d665b87c1",
+      "journal": "Aging",
+      "people": [
+        "eef-jo-mierau"
+      ],
+      "aip": null,
+      "authors": [
+        "Mierau, J.",
+        "Demaria, M."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.o.mierau/research?lang=en",
+      "aipJournal": "",
+      "aipMatchMethod": "unmatched",
+      "officialProfilePeople": [
+        "eef-jo-mierau"
+      ]
+    },
+    {
+      "id": "work:566cece4bc82e4a8b868",
+      "title": "Research Integrity Matters, But It Is Undermined by Generative AI",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/7fe0eb7d-c235-40b1-9937-2c6ee7bb1860",
+      "journal": "Information Systems Journal",
+      "people": [
+        "ims-mag-van-offenbeek"
+      ],
+      "aip": 93.998,
+      "authors": [
+        "Davison, R. M.",
+        "Díaz Andrade, A.",
+        "Eckhardt, A.",
+        "van Offenbeek, M.",
+        "Techatassanasoontorn, A. A.",
+        "Marabelli, M.",
+        "Nielsen, P.",
+        "Panteli, N.",
+        "Schwabe, G.",
+        "Hardin, A.",
+        "Cooper, V."
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/m.a.g.van.offenbeek/research?lang=en",
+      "aipJournal": "INFORMATION SYSTEMS JOURNAL",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "ims-mag-van-offenbeek"
+      ]
+    },
+    {
+      "id": "work:d76e5b56e45b65493864",
+      "title": "Spatial econometrics: past and future 50 years",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/48a49e54-484e-47c1-bcd9-f2e39275ac40",
+      "journal": "Spatial Economic Analysis",
+      "people": [
+        "eef-jp-elhorst",
+        "eef-m-kesina"
+      ],
+      "aip": 58.83,
+      "authors": [
+        "Elhorst, J. P.",
+        "Kesina, M."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.p.elhorst/research?lang=en",
+      "aipJournal": "Spatial Economic Analysis",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-jp-elhorst"
+      ]
+    },
+    {
+      "id": "work:db2e36265a46eee19abc",
+      "title": "Life course approach to gestational weight gain",
+      "year": 2025,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/b2de9e16-37bb-499c-853a-66a05a710a98",
+      "journal": "BMJ",
+      "people": [
+        "ops-da-osicka"
+      ],
+      "aip": null,
+      "authors": [
+        "Osicka, D. A.",
+        "Bogaerts, A."
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/d.a.osicka/research?lang=en",
+      "aipJournal": "",
+      "aipMatchMethod": "unmatched",
+      "officialProfilePeople": [
+        "ops-da-osicka"
+      ]
+    },
+    {
+      "id": "work:42f0b871effbd582f0ed",
+      "title": "Review of Income and Wealth Report of the Editors 2024–2025",
+      "year": 2025,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/ee6be599-7249-43a5-8ff5-3b8f15ca8ef0",
+      "journal": "Review of Income and Wealth",
+      "people": [
+        "gem-rc-inklaar"
+      ],
+      "aip": 80.67,
+      "authors": [
+        "Inklaar, R.",
+        "Seth, S."
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/r.c.inklaar/research?lang=en",
+      "aipJournal": "REVIEW OF INCOME AND WEALTH",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "gem-rc-inklaar"
+      ]
+    },
+    {
+      "id": "work:bbdf0b9624f9cdd61f14",
+      "title": "New developments in spatial econometric modelling",
+      "year": 2024,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/00c8599d-8788-4f47-a5e0-6ffb7f627d08",
+      "journal": "Spatial Economic Analysis",
+      "people": [
+        "eef-jp-elhorst"
+      ],
+      "aip": 58.83,
+      "authors": [
+        "Kopczewska, K.",
+        "Elhorst, P."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2024,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.p.elhorst/research?lang=en",
+      "aipJournal": "Spatial Economic Analysis",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-jp-elhorst"
+      ]
+    },
+    {
+      "id": "work:77ce33e06c322220da7f",
+      "title": "Spatial macroeconomics",
+      "year": 2024,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/ac468292-37db-4593-b4ab-a5db75de8f25",
+      "journal": "Spatial Economic Analysis",
+      "people": [
+        "eef-jp-elhorst"
+      ],
+      "aip": 58.83,
+      "authors": [
+        "Bond-Smith, S.",
+        "Corrado, L.",
+        "Felsenstein, D.",
+        "Elhorst, P."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2024,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.p.elhorst/research?lang=en",
+      "aipJournal": "Spatial Economic Analysis",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-jp-elhorst"
+      ]
+    },
+    {
+      "id": "work:e1023a2d7e1d0c7536dd",
+      "title": "Do old theories fit new contexts? New perspectives on corporate governance in entrepreneurial firms",
+      "year": 2023,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/5cca46f9-4778-4e53-852c-19aaec06bfe1",
+      "journal": "Venture Capital",
+      "people": [
+        "eef-clm-hermes"
+      ],
+      "aip": 72.329,
+      "authors": [
+        "Bellavitis, C.",
+        "Deloof, M.",
+        "Filatotchev, I.",
+        "Hermes, N.",
+        "Paeleman, I."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2023,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/c.l.m.hermes/research?lang=en",
+      "aipJournal": "Venture Capital",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-clm-hermes"
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2023.4006",
+      "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+      "year": 2023,
+      "doi": "10.5465/amj.2023.4006",
+      "url": "https://openalex.org/W4389936938",
+      "journal": "Academy of Management Journal",
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "aip": 99.152,
+      "authors": [
+        "Matthew G. Grimes",
+        "Georg von Krogh",
+        "Stefan Feuerriegel",
+        "Floor A. Rink",
+        "Marc B. Gruber"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2023,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.5465%2Famj.2023.4006",
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "id": "doi:10.5465/amj.2022.4001",
+      "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
+      "year": 2022,
+      "doi": "10.5465/amj.2022.4001",
+      "url": "https://openalex.org/W4213150210",
+      "journal": "Academy of Management Journal",
+      "people": [
+        "hrmob-fa-rink"
+      ],
+      "aip": 99.152,
+      "authors": [
+        "Amanda P. Cowen",
+        "Floor A. Rink",
+        "Ilya R. P. Cuypers",
+        "Denis A. Grégoire",
+        "Ingo Weller"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2022,
+      "comparisonYearBasis": "stored-unverified",
+      "comparisonYearSource": "https://openalex.org/W4213150210",
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "id": "work:a311ed59395e55eb20e5",
+      "title": "Putting People Back into the Picture: Some Studies in Demographic Economics",
+      "year": 2020,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/f724a810-8a0a-4155-99eb-9ffedadc524f",
+      "journal": "Economist-Netherlands",
+      "people": [
+        "eef-bj-heijdra"
+      ],
+      "aip": 59.272,
+      "authors": [
+        "Heijdra, B. J.",
+        "Prettner, K."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2020,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/b.j.heijdra/research?lang=en",
+      "aipJournal": "ECONOMIST-NETHERLANDS",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-bj-heijdra"
+      ]
+    },
+    {
+      "id": "work:2f430362b6ac10a5d87f",
+      "title": "Jan Tinbergen: Engineering a Better World: Celebrating Fifty Years of Nobel Prizes in Economics",
+      "year": 2019,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/2a14efba-faf1-4ff4-addc-ed400386d680",
+      "journal": "Economist-Netherlands",
+      "people": [
+        "eef-bj-heijdra"
+      ],
+      "aip": 59.272,
+      "authors": [
+        "Heijdra, B. J.",
+        "ter Weel, B."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2019,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/b.j.heijdra/research?lang=en",
+      "aipJournal": "ECONOMIST-NETHERLANDS",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-bj-heijdra"
+      ]
+    },
+    {
+      "id": "work:38a2970301df8e0e4d18",
+      "title": "EHDR and the economic history of Eastern Europe",
+      "year": 2018,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/6d7a82a0-5716-4fe8-92d7-ceaf0d14d92b",
+      "journal": "Economic History of Developing Regions",
+      "people": [
+        "eef-m-malinowski"
+      ],
+      "aip": 72.837,
+      "authors": [
+        "Gardner, L.",
+        "Klein, A.",
+        "Malinowski, M.",
+        "Vonyó, T."
+      ],
+      "departments": [
+        "EEF"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2018,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/m.malinowski/research?lang=en",
+      "aipJournal": "Economic History of Developing Regions",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "eef-m-malinowski"
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "title": "Managing Risk and Resilience",
+      "year": 2015,
+      "doi": "10.5465/amj.2015.4004",
+      "url": "https://openalex.org/W2248438086",
+      "journal": "Academy of Management Journal",
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "aip": 99.152,
+      "authors": [
+        "Gerben S. van der Vegt",
+        "Peter Essens",
+        "Margareta Wahlström",
+        "Gerard George"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2015,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "id": "work:41b05efe6848635b289b",
+      "title": "The Journal of Economic Geography a decade on: Where do we go from here?",
+      "year": 2011,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/e60a36db-6bfc-48ec-9dda-2c868519f7c6",
+      "journal": "Journal of Economic Geography",
+      "people": [
+        "gem-jh-garretsen"
+      ],
+      "aip": 94.115,
+      "authors": [
+        "Garretsen, H.",
+        "Martin, R."
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2011,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/j.h.garretsen/research?lang=en",
+      "aipJournal": "JOURNAL OF ECONOMIC GEOGRAPHY",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "gem-jh-garretsen"
+      ]
     }
   ]
 }

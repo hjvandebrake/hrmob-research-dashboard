@@ -7,12 +7,14 @@
   const PAGES = [
     {
       key: "research-time",
+      icon: "clock",
       group: "faq",
       title: "How is my research time determined?",
       summary: "Career track, FEBRI status, grants, and the department research pool.",
     },
     {
       key: "grant-steps",
+      icon: "grant",
       group: "faq",
       title: "What steps do I take when applying for a grant?",
       summary: "Who to contact, and what a grant means for your teaching and for new positions.",
@@ -20,12 +22,14 @@
     },
     {
       key: "phd-supervision",
+      icon: "cap",
       group: "faq",
       title: "How do I become involved in PhD supervision?",
       summary: "How FEBRI PhD positions are filled, and other routes into supervision.",
     },
     {
       key: "conference-budgets",
+      icon: "plane",
       group: "faq",
       title: "How are conference budgets allocated?",
       summary: "How the fixed travel budget is divided, why it depends on who applies, and the CO2 limit.",
@@ -355,11 +359,22 @@
       ${share}`;
   }
 
+  // Simple line icons (24 x 24, stroke = currentColor) that tell the FAQ topics apart.
+  const ICONS = {
+    clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+    grant: '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4"/><path d="M10 12.5h5M10 16h5"/>',
+    cap: '<path d="M2.5 9 12 5l9.5 4-9.5 4z"/><path d="M6.5 11v4.2c0 1.3 2.5 2.8 5.5 2.8s5.5-1.5 5.5-2.8V11"/><path d="M21.5 9v5"/>',
+    plane: '<path d="M10.5 13.5 3 11l1.5-1.5 8 1 4.5-5c.8-.8 2.2-.8 3 0s.8 2.2 0 3l-5 4.5 1 8L14.5 22 12 14.5"/>',
+  };
+  const icon = (name, cls = "rp-icon") => (ICONS[name]
+    ? `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`
+    : "");
+
   function faqCard(page, index) {
     const pending = page.status === "pending";
     return `<a class="rp-card${pending ? " is-pending" : ""}" href="${pageHref(page.key)}">
         <span class="rp-card-body">
-          <span class="rp-card-num" aria-hidden="true">${index + 1}</span>
+          ${page.icon ? `<span class="rp-card-icon">${icon(page.icon)}</span>` : `<span class="rp-card-num" aria-hidden="true">${index + 1}</span>`}
           <span class="rp-card-text">
             <strong>${esc(page.title)}</strong>
             <span>${pending ? "Coming soon" : esc(page.summary)}</span>
@@ -411,11 +426,13 @@
         </nav>`
       : "";
     const v = VIEWS[page.view];
-    return `<nav class="rp-crumbs" aria-label="Breadcrumb"><a href="#${page.view}">${esc(v.crumb)}</a>${page.view === "faq" ? "" : `<span aria-hidden="true">/</span><span>${esc(group.title)}</span>`}</nav>
-      <div class="sec-head compact rp-head"><div><h2 class="h2">${esc(page.title)}</h2></div></div>
+    const back = page.view === "faq" ? "All questions" : "All resources";
+    return `<a class="rp-back" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>
+      <div class="sec-head compact rp-head"><div class="rp-head-title">${page.icon ? `<span class="rp-head-icon">${icon(page.icon)}</span>` : ""}<h2 class="h2">${esc(page.title)}</h2></div></div>
       ${page.group === "faq" ? `<p class="rp-disclaimer">${esc(FAQ_DISCLAIMER)}</p>` : ""}
       <div class="rp-content">${body}</div>
       ${page.note ? `<p class="rg-status small-muted">${esc(page.note)}</p>` : ""}
+      <a class="rp-back rp-back-bottom" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>
       ${pager}`;
   }
 

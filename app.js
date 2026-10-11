@@ -55,7 +55,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261010-editorials";
+const DATA_VERSION = "20261011-ties";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -4235,7 +4235,7 @@ function renderOverviewPreviews(pubs, grants, projects) {
     {href:"#staff",title:"Staff and expertise",lead:`${people.length} researchers`},
     {href:"#phds",title:"PhD projects",lead:`${projects.length} current projects`},
     {href:"#publications",title:"Publications",lead:`${pubs.length} papers, ${topJournal} with AIP ≥ 95`},
-    {href:"#metrics",title:"Department comparison",lead:"All publications & AIP ≥ 95"},
+    {href:"#metrics",title:"Department comparison",lead:"All publications"},
     {href:"#grants",title:"Grants",lead:`${openCalls} open grant call${openCalls===1?"":"s"}`},
     {href:"#faq",title:"FAQ",lead:`${faqCount||4} common questions answered`},
   ];
@@ -4263,7 +4263,10 @@ function renderOverviewNetwork() {
   if (overviewNetworkCache.key !== key) overviewNetworkCache = { key, ...buildOverviewNetworkMarkup(people, pubs) };
   svg.setAttribute("viewBox", `0 0 ${OVERVIEW_NETWORK_SIZE.width} ${OVERVIEW_NETWORK_SIZE.height}`);
   svg.innerHTML = overviewNetworkCache.markup;
+  svg.onetModel = { nodes: overviewNetworkCache.nodes || [], edges: overviewNetworkCache.edges || [] };
   if (note) note.textContent = overviewNetworkCache.note;
+  const info = document.getElementById("overview-network-info");
+  if (info) info.hidden = true;
   bindOverviewNetworkHover(svg);
 }
 
@@ -4304,15 +4307,13 @@ function buildOverviewNetworkMarkup(people, pubs) {
   [...faculty.edges, ...external.edges].forEach((edge) => {
     if (index.has(edge.source) && index.has(edge.target)) edges.push({ s: index.get(edge.source), t: index.get(edge.target), count: edge.count, internal: false });
   });
-  const members = nodes.filter((node) => node.kind === "member").length;
-  const facultyCount = nodes.filter((node) => node.kind === "faculty").length;
-  const outside = nodes.length - members;
   const noteText = nodes.length
-    ? `${members} HRM&OB researcher${members === 1 ? "" : "s"} and ${outside} coauthor${outside === 1 ? "" : "s"} who share more than one paper with the department (${facultyCount} of them FEB colleagues), ${activeWindowLabel()}. Hover over a researcher to highlight their coauthors.`
+    ? `Who publishes with whom, ${activeWindowLabel()}. Hover over a researcher to see how many papers they share.`
     : "No publications in the selected years.";
   if (!nodes.length) return { markup: "", note: noteText };
 
   layoutOverviewNetwork(nodes, edges);
+  placeOverviewNetworkLabels(nodes);
   const memberRadius = (node) => node.r || 9 + Math.sqrt(node.count) * 2.3;
   const outsideRadius = (node) => 2.6 + Math.min(4, Math.sqrt(node.count) * 1.1);
   const edgeMarkup = edges
@@ -4321,16 +4322,14 @@ function buildOverviewNetworkMarkup(people, pubs) {
     .map((edge) => {
       const a = nodes[edge.s];
       const b = nodes[edge.t];
-      return `<line class="onet-edge${edge.internal ? " is-internal" : ""}" data-s="${edge.s}" data-t="${edge.t}" x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke-width="${(edge.internal ? networkEdgeWidth(edge.count) : 0.5 + Math.min(2, edge.count * 0.35)).toFixed(2)}"/>`;
+      const width = edge.internal ? 1 + Math.min(9, edge.count * 1.1) : 0.6 + Math.min(3.5, (edge.count - 1) * 0.8);
+      const opacity = edge.internal ? 0.3 + Math.min(0.6, edge.count * 0.07) : 0.2 + Math.min(0.45, (edge.count - 1) * 0.09);
+      return `<line class="onet-edge${edge.internal ? " is-internal" : ""}" data-s="${edge.s}" data-t="${edge.t}" data-count="${edge.count}" x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke-width="${width.toFixed(2)}" stroke-opacity="${opacity.toFixed(2)}"/>`;
     }).join("");
   const outsideMarkup = nodes.map((node, i) => {
     if (node.kind === "member") return "";
     const tip = `${node.label}${node.department ? `, ${node.department}` : ""}: ${node.count} shared paper${node.count === 1 ? "" : "s"}`;
-    const r = outsideRadius(node);
-    const name = node.kind === "faculty"
-      ? `<text class="onet-faculty-label" data-i="${i}" x="${node.x.toFixed(1)}" y="${(node.y - r - 3).toFixed(1)}">${escapeHtml(facultyMapLabel(node))}</text>`
-      : "";
-    return `<circle class="onet-node is-${node.kind}" data-i="${i}" cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${r.toFixed(1)}"><title>${escapeHtml(tip)}</title></circle>${name}`;
+    return `<circle class="onet-node is-${node.kind}" data-i="${i}" cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${outsideRadius(node).toFixed(1)}"><title>${escapeHtml(tip)}</title></circle>`;
   }).join("");
   const memberMarkup = nodes.map((node, i) => {
     if (node.kind !== "member") return "";
@@ -4338,11 +4337,94 @@ function buildOverviewNetworkMarkup(people, pubs) {
     return `<g class="onet-member" data-i="${i}" tabindex="0" role="img" aria-label="${escapeHtml(`${node.label}, ${node.count} papers`)}">
       <title>${escapeHtml(`${node.label}: ${node.count} paper${node.count === 1 ? "" : "s"}`)}</title>
       <circle cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${r.toFixed(1)}"/>
-      <text class="onet-count" x="${node.x.toFixed(1)}" y="${(node.y + 4).toFixed(1)}">${node.count}</text>
-      <text class="onet-label" x="${node.x.toFixed(1)}" y="${(node.y + r + 13).toFixed(1)}">${escapeHtml(node.label)}</text>
     </g>`;
   }).join("");
-  return { markup: `<g class="onet-edges">${edgeMarkup}</g><g class="onet-outside">${outsideMarkup}</g><g class="onet-members">${memberMarkup}</g>`, note: noteText };
+  // Names sit on top of every dot and line so they stay readable.
+  const labelMarkup = nodes.map((node, i) => {
+    if (node.kind === "faculty") {
+      return `${node.leader ? `<line class="onet-leader" data-i="${i}" x1="${node.x.toFixed(1)}" y1="${node.y.toFixed(1)}" x2="${node.lx.toFixed(1)}" y2="${(node.ly - 4).toFixed(1)}"/>` : ""}${labelBackground(node, i, "onet-label-bg is-faculty")}<text class="onet-faculty-label" data-i="${i}" x="${node.lx.toFixed(1)}" y="${node.ly.toFixed(1)}" text-anchor="${node.anchor}">${escapeHtml(facultyMapLabel(node))}</text>`;
+    }
+    if (node.kind === "member") {
+      return `${labelBackground(node, i, "onet-label-bg is-member")}<text class="onet-label" data-i="${i}" x="${node.lx.toFixed(1)}" y="${node.ly.toFixed(1)}" text-anchor="${node.anchor}">${escapeHtml(node.label)}</text>`;
+    }
+    return "";
+  }).join("");
+  return { markup: `<g class="onet-edges">${edgeMarkup}</g><g class="onet-outside">${outsideMarkup}</g><g class="onet-members">${memberMarkup}</g><g class="onet-labels">${labelMarkup}</g><g class="onet-badges"></g>`, note: noteText, nodes, edges };
+}
+
+// Greedy label placement: researchers first (largest first), then FEB colleagues. Each label takes the
+// first candidate spot that clears earlier labels and researcher circles; FEB labels that end up
+// away from their dot get a thin leader line.
+function placeOverviewNetworkLabels(nodes) {
+  const { width, height } = OVERVIEW_NETWORK_SIZE;
+  const placed = [];
+  const discs = nodes.filter((node) => node.kind === "member").map((node) => ({ x: node.x, y: node.y, r: node.r || 10 }));
+  const overlaps = (box) => {
+    let score = 0;
+    placed.forEach((other) => {
+      const w = Math.min(box.x2, other.x2) - Math.max(box.x1, other.x1);
+      const h = Math.min(box.y2, other.y2) - Math.max(box.y1, other.y1);
+      if (w > 0 && h > 0) score += w * h;
+    });
+    discs.forEach((disc) => {
+      const cx = Math.max(box.x1, Math.min(disc.x, box.x2));
+      const cy = Math.max(box.y1, Math.min(disc.y, box.y2));
+      if ((cx - disc.x) ** 2 + (cy - disc.y) ** 2 < disc.r * disc.r) score += 60;
+    });
+    if (box.x1 < 2 || box.x2 > width - 2 || box.y1 < 2 || box.y2 > height - 2) score += 500;
+    return score;
+  };
+  const order = nodes
+    .map((node, i) => i)
+    .filter((i) => nodes[i].kind === "member" || nodes[i].kind === "faculty")
+    .sort((a, b) => (nodes[a].kind === nodes[b].kind ? nodes[b].count - nodes[a].count : nodes[a].kind === "member" ? -1 : 1));
+  order.forEach((i) => {
+    const node = nodes[i];
+    const member = node.kind === "member";
+    const text = member ? node.label : facultyMapLabel(node);
+    const size = member ? 12 : 10.5;
+    const w = text.length * size * 0.54 + 6;
+    const h = size + 4;
+    const r = member ? (node.r || 10) : 4;
+    const gap = member ? 4 : 3;
+    const candidates = [
+      { dx: 0, dy: r + gap + size, anchor: "middle" },
+      { dx: 0, dy: -r - gap, anchor: "middle" },
+      { dx: r + gap, dy: size * 0.35, anchor: "start" },
+      { dx: -r - gap, dy: size * 0.35, anchor: "end" },
+    ];
+    if (!member) {
+      [26, 40, 56].forEach((d) => candidates.push(
+        { dx: 0, dy: -d, anchor: "middle", leader: true },
+        { dx: 0, dy: d + size, anchor: "middle", leader: true },
+        { dx: d, dy: -d * 0.6, anchor: "start", leader: true },
+        { dx: -d, dy: -d * 0.6, anchor: "end", leader: true },
+      ));
+    } else {
+      candidates.push({ dx: 0, dy: r + gap + size * 2.1, anchor: "middle" }, { dx: 0, dy: -r - gap - size * 1.1, anchor: "middle" });
+    }
+    let best = null;
+    candidates.forEach((c, k) => {
+      const x = node.x + c.dx;
+      const y = node.y + c.dy;
+      const x1 = c.anchor === "middle" ? x - w / 2 : c.anchor === "start" ? x : x - w;
+      const box = { x1, x2: x1 + w, y1: y - size, y2: y - size + h };
+      const score = overlaps(box) + k * 0.5;
+      if (!best || score < best.score) best = { score, box, x, y, c };
+    });
+    node.lx = best.x;
+    node.ly = best.y;
+    node.anchor = best.c.anchor;
+    node.leader = Boolean(best.c.leader);
+    node.box = best.box;
+    placed.push(best.box);
+  });
+}
+
+function labelBackground(node, index, cls) {
+  if (!node.box) return "";
+  const b = node.box;
+  return `<rect class="${cls}"${index === null ? "" : ` data-i="${index}"`} x="${(b.x1 - 1).toFixed(1)}" y="${(b.y1 - 0.5).toFixed(1)}" width="${(b.x2 - b.x1 + 2).toFixed(1)}" height="${(b.y2 - b.y1 + 1).toFixed(1)}" rx="3"/>`;
 }
 
 // Short name for a coauthor in another FEB department: surname plus department code.
@@ -4519,6 +4601,7 @@ function layoutOverviewNetwork(nodes, edges) {
 function bindOverviewNetworkHover(svg) {
   if (svg.dataset.hoverBound) return;
   svg.dataset.hoverBound = "1";
+  const info = document.getElementById("overview-network-info");
   const focus = (index) => {
     svg.classList.toggle("has-focus", index !== null);
     const hot = new Set(index === null ? [] : [String(index)]);
@@ -4528,6 +4611,7 @@ function bindOverviewNetworkHover(svg) {
       if (on) { hot.add(line.dataset.s); hot.add(line.dataset.t); }
     });
     svg.querySelectorAll("[data-i]").forEach((el) => el.classList.toggle("is-hot", hot.has(el.dataset.i)));
+    renderOverviewNetworkFocus(svg, info, index);
   };
   svg.addEventListener("mouseover", (event) => {
     const member = event.target.closest(".onet-member");
@@ -4539,6 +4623,44 @@ function bindOverviewNetworkHover(svg) {
     if (member) focus(Number(member.dataset.i));
   });
   svg.addEventListener("focusout", () => focus(null));
+}
+
+// On hover: shared-paper counts on the lines to named people, and a short list of all ties.
+function renderOverviewNetworkFocus(svg, info, index) {
+  const badges = svg.querySelector(".onet-badges");
+  if (badges) badges.innerHTML = "";
+  if (index === null || !svg.onetModel) {
+    if (info) info.hidden = true;
+    return;
+  }
+  const { nodes, edges } = svg.onetModel;
+  const person = nodes[index];
+  const ties = edges
+    .filter((edge) => edge.s === index || edge.t === index)
+    .map((edge) => ({ edge, other: nodes[edge.s === index ? edge.t : edge.s] }))
+    .sort((a, b) => b.edge.count - a.edge.count || a.other.label.localeCompare(b.other.label));
+  if (badges) {
+    badges.innerHTML = ties
+      .filter(({ other }) => other.kind !== "external")
+      .map(({ edge, other }) => {
+        const x = (person.x + other.x) / 2;
+        const y = (person.y + other.y) / 2;
+        return `<g class="onet-badge"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9"/><text x="${x.toFixed(1)}" y="${(y + 3.6).toFixed(1)}">${edge.count}</text></g>`;
+      }).join("");
+  }
+  if (!info) return;
+  const named = ties.filter(({ other }) => other.kind !== "external");
+  const outside = ties.filter(({ other }) => other.kind === "external");
+  const counts = outside.map(({ edge }) => edge.count);
+  const outsideText = outside.length
+    ? `<p>${outside.length} other coauthor${outside.length === 1 ? "" : "s"}, ${Math.min(...counts) === Math.max(...counts) ? `${counts[0]} shared papers each` : `${Math.min(...counts)} to ${Math.max(...counts)} shared papers`}</p>`
+    : "";
+  info.innerHTML = `<strong>${escapeHtml(person.label)}</strong>
+    <span>${person.count} paper${person.count === 1 ? "" : "s"} in the selected years. Shared papers:</span>
+    ${named.length ? `<ul>${named.map(({ edge, other }) => `<li><span>${escapeHtml(other.kind === "faculty" ? facultyMapLabel(other) : other.label)}</span><b>${edge.count}</b></li>`).join("")}</ul>` : `<p>No shared papers with other HRM&amp;OB researchers.</p>`}
+    ${outsideText}`;
+  info.classList.toggle("is-right", person.x < OVERVIEW_NETWORK_SIZE.width / 2);
+  info.hidden = false;
 }
 
 // Calls with an upcoming deadline in the Grants call calendar window (same merged records as the calendar).
@@ -4991,7 +5113,7 @@ function renderMetrics() {
     metric(`HRM&OB AIP ≥ 95 per person, ${from}-${to}`,number(hrm?.aipAverage??null)),
     metric("HRM&OB selected headcount",hrm?.staff||0)
   ].join("");
-  document.getElementById("benchmark-identity-note").textContent=`Annual coverage: ${from}-${to}, with ${to} year-to-date through available source coverage. Each paper counts once per department, divided by the selected roster headcount. PhDs and lecturers are included; known office roles are excluded. The affiliated-researchers switch ${state.includeAffiliatedResearchers?"includes":"excludes"} Carsten de Dreu, Michelle Ryan and Jennifer Jordan in HRM&OB paper counts and headcount. Other departments are unchanged.`;
+  document.getElementById("benchmark-identity-note").textContent=`Annual coverage: ${from}-${to}, with ${to} year-to-date through available source coverage. Each paper counts once per department, divided by the selected roster headcount. PhDs and lecturers are included; known office roles are excluded. The affiliated-researchers switch ${state.includeAffiliatedResearchers?"includes":"excludes"} Carsten de Dreu, Michelle Ryan, Janka Stoker and Jennifer Jordan in HRM&OB paper counts and headcount. Other departments are unchanged.`;
   els.benchmarkTrendTitle.textContent="All journal publications per person, by year";
   renderDepartmentPublicationChart(els.benchmarkPublicationTrend,groups,from,to,"average");
   renderDepartmentPublicationChart(document.getElementById("benchmark-aip-trend"),groups,from,to,"aipAverage");

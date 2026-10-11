@@ -4174,25 +4174,53 @@ html:not(.auth-locked) .auth-gate {
 
 /* Overview research network (renderOverviewNetwork) */
 .overview-network-note { margin: 0 0 10px; color: var(--ink-500); font-size: 0.86rem; }
-.overview-network-shell { background: var(--white); border: 1px solid var(--ink-200); border-radius: 10px; overflow: hidden; }
+.overview-network-shell { position: relative; background: var(--white); border: 1px solid var(--ink-200); border-radius: 10px; overflow: hidden; }
 #overview-network-svg { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 680; }
-.onet-edge { stroke: #9fb8b2; stroke-opacity: .28; }
-.onet-edge.is-internal { stroke: #a2643d; stroke-opacity: .55; }
+.onet-edge { stroke: #7f9e97; stroke-linecap: round; }
+.onet-edge.is-internal { stroke: #9a4f24; }
 .onet-node { stroke-width: 1; }
 .onet-node.is-faculty { fill: #9bafca; stroke: #5e7596; }
 .onet-node.is-external { fill: #bed8d2; stroke: #538479; }
-.onet-faculty-label { font: 600 10.5px var(--sans); fill: #3f5675; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
-#overview-network-svg.has-focus .onet-faculty-label { opacity: .22; }
-#overview-network-svg.has-focus .onet-faculty-label.is-hot { opacity: 1; }
+.onet-faculty-label { font: 600 10.5px var(--sans); fill: #3f5675; paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+.onet-label-bg { fill: rgba(255,255,255,.88); pointer-events: none; }
+.onet-label-bg.is-faculty { fill: rgba(244,247,251,.94); stroke: #c9d3e2; stroke-width: .6; }
+#overview-network-svg.has-focus .onet-labels > * { opacity: .22; }
+#overview-network-svg.has-focus .onet-labels > .is-hot { opacity: 1; }
+.onet-leader { stroke: #5e7596; stroke-width: .7; stroke-opacity: .6; }
 .onet-member { cursor: default; outline: none; }
 .onet-member circle { fill: #fbf1ea; stroke: var(--red); stroke-width: 2; }
 .onet-member:focus-visible circle { stroke-width: 3.5; }
 .onet-count { font: 700 10.5px var(--sans); fill: var(--red-dk); text-anchor: middle; pointer-events: none; }
-.onet-label { font: 600 11.5px var(--sans); fill: var(--ink-900); text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
+.onet-label { font: 600 12px var(--sans); fill: var(--ink-900); paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
 #overview-network-svg.has-focus .onet-edge { stroke-opacity: .06; }
-#overview-network-svg.has-focus .onet-edge.is-hot { stroke-opacity: .85; }
+#overview-network-svg.has-focus .onet-edge.is-hot { stroke-opacity: .9; }
 #overview-network-svg.has-focus .onet-node,
 #overview-network-svg.has-focus .onet-member { opacity: .22; }
 #overview-network-svg.has-focus .is-hot { opacity: 1; }
 .overview-network-legend { margin-top: 10px; }
+.staff-self-reported { margin-top: 28px; padding-top: 4px; border-top: 1px solid var(--ink-200); }
+.staff-self-reported > .small-muted { margin: -4px 0 12px; }
+.rp-back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 12px; padding: 6px 14px 6px 10px; border: 1px solid var(--ink-200); border-radius: 999px; background: var(--white); color: var(--ink-900); font-size: 0.86rem; font-weight: 600; text-decoration: none; }
+.rp-back:hover { border-color: var(--red); color: var(--red); }
+.rp-back:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+.rp-back-bottom { margin: 22px 0 0; }
+.rp-head-title { display: flex; align-items: center; gap: 14px; }
+.rp-head-icon { flex: 0 0 auto; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--red-lt); color: var(--red); }
+.rp-head-icon .rp-icon { width: 28px; height: 28px; }
+.rp-card-icon { flex: 0 0 40px; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--red-lt); color: var(--red); }
+.rp-card-icon .rp-icon { width: 24px; height: 24px; }
+.rp-card:hover .rp-card-icon { background: var(--red); color: var(--white); }
+@media (max-width: 640px) { .rp-head-icon { width: 40px; height: 40px; } .rp-head-icon .rp-icon { width: 22px; height: 22px; } }
+.onet-badge circle { fill: var(--white); stroke: #9a4f24; stroke-width: 1.4; }
+.onet-badge text { font: 700 10px var(--sans); fill: #7a3d1b; text-anchor: middle; pointer-events: none; }
+.onet-badges { pointer-events: none; }
+.onet-info { position: absolute; top: 12px; left: 12px; max-width: 280px; padding: 12px 14px; background: rgba(255,255,255,.96); border: 1px solid var(--ink-200); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.08); font-size: 0.84rem; line-height: 1.4; pointer-events: none; }
+.onet-info.is-right { left: auto; right: 12px; }
+.onet-info strong { display: block; font-family: var(--serif); font-size: 1rem; }
+.onet-info > span { display: block; color: var(--ink-500); margin-bottom: 6px; }
+.onet-info ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.onet-info li { display: flex; justify-content: space-between; gap: 14px; }
+.onet-info li b { color: #7a3d1b; }
+.onet-info p { margin: 6px 0 0; color: var(--ink-700); }
+@media (max-width: 640px) { .onet-info { position: static; max-width: none; border-radius: 0; border-width: 1px 0 0; box-shadow: none; } }
 
