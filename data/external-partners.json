@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-11",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 796,
-    "cacheHits": 796,
+    "eligiblePublications": 790,
+    "cacheHits": 788,
     "fetched": 0,
-    "coveredPublications": 795,
-    "missingCacheRecords": 0,
+    "coveredPublications": 787,
+    "missingCacheRecords": 2,
     "offline": true,
-    "partnerCount": 805,
+    "partnerCount": 800,
     "heldInstitutionIds": [
       "https://openalex.org/I4210153428"
     ]
@@ -4342,7 +4342,7 @@
       "institution": "Tampere University",
       "country": "FI",
       "type": "education",
-      "publicationCount": 37,
+      "publicationCount": 36,
       "staffIds": [
         "FR",
         "JDB",
@@ -4357,7 +4357,6 @@
         "Dirk Lehr",
         "Hoda Vaziri",
         "Jo Annika Reins",
-        "Johannes Wendsche",
         "Kalevi Korpela",
         "Lisa LaRue",
         "Liudmila Lipiäinen",
@@ -4372,10 +4371,8 @@
         "Saija Mauno",
         "Tapio Nummi",
         "Taru Feldt",
-        "Tim Vahle‐Hinz",
         "Tytti Pasanen",
         "Ulla Kinnunen",
-        "Ute Stephan",
         "Yasushi Suko"
       ],
       "publications": [
@@ -4523,20 +4520,6 @@
           "authors": [
             "Merly Kosenkranius",
             "Miika Kujanpää"
-          ]
-        },
-        {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
           ]
         },
         {
@@ -7208,7 +7191,7 @@
       "institution": "University of Virginia",
       "country": "US",
       "type": "education",
-      "publicationCount": 15,
+      "publicationCount": 16,
       "staffIds": [
         "BN",
         "FR",
@@ -7217,6 +7200,7 @@
         "MR"
       ],
       "authors": [
+        "Amanda P. Cowen",
         "Barbara A. Spellman",
         "Brian A. Nosek",
         "Christopher T. Begeny",
@@ -7349,6 +7333,17 @@
           ]
         },
         {
+          "id": "doi:10.5465/amj.2022.4001",
+          "year": 2022,
+          "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Amanda P. Cowen"
+          ]
+        },
+        {
           "id": "doi:10.1016/j.cresp.2021.100028",
           "year": 2022,
           "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
@@ -7414,7 +7409,7 @@
       "institution": "Hochschule Bonn-Rhein-Sieg",
       "country": "DE",
       "type": "education",
-      "publicationCount": 14,
+      "publicationCount": 13,
       "staffIds": [
         "FR",
         "JDB"
@@ -7424,10 +7419,7 @@
         "Christine Syrek",
         "Dirk Lehr",
         "Jo Annika Reins",
-        "Johannes Wendsche",
-        "Tim Vahle‐Hinz",
-        "Ulla Kinnunen",
-        "Ute Stephan"
+        "Ulla Kinnunen"
       ],
       "publications": [
         {
@@ -7518,20 +7510,6 @@
           ],
           "authors": [
             "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
           ]
         },
         {
@@ -14165,6 +14143,138 @@
       ]
     },
     {
+      "id": "gb:university of cambridge",
+      "institution": "University of Cambridge",
+      "country": "GB",
+      "type": "education",
+      "publicationCount": 8,
+      "staffIds": [
+        "CDD",
+        "FR",
+        "JL",
+        "JS",
+        "LM",
+        "YY"
+      ],
+      "authors": [
+        "Alexandra L. J. Freeman",
+        "Alice C.E. Lawrence",
+        "Antony S. R. Manstead",
+        "David De Cremer",
+        "Flávio S. Azevedo",
+        "Hannes Jarke",
+        "Jason Rentfrow",
+        "Kai Ruggeri",
+        "Matthew Grimes",
+        "Ondřej Kácha",
+        "Peter J. Rentfrow",
+        "Ron Martin",
+        "Sander van der Linden",
+        "Silvana Mareva",
+        "Tomas Folke",
+        "Yara Kyrychenko"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Flávio S. Azevedo",
+            "Alexandra L. J. Freeman",
+            "Alice C.E. Lawrence"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Yara Kyrychenko",
+            "Sander van der Linden"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2023.4006",
+          "year": 2023,
+          "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Matthew Grimes"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Kai Ruggeri",
+            "Hannes Jarke",
+            "Ondřej Kácha",
+            "Silvana Mareva",
+            "Tomas Folke"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10551-018-4070-4",
+          "year": 2020,
+          "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
+          "staffIds": [
+            "YY"
+          ],
+          "authors": [
+            "David De Cremer"
+          ]
+        },
+        {
+          "id": "doi:10.69554/hdwl1333",
+          "year": 2020,
+          "title": "Urban psychology and British cities: Do personality traits matter for resilience to recessions?",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Ron Martin",
+            "Jason Rentfrow"
+          ]
+        },
+        {
+          "id": "doi:10.1093/cjres/rsx031",
+          "year": 2018,
+          "title": "Brexit and the relevance of regional personality traits: more psychological Openness could have swung the regional vote",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Ron Martin",
+            "Peter J. Rentfrow"
+          ]
+        },
+        {
+          "id": "doi:10.1037/0022-3514.87.4.510",
+          "year": 2004,
+          "title": "The Interpersonal Effects of Emotions in Negotiations: A Motivated Information Processing Approach.",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Antony S. R. Manstead"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:university of cologne",
       "institution": "University of Cologne",
       "country": "DE",
@@ -15451,99 +15561,6 @@
       ]
     },
     {
-      "id": "gb:imperial college london",
-      "institution": "Imperial College London",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 7,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Bang Zheng",
-        "Mabel Ikpeme"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1007/s12144-024-06989-0",
-          "year": 2025,
-          "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        },
-        {
-          "id": "doi:10.1111/spc3.12909",
-          "year": 2023,
-          "title": "Conceptual replication and extension of health behavior theories' predictions in the context of COVID‐19: Evidence across countries and over time",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.2968",
-          "year": 2023,
-          "title": "Identifying important individual‐ and country‐level predictors of conspiracy theorizing: A machine learning analysis",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.cresp.2021.100028",
-          "year": 2022,
-          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        },
-        {
-          "id": "doi:10.1177/01461672211036602",
-          "year": 2021,
-          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        },
-        {
-          "id": "doi:10.1093/eurpub/ckab165.328",
-          "year": 2021,
-          "title": "Work-Life Balance Inequalities among Veterinary and Allied Professionals: A Qualitative Review",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Mabel Ikpeme"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.2572",
-          "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Bang Zheng"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:johannes gutenberg university mainz",
       "institution": "Johannes Gutenberg University Mainz",
       "country": "DE",
@@ -15756,6 +15773,113 @@
           ],
           "authors": [
             "Thomas Rigotti"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:ludwig maximilians universit t m nchen",
+      "institution": "Ludwig-Maximilians-Universität München",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 7,
+      "staffIds": [
+        "BN",
+        "FR",
+        "GVV",
+        "JL",
+        "LM",
+        "SB",
+        "TDV"
+      ],
+      "authors": [
+        "Felix D. Schönbrodt",
+        "Ingo Weller",
+        "Martin Hoegl",
+        "Max Reinwald",
+        "Moritz Heene",
+        "Stefan Feuerriegel"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/01492063231206107",
+          "year": 2025,
+          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Martin Hoegl"
+          ]
+        },
+        {
+          "id": "doi:10.1002/hrm.22203",
+          "year": 2024,
+          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Max Reinwald"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Stefan Feuerriegel"
+          ]
+        },
+        {
+          "id": "doi:10.1002/job.2683",
+          "year": 2023,
+          "title": "Am I the Only One? Consequences of Change Championing (A)symmetry on Group‐ and Individual‐Level Change Outcomes",
+          "staffIds": [
+            "SB"
+          ],
+          "authors": [
+            "Max Reinwald"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2023.4006",
+          "year": 2023,
+          "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Stefan Feuerriegel"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2022.4001",
+          "year": 2022,
+          "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Ingo Weller"
+          ]
+        },
+        {
+          "id": "doi:10.1177/2515245917747646",
+          "year": 2018,
+          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
+          "staffIds": [
+            "BN",
+            "FR",
+            "LM"
+          ],
+          "authors": [
+            "Moritz Heene",
+            "Felix D. Schönbrodt"
           ]
         }
       ]
@@ -16276,125 +16400,6 @@
             "Letícia Silva",
             "Lígia Carolina Oliveira-Silva",
             "Olívia Pillar Perez Miziara"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gb:university of cambridge",
-      "institution": "University of Cambridge",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 7,
-      "staffIds": [
-        "CDD",
-        "JL",
-        "JS",
-        "LM",
-        "YY"
-      ],
-      "authors": [
-        "Alexandra L. J. Freeman",
-        "Alice C.E. Lawrence",
-        "Antony S. R. Manstead",
-        "David De Cremer",
-        "Flávio S. Azevedo",
-        "Hannes Jarke",
-        "Jason Rentfrow",
-        "Kai Ruggeri",
-        "Ondřej Kácha",
-        "Peter J. Rentfrow",
-        "Ron Martin",
-        "Sander van der Linden",
-        "Silvana Mareva",
-        "Tomas Folke",
-        "Yara Kyrychenko"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Flávio S. Azevedo",
-            "Alexandra L. J. Freeman",
-            "Alice C.E. Lawrence"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Yara Kyrychenko",
-            "Sander van der Linden"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Kai Ruggeri",
-            "Hannes Jarke",
-            "Ondřej Kácha",
-            "Silvana Mareva",
-            "Tomas Folke"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10551-018-4070-4",
-          "year": 2020,
-          "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
-          "staffIds": [
-            "YY"
-          ],
-          "authors": [
-            "David De Cremer"
-          ]
-        },
-        {
-          "id": "doi:10.69554/hdwl1333",
-          "year": 2020,
-          "title": "Urban psychology and British cities: Do personality traits matter for resilience to recessions?",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Ron Martin",
-            "Jason Rentfrow"
-          ]
-        },
-        {
-          "id": "doi:10.1093/cjres/rsx031",
-          "year": 2018,
-          "title": "Brexit and the relevance of regional personality traits: more psychological Openness could have swung the regional vote",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Ron Martin",
-            "Peter J. Rentfrow"
-          ]
-        },
-        {
-          "id": "doi:10.1037/0022-3514.87.4.510",
-          "year": 2004,
-          "title": "The Interpersonal Effects of Emotions in Negotiations: A Motivated Information Processing Approach.",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Antony S. R. Manstead"
           ]
         }
       ]
@@ -17398,6 +17403,87 @@
           ],
           "authors": [
             "Mariska E. Kret"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gb:imperial college london",
+      "institution": "Imperial College London",
+      "country": "GB",
+      "type": "education",
+      "publicationCount": 6,
+      "staffIds": [
+        "MR"
+      ],
+      "authors": [
+        "Bang Zheng"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s12144-024-06989-0",
+          "year": 2025,
+          "title": "Gender inequality and cultural values in explaining gender differences in positive and negative emotions: A comparison of 24 countries during the COVID-19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
+          ]
+        },
+        {
+          "id": "doi:10.1111/spc3.12909",
+          "year": 2023,
+          "title": "Conceptual replication and extension of health behavior theories' predictions in the context of COVID‐19: Evidence across countries and over time",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.2968",
+          "year": 2023,
+          "title": "Identifying important individual‐ and country‐level predictors of conspiracy theorizing: A machine learning analysis",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cresp.2021.100028",
+          "year": 2022,
+          "title": "Concern with COVID-19 pandemic threat and attitudes towards immigrants: The mediating effect of the desire for tightness",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
+          ]
+        },
+        {
+          "id": "doi:10.1177/01461672211036602",
+          "year": 2021,
+          "title": "Lockdown Lives: A Longitudinal Study of Inter-Relationships Among Feelings of Loneliness, Social Contacts, and Solidarity During the COVID-19 Lockdown in Early 2020",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.2572",
+          "year": 2021,
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Bang Zheng"
           ]
         }
       ]
@@ -18987,91 +19073,6 @@
       ]
     },
     {
-      "id": "gb:king s college london",
-      "institution": "King's College London",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "BN",
-        "JDB",
-        "JL",
-        "LM",
-        "OJ"
-      ],
-      "authors": [
-        "Amélie Gourdon-Kanhukamwe",
-        "Christine Syrek",
-        "Elena Martinescu",
-        "Hang‐Yee Chan",
-        "Johannes Wendsche",
-        "Tim Vahle‐Hinz",
-        "Ute Stephan"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Amélie Gourdon-Kanhukamwe"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Hang‐Yee Chan"
-          ]
-        },
-        {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2019.05.006",
-          "year": 2019,
-          "title": "Gossip as a resource: How and why power relationships shape gossip behavior",
-          "staffIds": [
-            "BN",
-            "OJ"
-          ],
-          "authors": [
-            "Elena Martinescu"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2018.02603",
-          "year": 2019,
-          "title": "Self-Evaluative and Other-Directed Emotional and Behavioral Responses to Gossip About the Self",
-          "staffIds": [
-            "BN",
-            "OJ"
-          ],
-          "authors": [
-            "Elena Martinescu"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:leipzig university",
       "institution": "Leipzig University",
       "country": "DE",
@@ -19151,90 +19152,6 @@
       ]
     },
     {
-      "id": "de:ludwig maximilians universit t m nchen",
-      "institution": "Ludwig-Maximilians-Universität München",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "BN",
-        "FR",
-        "GVV",
-        "JL",
-        "LM",
-        "SB",
-        "TDV"
-      ],
-      "authors": [
-        "Felix D. Schönbrodt",
-        "Martin Hoegl",
-        "Max Reinwald",
-        "Moritz Heene",
-        "Stefan Feuerriegel"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/01492063231206107",
-          "year": 2025,
-          "title": "A Contingency Framework for the Performance Consequences of Team Boundary Management: A Meta-Analysis of 30 Years of Research",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Martin Hoegl"
-          ]
-        },
-        {
-          "id": "doi:10.1002/hrm.22203",
-          "year": 2024,
-          "title": "Power to the people—And then? A multilevel leadership perspective on organizational decentralization",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Max Reinwald"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Stefan Feuerriegel"
-          ]
-        },
-        {
-          "id": "doi:10.1002/job.2683",
-          "year": 2023,
-          "title": "Am I the Only One? Consequences of Change Championing (A)symmetry on Group‐ and Individual‐Level Change Outcomes",
-          "staffIds": [
-            "SB"
-          ],
-          "authors": [
-            "Max Reinwald"
-          ]
-        },
-        {
-          "id": "doi:10.1177/2515245917747646",
-          "year": 2018,
-          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
-          "staffIds": [
-            "BN",
-            "FR",
-            "LM"
-          ],
-          "authors": [
-            "Moritz Heene",
-            "Felix D. Schönbrodt"
-          ]
-        }
-      ]
-    },
-    {
       "id": "jp:nagoya university of commerce and business",
       "institution": "Nagoya University of Commerce and Business",
       "country": "JP",
@@ -19305,156 +19222,79 @@
       ]
     },
     {
-      "id": "de:psychologische hochschule berlin",
-      "institution": "Psychologische Hochschule Berlin",
-      "country": "DE",
+      "id": "sg:singapore management university",
+      "institution": "Singapore Management University",
+      "country": "SG",
       "type": "education",
       "publicationCount": 5,
       "staffIds": [
-        "JDB"
+        "FR",
+        "GVV",
+        "JDB",
+        "LM",
+        "MR"
       ],
       "authors": [
-        "Christine Syrek",
-        "Johannes Wendsche",
-        "Tim Vahle‐Hinz",
-        "Ute Stephan"
+        "Daniel Balliet",
+        "Gerard George",
+        "Ilya Cuypers",
+        "Paul A. O’Keefe",
+        "Ronald Bledow"
       ],
       "publications": [
         {
-          "id": "doi:10.1002/ijop.12761",
+          "id": "doi:10.5465/amj.2022.4001",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
           "staffIds": [
-            "JDB"
+            "FR"
           ],
           "authors": [
-            "Tim Vahle‐Hinz"
+            "Ilya Cuypers"
           ]
         },
         {
-          "id": "doi:10.3389/fpsyg.2022.812187",
-          "year": 2022,
-          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Tim Vahle‐Hinz"
-          ]
-        },
-        {
-          "id": "doi:10.1177/23970022211004598",
+          "id": "doi:10.1002/casp.2572",
           "year": 2021,
-          "title": "Always on, never done? How the mind recovers after a stressful workday?",
+          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
           "staffIds": [
-            "JDB"
+            "MR"
           ],
           "authors": [
-            "Tim Vahle‐Hinz"
+            "Paul A. O’Keefe"
           ]
         },
         {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
+          "id": "doi:10.1080/1359432x.2016.1269750",
+          "year": 2016,
+          "title": "Take a break! Benefits of sleep and short breaks for daily work engagement",
           "staffIds": [
             "JDB"
           ],
           "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
+            "Ronald Bledow"
           ]
         },
         {
-          "id": "doi:10.1007/s10869-019-09672-5",
-          "year": 2019,
-          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
+          "id": "doi:10.5465/amj.2015.4004",
+          "year": 2015,
+          "title": "Managing Risk and Resilience",
           "staffIds": [
-            "JDB"
+            "GVV"
           ],
           "authors": [
-            "Tim Vahle‐Hinz"
+            "Gerard George"
           ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of pennsylvania",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "CDD",
-        "JJ",
-        "JL",
-        "LM"
-      ],
-      "authors": [
-        "Amy Wenzel",
-        "Gideon Nave",
-        "Jason Dana",
-        "Matthew Levendusky",
-        "Sophia L. Pink",
-        "Tom Étienne"
-      ],
-      "publications": [
+        },
         {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
+          "id": "doi:10.1037/a0023489",
+          "year": 2011,
+          "title": "Reward, punishment, and cooperation: A meta-analysis.",
           "staffIds": [
             "LM"
           ],
           "authors": [
-            "Gideon Nave"
-          ]
-        },
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Sophia L. Pink",
-            "Matthew Levendusky"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Tom Étienne"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2011.02.001",
-          "year": 2011,
-          "title": "Justified ethicality: Observing desired counterfactuals modifies ethical perceptions and behavior",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jason Dana"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.brat.2004.07.004",
-          "year": 2004,
-          "title": "Memory and interpretation of visual representations of threat in socially anxious and nonanxious individuals",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Amy Wenzel"
+            "Daniel Balliet"
           ]
         }
       ]
@@ -20415,6 +20255,72 @@
       ]
     },
     {
+      "id": "gb:king s college london",
+      "institution": "King's College London",
+      "country": "GB",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "BN",
+        "JL",
+        "LM",
+        "OJ"
+      ],
+      "authors": [
+        "Amélie Gourdon-Kanhukamwe",
+        "Elena Martinescu",
+        "Hang‐Yee Chan"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Amélie Gourdon-Kanhukamwe"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Hang‐Yee Chan"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2019.05.006",
+          "year": 2019,
+          "title": "Gossip as a resource: How and why power relationships shape gossip behavior",
+          "staffIds": [
+            "BN",
+            "OJ"
+          ],
+          "authors": [
+            "Elena Martinescu"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2018.02603",
+          "year": 2019,
+          "title": "Self-Evaluative and Other-Directed Emotional and Behavioral Responses to Gossip About the Self",
+          "staffIds": [
+            "BN",
+            "OJ"
+          ],
+          "authors": [
+            "Elena Martinescu"
+          ]
+        }
+      ]
+    },
+    {
       "id": "au:la trobe university",
       "institution": "La Trobe University",
       "country": "AU",
@@ -20621,78 +20527,6 @@
       ]
     },
     {
-      "id": "us:michigan state university",
-      "institution": "Michigan State University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 4,
-      "staffIds": [
-        "CDD",
-        "GVV",
-        "LM",
-        "TDV"
-      ],
-      "authors": [
-        "Donald E. Conlon",
-        "Frank Walter",
-        "John R. Hollenbeck",
-        "Katelin E. Leahy",
-        "Robert B. Davison",
-        "William J. Chopik"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "William J. Chopik",
-            "Katelin E. Leahy"
-          ]
-        },
-        {
-          "id": "doi:10.1111/ncmr.12185",
-          "year": 2020,
-          "title": "From the Field to the Laboratory: The Theory‐Practice Research of Peter J. Carnevale",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Donald E. Conlon"
-          ]
-        },
-        {
-          "id": "doi:10.1109/emr.2016.7792411",
-          "year": 2016,
-          "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck",
-            "Robert B. Davison",
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2015,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck"
-          ]
-        }
-      ]
-    },
-    {
       "id": "cn:new york university shanghai",
       "institution": "New York University Shanghai",
       "country": "CN",
@@ -20806,6 +20640,65 @@
           ],
           "authors": [
             "Luppo Kuilman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:psychologische hochschule berlin",
+      "institution": "Psychologische Hochschule Berlin",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Tim Vahle‐Hinz"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1002/ijop.12761",
+          "year": 2022,
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Tim Vahle‐Hinz"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.812187",
+          "year": 2022,
+          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Tim Vahle‐Hinz"
+          ]
+        },
+        {
+          "id": "doi:10.1177/23970022211004598",
+          "year": 2021,
+          "title": "Always on, never done? How the mind recovers after a stressful workday?",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Tim Vahle‐Hinz"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10869-019-09672-5",
+          "year": 2019,
+          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Tim Vahle‐Hinz"
           ]
         }
       ]
@@ -21401,74 +21294,6 @@
       ]
     },
     {
-      "id": "us:university of kansas",
-      "institution": "University of Kansas",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 4,
-      "staffIds": [
-        "GVV",
-        "MR",
-        "TDV"
-      ],
-      "authors": [
-        "Frank Walter",
-        "John R. Hollenbeck",
-        "Nyla R. Branscombe",
-        "Robert B. Davison"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1111/pops.70084",
-          "year": 2026,
-          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nyla R. Branscombe"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430218763272",
-          "year": 2018,
-          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Nyla R. Branscombe"
-          ]
-        },
-        {
-          "id": "doi:10.1109/emr.2016.7792411",
-          "year": 2016,
-          "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck",
-            "Robert B. Davison",
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2015,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Robert B. Davison"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:university of konstanz",
       "institution": "University of Konstanz",
       "country": "DE",
@@ -21659,6 +21484,72 @@
           ],
           "authors": [
             "Ann E. Tenbrunsel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:university of pennsylvania",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "CDD",
+        "JL",
+        "LM"
+      ],
+      "authors": [
+        "Gideon Nave",
+        "Jason Dana",
+        "Matthew Levendusky",
+        "Sophia L. Pink",
+        "Tom Étienne"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Gideon Nave"
+          ]
+        },
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Sophia L. Pink",
+            "Matthew Levendusky"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Tom Étienne"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2011.02.001",
+          "year": 2011,
+          "title": "Justified ethicality: Observing desired counterfactuals modifies ethical perceptions and behavior",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Jason Dana"
           ]
         }
       ]
@@ -22475,6 +22366,58 @@
       ]
     },
     {
+      "id": "ch:eth zurich",
+      "institution": "ETH Zurich",
+      "country": "CH",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "FR",
+        "JDB",
+        "LM"
+      ],
+      "authors": [
+        "Georg von Krogh",
+        "Heinrich H. Nax",
+        "Madeleine Lanz"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Heinrich H. Nax"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2023.4006",
+          "year": 2023,
+          "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Georg von Krogh"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.892120",
+          "year": 2022,
+          "title": "Crafting work-nonwork balance involving life domain boundaries: Development and validation of a novel scale across five countries",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Madeleine Lanz"
+          ]
+        }
+      ]
+    },
+    {
       "id": "be:ghent university hospital",
       "institution": "Ghent University Hospital",
       "country": "BE",
@@ -22883,6 +22826,56 @@
       ]
     },
     {
+      "id": "de:lmu klinikum",
+      "institution": "LMU Klinikum",
+      "country": "DE",
+      "type": "healthcare",
+      "publicationCount": 3,
+      "staffIds": [
+        "FR",
+        "JL"
+      ],
+      "authors": [
+        "Ingo Weller",
+        "Stefan Feuerriegel"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Stefan Feuerriegel"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2023.4006",
+          "year": 2023,
+          "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Stefan Feuerriegel"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2022.4001",
+          "year": 2022,
+          "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Ingo Weller"
+          ]
+        }
+      ]
+    },
+    {
       "id": "fr:laboratoire de psychologie sociale et cognitive",
       "institution": "Laboratoire de Psychologie Sociale et Cognitive",
       "country": "FR",
@@ -23139,6 +23132,119 @@
           ],
           "authors": [
             "Yina Ma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:michigan state university",
+      "institution": "Michigan State University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 3,
+      "staffIds": [
+        "CDD",
+        "GVV",
+        "LM",
+        "TDV"
+      ],
+      "authors": [
+        "Donald E. Conlon",
+        "John R. Hollenbeck",
+        "Katelin E. Leahy",
+        "William J. Chopik"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "William J. Chopik",
+            "Katelin E. Leahy"
+          ]
+        },
+        {
+          "id": "doi:10.1111/ncmr.12185",
+          "year": 2020,
+          "title": "From the Field to the Laboratory: The Theory‐Practice Research of Peter J. Carnevale",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Donald E. Conlon"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "John R. Hollenbeck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl:netherlands organisation for applied scientific research",
+      "institution": "Netherlands Organisation for Applied Scientific Research",
+      "country": "NL",
+      "type": "nonprofit",
+      "publicationCount": 3,
+      "staffIds": [
+        "GVV",
+        "TDV"
+      ],
+      "authors": [
+        "Gerard George",
+        "Margareta Wahlström",
+        "Peter Essens",
+        "Roos Delahaij",
+        "W. Kamphuis"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fpsyg.2021.711981",
+          "year": 2021,
+          "title": "Team Coping: Cross-Level Influence of Team Member Coping Activities on Individual Burnout",
+          "staffIds": [
+            "TDV"
+          ],
+          "authors": [
+            "W. Kamphuis",
+            "Roos Delahaij"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2015.4004",
+          "year": 2015,
+          "title": "Managing Risk and Resilience",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Peter Essens",
+            "Margareta Wahlström",
+            "Gerard George"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2012.0360",
+          "year": 2013,
+          "title": "Antecedents of Individuals' Interteam Coordination: Broad Functional Experiences as a Mixed Blessing",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "Peter Essens"
           ]
         }
       ]
@@ -23519,58 +23625,6 @@
       ]
     },
     {
-      "id": "sg:singapore management university",
-      "institution": "Singapore Management University",
-      "country": "SG",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "JDB",
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Daniel Balliet",
-        "Paul A. O’Keefe",
-        "Ronald Bledow"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1002/casp.2572",
-          "year": 2021,
-          "title": "‘We are all in the same boat’: How societal discontent affects intention to help during the COVID ‐19 pandemic",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Paul A. O’Keefe"
-          ]
-        },
-        {
-          "id": "doi:10.1080/1359432x.2016.1269750",
-          "year": 2016,
-          "title": "Take a break! Benefits of sleep and short breaks for daily work engagement",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ronald Bledow"
-          ]
-        },
-        {
-          "id": "doi:10.1037/a0023489",
-          "year": 2011,
-          "title": "Reward, punishment, and cooperation: A meta-analysis.",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Daniel Balliet"
-          ]
-        }
-      ]
-    },
-    {
       "id": "sk:slovak academy of sciences",
       "institution": "Slovak Academy of Sciences",
       "country": "SK",
@@ -23843,58 +23897,6 @@
           ],
           "authors": [
             "Thomas Rigotti"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of arizona",
-      "institution": "University of Arizona",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "LM",
-        "MR"
-      ],
-      "authors": [
-        "Beverly Wimer",
-        "Jean Williams",
-        "Luppo Kuilman"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1111/jep.13353",
-          "year": 2020,
-          "title": "Re‐assessing the validity of the Moral Sensitivity Questionnaire (MSQ): Two new scales for moral deliberation and paternalism",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
-          ]
-        },
-        {
-          "id": "doi:10.1111/jan.13939",
-          "year": 2019,
-          "title": "Moral reasoning explained by personality traits and moral disengagement: A study among Dutch nurse practitioners and physician assistants",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Luppo Kuilman"
-          ]
-        },
-        {
-          "id": "doi:10.1123/jsep.12.1.48",
-          "year": 1990,
-          "title": "Athletic Aggression: Perceived Legitimacy and Behavioral Intentions in Girls’ High School Basketball",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Jean Williams",
-            "Beverly Wimer"
           ]
         }
       ]
@@ -24229,58 +24231,53 @@
       ]
     },
     {
-      "id": "de:university of mannheim",
-      "institution": "University of Mannheim",
-      "country": "DE",
+      "id": "us:university of kansas",
+      "institution": "University of Kansas",
+      "country": "US",
       "type": "education",
       "publicationCount": 3,
       "staffIds": [
-        "JDB"
+        "GVV",
+        "MR",
+        "TDV"
       ],
       "authors": [
-        "Christine Syrek",
-        "Jana Kühnel",
-        "Johannes Wendsche",
-        "Sabine Sonnentag",
-        "Tim Vahle‐Hinz",
-        "Ute Stephan"
+        "Nyla R. Branscombe",
+        "Robert B. Davison"
       ],
       "publications": [
         {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
+          "id": "doi:10.1111/pops.70084",
+          "year": 2026,
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
           "staffIds": [
-            "JDB"
+            "MR"
           ],
           "authors": [
-            "Sabine Sonnentag",
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
+            "Nyla R. Branscombe"
           ]
         },
         {
-          "id": "doi:10.1080/09585192.2017.1396551",
-          "year": 2020,
-          "title": "Staying in touch while at work: Relationships between personal social media use at work and work-nonwork balance and creativity",
+          "id": "doi:10.1177/1368430218763272",
+          "year": 2018,
+          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
           "staffIds": [
-            "JDB"
+            "MR"
           ],
           "authors": [
-            "Jana Kühnel"
+            "Nyla R. Branscombe"
           ]
         },
         {
-          "id": "doi:10.1080/08870446.2010.546860",
-          "year": 2011,
-          "title": "How does a vacation from work affect employee health and well-being?",
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
           "staffIds": [
-            "JDB"
+            "GVV",
+            "TDV"
           ],
           "authors": [
-            "Sabine Sonnentag"
+            "Robert B. Davison"
           ]
         }
       ]
@@ -25582,88 +25579,6 @@
       ]
     },
     {
-      "id": "ch:eth zurich",
-      "institution": "ETH Zurich",
-      "country": "CH",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "JDB",
-        "LM"
-      ],
-      "authors": [
-        "Heinrich H. Nax",
-        "Madeleine Lanz"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Heinrich H. Nax"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.892120",
-          "year": 2022,
-          "title": "Crafting work-nonwork balance involving life domain boundaries: Development and validation of a novel scale across five countries",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Madeleine Lanz"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:federal institute for occupational safety and health",
-      "institution": "Federal Institute for Occupational Safety and Health",
-      "country": "DE",
-      "type": "healthcare",
-      "publicationCount": 2,
-      "staffIds": [
-        "JDB"
-      ],
-      "authors": [
-        "Christine Syrek",
-        "Johannes Wendsche",
-        "Tim Vahle‐Hinz",
-        "Ute Stephan"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/23970022211004598",
-          "year": 2021,
-          "title": "Always on, never done? How the mind recovers after a stressful workday?",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Johannes Wendsche"
-          ]
-        },
-        {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
-          ]
-        }
-      ]
-    },
-    {
       "id": "fi:finnish institute of occupational health",
       "institution": "Finnish Institute of Occupational Health",
       "country": "FI",
@@ -25817,51 +25732,6 @@
           ],
           "authors": [
             "Christopher W. Wiese"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:giessen school of theology",
-      "institution": "Giessen School of Theology",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "FR",
-        "GVV",
-        "TDV"
-      ],
-      "authors": [
-        "Frank Walter",
-        "John R. Hollenbeck",
-        "Robert B. Davison"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/13684302221135075",
-          "year": 2022,
-          "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
-          "staffIds": [
-            "FR",
-            "GVV"
-          ],
-          "authors": [
-            "Frank Walter"
-          ]
-        },
-        {
-          "id": "doi:10.1109/emr.2016.7792411",
-          "year": 2016,
-          "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck",
-            "Robert B. Davison",
-            "Frank Walter"
           ]
         }
       ]
@@ -26562,48 +26432,6 @@
       ]
     },
     {
-      "id": "nl:netherlands organisation for applied scientific research",
-      "institution": "Netherlands Organisation for Applied Scientific Research",
-      "country": "NL",
-      "type": "nonprofit",
-      "publicationCount": 2,
-      "staffIds": [
-        "GVV",
-        "TDV"
-      ],
-      "authors": [
-        "Peter Essens",
-        "Roos Delahaij",
-        "W. Kamphuis"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.3389/fpsyg.2021.711981",
-          "year": 2021,
-          "title": "Team Coping: Cross-Level Influence of Team Member Coping Activities on Individual Burnout",
-          "staffIds": [
-            "TDV"
-          ],
-          "authors": [
-            "W. Kamphuis",
-            "Roos Delahaij"
-          ]
-        },
-        {
-          "id": "doi:10.5465/amj.2012.0360",
-          "year": 2013,
-          "title": "Antecedents of Individuals' Interteam Coordination: Broad Functional Experiences as a Mixed Blessing",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "Peter Essens"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:northeastern university",
       "institution": "Northeastern University",
       "country": "US",
@@ -27247,51 +27075,6 @@
       ]
     },
     {
-      "id": "de:technische universit t dresden",
-      "institution": "Technische Universität Dresden",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "JDB",
-        "JL"
-      ],
-      "authors": [
-        "Christine Syrek",
-        "Georgia Clay",
-        "Johannes Wendsche",
-        "Tim Vahle‐Hinz",
-        "Ute Stephan"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/23970022211004599",
-          "year": 2021,
-          "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ute Stephan",
-            "Johannes Wendsche",
-            "Christine Syrek",
-            "Tim Vahle‐Hinz"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Georgia Clay"
-          ]
-        }
-      ]
-    },
-    {
       "id": "il:tel aviv university",
       "institution": "Tel Aviv University",
       "country": "IL",
@@ -27767,6 +27550,43 @@
           ],
           "authors": [
             "Caspar J. Van Lissa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:university of arizona",
+      "institution": "University of Arizona",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "LM"
+      ],
+      "authors": [
+        "Luppo Kuilman"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1111/jep.13353",
+          "year": 2020,
+          "title": "Re‐assessing the validity of the Moral Sensitivity Questionnaire (MSQ): Two new scales for moral deliberation and paternalism",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
+          ]
+        },
+        {
+          "id": "doi:10.1111/jan.13939",
+          "year": 2019,
+          "title": "Moral reasoning explained by personality traits and moral disengagement: A study among Dutch nurse practitioners and physician assistants",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Luppo Kuilman"
           ]
         }
       ]
@@ -28729,6 +28549,44 @@
           ],
           "authors": [
             "Mathew H. Evans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:university of mannheim",
+      "institution": "University of Mannheim",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Jana Kühnel",
+        "Sabine Sonnentag"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1080/09585192.2017.1396551",
+          "year": 2020,
+          "title": "Staying in touch while at work: Relationships between personal social media use at work and work-nonwork balance and creativity",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Jana Kühnel"
+          ]
+        },
+        {
+          "id": "doi:10.1080/08870446.2010.546860",
+          "year": 2011,
+          "title": "How does a vacation from work affect employee health and well-being?",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Sabine Sonnentag"
           ]
         }
       ]
@@ -29997,6 +29855,45 @@
           ],
           "authors": [
             "Jörg Gross"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch:cole polytechnique f d rale de lausanne",
+      "institution": "École Polytechnique Fédérale de Lausanne",
+      "country": "CH",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "CDD",
+        "FR"
+      ],
+      "authors": [
+        "Basil Schmid",
+        "Marc Gruber"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.5465/amj.2023.4006",
+          "year": 2023,
+          "title": "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Marc Gruber"
+          ]
+        },
+        {
+          "id": "doi:10.1073/pnas.1820133116",
+          "year": 2019,
+          "title": "On the psychology and economics of antisocial personality",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Basil Schmid"
           ]
         }
       ]
@@ -32302,6 +32199,32 @@
       ]
     },
     {
+      "id": "de:federal institute for occupational safety and health",
+      "institution": "Federal Institute for Occupational Safety and Health",
+      "country": "DE",
+      "type": "healthcare",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Johannes Wendsche"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/23970022211004598",
+          "year": 2021,
+          "title": "Always on, never done? How the mind recovers after a stressful workday?",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Johannes Wendsche"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:fernuniversit t in hagen",
       "institution": "FernUniversität in Hagen",
       "country": "DE",
@@ -32704,6 +32627,34 @@
       ]
     },
     {
+      "id": "de:giessen school of theology",
+      "institution": "Giessen School of Theology",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "FR",
+        "GVV"
+      ],
+      "authors": [
+        "Frank Walter"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/13684302221135075",
+          "year": 2022,
+          "title": "A contingency model of the dominance route to influence in work teams: The moderating role of team competition",
+          "staffIds": [
+            "FR",
+            "GVV"
+          ],
+          "authors": [
+            "Frank Walter"
+          ]
+        }
+      ]
+    },
+    {
       "id": "kz:global health research center of central asia",
       "institution": "Global Health Research Center of Central Asia",
       "country": "KZ",
@@ -32786,34 +32737,6 @@
       ]
     },
     {
-      "id": "au:griffith university",
-      "institution": "Griffith University",
-      "country": "AU",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Samantha Jeffries",
-        "William R. Wood"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/15570851241250313",
-          "year": 2024,
-          "title": "Tomboys’ Pathways to Prison in Thailand: Insubordination, Support, Sacrifice, and Suffering",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Samantha Jeffries",
-            "William R. Wood"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:haw hamburg",
       "institution": "HAW Hamburg",
       "country": "DE",
@@ -32839,6 +32762,32 @@
             "Piero Basaglia",
             "Björn Bos",
             "Moritz A. Drupp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca:hec montr al",
+      "institution": "HEC Montréal",
+      "country": "CA",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "FR"
+      ],
+      "authors": [
+        "Denis A. Grégoire"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.5465/amj.2022.4001",
+          "year": 2022,
+          "title": "Applying Coleman’s Boat in Management Research: Opportunities and Challenges in Bridging Macro and Micro Theory",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Denis A. Grégoire"
           ]
         }
       ]
@@ -34431,32 +34380,6 @@
           ],
           "authors": [
             "Tymofii Brik"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:lmu klinikum",
-      "institution": "LMU Klinikum",
-      "country": "DE",
-      "type": "healthcare",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Stefan Feuerriegel"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Stefan Feuerriegel"
           ]
         }
       ]
@@ -36684,32 +36607,6 @@
       ]
     },
     {
-      "id": "gb:queen s university belfast",
-      "institution": "Queen's University Belfast",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Femi Richard Omotoyinbo"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1093/eurpub/ckab165.328",
-          "year": 2021,
-          "title": "Work-Life Balance Inequalities among Veterinary and Allied Professionals: A Qualitative Review",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Femi Richard Omotoyinbo"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:queens college cuny",
       "institution": "Queens College, CUNY",
       "country": "US",
@@ -38204,6 +38101,32 @@
       ]
     },
     {
+      "id": "de:technische universit t dresden",
+      "institution": "Technische Universität Dresden",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Georgia Clay"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Georgia Clay"
+          ]
+        }
+      ]
+    },
+    {
       "id": "us:texas state university",
       "institution": "Texas State University",
       "country": "US",
@@ -39372,32 +39295,6 @@
       ]
     },
     {
-      "id": "us:university of akron",
-      "institution": "University of Akron",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JJ"
-      ],
-      "authors": [
-        "Suzanne Semivan"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.2202/1940-1639.1242",
-          "year": 2006,
-          "title": "The Effect of Moral Orientation Variables in Counseling College Students",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Suzanne Semivan"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:university of alabama",
       "institution": "University of Alabama",
       "country": "US",
@@ -39982,32 +39879,6 @@
       ]
     },
     {
-      "id": "gb:university of hull",
-      "institution": "University of Hull",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "MR"
-      ],
-      "authors": [
-        "Mabel Ikpeme"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1093/eurpub/ckab165.328",
-          "year": 2021,
-          "title": "Work-Life Balance Inequalities among Veterinary and Allied Professionals: A Qualitative Review",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Mabel Ikpeme"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:university of iowa",
       "institution": "University of Iowa",
       "country": "US",
@@ -40531,36 +40402,6 @@
             "Michaela Ritchie",
             "Jonathan M. P. Wilbiks",
             "Yuzhi Yang"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of north dakota",
-      "institution": "University of North Dakota",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JJ"
-      ],
-      "authors": [
-        "Amy Wenzel",
-        "Jennifer R. Brendle",
-        "Nicholas Finstrom"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1016/j.brat.2004.07.004",
-          "year": 2004,
-          "title": "Memory and interpretation of visual representations of threat in socially anxious and nonanxious individuals",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Amy Wenzel",
-            "Nicholas Finstrom",
-            "Jennifer R. Brendle"
           ]
         }
       ]
@@ -42472,32 +42313,6 @@
       ]
     },
     {
-      "id": "us:youngstown state university",
-      "institution": "Youngstown State University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JJ"
-      ],
-      "authors": [
-        "Donald Martin"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.2202/1940-1639.1242",
-          "year": 2006,
-          "title": "The Effect of Moral Orientation Variables in Counseling College Students",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Donald Martin"
-          ]
-        }
-      ]
-    },
-    {
       "id": "cn:zhejiang university of science and technology",
       "institution": "Zhejiang University of Science and Technology",
       "country": "CN",
@@ -42653,32 +42468,6 @@
           ],
           "authors": [
             "Hugo Mercier"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ch:cole polytechnique f d rale de lausanne",
-      "institution": "École Polytechnique Fédérale de Lausanne",
-      "country": "CH",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Basil Schmid"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1073/pnas.1820133116",
-          "year": 2019,
-          "title": "On the psychology and economics of antisocial personality",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Basil Schmid"
           ]
         }
       ]

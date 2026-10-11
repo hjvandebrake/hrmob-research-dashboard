@@ -18,7 +18,15 @@
     "additionalBenchmarkLinks": 39,
     "rejectedLinks": 96,
     "identityConflicts": 2,
-    "method": "Unique compatible author names against official staff profiles and departmental rosters; independent of benchmark eligibility. Initial-only matches remain provisional."
+    "method": "Unique compatible author names against official staff profiles and departmental rosters; independent of benchmark eligibility. Initial-only matches remain provisional.",
+    "authorshipReview": {
+      "checkedOn": "2026-10-11",
+      "reviewFile": "data/comparison-authorship-review.json",
+      "rejectedPersonWorkLinks": 83,
+      "heldPersonWorkLinks": 29,
+      "excludedNonacademicPeople": [],
+      "recordsWithoutRetainedPeople": 588
+    }
   },
   "people": [
     {
@@ -18354,14 +18362,24 @@
       "publicationIds": [
         "doi:10.1093/eurpub/ckaf161.629"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher directly affiliates M. van der Steen with ESSB, Erasmus University Rotterdam.",
+          "sources": [
+            "https://academic.oup.com/eurpub/article/35/Supplement_4/ckaf161.629/8302575"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -18607,8 +18625,7 @@
         "doi:10.1007/s10869-025-10013-y"
       ],
       "people": [
-        "hrmob-o-janssen",
-        "ops-j-liu"
+        "hrmob-o-janssen"
       ],
       "matches": [
         {
@@ -18620,11 +18637,24 @@
           "personId": "hrmob-o-janssen",
           "author": "Janssen, O.",
           "method": "unique compatible author name"
-        },
+        }
+      ],
+      "authorshipReview": [
         {
           "personId": "ops-j-liu",
-          "author": "Liu, J.",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher names Jun Liu at Wuhan University of Technology, not the Groningen roster member Hugh Jiliang Liu.",
+          "sources": [
+            "https://link.springer.com/article/10.1007/s10869-025-10013-y"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ops-j-liu",
+              "author": "Liu, J.",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -20595,14 +20625,24 @@
       "publicationIds": [
         "doi:10.1177/15570851241250313"
       ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher author biography identifies Michelle Ryan as a Griffith criminology graduate student, not the Groningen social psychologist.",
+          "sources": [
+            "https://journals.sagepub.com/doi/abs/10.1177/15570851241250313"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-mk-ryan",
+              "author": "Michelle K. Ryan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -24508,14 +24548,24 @@
       "publicationIds": [
         "doi:10.1093/eurpub/ckad160.1162"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher directly affiliates M. van der Steen with Erasmus University Rotterdam. Poster abstract, not an accounting-author contribution.",
+          "sources": [
+            "https://academic.oup.com/eurpub/article/33/Supplement_2/ckad160.1162/7327653"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -28946,14 +28996,25 @@
       "publicationIds": [
         "doi:10.1016/j.procs.2021.12.014"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -30815,13 +30876,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ops-j-de-vries",
+          "author": "Jan de Vries",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ops-j-de-vries",
-          "author": "Jan de Vries",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -31685,14 +31746,26 @@
       "publicationIds": [
         "doi:10.3390/rs14215335"
       ],
-      "people": [
-        "ims-m-kleine"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-m-kleine",
-          "author": "Marco Kleine",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Original paper identifies Marco De Kleine at Mdk-Geologic, not Groningen organization/innovation researcher Marco Kleine.",
+          "sources": [
+            "https://dspace.library.uu.nl/bitstream/1874/424541/1/remotesensing_14_05335_v2.pdf",
+            "https://mdk-geologic.com/index.php/en/771-2/",
+            "https://www.rug.nl/staff/m.kleine/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-m-kleine",
+              "author": "Marco Kleine",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -32961,14 +33034,24 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872021030003008"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2021_030_003_008"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -33860,9 +33943,9 @@
         "doi:10.1016/j.socscimed.2021.114469"
       ],
       "people": [
-        "ims-e-smailhodzic",
         "ims-a-boonstra",
-        "ims-dj-langley"
+        "ims-dj-langley",
+        "ims-e-smailhodzic"
       ],
       "matches": [
         {
@@ -33871,13 +33954,13 @@
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-dj-langley",
+          "author": "David Langley",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-dj-langley",
-          "author": "David Langley",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -34324,13 +34407,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -36363,14 +36446,24 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872021030003001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2021_030_003_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -38000,13 +38093,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -38300,9 +38393,9 @@
         "doi:10.1016/j.jbusres.2019.12.035"
       ],
       "people": [
+        "ims-a-boonstra",
         "ims-dj-langley",
-        "mkt-j-van-doorn",
-        "ims-a-boonstra"
+        "mkt-j-van-doorn"
       ],
       "matches": [
         {
@@ -38379,14 +38472,25 @@
       "publicationIds": [
         "doi:10.2340/165019778719127134"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Accessible publisher and PubMed records identify A.M. Boonstra of Rehabilitation Medicine, but this bounded pass did not obtain an independent full-name/work link. Keep the mixed-profile hold. Original issue is1987, not the2020 archive posting.",
+          "sources": [
+            "https://doi.org/10.2340/165019778719127134",
+            "https://pubmed.ncbi.nlm.nih.gov/2831623/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -38706,14 +38810,25 @@
       "publicationIds": [
         "doi:10.1093/schbul/sbaa031.108"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -41564,14 +41679,24 @@
       "publicationIds": [
         "doi:10.1080/14494035.2019.1617970"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher directly affiliates Martijn Van Der Steen with Erasmus University Rotterdam / Netherlands School for Public Administration and biography identifies public-administration professor.",
+          "sources": [
+            "https://academic.oup.com/policyandsociety/article/38/2/278/6407916"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -41622,14 +41747,25 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872019029001004"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -42792,9 +42928,9 @@
         "doi:10.1093/jcmc/zmz028"
       ],
       "people": [
-        "ims-ml-hage",
+        "ims-a-boonstra",
         "ims-mag-van-offenbeek",
-        "ims-a-boonstra"
+        "ims-ml-hage"
       ],
       "matches": [
         {
@@ -43344,14 +43480,25 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872019029002011"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -44277,14 +44424,25 @@
       "publicationIds": [
         "doi:10.1016/j.procs.2019.12.191"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -45316,14 +45474,26 @@
       "publicationIds": [
         "doi:10.1007/s11145-018-9924-8"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher affiliates A. M. Boonstra to CED-Groep Research & Development in Rotterdam. The publisher of the earlier exact-author CED-Groep article gives the full name A. Marije Boonstra; this affiliation-identity chain distinguishes the author from the FEB professor.",
+          "sources": [
+            "https://link.springer.com/article/10.1007/s11145-018-9924-8",
+            "https://link.springer.com/article/10.1007/s11145-015-9551-6",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -45418,14 +45588,24 @@
       "publicationIds": [
         "doi:10.1007/s11077-018-9342-4"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Erasmus official work record attributes this work to its public-governance researcher, distinct from the Groningen accounting researcher.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/the-governance-of-self-organization-which-governance-strategy-do--2/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -45728,14 +45908,25 @@
       "publicationIds": [
         "doi:10.1080/14494035.2018.1520782"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/strategies-for-robustness-five-perspectives-on-how-policy-design-/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -46500,14 +46691,24 @@
       "publicationIds": [
         "doi:10.1080/09540962.2018.1527574"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Erasmus official work record attributes this work to its public-governance researcher (ORCID 0009-0002-4711-5844), distinct from the Groningen accounting researcher (0000-0002-7384-0102).",
+          "sources": [
+            "https://pure.eur.nl/en/publications/new-development-breaking-out-or-hanging-on-internal-audit-in-gove/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -47834,14 +48035,25 @@
       "publicationIds": [
         "doi:10.1080/14494035.2018.1513731"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/designing-a-century-ahead-climate-change-adaptation-in-the-dutch-/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -47971,13 +48183,13 @@
       ],
       "matches": [
         {
-          "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
+          "personId": "acc-s-tillema",
+          "author": "Sandra Tillema",
           "method": "unique compatible author name"
         },
         {
-          "personId": "acc-s-tillema",
-          "author": "Sandra Tillema",
+          "personId": "acc-mp-van-der-steen",
+          "author": "Martijn van der Steen",
           "method": "unique compatible author name"
         }
       ]
@@ -48185,14 +48397,24 @@
       "publicationIds": [
         "doi:10.1080/03003930.2018.1546172"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Erasmus official biography lists this work for its public-governance researcher, distinct from the Groningen accounting researcher.",
+          "sources": [
+            "https://www.eur.nl/en/people/martijn-van-der-steen"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -48296,14 +48518,25 @@
       "publicationIds": [
         "doi:10.1080/14494035.2018.1520780"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/anticipating-surprise-the-case-of-the-early-warning-system-of-rij/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -49404,13 +49637,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -49623,13 +49856,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -49768,13 +50001,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -50045,14 +50278,25 @@
       "publicationIds": [
         "doi:10.1007/s12402-017-0237-6"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Publisher/PubMed and Amsterdam UMC establish A.M. Boonstra at PsyQ adult ADHD, but available official metadata did not expand the initials for this exact work. Keep held; do not infer identity solely from topic/coauthors.",
+          "sources": [
+            "https://pure.amsterdamumc.nl/en/publications/prevalence-of-sexual-dysfunctions-and-other-sexual-disorders-in-a/",
+            "https://pubmed.ncbi.nlm.nih.gov/28831742/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -50490,14 +50734,24 @@
       "publicationIds": [
         "doi:10.3917/risa.834.0765"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher PDF author biography on page783 identifies Martijn as NSOB deputy dean/director and Erasmus professor of Public Administration.",
+          "sources": [
+            "https://droit.cairn.info/article/RISA_834_0765/pdf?lang=fr"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -50970,14 +51224,25 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872017026002013"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -52683,14 +52948,25 @@
       "publicationIds": [
         "doi:10.1016/j.procs.2016.09.157"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -53180,9 +53456,9 @@
         "doi:10.1108/itp-09-2014-0216"
       ],
       "people": [
-        "ims-ml-hage",
+        "ims-a-boonstra",
         "ims-mag-van-offenbeek",
-        "ims-a-boonstra"
+        "ims-ml-hage"
       ],
       "matches": [
         {
@@ -53308,14 +53584,25 @@
       "publicationIds": [
         "doi:10.1177/0734371x16671369"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/the-sedimentation-of-public-values-how-a-variety-of-governance-pe/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -54014,14 +54301,25 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2016.01.001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/puzzling-powering-and-perpetuating-long-term-decision-making-by-t/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -54219,14 +54517,24 @@
       "publicationIds": [
         "doi:10.1177/0020852315599046"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher author biography identifies Martijn as NSOB associate dean/deputy director and Erasmus professor of Public Administration; exact author affiliation also on institutional full text.",
+          "sources": [
+            "https://journals.sagepub.com/doi/abs/10.1177/0020852315599046"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -54540,14 +54848,24 @@
       "publicationIds": [
         "doi:10.1177/0144739416670701"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official EUR-hosted publisher PDF first page directly affiliates Martijn van der Steen with Netherlands School of Public Administration.",
+          "sources": [
+            "https://pure.eur.nl/files/47892249/REPUB_99518.pdf"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -55522,14 +55840,25 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2016.01.003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/dealing-with-long-term-policy-problems-making-sense-of-the-interp/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -56173,14 +56502,24 @@
       "publicationIds": [
         "doi:10.5553/bw/016571942015069003005"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bw/Bw_0165-7194_2015_069_003_005"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -56207,14 +56546,25 @@
       "publicationIds": [
         "doi:10.1007/s11145-015-9551-6"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher explicitly names A. Marije Boonstra at CED-Groep Research and Innovation, distinct from Albert Boonstra.",
+          "sources": [
+            "https://link.springer.com/article/10.1007/s11145-015-9551-6",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -56346,9 +56696,9 @@
         "doi:10.18151/7217341"
       ],
       "people": [
-        "ims-ml-hage",
+        "ims-a-boonstra",
         "ims-mag-van-offenbeek",
-        "ims-a-boonstra"
+        "ims-ml-hage"
       ],
       "matches": [
         {
@@ -57038,14 +57388,25 @@
       "publicationIds": [
         "doi:10.1016/j.lungcan.2015.01.012"
       ],
-      "people": [
-        "ops-c-emmanouilidis"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ops-c-emmanouilidis",
-          "author": "Christos Emmanouilidis",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The oncologist Christos E. Emmanouilidis lists the exact work in his CV; he is distinct from the Groningen industrial-information-systems researcher.",
+          "sources": [
+            "https://oncologos-thessaloniki.gr/full-cv/",
+            "https://www.rug.nl/staff/c.emmanouilidis/?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ops-c-emmanouilidis",
+              "author": "Christos Emmanouilidis",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -57282,14 +57643,24 @@
       "publicationIds": [
         "doi:10.3390/wevj7040710"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official Northumbria repository publisher-version paper page710 names Dr Martijn van der Steen and footnote1 identifies corresponding author at Netherlands School of Public Administration (NSOB). Exact title, volume7, pages710ff match journal DOI.",
+          "sources": [
+            "https://nrl.northumbria.ac.uk/34346/1/van%20der%20Steen%20et%20al%20-%20Policy%20strategies%20for%20an%20emergent%20technology.pdf"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -57418,14 +57789,26 @@
       "publicationIds": [
         "doi:10.1002/ejp.740"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official Groningen thesis chapter for this exact published article expands the coauthor to Anne M. Boonstra, distinct from Albert Boonstra.",
+          "sources": [
+            "https://research.rug.nl/files/78983953/Chapter_3.pdf",
+            "https://research.rug.nl/en/publications/no-association-between-posture-and-musculoskeletal-complaints-in-/",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -57800,14 +58183,25 @@
       "publicationIds": [
         "doi:10.1177/0952076715581089"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/how-to-see-failure-attempts-by-the-inspectorate-of-education-to-d/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -57990,14 +58384,25 @@
       "publicationIds": [
         "doi:10.1111/1467-9817.12066"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official VU publication record explicitly names A. Marije Boonstra, distinct from Albert Boonstra.",
+          "sources": [
+            "https://research.vu.nl/en/publications/gender-differences-in-mental-simulation-during-sentence-and-word-/",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -58474,14 +58879,24 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872015024001004"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2015_024_001_004"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -58491,14 +58906,25 @@
       "publicationIds": [
         "openalex:W3015870891"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -59014,14 +59440,25 @@
       "publicationIds": [
         "doi:10.1111/ijau.12049"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/auditing-interactive-complexity-challenges-for-the-internal-audit/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -59031,14 +59468,25 @@
       "publicationIds": [
         "doi:10.1080/01900692.2014.952821"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/assessing-and-appraising-the-effects-of-policy-for-wicked-issues-/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -59374,14 +59822,24 @@
       "publicationIds": [
         "doi:10.5553/benm/138900692014041001010"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/BenM/BenM_1389-0069_2014_041_001_010"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -59495,19 +59953,32 @@
         "doi:10.1016/j.protcy.2014.10.070"
       ],
       "people": [
-        "ims-a-boonstra",
         "ops-j-de-vries"
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
-        },
-        {
           "personId": "ops-j-de-vries",
           "author": "Jan de Vries",
           "method": "unique compatible author name"
+        }
+      ],
+      "authorshipReview": [
+        {
+          "personId": "ims-a-boonstra",
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -59614,14 +60085,25 @@
       "publicationIds": [
         "doi:10.1177/0020852313517993"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/the-responsiveness-of-social-policies-explaining-institutional-ch/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -60338,14 +60820,25 @@
       "publicationIds": [
         "doi:10.1177/0095399714527752"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/public-managers-media-influence-and-governance-three-research-tra/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -60954,14 +61447,24 @@
       "publicationIds": [
         "doi:10.3917/risa.803.0697"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher PDF first-page author footnote directly affiliates Martijn van der Steen with Netherlands School of Public Administration (NSOB).",
+          "sources": [
+            "https://droit.cairn.info/article/RISA_803_0697/pdf?lang=fr"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -61202,19 +61705,32 @@
         "openalex:W95355850"
       ],
       "people": [
-        "ims-a-boonstra",
         "ims-mag-van-offenbeek"
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
-        },
-        {
           "personId": "ims-mag-van-offenbeek",
           "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
+        }
+      ],
+      "authorshipReview": [
+        {
+          "personId": "ims-a-boonstra",
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -61673,9 +62189,8 @@
         "openalex:W65787140"
       ],
       "people": [
-        "ims-ml-hage",
         "ims-mag-van-offenbeek",
-        "ims-a-boonstra"
+        "ims-ml-hage"
       ],
       "matches": [
         {
@@ -61687,11 +62202,25 @@
           "personId": "ims-mag-van-offenbeek",
           "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
-        },
+        }
+      ],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -61934,14 +62463,24 @@
       "publicationIds": [
         "doi:10.1097/mao.0000000000000455"
       ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "PubMed identifies Michelle Ryan with audiology in Alberta, not the Groningen social psychologist.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/25247438/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-mk-ryan",
+              "author": "Michelle K. Ryan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -62259,14 +62798,24 @@
       "publicationIds": [
         "doi:10.1177/1357633x14528443"
       ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher identifies the Michelle Ryan coauthor with Hear and Say, Brisbane; this is not the Groningen social psychologist.",
+          "sources": [
+            "https://journals.sagepub.com/doi/abs/10.1177/1357633x14528443"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-mk-ryan",
+              "author": "Michelle K. Ryan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -62517,14 +63066,24 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872013022003001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2013_022_004_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -62682,14 +63241,25 @@
       "publicationIds": [
         "doi:10.1016/j.jcom.2013.10.002"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -63242,14 +63812,25 @@
       "publicationIds": [
         "doi:10.5553/tvt/187987052013004003003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines the Groningen management-accounting researcher with a different Erasmus public-governance researcher. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://research.rug.nl/en/persons/martijn-van-der-steen/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -63299,14 +63880,25 @@
       "publicationIds": [
         "doi:10.1007/s10578-013-0414-6"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Erasmus University repository explicitly identifies A.M. Boonstra (Marije) on the exact DOI record.",
+          "sources": [
+            "https://repub.eur.nl/pub/69346/",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -63632,14 +64224,24 @@
       "publicationIds": [
         "doi:10.5553/benm/138900692013040001003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/BenM/BenM_1389-0069_2013_040_001_003"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -63758,14 +64360,24 @@
       "publicationIds": [
         "doi:10.1080/01900692.2012.713295"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher directly affiliates Martijn Van der Steen with Netherlands School of Public Administration, The Hague.",
+          "sources": [
+            "https://www.tandfonline.com/doi/abs/10.1080/01900692.2012.713295"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -63954,14 +64566,24 @@
       "publicationIds": [
         "doi:10.5553/bk/092733872013022003003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2013_022_004_003"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -64073,14 +64695,25 @@
       "publicationIds": [
         "doi:10.1111/padm.12018"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI work in the Erasmus institutional repository links its Martijn van der Steen author to the Erasmus public-administration person, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/fragmented-or-connective-professionalism-strategies-for-professio/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -64355,14 +64988,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2013022001005"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2013_022_001_005"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -64372,14 +65015,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2013022001002"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact publisher article metadata identifies Martijn van der Steen as an NSOB dean/deputy director (and, in some records, Erasmus professor). This is the public-administration researcher, not Groningen accounting M.P. van der Steen.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2013_022_001_002"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -64474,14 +65127,25 @@
       "publicationIds": [
         "doi:10.1332/030557312x655800"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Erasmus official record matches the distinctive complete title, journal, volume41(4), pages551–567 and year2013 and links its Martijn van der Steen author to the Erasmus public-administration person. Official record has no DOI displayed; exact bibliography corroborates the local DOI record.",
+          "sources": [
+            "https://pure.eur.nl/en/publications/complex-causality-in-improving-underperforming-schools-a-complex--2/",
+            "https://pure.eur.nl/en/persons/martijn-van-der-steen/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -64880,14 +65544,25 @@
       "publicationIds": [
         "doi:10.1016/j.protcy.2013.12.019"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -65123,8 +65798,8 @@
         "doi:10.1057/ejis.2012.29"
       ],
       "people": [
-        "ims-mag-van-offenbeek",
-        "ims-a-boonstra"
+        "ims-a-boonstra",
+        "ims-mag-van-offenbeek"
       ],
       "matches": [
         {
@@ -65326,8 +66001,8 @@
         "doi:10.1108/01443571211274512"
       ],
       "people": [
-        "ops-j-de-vries",
-        "ims-a-boonstra"
+        "ims-a-boonstra",
+        "ops-j-de-vries"
       ],
       "matches": [
         {
@@ -66076,14 +66751,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2012021001011"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M.A. van der Steen is codecaan en adjunct-directeur van de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2012_021_001_011"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -66432,14 +67117,25 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2012.03.003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact article text in the author-uploaded publisher/accepted copy explicitly identifies its Martijn van der Steen author as the NSOB public-administration researcher. Elsevier accepted manuscript title page explicitly gives exact DOI and PII S0016-3287(12)00045-6. Final author address on manuscript page 7 assigns Martijn van der Steen to NSOB and gives steen@nsob.nl. Uploaded by coauthor Patrick A. Van der Duin on 29 March 2020.",
+          "sources": [
+            "https://www.researchgate.net/publication/256713011_Looking_back_on_looking_forward_Introduction",
+            "https://doi.org/10.1016/j.futures.2012.03.003"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -66483,14 +67179,25 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2012.03.010"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact article text in the author-uploaded publisher/accepted copy explicitly identifies its Martijn van der Steen author as the NSOB public-administration researcher. Elsevier author personal copy, first page, maps Martijn Van der Steen superscript a to NSOB, Lange Voorhout 17, The Hague. Journal volume 44 (2012), pages 487–493, exact title and DOI agree with the ScienceDirect record. Uploaded by coauthor Patrick A. Van der Duin on 20 November 2018.",
+          "sources": [
+            "https://www.researchgate.net/publication/256712777_Learning_ahead_of_time_How_evaluation_of_foresight_may_add_to_increased_trust_organizational_learning_and_future_oriented_policy_and_strategy",
+            "https://doi.org/10.1016/j.futures.2012.03.010"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -66878,14 +67585,25 @@
       "publicationIds": [
         "doi:10.3390/wevj5010058"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The primary publisher article and original EVS26 paper map Martijn Van der Steen to NSOB; the paper identifies him as the corresponding author with an nsob.nl address. This is the public-administration namesake, not Groningen Accounting.",
+          "sources": [
+            "https://www.mdpi.com/2032-6653/5/1/58",
+            "https://www.citelec.org/EVS26/download.php?f=papers%2FEVS26-4020394.pdf"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -66935,14 +67653,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2012021004001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: dr M. van der Steen is codecaan en adjunctdirecteur van de Nederlandse School voor Openbaar Bestuur (NSOB) in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2012_021_004_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -67259,14 +67987,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2012021004005"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M. van der Steen is codecaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur (NSOB) in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2012_021_004_005"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -67484,14 +68222,26 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2012.03.009"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "RePub exact DOI work record links M.A. van der Steen to person 101670 and lists Public Administration. Newer Pure exact-work page prints the author name without a linked person. These are strong leads toward the governance namesake, but this bounded review did not retrieve a work-specific author biography or the published affiliation; retained as unresolved rather than using topic or initials alone.",
+          "sources": [
+            "https://repub.eur.nl/pub/52482",
+            "https://repub.eur.nl/ppl/101670",
+            "https://pure.eur.nl/en/publications/beyond-use-evaluating-foresight-that-fits/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -67901,14 +68651,25 @@
       "publicationIds": [
         "doi:10.2753/pin1099-9922130402"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact article text in the author-uploaded publisher/accepted copy explicitly identifies its Martijn van der Steen author as the NSOB public-administration researcher. Published Public Integrity article with exact DOI printed on first page; final About the Authors paragraph identifies Dr Martijn van der Steen as associate dean and deputy director of the Netherlands School for Public Administration. Uploaded by coauthor Philip Marcel Karré on 19 December 2018.",
+          "sources": [
+            "https://www.researchgate.net/publication/274165070_When_Citizens_Take_Matters_into_Their_Own_Hands_How_Privately_Managed_Communities_Challenge_Government",
+            "https://doi.org/10.2753/pin1099-9922130402"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -68451,14 +69212,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2011020001001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M. van der Steen is co-decaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2011_020_001_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -68487,15 +69258,10 @@
       ],
       "people": [
         "ims-a-boonstra",
-        "ops-h-broekhuis",
-        "ims-mag-van-offenbeek"
+        "ims-mag-van-offenbeek",
+        "ops-h-broekhuis"
       ],
       "matches": [
-        {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
-        },
         {
           "personId": "ops-h-broekhuis",
           "author": "Manda Broekhuis",
@@ -68504,6 +69270,11 @@
         {
           "personId": "ims-mag-van-offenbeek",
           "author": "van Marjolein Offenbeek",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -68853,14 +69624,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2011020002008"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M. van der Steen is codecaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur (NSOB).",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2011_020_002_008"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -68944,14 +69725,26 @@
       "publicationIds": [
         "doi:10.1371/journal.pone.0024736"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher affiliates Albert Boonstra to GGD Amsterdam infectious diseases. RIVM identifies the same GGD hygiene adviser as continuously working there for over25 years by2005; this is incompatible with the FEB Albert Boonstra CV teaching/management positions in Friesland/Groningen during1982-2000. Distinct same-name person established by primary affiliation and career records.",
+          "sources": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0024736",
+            "https://www.rivm.nl/sites/default/files/2018-11/IB16_10.pdf",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -69065,13 +69858,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -69185,14 +69978,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2011020001006"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M. van der Steen is co-decaan en adjunct-directeur van de NSOB in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2011_020_001_006"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -70033,14 +70836,24 @@
       "publicationIds": [
         "doi:10.5553/benm/2011038002012"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Martijn van der Steen is co-decaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur. Hij promoveerde in 2009 op een proefschrift over vergrijzing en houdt zich onder andere bezig met toekomstverkenning en toekomstgericht bestuur. Correspondentiegegevens: dr. M. van der Steen, Nederlandse School voor Openbaar Bestuur, Lange Voorhout 17, 2514 EB Den Haag, steen@nsob.nl.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/BenM/BenM_1389-0069_2011_038_002_012"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -70339,14 +71152,26 @@
       "publicationIds": [
         "doi:10.1177/1087054711428965"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher identifies A. Marije Boonstra on the exact DOI article, distinct from Albert Boonstra.",
+          "sources": [
+            "https://journals.sagepub.com/doi/10.1177/1087054711428965",
+            "https://research.vu.nl/en/publications/associations-between-sleep-characteristics-seasonal-depressive-sy/",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -70638,14 +71463,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2010019003010"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr M. van der Steen is codecaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur (NSOB) in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2010_019_003_010"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -70689,14 +71524,26 @@
       "publicationIds": [
         "doi:10.1037/a0020826"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Institutional copy of the publisher PDF explicitly identifies A. Marije Boonstra, Erasmus University Rotterdam, with later VU affiliation.",
+          "sources": [
+            "https://pure.uvt.nl/ws/files/1286737/Koppenol-Gonzalez_Understanding_Planning_Ability__2010_.pdf",
+            "https://pure.eur.nl/en/publications/understanding-planning-ability-measured-by-the-tower-of-london-an/",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -70772,13 +71619,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ims-mag-van-offenbeek",
+          "author": "van Marjolein Offenbeek",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ims-mag-van-offenbeek",
-          "author": "van Marjolein Offenbeek",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -70789,14 +71636,25 @@
       "publicationIds": [
         "doi:10.1037/a0017670"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official Amsterdam UMC record names A. Marije Boonstra, not Albert Boonstra.",
+          "sources": [
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/",
+            "https://pubmed.ncbi.nlm.nih.gov/20230115/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -71106,14 +71964,25 @@
       "publicationIds": [
         "doi:10.1016/s0924-9338(10)70005-5"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -71747,14 +72616,26 @@
       "publicationIds": [
         "doi:10.1016/j.futures.2010.02.002"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "RePub exact DOI work record links M.A. van der Steen to person 101670 and lists Public Administration. No work-specific publisher affiliation retrieved. Important source trap: ResearchGate record for this title exposes a full text of a different paper, Exploring the future through creative competition, DOI 10.1108/14636681011075704. That text was not used to reject this link.",
+          "sources": [
+            "https://repub.eur.nl/pub/57352/",
+            "https://repub.eur.nl/ppl/101670",
+            "https://www.sciencedirect.com/science/article/abs/pii/S0016328710000236"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -72014,14 +72895,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2010019001001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr Martijn van der Steen is codecaan en adjunct-directeur van de Nederlandse School voor Openbaar Bestuur in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2010_019_001_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -72099,14 +72990,25 @@
       "publicationIds": [
         "doi:10.1108/14636681011075704"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact article text in the author-uploaded publisher/accepted copy explicitly identifies its Martijn van der Steen author as the NSOB public-administration researcher. Published Emerald article, page 41, exact DOI printed next to the first-page author biography; Martijn van der Steen is NSOB associate dean. Page 57 gives corresponding-author email steen@nsob.nl. Copy uploaded by Martijn Van der Steen on 27 January 2014.",
+          "sources": [
+            "https://www.researchgate.net/publication/241674789_Exploring_the_future_through_creative_competition_the_RWS2020-project",
+            "https://doi.org/10.1108/14636681011075704"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -72351,14 +73253,24 @@
       "publicationIds": [
         "doi:10.1016/j.biopsych.2009.12.032"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Official Amsterdam UMC record names A. M. Boonstra, not Albert Boonstra.",
+          "sources": [
+            "https://pure.amsterdamumc.nl/en/publications/delayed-circadian-rhythm-in-adults-with-attention-deficithyperact/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -73967,14 +74879,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2009018001001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr Martijn van der Steen is codecaan en adjunct-directeur van de NSOB in Den Haag.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2009_018_001_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -74440,14 +75362,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2009018003008"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Dr Martijn van der Steen is adjunct-directeur en codecaan van de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2009_018_003_008"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -74805,14 +75737,24 @@
       "publicationIds": [
         "doi:10.5553/rp/048647002009051004004"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Exact DOI publisher record identifies Martijn van der Steen (born 1977) as NSOB associate dean, deputy director and director of its think tank; this is the public-administration namesake, not the Groningen accounting researcher. The work-specific authorsData biography is preserved in the HTML.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/RP/RP_0486-4700_2009_051_004_004"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -75049,14 +75991,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2008017002008"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs M. van der Steen is als senioronderzoeker werkzaam bij de Nederlandse School voor Openbaar Bestuur.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2008_017_002_008"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -75448,14 +76400,26 @@
       "publicationIds": [
         "doi:10.1007/s00586-008-0772-0"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher affiliates A. M. Boonstra specifically to Revalidatie Friesland, Beetsterzwaag. The same rehabilitation author and collaborator Reneman are expanded to Anne M. Boonstra in an official Groningen thesis chapter. This author-affiliation identity evidence distinguishes the author from Albert Boonstra.",
+          "sources": [
+            "https://link.springer.com/article/10.1007/s00586-008-0772-0",
+            "https://research.rug.nl/files/78983953/Chapter_3.pdf",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -75704,13 +76668,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ops-j-de-vries",
+          "author": "Jan de Vries",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ops-j-de-vries",
-          "author": "Jan de Vries",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -76266,14 +77230,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2008017002001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs M. van der Steen is werkzaam als senioronderzoeker en programmaleider aan de Nederlandse School voor Openbaar Bestuur.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2008_017_002_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -76652,14 +77626,24 @@
       "publicationIds": [
         "doi:10.3152/030234208x370657"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "The exact DOI OUP article record explicitly identifies author Martijn van der Steen at NSOB, distinguishing the public-administration researcher from Groningen Accounting Martijn Pieter van der Steen.",
+          "sources": [
+            "https://academic.oup.com/spp/article-abstract/35/8/575/1633483"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -76669,14 +77653,24 @@
       "publicationIds": [
         "doi:10.1016/j.eurpsy.2008.01.095"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The abstract names A.M. Boonstra at PsyQ/Erasmus psychology, with evidence pointing to Marije, but this bounded pass did not obtain an exact-work full-name identity assertion. Keep person link held; confirmed abstract type independently excludes the output.",
+          "sources": [
+            "https://www.cambridge.org/core/journals/european-psychiatry/article/s2102-adult-adhd-and-the-circadian-rhythm/FE385088B6853CC09BEF83E3646E5C0D"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -76919,14 +77913,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2007016001001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2007_016_001_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -77559,14 +78563,25 @@
       "publicationIds": [
         "doi:10.1177/1087054707299367"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -77911,14 +78926,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2007016001007"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Exact DOI publisher record has the expected author name but null author biography. Shared issue/coauthors and topic are insufficient work-level identity proof. No exclusion recommended from this evidence alone.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2007_016_001_007"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78047,14 +79072,24 @@
       "publicationIds": [
         "doi:10.1016/j.eurpsy.2007.01.243"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The abstract names A.M. Boonstra at PsyQ/Erasmus psychology, with evidence pointing to Marije, but this bounded pass did not obtain an exact-work full-name identity assertion. Keep person link held; confirmed abstract type independently excludes the output.",
+          "sources": [
+            "https://www.cambridge.org/core/journals/european-psychiatry/article/genes-and-neurocognitive-performance-are-the-two-related-in-adult-adhd/42FB64EF648C38282C5D655960B2477E"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78445,14 +79480,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2007016001008"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Exact DOI publisher record has the expected author name but null author biography. Shared issue/coauthors and topic are insufficient work-level identity proof. No exclusion recommended from this evidence alone.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2007_016_001_008"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78479,14 +79524,24 @@
       "publicationIds": [
         "doi:10.1016/j.eurpsy.2007.01.241"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The abstract names A.M. Boonstra at PsyQ/Erasmus psychology, with evidence pointing to Marije, but this bounded pass did not obtain an exact-work full-name identity assertion. Keep person link held; confirmed abstract type independently excludes the output.",
+          "sources": [
+            "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/21888D01DC8377A68F458491B40D6457/S0924933800247433a.pdf/association_of_response_to_methylphenidate_in_adults_with_adhd_with_a_polymorphism_in_slc6a3_dat1.pdf"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78496,14 +79551,26 @@
       "publicationIds": [
         "doi:10.1002/ajmg.b.30595"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Amsterdam UMC Pure record and VU publisher PDF explicitly identify A. Marije Boonstra, distinct from Albert Boonstra.",
+          "sources": [
+            "https://pure.amsterdamumc.nl/en/publications/an-exploratory-study-of-the-relationship-between-four-candidate-g/",
+            "https://research.vu.nl/ws/files/2349090/Boonstra%20American%20Journal%20of%20Medical%20Genetics%20-%20Neuropsychiatric%20Genetics%20147B%283%29%202008%20u.pdf",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78671,14 +79738,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2006015003005"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is als promovendus en adviseur verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2006_015_003_005"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78904,14 +79981,24 @@
       "publicationIds": [
         "doi:10.2807/esm.11.01.00591-es"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Apparent language version of the rejected English tattoo guidelines article, but exact Spanish DOI publisher metadata could not be accessed. Do not silently merge DOIs or assert a verified identity; retain hold.",
+          "sources": [
+            "https://doi.org/10.2807/esm.11.01.00591-es"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78921,14 +80008,26 @@
       "publicationIds": [
         "doi:10.2807/esm.11.01.00591-en"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher authorship places A. Boonstra in GGD Amsterdam infectious diseases. RIVM identifies Albert Boonstra, the GGD hygiene adviser responsible for these tattoo guidelines, with a career distinct from the FEB professor.",
+          "sources": [
+            "https://www.eurosurveillance.org/content/10.2807/esm.11.01.00591-en",
+            "https://www.rivm.nl/sites/default/files/2018-11/IB16_10.pdf",
+            "https://www.rug.nl/staff/albert.boonstra/cv?lang=en"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -78938,14 +80037,24 @@
       "publicationIds": [
         "doi:10.2807/esm.11.01.00591-fr"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Apparent language version of the rejected English tattoo guidelines article, but exact French DOI publisher metadata could not be accessed. Do not silently merge DOIs or assert a verified identity; retain hold.",
+          "sources": [
+            "https://doi.org/10.2807/esm.11.01.00591-fr"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -79078,14 +80187,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2006015003009"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is als promovendus en adviseur verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2006_015_003_009"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -79135,14 +80254,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2006015003007"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is als promovendus en adviseur verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2006_015_003_007"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -79435,14 +80564,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2006015003003"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is als promovendus en adviseur verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2006_015_003_003"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -80002,14 +81141,24 @@
       "publicationIds": [
         "doi:10.5553/bk/2006015003001"
       ],
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "acc-mp-van-der-steen",
-          "author": "Martijn van der Steen",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher article record names the author as the NSOB public-administration researcher, distinct from Martijn Pieter van der Steen at Groningen Accounting. Work-specific author biography: Drs Martijn van der Steen is als promovendus en adviseur verbonden aan de NSOB.",
+          "sources": [
+            "https://www.boomportaal.nl/tijdschrift/Bk/Bk_0927-3387_2006_015_003_001"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "acc-mp-van-der-steen",
+              "author": "Martijn van der Steen",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -81223,14 +82372,25 @@
       "publicationIds": [
         "doi:10.1080/13803390490515757"
       ],
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "The external author profile combines Albert Boonstra with A. Marije Boonstra. Hold this person/work link until an official publication-page or work-level ORCID corroborates it.",
+          "sources": [
+            "https://www.rug.nl/staff/albert.boonstra/",
+            "https://pure.amsterdamumc.nl/en/publications/to-act-or-not-to-act-thats-the-problem-primarily-inhibition-diffi/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "ims-a-boonstra",
+              "author": "Albert Boonstra",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -81496,13 +82656,13 @@
       ],
       "matches": [
         {
-          "personId": "ims-a-boonstra",
-          "author": "Albert Boonstra",
+          "personId": "ops-j-de-vries",
+          "author": "Jan de Vries",
           "method": "unique compatible author name"
         },
         {
-          "personId": "ops-j-de-vries",
-          "author": "Jan de Vries",
+          "personId": "ims-a-boonstra",
+          "author": "Albert Boonstra",
           "method": "unique compatible author name"
         }
       ]
@@ -87083,14 +88243,24 @@
       "publicationIds": [
         "doi:10.2202/1940-1639.1242"
       ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher biography identifies Jennifer C. L. Jordan, Youngstown State Counseling clinic director, not the Groningen researcher.",
+          "sources": [
+            "https://www.tandfonline.com/doi/pdf/10.2202/1940-1639.1242"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-j-jordan",
+              "author": "Jennifer Jordan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -90365,14 +91535,27 @@
       "publicationIds": [
         "doi:10.1016/j.brat.2004.07.004"
       ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
+          "status": "held-pending-person-work-verification",
+          "reason": "Attribution remains unverified: source coauthor CV identifies Jennifer Jordan as a North Dakota honors student in 2004, while the Groningen researcher was following a different documented educational trajectory. Hold this specific link pending decisive work-level identity evidence; do not label it a proven wrong-person attribution.",
+          "sources": [
+            "https://dramywenzel.com/wp-content/uploads/2022/11/Wenzel-CV-November-2022.pdf",
+            "https://www.rug.nl/staff/j.jordan/cv",
+            "https://pubmed.ncbi.nlm.nih.gov/15967174/",
+            "https://commons.und.edu/senior-projects/1014/"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-j-jordan",
+              "author": "Jennifer Jordan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -90399,14 +91582,24 @@
       "publicationIds": [
         "doi:10.1123/jsep.12.1.48"
       ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
         {
           "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
+          "status": "rejected-wrong-person",
+          "reason": "Publisher metadata identifies M. Kathleen Ryan at Seattle University, not the Groningen social psychologist.",
+          "sources": [
+            "https://api.crossref.org/works/10.1123/jsep.12.1.48"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-mk-ryan",
+              "author": "Michelle K. Ryan",
+              "method": "unique compatible author name"
+            }
+          ]
         }
       ]
     },
@@ -90416,16 +91609,166 @@
       "publicationIds": [
         "doi:10.2307/464063"
       ],
+      "people": [],
+      "matches": [],
+      "authorshipReview": [
+        {
+          "personId": "hrmob-j-jordan",
+          "status": "rejected-wrong-person",
+          "reason": "The original article identifies Jennifer Jordan at Howard University; Howard identifies this author as a long-serving English professor, distinct from the Groningen researcher.",
+          "sources": [
+            "https://tswl.utulsa.edu/1980s/vol-7/no-1-vol-7/spring-1988-vol-7-no-1/",
+            "https://middlehigh.somersetsilverpalms.net/ourpages/auto/2016/10/16/53831254/Hurston.pdf",
+            "https://magazine.howard.edu/sites/magazine.howard.edu/files/2022-02/HowardMagazine_Summer18.pdf"
+          ],
+          "checkedOn": "2026-10-11",
+          "removedMatches": [
+            {
+              "personId": "hrmob-j-jordan",
+              "author": "Jennifer Jordan",
+              "method": "unique compatible author name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.jrurstud.2022.10.027",
+      "doi": "10.1016/j.jrurstud.2022.10.027",
+      "publicationIds": [
+        "doi:10.1016/j.jrurstud.2022.10.027"
+      ],
       "people": [
-        "hrmob-j-jordan"
+        "eef-bw-lensink"
       ],
       "matches": [
         {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
+          "personId": "eef-bw-lensink",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/the-role-of-social-capital-in-adoption-of-risky-versus-less-risky/"
+          ]
         }
-      ]
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/the-role-of-social-capital-in-adoption-of-risky-versus-less-risky/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1086/718237",
+      "doi": "10.1086/718237",
+      "publicationIds": [
+        "doi:10.1086/718237"
+      ],
+      "people": [
+        "eef-bw-lensink"
+      ],
+      "matches": [
+        {
+          "personId": "eef-bw-lensink",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/the-origins-of-optimism-a-lab-in-the-field-experiment-among-micro/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/the-origins-of-optimism-a-lab-in-the-field-experiment-among-micro/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1016/j.worlddev.2019.104790",
+      "doi": "10.1016/j.worlddev.2019.104790",
+      "publicationIds": [
+        "doi:10.1016/j.worlddev.2019.104790"
+      ],
+      "people": [
+        "eef-bw-lensink"
+      ],
+      "matches": [
+        {
+          "personId": "eef-bw-lensink",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/randomized-interventions-and-real-treatment-effects-a-cautionary-/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/randomized-interventions-and-real-treatment-effects-a-cautionary-/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1007/s11205-021-02705-8",
+      "doi": "10.1007/s11205-021-02705-8",
+      "publicationIds": [
+        "doi:10.1007/s11205-021-02705-8"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/does-financial-development-reduce-the-poverty-gap/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/does-financial-development-reduce-the-poverty-gap/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1093/oep/gpab044",
+      "doi": "10.1093/oep/gpab044",
+      "publicationIds": [
+        "doi:10.1093/oep/gpab044"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/what-drives-financial-development-a-meta-regression-analysis/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/what-drives-financial-development-a-meta-regression-analysis/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
+    },
+    {
+      "id": "doi:10.1111/twec.13180",
+      "doi": "10.1111/twec.13180",
+      "publicationIds": [
+        "doi:10.1111/twec.13180"
+      ],
+      "people": [
+        "gem-j-de-haan"
+      ],
+      "matches": [
+        {
+          "personId": "gem-j-de-haan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/the-forgotten-middle-class-an-analysis-of-the-effects-of-globalis/"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/the-forgotten-middle-class-an-analysis-of-the-effects-of-globalis/"
+      ],
+      "curatedSourceCheckedOn": "2026-10-11"
     }
   ]
 }

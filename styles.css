@@ -4184,6 +4184,9 @@ html:not(.auth-locked) .auth-gate {
 .onet-faculty-label { font: 600 10.5px var(--sans); fill: #3f5675; paint-order: stroke; stroke: rgba(255,255,255,.92); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
 .onet-label-bg { fill: rgba(255,255,255,.88); pointer-events: none; }
 .onet-label-bg.is-faculty { fill: rgba(244,247,251,.94); stroke: #c9d3e2; stroke-width: .6; }
+.onet-back-labels .onet-faculty-label { fill: #6f819c; }
+.onet-front-labels { pointer-events: none; }
+#overview-network-svg.has-focus .onet-back-labels > * { opacity: .15; }
 #overview-network-svg.has-focus .onet-labels > * { opacity: .22; }
 #overview-network-svg.has-focus .onet-labels > .is-hot { opacity: 1; }
 .onet-leader { stroke: #5e7596; stroke-width: .7; stroke-opacity: .6; }
@@ -4211,9 +4214,6 @@ html:not(.auth-locked) .auth-gate {
 .rp-card-icon .rp-icon { width: 24px; height: 24px; }
 .rp-card:hover .rp-card-icon { background: var(--red); color: var(--white); }
 @media (max-width: 640px) { .rp-head-icon { width: 40px; height: 40px; } .rp-head-icon .rp-icon { width: 22px; height: 22px; } }
-.onet-badge circle { fill: var(--white); stroke: #9a4f24; stroke-width: 1.4; }
-.onet-badge text { font: 700 10px var(--sans); fill: #7a3d1b; text-anchor: middle; pointer-events: none; }
-.onet-badges { pointer-events: none; }
 .onet-info { position: absolute; top: 12px; left: 12px; max-width: 280px; padding: 12px 14px; background: rgba(255,255,255,.96); border: 1px solid var(--ink-200); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.08); font-size: 0.84rem; line-height: 1.4; pointer-events: none; }
 .onet-info.is-right { left: auto; right: 12px; }
 .onet-info strong { display: block; font-family: var(--serif); font-size: 1rem; }

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-ties">
+  <link rel="stylesheet" href="styles.css?v=20261011-metrics-audit">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -343,41 +343,38 @@
           </div>
         </div>
         <aside class="metric-comparison-note" role="note">
-          <h3>Comparison limits</h3>
-          <p>Publication coverage differs substantially between departments. Several sources list only selected papers, and historical staffing levels are unavailable. These curves show the records currently captured per listed staff member. They cannot establish a fair ranking of departmental research performance.</p>
+          <p>Comparisons are provisional: public records are incomplete and use current staff numbers.</p>
         </aside>
-        <div id="benchmark-summary" class="metric-grid"></div>
         <p class="section-intro" id="benchmark-identity-note" role="note">Each paper counts once per department, including all staff ranks and PhD students.</p>
-        <div class="benchmark-grid">
+        <div id="metric-charts" class="benchmark-grid">
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <p class="eye">Available publication records</p>
-                <h3 id="benchmark-trend-title" class="overview-h3">All journal publications per person, by year</h3>
+                <h3 id="benchmark-trend-title" class="overview-h3">Publications per person</h3>
               </div>
             </div>
-            <p class="section-intro metric-chart-subtitle">Unique journal papers per person. The current-year value is year-to-date.</p>
+            <p class="section-intro metric-chart-subtitle">Articles and editorials per year.</p>
             <div id="benchmark-publication-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head"><div>
-              <p class="eye">Available publication records</p>
-              <h3 class="overview-h3">AIP ≥ 95 publications per person, by year</h3>
+              <h3 class="overview-h3">AIP ≥ 95 publications per person</h3>
             </div></div>
-            <p class="section-intro metric-chart-subtitle">Unique AIP ≥ 95 journal papers per person. The current-year value is year-to-date.</p>
+            <p class="section-intro metric-chart-subtitle">Journals with an AIP score of at least 95.</p>
             <div id="benchmark-aip-trend" class="metric-chart"></div>
           </section>
           <section class="overview-panel benchmark-panel-wide">
             <div class="overview-panel-head">
               <div>
-                <h3 class="overview-h3">Centralization among recorded authors</h3>
+                <h3 class="overview-h3">Centralization</h3>
               </div>
             </div>
-            <p class="section-intro">How evenly is credit shared among authors with linked publications? Lower means more even. People without linked records are excluded here because missing data cannot establish that they published nothing. This is a partial view of the department.</p>
+            <p class="section-intro">How concentrated publications are among recorded authors. Lower means more even.</p>
             <div id="benchmark-variety" class="variety-list"></div>
           </section>
-          <details class="overview-panel benchmark-panel-wide"><summary>How the counts and centralization are calculated</summary><div id="benchmark-method-note" class="method-note"></div></details>
         </div>
+        <details id="metric-coverage" class="overview-panel benchmark-panel-wide"><summary>Data coverage</summary><div id="benchmark-summary"></div></details>
+        <details class="overview-panel benchmark-panel-wide"><summary>How it works</summary><div id="benchmark-method-note" class="method-note"></div></details>
       </div>
     </section>
 
@@ -391,12 +388,12 @@
         </div>
         <div class="publication-layout">
           <div class="publication-main">
-            <p class="section-intro">Each counted journal article appears once. The roster and year controls at the top apply throughout the dashboard. Other source-backed works are labelled on Staff profiles.</p>
+            <p class="section-intro">Journal articles and editorials by the selected HRM&amp;OB researchers. Metrics uses a broader academic roster.</p>
             <div class="tool-row">
               <label class="select-box" hidden>
                 <span>Outputs</span>
                 <select id="publication-kind-filter" aria-controls="publication-table">
-                  <option value="counted">Counted journal articles</option>
+                  <option value="counted">Recorded articles and editorials</option>
                 </select>
               </label>
               <label class="search-box">
@@ -409,7 +406,7 @@
                   <option value="all">All</option>
                   <option value="gte90">AIP &ge; 90</option>
                   <option value="gte95">AIP &ge; 95</option>
-                  <option value="noaip">No AIP / not ranked</option>
+                  <option value="noaip">No AIP score in source</option>
                 </select>
               </label>
               <label class="select-box">
@@ -814,7 +811,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="resources/pages/resources.js?v=20261011-ties"></script>
-  <script src="app.js?v=20261011-ties"></script>
+  <script src="resources/pages/resources.js?v=20261011-metrics-audit"></script>
+  <script src="app.js?v=20261011-metrics-audit"></script>
 </body>
 </html>

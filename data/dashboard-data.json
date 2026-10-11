@@ -645,8 +645,8 @@
     "identityReviewedOn": "2026-10-08",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately.",
     "publicationDatesCheckedOn": "2026-10-08",
-    "sourceReviewOn": "2026-10-08",
-    "publicationReviewHolds": 17
+    "sourceReviewOn": "2026-10-11",
+    "publicationReviewHolds": 29
   },
   "people": [
     {
@@ -8288,8 +8288,8 @@
       "journal": "Psychologische Rundschau",
       "issns": [],
       "sourceType": "RUG staff page",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Verified duplicate source representation",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://research.rug.nl/en/publications/c80a228e-cc85-458c-8cff-e2cb4418489d",
       "authors": [
@@ -8310,15 +8310,18 @@
       "subjects": [],
       "source": "University of Groningen staff publication page",
       "evidence": [
-        "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication."
+        "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication.",
+        "Public-source review: Verified duplicate representation of DOI10.1026/0033-3042/a000627. The official Pure page has the exact stored UUID c80a228e-cc85-458c-8cff-e2cb4418489d and explicitly supplies that DOI; publisher authors, year, journal, volume, issue and pages agree. Preserve this raw no-DOI representation, but count the existing DOI record once. Source: https://research.rug.nl/en/publications/paradigmen-der-psychologischen-resilienzforschung-eine-kleine-inv/"
       ],
       "provisional": true,
       "previousIds": [],
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
+      "duplicateOf": "doi:10.1026/0033-3042/a000627",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1026/0033-3042/a000627",
@@ -11091,8 +11094,8 @@
         "1476-4687"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "World View / opinion column",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W4224224863",
       "authors": [
@@ -11111,7 +11114,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: The Nature publisher labels this contribution World View, with the version-of-record heading A personal take on science and society. This is an opinion column, excluded under the existing commentary/opinion policy. The valid Michelle Ryan identity is preserved; the record remains stored but is not counted or displayed as a journal article. Source: https://www.nature.com/articles/d41586-022-01045-y"
       ],
       "provisional": true,
       "previousIds": [],
@@ -11121,10 +11125,11 @@
       "topicFamilies": [
         "gender and leadership"
       ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1016/j.lrp.2021.102121",
@@ -14946,7 +14951,8 @@
       "subjects": [],
       "source": "Crossref public metadata",
       "evidence": [
-        "Crossref ORCID matched for Bloom, J. de"
+        "Crossref ORCID matched for Bloom, J. de",
+        "Reviewed editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
       "previousIds": [],
@@ -14959,7 +14965,8 @@
       "counted": true,
       "display": true,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source"
+      "aipStatus": "reviewed-not-in-aip-source",
+      "outputType": "Editorial"
     },
     {
       "id": "doi:10.1177/23970022211004599",
@@ -14975,8 +14982,8 @@
         "2397-0030"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Comment/Letter to the editor (interview)",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W3136213024",
       "authors": [
@@ -15001,7 +15008,8 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Bloom, J. de",
-        "Crossref ORCID matched for Bloom, J. de"
+        "Crossref ORCID matched for Bloom, J. de",
+        "Public-source review: The official University of Groningen Pure record classifies this interviewed-experts contribution as Comment/Letter to the editor. Commentaries and letters remain excluded under the existing policy despite the separate decision to count editorials. Author attribution is retained; preserve the source record but exclude it from counted Publications. Source: https://research.rug.nl/en/publications/recovery-in-occupational-health-psychology-and-human-resource-man/"
       ],
       "provisional": true,
       "previousIds": [],
@@ -15014,10 +15022,11 @@
         "people management practices",
         "selection and recruitment"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source"
+      "aipStatus": "not-rankable",
+      "reviewHold": true
     },
     {
       "id": "doi:10.3389/fpsyg.2021.784844",
@@ -15336,8 +15345,8 @@
         "1464-360X"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Conference poster abstract",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W4386656648",
       "authors": [
@@ -15359,7 +15368,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: The publisher places this contribution in POSTER SESSIONS, DN: Health at work, Social security and social welfare, in the 2021 European public-health conference supplement. It is a conference poster abstract, excluded under the existing output policy; the author attribution is not rejected. Source: https://academic.oup.com/eurpub/article/31/Supplement_3/ckab165.328/6406126"
       ],
       "provisional": true,
       "previousIds": [],
@@ -15370,10 +15380,11 @@
         "occupational health",
         "justice and fairness"
       ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
+      "reviewHold": true
     },
     {
       "id": "doi:10.5465/ambpp.2021.14627abstract",
@@ -23554,8 +23565,8 @@
         "1937-4178"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Possible reprint / source review hold",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2569516137",
       "authors": [
@@ -23581,7 +23592,8 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
-        "OpenAlex author matched to University of Groningen for Vries, T.A. de"
+        "OpenAlex author matched to University of Groningen for Vries, T.A. de",
+        "Public-source review: Possible reprint held to prevent likely double counting pending publisher full-text confirmation. Publisher-deposited Crossref metadata has the exact same title and five-author sequence as the already counted original10.5465/amj.2014.0385. Secondary indexing describes this IEEE item as reprint content, but direct IEEE text was inaccessible; this is a review hold, not a claim of a publisher-verified reprint. Preserve both records and all author associations; keep the original AMJ article counted. Source: https://api.crossref.org/works/10.1109%2Femr.2016.7792411"
       ],
       "provisional": true,
       "previousIds": [],
@@ -23589,10 +23601,12 @@
         "collaboration and coordination",
         "multiple team membership"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source"
+      "aipStatus": "not-rankable",
+      "relatedOriginalDoi": "10.5465/amj.2014.0385",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1016/j.yhbeh.2016.06.005",
@@ -40511,8 +40525,8 @@
         "2194-587X"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / verified same-name attribution",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2025555115",
       "authors": [
@@ -40534,7 +40548,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "Public-source review: Wrong-person attribution: the publisher PDF identifies Jennifer C. L. Jordan as Associate Professor and director of the Community Counseling Clinic at Youngstown State University. This is distinct from the HRM&OB affiliate Jennifer Jordan. Preserve source metadata but exclude from department counts and display. Source: https://www.tandfonline.com/doi/pdf/10.2202/1940-1639.1242"
       ],
       "provisional": true,
       "previousIds": [],
@@ -40544,10 +40559,11 @@
       "topicFamilies": [
         "ethics and morality"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source"
+      "aipStatus": "not-rankable",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1037/0021-9010.91.6.1245",
@@ -49240,8 +49256,8 @@
         "1557-086X"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / verified same-name attribution",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W4395704323",
       "authors": [
@@ -49264,18 +49280,20 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: Wrong-person attribution: the publisher biography identifies the author Michelle Ryan as a graduate student in the School of Criminology and Criminal Justice at Griffith University, distinct from the HRM&OB affiliate Michelle K. Ryan. Preserve source metadata but exclude from department counts and display. Source: https://journals.sagepub.com/doi/abs/10.1177/15570851241250313"
       ],
       "provisional": true,
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
       "previousIds": [],
       "publicationDate": "2024-04-26",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F15570851241250313",
-      "publicationDateType": "published-online"
+      "publicationDateType": "published-online",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1016/j.copsyc.2024.101922",
@@ -49390,8 +49408,8 @@
         "1754-1484"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Book review / verified same-name attribution",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W4387311940",
       "authors": [
@@ -49410,20 +49428,22 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: Publisher page identifies this as a review of the edited book Angela Carter's Pyrotechnics and affiliates author Michelle Ryan with the University of Angers, France. This is a book review and a different scholar from Michelle K. Ryan; preserve source metadata but exclude from department counts and display. Source: https://academic.oup.com/cww/article-abstract/17/2/233/7288202"
       ],
       "provisional": true,
       "topicFamilies": [
         "gender and leadership"
       ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
       "previousIds": [],
       "publicationDate": "2023-08-31",
       "publicationDateSource": "https://api.crossref.org/works/10.1093%2Fcww%2Fvpad010",
-      "publicationDateType": "published-print"
+      "publicationDateType": "published-print",
+      "reviewHold": true
     },
     {
       "id": "doi:10.5465/amj.2023.4004",
@@ -49586,8 +49606,8 @@
         "2271-5444"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Book review",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W3213111313",
       "authors": [
@@ -49606,15 +49626,17 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: The official publisher issue contents place Michelle Ryan’s entry for Gustar, Sivyer and Gamble’s edited volume under Comptes rendus (book reviews). Exclude the book review under the existing output policy; the identity of this Michelle Ryan is not adjudicated. Preserve raw source record and author associations. Source: https://journals.openedition.org/ebc/10889?lang=en"
       ],
       "provisional": true,
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "previousIds": []
+      "aipStatus": "not-rankable",
+      "previousIds": [],
+      "reviewHold": true
     },
     {
       "id": "doi:10.1098/rstb.2020.0135",
@@ -51188,8 +51210,8 @@
         "1873-622X"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Authorship review hold / conflicting identity evidence",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W1974164989",
       "authors": [
@@ -51211,7 +51233,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "Public-source review: Attribution held, not adjudicated as a proven wrong person: the publisher author group is at North Dakota; coauthor Amy Wenzel’s CV names Jennifer Jordan as her 2004 North Dakota honors-thesis student, corroborated by the official UND thesis repository. The HRM&OB Jennifer Jordan’s official CV instead records Arizona State BS1999, Yale MS2002, MPhil2003 and PhD2005. This is concrete contradictory identity evidence requiring author-level corroboration before counting; preserve raw source attribution. Source: https://commons.und.edu/senior-projects/1014/"
       ],
       "provisional": true,
       "topicFamilies": [
@@ -51219,11 +51242,12 @@
         "diversity and inclusion",
         "crisis and resilience"
       ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "previousIds": []
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
+      "previousIds": [],
+      "reviewHold": true
     },
     {
       "id": "doi:10.1111/0045-3609.00082",
@@ -51285,8 +51309,8 @@
         "1543-2904"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / verified same-name attribution",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2129876332",
       "authors": [
@@ -51307,18 +51331,20 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "Public-source review: Wrong-person attribution: publisher-deposited Crossref metadata identifies the first author as M. Kathleen Ryan of Seattle University, not Michelle K. Ryan. Preserve source metadata but exclude from department counts and display. The 1990 paper falls outside all current interface windows. Source: https://api.crossref.org/works/10.1123/jsep.12.1.48"
       ],
       "provisional": true,
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
       "previousIds": [],
       "publicationDate": "1990-03",
       "publicationDateSource": "https://api.crossref.org/works/10.1123%2Fjsep.12.1.48",
-      "publicationDateType": "published-print"
+      "publicationDateType": "published-print",
+      "reviewHold": true
     },
     {
       "id": "doi:10.2307/464063",
@@ -51332,8 +51358,8 @@
         "1936-1645"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / verified same-name attribution",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2291860831",
       "authors": [
@@ -51352,17 +51378,19 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "Public-source review: Wrong-person attribution: the original article identifies Jennifer Jordan at Howard University; the official Howard University magazine independently identifies the longstanding English professor with Howard degrees in 1967 and 1970. This is distinct from the HRM&OB affiliate Jennifer Jordan. Preserve raw metadata but exclude from counts and display; the 1988 article falls outside current interface windows. Source: https://middlehigh.somersetsilverpalms.net/ourpages/auto/2016/10/16/53831254/Hurston.pdf"
       ],
       "provisional": true,
       "topicFamilies": [
         "gender and leadership"
       ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "previousIds": []
+      "counted": false,
+      "display": false,
+      "aipComparable": false,
+      "aipStatus": "not-rankable",
+      "previousIds": [],
+      "reviewHold": true
     },
     {
       "id": "doi:10.1177/10596011261415739",
