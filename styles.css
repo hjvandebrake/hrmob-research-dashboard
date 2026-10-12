@@ -4245,3 +4245,12 @@ html:not(.auth-locked) .auth-gate {
 .onet-info li b { color: #7a3d1b; }
 .onet-info p { margin: 6px 0 0; color: var(--ink-700); }
 @media (max-width: 640px) { .onet-info { position: static; max-width: none; border-radius: 0; border-width: 1px 0 0; box-shadow: none; } }
+/* Metrics: hovered department line stands out (attachMetricChartInteraction) */
+.metric-plot-wrap svg [data-department] { transition: opacity .15s ease; }
+.metric-plot-wrap svg.has-metric-focus [data-department] { opacity: .14; }
+.metric-plot-wrap svg.has-metric-focus [data-department].is-metric-focus { opacity: 1; }
+.metric-plot-wrap svg.has-metric-focus polyline.is-metric-focus { stroke-width: 3.5; }
+.metric-plot-wrap svg.has-metric-focus circle.is-metric-focus { opacity: .85; }
+.metric-plot-wrap svg.has-metric-focus .metric-line-label.is-metric-focus { font-weight: 700; }
+.metric-partial-note { margin: 4px 0 0; }
+
