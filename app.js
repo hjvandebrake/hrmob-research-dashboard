@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261012-lightsmooth";
+const DATA_VERSION = "20261012-sdband";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -5159,10 +5159,37 @@ function departmentPublicationGroups(data, fromYear, toYear, includeAffiliated=f
         const highCredits=rows.filter(p=>isNumber(p.aip)&&p.aip>=95).reduce((sum,pub)=>sum+selectedAuthorCount(pub),0);
         return {year,count:rows.length,highAip:high,average:divide(rows.length),aipAverage:divide(high),
           authorshipCount:fullCredits,individualAverage:divide(fullCredits),
-          highAipAuthorshipCount:highCredits,highAipIndividualAverage:divide(highCredits)};
+          highAipAuthorshipCount:highCredits,highAipIndividualAverage:divide(highCredits),
+          spread:yearlyStaffSpread(staff,rows,credits)};
       }),
       publicationIds:pubs.map(p=>p.id)};
   });
+}
+
+// How evenly a department's yearly output is spread over its selected staff. Each person's
+// value matches the plotted per-person series, so the mean equals the plotted average:
+// whole papers authored (individual credit) or papers split among departmental coauthors
+// (unique credit). Staff without papers that year count as zero.
+function yearlyStaffSpread(staff,rows,credits) {
+  if(!staff.length)return null;
+  const tally={individualAverage:new Map(),highAipIndividualAverage:new Map(),average:new Map(),aipAverage:new Map()};
+  rows.forEach(pub=>{
+    const authors=Array.from(pub.people).filter(id=>credits.has(id));
+    const high=isNumber(pub.aip)&&pub.aip>=95;
+    authors.forEach(id=>{
+      const add=(key,value)=>tally[key].set(id,(tally[key].get(id)||0)+value);
+      add("individualAverage",1);add("average",1/authors.length);
+      if(high){add("highAipIndividualAverage",1);add("aipAverage",1/authors.length);}
+    });
+  });
+  const summary={};
+  Object.entries(tally).forEach(([key,map])=>{
+    const values=staff.map(person=>map.get(person.id)||0);
+    const mean=values.reduce((sum,value)=>sum+value,0)/values.length;
+    const sd=Math.sqrt(values.reduce((sum,value)=>sum+(value-mean)**2,0)/values.length);
+    summary[key]={n:values.length,mean,sd,min:Math.min(...values),max:Math.max(...values),withOutput:values.filter(value=>value>0).length};
+  });
+  return summary;
 }
 
 function normalizeMetricAipFilter(value) {
@@ -5221,6 +5248,10 @@ function renderMetrics() {
   const auditDepartments=audit?.rosterModes?.[state.includeAffiliatedResearchers?"affiliated":"department"]?.departments||audit?.departments||[];
   renderMetricCoverage(els.benchmarkSummary,groups,auditDepartments,data,from,to);
   document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
+  const trendCaption=document.querySelector?.(".metric-trend-caption");
+  if(trendCaption)trendCaption.textContent=subgroups
+    ?"Hover over a line to highlight a department. In the per-person plots, the shaded band shows the average ± 1 standard deviation across that department's staff in this rank: a wide band means output is spread unevenly. The last point is 2026 so far (YTD)."
+    :"Hover over a line to highlight a department and see its annual values. The last point is 2026 so far (YTD).";
   els.benchmarkTrendTitle.textContent="Total publications";
   metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
   els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use a light local linear LOESS: each year is fitted from its five nearest years. Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD) and is included in the smoothing like any other year, so its smoothed value reflects a partial year.</p>`;
@@ -5335,7 +5366,10 @@ function metricChartReadout(entry,point,key,mode) {
   const calculation=definition.perPerson?` (${point.row[definition.numerator]} ${definition.unit} / ${entry.group.staff} people)`:"";
   const fitted=mode!=="annual"&&isNumber(point.smooth)?` · Smoothed estimate: ${Number(point.smooth.toFixed(3))}`:"";
   const partial=point.partial?" · Year to date":"";
-  return `<strong>${escapeHtml(entry.group.label)} · ${metricComparisonYearLabel(point.year)}</strong> · Annual: ${value}${calculation}${fitted}${partial}`;
+  const spread=state.metricPage==="subgroups"&&definition.perPerson?point.row.spread?.[key]:null;
+  const round=v=>Number(v.toFixed(2));
+  const spreadText=spread?` · Across ${spread.n} staff: SD ${round(spread.sd)}, range ${round(spread.min)}–${round(spread.max)}, ${spread.withOutput} with output`:"";
+  return `<strong>${escapeHtml(entry.group.label)} · ${metricComparisonYearLabel(point.year)}</strong> · Annual: ${value}${calculation}${fitted}${partial}${spreadText}`;
 }
 
 function attachMetricChartInteraction(container,series,key,mode,geometry) {
@@ -5417,9 +5451,27 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   const title=`${definition.title}, by year`;
   const format=v=>!isNumber(v)?"N/A":definition.perPerson?v.toFixed(2):String(v);
   const readoutId=`metric-readout-${key}`;
+  // Academic-rank page only: a band of average ± 1 SD across the department's staff in that
+  // rank, shown when a department is highlighted (Joost, 12 October 2026).
+  const showSpread=state.metricPage==="subgroups"&&definition.perPerson;
+  const band=entry=>{
+    if(!showSpread)return "";
+    const rows=entry.group.yearly.map(row=>{
+      const spread=row.spread?.[key],mean=row[key];
+      return {year:row.year,low:isNumber(mean)&&spread?Math.max(0,mean-spread.sd):null,high:isNumber(mean)&&spread?mean+spread.sd:null};
+    });
+    const low=mode==="annual"?rows.map(row=>row.low):smoothMetricAnnualValues(rows,"low");
+    const high=mode==="annual"?rows.map(row=>row.high):smoothMetricAnnualValues(rows,"high");
+    const points=rows.map((row,index)=>({year:row.year,low:low[index],high:high[index]})).filter(point=>isNumber(point.low)&&isNumber(point.high));
+    if(points.length<2)return "";
+    const clamp=value=>y(Math.min(ymax,value));
+    const outline=[...points.map(point=>`${x(point.year)},${clamp(point.high)}`),...points.slice().reverse().map(point=>`${x(point.year)},${clamp(point.low)}`)].join(" ");
+    return `<polygon class="metric-band" data-department="${escapeHtml(entry.group.key)}" points="${outline}" fill="${colors[entry.group.key]||"#666"}"/>`;
+  };
   container.innerHTML=`<div class="metric-plot-wrap"><svg viewBox="0 0 ${width} ${height}" tabindex="0" role="group" aria-label="${title}; ${mode} view. Left/right: years; up/down: departments. Home/End: first/last year; Escape: clear." aria-describedby="${readoutId}"><title>${title}</title>
     ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
     ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${metricComparisonYearLabel(v)}</text>`).join("")}
+    ${series.map(band).join("")}
     ${series.map(entry=>{
       const color=colors[entry.group.key]||"#666",department=escapeHtml(entry.group.key),points=entry.points;
       const linePoints=points;
