@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261012-metricfocus";
+const DATA_VERSION = "20261012-ytd";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -5223,7 +5223,7 @@ function renderMetrics() {
   document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
   els.benchmarkTrendTitle.textContent="Total publications";
   metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
-  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The incomplete latest year is left out of the plots and the fit; it appears in the values tables.</p>`;
+  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD); it joins the line at its recorded value and is not used in the smoothing fit.</p>`;
 }
 
 
@@ -5396,17 +5396,14 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   if(!container)return;
   const width=1000,height=310,pad={left:45,right:112,top:20,bottom:35};
   const years=Array.from({length:to-from+1},(_,i)=>from+i);
-  // The incomplete latest year would drag every line down, so the plot ends at the last
-  // completed year; the partial year stays in the values table (Joost, 12 October 2026).
-  const partialYear=metricComparisonHorizonYear();
-  const plotTo=to===partialYear&&to>from?to-1:to;
-  const plotYears=years.filter(year=>year<=plotTo);
+  // The current year is drawn as an ordinary point labelled "YTD" (Joost, 12 October 2026).
+  // It joins each line at its recorded value; the smoothing fit still uses completed years only.
   const mode=normalizeMetricTrendMode(state.metricTrendMode);
-  const series=metricChartSeries(groups,key,mode).map(entry=>({...entry,points:entry.points.filter(point=>point.year<=plotTo)}));
+  const series=metricChartSeries(groups,key,mode);
   const peak=Math.max(.1,...series.flatMap(entry=>entry.points.flatMap(point=>[point.raw,point.value].filter(isNumber))));
   const step=peak<=1?.25:peak<=2?.5:peak<=5?1:2;
   const ymax=Math.ceil(peak*1.08/step)*step;
-  const x=year=>pad.left+(year-from)/Math.max(1,plotTo-from)*(width-pad.left-pad.right);
+  const x=year=>pad.left+(year-from)/Math.max(1,to-from)*(width-pad.left-pad.right);
   const y=value=>height-pad.bottom-value/ymax*(height-pad.top-pad.bottom);
   const colors={"HRM&OB":"#9b493b",Marketing:"#477875","IM&S":"#687b99",Operations:"#8a7548",GEM:"#7c6288",Accounting:"#527d51",EEF:"#515a65"};
   const labels=series.filter(entry=>isNumber(entry.points.at(-1)?.value)).map(entry=>({g:entry.group,y:y(entry.points.at(-1).value)})).sort((a,b)=>a.y-b.y);
@@ -5419,25 +5416,23 @@ function renderDepartmentPublicationChart(container,groups,from,to,key="average"
   const readoutId=`metric-readout-${key}`;
   container.innerHTML=`<div class="metric-plot-wrap"><svg viewBox="0 0 ${width} ${height}" tabindex="0" role="group" aria-label="${title}; ${mode} view. Left/right: years; up/down: departments. Home/End: first/last year; Escape: clear." aria-describedby="${readoutId}"><title>${title}</title>
     ${[0,ymax/2,ymax].map(v=>`<line x1="${pad.left}" x2="${width-pad.right}" y1="${y(v)}" y2="${y(v)}" stroke="#e4e6e3"/><text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" fill="#666" font-size="12">${Number(v.toFixed(2))}</text>`).join("")}
-    ${plotYears.filter((v,i)=>plotYears.length<12||i===0||i===plotYears.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${metricComparisonYearLabel(v)}</text>`).join("")}
+    ${years.filter((v,i)=>years.length<12||i===0||i===years.length-1||v%5===0).map(v=>`<text x="${x(v)}" y="${height-8}" text-anchor="middle" fill="#666" font-size="12">${metricComparisonYearLabel(v)}</text>`).join("")}
     ${series.map(entry=>{
       const color=colors[entry.group.key]||"#666",department=escapeHtml(entry.group.key),points=entry.points;
-      const linePoints=mode==="annual"?points:points.map(point=>point.partial?{...point,value:null}:point);
+      const linePoints=points;
       const lines=metricChartSegments(linePoints).map(segment=>`<polyline data-department="${department}" fill="none" stroke="${color}" stroke-width="2" points="${segment.map(point=>x(point.year)+","+y(point.value)).join(" ")}"/>`).join("");
-      const partial=points.find(point=>point.partial&&isNumber(point.raw)),prior=partial&&points.find(point=>point.year===partial.year-1&&isNumber(point.value));
-      const connector=mode!=="annual"&&partial&&prior?`<line data-department="${department}" x1="${x(prior.year)}" y1="${y(prior.value)}" x2="${x(partial.year)}" y2="${y(partial.raw)}" stroke="${color}" stroke-dasharray="3 5" opacity=".55"/>`:"";
-      const dots=points.filter(point=>isNumber(point.raw)).map(point=>`<circle data-department="${department}" cx="${x(point.year)}" cy="${y(point.raw)}" r="${point.partial?3:2}" fill="${color}" opacity="${point.partial?1:mode==="annual"?.6:.25}"/>`).join("");
-      return lines+connector+dots;
+      const dots=points.filter(point=>isNumber(point.raw)).map(point=>`<circle data-department="${department}" cx="${x(point.year)}" cy="${y(point.raw)}" r="2" fill="${color}" opacity="${mode==="annual"||point.partial?.6:.25}"/>`).join("");
+      return lines+dots;
     }).join("")}
     ${labels.map(l=>`<line data-department="${escapeHtml(l.g.key)}" x1="${width-pad.right}" y1="${l.y}" x2="${width-pad.right+10}" y2="${l.labelY}" stroke="${colors[l.g.key]||"#666"}" stroke-width="1"/><text data-department="${escapeHtml(l.g.key)}" class="metric-line-label" x="${width-pad.right+14}" y="${l.labelY+4}" fill="${colors[l.g.key]||"#666"}" font-size="12">${escapeHtml(l.g.label)}</text>`).join("")}
     <circle class="metric-chart-marker" r="5" fill="white" stroke="#222" stroke-width="2" visibility="hidden" pointer-events="none"/>
-    </svg></div>${plotTo<to?`<p class="small-muted metric-partial-note">${to} is still incomplete, so it appears only in the values table below.</p>`:""}<p id="${readoutId}" class="metric-chart-readout" role="status" aria-live="polite" aria-atomic="true"></p>
+    </svg></div><p id="${readoutId}" class="metric-chart-readout" role="status" aria-live="polite" aria-atomic="true"></p>
     <details class="metric-data-details"><summary>View department values</summary><p class="small-muted">Counts use the selected staff; yearly values show the calculation on hover.</p><div class="table-wrap"><table class="department-counts-table" aria-label="${title}, department values"><thead><tr><th>Year</th>${groups.map(g=>`<th class="num">${escapeHtml(g.label)}</th>`).join("")}</tr></thead><tbody>
     <tr><th>Selected headcount</th>${groups.map(g=>`<td class="num">${g.staff}</td>`).join("")}</tr>
     ${years.slice().reverse().map(year=>`<tr><th>${metricComparisonYearLabel(year)}</th>${groups.map(g=>{const row=g.yearly.find(r=>r.year===year);return `<td class="num" title="${row[definition.numerator]} ${definition.unit}${definition.perPerson?` / ${g.staff} people`:""}">${format(row[key])}</td>`}).join("")}</tr>`).join("")}
     <tr><th>${definition.perPerson?"Period per person":"Period total"}</th>${groups.map(g=>`<td class="num"><strong>${format(g[definition.groupKey])}</strong></td>`).join("")}</tr>
     ${definition.perPerson?`<tr><th>${definition.unit==="unique papers"?"Unique papers":"Author-paper credits"} in period</th>${groups.map(g=>`<td class="num">${g[definition.groupNumerator]}</td>`).join("")}</tr>`:""}</tbody></table></div></details>`;
-  attachMetricChartInteraction(container,series,key,mode,{width,height,pad,from,to:plotTo,ymax,x,y});
+  attachMetricChartInteraction(container,series,key,mode,{width,height,pad,from,to,ymax,x,y});
 }
 function renderMetricTrendControls(trendKey) {
   if (els.benchmarkTrendTitle) {
