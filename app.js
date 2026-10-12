@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261012-smoothytd";
+const DATA_VERSION = "20261012-lightsmooth";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -5223,7 +5223,7 @@ function renderMetrics() {
   document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
   els.benchmarkTrendTitle.textContent="Total publications";
   metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
-  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD) and is included in the smoothing like any other year, so its smoothed value reflects a partial year.</p>`;
+  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use a light local linear LOESS: each year is fitted from its five nearest years. Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD) and is included in the smoothing like any other year, so its smoothed value reflects a partial year.</p>`;
 }
 
 
@@ -5249,7 +5249,8 @@ function smoothMetricAnnualValues(rows,key,partialYear=metricComparisonHorizonYe
   const result=rows.map(()=>null);
   let segment=[];
   const fit=()=>{
-    const n=segment.length,neighbors=Math.min(n,Math.max(5,Math.ceil(n*.5)));
+    // Light smoothing: each year is fitted from its five nearest years (Joost, 12 October 2026).
+    const n=segment.length,neighbors=Math.min(n,5);
     segment.forEach(({row,index})=>{
       if(n<3){result[index]=row[key];return;}
       const distances=segment.map(point=>Math.abs(point.row.year-row.year)).sort((a,b)=>a-b);
