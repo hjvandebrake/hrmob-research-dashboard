@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261012-ytd";
+const DATA_VERSION = "20261012-smoothytd";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -5223,7 +5223,7 @@ function renderMetrics() {
   document.getElementById("benchmark-identity-note").textContent=subgroups?`${rankLabels[rank]} in each department.`:"Assistant, associate and full professors, plus postdocs.";
   els.benchmarkTrendTitle.textContent="Total publications";
   metricPublicationSeries().forEach((key,index)=>renderDepartmentPublicationChart(containers[index],groups,from,to,key));
-  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD); it joins the line at its recorded value and is not used in the smoothing fit.</p>`;
+  els.benchmarkMethodNote.innerHTML=`<p>Two staff sharing one paper gives <strong>1 total</strong>, <strong>1 per person</strong> and <strong>0.5 unique per person</strong>.</p><p>Counts use ${subgroups?"the selected current rank":"current professors and postdocs"}, including work before joining. ${subgroups?"Rank groups can share papers. ":""}AIP uses 2020–2024 journal scores; unknown scores are left out of AIP ≥95. The latest year is partial.</p><p>Smoothed lines use local linear LOESS over half the completed years (at least five, where available). Fits stay nonnegative, keep individual credit at least as high as unique credit, and keep AIP ≥95 within all output. Missing years break the line; fewer than three values stay annual. The current year is shown as year-to-date (YTD) and is included in the smoothing like any other year, so its smoothed value reflects a partial year.</p>`;
 }
 
 
@@ -5268,7 +5268,9 @@ function smoothMetricAnnualValues(rows,key,partialYear=metricComparisonHorizonYe
     segment=[];
   };
   rows.forEach((row,index)=>{
-    if(row.year===partialYear||!isNumber(row[key])){fit();return;}
+    // The year-to-date point is part of the fit, so the smoothed line runs through it
+    // (Joost, 12 October 2026). Missing values still break the line.
+    if(!isNumber(row[key])){fit();return;}
     if(segment.length&&row.year!==segment.at(-1).row.year+1)fit();
     segment.push({row,index});
   });
@@ -5295,7 +5297,7 @@ function metricChartSeries(groups,key,mode=state.metricTrendMode,partialYear=met
       smooth[index]=allSmooth&&isNumber(allSmooth[index])?Math.min(value,allSmooth[index]):value;
     });
     return {group,points:group.yearly.map((row,index)=>({year:row.year,raw:row[key],smooth:smooth[index],partial:row.year===partialYear,row,
-      value:mode==="annual"||row.year===partialYear?row[key]:smooth[index]}))};
+      value:mode==="annual"?row[key]:smooth[index]}))};
   });
 }
 
@@ -5331,7 +5333,7 @@ function metricChartReadout(entry,point,key,mode) {
   const value=definition.perPerson?point.raw.toFixed(3).replace(/0+$/,'').replace(/\.$/,''):String(point.raw);
   const calculation=definition.perPerson?` (${point.row[definition.numerator]} ${definition.unit} / ${entry.group.staff} people)`:"";
   const fitted=mode!=="annual"&&isNumber(point.smooth)?` · Smoothed estimate: ${Number(point.smooth.toFixed(3))}`:"";
-  const partial=point.partial?" · Partial year; excluded from smoothing":"";
+  const partial=point.partial?" · Year to date":"";
   return `<strong>${escapeHtml(entry.group.label)} · ${metricComparisonYearLabel(point.year)}</strong> · Annual: ${value}${calculation}${fitted}${partial}`;
 }
 
