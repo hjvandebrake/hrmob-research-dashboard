@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-15",
     "source": "Public RUG staff profile and CV pages.",
     "people": 19,
     "peopleWithRole": 19,
@@ -34,7 +34,7 @@
       "personId": "MA",
       "display": "Arnold, M.",
       "name": "Miriam Arnold",
-      "firstPublicationYear": 2020,
+      "firstPublicationYear": 2021,
       "profileUrl": "https://www.rug.nl/staff/m.arnold/?lang=en",
       "cvUrl": "https://www.rug.nl/staff/m.arnold/cv?lang=en",
       "role": "Assistant Professor",
@@ -304,7 +304,7 @@
       "phdEvidenceSourceUrl": "https://www.rug.nl/staff/f.a.rink/cv?lang=en",
       "phdConfidence": 0.9,
       "externalCvLinks": [],
-      "lastModified": "01 October 2026 07.37 a.m.",
+      "lastModified": "15 October 2026 07.35 a.m.",
       "sourceStatus": "fetched",
       "errors": []
     },
@@ -312,7 +312,7 @@
       "personId": "MR",
       "display": "Ryan, M.K.",
       "name": "Michelle Ryan",
-      "firstPublicationYear": 1990,
+      "firstPublicationYear": 2001,
       "profileUrl": "https://www.rug.nl/staff/m.ryan/?lang=en",
       "cvUrl": "https://www.rug.nl/staff/m.ryan/cv?lang=en",
       "role": "Professor",
@@ -428,7 +428,7 @@
       "personId": "JJ",
       "display": "Jordan, J.",
       "name": "Jennifer Jordan",
-      "firstPublicationYear": 1988,
+      "firstPublicationYear": 2000,
       "profileUrl": "https://www.rug.nl/staff/j.jordan/?lang=en",
       "cvUrl": "https://www.rug.nl/staff/j.jordan/cv?lang=en",
       "role": "Honorary Professor",

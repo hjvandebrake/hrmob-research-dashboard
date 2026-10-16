@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-10-08T09:30:17Z",
+    "generatedOn": "2026-10-15T16:14:05Z",
     "academicYear": "2026-2027",
     "source": "Public Ocasys course search, programme scheme, and course page API records.",
     "notes": [
@@ -38,8 +38,49 @@
     "courses": 26,
     "networkCourses": 24,
     "edges": 14,
-    "durationSeconds": 23.3,
-    "errors": []
+    "durationSeconds": 334.0,
+    "errors": [
+      {
+        "code": "EBB638C05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB638C05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB644B05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB644B05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB647C05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB647C05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB649C05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB649C05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB652B05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB652B05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB742B05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB742B05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB846C05",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB846C05",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      },
+      {
+        "code": "EBB937C10",
+        "url": "https://ocasys.rug.nl/current/catalog/course/EBB937C10",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='ocasys.rug.nl', port=443): Read timed out. (read timeout=30)"
+      }
+    ]
   },
   "records": [
     {

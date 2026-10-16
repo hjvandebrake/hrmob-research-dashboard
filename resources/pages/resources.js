@@ -63,6 +63,16 @@
       file: "assets/downloads/aip-2020-2024-average.xlsx",
       direct: true,
     },
+    {
+      key: "funding-workbook",
+      group: "downloads",
+      title: "Funding opportunities workbook",
+      blurb: "March 2026 planning archive; use the checked calls on Grants for current dates.",
+      summary: "Funding opportunities and proposal notes from the planning workbook.",
+      format: "Excel",
+      file: "assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx",
+      direct: true,
+    },
   ];
 
   const GROUPS = [
@@ -336,6 +346,7 @@
   };
 
   const roots = {};
+  let resourceData = {};
 
   /* ---------- Landing page ---------- */
 
@@ -353,9 +364,13 @@
     const share = view === "resources"
       ? `<div class="rg-note rp-share"><strong>Something to share?</strong><p>Let me know if you have a presentation, dataset, tool, or anything else that would be useful for colleagues.</p><a class="section-link" href="${MAILTO}?subject=Something%20to%20share%20on%20the%20dashboard">Email the research director</a></div>`
       : "";
+    const news = view === "resources" ? `<section class="rp-group"><h3 class="overview-h3">Research News resources</h3>
+      <div class="rp-cards">${(resourceData.researchNewsResources || []).map((item) => `<a class="rp-card" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener"><span class="rp-card-text"><strong>${esc(item.name)}</strong><span>${esc(item.timing || item.sourceLabel)}</span></span></a>`).join("")}</div>
+      <p><a class="section-link" href="#grants">Grant calls, opportunities and proposal tips</a></p></section>` : "";
     return `<div class="sec-head compact"><div><p class="eye">${esc(v.eye)}</p><h2 class="h2">${esc(v.title)}</h2></div></div>
       <p class="section-intro page-intro">${esc(v.intro)}</p>
       <div class="rp-landing rp-landing-${view}">${groups}</div>
+      ${news}
       ${share}`;
   }
 
@@ -385,13 +400,14 @@
   }
 
   function downloadCard(page) {
+    const funding = page.key === "funding-workbook";
     const thumb = page.image
       ? `<img class="rp-dl-thumb" src="${esc(page.image)}" width="160" height="90" alt="" loading="lazy">`
       : `<span class="rp-dl-thumb rp-dl-sheet" aria-hidden="true">
-          <span class="rp-sheet-row rp-sheet-head"><i>Journal</i><i>AIP</i></span>
-          <span class="rp-sheet-row"><i></i><b>99</b></span>
-          <span class="rp-sheet-row"><i></i><b>96</b></span>
-          <span class="rp-sheet-row"><i></i><b>91</b></span>
+          <span class="rp-sheet-row rp-sheet-head"><i>${funding ? "Call" : "Journal"}</i><i>${funding ? "Stage" : "AIP"}</i></span>
+          <span class="rp-sheet-row"><i></i><b>${funding ? "Early" : "99"}</b></span>
+          <span class="rp-sheet-row"><i></i><b>${funding ? "Mid" : "96"}</b></span>
+          <span class="rp-sheet-row"><i></i><b>${funding ? "Senior" : "91"}</b></span>
         </span>`;
     const href = page.direct ? esc(page.file) : pageHref(page.key);
     return `<a class="rp-dl" href="${href}"${page.direct ? " download" : ""}>
@@ -794,7 +810,8 @@
 
   /* ---------- Rendering and events ---------- */
 
-  function render(view, pageKey) {
+  function render(view, pageKey, data) {
+    if (data) resourceData = data;
     // Backwards compatible: render(pageKey) renders the Resources tab.
     if (!VIEWS[view]) {
       pageKey = view;

@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261012-sdband";
+const DATA_VERSION = "20261015-refresh";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -1644,9 +1644,7 @@ function routeFromHash() {
     };
   }
   const [tab, detail = "", subdetail = ""] = raw.split("/");
-  // Search expertise now lives on Staff and expertise; the network map sits at the bottom of the Overview.
-  if (tab === "expertise") return { tab: "staff", detail: "", subdetail: "", invalidTab: false, legacyTab: true, skipTarget: false };
-  if (tab === "network") return { tab: "overview", detail: "", subdetail: "", invalidTab: false, legacyTab: true, skipTarget: false, scrollTo: "overview-network" };
+  // Keep the detailed expertise and publication/teaching network views reachable.
   const aliasedTab = tab === "opportunities" ? "collaboration" : tab;
   const normalizedTab = validTab(aliasedTab) ? aliasedTab : "overview";
   return {
@@ -1833,7 +1831,7 @@ function renderCurrentView() {
   else if (state.tab === "publications") renderPublications();
   else if (state.tab === "network") renderNetwork();
   else if (state.tab === "grants") renderResources();
-  else if (state.tab === "resources") window.HRMOBResources?.render("resources", state.resourcePage || "");
+  else if (state.tab === "resources") window.HRMOBResources?.render("resources", state.resourcePage || "", state.resourceData);
   else if (state.tab === "faq") window.HRMOBResources?.render("faq", state.faqPage || "");
   requestDeferredDataForCurrentView();
 }
@@ -6707,7 +6705,7 @@ function renderPublications() {
   const start = (state.publicationPage - 1) * TABLE_PAGE_SIZE;
 
   if (els.publicationResultsSummary) {
-    const category = state.publicationKindFilter === "counted" ? "recorded journal articles and editorials" : state.publicationKindFilter === "other" ? "other visible outputs" : "visible outputs";
+    const category = state.publicationKindFilter === "counted" ? "recorded journal articles" : state.publicationKindFilter === "other" ? "other visible outputs" : "visible outputs";
     els.publicationResultsSummary.textContent = `${pubs.length} ${category} in ${activeWindowLabel()}. ${pubs.length ? `Showing ${start + 1}–${Math.min(start + TABLE_PAGE_SIZE, pubs.length)}.` : "Try clearing filters or choosing 20 years."}`;
   }
   if (els.publicationClearFilters) els.publicationClearFilters.hidden = !filtersActive;

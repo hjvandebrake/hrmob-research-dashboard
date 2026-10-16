@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-15",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -18,10 +18,12 @@
       "associate_professor",
       "full_professor"
     ],
-    "identityReviewedOn": "2026-10-08",
+    "identityReviewedOn": "2026-10-15",
     "identityConflictPeople": [
       "acc-da-de-waard",
-      "gem-x-ye"
+      "gem-x-ye",
+      "ims-a-ayvazyan",
+      "mkt-a-stepanova"
     ],
     "unconfirmedRosterPeople": [
       "acc-ep-jansen",
@@ -34,12 +36,11 @@
       "ops-tm-tran"
     ],
     "denominatorRosterCheckedOn": "2026-09-07",
-    "quarantinedPublications": 483,
-    "excludedNonArticleOutputs": 133,
-    "uncorroboratedAuthorLinks": 280,
+    "quarantinedPublications": 683,
+    "excludedNonArticleOutputs": 142,
+    "uncorroboratedAuthorLinks": 177,
     "unmatchedRankableJournals": [
       "ACM SIGMIS Database the DATABASE for Advances in Information Systems",
-      "ADHD Attention Deficit and Hyperactivity Disorders",
       "AECA: Revista de la Asociación Española de Contabilidad y Administración de Empresas",
       "AFRICAN JOURNAL OF BUSINESS MANAGEMENT",
       "Accounting auditing & accountability journal/Accounting, auditing & accountability journal",
@@ -48,16 +49,13 @@
       "Aptisi Transactions On Technopreneurship",
       "Artvin Çoruh Üniversitesi Orman Fakültesi Dergisi",
       "BMJ",
-      "Beleid en Maatschappij",
       "Bestuurskunde",
-      "Bestuurswetenschappen",
       "BuR - Business Research",
       "Bulletin - International Bull Evaluation Service/Interbull bulletin",
       "Bulletin for international taxation",
       "Bulletin of the Altai Academy of Economics and law",
       "Bulletin of the American Physical Society",
       "Catholic education/Catholic education (Dayton, Ohio. Online)",
-      "Christen Democratische Verkenningen",
       "Civil Engineering and Architecture",
       "College Teaching",
       "Competition and Regulation in Network Industries",
@@ -136,7 +134,6 @@
       "Psykologia",
       "RSM insight (Online)/RSM insight (Print)",
       "Rangelands",
-      "Res Publica",
       "Research World",
       "Revista Amazonia Investiga",
       "Revista Científica del Amazonas",
@@ -144,7 +141,6 @@
       "Revista Venezolana de Gerencia",
       "Revista de Direito da Unigranrio",
       "Revista española del tercer sector",
-      "Revue Internationale des Sciences Administratives",
       "Revue des régions arides",
       "Schmalenbach Journal of Business Research",
       "Science and Technology of Engineering Chemistry and Environmental Protection",
@@ -164,7 +160,6 @@
       "Tijdschrift voor praktijkondersteuning",
       "Universal Journal of Management",
       "WiSt - Wirtschaftswissenschaftliches Studium",
-      "World Electric Vehicle Journal",
       "World Tax Journal",
       "ZCG digital/Zeitschrift für Corporate Governance",
       "Zeitschrift für Management",
@@ -690,9 +685,9 @@
       "department": "Marketing",
       "rank": "assistant_professor",
       "decision": "include",
-      "includedInDenominator": true,
+      "includedInDenominator": false,
       "denominatorExclusion": "",
-      "identityReview": "author links checked"
+      "identityReview": "excluded: source identity conflict"
     },
     {
       "id": "mkt-jpr-thomassen",
@@ -820,9 +815,9 @@
       "department": "IM&S",
       "rank": "assistant_professor",
       "decision": "include",
-      "includedInDenominator": true,
+      "includedInDenominator": false,
       "denominatorExclusion": "",
-      "identityReview": "author links checked"
+      "identityReview": "excluded: source identity conflict"
     },
     {
       "id": "ims-o-belousova",
@@ -2811,30 +2806,6 @@
       ]
     },
     {
-      "id": "doi:10.1111/tpj.70647",
-      "year": 2026,
-      "title": "Translational control in plants: from basic mechanisms to environmental and developmental responses",
-      "doi": "10.1111/tpj.70647",
-      "journal": "The Plant Journal",
-      "authors": [
-        "Jade Lyons",
-        "Catharina Merchante",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 92.782,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1109/tem.2026.3653644",
       "year": 2026,
       "title": "Toward Business-to-Business Sharing Economy: Drivers of and Barriers to Sharing Resources of Container Terminals",
@@ -3103,57 +3074,6 @@
       ]
     },
     {
-      "id": "doi:10.3389/fpls.2026.1768521",
-      "year": 2026,
-      "title": "Synthetic promoter design in plants: integration of computational and experimental approaches",
-      "doi": "10.3389/fpls.2026.1768521",
-      "journal": "Frontiers in Plant Science",
-      "authors": [
-        "Anna E. Yaschenko",
-        "Jose Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 82.124,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.rechem.2026.103218",
-      "year": 2026,
-      "title": "Synthesis and structure of 7-alkyl-5-amino-6,7,8,9-tetrahydroisoxazolo[5,4-c]-2,7-naphthyridines",
-      "doi": "10.1016/j.rechem.2026.103218",
-      "journal": "Results in Chemistry",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "Elmira K. Hakobyan",
-        "Athina Geronikaki",
-        "Victor G. Kartsev",
-        "Hasmik A. Yegoryan",
-        "Hasmik V. Jughetsyan",
-        "A. G. Ayvazyan",
-        "Anush A. Hovakimyan"
-      ],
-      "aip": 43.643,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/01492063261420752",
       "year": 2026,
       "title": "Success and Failure in Blockchain-Based Interorganizational Ecosystems: A Governance Perspective",
@@ -3235,108 +3155,6 @@
       ]
     },
     {
-      "id": "doi:10.1126/science.adx2867",
-      "year": 2026,
-      "title": "Recruitment of bifunctional regulator thermospermine to methylated ribosomes directs xylem fate",
-      "doi": "10.1126/science.adx2867",
-      "journal": "Science",
-      "authors": [
-        "Donghwi Ko",
-        "Raili Ruonala",
-        "Alexandre Faille",
-        "Eva Hellmann",
-        "Hanna Help",
-        "Huili Liu",
-        "Ronni Nielsen",
-        "Anders Haakonsson",
-        "Nuria De Diego",
-        "Anja Paatero",
-        "Mariia Shcherbii",
-        "Karolina Stefanowicz",
-        "Sanja Ćavar Zeljkovıć",
-        "Tine Drud Lundager Rasmussen",
-        "Ondrej Novak",
-        "Zsuzsanna Bódi",
-        "Gugan Eswaran",
-        "Brecht Wybouw",
-        "Matthieu Bourdon",
-        "Cristina Úrbez",
-        "Xiaonan Liu",
-        "Kari Salokas",
-        "Tiina Öhman",
-        "Tanya Waldie",
-        "Petri Törönen",
-        "Sedeer El‐Showk",
-        "Martin Balcerowicz",
-        "Fabrice Besnard",
-        "Xiaomin Liu",
-        "Patrick Perkins",
-        "Serina Mazzoni-Putman",
-        "Julia P. Vainonen",
-        "Maija Sierla",
-        "Mikko J. Frilander",
-        "Susanne Mandrup",
-        "Teva Vernoux",
-        "Karin Ljung",
-        "A. Tormos Ferrando",
-        "Miguel A. Blazquez",
-        "Liisa Holm",
-        "Rupert G. Fray",
-        "Markku Varjosalo",
-        "Ottoline Leyser",
-        "Ville O. Paavilainen",
-        "Ari Pekka Mähönen",
-        "Anna N. Stepanova",
-        "Jose Alonso",
-        "Steffen Heber",
-        "Robert Malinowski",
-        "Finn Kirpekar",
-        "Alan J. Warren",
-        "Ykä Helariutta"
-      ],
-      "aip": 99.886,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1155/joch/2309253",
-      "year": 2026,
-      "title": "Pyridine‐Based Compounds: Optimized Synthesis, C–H Functionalization, and Anticonvulsant Screening for Neurological Therapeutics",
-      "doi": "10.1155/joch/2309253",
-      "journal": "Journal of Chemistry",
-      "authors": [
-        "Sh. Sh. Dashyan",
-        "Heghine H. Vardanyan",
-        "Eugene V. Babaev",
-        "A. G. Ayvazyan",
-        "E. G. Paronikyan",
-        "S. S. Mamyan",
-        "N. G. Hobosyan",
-        "Valya V. Dabayeva",
-        "R. G. Paronikyan",
-        "K. V. Balyan"
-      ],
-      "aip": 45.264,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ijhydene.2026.155075",
       "year": 2026,
       "title": "Power-to-fuel pathways for maritime decarbonization: Techno-economic analysis of E-ammonia and E-methanol",
@@ -3390,55 +3208,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1038/s41467-026-70075-1",
-      "year": 2026,
-      "title": "Non-invasive imaging of defence responses in plants",
-      "doi": "10.1038/s41467-026-70075-1",
-      "journal": "Nature Communications",
-      "authors": [
-        "Anastasia V. Balakireva",
-        "Tatiana A. Karataeva",
-        "Michael Karampelias",
-        "Tatiana Yu Mitiouchkina",
-        "Viktor V. Morozov",
-        "Jan Macháček",
-        "Ekaterina S. Shakhova",
-        "Maxim M. Perfilov",
-        "Olga A. Belozerova",
-        "Sergey I. Kovalchuk",
-        "Kseniia A. Palkina",
-        "Nikola Drazna",
-        "Zuzana Vondráková",
-        "Karel Müller",
-        "Tetiana Kalachova",
-        "Aubin Fleiss",
-        "Josefina Patricia Fernandez-Moreno",
-        "J. Luis Puerto Alonso",
-        "Anna N. Stepanova",
-        "Liliia I. Fakhranurova",
-        "N. M. Markina",
-        "Dmitry A. Gorbachev",
-        "Evgenia N. Bugaeva",
-        "Galina M Delnova",
-        "V. V. Choob",
-        "Ilia V. Yampolsky",
-        "Jan Petrášek",
-        "Alexander S. Mishin",
-        "Karen S. Sarkisyan"
-      ],
-      "aip": 98.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -5632,39 +5401,6 @@
       ]
     },
     {
-      "id": "doi:10.1093/plcell/koaf242",
-      "year": 2025,
-      "title": "The CYP71A , NIT , AMI , and IAMH gene families are dispensable for indole-3-acetaldoxime-mediated auxin biosynthesis in Arabidopsis",
-      "doi": "10.1093/plcell/koaf242",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Mario Fenech",
-        "Javier Brumós",
-        "Aleš Pěnčík",
-        "Brianne Edwards",
-        "Sara Belcapo",
-        "J. DeLacey",
-        "Arjun Patel",
-        "Martin M. Kater",
-        "Xu Li",
-        "Karin Ljung",
-        "Ondřej Novák",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.leaqua.2025.101884",
       "year": 2025,
       "title": "Text-mining obituaries between 1953 and 2019 revealed that women leaders are described increasingly like men leaders, but yet evaluated differently",
@@ -5719,52 +5455,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1038/s41587-025-02802-w",
-      "year": 2025,
-      "title": "Targeted DNA ADP-ribosylation triggers templated repair in bacteria and base mutagenesis in eukaryotes",
-      "doi": "10.1038/s41587-025-02802-w",
-      "journal": "Nature Biotechnology",
-      "authors": [
-        "Darshana Gupta",
-        "Constantinos Patinios",
-        "Harris V. Bassett",
-        "Anuja Kibe",
-        "Scott P. Collins",
-        "Charlotte Kamm",
-        "Yanyan Wang",
-        "Chengsong Zhao",
-        "Katie Vollen",
-        "Christophe Toussaint",
-        "Irene Calvin",
-        "Grégoire Cullot",
-        "Eric J. Aird",
-        "Kathryn M. Polkoff",
-        "Thuan Phu Nguyen-Vo",
-        "Angela Migur",
-        "Friso T Schut",
-        "Ibrahim S. Al’Abri",
-        "Tatjana Achmedov",
-        "Alessandro Del Re",
-        "Jacob E. Corn",
-        "Antoine‐Emmanuel Saliba",
-        "Nathan Crook",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Chase L. Beisel"
-      ],
-      "aip": 99.947,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -6239,55 +5929,6 @@
       ],
       "allPeople": [
         "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428024603522",
-      "year": 2025,
-      "title": "Reaction of [(E)-3-Aryl-3-oxoprop-1-en-1-yl]triphenylphosphonium Bromides with 2-Aminopyridine",
-      "doi": "10.1134/s1070428024603522",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "R. Dzh. Khachikyan",
-        "K. Harutyunyan",
-        "A. G. Ayvazyan",
-        "Z. G. Hovakimyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363225602480",
-      "year": 2025,
-      "title": "Reaction of (Z)-N-Substituted α,β-Dehydroamino Acids Hydrazides with Oxazolones. Antiradical Activity of Bishydrazides and Bisimidazole-4-ones",
-      "doi": "10.1134/s1070363225602480",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "S. H. Mangasaryan",
-        "A. G. Agababyan",
-        "Astghik A. Shahkhatuni",
-        "A. G. Ayvazyan",
-        "V. O. Topuzyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
       ],
       "allDepartments": [
         "IM&S"
@@ -6977,33 +6618,6 @@
       ]
     },
     {
-      "id": "doi:10.1038/s41558-025-02267-4",
-      "year": 2025,
-      "title": "Local fossil fuel ad ban as a catalyst for global change",
-      "doi": "10.1038/s41558-025-02267-4",
-      "journal": "Nature Climate Change",
-      "authors": [
-        "Thijs Bouman",
-        "Jan Willem Bolderdijk",
-        "E. Keith Smith"
-      ],
-      "aip": 99.547,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-jw-bolderdijk"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-jw-bolderdijk"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.20429/ijsotl.2025.190108",
       "year": 2025,
       "title": "Lecturers’ Experiences of Teaching a Module in an Interdisciplinary Study Programme",
@@ -7592,36 +7206,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1093/eurpub/ckaf161.629",
-      "year": 2025,
-      "title": "Governing the long-term: platforms and complex public health risks",
-      "doi": "10.1093/eurpub/ckaf161.629",
-      "journal": "European Journal of Public Health",
-      "authors": [
-        "Loes Janssen",
-        "Marleen Bekker",
-        "Martijn van der Steen",
-        "A Telleman",
-        "Markus Busch",
-        "Natascha Van Vooren"
-      ],
-      "aip": 85.27,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -8510,35 +8094,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/open.202400443",
-      "year": 2025,
-      "title": "Efficient Regioselective Iodination of Pyrazole Derivatives Mediated by Cadmium(II) Acetate",
-      "doi": "10.1002/open.202400443",
-      "journal": "ChemistryOpen",
-      "authors": [
-        "N. G. Hobosyan",
-        "K. V. Balyan",
-        "L.A. Movsisyan",
-        "V. S. Hovsepyan",
-        "A. G. Ayvazyan",
-        "H. А. Panosyan",
-        "H. S. Attaryan",
-        "H. B. Sargsyan",
-        "Haykanush R. Pogosyan"
-      ],
-      "aip": 50.937,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/2694104x251359805",
       "year": 2025,
       "title": "Effective Networking for Women in Leadership",
@@ -8595,44 +8150,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1111/pbi.70302",
-      "year": 2025,
-      "title": "EBSn , a Robust Synthetic Reporter for Monitoring Ethylene Responses in Plants",
-      "doi": "10.1111/pbi.70302",
-      "journal": "Plant Biotechnology Journal",
-      "authors": [
-        "Josefina‐Patricia Fernandez‐Moreno",
-        "Mario Fenech",
-        "Anna E. Yaschenko",
-        "Chengsong Zhao",
-        "Matthew Neubauer",
-        "Hannah N. Davis",
-        "Alex J. Marchi",
-        "Raine Concannon",
-        "Alexandra Keren‐Keiserman",
-        "Moshe Reuveni",
-        "Victor Levitsky",
-        "Dmitry Oshchepkov",
-        "Vladislav Dolgikh",
-        "Alexander Goldshmidt",
-        "José Trinidad Ascencio‐Ibáñez",
-        "Elena V. Zemlyanskaya",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 95.136,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -8766,33 +8283,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1111/pbi.70320",
-      "year": 2025,
-      "title": "Development of Modular Geminivirus‐Based Vectors for High Cargo Expression and Gene Targeting in Plants",
-      "doi": "10.1111/pbi.70320",
-      "journal": "Plant Biotechnology Journal",
-      "authors": [
-        "Matthew Neubauer",
-        "Katie Vollen",
-        "Chengsong Zhao",
-        "José Trinidad Ascencio‐Ibáñez",
-        "Linda Hanley‐Bowdoin",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 95.136,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -9573,37 +9063,6 @@
       ]
     },
     {
-      "id": "doi:10.1093/plphys/kiaf667",
-      "year": 2025,
-      "title": "Arabidopsis lines with modified ascorbate concentrations reveal a link between ascorbate and auxin biosynthesis",
-      "doi": "10.1093/plphys/kiaf667",
-      "journal": "PLANT PHYSIOLOGY",
-      "authors": [
-        "Mario Fenech",
-        "V Zulian",
-        "J Moya-Cuevas",
-        "Dominique Arnaud",
-        "I Morilla",
-        "Nicholas Smirnoff",
-        "Miguel A. Botella",
-        "Anna N. Stepanova",
-        "J M Alonso",
-        "C Martin-Pizarro",
-        "V Amorim-Silva"
-      ],
-      "aip": 94.007,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1177/19485506251383988",
       "year": 2025,
       "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
@@ -10334,92 +9793,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/15570851241250313",
-      "year": 2024,
-      "title": "Tomboys’ Pathways to Prison in Thailand: Insubordination, Support, Sacrifice, and Suffering",
-      "doi": "10.1177/15570851241250313",
-      "journal": "Feminist Criminology",
-      "authors": [
-        "Samantha Jeffries",
-        "Yodsawadi Thipphayamongkoludom",
-        "Chontit Chuenurah",
-        "William R. Wood",
-        "Michelle K. Ryan"
-      ],
-      "aip": 79.153,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10593-024-03311-5",
-      "year": 2024,
-      "title": "The synthesis of ethyl 2-amino-1-(aryl)-5-(arylcarbamoyl)-6-oxo-1,6-dihydropyridine-3-carboxylates",
-      "doi": "10.1007/s10593-024-03311-5",
-      "journal": "Chemistry of Heterocyclic Compounds",
-      "authors": [
-        "A. Kh. Khachatryan",
-        "K. A. Avagyan",
-        "Anush A. Sargsyan",
-        "Anait G. Simonyan",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "A. E. Badasyan"
-      ],
-      "aip": 19.376,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.molstruc.2024.140350",
-      "year": 2024,
-      "title": "The role of the nitro group on the formation of intramolecular hydrogen bond in the methyl esters of 1-vinyl-nitro-pyrazolecarboxylic acids",
-      "doi": "10.1016/j.molstruc.2024.140350",
-      "journal": "Journal of Molecular Structure",
-      "authors": [
-        "Robert M. Hakobyan",
-        "Aleksan G. Shahkhatuni",
-        "Aleksan G. Shahkhatuni",
-        "Mikhail V. Polynski",
-        "A. G. Ayvazyan",
-        "Ashkharuhi G. Aleksanyan",
-        "Lilit A. Bichakhchyan",
-        "Astghik A. Shahkhatuni",
-        "Astghik A. Shahkhatuni",
-        "H. S. Attaryan"
-      ],
-      "aip": 38.451,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.joep.2024.102703",
       "year": 2024,
       "title": "The presence of laws and mandates is associated with increased social norm enforcement",
@@ -10927,34 +10300,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.bioorg.2024.107435",
-      "year": 2024,
-      "title": "Synthesis, evaluation of biological activity and SAR of new thioalkyl derivatives of pyridine",
-      "doi": "10.1016/j.bioorg.2024.107435",
-      "journal": "Bioorganic Chemistry",
-      "authors": [
-        "Sh. Sh. Dashyan",
-        "Eugene V. Babaev",
-        "A. G. Ayvazyan",
-        "S. S. Mamyan",
-        "E. G. Paronikyan",
-        "Tigranuhi Ananik Nikoghosyan",
-        "Lernik Hunanyan",
-        "R. G. Paronikyan"
-      ],
-      "aip": 63.45,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1007/s43621-024-00558-y",
       "year": 2024,
       "title": "Sustainable livelihoods through cashew cultivation: insights from smallholder farmers in the southern region of India",
@@ -11145,30 +10490,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.copbio.2024.103140",
-      "year": 2024,
-      "title": "Sourcing DNA parts for synthetic biology applications in plants",
-      "doi": "10.1016/j.copbio.2024.103140",
-      "journal": "Current Opinion in Biotechnology",
-      "authors": [
-        "Katie Vollen",
-        "Chengsong Zhao",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 94.492,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -12117,30 +11438,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.mencom.2024.01.039",
-      "year": 2024,
-      "title": "New synthesis of 6,8-diamino-substituted pyrano[3,4-c]pyridines from related pyrano[3,4-c]pyridin-6-one",
-      "doi": "10.1016/j.mencom.2024.01.039",
-      "journal": "Mendeleev Communications",
-      "authors": [
-        "E. G. Paronikyan",
-        "A. G. Ayvazyan",
-        "S. S. Mamyan",
-        "Sh. Sh. Dashyan"
-      ],
-      "aip": 19.787,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/03616843241238176",
       "year": 2024,
       "title": "Neoliberal Feminism and Women's Protest Motivation",
@@ -12502,30 +11799,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/ejoc.202400199",
-      "year": 2024,
-      "title": "Ligand‐Free Copper(0)‐Catalyzed C−S Ullmann‐Type Cross‐Coupling Reaction: S‐Arylation of 5,4‐Disubstituted 2,4‐Dihydro‐3H‐1,2,4‐triazole‐3‐thiones",
-      "doi": "10.1002/ejoc.202400199",
-      "journal": "European Journal of Organic Chemistry",
-      "authors": [
-        "Artyom V. Petrosyan",
-        "A. G. Ayvazyan",
-        "Tariel V. Ghochikyan",
-        "A. S. Galstyan"
-      ],
-      "aip": 54.082,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ijpe.2024.109252",
       "year": 2024,
       "title": "Leveraging organizational culture to create competitive value from environmental practices",
@@ -12698,33 +11971,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1002/slct.202303432",
-      "year": 2024,
-      "title": "Iodination of Substituted Alkynes in the Presence of Cadmium(II) Acetate",
-      "doi": "10.1002/slct.202303432",
-      "journal": "ChemistrySelect",
-      "authors": [
-        "H. B. Sargsyan",
-        "K. V. Balyan",
-        "Haykanush R. Pogosyan",
-        "L.A. Movsisyan",
-        "V. S. Hovsepyan",
-        "A. G. Ayvazyan",
-        "N. G. Hobosyan"
-      ],
-      "aip": 30.995,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -13690,35 +12936,6 @@
       ]
     },
     {
-      "id": "doi:10.1017/s0140525x23003497",
-      "year": 2024,
-      "title": "Distinct neurocognitive pathways underlying creativity: An integrative approach",
-      "doi": "10.1017/s0140525x23003497",
-      "journal": "Behavioral and Brain Sciences",
-      "authors": [
-        "Matthijs Baas",
-        "Claire E. Stevenson",
-        "Corinna M. Perchtold‐Stefan",
-        "Bernard A. Nijstad",
-        "Carsten K. W. De Dreu"
-      ],
-      "aip": 99.34,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-ba-nijstad"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-ba-nijstad"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.bar.2024.101460",
       "year": 2024,
       "title": "Digitalization and management accountants’ role conflict and ambiguity: A double-edged sword for the profession",
@@ -14653,34 +13870,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1111/pbi.14313",
-      "year": 2024,
-      "title": "A rapid and scalable approach to build synthetic repetitive hormone‐responsive promoters",
-      "doi": "10.1111/pbi.14313",
-      "journal": "Plant Biotechnology Journal",
-      "authors": [
-        "Josefina‐Patricia Fernandez‐Moreno",
-        "Anna E. Yaschenko",
-        "Matthew Neubauer",
-        "Alex J. Marchi",
-        "Chengsong Zhao",
-        "José Trinidad Ascencio‐Ibáñez",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 95.136,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -15677,33 +14866,6 @@
       ]
     },
     {
-      "id": "doi:10.1093/eurpub/ckad160.1162",
-      "year": 2023,
-      "title": "The role of time in healthy living environment networks: current research and future directions",
-      "doi": "10.1093/eurpub/ckad160.1162",
-      "journal": "European Journal of Public Health",
-      "authors": [
-        "L. M. S. Janssen",
-        "Marleen Bekker",
-        "Martijn van der Steen"
-      ],
-      "aip": 85.27,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1159/000532005",
       "year": 2023,
       "title": "The Role of Adverse Childhood Experiences on People in Opiate Agonist Treatment: The Importance of Feeling Unloved",
@@ -16241,119 +15403,6 @@
       ],
       "allPeople": [
         "ims-a-fakha"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.3390/molecules28031180",
-      "year": 2023,
-      "title": "Synthesis, Characterization, and Study of Catalytic Activity of Chiral Cu(II) and Ni(II) Salen Complexes in the α-Amino Acid C-α Alkylation Reaction",
-      "doi": "10.3390/molecules28031180",
-      "journal": "Molecules",
-      "authors": [
-        "Anna S. Tovmasyan",
-        "Anna F. Mkrtchyan",
-        "Hamlet Khachatryan",
-        "Mary V. Hayrapetyan",
-        "Robert M. Hakobyan",
-        "Artavazd S. Poghosyan",
-        "Avetis Tsaturyan",
-        "Ela Minasyan",
-        "Victor I. Maleev",
-        "Vladimir A. Larionov",
-        "A. G. Ayvazyan",
-        "Norio Shibata",
-        "Giovanni N. Roviello",
-        "Ashot S. Saghyan"
-      ],
-      "aip": 65.344,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363223040035",
-      "year": 2023,
-      "title": "Synthesis of Diethyl 6-Amino-1,4-diaryl-2-oxo-1,2,3,4-tetrahydropyridin-3,5-dicarboxylates Based on the Reaction of Arylmethylidenecyanoacetic Esters with N-Arylamidoesters of Malonic Acid",
-      "doi": "10.1134/s1070363223040035",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "K. A. Avagyan",
-        "M. S. Sargsyan",
-        "A. E. Badasyan",
-        "A. A. Sargsyan",
-        "A. G. Manukyan",
-        "G. A. Panosyan",
-        "A. G. Ayvazyan",
-        "A. Kh. Khachatryan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.molstruc.2023.136676",
-      "year": 2023,
-      "title": "Synthesis of 4-(pyrazol-1-yl)pyrimidines from 4-hydrazinopyrimidines and investigation of their structure and some chemical properties",
-      "doi": "10.1016/j.molstruc.2023.136676",
-      "journal": "Journal of Molecular Structure",
-      "authors": [
-        "G. G. Danagulyan",
-        "Meline R. Arakelyan",
-        "Nicolai A. Aksenov",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "Ani H. Hasratyan"
-      ],
-      "aip": 38.451,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1002/slct.202301183",
-      "year": 2023,
-      "title": "Synthesis and Selected Transformations of New 2‐Aminopyridine Derivatives Based on Furan‐2(5H)‐ones",
-      "doi": "10.1002/slct.202301183",
-      "journal": "ChemistrySelect",
-      "authors": [
-        "Robert M. Hakobyan",
-        "Astghik A. Shahkhatuni",
-        "H. S. Attaryan",
-        "A. G. Ayvazyan",
-        "Gagik Melikyan"
-      ],
-      "aip": 30.995,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
       ],
       "allDepartments": [
         "IM&S"
@@ -17628,39 +16677,6 @@
       ]
     },
     {
-      "id": "doi:10.3390/molecules28030921",
-      "year": 2023,
-      "title": "New Bicyclic Pyridine-Based Hybrids Linked to the 1,2,3-Triazole Unit: Synthesis via Click Reaction and Evaluation of Neurotropic Activity and Molecular Docking",
-      "doi": "10.3390/molecules28030921",
-      "journal": "Molecules",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "Domenico Spinelli",
-        "Anthi Petrou",
-        "Athina Geronikaki",
-        "В. Г. Карцев",
-        "Elmira K. Hakobyan",
-        "Hasmik A. Yegoryan",
-        "Luca Zuppiroli",
-        "Riccardo Zuppiroli",
-        "A. G. Ayvazyan",
-        "R. G. Paronikyan",
-        "Tatevik A. Arakelyan",
-        "Anush A. Hovakimyan"
-      ],
-      "aip": 65.344,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1057/s41267-023-00643-w",
       "year": 2023,
       "title": "Multinational firms and the quest for global talent: Employing (skilled) foreign workers at home and abroad",
@@ -18176,33 +17192,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s107042802309021x",
-      "year": 2023,
-      "title": "Iodination of Propargylpyrazole in the Presence of Cadmium(II) Acetate",
-      "doi": "10.1134/s107042802309021x",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "K. V. Balyan",
-        "H. R. Poghosyan",
-        "L.A. Movsisyan",
-        "H. B. Sargsyan",
-        "H. S. Attaryan",
-        "A. G. Ayvazyan",
-        "N. G. Hobosyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -20273,31 +19262,6 @@
       ]
     },
     {
-      "id": "doi:10.1093/cww/vpad010",
-      "year": 2023,
-      "title": "Angela Carter’s Pyrotechnics: A Union of Contraries",
-      "doi": "10.1093/cww/vpad010",
-      "journal": "Contemporary Women s Writing",
-      "authors": [
-        "Michelle K. Ryan"
-      ],
-      "aip": 23.301,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ejor.2023.05.035",
       "year": 2023,
       "title": "An intuitive approach to inventory control with optimal stopping",
@@ -21381,31 +20345,6 @@
       ]
     },
     {
-      "id": "doi:10.1038/d41586-022-01045-y",
-      "year": 2022,
-      "title": "To advance equality for women, use the evidence",
-      "doi": "10.1038/d41586-022-01045-y",
-      "journal": "Nature",
-      "authors": [
-        "Michelle K. Ryan"
-      ],
-      "aip": 99.918,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1177/10283153211070112",
       "year": 2022,
       "title": "Through the Looking Glass: How the COVID-19 Pandemic Changed International Branch Campuses’ Academic Experience and Home Campus Relationship",
@@ -22286,32 +21225,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363222090043",
-      "year": 2022,
-      "title": "Synthesis and Anticholinesterase Activity of 4-Arylidene-1-[ω-(dialkylamino)alkyl]-2-phenyl-4,5-dihydro-1(H)-imidazole-5-ones",
-      "doi": "10.1134/s1070363222090043",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "V. O. Topuzyan",
-        "A. A. Hovhannisyan",
-        "S. R. Tosunyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A. T. Makichyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -23792,33 +22705,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1002/slct.202201283",
-      "year": 2022,
-      "title": "On Features of Halocyclization of 4‐Allyl‐5‐substituted‐2,4‐dihydro‐3H‐1,2,4‐triazol‐3‐thiones and Synthesis of New Derivatives of 1,2,3‐Triazoles",
-      "doi": "10.1002/slct.202201283",
-      "journal": "ChemistrySelect",
-      "authors": [
-        "A. S. Galstyan",
-        "S. V. Grigoryan",
-        "M. A. Samvelyan",
-        "Vardges R. Frangyan",
-        "Tigran H. Yeganyan",
-        "A. G. Ayvazyan",
-        "Tariel V. Ghochikyan"
-      ],
-      "aip": 30.995,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -25837,32 +24723,6 @@
       ]
     },
     {
-      "id": "doi:10.3390/molecules27113380",
-      "year": 2022,
-      "title": "Evaluation of Neurotropic Activity and Molecular Docking Study of New Derivatives of pyrano[4″,3″:4′,5′]pyrido[3′,2′:4,5]thieno[3,2-d]pyrimidines on the Basis of pyrano[3,4-c]pyridines",
-      "doi": "10.3390/molecules27113380",
-      "journal": "Molecules",
-      "authors": [
-        "Sh. Sh. Dashyan",
-        "Eugene V. Babaev",
-        "E. G. Paronikyan",
-        "A. G. Ayvazyan",
-        "R. G. Paronikyan",
-        "Lernik Hunanyan"
-      ],
-      "aip": 65.344,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.rser.2022.112951",
       "year": 2022,
       "title": "Evaluating operational strategies for the installation of offshore wind turbine substructures",
@@ -26083,36 +24943,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.3390/rs14215335",
-      "year": 2022,
-      "title": "Drone-Borne Electromagnetic (DR-EM) Surveying in The Netherlands: Lab and Field Validation Results",
-      "doi": "10.3390/rs14215335",
-      "journal": "Remote Sensing",
-      "authors": [
-        "M. Karaoulis",
-        "I. L. Ritsema",
-        "C. Bremmer",
-        "Marco Kleine",
-        "Gualbert Oude Essink",
-        "Edvard Ahlrichs"
-      ],
-      "aip": 76.024,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-m-kleine"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-m-kleine"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -28013,32 +26843,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872021030003008",
-      "year": 2021,
-      "title": "Wetenschappelijk advies en coronabeleid: een bestuurskundige reflectie",
-      "doi": "10.5553/bk/092733872021030003008",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Hans de Bruijn",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.3389/fpsyg.2021.784844",
       "year": 2021,
       "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
@@ -29597,36 +28401,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/23970022211004599",
-      "year": 2021,
-      "title": "Recovery in occupational health psychology and human resource management research: An Interview with Prof. Sabine Sonnentag and Prof. Ute Stephan",
-      "doi": "10.1177/23970022211004599",
-      "journal": "German Journal of Human Resource Management Zeitschrift für Personalforschung",
-      "authors": [
-        "Sabine Sonnentag",
-        "Ute Stephan",
-        "Johannes Wendsche",
-        "Jessica de Bloom",
-        "Christine Syrek",
-        "Tim Vahle‐Hinz"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-j-de-bloom"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -31625,31 +30399,6 @@
       ]
     },
     {
-      "id": "doi:10.4000/ebc.11634",
-      "year": 2021,
-      "title": "Gustar, Jennifer, Caleb Sivyer and Sarah Gamble, eds., Ludics and Laughter as Feminist Aesthetics: Angela Carter at Play",
-      "doi": "10.4000/ebc.11634",
-      "journal": "Études britanniques contemporaines",
-      "authors": [
-        "Michelle K. Ryan"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jbusres.2020.12.021",
       "year": 2021,
       "title": "Greasing the wheels or blocking the path? Organizational structure, product innovativeness, and new product success☆",
@@ -32656,30 +31405,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/jhet.4319",
-      "year": 2021,
-      "title": "Dimroth rearrangement in the row of new pyrano[3,4‐c][1,2,4]triazolo[4,3‐a][1,5‐a]pyridines and synthesis of new heterocyclic systems: Pyranopyrazolo[4,3‐e][1,2,4]triazolopyridines",
-      "doi": "10.1002/jhet.4319",
-      "journal": "Journal of Heterocyclic Chemistry",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "S. S. Mamyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 26.297,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.15358/0935-0381-2021-4-31",
       "year": 2021,
       "title": "Die Service Profit Chain als Controllinginstrument mittelständischer Dienstleistungsunternehmen",
@@ -32810,34 +31535,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/092733872021030003001",
-      "year": 2021,
-      "title": "De pandemie als spiegel",
-      "doi": "10.5553/bk/092733872021030003001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Myrthe van Delden",
-        "Wiljan Hendrikx",
-        "Shelena Keulemans",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -33692,55 +32389,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/pld3.316",
-      "year": 2021,
-      "title": "Broadening the impact of plant science through innovative, integrative, and inclusive outreach",
-      "doi": "10.1002/pld3.316",
-      "journal": "Plant Direct",
-      "authors": [
-        "Joanna Friesner",
-        "Adán Colón‐Carmona",
-        "Alexandra M. Schnoes",
-        "Anna N. Stepanova",
-        "G. Alex Mason",
-        "Gustavo C. MacIntosh",
-        "Hemayet Ullah",
-        "Ivan Baxter",
-        "Judy Callis",
-        "Kimberly Sierra‐Cajas",
-        "Kiona Elliott",
-        "Elizabeth S. Haswell",
-        "Maria Elena Zavala",
-        "Mary C. Wildermuth",
-        "Mary Elizabeth Williams",
-        "Mentewab Ayalew",
-        "Natalie Henkhaus",
-        "Nathanaël Prunet",
-        "Peggy G. Lemaux",
-        "Ramin Yadegari",
-        "Rick Amasino",
-        "Roger P. Hangarter",
-        "Roger W. Innes",
-        "Siobhán M. Brady",
-        "Terri A. Long",
-        "Terry Woodford‐Thomas",
-        "Victoria May",
-        "Ying Sun",
-        "José R. Dinneny"
-      ],
-      "aip": 70.667,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ibusrev.2021.101966",
       "year": 2021,
       "title": "Board experience and value creation in cross-border acquisitions: The role of acquirer and target country institutions",
@@ -34159,34 +32807,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/23970022211004598",
-      "year": 2021,
-      "title": "Always on, never done? How the mind recovers after a stressful workday?",
-      "doi": "10.1177/23970022211004598",
-      "journal": "German Journal of Human Resource Management Zeitschrift für Personalforschung",
-      "authors": [
-        "Johannes Wendsche",
-        "Jessica de Bloom",
-        "Christine Syrek",
-        "Tim Vahle‐Hinz"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-j-de-bloom"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1111/irel.12272",
       "year": 2021,
       "title": "Affirmative Action and Intersectionality at the Top: Evidence from South Africa",
@@ -34268,34 +32888,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.2174/1570179418666210621092546",
-      "year": 2021,
-      "title": "A Study of the Regiochemistry in the Synthesis of Pyrano[3,4-c]pyridines",
-      "doi": "10.2174/1570179418666210621092546",
-      "journal": "Current Organic Chemistry",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "Domenico Spinelli",
-        "Victor A. Kartsev",
-        "Athina Geronikaki",
-        "Elmira K. Hakobyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan",
-        "Anush A. Hovakimyan"
-      ],
-      "aip": 34.632,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -35526,35 +34118,6 @@
       ]
     },
     {
-      "id": "doi:10.2340/165019778719127134",
-      "year": 2020,
-      "title": "The Effect of Low-Frequency Electrical Stimulation on Denervation Atrophy in Man",
-      "doi": "10.2340/165019778719127134",
-      "journal": "Journal of Rehabilitation Medicine",
-      "authors": [
-        "Albert Boonstra",
-        "Tiemen W. van Weerden",
-        "W. H. Eisma",
-        "VB Pahlplatz",
-        "Harry Oosterhuis"
-      ],
-      "aip": 73.202,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1080/14773996.2019.1708615",
       "year": 2020,
       "title": "The development and trial of systematic visual search: a visual inspection method designed to improve current workplace risk assessment practice",
@@ -35830,31 +34393,6 @@
       ],
       "allPeople": [
         "mkt-m-moeini-jazani"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1104/pp.20.00310",
-      "year": 2020,
-      "title": "Structure–Function Analysis of Interallelic Complementation in ROOTY Transheterozygotes",
-      "doi": "10.1104/pp.20.00310",
-      "journal": "PLANT PHYSIOLOGY",
-      "authors": [
-        "Javier Brumós",
-        "Benjamin G. Bobay",
-        "Cierra A. Clark",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 94.007,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
       ],
       "allDepartments": [
         "Marketing"
@@ -37913,33 +36451,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070363220120312",
-      "year": 2020,
-      "title": "Features of the Reaction of Dimedone with Some Amines in the Presence of Mercury(II) Acetate",
-      "doi": "10.1134/s1070363220120312",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "N. G. Hobosyan",
-        "K. V. Balyan",
-        "H. S. Nersisyan",
-        "L. M. Galechyan",
-        "A. B. Sargsyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.5354/0719-0816.1997.56717",
       "year": 2020,
       "title": "Evaluation of Eight Project Selection Methods: the Case of Information Systems",
@@ -39849,34 +38360,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/14494035.2019.1617970",
-      "year": 2019,
-      "title": "Weaknesses of wickedness: a critical perspective on wickedness theory",
-      "doi": "10.1080/14494035.2019.1617970",
-      "journal": "Policy and Society",
-      "authors": [
-        "Mirko Noordegraaf",
-        "Scott Douglas",
-        "Karin Geuijen",
-        "Martijn van der Steen"
-      ],
-      "aip": 92.673,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1037/aca0000223",
       "year": 2019,
       "title": "Vulnerability to psychopathology and creativity: The role of approach-avoidance motivation and novelty seeking.",
@@ -39903,32 +38386,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/092733872019029001004",
-      "year": 2019,
-      "title": "Voorbij Public Administration en New Public Management",
-      "doi": "10.5553/bk/092733872019029001004",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Hans Bossert",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -40423,114 +38880,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070363219120065",
-      "year": 2019,
-      "title": "Synthesis of New Fused Furo- and Thienopyridines",
-      "doi": "10.1134/s1070363219120065",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "В. В. Дабаева",
-        "M. R. Baghdasaryan",
-        "E. G. Paronikyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "Sh. Sh. Dashyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428019110095",
-      "year": 2019,
-      "title": "Synthesis of New Derivatives Benzo[4′,5′]imidazo[2′,1′:6,1]pyrido[2,3-d]pyrimidine",
-      "doi": "10.1134/s1070428019110095",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "А. А. Harutyunyan",
-        "G. T. Gukasyan",
-        "H. А. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A. S. Grigoryan",
-        "G. G. Danagulyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428019040080",
-      "year": 2019,
-      "title": "Synthesis of Ethyl 5-(Arylcarbamoyl)-6-methyl-2-oxo-1,2-dihydropyridine-3-carboxylates",
-      "doi": "10.1134/s1070428019040080",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "S. S. Hayotsyan",
-        "A. A. Sargsyan",
-        "S. G. Kon’kova",
-        "A. Kh. Khachatryan",
-        "A. E. Badasyan",
-        "K. A. Avagyan",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "M. S. Sargsyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.2174/1570178616666190411110415",
-      "year": 2019,
-      "title": "Synthesis and Preliminary Biological Properties Assessment of Novel 2-S-, 4-, 5-Substituted and Bicyclic Derivatives of 6-Methylpyrimidine-4-ol",
-      "doi": "10.2174/1570178616666190411110415",
-      "journal": "Letters in Organic Chemistry",
-      "authors": [
-        "Aleksandr P. Yengoyan",
-        "Zhermen A. Azaryan",
-        "V. A. Pivazyan",
-        "Emma A. Ghazaryan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 10.508,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1093/sq/quz010",
       "year": 2019,
       "title": "Susan Bennett and Sonia Massai, eds. Ivo van Hove: From Shakespeare to David Bowie.David Willinger, ed. Ivo van Hove Onstage.Emile Schra. Ivo van Hove: Th eater van de Lage Landen tot Broadway.Karin Veraart. Ivo van Hove: Regisseur, Mentor, Manager.",
@@ -40602,32 +38951,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s107042801909015x",
-      "year": 2019,
-      "title": "Substituted 2-(2-Arylethenyl)quinazolines. Synthesis and Structure",
-      "doi": "10.1134/s107042801909015x",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "А. А. Harutyunyan",
-        "G. T. Gukasyan",
-        "H. А. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "G. G. Danagulyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -40961,31 +39284,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1186/s12864-019-5700-7",
-      "year": 2019,
-      "title": "RiboStreamR: a web application for quality control, analysis, and visualization of Ribo-seq data",
-      "doi": "10.1186/s12864-019-5700-7",
-      "journal": "BMC Genomics",
-      "authors": [
-        "Patrick Perkins",
-        "Serina M. Mazzoni",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Steffen Heber"
-      ],
-      "aip": 83.761,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -41482,28 +39780,6 @@
       "allPeople": [
         "mkt-mj-gijsenberg",
         "mkt-pc-verhoef"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1002/smtd.201900260",
-      "year": 2019,
-      "title": "Monitoring Ethylene in Plants: Genetically Encoded Reporters and Biosensors",
-      "doi": "10.1002/smtd.201900260",
-      "journal": "Small Methods",
-      "authors": [
-        "Josefina‐Patricia Fernandez‐Moreno",
-        "Anna N. Stepanova"
-      ],
-      "aip": 95.774,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
       ],
       "allDepartments": [
         "Marketing"
@@ -42201,31 +40477,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872019029002011",
-      "year": 2019,
-      "title": "Hoe onzeker is de toekomst, of hoe is de toekomst onzeker?",
-      "doi": "10.5553/bk/092733872019029002011",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1080/00343404.2019.1580357",
       "year": 2019,
       "title": "Historical roots of entrepreneurship-facilitating culture and innovation activity: an analysis for German regions",
@@ -42613,45 +40864,6 @@
       ]
     },
     {
-      "id": "doi:10.7554/elife.47835",
-      "year": 2019,
-      "title": "Epigenetic silencing of a multifunctional plant stress regulator",
-      "doi": "10.7554/elife.47835",
-      "journal": "eLife",
-      "authors": [
-        "Mark Zander",
-        "Björn C. Willige",
-        "Yupeng He",
-        "Thu Anh Nguyen",
-        "Amber E. Langford",
-        "Ramlah Nehring",
-        "Elizabeth D. Howell",
-        "Robert B. McGrath",
-        "Anna Bartlett",
-        "Rosa Castanon",
-        "Joseph R. Nery",
-        "Huaming Chen",
-        "Zhuzhu Zhang",
-        "Florian Jupe",
-        "Anna N. Stepanova",
-        "Robert J. Schmitz",
-        "Mathew G. Lewsey",
-        "Joanne Chory",
-        "Joseph R. Ecker"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1111/caim.12341",
       "year": 2019,
       "title": "Envisioning innovation: Does visionary leadership engender team innovative performance through goal alignment?",
@@ -42765,31 +40977,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428019090148",
-      "year": 2019,
-      "title": "Efficient Synthesis and Some Transformations of 1-Hydrazinyl-5,6,7,8-tetrahydroisoquinolines Involving Rearrangement of the Pyridine Ring",
-      "doi": "10.1134/s1070428019090148",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "S. S. Mamyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -43030,31 +41217,6 @@
         "IM&S",
         "Marketing",
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1002/rcm.8616",
-      "year": 2019,
-      "title": "Development of a relative quantification method for infrared matrix‐assisted laser desorption electrospray ionization mass spectrometry imaging of Arabidopsis seedlings",
-      "doi": "10.1002/rcm.8616",
-      "journal": "Rapid Communications in Mass Spectrometry",
-      "authors": [
-        "M. Caleb Bagley",
-        "Anna N. Stepanova",
-        "Måns Ekelöf",
-        "José M. Alonso",
-        "David C. Muddiman"
-      ],
-      "aip": 50.726,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -43790,34 +41952,6 @@
       ],
       "allPeople": [
         "mkt-pc-verhoef"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1105/tpc.19.00431",
-      "year": 2019,
-      "title": "An Improved Recombineering Toolset for Plants",
-      "doi": "10.1105/tpc.19.00431",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Javier Brumós",
-        "Chengsong Zhao",
-        "Yan Gong",
-        "David Soriano",
-        "Arjun P. Patel",
-        "Miguel A. Pérez‐Amador",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
       ],
       "allDepartments": [
         "Marketing"
@@ -44695,34 +42829,6 @@
       ]
     },
     {
-      "id": "doi:10.1007/s11145-018-9924-8",
-      "year": 2018,
-      "title": "The relationship between reading and listening comprehension: shared and modality-specific components",
-      "doi": "10.1007/s11145-018-9924-8",
-      "journal": "Reading and Writing",
-      "authors": [
-        "M. C. Wolf",
-        "Marloes M. L. Muijselaar",
-        "Albert Boonstra",
-        "Elise de Bree"
-      ],
-      "aip": 78.212,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1038/s42255-018-0004-9",
       "year": 2018,
       "title": "The long noncoding RNA CHROME regulates cholesterol homeostasis in primates",
@@ -44933,34 +43039,6 @@
       ]
     },
     {
-      "id": "doi:10.1007/s11077-018-9342-4",
-      "year": 2018,
-      "title": "The governance of self-organization: Which governance strategy do policy officials and citizens prefer?",
-      "doi": "10.1007/s11077-018-9342-4",
-      "journal": "Policy Sciences",
-      "authors": [
-        "José Nederhand",
-        "Erik‐Hans Klijn",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 90.012,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1002/job.2260",
       "year": 2018,
       "title": "The dynamic relationship between multiple team membership and individual job performance in knowledge‐intensive work",
@@ -45103,56 +43181,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/slct.201802243",
-      "year": 2018,
-      "title": "Synthesis of Novel Derivatives of 1,2,4‐Triazoles",
-      "doi": "10.1002/slct.201802243",
-      "journal": "ChemistrySelect",
-      "authors": [
-        "A. S. Galstyan",
-        "Tariel V. Ghochikyan",
-        "Vardges R. Frangyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 30.995,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10593-018-2353-4",
-      "year": 2018,
-      "title": "Synthesis and structure of diamino derivatives of pyrano-[3,4-c]pyridines and 5,6,7,8-tetrahydroisoquinolines",
-      "doi": "10.1007/s10593-018-2353-4",
-      "journal": "Chemistry of Heterocyclic Compounds",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": 19.376,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.pursup.2018.08.003",
       "year": 2018,
       "title": "Supply chain finance schemes in the procurement of agricultural products",
@@ -45178,32 +43206,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1080/14494035.2018.1520782",
-      "year": 2018,
-      "title": "Strategies for robustness:Five perspectives on how policy design is done",
-      "doi": "10.1080/14494035.2018.1520782",
-      "journal": "Policy and Society",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 92.673,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -46169,34 +44171,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/09540962.2018.1527574",
-      "year": 2018,
-      "title": "New development: Breaking out or hanging on? Internal audit in government",
-      "doi": "10.1080/09540962.2018.1527574",
-      "journal": "Public Money & Management",
-      "authors": [
-        "Thomas Schillemans",
-        "Mark van Twist",
-        "Martijn van der Steen",
-        "Ilsa de Jong"
-      ],
-      "aip": 54.777,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1080/00207543.2018.1461275",
       "year": 2018,
       "title": "National culture and operations management: a structured literature review",
@@ -46503,33 +44477,6 @@
       ],
       "allPeople": [
         "mkt-sm-rizio"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.devcel.2018.09.022",
-      "year": 2018,
-      "title": "Local Auxin Biosynthesis Is a Key Regulator of Plant Development",
-      "doi": "10.1016/j.devcel.2018.09.022",
-      "journal": "Developmental Cell",
-      "authors": [
-        "Javier Brumós",
-        "Linda M. Robles",
-        "Jeonga Yun",
-        "Thien Vu",
-        "Savannah Jackson",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 98.605,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
       ],
       "allDepartments": [
         "Marketing"
@@ -47716,33 +45663,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/14494035.2018.1513731",
-      "year": 2018,
-      "title": "Designing a century ahead: climate change adaptation in the Dutch Delta",
-      "doi": "10.1080/14494035.2018.1513731",
-      "journal": "Policy and Society",
-      "authors": [
-        "Pieter J. T. M. Bloemen",
-        "Martijn van der Steen",
-        "Zeger van der Wal"
-      ],
-      "aip": 92.673,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.tre.2018.06.005",
       "year": 2018,
       "title": "Design and analysis of a satellite network with direct delivery in the pharmaceutical industry",
@@ -48152,33 +46072,6 @@
       ]
     },
     {
-      "id": "doi:10.1080/03003930.2018.1546172",
-      "year": 2018,
-      "title": "Boundary-spanning strategies for aligning institutional logics: a typology",
-      "doi": "10.1080/03003930.2018.1546172",
-      "journal": "Local Government Studies",
-      "authors": [
-        "José Nederhand",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 66.271,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.18778/2083-8530.18.11",
       "year": 2018,
       "title": "Book Reviews",
@@ -48329,33 +46222,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1080/14494035.2018.1520780",
-      "year": 2018,
-      "title": "Anticipating surprise: the case of the early warning system of Rijkswaterstaat in the Netherlands",
-      "doi": "10.1080/14494035.2018.1520780",
-      "journal": "Policy and Society",
-      "authors": [
-        "Martijn van der Steen",
-        "Jorren Scherpenisse",
-        "Mark van Twist"
-      ],
-      "aip": 92.673,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -48795,51 +46661,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1038/s41467-018-03851-3",
-      "year": 2018,
-      "title": "A mechanistic framework for auxin dependent Arabidopsis root hair elongation to low external phosphate",
-      "doi": "10.1038/s41467-018-03851-3",
-      "journal": "Nature Communications",
-      "authors": [
-        "Rahul Bhosale",
-        "Jitender Giri",
-        "Bipin K. Pandey",
-        "Ricardo Fabiano Hettwer Giehl",
-        "Anja Hartmann",
-        "Richard Traini",
-        "Jekaterina Truskina",
-        "Nicola Leftley",
-        "Meredith T. Hanlon",
-        "Kamal Swarup",
-        "Afaf Abdullah Rashed",
-        "Ute Voß",
-        "José M. Alonso",
-        "Anna N. Stepanova",
-        "Jeonga Yun",
-        "Karin Ljung",
-        "Kathleen M. Brown",
-        "Jonathan P. Lynch",
-        "Liam Dolan",
-        "Teva Vernoux",
-        "Anthony Bishopp",
-        "Darren M. Wells",
-        "Nicolaus von Wirén",
-        "Malcolm J. Bennett",
-        "Ranjan Swarup"
-      ],
-      "aip": 98.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -49866,32 +47687,6 @@
       ]
     },
     {
-      "id": "doi:10.1155/2017/8180913",
-      "year": 2017,
-      "title": "Synthesis and Growth Stimulant Properties of 2-Acetyl-3,7-dimethyl-5H-thiazolo[3,2-a]pyrimidin-5-one Derivatives",
-      "doi": "10.1155/2017/8180913",
-      "journal": "Journal of Chemistry",
-      "authors": [
-        "V. A. Pivazyan",
-        "Emma A. Ghazaryan",
-        "Roza S. Shainova",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "Aleksandr P. Yengoyan"
-      ],
-      "aip": 45.264,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.apenergy.2017.02.038",
       "year": 2017,
       "title": "Synergies between energy supply networks",
@@ -50575,37 +48370,6 @@
       ]
     },
     {
-      "id": "doi:10.1007/s12402-017-0237-6",
-      "year": 2017,
-      "title": "Prevalence of sexual dysfunctions and other sexual disorders in adults with attention-deficit/hyperactivity disorder compared to the general population",
-      "doi": "10.1007/s12402-017-0237-6",
-      "journal": "ADHD Attention Deficit and Hyperactivity Disorders",
-      "authors": [
-        "Denise Bijlenga",
-        "Jos A. Vroege",
-        "A. J. M. Stammen",
-        "Minda Breuk",
-        "Albert Boonstra",
-        "Kees van der Rhee",
-        "J. J. Sandra Kooij"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1007/s11365-017-0453-8",
       "year": 2017,
       "title": "Predictors of entrepreneurial activity before and during the European economic crisis",
@@ -51135,34 +48899,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.3917/risa.834.0765",
-      "year": 2017,
-      "title": "Les forces du changement stratégique et les causalités communes. Le cas des primes versées aux banquiers : perspectives",
-      "doi": "10.3917/risa.834.0765",
-      "journal": "Revue Internationale des Sciences Administratives",
-      "authors": [
-        "Caelesta Braun",
-        "Martijn van der Steen",
-        "Jorren Scherpenisse",
-        "Mark J. W. van Twist"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -51786,57 +49522,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872017026002013",
-      "year": 2017,
-      "title": "Formeren voor voorspelbare verrassingen",
-      "doi": "10.5553/bk/092733872017026002013",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363217100061",
-      "year": 2017,
-      "title": "Formation of pyrrolinium derivatives in the bromination reaction of N,N-dipropargyl ammonium salts",
-      "doi": "10.1134/s1070363217100061",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "A. Kh. Gyulnazaryan",
-        "T. A. Sahakyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "G. A. Panosyan",
-        "A. B. Yeremyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ejor.2017.01.015",
       "year": 2017,
       "title": "Flexible lot sizing in hybrid make-to-order/make-to-stock production planning",
@@ -51886,31 +49571,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363217070106",
-      "year": 2017,
-      "title": "Features of reactions of (E)-[(2-aroyl)ethenyl]triphenylphosphonium bromides with binucleophiles",
-      "doi": "10.1134/s1070363217070106",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "R. Dzh. Khachikyan",
-        "Z. G. Ovakimyan",
-        "G. A. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -53784,38 +51444,6 @@
       ]
     },
     {
-      "id": "doi:10.1104/pp.15.01845",
-      "year": 2016,
-      "title": "Transcriptomic Signature of the SHATTERPROOF2 Expression Domain Reveals the Meristematic Nature of Arabidopsis Gynoecial Medial Domain",
-      "doi": "10.1104/pp.15.01845",
-      "journal": "PLANT PHYSIOLOGY",
-      "authors": [
-        "Gonzalo Villarino",
-        "Qiwen Hu",
-        "Silvia Manrique",
-        "Miguel A. Flores‐Vergara",
-        "Bhupinder Sehra",
-        "Linda M. Robles",
-        "Javier Brumós",
-        "Anna N. Stepanova",
-        "Lucia Colombo",
-        "Eva Sundberg",
-        "Steffen Heber",
-        "Robert G. Franks"
-      ],
-      "aip": 94.007,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1080/13803611.2016.1165708",
       "year": 2016,
       "title": "Towards graduateness: exploring academic intellectual development in university master’s students",
@@ -53954,35 +51582,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070363216050054",
-      "year": 2016,
-      "title": "The Stevens rearrangement of propargyl-containing ammonium salts",
-      "doi": "10.1134/s1070363216050054",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "A. Kh. Gyulnazaryan",
-        "T. A. Sahakyan",
-        "Gevorg Sargsyan",
-        "J. V. Grigoryan",
-        "G. M. Muradyan",
-        "G. A. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A.M. Petrosyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1509/jm.15.0395",
       "year": 2016,
       "title": "The Service–Profit Chain: A Meta-Analytic Test of a Comprehensive Theoretical Framework",
@@ -54005,33 +51604,6 @@
       ],
       "allPeople": [
         "acc-kgkw-derfuss"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1177/0734371x16671369",
-      "year": 2016,
-      "title": "The Sedimentation of Public Values: How a Variety of Governance Perspectives Guide the Practical Actions of Civil Servants",
-      "doi": "10.1177/0734371x16671369",
-      "journal": "Review of Public Personnel Administration",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark J. W. van Twist",
-        "Daphne Bressers"
-      ],
-      "aip": 87.264,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
       ],
       "allDepartments": [
         "Accounting"
@@ -54580,35 +52152,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.tet.2016.02.048",
-      "year": 2016,
-      "title": "The azide/tetrazole equilibrium: an investigation in the series of furo- and thieno[2,3-e]tetrazolo[3,2-d]pyrimidine derivatives",
-      "doi": "10.1016/j.tet.2016.02.048",
-      "journal": "Tetrahedron",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "Domenico Spinelli",
-        "Athina Geronikaki",
-        "В. Г. Карцев",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan",
-        "Vincenzo Frenna",
-        "Anush A. Hovakimyan"
-      ],
-      "aip": 39.854,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1080/1359432x.2016.1269750",
       "year": 2016,
       "title": "Take a break! Benefits of sleep and short breaks for daily work engagement",
@@ -54634,145 +52177,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.9734/acsj/2016/28201",
-      "year": 2016,
-      "title": "Synthesis of Novel Derivatives on the Basis of 4-Hydrazinyl-6-methyl-2-(alkylthio)pyrimidines and Their Preliminary Biological Evaluation",
-      "doi": "10.9734/acsj/2016/28201",
-      "journal": "American Chemical Science Journal",
-      "authors": [
-        "V. A. Pivazyan",
-        "Emma A. Ghazaryan",
-        "Roza S. Shainova",
-        "Rafael A. Tavalyan",
-        "A. G. Ayvazyan",
-        "Aleksandr P. Yengoyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428016110166",
-      "year": 2016,
-      "title": "Synthesis of new derivatives of 5-(3,4-dihydro-2Н-pyrrol-5-yl)-pyrimidine",
-      "doi": "10.1134/s1070428016110166",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "S. P. Gasparyan",
-        "M. V. Alexanyan",
-        "G. K. Arutyunyan",
-        "S. L. Kocharov",
-        "A. H. Martirosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "H. А. Panosyan",
-        "G. G. Danagulyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10593-017-2009-9",
-      "year": 2016,
-      "title": "Synthesis of derivatives of pyrano[3,4-c][1,2,4]triazolo-[4,3-a]pyridine and 8-(pyrazol-1-yl)pyrano[3,4-c]pyridine through pyridine ring rearrangement",
-      "doi": "10.1007/s10593-017-2009-9",
-      "journal": "Chemistry of Heterocyclic Compounds",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "N. S. Minasyan",
-        "G. M. Stepanyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": 19.376,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428016090177",
-      "year": 2016,
-      "title": "Synthesis of 10-(R-benzoyl)-2,4-dimethyl-6-(R-phenyl)-8,9-dihydropyrimido[5,4-e]pyrrolo[1,2-c]pyrimidine-1,3(2H,4H)-diones and 2,4-dimethyl-9,10-dihydro-6λ4-pyrimido[5,4-d]pyrrolo- [1,2-b][1,2,6]thiadiazine-1,3,6(2H,4H,8H)-trione",
-      "doi": "10.1134/s1070428016090177",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "S. P. Gasparyan",
-        "M. V. Alexanyan",
-        "G. K. Harutyunyan",
-        "A. H. Martirosyan",
-        "H. M. Stepanyan",
-        "R. E. Muradyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1068162016020102",
-      "year": 2016,
-      "title": "Synthesis and neurotropic activity of 6,8-diamino derivatives of pyrano[3,4-c]pyridines",
-      "doi": "10.1134/s1068162016020102",
-      "journal": "Russian Journal of Bioorganic Chemistry",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "I. A. Dzhagatspanyan",
-        "R. G. Paronikyan",
-        "I. M. Nazaryan",
-        "A. G. Akopyan",
-        "N. S. Minasyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan",
-        "Eugene V. Babaev"
-      ],
-      "aip": 15.612,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -55316,34 +52720,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.futures.2016.01.001",
-      "year": 2016,
-      "title": "Puzzling, powering and perpetuating: Long-term decision-making by the Dutch Delta Committee",
-      "doi": "10.1016/j.futures.2016.01.001",
-      "journal": "Futures",
-      "authors": [
-        "Martijn van der Steen",
-        "Nancy Chin-A-Fat",
-        "M.J. Vink",
-        "Mark van Twist"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1093/ahr/121.3.914",
       "year": 2016,
       "title": "Philip T. Hoffman.Why Did Europe Conquer the World?Roman Studer.The Great Divergence Reconsidered: Europe, India, and the Rise to Global Economic Power.",
@@ -55588,34 +52964,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/0020852315599046",
-      "year": 2016,
-      "title": "On the forces of policy change and joint causation: insights from the banker’s bonus case",
-      "doi": "10.1177/0020852315599046",
-      "journal": "International Review of Administrative Sciences",
-      "authors": [
-        "Caelesta Braun",
-        "Jorren Scherpenisse",
-        "Martijn van der Steen",
-        "Mark J. W. van Twist"
-      ],
-      "aip": 71.958,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ejor.2016.06.035",
       "year": 2016,
       "title": "On the calculation of safety stocks when demand is forecasted",
@@ -55840,37 +53188,6 @@
       ]
     },
     {
-      "id": "doi:10.1109/emr.2016.7792411",
-      "year": 2016,
-      "title": "Managing coordination in multiteam systems: integrating micro and macro perspectives",
-      "doi": "10.1109/emr.2016.7792411",
-      "journal": "IEEE Engineering Management Review",
-      "authors": [
-        "Thomas A. de Vries",
-        "John R. Hollenbeck",
-        "Robert B. Davison",
-        "Frank Walter",
-        "Gerben S. van der Vegt"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "hrmob-gs-van-der-vegt",
-        "hrmob-ta-de-vries"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-gs-van-der-vegt",
-        "hrmob-ta-de-vries"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.lrp.2016.02.003",
       "year": 2016,
       "title": "Managing Bottom up Strategizing: Collective Sensemaking of Strategic Issues in a Dutch Bank",
@@ -56056,33 +53373,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/0144739416670701",
-      "year": 2016,
-      "title": "Learning from experience",
-      "doi": "10.1177/0144739416670701",
-      "journal": "Teaching Public Administration",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist",
-        "Paul Frissen"
-      ],
-      "aip": 36.016,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -56674,31 +53964,6 @@
       ]
     },
     {
-      "id": "doi:10.1109/tnb.2016.2516950",
-      "year": 2016,
-      "title": "Genome-Wide Search for Translated Upstream Open Reading Frames in Arabidopsis Thaliana",
-      "doi": "10.1109/tnb.2016.2516950",
-      "journal": "IEEE Transactions on NanoBioscience",
-      "authors": [
-        "Qiwen Hu",
-        "Catharina Merchante",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Steffen Heber"
-      ],
-      "aip": 60.626,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1162/adev_a_00060",
       "year": 2016,
       "title": "Foreign Direct Investment, Terms of Trade, and Quality Upgrading: What Is So Special about South Asia?",
@@ -56773,31 +54038,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070363216070070",
-      "year": 2016,
-      "title": "Features of reactions of (E)-1-(β-aroylvinyl)pyridinium bromides with binucleophiles",
-      "doi": "10.1134/s1070363216070070",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "R. Dzh. Khachikyan",
-        "Z. G. Ovakimyan",
-        "G. A. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -57333,33 +54573,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.futures.2016.01.003",
-      "year": 2016,
-      "title": "Dealing with long-term policy problems: Making sense of the interplay between meaning and power",
-      "doi": "10.1016/j.futures.2016.01.003",
-      "journal": "Futures",
-      "authors": [
-        "M.J. Vink",
-        "Martijn van der Steen",
-        "Art Dewulf"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5117/mab.90.31322",
       "year": 2016,
       "title": "De overdracht van risico's in de zorg. Risicobeheersing in een instelling voor langdurige ouderenzorg",
@@ -57675,28 +54888,6 @@
       ]
     },
     {
-      "id": "doi:10.1073/pnas.1613506113",
-      "year": 2016,
-      "title": "Auxin catabolism unplugged: Role of IAA oxidation in auxin homeostasis",
-      "doi": "10.1073/pnas.1613506113",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "authors": [
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 98.206,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jwb.2016.10.001",
       "year": 2016,
       "title": "Attention in words, not in deeds: Effects of attention dissonance on headquarters-subsidiary communication in multinational corporations",
@@ -57808,33 +54999,6 @@
       ]
     },
     {
-      "id": "doi:10.1007/s10593-016-1870-2",
-      "year": 2016,
-      "title": "Alkylation of 3-nitro-1,2,4-triazole in aqueous alkaline medium in the presence of N-methylmorpholine N-oxide and verification of the structure of the reaction products",
-      "doi": "10.1007/s10593-016-1870-2",
-      "journal": "Chemistry of Heterocyclic Compounds",
-      "authors": [
-        "G. B. Zakaryan",
-        "S. S. Hayotsyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan",
-        "H. А. Panosyan",
-        "G. G. Danagulyan",
-        "H. S. Attaryan"
-      ],
-      "aip": 19.376,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1080/00207543.2016.1143134",
       "year": 2016,
       "title": "Aligning workload control theory and practice: lot splitting and operation overlapping issues",
@@ -57884,31 +55048,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.21769/bioprotoc.1985",
-      "year": 2016,
-      "title": "A Ribosome Footprinting Protocol for Plants",
-      "doi": "10.21769/bioprotoc.1985",
-      "journal": "BIO-PROTOCOL",
-      "authors": [
-        "Catharina Merchante",
-        "Qiwen Hu",
-        "Steffen Heber",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 50.273,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -58146,34 +55285,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bw/016571942015069003005",
-      "year": 2015,
-      "title": "Woorden die werken: spraakmakend leiderschap van gemeentesecretarissen",
-      "doi": "10.5553/bw/016571942015069003005",
-      "journal": "Bestuurswetenschappen",
-      "authors": [
-        "Mark van Twist",
-        "Martijn van der Steen",
-        "Marij Swinkels",
-        "Ilsa de Jong"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "openalex:W2310916407",
       "year": 2015,
       "title": "When less is more – Using scarcity heuristics to promote healthy choices when self-control is low",
@@ -58227,35 +55338,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s11145-015-9551-6",
-      "year": 2015,
-      "title": "What can measures of text comprehension tell us about creative text production?",
-      "doi": "10.1007/s11145-015-9551-6",
-      "journal": "Reading and Writing",
-      "authors": [
-        "L.T. Bos",
-        "Björn B. de Koning",
-        "Floryt van Wesel",
-        "Albert Boonstra",
-        "M. van der Schoot"
-      ],
-      "aip": 78.212,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -58979,59 +56061,6 @@
       ]
     },
     {
-      "id": "doi:10.1007/s10593-015-1724-3",
-      "year": 2015,
-      "title": "Synthesis of N- and C-azolyl-substituted pyrazolo[1,5-a]pyrimidines by recyclization of pyrimidinium salts",
-      "doi": "10.1007/s10593-015-1724-3",
-      "journal": "Chemistry of Heterocyclic Compounds",
-      "authors": [
-        "G. G. Danagulyan",
-        "A. K. Tumanyan",
-        "O. S. Attaryan",
-        "R. А. Tamazyan",
-        "А. G. Danagulyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 19.376,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428015060068",
-      "year": 2015,
-      "title": "Synthesis and X-ray analysis of 2-aryl-4-chloropyrrolidine-2-carbonitrile derivatives",
-      "doi": "10.1134/s1070428015060068",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "S. P. Gasparyan",
-        "M. V. Alexanyan",
-        "G. K. Harutyunyan",
-        "A. H. Martirosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "H. А. Panosyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.12720/joams.4.4.283-291",
       "year": 2015,
       "title": "Supply Chain Finance: Modelling a Dynamic Discounting Programme",
@@ -59303,47 +56332,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.lungcan.2015.01.012",
-      "year": 2015,
-      "title": "Sequential administration of vinorelbine plus cisplatin and bevacizumab followed by docetaxel plus gemcitabine and bevacizumab compared to docetaxel plus cisplatin and bevacizumab regimen as first-line therapy for advanced or metastatic non-squamous non-small cell lung cancer: A multicenter randomized phase II trial of the Hellenic Oncology Research Group (HORG)",
-      "doi": "10.1016/j.lungcan.2015.01.012",
-      "journal": "Lung Cancer",
-      "authors": [
-        "Αthanasios Kotsakis",
-        "Nikolaos Kentepozidis",
-        "Christos Emmanouilidis",
-        "Aris Polyzos",
-        "Athina Agelidou",
-        "Michael Vaslamatzis",
-        "V. Chandrinos",
-        "Sofia Agelaki",
-        "L. Vamvakas",
-        "Kostas Kalbakis",
-        "Panagiotis Katsaounis",
-        "D. Stoltidis",
-        "George Nintos",
-        "Dora Hatzidaki",
-        "Eleni‐Kyriaki Vetsika",
-        "Dimitriοs Mavroudis",
-        "Vassilis Georgoulias"
-      ],
-      "aip": 89.071,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ops-c-emmanouilidis"
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "allPeople": [
-        "ops-c-emmanouilidis"
-      ],
-      "allDepartments": [
-        "Operations"
-      ]
-    },
-    {
       "id": "doi:10.1080/09638180.2015.1034152",
       "year": 2015,
       "title": "Say-on-Pay Votes: The Role of the Media",
@@ -59505,59 +56493,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070363215050138",
-      "year": 2015,
-      "title": "Reactions of trans-1-(β-aroylvinyl)pyridinium bromides with hydroxylamine hydrochloride",
-      "doi": "10.1134/s1070363215050138",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "R. Dzh. Khachikyan",
-        "Z. G. Hovakimyan",
-        "G. A. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428015030124",
-      "year": 2015,
-      "title": "Reaction of 6-chloropyrimidine-2,4(1H,3H)-dione with 2-(chloromethoxy)ethyl benzoate. Synthesis of new acyclic nucleosides",
-      "doi": "10.1134/s1070428015030124",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "R. G. Melik-Ohanjanyan",
-        "T. R. Hovsepyan",
-        "S. G. Israelyan",
-        "M. S. Ghukasyan",
-        "G. S. Karakhanyan",
-        "H. А. Panosyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.5117/2015.028.002.006",
       "year": 2015,
       "title": "Reacties van leidinggevenden op radicale creatieve ideeën van medewerkers",
@@ -59689,35 +56624,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.3390/wevj7040710",
-      "year": 2015,
-      "title": "Policy strategies for an emergent technology: lessons from the analysis of EV-policy in 8 North- European countries",
-      "doi": "10.3390/wevj7040710",
-      "journal": "World Electric Vehicle Journal",
-      "authors": [
-        "Martijn van der Steen",
-        "R. M. Van Schelven",
-        "P. Van Deventer",
-        "Mark van Twist",
-        "Richard Kötter"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -59857,31 +56763,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070428015030112",
-      "year": 2015,
-      "title": "One-step synthesis of pyrido[2,3-d]pyrimidines, amides, and benzoxazolylethylpyrimidine by condensation of substituted 3-(2-phenylpyrimidin-5-yl)propanoic acids with aromatic amines in polyphosphoric acid",
-      "doi": "10.1134/s1070428015030112",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "А. А. Harutyunyan",
-        "H. А. Panosyan",
-        "S. G. Chishmarityan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ejor.2015.08.003",
       "year": 2015,
       "title": "On the benefits of delayed ordering",
@@ -59907,35 +56788,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1002/ejp.740",
-      "year": 2015,
-      "title": "No association between posture and musculoskeletal complaints in a professional bassist sample",
-      "doi": "10.1002/ejp.740",
-      "journal": "European Journal of Pain",
-      "authors": [
-        "Kees Hein Woldendorp",
-        "Albert Boonstra",
-        "A. Tijsma",
-        "J. Hans Arendzen",
-        "Michiel F. Reneman"
-      ],
-      "aip": 83.357,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -60428,34 +57280,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/0952076715581089",
-      "year": 2015,
-      "title": "How to see failure: Attempts by the Inspectorate of Education to detect and disarm failure in Dutch education policy",
-      "doi": "10.1177/0952076715581089",
-      "journal": "Public Policy and Administration",
-      "authors": [
-        "Martijn van der Steen",
-        "Jorren Scherpenisse",
-        "Mark van Twist",
-        "Paul ‘t Hart"
-      ],
-      "aip": 80.026,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1037/gdn0000024",
       "year": 2015,
       "title": "How newcomers influence group utilization of their knowledge: Integrating versus differentiating strategies.",
@@ -60633,65 +57457,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.cell.2015.09.036",
-      "year": 2015,
-      "title": "Gene-Specific Translation Regulation Mediated by the Hormone-Signaling Molecule EIN2",
-      "doi": "10.1016/j.cell.2015.09.036",
-      "journal": "Cell",
-      "authors": [
-        "Catharina Merchante",
-        "Javier Brumós",
-        "Jeonga Yun",
-        "Qiwen Hu",
-        "Kristina R. Spencer",
-        "Paul Enríquez",
-        "Brad M. Binder",
-        "Steffen Heber",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 99.92,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1111/1467-9817.12066",
-      "year": 2015,
-      "title": "Gender differences in mental simulation during sentence and word processing",
-      "doi": "10.1111/1467-9817.12066",
-      "journal": "Journal of Research in Reading",
-      "authors": [
-        "S.I. Wassenburg",
-        "Björn B. de Koning",
-        "M.H. de Vries",
-        "Albert Boonstra",
-        "M. van der Schoot"
-      ],
-      "aip": 80.335,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -61297,57 +58062,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872015024001004",
-      "year": 2015,
-      "title": "De netwerkende burgemeester: beweging tussen binnen en buiten",
-      "doi": "10.5553/bk/092733872015024001004",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Ilsa de Jong"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "openalex:W3015870891",
-      "year": 2015,
-      "title": "De geboorte van de moderne verzorgingsstaat en de herontdekking van oude vormen",
-      "doi": "",
-      "journal": "Christen Democratische Verkenningen",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5553/tvt/187987052015006002006",
       "year": 2015,
       "title": "De faal- en slaagfactoren voor leiderschap binnen toezichthouders",
@@ -61739,32 +58453,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/chin.201534194",
-      "year": 2015,
-      "title": "ChemInform Abstract: A Novel and Efficient Synthesis of Diamino Derivatives of Pyrano[3,4‐c]pyridines.",
-      "doi": "10.1002/chin.201534194",
-      "journal": "ChemInform",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "A. S. Noravyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "H. А. Panosyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.18151/7217342",
       "year": 2015,
       "title": "Changes and Variations in Online- and Offline Communication Patterns: Including Peer Effects",
@@ -61985,60 +58673,6 @@
       ]
     },
     {
-      "id": "doi:10.1111/ijau.12049",
-      "year": 2015,
-      "title": "Auditing Interactive Complexity: Challenges for the Internal Audit Profession",
-      "doi": "10.1111/ijau.12049",
-      "journal": "International Journal of Auditing",
-      "authors": [
-        "A.L.P. Nuijten",
-        "Mark van Twist",
-        "Martijn van der Steen"
-      ],
-      "aip": 48.515,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1080/01900692.2014.952821",
-      "year": 2015,
-      "title": "Assessing and Appraising the Effects of Policy for Wicked Issues: Including Unforeseen Achievements in the Evaluation of the District Policy for Deprived Areas in The Netherlands",
-      "doi": "10.1080/01900692.2014.952821",
-      "journal": "International Journal of Public Administration",
-      "authors": [
-        "Mark van Twist",
-        "Michiel Kort",
-        "Martijn van der Steen"
-      ],
-      "aip": 56.206,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1007/s00712-015-0465-1",
       "year": 2015,
       "title": "Assaf, Razin: Understanding global crises: an emerging paradigm",
@@ -62248,32 +58882,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.tet.2015.03.040",
-      "year": 2015,
-      "title": "A novel and efficient synthesis of diamino derivatives of pyrano[3,4-c]pyridines",
-      "doi": "10.1016/j.tet.2015.03.040",
-      "journal": "Tetrahedron",
-      "authors": [
-        "E. G. Paronikyan",
-        "Sh. Sh. Dashyan",
-        "A. S. Noravyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "H. А. Panosyan"
-      ],
-      "aip": 39.854,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jbusres.2015.04.009",
       "year": 2015,
       "title": "A dynamic view on secrecy management",
@@ -62433,32 +59041,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.5553/benm/138900692014041001010",
-      "year": 2014,
-      "title": "Weerbaar of wendbaar zijn? Strategische opties in de voorbereiding op de drie decentralisaties",
-      "doi": "10.5553/benm/138900692014041001010",
-      "journal": "Beleid en Maatschappij",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -62729,33 +59311,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1177/0020852313517993",
-      "year": 2014,
-      "title": "The responsiveness of social policies. Explaining institutional change in three policy domains",
-      "doi": "10.1177/0020852313517993",
-      "journal": "International Review of Administrative Sciences",
-      "authors": [
-        "Menno Fenger",
-        "Martijn van der Steen",
-        "Lieske van der Torre"
-      ],
-      "aip": 71.958,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -63083,58 +59638,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s1070428014080156",
-      "year": 2014,
-      "title": "Synthesis, molecular and crystal structure of new 9,10-substituted deazaflavins",
-      "doi": "10.1134/s1070428014080156",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "R. G. Melik-Ohandzanyan",
-        "T. R. Hovsepyan",
-        "S. G. Israelyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "G. A. Panosyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1134/s107042801406030x",
-      "year": 2014,
-      "title": "Synthesis and X-ray analysis of some pyrido[2,3-d]pyrimidines",
-      "doi": "10.1134/s107042801406030x",
-      "journal": "Russian Journal of Organic Chemistry",
-      "authors": [
-        "R. G. Melik-Ohanjanyan",
-        "T. R. Hovsepyan",
-        "S. G. Israelyan",
-        "M. R. Hakobyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan"
-      ],
-      "aip": 8.476,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -63550,34 +60053,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/0095399714527752",
-      "year": 2014,
-      "title": "Public Managers, Media Influence, and Governance",
-      "doi": "10.1177/0095399714527752",
-      "journal": "Administration & Society",
-      "authors": [
-        "Erik‐Hans Klijn",
-        "Mark van Twist",
-        "Martijn van der Steen",
-        "Stephen Jeffares"
-      ],
-      "aip": 79.676,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1007/s11575-014-0219-2",
       "year": 2014,
       "title": "Psychic Distance, Innovation, and Firm Performance",
@@ -63826,35 +60301,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.tet.2014.05.070",
-      "year": 2014,
-      "title": "On the reactivity of 4-cyano-1,3-dichloro-7-methyl-5,6,7,8-tetrahydro-2,7-naphthyridine with several amines in different experimental conditions: monosubstitution, disubstitution, and a new unexpected rearrangement",
-      "doi": "10.1016/j.tet.2014.05.070",
-      "journal": "Tetrahedron",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "В. Г. Карцев",
-        "Domenico Spinelli",
-        "Athina Geronikaki",
-        "A. S. Noravyan",
-        "Anush A. Hovakimyan",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": 39.854,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -64357,33 +60803,6 @@
       ]
     },
     {
-      "id": "doi:10.3917/risa.803.0697",
-      "year": 2014,
-      "title": "La réactivité des politiques sociales. Explication du changement institutionnel dans trois domaines stratégiques",
-      "doi": "10.3917/risa.803.0697",
-      "journal": "Revue Internationale des Sciences Administratives",
-      "authors": [
-        "Menno Fenger",
-        "Martijn van der Steen",
-        "Lieske van der Torre"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1108/scm-08-2013-0298",
       "year": 2014,
       "title": "Joint operational decision-making in collaborative transportation networks: the role of IT",
@@ -64673,14 +61092,12 @@
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "ims-a-boonstra",
         "ims-mag-van-offenbeek"
       ],
       "departments": [
         "IM&S"
       ],
       "allPeople": [
-        "ims-a-boonstra",
         "ims-mag-van-offenbeek"
       ],
       "allDepartments": [
@@ -65176,7 +61593,6 @@
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "ims-a-boonstra",
         "ims-mag-van-offenbeek",
         "ims-ml-hage"
       ],
@@ -65184,7 +61600,6 @@
         "IM&S"
       ],
       "allPeople": [
-        "ims-a-boonstra",
         "ims-mag-van-offenbeek",
         "ims-ml-hage"
       ],
@@ -65461,27 +61876,6 @@
       ]
     },
     {
-      "id": "doi:10.1107/s1600536814020200",
-      "year": 2014,
-      "title": "Crystal structure of 2-(1,3,7,9-tetramethyl-2,4,6,8-tetraoxo-1,2,3,4,6,7,8,9-octahydropyrido[2,3-d:6,5-d′]dipyrimidin-5-yl)benzamide dimethylformamide hemisolvate",
-      "doi": "10.1107/s1600536814020200",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "A. G. Ayvazyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/1094670514559001",
       "year": 2014,
       "title": "Coproduction of Transformative Services as a Pathway to Improved Consumer Well-Being",
@@ -65685,35 +62079,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/chin.201451167",
-      "year": 2014,
-      "title": "ChemInform Abstract: On the Reactivity of 4‐Cyano‐1,3‐dichloro‐7‐methyl‐5,6,7,8‐tetrahydro‐2,7‐naphthyridine with Several Amines in Different Experimental Conditions: Monosubstitution, Disubstitution, and a New Unexpected Rearrangement.",
-      "doi": "10.1002/chin.201451167",
-      "journal": "ChemInform",
-      "authors": [
-        "Samvel N. Sirakanyan",
-        "В. Г. Карцев",
-        "Domenico Spinelli",
-        "Athina Geronikaki",
-        "A. S. Noravyan",
-        "Anush A. Hovakimyan",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.emj.2013.12.001",
       "year": 2014,
       "title": "Challenges and solutions for marketing in a digital era",
@@ -65739,33 +62104,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1097/mao.0000000000000455",
-      "year": 2014,
-      "title": "Case Report",
-      "doi": "10.1097/mao.0000000000000455",
-      "journal": "Otology & Neurotology",
-      "authors": [
-        "Michelle K. Ryan",
-        "Doris Piplica",
-        "Ming Zhang"
-      ],
-      "aip": 62.198,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -66163,38 +62501,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/1357633x14528443",
-      "year": 2014,
-      "title": "A pilot study of telepractice delivery for teaching listening and spoken language to children with hearing loss",
-      "doi": "10.1177/1357633x14528443",
-      "journal": "Journal of Telemedicine and Telecare",
-      "authors": [
-        "Gabriella Constantinescu",
-        "Monique Waite",
-        "Dimity Dornan",
-        "Emma Rushbrooke",
-        "Jackie Brown",
-        "Jane McGovern",
-        "Michelle K. Ryan",
-        "Anne J. Hill"
-      ],
-      "aip": 87.866,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-mk-ryan"
-      ],
-      "allDepartments": [
-        "HRM&OB"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.socscimed.2014.05.012",
       "year": 2014,
       "title": "A person-centred segmentation study in elderly care: Towards efficient demand-driven care",
@@ -66467,32 +62773,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872013022003001",
-      "year": 2013,
-      "title": "Tussen analysevermogen en interventiekracht: de dubbelzinnige rol van onderzoekscommissies",
-      "doi": "10.5553/bk/092733872013022003001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Hans de Bruijn",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ejor.2013.02.008",
       "year": 2013,
       "title": "Transshipment and rebalancing policies for library books",
@@ -66702,34 +62982,6 @@
       ],
       "allPeople": [
         "acc-cpa-heijes"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.jcom.2013.10.002",
-      "year": 2013,
-      "title": "The three pillars of the co-operative",
-      "doi": "10.1016/j.jcom.2013.10.002",
-      "journal": "Journal of Co-operative Organization and Management",
-      "authors": [
-        "Kayleigh van Oorschot",
-        "Josta de Hoog",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 47.516,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
       ],
       "allDepartments": [
         "Accounting"
@@ -67439,35 +63691,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/tvt/187987052013004003003",
-      "year": 2013,
-      "title": "Ruimte voor strategie",
-      "doi": "10.5553/tvt/187987052013004003003",
-      "journal": "Tijdschrift voor Toezicht",
-      "authors": [
-        "Martijn van der Steen",
-        "Erik‐Hans Klijn",
-        "Mark van Twist",
-        "Arno van Wijk",
-        "Jorren Scherpenisse"
-      ],
-      "aip": null,
-      "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1007/s11092-013-9161-2",
       "year": 2013,
       "title": "Readiness and expectations questionnaire: a cross-cultural measurement instrument for first-year university students",
@@ -67514,34 +63737,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s10578-013-0414-6",
-      "year": 2013,
-      "title": "Psychometric Qualities of the Short Form of the Self-efficacy for Parenting Tasks Index-Toddler Scale",
-      "doi": "10.1007/s10578-013-0414-6",
-      "journal": "Child Psychiatry & Human Development",
-      "authors": [
-        "Elisabeth H. M. van Rijen",
-        "N. Gasanova",
-        "Albert Boonstra",
-        "Jorg Huijding"
-      ],
-      "aip": 75.425,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -67901,29 +64096,6 @@
       ]
     },
     {
-      "id": "doi:10.1093/mp/sst113",
-      "year": 2013,
-      "title": "Molecular Mechanisms of Ethylene–Auxin Interaction",
-      "doi": "10.1093/mp/sst113",
-      "journal": "Molecular Plant",
-      "authors": [
-        "Linda M. Robles",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 98.525,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "openalex:W2485317079",
       "year": 2013,
       "title": "Logistiek biobased economy: toekomstbeelden 2025 & agenda 2013-2017",
@@ -67954,34 +64126,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.cub.2013.09.039",
-      "year": 2013,
-      "title": "Local Auxin Sources Orient the Apical-Basal Axis in Arabidopsis Embryos",
-      "doi": "10.1016/j.cub.2013.09.039",
-      "journal": "Current Biology",
-      "authors": [
-        "Hélène S. Robert",
-        "Peter Grones",
-        "Anna N. Stepanova",
-        "Linda M. Robles",
-        "Annemarie S. Lokerse",
-        "José M. Alonso",
-        "Dolf Weijers",
-        "Jiřı́ Friml"
-      ],
-      "aip": 98.224,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1002/ejsp.1963",
       "year": 2013,
       "title": "Less is more: The effect of multiple implementation intentions targeting unhealthy snacking habits",
@@ -68008,34 +64152,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.5553/benm/138900692013040001003",
-      "year": 2013,
-      "title": "Legitimiteit van sociaal beleid: maatschappelijke ontwikkelingen en bestuurlijke dilemma’s",
-      "doi": "10.5553/benm/138900692013040001003",
-      "journal": "Beleid en Maatschappij",
-      "authors": [
-        "Martijn van der Steen",
-        "Menno Fenger",
-        "Lieske van der Torre",
-        "Arno van Wijk BA"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -68176,33 +64292,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1080/01900692.2012.713295",
-      "year": 2013,
-      "title": "Joined-Up Government in The Netherlands: Experiences with Program Ministries",
-      "doi": "10.1080/01900692.2012.713295",
-      "journal": "International Journal of Public Administration",
-      "authors": [
-        "Philip Marcel Karré",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 56.206,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -68438,33 +64527,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/092733872013022003003",
-      "year": 2013,
-      "title": "Het commissierapport: inhoud als uitdrukking van een proces",
-      "doi": "10.5553/bk/092733872013022003003",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martin Schulz",
-        "Jony Ferket",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1037/a0031785",
       "year": 2013,
       "title": "Health on impulse: When low self-control promotes healthy food choices.",
@@ -68519,29 +64581,6 @@
       ]
     },
     {
-      "id": "doi:10.1111/ppl.12098",
-      "year": 2013,
-      "title": "Genetic aspects of auxin biosynthesis and its regulation",
-      "doi": "10.1111/ppl.12098",
-      "journal": "Physiologia Plantarum",
-      "authors": [
-        "Javier Brumós",
-        "José M. Alonso",
-        "Anna N. Stepanova"
-      ],
-      "aip": 75.723,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jbusres.2013.05.019",
       "year": 2013,
       "title": "From conflict to crisis in collaborative NPD",
@@ -68566,33 +64605,6 @@
       ],
       "allDepartments": [
         "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1111/padm.12018",
-      "year": 2013,
-      "title": "FRAGMENTED OR CONNECTIVE PROFESSIONALISM? STRATEGIES FOR PROFESSIONALIZING THE WORK OF STRATEGISTS AND OTHER (ORGANIZATIONAL) PROFESSIONALS",
-      "doi": "10.1111/padm.12018",
-      "journal": "Public Administration",
-      "authors": [
-        "Mirko Noordegraaf",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 90.701,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -69020,33 +65032,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2013022001005",
-      "year": 2013,
-      "title": "De realisatie van publieke waarden door sociaal ondernemerschap",
-      "doi": "10.5553/bk/2013022001005",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martin Schulz",
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5117/mab.87.12879",
       "year": 2013,
       "title": "De Odyssee van Hans Hoogervorst en de zijnen; hoe de politieke kliffen te omzeilen",
@@ -69066,33 +65051,6 @@
       ],
       "allPeople": [
         "acc-rl-ter-hoeven"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2013022001002",
-      "year": 2013,
-      "title": "De grote samenleving",
-      "doi": "10.5553/bk/2013022001002",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Hans de Bruijn",
-        "Thomas Schillemans"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
       ],
       "allDepartments": [
         "Accounting"
@@ -69200,34 +65158,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1332/030557312x655800",
-      "year": 2013,
-      "title": "Complex causality in improving underperforming schools: a complex adaptive systems approach",
-      "doi": "10.1332/030557312x655800",
-      "journal": "Policy & Politics",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist",
-        "Menno Fenger",
-        "Sara Le Cointre"
-      ],
-      "aip": 88.385,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -69479,35 +65409,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.1038/ncomms3779",
-      "year": 2013,
-      "title": "Arabidopsis SABRE and CLASP interact to stabilize cell division plane orientation and planar polarity",
-      "doi": "10.1038/ncomms3779",
-      "journal": "Nature Communications",
-      "authors": [
-        "Stefano Pietra",
-        "Anna Gustavsson",
-        "Christian Kiefer",
-        "Lothar Kalmbach",
-        "Per Hörstedt",
-        "Yoshihisa Ikeda",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Markus Grebe"
-      ],
-      "aip": 98.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -70599,31 +66500,6 @@
       ]
     },
     {
-      "id": "doi:10.1134/s1070363212100131",
-      "year": 2012,
-      "title": "Synthesis, structure, and properties of pyrazole-4-carbaldehyde oximes",
-      "doi": "10.1134/s1070363212100131",
-      "journal": "Russian Journal of General Chemistry",
-      "authors": [
-        "O. S. Attaryan",
-        "A. A. Sahakyan",
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "G. V. Asratyan"
-      ],
-      "aip": 9.406,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1108/01443571211226506",
       "year": 2012,
       "title": "Supply chain integration and performance: the moderating effect of supply complexity",
@@ -71281,32 +67157,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2012021001011",
-      "year": 2012,
-      "title": "Politiek-ambtelijke verhoudingen in de 2.0-wereld",
-      "doi": "10.5553/bk/2012021001011",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Paul ‘t Hart",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1057/ejis.2012.52",
       "year": 2012,
       "title": "Performing embodied identity in virtual worlds",
@@ -71712,32 +67562,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.futures.2012.03.003",
-      "year": 2012,
-      "title": "Looking back on looking forward",
-      "doi": "10.1016/j.futures.2012.03.003",
-      "journal": "Futures",
-      "authors": [
-        "Patrick van der Duin",
-        "Martijn van der Steen"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.15358/0935-0381-2012-3-146",
       "year": 2012,
       "title": "Lebenszyklusorientiertes Beteiligungscontrolling konzernabhängiger Venture Capital-Gesellschaften",
@@ -71794,32 +67618,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.futures.2012.03.010",
-      "year": 2012,
-      "title": "Learning ahead of time: how evaluation of foresight may add to increased trust, organizational learning and future oriented policy and strategy",
-      "doi": "10.1016/j.futures.2012.03.010",
-      "journal": "Futures",
-      "authors": [
-        "Martijn van der Steen",
-        "Patrick van der Duin"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1080/00207543.2011.645954",
       "year": 2012,
       "title": "Lean production and ERP systems in small- and medium-sized enterprises: ERP support for pull production",
@@ -71844,35 +67642,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1042/bj20121403",
-      "year": 2012,
-      "title": "Kinetic analysis of Arabidopsis glucosyltransferase UGT74B1 illustrates a general mechanism by which enzymes can escape product inhibition",
-      "doi": "10.1042/bj20121403",
-      "journal": "Biochemical Journal",
-      "authors": [
-        "Jakub Kopycki",
-        "Élisabeth Wieduwild",
-        "Janine Kohlschmidt",
-        "Wolfgang Brandt",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "M. Soledade C. Pedras",
-        "Steffen Abel",
-        "Christopher S. Grubb"
-      ],
-      "aip": 86.514,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
       ]
     },
     {
@@ -72315,37 +68084,6 @@
       ]
     },
     {
-      "id": "doi:10.3390/wevj5010058",
-      "year": 2012,
-      "title": "Governing and Innovation: the Transition to E-Mobility – A Dutch Perspective",
-      "doi": "10.3390/wevj5010058",
-      "journal": "World Electric Vehicle Journal",
-      "authors": [
-        "Martijn van der Steen",
-        "Peter Van Deventer",
-        "Hans de Bruijn",
-        "Mark van Twist",
-        "Ernst F. ten Heuvelhof",
-        "Kingsley E. Haynes",
-        "Zhenhua Chen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ijresmar.2011.10.002",
       "year": 2012,
       "title": "Generating global brand equity through corporate social responsibility to key stakeholders",
@@ -72397,33 +68135,6 @@
       ],
       "allPeople": [
         "acc-kgkw-derfuss"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2012021004001",
-      "year": 2012,
-      "title": "Framing framing. Betekenisgeving en besluitvorming over beleid",
-      "doi": "10.5553/bk/2012021004001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Hans de Bruijn",
-        "Thomas Schillemans",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
       ],
       "allDepartments": [
         "Accounting"
@@ -72841,31 +68552,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2012021004005",
-      "year": 2012,
-      "title": "De kracht van grijs: Een analyse van de politieke framing van vergrijzing",
-      "doi": "10.5553/bk/2012021004005",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1108/02652321211210886",
       "year": 2012,
       "title": "Customer intention to adopt a fee‐based advisory model",
@@ -73163,32 +68849,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.futures.2012.03.009",
-      "year": 2012,
-      "title": "Beyond use: Evaluating foresight that fits",
-      "doi": "10.1016/j.futures.2012.03.009",
-      "journal": "Futures",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -73635,33 +69295,6 @@
       ],
       "allDepartments": [
         "HRM&OB"
-      ]
-    },
-    {
-      "id": "doi:10.2753/pin1099-9922130402",
-      "year": 2011,
-      "title": "When Citizens Take Matters into Their Own Hands",
-      "doi": "10.2753/pin1099-9922130402",
-      "journal": "Public Integrity",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist",
-        "Philip Marcel Karré"
-      ],
-      "aip": 50.875,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -74269,34 +69902,6 @@
       ]
     },
     {
-      "id": "doi:10.1105/tpc.111.088047",
-      "year": 2011,
-      "title": "The Arabidopsis YUCCA1 Flavin Monooxygenase Functions in the Indole-3-Pyruvic Acid Branch of Auxin Biosynthesis",
-      "doi": "10.1105/tpc.111.088047",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Anna N. Stepanova",
-        "Jeonga Yun",
-        "Linda M. Robles",
-        "Ondřej Novák",
-        "Wenrong He",
-        "Hongwei Guo",
-        "Karin Ljung",
-        "José M. Alonso"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.5897/ajbm10.1410",
       "year": 2011,
       "title": "Sustaining competitive advantage through effective knowledge management",
@@ -74399,33 +70004,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2011020001001",
-      "year": 2011,
-      "title": "Sturen met minder",
-      "doi": "10.5553/bk/2011020001001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Boudewijn Steur",
-        "Karin van Boetzelaer"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -74911,33 +70489,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2011020002008",
-      "year": 2011,
-      "title": "Politieke ambtenaren?",
-      "doi": "10.5553/bk/2011020002008",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Diederik Vancoppenolle",
-        "Mirko Noordegraaf",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1086/662615",
       "year": 2011,
       "title": "Plate Size and Color Suggestibility: The Delboeuf Illusion’s Bias on Serving and Eating Behavior",
@@ -75046,38 +70597,6 @@
       "allDepartments": [
         "HRM&OB",
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1371/journal.pone.0024736",
-      "year": 2011,
-      "title": "People with Multiple Tattoos and/or Piercings Are Not at Increased Risk for HBV or HCV in The Netherlands",
-      "doi": "10.1371/journal.pone.0024736",
-      "journal": "PLoS ONE",
-      "authors": [
-        "Anouk T. Urbanus",
-        "Anneke van den Hoek",
-        "Albert Boonstra",
-        "Robin van Houdt",
-        "Lotte J. de Bruijn",
-        "Titia Heijman",
-        "Roel A. Coutinho",
-        "Maria Prins"
-      ],
-      "aip": 77.22,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -75316,32 +70835,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2011020001006",
-      "year": 2011,
-      "title": "Krimp op de agenda",
-      "doi": "10.5553/bk/2011020001006",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Mandy Slaats",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -76502,31 +71995,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/benm/2011038002012",
-      "year": 2011,
-      "title": "De stille revolutie",
-      "doi": "10.5553/benm/2011038002012",
-      "journal": "Beleid en Maatschappij",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5117/mab.85.20873",
       "year": 2011,
       "title": "Cultuurverschillen in het gedrag van accountants",
@@ -76923,38 +72391,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/1087054711428965",
-      "year": 2011,
-      "title": "Associations Between Sleep Characteristics, Seasonal Depressive Symptoms, Lifestyle, and ADHD Symptoms in Adults",
-      "doi": "10.1177/1087054711428965",
-      "journal": "Journal of Attention Disorders",
-      "authors": [
-        "Denise Bijlenga",
-        "Kristiaan B. van der Heijden",
-        "Minda Breuk",
-        "Eus J.W. Van Someren",
-        "Maria E. H. Lie",
-        "Albert Boonstra",
-        "Hanna Swaab",
-        "J. J. Sandra Kooij"
-      ],
-      "aip": 74.672,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "openalex:W1574939789",
       "year": 2011,
       "title": "An Empirical Analysis of After Sales Service and Customer Satisfaction",
@@ -77034,72 +72470,6 @@
       ]
     },
     {
-      "id": "doi:10.1105/tpc.111.089029",
-      "year": 2011,
-      "title": "A Small-Molecule Screen Identifiesl-Kynurenine as a Competitive Inhibitor of TAA1/TAR Activity in Ethylene-Directed Auxin Biosynthesis and Root Growth inArabidopsis",
-      "doi": "10.1105/tpc.111.089029",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Wenrong He",
-        "Javier Brumós",
-        "Hongjiang Li",
-        "Yusi Ji",
-        "Ke Meng",
-        "Xinqi Gong",
-        "Qinglong Zeng",
-        "Wenyang Li",
-        "Xinyan Zhang",
-        "Fengying An",
-        "Xing Wen",
-        "Pengpeng Li",
-        "Jinfang Chu",
-        "Xiaohong Sun",
-        "Cunyu Yan",
-        "Nieng Yan",
-        "De‐Yu Xie",
-        "Natasha V. Raikhel",
-        "Zhenbiao Yang",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Hongwei Guo"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1111/j.1365-313x.2011.04524.x",
-      "year": 2011,
-      "title": "A recombineering‐based gene tagging system for Arabidopsis",
-      "doi": "10.1111/j.1365-313x.2011.04524.x",
-      "journal": "The Plant Journal",
-      "authors": [
-        "Rongrong Zhou",
-        "Larissa M. Benavente",
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 92.782,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1509/jimk.19.3.59",
       "year": 2011,
       "title": "A Cross-National Investigation into the Marketing Department's Influence Within the Firm: Toward Initial Empirical Generalizations",
@@ -77130,27 +72500,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1107/s1600536811037743",
-      "year": 2011,
-      "title": "[(4-Dimethylamino-2-methyl-5-phenylfuran-3-yl)methyl]diethylmethylazanium iodide",
-      "doi": "10.1107/s1600536811037743",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "A. G. Ayvazyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -77391,32 +72740,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2010019003010",
-      "year": 2010,
-      "title": "Verantwoorde vernieuwing",
-      "doi": "10.5553/bk/2010019003010",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Philip Marcel Karré"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5117/2010.023.004.005",
       "year": 2010,
       "title": "Vacation from work as prototypical recovery opportunity",
@@ -77468,33 +72791,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1037/a0020826",
-      "year": 2010,
-      "title": "Understanding planning ability measured by the Tower of London: An evaluation of its internal structure by latent variable modeling.",
-      "doi": "10.1037/a0020826",
-      "journal": "Psychological Assessment",
-      "authors": [
-        "Gabriela V. Koppenol‐Gonzalez",
-        "Samantha Bouwmeester",
-        "Albert Boonstra"
-      ],
-      "aip": 93.084,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -77598,35 +72894,6 @@
       "allPeople": [
         "ims-a-boonstra",
         "ims-mag-van-offenbeek"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1037/a0017670",
-      "year": 2010,
-      "title": "To act or not to act, that’s the problem: Primarily inhibition difficulties in adult ADHD.",
-      "doi": "10.1037/a0017670",
-      "journal": "Neuropsychology",
-      "authors": [
-        "Albert Boonstra",
-        "J. J. Sandra Kooij",
-        "Jaap Oosterlaan",
-        "Joseph A. Sergeant",
-        "Jan K. Buitelaar"
-      ],
-      "aip": 81.183,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
       ],
       "allDepartments": [
         "IM&S"
@@ -78867,34 +74134,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.futures.2010.02.002",
-      "year": 2010,
-      "title": "Integrating futures studies with organizational development: Design options for the scenario project ‘RWS2020’",
-      "doi": "10.1016/j.futures.2010.02.002",
-      "journal": "Futures",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist",
-        "Maarten van der Vlist",
-        "R. H. J. Demkes"
-      ],
-      "aip": 73.003,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1111/j.1540-5885.2010.00730.x",
       "year": 2010,
       "title": "In Search of the Classics: A Study of the Impact ofJPIMPapers from 1984 to 2003*",
@@ -79210,33 +74449,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2010019001001",
-      "year": 2010,
-      "title": "Figureren in de vertelling van de ander: Over beleid en bestuur in beeld",
-      "doi": "10.5553/bk/2010019001001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "J. van der Spek",
-        "Mark van Twist"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1348/096317910x516372",
       "year": 2010,
       "title": "Feedback type as a moderator of the relationship between achievement goals and feedback reactions",
@@ -79344,34 +74556,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1108/14636681011075704",
-      "year": 2010,
-      "title": "Exploring the future through creative competition: the RWS2020‐project",
-      "doi": "10.1108/14636681011075704",
-      "journal": "foresight",
-      "authors": [
-        "Martijn van der Steen",
-        "Mark van Twist",
-        "Maarten van der Vlist",
-        "R. H. J. Demkes"
-      ],
-      "aip": 40.909,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -79661,35 +74845,6 @@
       ],
       "allPeople": [
         "ims-u-schultze"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.biopsych.2009.12.032",
-      "year": 2010,
-      "title": "Delayed Circadian Rhythm in Adults with Attention-Deficit/Hyperactivity Disorder and Chronic Sleep-Onset Insomnia",
-      "doi": "10.1016/j.biopsych.2009.12.032",
-      "journal": "Biological Psychiatry",
-      "authors": [
-        "Maaike van Veen",
-        "J. J. Sandra Kooij",
-        "Albert Boonstra",
-        "Marijke C. M. Gordijn",
-        "Eus J.W. Van Someren"
-      ],
-      "aip": 98.166,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
       ],
       "allDepartments": [
         "IM&S"
@@ -81852,33 +77007,6 @@
       ]
     },
     {
-      "id": "doi:10.1038/ncb1879",
-      "year": 2009,
-      "title": "Local auxin biosynthesis modulates gradient-directed planar polarity in Arabidopsis",
-      "doi": "10.1038/ncb1879",
-      "journal": "Nature Cell Biology",
-      "authors": [
-        "Yoshihisa Ikeda",
-        "Shuzhen Men",
-        "Urs Karl Fischer",
-        "Anna N. Stepanova",
-        "José M. Alonso",
-        "Karin Ljung",
-        "Markus Grebe"
-      ],
-      "aip": 99.511,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.compind.2009.01.004",
       "year": 2009,
       "title": "Lean Production and information technology: Connection or contradiction?",
@@ -81984,34 +77112,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2009018001001",
-      "year": 2009,
-      "title": "Introductie: De veerkracht van de Nederlandse democratie",
-      "doi": "10.5553/bk/2009018001001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "D. Huitema",
-        "Boudewijn Steur",
-        "Martijn van der Steen",
-        "S. Zouridis"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -82625,33 +77725,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2009018003008",
-      "year": 2009,
-      "title": "De wording van strategen",
-      "doi": "10.5553/bk/2009018003008",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Rik Peeters",
-        "Mark van Twist",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.5117/2009.022.001.007",
       "year": 2009,
       "title": "De stilte na de brainstorm: het belang van effectieve ideeënselectie",
@@ -83085,33 +78158,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/rp/048647002009051004004",
-      "year": 2009,
-      "title": "Als burgers het heft in eigen handen nemen: van representatieve naar doe-het-zelf democratie",
-      "doi": "10.5553/rp/048647002009051004004",
-      "journal": "Res Publica",
-      "authors": [
-        "Mark van Twist",
-        "Martijn van der Steen",
-        "Philip Marcel Karré"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "openalex:W121997791",
       "year": 2009,
       "title": "Alianzas tecnológicas y opciones reales: La creación de valor más allá del flujo de tesorería",
@@ -83435,33 +78481,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2008017002008",
-      "year": 2008,
-      "title": "Tussen willen en weten: het cynisme voorbij",
-      "doi": "10.5553/bk/2008017002008",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Cor van Montfort",
-        "Ank Michels",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1142/s1363919608002023",
       "year": 2008,
       "title": "THREE APPROACHES TO TAKE THE USER PERSPECTIVE INTO ACCOUNT DURING NEW PRODUCT DESIGN",
@@ -83758,35 +78777,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.cell.2008.01.047",
-      "year": 2008,
-      "title": "TAA1-Mediated Auxin Biosynthesis Is Essential for Hormone Crosstalk and Plant Development",
-      "doi": "10.1016/j.cell.2008.01.047",
-      "journal": "Cell",
-      "authors": [
-        "Anna N. Stepanova",
-        "Joyce Marie Robertson-Hoyt",
-        "Jeonga Yun",
-        "Larissa M. Benavente",
-        "De‐Yu Xie",
-        "Karel Doležal",
-        "Alexandra Schlereth",
-        "Gerd Jürgens",
-        "José M. Alonso"
-      ],
-      "aip": 99.92,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1108/13287260810916925",
       "year": 2008,
       "title": "Sustainable information systems: a knowledge perspective",
@@ -83976,37 +78966,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s00586-008-0772-0",
-      "year": 2008,
-      "title": "Relationship between psychological factors and performance-based and self-reported disability in chronic low back pain",
-      "doi": "10.1007/s00586-008-0772-0",
-      "journal": "European Spine Journal",
-      "authors": [
-        "Henrica R. Schiphorst Preuper",
-        "Michiel F. Reneman",
-        "Albert Boonstra",
-        "Pieternel Dijkstra",
-        "Gerbrig J. Versteegen",
-        "Jan H. B. Geertzen",
-        "Sandra Brouwer"
-      ],
-      "aip": 74.919,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -85216,33 +80175,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2008017002001",
-      "year": 2008,
-      "title": "Een klassiek probleem heroverwogen",
-      "doi": "10.5553/bk/2008017002001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Cor van Montfort",
-        "Ank Michels",
-        "Martijn van der Steen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1177/0022022108321309",
       "year": 2008,
       "title": "East—West Differences in Attributions for Company Performance",
@@ -85343,33 +80275,6 @@
       ],
       "allPeople": [
         "ims-mag-van-offenbeek"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1002/jhet.5570450309",
-      "year": 2008,
-      "title": "Cyclization of dialkylpropyn‐1‐yl(allyl)(3‐isopropenylpropyn‐2‐yl)ammonium bromides and water‐base cleavage of 2,2‐dialkyl‐5‐methyl‐2,6,7,7a‐tetrahydro‐1h‐isoindolium and 2,2‐dialkyl‐5‐methylisoindolinium bromides",
-      "doi": "10.1002/jhet.5570450309",
-      "journal": "Journal of Heterocyclic Chemistry",
-      "authors": [
-        "Emma H. Chukhajian",
-        "M. K. Nalbandyan",
-        "Hasmik R. Gevorkyan",
-        "Eliza H. Chukhajian",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": 26.297,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
       ],
       "allDepartments": [
         "IM&S"
@@ -85585,33 +80490,6 @@
       ]
     },
     {
-      "id": "doi:10.1002/chin.200839105",
-      "year": 2008,
-      "title": "ChemInform Abstract: Cyclization of Dialkylpropyn‐1‐yl(allyl)(3‐isopropenylpropyn‐2‐yl)ammonium Bromides and Water‐Base Cleavage of 2,2‐Dialkyl‐5‐methyl‐2,6,7,7a‐tetrahydro‐1H‐isoindolium and 2,2‐Dialkyl‐5‐methyl‐isoindolinium Bromide.",
-      "doi": "10.1002/chin.200839105",
-      "journal": "ChemInform",
-      "authors": [
-        "Emma H. Chukhajian",
-        "M. K. Nalbandyan",
-        "Hasmik R. Gevorkyan",
-        "Eliza H. Chukhajian",
-        "H. А. Panosyan",
-        "A. G. Ayvazyan",
-        "R. А. Tamazyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1108/01443570810861534",
       "year": 2008,
       "title": "Challenges in relating supply chain management and information and communication technology",
@@ -85794,58 +80672,6 @@
       ]
     },
     {
-      "id": "doi:10.3152/030234208x370657",
-      "year": 2008,
-      "title": "Ageing or silvering? Political debate about ageing in the Netherlands",
-      "doi": "10.3152/030234208x370657",
-      "journal": "Science and Public Policy",
-      "authors": [
-        "Martijn van der Steen"
-      ],
-      "aip": 68.774,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.eurpsy.2008.01.095",
-      "year": 2008,
-      "title": "Adult ADHD and the Circadian rhythm",
-      "doi": "10.1016/j.eurpsy.2008.01.095",
-      "journal": "European Psychiatry",
-      "authors": [
-        "J. J. Sandra Kooij",
-        "Maaike van Veen",
-        "Albert Boonstra"
-      ],
-      "aip": 92.87,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1086/593291",
       "year": 2008,
       "title": "Acts of Benevolence: A Limited-Resource Account of Compliance with Charitable Requests",
@@ -85977,80 +80803,6 @@
       ]
     },
     {
-      "id": "doi:10.1107/s160053680800408x",
-      "year": 2008,
-      "title": "7-Chloro-11a-phenyl-2,3,5,10,11,11a-hexahydro-1H-pyrrolo[2,1-c][1,4]benzodiazepine-5,11-dione",
-      "doi": "10.1107/s160053680800408x",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A. O. Martirosyan",
-        "G. K. Harutyunyan",
-        "Vahan Martirosyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1107/s1600536808001384",
-      "year": 2008,
-      "title": "1-Benzyl-6-phenylimino-5-(pyrrol-2-ylidene)hexahydropyrimidine-2,4-dione",
-      "doi": "10.1107/s1600536808001384",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "Vahan Martirosyan",
-        "Kristine Avagyan",
-        "A. O. Martirosyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1107/s1600536808007502",
-      "year": 2008,
-      "title": "1-Benzyl-3-(2-furylmethyl)-1,2,3,4,5,6-hexahydrospiro[benzo[h]quinazoline-5,1′-cyclohexane]-2,4-dione",
-      "doi": "10.1107/s1600536808007502",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A. I. Markosyan",
-        "S. А. Gabrielyan"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jbusres.2006.06.013",
       "year": 2007,
       "title": "You are what you wear: Brand personality influences on consumer impression formation",
@@ -86179,33 +80931,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2007016001001",
-      "year": 2007,
-      "title": "Verlangen naar beter bestuur: Van oude en nieuwe dromen in onrustige tijden",
-      "doi": "10.5553/bk/2007016001001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Mirko Noordegraaf",
-        "Martijn van der Steen",
-        "Henk Wesseling"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -87092,36 +81817,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/1087054707299367",
-      "year": 2007,
-      "title": "Reliability, Validity, and Utility of Instruments for Self-Report and Informant Report Concerning Symptoms of ADHD in Adult Patients",
-      "doi": "10.1177/1087054707299367",
-      "journal": "Journal of Attention Disorders",
-      "authors": [
-        "J. J. Sandra Kooij",
-        "Albert Boonstra",
-        "Sophie H. N. Swinkels",
-        "Evelijne M. Bekker",
-        "Ineke de Noord",
-        "Jan K. Buitelaar"
-      ],
-      "aip": 74.672,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1108/09534810710724748",
       "year": 2007,
       "title": "Reactions to the glass cliff",
@@ -87520,30 +82215,6 @@
       ]
     },
     {
-      "id": "doi:10.1105/tpc.107.052068",
-      "year": 2007,
-      "title": "Multilevel Interactions between Ethylene and Auxin inArabidopsisRoots",
-      "doi": "10.1105/tpc.107.052068",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Anna N. Stepanova",
-        "Jeonga Yun",
-        "Alla V. Likhacheva",
-        "José M. Alonso"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ijresmar.2006.11.002",
       "year": 2007,
       "title": "Multichannel customer management: Understanding the research-shopper phenomenon",
@@ -87622,33 +82293,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2007016001007",
-      "year": 2007,
-      "title": "Met recht en rede: Rechtvaardigheid in een veranderende rechtsorde",
-      "doi": "10.5553/bk/2007016001007",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Mirko Noordegraaf",
-        "Henk Wesseling"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -87837,37 +82481,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.eurpsy.2007.01.243",
-      "year": 2007,
-      "title": "Genes and neurocognitive performance: are the two related in adult ADHD?",
-      "doi": "10.1016/j.eurpsy.2007.01.243",
-      "journal": "European Psychiatry",
-      "authors": [
-        "Albert Boonstra",
-        "J. J. Sandra Kooij",
-        "Jan K. Buitelaar",
-        "Jaap Oosterlaan",
-        "Joseph A. Sergeant",
-        "J. G. A. M. Heister",
-        "Barbara Franke"
-      ],
-      "aip": 92.87,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1177/0885066607299508",
       "year": 2007,
       "title": "Gender Disparity in Failure Rate for Arterial Catheter Attempts",
@@ -87941,31 +82554,6 @@
       ],
       "allPeople": [
         "ims-dj-langley"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1107/s1600536807042213",
-      "year": 2007,
-      "title": "Ethyl 1-benzoyl-4-chloro-2-phenylprolinate",
-      "doi": "10.1107/s1600536807042213",
-      "journal": "Acta Crystallographica Section E Structure Reports Online",
-      "authors": [
-        "R. А. Tamazyan",
-        "A. G. Ayvazyan",
-        "A. O. Martirosyan",
-        "Vahan Martirosyan",
-        "Raymond F. Schinazi"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "ims-a-ayvazyan"
       ],
       "allDepartments": [
         "IM&S"
@@ -88402,33 +82990,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2007016001008",
-      "year": 2007,
-      "title": "Bindend besturen: Hoe bestuur te midden van vele verlangens gezag kan behouden",
-      "doi": "10.5553/bk/2007016001008",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Mirko Noordegraaf",
-        "Henk Wesseling"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "openalex:W2416934705",
       "year": 2007,
       "title": "Attribute Value Functions and the Importance of Attributes",
@@ -88452,68 +83013,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.eurpsy.2007.01.241",
-      "year": 2007,
-      "title": "Association of response to methylphenidate in adults with ADHD with a polymorphism in SLC6A3 (DAT1)",
-      "doi": "10.1016/j.eurpsy.2007.01.241",
-      "journal": "European Psychiatry",
-      "authors": [
-        "J. J. Sandra Kooij",
-        "Albert Boonstra",
-        "Sita H. Vermeulen",
-        "J.A. Heister",
-        "Huibert Burger",
-        "Jan K. Buitelaar",
-        "Barbara Franke"
-      ],
-      "aip": 92.87,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.1002/ajmg.b.30595",
-      "year": 2007,
-      "title": "An exploratory study of the relationship between four candidate genes and neurocognitive performance in adult ADHD",
-      "doi": "10.1002/ajmg.b.30595",
-      "journal": "American Journal of Medical Genetics Part B Neuropsychiatric Genetics",
-      "authors": [
-        "Albert Boonstra",
-        "J. J. Sandra Kooij",
-        "Jan K. Buitelaar",
-        "Jaap Oosterlaan",
-        "Joseph A. Sergeant",
-        "J. G. A. M. Heister",
-        "Barbara Franke"
-      ],
-      "aip": 82.802,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -88757,32 +83256,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2006015003005",
-      "year": 2006,
-      "title": "Verkrampt of veerkrachtig bestuur?",
-      "doi": "10.5553/bk/2006015003005",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "S. Zouridis"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -89100,90 +83573,6 @@
       ]
     },
     {
-      "id": "doi:10.2807/esm.11.01.00591-es",
-      "year": 2006,
-      "title": "Tatuajes, maquillaje permanente y piercings en Amsterdam ; recomendaciones, normativas y vigilancia",
-      "doi": "10.2807/esm.11.01.00591-es",
-      "journal": "Eurosurveillance",
-      "authors": [
-        "J.A. Worp",
-        "Albert Boonstra",
-        "R A Coutinho",
-        "Janet Hoek"
-      ],
-      "aip": 96.393,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.2807/esm.11.01.00591-en",
-      "year": 2006,
-      "title": "Tattooing, permanent makeup and piercing in Amsterdam; guidelines, legislation and monitoring",
-      "doi": "10.2807/esm.11.01.00591-en",
-      "journal": "Eurosurveillance",
-      "authors": [
-        "J.A. Worp",
-        "Albert Boonstra",
-        "R A Coutinho",
-        "Janet Hoek"
-      ],
-      "aip": 96.393,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
-      "id": "doi:10.2807/esm.11.01.00591-fr",
-      "year": 2006,
-      "title": "Tatouages, maquillage permanent et piercings à Amsterdam ; les recommandations, la loi et la surveillance",
-      "doi": "10.2807/esm.11.01.00591-fr",
-      "journal": "Eurosurveillance",
-      "authors": [
-        "J.A. Worp",
-        "Albert Boonstra",
-        "R A Coutinho",
-        "Janet Hoek"
-      ],
-      "aip": 96.393,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
-      ]
-    },
-    {
       "id": "doi:10.1002/job.370",
       "year": 2006,
       "title": "Sticking to our guns: social identity as a basis for the maintenance of commitment to faltering organizational projects",
@@ -89296,32 +83685,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/bk/2006015003009",
-      "year": 2006,
-      "title": "Over discursieve professionaliteit in uitvoering",
-      "doi": "10.5553/bk/2006015003009",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Mirko Noordegraaf"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jesp.2006.05.010",
       "year": 2006,
       "title": "Motivated information processing and group decision-making: Effects of process accountability on information processing and decision quality",
@@ -89375,32 +83738,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2006015003007",
-      "year": 2006,
-      "title": "Meervoudigheid ervaren",
-      "doi": "10.5553/bk/2006015003007",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Paul Frissen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -89822,32 +84159,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2006015003003",
-      "year": 2006,
-      "title": "Goede ambtenaren hebben ideeën",
-      "doi": "10.5553/bk/2006015003003",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Martijn van der Steen",
-        "Mirko Noordegraaf"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -90608,33 +84919,6 @@
       ],
       "allDepartments": [
         "GEM"
-      ]
-    },
-    {
-      "id": "doi:10.5553/bk/2006015003001",
-      "year": 2006,
-      "title": "Andere ambtenaren of en hoe andere ambtenaren ontstaan",
-      "doi": "10.5553/bk/2006015003001",
-      "journal": "Bestuurskunde",
-      "authors": [
-        "Mirko Noordegraaf",
-        "Martijn van der Steen",
-        "Paul Frissen"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [
-        "acc-mp-van-der-steen"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-mp-van-der-steen"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -92201,50 +86485,6 @@
       ]
     },
     {
-      "id": "doi:10.1111/j.1399-3054.2005.00447.x",
-      "year": 2005,
-      "title": "Ethylene signalling and response pathway: a unique signalling cascade with a multitude of inputs and outputs",
-      "doi": "10.1111/j.1399-3054.2005.00447.x",
-      "journal": "Physiologia Plantarum",
-      "authors": [
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": 75.723,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1126/stke.2762005cm3",
-      "year": 2005,
-      "title": "Ethylene Signaling Pathway",
-      "doi": "10.1126/stke.2762005cm3",
-      "journal": "Science s STKE",
-      "authors": [
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "openalex:W3146701464",
       "year": 2005,
       "title": "ERP : Wat is ERP",
@@ -92315,35 +86555,6 @@
       ],
       "allDepartments": [
         "Accounting"
-      ]
-    },
-    {
-      "id": "doi:10.1080/13803390490515757",
-      "year": 2005,
-      "title": "Does Methylphenidate Improve Inhibition and Other Cognitive Abilities in Adults with Childhood-Onset ADHD?",
-      "doi": "10.1080/13803390490515757",
-      "journal": "Journal of Clinical and Experimental Neuropsychology",
-      "authors": [
-        "Albert Boonstra",
-        "J. J. Sandra Kooij",
-        "Jaap Oosterlaan",
-        "Joseph A. Sergeant",
-        "Jan K. Buitelaar"
-      ],
-      "aip": 64.7,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "ims-a-boonstra"
-      ],
-      "departments": [
-        "IM&S"
-      ],
-      "allPeople": [
-        "ims-a-boonstra"
-      ],
-      "allDepartments": [
-        "IM&S"
       ]
     },
     {
@@ -92695,28 +86906,6 @@
       ]
     },
     {
-      "id": "doi:10.1126/stke.2762005cm4",
-      "year": 2005,
-      "title": "Arabidopsis Ethylene Signaling Pathway",
-      "doi": "10.1126/stke.2762005cm4",
-      "journal": "Science s STKE",
-      "authors": [
-        "Anna N. Stepanova",
-        "José M. Alonso"
-      ],
-      "aip": null,
-      "aipComparable": true,
-      "aipStatus": "unresolved-aip-match",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.ijinfomgt.2005.08.006",
       "year": 2005,
       "title": "Analyzing inter-organizational systems from a power and interest perspective",
@@ -92853,30 +87042,6 @@
       ]
     },
     {
-      "id": "doi:10.1105/tpc.105.033365",
-      "year": 2005,
-      "title": "A Link between Ethylene and Auxin Uncovered by the Characterization of Two Root-Specific Ethylene-Insensitive Mutants in Arabidopsis",
-      "doi": "10.1105/tpc.105.033365",
-      "journal": "The Plant Cell",
-      "authors": [
-        "Anna N. Stepanova",
-        "Joyce M. Hoyt",
-        "Alexandra A. Hamilton",
-        "José M. Alonso"
-      ],
-      "aip": 97.548,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [],
-      "departments": [],
-      "allPeople": [
-        "mkt-a-stepanova"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1016/j.jom.2004.08.008",
       "year": 2005,
       "title": "A comparison of bottling alternatives in the pharmaceutical industry",
@@ -92904,7 +87069,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-10-08",
+    "generatedOn": "2026-10-15",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 170,
     "qualityDecisionCounts": {
@@ -92946,8 +87111,8 @@
       "include": 138
     },
     "denominatorUsablePeople": 58,
-    "rankableAipGapRows": 246,
-    "aipNotInSourceRows": 164,
+    "rankableAipGapRows": 205,
+    "aipNotInSourceRows": 163,
     "possibleDuplicateGroups": 0,
     "residualNonCountedRecords": 0,
     "topUnmatchedAipJournals": [
@@ -93037,6 +87202,6 @@
       "aipGaps": "benchmark_non_hrm_aip_gaps.csv",
       "duplicateGroups": "benchmark_duplicate_publication_groups.csv"
     },
-    "identityConflictPeople": 2
+    "identityConflictPeople": 4
   }
 }
