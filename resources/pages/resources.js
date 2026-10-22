@@ -317,12 +317,17 @@
     },
   };
 
-  // Illustration only. The budget is counted in European conferences: it pays for 16 of them for
-  // 20 colleagues (you and 19 others), and a conference outside Europe costs about twice as much.
-  const TRAVEL_SHARE = {
-    colleagues: 20,
+  // Illustration only, with made-up numbers. 20 colleagues could apply, the budget pays for 16
+  // European conferences, and a conference outside Europe costs about twice as much (2 units).
+  // The total-budget calculator stacks a fixed mix of requests; the "your plans" block below it
+  // uses the same budget and the same number of applicants.
+  const TRAVEL = {
+    eligible: 20,
     budget: 16,
     cut: 0.1,
+    minApplicants: 2,
+    defaultApplicants: 10,
+    requests: [2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1],
     max: 3,
     trips: [
       { key: "europe", where: "in Europe", cost: 1 },
@@ -344,6 +349,7 @@
     checkPath: ["role"],
     checkResult: "",
     layer: "career",
+    travelApplicants: TRAVEL.defaultApplicants,
     travelPlan: { europe: 1, outside: 0 },
     travelCut: false,
     journalRows: null,
@@ -553,61 +559,111 @@
       </div>`;
   }
 
+  function travelBudget() {
+    return TRAVEL.budget * (state.travelCut ? 1 - TRAVEL.cut : 1);
+  }
+
   function renderTravelShare() {
     return `<section class="rp-pool" aria-labelledby="rp-pool-title">
-        <div class="rp-pool-head">
-          <h3 id="rp-pool-title" class="overview-h3">How much of the budget do your plans take?</h3>
-          <p>Illustration, not actual amounts.</p>
+        <p class="rp-pool-tag">Illustration with made-up numbers</p>
+        <h3 id="rp-pool-title" class="overview-h3">How the total budget shapes your share</h3>
+        <p class="rp-pool-lead">In this example, ${TRAVEL.eligible} colleagues could apply and the budget pays for ${TRAVEL.budget} European conferences. Real amounts and numbers of applicants differ every year.</p>
+        <div class="rp-pool-controls">
+          <label class="rp-pool-slider">
+            <span>How many of the ${TRAVEL.eligible} colleagues apply this year?</span>
+            <input type="range" min="${TRAVEL.minApplicants}" max="${TRAVEL.eligible}" step="1" value="${state.travelApplicants}" data-travel-applicants aria-describedby="rp-pool-readout">
+          </label>
+          <label class="switch rp-pool-cut">
+            <input type="checkbox" data-travel-cut${state.travelCut ? " checked" : ""}>
+            <span class="switch-copy"><span>Next year: 10% less</span><small>Budget cuts</small></span>
+          </label>
         </div>
-        <div id="rp-pool-controls" class="rp-pool-controls">${renderTravelControls()}</div>
-        <div id="rp-pool-viz" class="rp-pool-viz">${renderTravelShareViz()}</div>
+        <div id="rp-pool-viz" class="rp-pool-viz">${renderTravelPoolViz()}</div>
+        <section class="rp-mine" aria-labelledby="rp-mine-title">
+          <h4 id="rp-mine-title">How much of the budget do your plans take?</h4>
+          <div id="rp-mine-controls" class="rp-mine-controls">${renderTravelControls()}</div>
+          <div id="rp-mine-viz">${renderTravelShareViz()}</div>
+        </section>
       </section>`;
   }
 
+  function renderTravelPoolViz() {
+    const n = state.travelApplicants;
+    const fullBudget = TRAVEL.budget;
+    const budget = travelBudget();
+    const requests = TRAVEL.requests.slice(0, n);
+    const requested = requests.reduce((sum, value) => sum + value, 0);
+    const scale = TRAVEL.requests.reduce((sum, value) => sum + value, 0);
+    const pct = (value) => `${(value / scale) * 100}%`;
+    const people = Array.from({ length: TRAVEL.eligible }, (_, i) => `<svg class="rp-person${i < n ? " is-applied" : ""}" viewBox="0 0 20 26" aria-hidden="true"><circle cx="10" cy="6" r="5"/><path d="M1 26c0-7 4-11 9-11s9 4 9 11z"/></svg>`).join("");
+    let running = 0;
+    const blocks = requests.map((value) => {
+      running += value;
+      const over = running > budget + 1e-9;
+      return `<span class="rp-req rp-req-${value}${over ? " is-over" : ""}" style="width:${pct(value)}"></span>`;
+    }).join("");
+    const ratio = requested / budget;
+    const used = Math.round(ratio * 100);
+    let tone = "good";
+    let message = used <= 80
+      ? "All requests fit, and there is room for larger requests or a reserve for unforeseen costs."
+      : "All requests fit within the budget and can be approved as asked.";
+    if (ratio > 1) {
+      tone = "neutral";
+      message = "Requests slightly exceed the budget. Most are approved as asked; a few are reduced, or colleagues are asked to choose one conference.";
+    }
+    if (ratio > 1.25) {
+      tone = "busy";
+      message = "A busy year: everyone gets less, or the research director may give preference to colleagues who asked for little in previous years.";
+    }
+    return `<div class="rp-people" aria-hidden="true">${people}</div>
+      <p class="rp-people-legend"><span class="is-applied">${n} apply</span><span>${TRAVEL.eligible - n} do not apply this year</span></p>
+      <div class="rp-req-track" aria-hidden="true">
+        <span class="rp-budget-zone" style="width:${pct(budget)}"></span>
+        ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(fullBudget - budget)}"></span>` : ""}
+        <span class="rp-req-blocks">${blocks}</span>
+        <span class="rp-budget-line" style="left:${pct(budget)}"><span>Total budget${state.travelCut ? " after the 10% cut" : ""}</span></span>
+      </div>
+      <p class="rp-req-legend"><span class="rp-key rp-key-1"></span>One European conference <span class="rp-key rp-key-2"></span>A conference outside Europe, or two in Europe <span class="rp-key rp-key-over"></span>Beyond the budget</p>
+      <p id="rp-pool-readout" class="rp-pool-readout rp-tone-${tone}" aria-live="polite"><strong>${n} applicants ask for ${used}% of the budget.</strong> ${esc(message)}</p>`;
+  }
+
   function renderTravelControls() {
-    const steppers = TRAVEL_SHARE.trips.map((trip) => {
+    return TRAVEL.trips.map((trip) => {
       const value = state.travelPlan[trip.key];
-      const where = trip.where;
       return `<div class="rp-stepper" role="group" aria-labelledby="rp-trip-${trip.key}">
-          <span id="rp-trip-${trip.key}" class="rp-stepper-label">Conferences ${esc(where)}</span>
+          <span id="rp-trip-${trip.key}" class="rp-stepper-label">Conferences ${esc(trip.where)}</span>
           <span class="rp-stepper-ctl">
-            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="-1" aria-label="Remove a conference ${esc(where)}"${value <= 0 ? " disabled" : ""}>&minus;</button>
+            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="-1" aria-label="Remove a conference ${esc(trip.where)}"${value <= 0 ? " disabled" : ""}>&minus;</button>
             <output aria-live="polite">${value}</output>
-            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="1" aria-label="Add a conference ${esc(where)}"${value >= TRAVEL_SHARE.max ? " disabled" : ""}>+</button>
+            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="1" aria-label="Add a conference ${esc(trip.where)}"${value >= TRAVEL.max ? " disabled" : ""}>+</button>
           </span>
         </div>`;
     }).join("");
-    return `${steppers}
-      <label class="switch rp-pool-cut">
-        <input type="checkbox" data-travel-cut${state.travelCut ? " checked" : ""}>
-        <span class="switch-copy"><span>Next year: 10% less</span><small>Budget cuts</small></span>
-      </label>`;
   }
 
   function renderTravelShareViz() {
-    const full = TRAVEL_SHARE.budget;
-    const budget = full * (state.travelCut ? 1 - TRAVEL_SHARE.cut : 1);
-    const trips = TRAVEL_SHARE.trips.flatMap((trip) => Array.from({ length: state.travelPlan[trip.key] }, () => trip));
+    const full = TRAVEL.budget;
+    const budget = travelBudget();
+    const trips = TRAVEL.trips.flatMap((trip) => Array.from({ length: state.travelPlan[trip.key] }, () => trip));
     const used = trips.reduce((sum, trip) => sum + trip.cost, 0);
     const share = Math.round((used / budget) * 100);
-    const others = TRAVEL_SHARE.colleagues - 1;
+    const others = state.travelApplicants - 1;
     const covered = Math.max(0, Math.min(others, Math.floor(budget - used + 1e-9)));
     const pct = (value) => `${(value / full) * 100}%`;
     const blocks = trips.map((trip) => `<span class="rp-share-mine" style="width:${pct(trip.cost)}"></span>`).join("");
-    const person = (cls) => `<svg class="rp-person ${cls}" viewBox="0 0 20 26" aria-hidden="true"><circle cx="10" cy="6" r="5"/><path d="M1 26c0-7 4-11 9-11s9 4 9 11z"/></svg>`;
-    const people = [person("is-you")].concat(Array.from({ length: others }, (_, i) => person(i < covered ? "is-covered" : ""))).join("");
-    const tone = used <= 1 ? "good" : used <= 3 ? "neutral" : "busy";
-    const large = used >= 2 ? " A plan this size is only possible because colleagues ask for less." : "";
-    const lead = used ? `Your plan takes ${share}% of the department's travel budget.` : "Add a conference to see your share.";
-    return `<p class="rp-share-stat" aria-hidden="true"><strong>${share}%</strong> <span>of the department's travel budget</span></p>
+    const allFit = covered >= others;
+    const who = others === 1 ? "the other applicant asks" : `the other ${others} applicants each ask`;
+    const result = allFit ? (others === 1 ? "pays for that too" : "pays for all of them") : `pays for ${covered} of them`;
+    const large = !allFit && used >= 2 ? " A plan this size is only possible because colleagues ask for less." : "";
+    const lead = used ? `Your plans take ${share}% of the budget.` : "Add a conference to see your share.";
+    return `<p class="rp-share-stat" aria-hidden="true"><strong>${share}%</strong> <span>of the budget</span></p>
       <div class="rp-share-track" style="--cells:${full}" aria-hidden="true">
         ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(full - budget)}"></span>` : ""}
         <span class="rp-share-blocks">${blocks}</span>
       </div>
-      <p class="rp-req-legend" aria-hidden="true"><span class="rp-key rp-key-mine"></span>Your conferences <span class="rp-key rp-key-left"></span>Left for colleagues${state.travelCut ? ` <span class="rp-key rp-key-cut"></span>10% cut` : ""}<span class="rp-legend-note">One block is one European conference; outside Europe costs about twice as much.</span></p>
-      <div class="rp-people" aria-hidden="true">${people}</div>
-      <p class="rp-people-legend" aria-hidden="true"><span class="is-you">You</span><span class="is-covered">Can still go</span><span>No budget left</span></p>
-      <p id="rp-pool-readout" class="rp-pool-readout rp-tone-${tone}" aria-live="polite"><span class="visually-hidden">${esc(lead)} </span>If your ${others} colleagues each asked for one European conference, what is left would pay for <strong>${covered} of them</strong>.${esc(large)}</p>`;
+      <p class="rp-req-legend" aria-hidden="true"><span class="rp-key rp-key-mine"></span>Your conferences <span class="rp-key rp-key-left"></span>Left for colleagues${state.travelCut ? ` <span class="rp-key rp-key-cut"></span>10% cut` : ""}<span class="rp-legend-note">One block is one European conference.</span></p>
+      <p id="rp-mine-readout" class="rp-pool-readout rp-tone-${allFit ? "good" : "busy"}" aria-live="polite"><span class="visually-hidden">${esc(lead)} </span>If ${who} for one European conference, what is left ${result}.${esc(large)}</p>`;
   }
 
   function renderSlides(page) {
@@ -1040,9 +1096,9 @@
   }
 
   function changeTravelPlan(key, delta) {
-    state.travelPlan[key] = Math.max(0, Math.min(TRAVEL_SHARE.max, state.travelPlan[key] + delta));
-    const controls = document.getElementById("rp-pool-controls");
-    const viz = document.getElementById("rp-pool-viz");
+    state.travelPlan[key] = Math.max(0, Math.min(TRAVEL.max, state.travelPlan[key] + delta));
+    const controls = document.getElementById("rp-mine-controls");
+    const viz = document.getElementById("rp-mine-viz");
     if (controls) controls.innerHTML = renderTravelControls();
     if (viz) viz.innerHTML = renderTravelShareViz();
     const same = document.querySelector(`[data-travel-trip="${key}"][data-travel-delta="${delta}"]`);
@@ -1057,10 +1113,13 @@
       state.journalSelected = null;
       return updateJournalResults();
     }
-    if (!target.matches("[data-travel-cut]")) return;
-    state.travelCut = target.checked;
-    const viz = document.getElementById("rp-pool-viz");
-    if (viz) viz.innerHTML = renderTravelShareViz();
+    if (target.matches("[data-travel-applicants]")) state.travelApplicants = Number(target.value);
+    else if (target.matches("[data-travel-cut]")) state.travelCut = target.checked;
+    else return;
+    const pool = document.getElementById("rp-pool-viz");
+    const mine = document.getElementById("rp-mine-viz");
+    if (pool) pool.innerHTML = renderTravelPoolViz();
+    if (mine) mine.innerHTML = renderTravelShareViz();
   }
 
   function init() {
