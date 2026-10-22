@@ -4332,10 +4332,6 @@ html:not(.auth-locked) .auth-gate {
 @media (max-width: 640px) { .onet-info { position: static; max-width: none; border-radius: 0; border-width: 1px 0 0; box-shadow: none; } }
 /* Metrics: hovered department line stands out (attachMetricChartInteraction) */
 .metric-plot-wrap svg [data-department] { transition: opacity .15s ease; }
-.metric-plot-wrap svg .metric-people-layer { pointer-events: none; }
-.metric-plot-wrap svg g.metric-people { opacity: 0; fill-opacity: .45; }
-.metric-plot-wrap svg.has-metric-focus g.metric-people { opacity: 0; }
-.metric-plot-wrap svg.has-metric-focus g.metric-people.is-metric-focus { opacity: 1; }
 .metric-plot-wrap svg.has-metric-focus [data-department] { opacity: .14; }
 .metric-plot-wrap svg.has-metric-focus [data-department].is-metric-focus { opacity: 1; }
 .metric-plot-wrap svg.has-metric-focus polyline.is-metric-focus { stroke-width: 3.5; }
