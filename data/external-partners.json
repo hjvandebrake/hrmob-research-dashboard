@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-10-15",
+    "generatedOn": "2026-10-22",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 785,
-    "cacheHits": 785,
-    "fetched": 0,
+    "eligiblePublications": 786,
+    "cacheHits": 784,
+    "fetched": 2,
     "coveredPublications": 782,
     "missingCacheRecords": 0,
-    "offline": true,
+    "offline": false,
     "partnerCount": 783,
     "heldInstitutionIds": [
       "https://openalex.org/I4210153428"

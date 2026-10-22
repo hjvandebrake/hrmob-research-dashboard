@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-10-15",
-    "sourceNote": "Public profile/CV/project checks covered all 19 supplied roster identities on 15 October 2026; available grant and thesis source pages were rechecked. Three historical completed theses added from official award-date and supervisor records; Fastje supervision corrected and removed from ongoing projects. Missing entries do not establish absence; unavailable endpoints and unresolved leads are documented in REFRESH-2026-10-15.md.",
+    "generatedOn": "2026-10-22",
+    "sourceNote": "All 19 supplied roster identities received fresh public profile, CV, research and project-page checks on 22 October 2026; available award and thesis source pages were rechecked. No additional competitive award or completed thesis passed the source threshold. Missing or unavailable public records do not establish absence. Manual-review leads and coverage are documented in REFRESH-2026-10-22.md.",
     "scope": "Completed/defended PhDs only; committee/examiner roles are excluded.",
     "currentProjectsGeneratedOn": "2026-08-11",
     "currentProjectsSourceNote": "Current/ongoing PhD status and supervisor mappings are based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23 and subsequent staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.",
     "currentProjectsScope": "Current/ongoing PhD projects supervised by supplied department members; defended theses remain in theses[].",
-    "reviewedOn": "2026-10-15",
-    "currentProjectsReviewedOn": "2026-10-15"
+    "reviewedOn": "2026-10-22",
+    "currentProjectsReviewedOn": "2026-10-22"
   },
   "theses": [
     {

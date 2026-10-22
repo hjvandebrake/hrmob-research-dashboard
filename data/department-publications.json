@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-10-15",
+    "generatedOn": "2026-10-22",
     "rostersCheckedOn": "2026-09-07",
     "people": 512,
     "pagesChecked": 515,
-    "pagesFailed": 152,
+    "pagesFailed": 151,
     "mergedWorkVersions": 1,
     "fromYear": 2005,
     "method": "Unique journal publications linked to current departmental rosters, including PhD students and all staff ranks. One count per paper per department. Joint papers count once in each participating department. Historical affiliations are not reconstructed.",
@@ -257,7 +257,7 @@
       "recordsWithoutRetainedPeople": 99
     },
     "comparisonAudit": {
-      "generatedOn": "2026-10-15",
+      "generatedOn": "2026-10-22",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -267,7 +267,7 @@
       ],
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
-        "title": 635,
+        "title": 638,
         "issn": 2621,
         "unmatched": 557,
         "title-alias": 3,
@@ -1105,16 +1105,16 @@
       "yearBasisCounts": {
         "official-reference": 948,
         "publisher-issue": 2445,
-        "publisher-first-publication": 293,
-        "reviewed-official-record": 23,
+        "publisher-first-publication": 294,
+        "reviewed-official-record": 25,
         "stored-unverified": 107,
         "publisher-override": 1,
         "reviewed-original-issue": 1
       },
       "doiTitleChecks": {
         "no-doi": 820,
-        "title-agreement": 2723,
-        "unavailable": 273,
+        "title-agreement": 2724,
+        "unavailable": 275,
         "excluded-mismatch": 2
       },
       "comparisonCohort": {
@@ -12612,8 +12612,8 @@
       "affiliated": false,
       "appointmentSection": "phd",
       "role": "PhD student",
-      "publicationPageStatus": 404,
-      "publicationPageArticles": null,
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 0,
       "comparisonEligible": false,
       "comparisonRole": "PhD student",
       "comparisonRoleCategory": "phd",
@@ -28134,7 +28134,7 @@
       "title": "It's the fit that matters: Cognitive appraisal of job resources as an extension of the transactional stress model",
       "year": 2026,
       "doi": "10.1111/apps.70125",
-      "url": "https://openalex.org/W7169763890",
+      "url": "https://research.rug.nl/en/publications/180d2d25-b5d9-4820-85f0-742b29853aa2",
       "journal": "Applied Psychology",
       "people": [
         "hrmob-m-arnold"
@@ -28143,7 +28143,7 @@
       "authors": [
         "Miriam Arnold",
         "Svenja Leimbach",
-        "Wiebke Plückhahn",
+        "Wiebke Jöhrens",
         "Thomas Rigotti"
       ],
       "departments": [
@@ -136667,7 +136667,7 @@
       "comparisonYearBasis": "stored-unverified",
       "comparisonYearSource": "https://research.rug.nl/en/publications/1a304f51-fb3b-4ad6-80b4-1def33a095d8",
       "aipJournal": "JOURNAL OF EXPERIMENTAL SOCIAL PSYCHOLOGY",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "officialProfilePeople": []
     },
     {
@@ -136696,7 +136696,7 @@
       "comparisonYearBasis": "stored-unverified",
       "comparisonYearSource": "https://research.rug.nl/en/publications/6165878c-6ef9-4e20-a2f5-41f79d760617",
       "aipJournal": "iScience",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "officialProfilePeople": []
     },
     {
@@ -146635,7 +146635,7 @@
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1098%2Frspb.2025.0973",
       "aipJournal": "PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES",
-      "aipMatchMethod": "issn",
+      "aipMatchMethod": "title",
       "officialProfilePeople": []
     },
     {
@@ -146753,6 +146753,177 @@
       "comparisonYearBasis": "reviewed-official-record",
       "comparisonYearSource": "https://research.rug.nl/en/publications/3de00a6c-20ab-48a8-a864-b37d8253cfe3",
       "aipJournal": "ACTA PSYCHOLOGICA",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1177/10422587261485958",
+      "title": "Belief Traps Hinder Small Business Climate Action",
+      "year": 2026,
+      "doi": "10.1177/10422587261485958",
+      "url": "https://doi.org/10.1177/10422587261485958",
+      "journal": "Entrepreneurship Theory and Practice",
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "aip": 97.78,
+      "authors": [
+        "Jeffrey Lees",
+        "Sara M. Constantino",
+        "Jean Cushen",
+        "Frederik Dahlmann",
+        "Frank G. A. de Bakker",
+        "Edoardo Della Torre",
+        "Maria Laura Frigotto",
+        "Mario Hackenbuchner",
+        "Nico Heuvinck",
+        "Emmanuel Kypraios",
+        "Anastasia Ri",
+        "Stephen Roper",
+        "Elke Schuessler",
+        "Christoph Ungemach",
+        "Dror Etzion"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-first-publication",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1177%2F10422587261485958",
+      "aipJournal": "ENTREPRENEURSHIP THEORY AND PRACTICE",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": []
+    },
+    {
+      "title": "Cost-Effectiveness of Thrombectomy With or Without Alteplase in Large Vessel Occlusion Stroke: A Meta-Analysis Considering Time-to-Treatment",
+      "year": 2026,
+      "journal": "Neurology",
+      "authors": [
+        "IRIS Collaborators",
+        "Chi Phuong Nguyen",
+        "Fabiano Cavalcante",
+        "Durk Jouke van der Zee",
+        "Kilian M. Treurniet",
+        "Manon Kappelhof",
+        "Wenjie Zi",
+        "Raul G. Nogueira",
+        "Jianmin Liu",
+        "Pengfei Yang",
+        "Kentaro Suzuki",
+        "Kazumi Kimura",
+        "Urs Fischer",
+        "Johannes Kaesmacher",
+        "Jan Gralla",
+        "Hester F. Lingsma",
+        "Yohanna Kusuma",
+        "Conor Houlihan",
+        "Peter J. Mitchell",
+        "Bernard Yan",
+        "Yvo Roos",
+        "E. Buskens",
+        "Charles B. Majoie",
+        "Maarten Uyttenboogaart",
+        "Maarten M.H. Lahr"
+      ],
+      "url": "https://research.rug.nl/en/publications/3a195d5f-33e6-4b29-b774-84654be01c00",
+      "issns": [
+        "0028-3878"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-05-12",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "3a195d5f-33e6-4b29-b774-84654be01c00",
+      "pureOutputClassification": "Contribution to journal > Article > Academic > peer-review",
+      "id": "doi:10.1212/wnl.0000000000214866",
+      "doi": "10.1212/wnl.0000000000214866",
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "aip": 97.368,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/3a195d5f-33e6-4b29-b774-84654be01c00",
+        "https://pubmed.ncbi.nlm.nih.gov/41996656/",
+        "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-22",
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourcePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "officialProfilePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/3a195d5f-33e6-4b29-b774-84654be01c00",
+      "aipJournal": "NEUROLOGY",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Health Economic & Implementation Determinants of Prehospital Stroke Triage Tools: A Systematic Review",
+      "year": 2026,
+      "journal": "Journal of Evaluation in Clinical Practice",
+      "authors": [
+        "Nadja Alexandrov",
+        "Durk-Jouke van der Zee",
+        "Maud B R C Eurlings",
+        "Maritta N van Stigt",
+        "Monique Theunissen",
+        "Erik Buskens",
+        "Koen M van der Waaij",
+        "Erik D Gommer",
+        "Jonathan M Coutinho",
+        "Maarten Uyttenboogaart",
+        "Maarten M H Lahr"
+      ],
+      "url": "https://research.rug.nl/en/publications/567d8280-8c0f-4a17-bae6-95fa8b22475f",
+      "issns": [
+        "1356-1294"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-10",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "567d8280-8c0f-4a17-bae6-95fa8b22475f",
+      "pureOutputClassification": "Contribution to journal > Review article > peer-review",
+      "id": "doi:10.1111/jep.70634",
+      "doi": "10.1111/jep.70634",
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "aip": 65.974,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/567d8280-8c0f-4a17-bae6-95fa8b22475f",
+        "https://pubmed.ncbi.nlm.nih.gov/42829971/",
+        "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-22",
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourcePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "officialProfilePeople": [
+        "ops-dj-van-der-zee"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/567d8280-8c0f-4a17-bae6-95fa8b22475f",
+      "aipJournal": "JOURNAL OF EVALUATION IN CLINICAL PRACTICE",
       "aipMatchMethod": "issn"
     }
   ]

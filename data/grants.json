@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedOn": "2026-10-15",
-    "sourceNote": "All 19 supplied roster identities received fresh public profile, CV and project-page checks on 15 October 2026. Available award sources were rechecked; no additional competitive award met the identity, title and funding-evidence threshold. Unavailable source endpoints and incomplete public coverage do not establish absence of grants.",
+    "generatedOn": "2026-10-22",
+    "sourceNote": "All 19 supplied roster identities received fresh public profile, CV, research and project-page checks on 22 October 2026; available award and thesis source pages were rechecked. No additional competitive award or completed thesis passed the source threshold. Missing or unavailable public records do not establish absence. Manual-review leads and coverage are documented in REFRESH-2026-10-22.md.",
     "phdSupervisionNote": "Completed PhD supervision can be added with the same source-backed pattern: defended year, candidate, thesis title, supervisor role, and source link.",
-    "reviewedOn": "2026-10-15"
+    "reviewedOn": "2026-10-22"
   },
   "grants": [
     {
@@ -94,7 +94,7 @@
       "role": "Co-recipient / PI with Mark van Vugt",
       "sourceLabel": "RUG news",
       "sourceUrl": "https://www.rug.nl/feb/research/frn/news/archief/2022/boudewijn-de-bruin-and-bernard-nijstad-receive-nwo-grants?lang=en",
-      "sourceAvailabilityNote": "Primary page returned 404 to direct fetch on 15 October; the official indexed RUG article still corroborates the joint EUR 750,000 award."
+      "sourceAvailabilityNote": "Primary URL again returned 404 on 22 October 2026; official indexed RUG article still corroborates the award."
     },
     {
       "id": "jvb-nwo-veni-2022",
@@ -115,7 +115,7 @@
       "additionalSourceUrls": [
         "https://www.rug.nl/about-ug/profile/prizes-and-awards/veni-vidi-vici/veni-vidi-and-vici-grants-awarded-to-the-university-of-groningen-in-2022?lang=en"
       ],
-      "sourceAvailabilityNote": "Primary page returned 404 to direct fetch on 15 October; search index and official laureate list corroborate the award."
+      "sourceAvailabilityNote": "Primary URL again returned 404 on 22 October 2026; official indexed RUG article still corroborates the award."
     },
     {
       "id": "jvb-gvv-zonmw-2021",

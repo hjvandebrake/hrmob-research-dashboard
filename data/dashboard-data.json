@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedOn": "2026-10-15",
-    "retainedPreviouslyVerifiedRecords": 415,
+    "generatedOn": "2026-10-22",
+    "retainedPreviouslyVerifiedRecords": 402,
     "sourceRequestErrors": 3,
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-10-15"
+      "to": "2026-10-22"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-10-15"
+      "to": "2026-10-22"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -228,9 +228,11 @@
         "label": "negotiation and bargaining",
         "terms": [
           "negotiation",
+          "negotiate",
+          "negotiating",
           "bargaining",
-          "deal",
-          "agreement",
+          "deal making",
+          "dealmaking",
           "conflict resolution",
           "settlement",
           "mediation"
@@ -637,7 +639,7 @@
       "Zeitschrift für Sozialpsychologie",
       "eLife"
     ],
-    "identityReviewedOn": "2026-10-15",
+    "identityReviewedOn": "2026-10-22",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately."
   },
   "people": [
@@ -1219,9 +1221,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Trends in Psychology",
-      "issns": [
-        "2358-1883"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -1254,15 +1254,14 @@
       "previousIds": [
         "rug:90c32fc14b7abe4e"
       ],
+      "publicationDate": "2026-04-27",
+      "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs43076-026-00522-x",
+      "publicationDateType": "published-online",
       "topicFamilies": [],
       "counted": true,
       "display": true,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "authorCount": 4,
-      "publicationDate": "2026-04-27",
-      "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs43076-026-00522-x",
-      "publicationDateType": "published-online"
+      "aipStatus": "reviewed-not-in-aip-source"
     },
     {
       "id": "doi:10.1007/s11218-026-10232-y",
@@ -1531,9 +1530,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Research Policy",
-      "issns": [
-        "0048-7333"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -1567,6 +1564,9 @@
       "previousIds": [
         "rug:474cd98e1d93d997"
       ],
+      "publicationDate": "2026-03",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016/j.respol.2025.105391",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "creativity",
         "innovation"
@@ -1574,11 +1574,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 5,
-      "publicationDate": "2026-03",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016/j.respol.2025.105391",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1111/rego.70147",
@@ -1685,9 +1681,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Political Psychology",
-      "issns": [
-        "0162-895X"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -1723,6 +1717,9 @@
       "previousIds": [
         "rug:6bd660442de6d001"
       ],
+      "publicationDate": "2026-06",
+      "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fpops.70084",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "leadership",
         "gender and leadership"
@@ -1730,11 +1727,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 7,
-      "publicationDate": "2026-06",
-      "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fpops.70084",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1177/01461672261437934",
@@ -2246,9 +2239,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Leadership Quarterly",
-      "issns": [
-        "1048-9843"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -2649,14 +2640,17 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
+        "Full 379-person ordered publisher-deposited byline verified against the exact DOI and title on 15 October 2026: https://api.crossref.org/works/10.1016%2Fj.leaqua.2026.101991",
         "Complete citation author byline and exact DOI verified on the official Pure work page on 15 October 2026: https://research.rug.nl/en/publications/890e54a8-1897-450e-a363-bd9525c9f250",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
-        "Full 379-person ordered publisher-deposited byline verified against the exact DOI and title on 15 October 2026: https://api.crossref.org/works/10.1016%2Fj.leaqua.2026.101991"
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
       "previousIds": [
         "rug:3b918fbecccf33ae"
       ],
+      "publicationDate": "2026-12",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016/j.leaqua.2026.101991",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "leadership",
         "stereotypes and bias",
@@ -2665,12 +2659,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 379,
-      "publicationDate": "2026-12",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016/j.leaqua.2026.101991",
-      "publicationDateType": "published-print",
-      "fullAuthorListReviewed": true
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1080/17512786.2024.2441283",
@@ -2930,9 +2919,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Journal of Experimental Social Psychology",
-      "issns": [
-        "0022-1031"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -2972,7 +2959,6 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched",
-      "authorCount": 4,
       "publicationDate": "2026-07",
       "publicationDateSource": "https://research.rug.nl/en/publications/1a304f51-fb3b-4ad6-80b4-1def33a095d8",
       "publicationDateType": "official-pure-issue-date"
@@ -3070,11 +3056,13 @@
         "Publisher-deposited Crossref metadata verified 2026-09-14: https://api.crossref.org/works/10.1037/apl0001417; published online 2026-09-03. Full five-author list retained; Yezi Kang is outside the curated core staff roster.",
         "RUG staff publication page for Nguyen, N.H. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Nguyen, N.H.",
+        "Crossref ORCID matched for Nguyen, N.H.",
         "RUG staff publication page for Rink, F.A. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "RUG staff publication page for Vegt, G.S. van der lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
-        "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication."
+        "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication.",
+        "OpenAlex author matched to University of Groningen for Vries, T.A. de"
       ],
       "provisional": true,
       "previousIds": [],
@@ -3179,6 +3167,7 @@
       "evidence": [
         "RUG staff publication page for Yuan, Y. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Yuan, Y.",
+        "Crossref ORCID matched for Yuan, Y.",
         "RUG research portal confirms all seven authors, Yingjie Yuan last, and publication on 23 July 2026."
       ],
       "provisional": true,
@@ -3303,7 +3292,7 @@
       "doi": "10.1177/02134748261446390",
       "title": "Gendered Racial Migratory Fatigue Among Black Migrant Women in Brasil: The Role of Microaggressions and Impostorism in Workplace Experiences / Fatiga migratoria racial y de género entre mujeres migrantes negras en Brasil: el papel de las microagresiones y el fenómeno del impostor en las experiencias laborales",
       "year": 2026,
-      "yearSource": "crossref-other",
+      "yearSource": "crossref-print",
       "journal": "International Journal of Social Psychology: Revista de Psicología Social",
       "issns": [
         "0213-4748",
@@ -3517,9 +3506,7 @@
       "year": 2026,
       "yearSource": "rug-reference",
       "journal": "Gender in Management",
-      "issns": [
-        "1754-2413"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -3554,6 +3541,9 @@
       "previousIds": [
         "rug:487895951d091118"
       ],
+      "publicationDate": "2026-05-28",
+      "publicationDateSource": "https://api.crossref.org/works/10.1108%2Fgm-03-2025-0173",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "gender and leadership",
         "learning and feedback",
@@ -3562,11 +3552,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 6,
-      "publicationDate": "2026-05-28",
-      "publicationDateSource": "https://api.crossref.org/works/10.1108%2Fgm-03-2025-0173",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1080/09540253.2025.2568394",
@@ -3728,6 +3714,68 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1177/10422587261485958",
+      "doi": "10.1177/10422587261485958",
+      "title": "Belief Traps Hinder Small Business Climate Action",
+      "year": 2026,
+      "yearSource": "crossref-other",
+      "journal": "Entrepreneurship Theory and Practice",
+      "issns": [
+        "1042-2587",
+        "1540-6520"
+      ],
+      "sourceType": "journal-article",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "SAGE Publications",
+      "url": "https://doi.org/10.1177/10422587261485958",
+      "authors": [
+        "Jeffrey Lees",
+        "Sara M. Constantino",
+        "Jean Cushen",
+        "Frederik Dahlmann",
+        "Frank G. A. de Bakker",
+        "Edoardo Della Torre",
+        "Maria Laura Frigotto",
+        "Mario Hackenbuchner",
+        "Nico Heuvinck",
+        "Emmanuel Kypraios",
+        "Anastasia Ri",
+        "Stephen Roper",
+        "Elke Schuessler",
+        "Christoph Ungemach",
+        "Dror Etzion"
+      ],
+      "matchedPeople": [
+        "JL"
+      ],
+      "sourcePeople": [
+        "JL"
+      ],
+      "aip": 97.78,
+      "aipJournal": "ENTREPRENEURSHIP THEORY AND PRACTICE",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Crossref public metadata",
+      "evidence": [
+        "Crossref ORCID matched for Lees, J.M.",
+        "Publisher-deposited Crossref metadata checked 22 October 2026: exact stored Jeff Lees ORCID and Groningen HRM&OB affiliation, 15 named authors, journal article published online 20 October 2026; author-owned publications page independently corroborates the title and byline: https://www.jeffreymlees.com/papers"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "entrepreneurship"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "publicationDate": "2026-10-20",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F10422587261485958",
+      "publicationDateType": "published-online"
     },
     {
       "id": "doi:10.1007/s12144-025-08973-8",
@@ -3910,11 +3958,11 @@
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W7169763890",
+      "url": "https://research.rug.nl/en/publications/180d2d25-b5d9-4820-85f0-742b29853aa2",
       "authors": [
         "Miriam Arnold",
         "Svenja Leimbach",
-        "Wiebke Plückhahn",
+        "Wiebke Jöhrens",
         "Thomas Rigotti"
       ],
       "matchedPeople": [
@@ -3931,10 +3979,15 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Arnold, M.",
-        "Crossref ORCID matched for Arnold, M."
+        "Crossref ORCID matched for Arnold, M.",
+        "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication.",
+        "Verified duplicate reconciled: Official Pure work metadata provides exact retained DOI and title, full author byline and Miriam Arnold official ORCID; source checked 22 October 2026. Source: https://research.rug.nl/en/publications/180d2d25-b5d9-4820-85f0-742b29853aa2",
+        "Full citation byline and exact DOI verified at official Pure work on 22 October 2026: https://research.rug.nl/en/publications/180d2d25-b5d9-4820-85f0-742b29853aa2"
       ],
       "provisional": true,
-      "previousIds": [],
+      "previousIds": [
+        "rug:57ca06d7c9f7ed13"
+      ],
       "publicationDate": "2026-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fapps.70125",
       "publicationDateType": "published-print",
@@ -4228,9 +4281,7 @@
       "year": 2025,
       "yearSource": "rug-reference",
       "journal": "Proceedings of the Royal Society B: Biological Sciences",
-      "issns": [
-        "0962-8452"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -4262,6 +4313,9 @@
       "previousIds": [
         "rug:9ca2e827cfb8a802"
       ],
+      "publicationDate": "2025-07",
+      "publicationDateSource": "https://api.crossref.org/works/10.1098%2Frspb.2025.0973",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "collaboration and coordination",
         "competition"
@@ -4269,11 +4323,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3,
-      "publicationDate": "2025-07",
-      "publicationDateSource": "https://api.crossref.org/works/10.1098%2Frspb.2025.0973",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1177/10888683251350913",
@@ -4872,9 +4922,7 @@
       "year": 2025,
       "yearSource": "rug-reference",
       "journal": "Journal of Business and Psychology",
-      "issns": [
-        "0889-3268"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -4898,25 +4946,24 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Nijstad, B.A. lists this as a peer-reviewed journal publication.",
-        "RUG staff publication page lists this reference in 2025.",
         "Complete citation author byline and exact DOI verified on the official Pure work page on 15 October 2026: https://research.rug.nl/en/publications/e7a8b746-5569-4fdb-ba69-1b17f41b2fd3",
+        "RUG staff publication page lists this reference in 2025.",
         "OpenAlex author matched to University of Groningen for Nijstad, B.A."
       ],
       "provisional": true,
       "previousIds": [
         "rug:b27df2eb76ab1f3c"
       ],
+      "publicationDate": "2025-08",
+      "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10869-024-10001-8",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "innovation"
       ],
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 2,
-      "publicationDate": "2025-08",
-      "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10869-024-10001-8",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1111/jasp.13075",
@@ -4982,9 +5029,7 @@
       "year": 2025,
       "yearSource": "rug-reference",
       "journal": "Iscience",
-      "issns": [
-        "2589-0042"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -5024,7 +5069,6 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched",
-      "authorCount": 3,
       "publicationDate": "2025-11-21",
       "publicationDateSource": "https://research.rug.nl/en/publications/6165878c-6ef9-4e20-a2f5-41f79d760617",
       "publicationDateType": "official-pure-issue-date"
@@ -5316,8 +5360,7 @@
         "rug:616c873a926d3631"
       ],
       "topicFamilies": [
-        "teams and groups",
-        "negotiation and bargaining"
+        "teams and groups"
       ],
       "counted": true,
       "display": true,
@@ -5383,9 +5426,7 @@
       "year": 2025,
       "yearSource": "rug-reference",
       "journal": "Academy of Management Annals",
-      "issns": [
-        "1941-6520"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -5417,6 +5458,9 @@
       "previousIds": [
         "rug:54da22a4fc2ff6f8"
       ],
+      "publicationDate": "2025-07",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Fannals.2023.0096",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "creativity",
         "emotions and affect"
@@ -5424,11 +5468,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3,
-      "publicationDate": "2025-07",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Fannals.2023.0096",
-      "publicationDateType": "published-print"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.32617/1277-6888bae7e000e",
@@ -5839,9 +5879,7 @@
       "year": 2024,
       "yearSource": "rug-reference",
       "journal": "Scientific Reports",
-      "issns": [
-        "2045-2322"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Journal",
       "rankableJournal": true,
@@ -5874,6 +5912,9 @@
       "previousIds": [
         "rug:edb323c592ca8e8c"
       ],
+      "publicationDate": "2024-07-16",
+      "publicationDateSource": "https://api.crossref.org/works/10.1038%2Fs41598-024-67080-z",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "collaboration and coordination",
         "status and prestige",
@@ -5882,11 +5923,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 4,
-      "publicationDate": "2024-07-16",
-      "publicationDateSource": "https://api.crossref.org/works/10.1038%2Fs41598-024-67080-z",
-      "publicationDateType": "published-online"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1038/s41597-024-03865-1",
@@ -7433,9 +7470,7 @@
       "year": 2024,
       "yearSource": "rug-reference",
       "journal": "Behavioral and Brain Sciences",
-      "issns": [
-        "0140-525X"
-      ],
+      "issns": [],
       "sourceType": "RUG staff page",
       "publicationKind": "Commentary",
       "rankableJournal": true,
@@ -7464,28 +7499,27 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Dreu, C. de lists this as a peer-reviewed journal publication.",
-        "RUG staff publication page for Nijstad, B.A. lists this as a peer-reviewed journal publication.",
         "Complete citation author byline and exact DOI verified on the official Pure work page on 15 October 2026: https://research.rug.nl/en/publications/f70024b6-6bed-45a7-a415-0256e47296ca",
+        "Public-source review: Publisher labels this contribution Commentary/Ivancovsky et al., e92; Pure Article classification is too broad. Excluded from all research counts. Source: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F812089A4E78C25A4A01C86EB2C873A1/S0140525X23002807a.pdf/shared_noveltyseeking_basis_for_creativity_and_curiosity.pdf",
+        "RUG staff publication page for Nijstad, B.A. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Dreu, C. de",
-        "OpenAlex author matched to University of Groningen for Nijstad, B.A.",
-        "Public-source review: Publisher labels this contribution Commentary/Ivancovsky et al., e92; Pure Article classification is too broad. Excluded from all research counts. Source: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F812089A4E78C25A4A01C86EB2C873A1/S0140525X23002807a.pdf/shared_noveltyseeking_basis_for_creativity_and_curiosity.pdf"
+        "OpenAlex author matched to University of Groningen for Nijstad, B.A."
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "previousIds": [
         "rug:363096dfd1fe084d"
       ],
+      "publicationDate": "2024-05-21",
+      "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x23003497",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity"
       ],
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 5,
-      "publicationDate": "2024-05-21",
-      "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x23003497",
-      "publicationDateType": "published-online",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1186/s12889-024-18646-z",
@@ -8768,9 +8802,7 @@
       "publicationDate": "2023-06-21",
       "publicationDateSource": "https://api.crossref.org/works/10.3389%2Ffpsyg.2023.1122200",
       "publicationDateType": "published-online",
-      "topicFamilies": [
-        "negotiation and bargaining"
-      ],
+      "topicFamilies": [],
       "counted": true,
       "display": true,
       "aipComparable": true,
@@ -12077,7 +12109,6 @@
       "publicationDateSource": "https://api.crossref.org/works/10.1108%2Fscm-03-2021-0136",
       "publicationDateType": "published-online",
       "topicFamilies": [
-        "negotiation and bargaining",
         "social networks",
         "crisis and resilience"
       ],
@@ -13598,7 +13629,6 @@
       "publicationDateType": "published-online",
       "topicFamilies": [
         "leadership",
-        "negotiation and bargaining",
         "identity and belonging"
       ],
       "counted": true,
@@ -13958,7 +13988,6 @@
       "previousIds": [],
       "topicFamilies": [
         "leadership",
-        "negotiation and bargaining",
         "identity and belonging"
       ],
       "counted": false,
@@ -21846,6 +21875,59 @@
       "display": false,
       "aipComparable": false,
       "aipStatus": "not-rankable"
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "doi": "10.5465/amj.2015.4004",
+      "title": "Managing Risk and Resilience",
+      "year": 2015,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2248438086",
+      "authors": [
+        "Gerben S. van der Vegt",
+        "Peter J. M. D. Essens",
+        "Margareta Wahlström",
+        "Gerard George"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
+        "Reviewed editorial under the department editorial policy (data/editorial-publications.json).",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
+      ],
+      "provisional": true,
+      "outputType": "Editorial",
+      "counted": false,
+      "display": false,
+      "previousIds": [],
+      "publicationDate": "2015-08",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
+      "publicationDateType": "published-print",
+      "topicFamilies": [
+        "crisis and resilience"
+      ],
+      "aipComparable": true,
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.5465/amj.2014.0385",
@@ -37810,6 +37892,7 @@
       "publicationDateSource": "https://api.crossref.org/works/10.3109%2F09638288.2014.956814",
       "publicationDateType": "published-online",
       "topicFamilies": [
+        "negotiation and bargaining",
         "occupational health",
         "identity and belonging",
         "stereotypes and bias"
@@ -51440,59 +51523,6 @@
       "publicationDate": "2015-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.copsyc.2015.03.029",
       "publicationDateType": "published-print"
-    },
-    {
-      "id": "doi:10.5465/amj.2015.4004",
-      "doi": "10.5465/amj.2015.4004",
-      "title": "Managing Risk and Resilience",
-      "year": 2015,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2248438086",
-      "authors": [
-        "Gerben S. van der Vegt",
-        "Peter Essens",
-        "Margareta Wahlström",
-        "Gerard George"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
-        "Counted as an editorial under the department editorial policy (data/editorial-publications.json).",
-        "Reviewed editorial under the department editorial policy (data/editorial-publications.json)."
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "crisis and resilience"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "previousIds": [],
-      "publicationDate": "2015-08",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
-      "publicationDateType": "published-print",
-      "outputType": "Editorial"
     },
     {
       "id": "openalex:W2557043721",

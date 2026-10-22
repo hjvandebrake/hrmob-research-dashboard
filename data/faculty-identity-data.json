@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-10-15",
+    "generatedOn": "2026-10-22",
     "people": 528,
-    "publicationsChecked": 4302,
+    "publicationsChecked": 4303,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 588,
     "additionalBenchmarkLinks": 38,
@@ -83019,6 +83019,23 @@
       ]
     },
     {
+      "id": "doi:10.1177/10422587261485958",
+      "doi": "10.1177/10422587261485958",
+      "publicationIds": [
+        "doi:10.1177/10422587261485958"
+      ],
+      "people": [
+        "hrmob-jm-lees"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-jm-lees",
+          "author": "Jeffrey Lees",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1111/apps.70125",
       "doi": "10.1111/apps.70125",
       "publicationIds": [
@@ -84997,6 +85014,23 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "doi": "10.5465/amj.2015.4004",
+      "publicationIds": [
+        "doi:10.5465/amj.2015.4004"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -91288,23 +91322,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/amj.2015.4004",
-      "doi": "10.5465/amj.2015.4004",
-      "publicationIds": [
-        "doi:10.5465/amj.2015.4004"
-      ],
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2557043721",
       "doi": "",
       "publicationIds": [
@@ -92241,6 +92258,60 @@
         "https://www.rug.nl/staff/o.v.iftime/research?lang=en"
       ],
       "curatedSourceCheckedOn": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1212/wnl.0000000000214866",
+      "doi": "10.1212/wnl.0000000000214866",
+      "publicationIds": [
+        "doi:10.1212/wnl.0000000000214866"
+      ],
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "matches": [
+        {
+          "personId": "ops-dj-van-der-zee",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/3a195d5f-33e6-4b29-b774-84654be01c00",
+            "https://pubmed.ncbi.nlm.nih.gov/41996656/",
+            "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/3a195d5f-33e6-4b29-b774-84654be01c00",
+        "https://pubmed.ncbi.nlm.nih.gov/41996656/",
+        "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-22"
+    },
+    {
+      "id": "doi:10.1111/jep.70634",
+      "doi": "10.1111/jep.70634",
+      "publicationIds": [
+        "doi:10.1111/jep.70634"
+      ],
+      "people": [
+        "ops-dj-van-der-zee"
+      ],
+      "matches": [
+        {
+          "personId": "ops-dj-van-der-zee",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/567d8280-8c0f-4a17-bae6-95fa8b22475f",
+            "https://pubmed.ncbi.nlm.nih.gov/42829971/",
+            "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/567d8280-8c0f-4a17-bae6-95fa8b22475f",
+        "https://pubmed.ncbi.nlm.nih.gov/42829971/",
+        "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-10-22"
     }
   ]
 }
