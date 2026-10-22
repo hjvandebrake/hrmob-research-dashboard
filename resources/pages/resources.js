@@ -32,7 +32,7 @@
       icon: "plane",
       group: "faq",
       title: "How are conference budgets allocated?",
-      summary: "How the fixed travel budget is divided, why it depends on who applies, and the CO2 limit.",
+      summary: "How the fixed travel budget is divided, and how much of it your conference plans take.",
     },
     {
       key: "research-day",
@@ -304,36 +304,30 @@
       note: { title: "Want to supervise more?", body: "Contact me if you want to supervise more PhD candidates but feel you do not get enough opportunity to do so.", label: "Email the research director", href: `${MAILTO}?subject=PhD%20supervision` },
     },
     "conference-budgets": {
-      intro: "FEBRI gives the department a fixed travel budget every year. As research director, I divide it among the colleagues who apply, in consultation with the management team.",
-      stepsTitle: "How travel budgets are allocated",
+      layout: "flow",
+      intro: "FEBRI gives the department a fixed travel budget every year, based on the number of colleagues in the career track or with FEBRI fellow status. I divide it among the colleagues who apply, in consultation with the management team. Because of budget cuts, next year's budget is 10% lower (as of October 2026).",
+      stepsTitle: "How it works",
       steps: [
-        { title: "FEBRI sets the department budget", body: "The total is fixed and not negotiable. It depends on the number of eligible staff: colleagues in the career track or with a FEBRI fellow status." },
-        { title: "You request a budget for specific conferences", body: "Name the conferences you plan to attend and estimate the costs realistically. Because of the CO2 limit, I cannot grant a lump sum to spend as you wish." },
-        { title: "The research director balances the requests", body: "Individual amounts depend on the number of applicants and the total amount requested. In years with a lot of interest, everyone gets less, or I may give preference to colleagues who asked for little in previous years. I make the final decisions in consultation with the management team, and I correct unrealistically low requests upward so that your costs are covered." },
-        { title: "The CO2 check", body: "The university works with a maximum CO2 budget per faculty. Approvals are final once the emissions for your destinations have been calculated and fit within that limit." },
-        { title: "Approval", body: "If you applied for one or two conferences within reasonable limits, you will probably not hear from me: consider your request approved. I contact colleagues individually when plans need to change for financial or CO2 reasons." },
+        { title: "Ask for specific conferences", body: "Name the conferences and estimate the costs realistically; I raise requests that are too low. A lump sum is not possible, because every trip has to fit the faculty's CO2 limit." },
+        { title: "I balance all requests", body: "Your amount depends on how many colleagues apply and how much they ask for. In busy years everyone gets less, or I may give preference to colleagues who asked for little before." },
+        { title: "No news is good news", body: "If you ask for one or two conferences within reasonable limits, consider your request approved. I contact you only if your plans must change for financial or CO2 reasons." },
       ],
-      visual: "travel-pool",
-      cardsTitle: "Good to know",
-      cards: [
-        { title: "The budget is shared", body: "Because the total is fixed, a large request, such as two European conferences or one in the United States, is only possible because others request less. The budget would not even cover one large conference for every eligible colleague." },
-        { title: "Next year's budget is 10% lower", body: "Because of budget cuts, the total travel budget for next year is 10% lower (as of October 2026). With the same number of applicants, that means less for everyone." },
-        { title: "Own funds help everyone", body: "Colleagues who pay for conferences from their own funds make room for others to attend large international conferences. You can build your own funds through executive teaching, externally funded projects, and grants." },
-      ],
-      note: { title: "Questions?", body: "Contact me if you have questions about your request, or if you want to know more about generating your own funds.", label: "Email the research director", href: `${MAILTO}?subject=Travel%20budget` },
+      visual: "travel-share",
+      note: { title: "Own funds help everyone", body: "Paying for a conference from your own funds makes room for colleagues. You can build them through executive teaching, externally funded projects, and grants. Contact me with questions about your request or your own funds.", label: "Email the research director", href: `${MAILTO}?subject=Travel%20budget` },
     },
   };
 
-  // Illustration only. Requests in units: 1 = one European conference, 2 = one conference outside Europe
-  // or two in Europe. The budget (16 units for 20 eligible colleagues) cannot pay for one conference
-  // outside Europe for everyone, but usually covers the colleagues who actually apply.
-  const TRAVEL_POOL = {
-    eligible: 20,
+  // Illustration only. The budget is counted in European conferences: it pays for 16 of them for
+  // 20 colleagues (you and 19 others), and a conference outside Europe costs about twice as much.
+  const TRAVEL_SHARE = {
+    colleagues: 20,
     budget: 16,
     cut: 0.1,
-    minApplicants: 2,
-    defaultApplicants: 10,
-    requests: [2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1],
+    max: 3,
+    trips: [
+      { key: "europe", where: "in Europe", cost: 1 },
+      { key: "outside", where: "outside Europe", cost: 2 },
+    ],
   };
 
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
@@ -350,7 +344,7 @@
     checkPath: ["role"],
     checkResult: "",
     layer: "career",
-    travelApplicants: TRAVEL_POOL.defaultApplicants,
+    travelPlan: { europe: 1, outside: 0 },
     travelCut: false,
     journalRows: null,
     journalPromise: null,
@@ -487,8 +481,8 @@
     return `<div class="rg-card rg-pending"><p class="eye">Coming soon</p><p class="rg-body">This answer is still being written. Questions in the meantime? Use the contact page.</p><a class="section-link" href="#contact">Open contact page</a></div>`;
   }
 
-  function renderSteps(steps) {
-    return `<ol class="rp-steps">${steps.map((step, index) => `<li>
+  function renderSteps(steps, extraClass = "") {
+    return `<ol class="rp-steps${extraClass ? ` ${extraClass}` : ""}">${steps.map((step, index) => `<li>
         <span class="rp-step-num" aria-hidden="true">${index + 1}</span>
         <div><strong>${esc(step.title)}</strong><p>${esc(step.body)}</p></div>
       </li>`).join("")}</ol>`;
@@ -525,6 +519,7 @@
 
   function renderArticle(article) {
     if (article.layout === "routes") return renderRoutes(article);
+    if (article.layout === "flow") return renderFlow(article);
     const cards = article.cards.map((card) => `<article class="rp-info">
         <h4>${esc(card.title)}</h4>
         <p>${esc(card.body)}</p>
@@ -541,69 +536,78 @@
           <div class="rp-info-list">${cards}</div>
           ${renderArticleAside(article)}
         </section>
-      </div>
-      ${article.visual === "travel-pool" ? renderTravelPool() : ""}`;
+      </div>`;
   }
 
-  function renderTravelPool() {
+  function renderFlow(article) {
+    return `<p class="rg-intro">${esc(article.intro)}</p>
+      <section class="rp-flow" aria-labelledby="rp-steps-title">
+        <h3 id="rp-steps-title" class="overview-h3">${esc(article.stepsTitle)}</h3>
+        ${renderSteps(article.steps, "rp-steps-row")}
+      </section>
+      ${article.visual === "travel-share" ? renderTravelShare() : ""}
+      <div class="rg-note rp-note rp-flow-note">
+        <strong>${esc(article.note.title)}</strong>
+        <p>${esc(article.note.body)}</p>
+        <a class="section-link" href="${article.note.href}">${esc(article.note.label)}</a>
+      </div>`;
+  }
+
+  function renderTravelShare() {
     return `<section class="rp-pool" aria-labelledby="rp-pool-title">
         <div class="rp-pool-head">
-          <h3 id="rp-pool-title" class="overview-h3">How the total budget shapes your share</h3>
+          <h3 id="rp-pool-title" class="overview-h3">How much of the budget do your plans take?</h3>
           <p>Illustration, not actual amounts.</p>
         </div>
-        <div class="rp-pool-controls">
-          <label class="rp-pool-slider">
-            <span>How many of the ${TRAVEL_POOL.eligible} eligible colleagues apply this year?</span>
-            <input type="range" min="${TRAVEL_POOL.minApplicants}" max="${TRAVEL_POOL.eligible}" step="1" value="${state.travelApplicants}" data-travel-applicants aria-describedby="rp-pool-readout">
-          </label>
-          <label class="switch rp-pool-cut">
-            <input type="checkbox" data-travel-cut${state.travelCut ? " checked" : ""}>
-            <span class="switch-copy"><span>Next year: 10% less</span><small>Budget cuts</small></span>
-          </label>
-        </div>
-        <div id="rp-pool-viz" class="rp-pool-viz">${renderTravelPoolViz()}</div>
+        <div id="rp-pool-controls" class="rp-pool-controls">${renderTravelControls()}</div>
+        <div id="rp-pool-viz" class="rp-pool-viz">${renderTravelShareViz()}</div>
       </section>`;
   }
 
-  function renderTravelPoolViz() {
-    const n = state.travelApplicants;
-    const fullBudget = TRAVEL_POOL.budget;
-    const budget = fullBudget * (state.travelCut ? 1 - TRAVEL_POOL.cut : 1);
-    const requests = TRAVEL_POOL.requests.slice(0, n);
-    const requested = requests.reduce((sum, value) => sum + value, 0);
-    const scale = TRAVEL_POOL.requests.reduce((sum, value) => sum + value, 0);
-    const pct = (value) => `${(value / scale) * 100}%`;
-    const people = Array.from({ length: TRAVEL_POOL.eligible }, (_, i) => `<svg class="rp-person${i < n ? " is-applied" : ""}" viewBox="0 0 20 26" aria-hidden="true"><circle cx="10" cy="6" r="5"/><path d="M1 26c0-7 4-11 9-11s9 4 9 11z"/></svg>`).join("");
-    let running = 0;
-    const blocks = requests.map((value) => {
-      running += value;
-      const over = running > budget + 1e-9;
-      return `<span class="rp-req rp-req-${value}${over ? " is-over" : ""}" style="width:${pct(value)}"></span>`;
+  function renderTravelControls() {
+    const steppers = TRAVEL_SHARE.trips.map((trip) => {
+      const value = state.travelPlan[trip.key];
+      const where = trip.where;
+      return `<div class="rp-stepper" role="group" aria-labelledby="rp-trip-${trip.key}">
+          <span id="rp-trip-${trip.key}" class="rp-stepper-label">Conferences ${esc(where)}</span>
+          <span class="rp-stepper-ctl">
+            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="-1" aria-label="Remove a conference ${esc(where)}"${value <= 0 ? " disabled" : ""}>&minus;</button>
+            <output aria-live="polite">${value}</output>
+            <button type="button" data-travel-trip="${trip.key}" data-travel-delta="1" aria-label="Add a conference ${esc(where)}"${value >= TRAVEL_SHARE.max ? " disabled" : ""}>+</button>
+          </span>
+        </div>`;
     }).join("");
-    const ratio = requested / budget;
-    const used = Math.round(ratio * 100);
-    let tone = "good";
-    let message = used <= 80
-      ? "All requests fit, and there is room for larger requests or a reserve for unforeseen costs."
-      : "All requests fit within the budget and can be approved as asked.";
-    if (ratio > 1) {
-      tone = "neutral";
-      message = "Requests slightly exceed the budget. Most are approved as asked; a few are reduced, or colleagues are asked to choose one conference.";
-    }
-    if (ratio > 1.25) {
-      tone = "busy";
-      message = "A busy year: everyone gets less, or the research director may give preference to colleagues who asked for little in previous years.";
-    }
-    return `<div class="rp-people" aria-hidden="true">${people}</div>
-      <p class="rp-people-legend"><span class="is-applied">${n} apply</span><span>${TRAVEL_POOL.eligible - n} do not apply this year</span></p>
-      <div class="rp-req-track" aria-hidden="true">
-        <span class="rp-budget-zone" style="width:${pct(budget)}"></span>
-        ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(fullBudget - budget)}"></span>` : ""}
-        <span class="rp-req-blocks">${blocks}</span>
-        <span class="rp-budget-line" style="left:${pct(budget)}"><span>Total budget${state.travelCut ? " after the 10% cut" : ""}</span></span>
+    return `${steppers}
+      <label class="switch rp-pool-cut">
+        <input type="checkbox" data-travel-cut${state.travelCut ? " checked" : ""}>
+        <span class="switch-copy"><span>Next year: 10% less</span><small>Budget cuts</small></span>
+      </label>`;
+  }
+
+  function renderTravelShareViz() {
+    const full = TRAVEL_SHARE.budget;
+    const budget = full * (state.travelCut ? 1 - TRAVEL_SHARE.cut : 1);
+    const trips = TRAVEL_SHARE.trips.flatMap((trip) => Array.from({ length: state.travelPlan[trip.key] }, () => trip));
+    const used = trips.reduce((sum, trip) => sum + trip.cost, 0);
+    const share = Math.round((used / budget) * 100);
+    const others = TRAVEL_SHARE.colleagues - 1;
+    const covered = Math.max(0, Math.min(others, Math.floor(budget - used + 1e-9)));
+    const pct = (value) => `${(value / full) * 100}%`;
+    const blocks = trips.map((trip) => `<span class="rp-share-mine" style="width:${pct(trip.cost)}"></span>`).join("");
+    const person = (cls) => `<svg class="rp-person ${cls}" viewBox="0 0 20 26" aria-hidden="true"><circle cx="10" cy="6" r="5"/><path d="M1 26c0-7 4-11 9-11s9 4 9 11z"/></svg>`;
+    const people = [person("is-you")].concat(Array.from({ length: others }, (_, i) => person(i < covered ? "is-covered" : ""))).join("");
+    const tone = used <= 1 ? "good" : used <= 3 ? "neutral" : "busy";
+    const large = used >= 2 ? " A plan this size is only possible because colleagues ask for less." : "";
+    const lead = used ? `Your plan takes ${share}% of the department's travel budget.` : "Add a conference to see your share.";
+    return `<p class="rp-share-stat" aria-hidden="true"><strong>${share}%</strong> <span>of the department's travel budget</span></p>
+      <div class="rp-share-track" style="--cells:${full}" aria-hidden="true">
+        ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(full - budget)}"></span>` : ""}
+        <span class="rp-share-blocks">${blocks}</span>
       </div>
-      <p class="rp-req-legend"><span class="rp-key rp-key-1"></span>One European conference <span class="rp-key rp-key-2"></span>A conference outside Europe, or two in Europe <span class="rp-key rp-key-over"></span>Beyond the budget</p>
-      <p id="rp-pool-readout" class="rp-pool-readout rp-tone-${tone}" aria-live="polite"><strong>${n} applicants ask for ${used}% of the budget.</strong> ${esc(message)}</p>`;
+      <p class="rp-req-legend" aria-hidden="true"><span class="rp-key rp-key-mine"></span>Your conferences <span class="rp-key rp-key-left"></span>Left for colleagues${state.travelCut ? ` <span class="rp-key rp-key-cut"></span>10% cut` : ""}<span class="rp-legend-note">One block is one European conference; outside Europe costs about twice as much.</span></p>
+      <div class="rp-people" aria-hidden="true">${people}</div>
+      <p class="rp-people-legend" aria-hidden="true"><span class="is-you">You</span><span class="is-covered">Can still go</span><span>No budget left</span></p>
+      <p id="rp-pool-readout" class="rp-pool-readout rp-tone-${tone}" aria-live="polite"><span class="visually-hidden">${esc(lead)} </span>If your ${others} colleagues each asked for one European conference, what is left would pay for <strong>${covered} of them</strong>.${esc(large)}</p>`;
   }
 
   function renderSlides(page) {
@@ -1006,6 +1010,7 @@
       loadJournalData();
       return updateJournalResults();
     }
+    if (target.dataset.travelTrip) return changeTravelPlan(target.dataset.travelTrip, Number(target.dataset.travelDelta));
     if (target.hasAttribute("data-grant-next")) return grantGo(GRANT_FLOW.nodes[grantCurrent()].next);
     if (target.dataset.grantAnswer !== undefined) {
       const answer = GRANT_FLOW.nodes[grantCurrent()].answers[Number(target.dataset.grantAnswer)];
@@ -1034,6 +1039,17 @@
     }
   }
 
+  function changeTravelPlan(key, delta) {
+    state.travelPlan[key] = Math.max(0, Math.min(TRAVEL_SHARE.max, state.travelPlan[key] + delta));
+    const controls = document.getElementById("rp-pool-controls");
+    const viz = document.getElementById("rp-pool-viz");
+    if (controls) controls.innerHTML = renderTravelControls();
+    if (viz) viz.innerHTML = renderTravelShareViz();
+    const same = document.querySelector(`[data-travel-trip="${key}"][data-travel-delta="${delta}"]`);
+    const other = document.querySelector(`[data-travel-trip="${key}"][data-travel-delta="${-delta}"]`);
+    (same && !same.disabled ? same : other)?.focus();
+  }
+
   function onInput(event) {
     const target = event.target;
     if (target.matches("[data-journal-search]")) {
@@ -1041,11 +1057,10 @@
       state.journalSelected = null;
       return updateJournalResults();
     }
-    if (target.matches("[data-travel-applicants]")) state.travelApplicants = Number(target.value);
-    else if (target.matches("[data-travel-cut]")) state.travelCut = target.checked;
-    else return;
+    if (!target.matches("[data-travel-cut]")) return;
+    state.travelCut = target.checked;
     const viz = document.getElementById("rp-pool-viz");
-    if (viz) viz.innerHTML = renderTravelPoolViz();
+    if (viz) viz.innerHTML = renderTravelShareViz();
   }
 
   function init() {
