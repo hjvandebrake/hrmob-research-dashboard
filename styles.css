@@ -3878,6 +3878,14 @@ details.grant-stage[open] > .grant-stage-grid { padding-bottom: 16px; }
 .jf-selection > div { display: grid; gap: 5px; text-align: right; flex-shrink: 0; }
 .jf-selection span { color: var(--ink-600); font-size: 0.75rem; }
 .jf-selection b { color: var(--red); font-size: 2rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1; }
+.jf-history-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 26px; }
+.jf-history h3 { margin: 0 0 12px; color: var(--ink-900); font-size: 1rem; font-weight: 600; }
+.jf-history table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.jf-history th, .jf-history td { padding: 10px 2px; border-bottom: 1px solid var(--ink-200); text-align: left; }
+.jf-history thead th { color: var(--ink-600); font-size: 0.75rem; font-weight: 500; }
+.jf-history tbody th { color: var(--ink-700); font-weight: 400; }
+.jf-history td, .jf-history thead th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.jf-missing { color: var(--ink-500); }
 @media (max-width: 480px) {
   .rp-dl.rp-dl-journals { grid-template-columns: 82px minmax(0, 1fr); gap: 12px; }
   .rp-dl-journals .rp-dl-thumb { width: 82px; height: 74px; }
@@ -3886,6 +3894,7 @@ details.grant-stage[open] > .grant-stage-grid { padding-bottom: 16px; }
   .jf-result { gap: 12px; padding: 12px 10px; }
   .jf-selection { flex-direction: column; align-items: flex-start; gap: 18px; }
   .jf-selection > div { text-align: left; }
+  .jf-history-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 .rp-dl-sheet { display: grid; grid-template-rows: repeat(4, 1fr); padding: 6px 8px; gap: 3px; background: oklch(97% 0.012 150); border-color: oklch(85% 0.04 150); }
 .rp-sheet-row { display: grid; grid-template-columns: 1fr 26px; gap: 4px; align-items: center; }

@@ -621,7 +621,7 @@
   }
 
   function renderJournalScores(page) {
-    return `<section class="jf" aria-label="Find a journal's average AIP">
+    return `<section class="jf" aria-label="Find a journal's AIP scores">
       <p class="jf-period">Average AIP <span aria-hidden="true">&middot;</span> 2020–2024</p>
       <label class="jf-label" for="journal-finder-input">Journal name</label>
       <div class="jf-search">
@@ -642,6 +642,10 @@
     return Number.isFinite(row.score) ? String(row.score) : "Not available";
   }
 
+  function journalScoreTable(title, periods, scores) {
+    return `<section class="jf-history"><h3>${esc(title)}</h3><table><thead><tr><th scope="col">${title === "Annual AIP" ? "Year" : "Period"}</th><th scope="col">AIP</th></tr></thead><tbody>${periods.map((period, i) => `<tr><th scope="row">${esc(period)}</th><td>${Number.isFinite(scores[i]) ? esc(String(scores[i])) : '<span class="jf-missing" aria-label="Not available">—</span>'}</td></tr>`).join("")}</tbody></table></section>`;
+  }
+
   function updateJournalResults() {
     const results = document.getElementById("journal-finder-results");
     const status = document.getElementById("journal-finder-status");
@@ -659,7 +663,7 @@
     const selected = state.journalSelected;
     if (selected) {
       status.textContent = "";
-      results.innerHTML = `<div class="jf-selection" role="status"><strong>${esc(selected.name)}</strong><div><span>Average AIP</span><b>${esc(journalScore(selected))}</b></div></div>`;
+      results.innerHTML = `<div class="jf-selection" role="status"><strong>${esc(selected.name)}</strong><div><span>Average AIP · 2020–2024</span><b>${esc(journalScore(selected))}</b></div></div><div class="jf-history-grid">${journalScoreTable("Annual AIP", state.journalYears, selected.annual)}${journalScoreTable("Five-year averages", state.journalPeriods, selected.averages)}</div>`;
       return;
     }
     const query = journalSearchKey(state.journalQuery);
@@ -682,9 +686,11 @@
       if (!response.ok) throw new Error("Journal data unavailable");
       return response.json();
     }).then((payload) => {
-      if (!Array.isArray(payload.journals) || !payload.journals.length) throw new Error("Invalid journal index");
-      state.journalRows = payload.journals.map(([title, score], index) => ({
-        index, score, key: journalSearchKey(title), name: window.displayJournalName?.(title) || title,
+      if (payload.schemaVersion !== 2 || !Array.isArray(payload.journals) || !payload.journals.length || !payload.annualYears?.length || !payload.averagePeriods?.length || payload.journals.some((row) => !Array.isArray(row[2]) || row[2].length !== payload.annualYears.length || !Array.isArray(row[3]) || row[3].length !== payload.averagePeriods.length)) throw new Error("Invalid journal index");
+      state.journalYears = payload.annualYears;
+      state.journalPeriods = payload.averagePeriods;
+      state.journalRows = payload.journals.map(([title, score, annual, averages], index) => ({
+        index, score, annual, averages, key: journalSearchKey(title), name: window.displayJournalName?.(title) || title,
       }));
     }).catch(() => { state.journalError = true; }).finally(() => {
       state.journalPromise = null;
