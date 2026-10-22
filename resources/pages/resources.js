@@ -54,6 +54,15 @@
       image: "resources/ai-in-research/preview.webp",
     },
     {
+      key: "follow-up",
+      group: "downloads",
+      title: "Follow-up",
+      summary: "The lunch meeting after the research day, with a short look back, an update on AI, and grants.",
+      blurb: "Interactive presentation for the lunch meeting after the research day, with grants as the main topic.",
+      format: "Presentation",
+      image: "resources/follow-up/preview.webp",
+    },
+    {
       key: "journal-scores",
       group: "downloads",
       title: "Journal scores",
@@ -453,6 +462,7 @@
     else if (FAQ_ARTICLES[page.key]) body = renderArticle(FAQ_ARTICLES[page.key]);
     else if (page.key === "research-day") body = renderSlides(page);
     else if (page.key === "ai-in-research") body = renderAiPresentation();
+    else if (page.key === "follow-up") body = renderFollowUp();
     else if (page.key === "research-time") body = renderTimeGuide();
     else if (page.key === "grant-steps") body = renderGrantGuide();
     else if (page.key === "journal-scores") body = renderJournalScores(page);
@@ -615,6 +625,21 @@
           <div class="ai-guidance-actions">
             <a class="ai-guidance-open" href="resources/ai-in-research/">Open the presentation</a>
             <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Input%20on%20AI%20in%20research">Send your input</a>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderFollowUp() {
+    return `<div class="ai-guidance rp-ai">
+        <a class="ai-guidance-preview" href="resources/follow-up/" aria-label="Open the presentation Helping each other with grants">
+          <img src="resources/follow-up/preview.webp" width="960" height="540" alt="Opening slide of the presentation Helping each other with grants" loading="lazy">
+        </a>
+        <div class="ai-guidance-copy">
+          <p>The presentation for our lunch meeting after the research day. It starts with a short look back at what we discussed and agreed on 15 September and an update on AI, with a sneak preview of my analysis for the faculty working group. Most of the meeting is about grants, including what FEB&rsquo;s strategic plan asks of us, the calls in the coming year, our funding coordinator Lars van den Brink, and how we can help each other with applications.</p>
+          <div class="ai-guidance-actions">
+            <a class="ai-guidance-open" href="resources/follow-up/">Open the presentation</a>
+            <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Grant%20plans">Tell me about your plans</a>
           </div>
         </div>
       </div>`;
