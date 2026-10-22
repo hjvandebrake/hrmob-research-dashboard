@@ -343,10 +343,16 @@
     layer: "career",
     travelApplicants: TRAVEL_POOL.defaultApplicants,
     travelCut: false,
+    journalRows: null,
+    journalPromise: null,
+    journalError: false,
+    journalQuery: "",
+    journalSelected: null,
   };
 
   const roots = {};
   let resourceData = {};
+  const journalDataVersion = new URL(document.currentScript?.src || "resources/pages/resources.js", document.baseURI).searchParams.get("v");
 
   /* ---------- Landing page ---------- */
 
@@ -410,6 +416,19 @@
           <span class="rp-sheet-row"><i></i><b>${funding ? "Senior" : "91"}</b></span>
         </span>`;
     const href = page.direct ? esc(page.file) : pageHref(page.key);
+    if (page.key === "journal-scores") {
+      return `<article class="rp-dl rp-dl-journals">
+        ${thumb}
+        <div class="rp-dl-text">
+          <strong>${esc(page.title)}</strong>
+          <span>${esc(page.blurb)}</span>
+          <div class="rp-dl-actions">
+            <a class="rp-dl-excel" href="${href}" download>Excel</a>
+            <a class="rp-journal-open" href="${pageHref(page.key)}">Journal finder <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </article>`;
+    }
     return `<a class="rp-dl" href="${href}"${page.direct ? " download" : ""}>
         ${thumb}
         <span class="rp-dl-text">
@@ -423,6 +442,7 @@
   /* ---------- Subpages ---------- */
 
   function renderSubpage(page) {
+    const journalFinder = page.key === "journal-scores";
     const group = GROUPS.find((item) => item.key === page.group);
     const groupPages = PAGES.filter((item) => item.group === page.group);
     const index = groupPages.indexOf(page);
@@ -436,7 +456,7 @@
     else if (page.key === "research-time") body = renderTimeGuide();
     else if (page.key === "grant-steps") body = renderGrantGuide();
     else if (page.key === "journal-scores") body = renderJournalScores(page);
-    const pager = groupPages.length > 1
+    const pager = !journalFinder && groupPages.length > 1
       ? `<nav class="rp-pager" aria-label="${esc(group.title)}">
           ${prev ? `<a href="${pageHref(prev.key)}"><span>Previous</span>${esc(prev.title)}</a>` : "<span></span>"}
           ${next ? `<a class="rp-pager-next" href="${pageHref(next.key)}"><span>Next</span>${esc(next.title)}</a>` : ""}
@@ -445,11 +465,11 @@
     const v = VIEWS[page.view];
     const back = page.view === "faq" ? "All questions" : "All resources";
     return `<a class="rp-back" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>
-      <div class="sec-head compact rp-head"><div class="rp-head-title">${page.icon ? `<span class="rp-head-icon">${icon(page.icon)}</span>` : ""}<h2 class="h2">${esc(page.title)}</h2></div></div>
+      <div class="sec-head compact rp-head"><div class="rp-head-title">${page.icon ? `<span class="rp-head-icon">${icon(page.icon)}</span>` : ""}<h2 class="h2">${journalFinder ? "Journal finder" : esc(page.title)}</h2></div></div>
       ${page.group === "faq" ? `<p class="rp-disclaimer">${esc(FAQ_DISCLAIMER)}</p>` : ""}
       <div class="rp-content">${body}</div>
       ${page.note ? `<p class="rg-status small-muted">${esc(page.note)}</p>` : ""}
-      <a class="rp-back rp-back-bottom" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>
+      ${journalFinder ? "" : `<a class="rp-back rp-back-bottom" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>`}
       ${pager}`;
   }
 
@@ -601,13 +621,109 @@
   }
 
   function renderJournalScores(page) {
-    return `<p class="rp-lead">${esc(page.summary)}</p>
-      <div class="download-list rp-download">
-        <a class="download-card" href="${esc(page.file)}" download>
-          <strong>Average AIP workbook, 2020-2024</strong>
-          <span>Excel workbook with the journal scores.</span>
-        </a>
-      </div>`;
+    return `<section class="jf" aria-label="Find a journal's average AIP">
+      <p class="jf-period">Average AIP <span aria-hidden="true">&middot;</span> 2020–2024</p>
+      <label class="jf-label" for="journal-finder-input">Journal name</label>
+      <div class="jf-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input id="journal-finder-input" data-journal-search type="search" autocomplete="off" spellcheck="false" placeholder="e.g. Academy of Management" value="${esc(state.journalQuery)}" aria-controls="journal-finder-results" aria-describedby="journal-finder-help journal-finder-status">
+      </div>
+      <p id="journal-finder-help" class="visually-hidden">Matching journals show their scores below. Use the down arrow to browse, Enter to select, and Escape to clear.</p>
+      <p id="journal-finder-status" class="jf-status" role="status"></p>
+      <div id="journal-finder-results"></div>
+    </section>`;
+  }
+
+  function journalSearchKey(value) {
+    return String(value).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+  }
+
+  function journalScore(row) {
+    return Number.isFinite(row.score) ? String(row.score) : "Not available";
+  }
+
+  function updateJournalResults() {
+    const results = document.getElementById("journal-finder-results");
+    const status = document.getElementById("journal-finder-status");
+    if (!results || !status) return;
+    results.innerHTML = "";
+    if (state.journalError) {
+      status.textContent = "Journal scores could not load.";
+      results.innerHTML = '<button type="button" class="jf-retry" data-journal-retry>Try again</button>';
+      return;
+    }
+    if (!state.journalRows) {
+      status.textContent = "Loading journal scores…";
+      return;
+    }
+    const selected = state.journalSelected;
+    if (selected) {
+      status.textContent = "";
+      results.innerHTML = `<div class="jf-selection" role="status"><strong>${esc(selected.name)}</strong><div><span>Average AIP</span><b>${esc(journalScore(selected))}</b></div></div>`;
+      return;
+    }
+    const query = journalSearchKey(state.journalQuery);
+    if (!query) {
+      status.textContent = "Start typing to find a journal.";
+      return;
+    }
+    const words = query.split(" ");
+    const matches = state.journalRows.filter((row) => words.every((word) => row.key.includes(word)))
+      .sort((a, b) => Number(b.key.startsWith(query)) - Number(a.key.startsWith(query)) || a.name.localeCompare(b.name));
+    status.textContent = !matches.length ? "No matching journals in this workbook." : `${matches.length.toLocaleString("en-GB")} matching journal${matches.length === 1 ? "" : "s"}${matches.length > 12 ? " · Keep typing to narrow the list." : ""}`;
+    if (!matches.length) return;
+    results.innerHTML = `<div class="jf-columns" aria-hidden="true"><span>Journal</span><span>Average AIP</span></div><ul class="jf-results" aria-label="Matching journals">${matches.slice(0, 12).map((row) => `<li><button type="button" class="jf-result" data-journal-index="${row.index}" aria-label="${esc(row.name)}, average AIP ${esc(journalScore(row))}"><span>${esc(row.name)}</span><b>${esc(journalScore(row))}</b></button></li>`).join("")}</ul>`;
+  }
+
+  function loadJournalData() {
+    if (state.journalRows || state.journalPromise || state.journalError) return;
+    const url = "data/journal-aip.json" + (journalDataVersion ? `?v=${encodeURIComponent(journalDataVersion)}` : "");
+    state.journalPromise = fetch(url).then((response) => {
+      if (!response.ok) throw new Error("Journal data unavailable");
+      return response.json();
+    }).then((payload) => {
+      if (!Array.isArray(payload.journals) || !payload.journals.length) throw new Error("Invalid journal index");
+      state.journalRows = payload.journals.map(([title, score], index) => ({
+        index, score, key: journalSearchKey(title), name: window.displayJournalName?.(title) || title,
+      }));
+    }).catch(() => { state.journalError = true; }).finally(() => {
+      state.journalPromise = null;
+      updateJournalResults();
+    });
+  }
+
+  function selectJournal(index) {
+    const row = state.journalRows?.[index];
+    const input = document.getElementById("journal-finder-input");
+    if (!row || !input) return;
+    state.journalSelected = row;
+    state.journalQuery = row.name;
+    input.value = row.name;
+    updateJournalResults();
+    input.focus({ preventScroll: true });
+  }
+
+  function onJournalKeydown(event) {
+    const input = document.getElementById("journal-finder-input");
+    const isInput = event.target === input;
+    const isResult = event.target.matches("[data-journal-index]");
+    if (!input || (!isInput && !isResult)) return;
+    const buttons = Array.from(document.querySelectorAll(".jf-result"));
+    if (event.key === "Escape") {
+      event.preventDefault();
+      input.value = state.journalQuery = "";
+      state.journalSelected = null;
+      updateJournalResults();
+      input.focus();
+    } else if (event.key === "Enter" && isInput && buttons.length) {
+      event.preventDefault();
+      selectJournal(Number(buttons[0].dataset.journalIndex));
+    } else if ((event.key === "ArrowDown" || event.key === "ArrowUp") && buttons.length) {
+      event.preventDefault();
+      const index = buttons.indexOf(event.target);
+      const next = isInput ? (event.key === "ArrowDown" ? buttons[0] : buttons.at(-1)) : buttons[index + (event.key === "ArrowDown" ? 1 : -1)];
+      (next || input).focus();
+    }
   }
 
   /* ---------- Grant steps ---------- */
@@ -825,6 +941,10 @@
     const previous = state.pages[view];
     state.view = view;
     state.pages[view] = key;
+    if (key === "journal-scores" && previous !== key) {
+      state.journalQuery = "";
+      state.journalSelected = null;
+    }
     root.innerHTML = page ? renderSubpage(page) : renderLanding(view);
     if (previous !== undefined && previous !== key) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -833,6 +953,11 @@
         heading.tabIndex = -1;
         heading.focus({ preventScroll: true });
       }
+    }
+    if (key === "journal-scores") {
+      loadJournalData();
+      updateJournalResults();
+      if (previous !== key) document.getElementById("journal-finder-input")?.focus({ preventScroll: true });
     }
   }
 
@@ -844,6 +969,12 @@
   function onClick(event) {
     const target = event.target.closest("button");
     if (!target) return;
+    if (target.hasAttribute("data-journal-index")) return selectJournal(Number(target.dataset.journalIndex));
+    if (target.hasAttribute("data-journal-retry")) {
+      state.journalError = false;
+      loadJournalData();
+      return updateJournalResults();
+    }
     if (target.hasAttribute("data-grant-next")) return grantGo(GRANT_FLOW.nodes[grantCurrent()].next);
     if (target.dataset.grantAnswer !== undefined) {
       const answer = GRANT_FLOW.nodes[grantCurrent()].answers[Number(target.dataset.grantAnswer)];
@@ -874,6 +1005,11 @@
 
   function onInput(event) {
     const target = event.target;
+    if (target.matches("[data-journal-search]")) {
+      state.journalQuery = target.value;
+      state.journalSelected = null;
+      return updateJournalResults();
+    }
     if (target.matches("[data-travel-applicants]")) state.travelApplicants = Number(target.value);
     else if (target.matches("[data-travel-cut]")) state.travelCut = target.checked;
     else return;
@@ -889,6 +1025,7 @@
       root.addEventListener("click", onClick);
       root.addEventListener("input", onInput);
       root.addEventListener("change", onInput);
+      root.addEventListener("keydown", onJournalKeydown);
     });
   }
 
