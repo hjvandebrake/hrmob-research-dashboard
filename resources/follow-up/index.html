@@ -55,7 +55,7 @@ body.slow .in .d1{transition-delay:.35s}body.slow .in .d2{transition-delay:.8s}b
 /* Steps: elements with data-step are shown one at a time with each click; the others stay visible but faded. */
 .scene [data-step]{cursor:pointer}
 .scene.in [data-step]{transition-property:opacity,transform;transition-duration:.7s}
-.scene.in [data-step].dim{opacity:.3}
+.scene.in [data-step].dim{opacity:.45}
 .scene.in.stepped [data-step]{transition-delay:0s!important}
 .cite{font-size:.62em;vertical-align:super;color:var(--wine);font-weight:700;padding:0 1px}.cite:hover{text-decoration:underline}
 .pill{display:inline-block;border-radius:999px;padding:3px 11px;font-size:13px;font-weight:700}
@@ -429,7 +429,7 @@ const played={},morphT={};
 function onEnter(id,fromBelow,moved){const s=byId[id];if(!s)return;
  if(s.type==='compare'&&!played[id]){played[id]=1;morphT[id]=setTimeout(()=>{const box=$(`[data-morph="${id}"]`);box.querySelectorAll('.hc').forEach((b,i)=>{b.style.transitionDelay=(i*22*PACE)+'ms';b.style.background=b.dataset.cb;b.classList.toggle('changed',s.mark_changes!==false&&b.dataset.a!==b.dataset.b);});},900*PACE);}
  if(s.type==='figures')$$(`#${CSS.escape(id)} .fig`).forEach(el=>{const m=(el.dataset.fig||'').match(/^(\D*)(\d+)(.*)$/);if(!m||el.dataset.done||reduced)return;el.dataset.done=1;const t0=performance.now(),dur=1200*PACE;const f=t=>{const p=Math.min(1,(t-t0)/dur);el.textContent=m[1]+Math.round(+m[2]*(1-Math.pow(1-p,3)))+m[3];if(p<1)requestAnimationFrame(f);};requestAnimationFrame(f);});
- if(stepCount(id)&&(moved||STEP[id]===undefined))setStep(id,fromBelow?stepCount(id)-1:0,true);}
+ if(stepCount(id)&&(moved||STEP[id]===undefined)){enteredAt=performance.now();setStep(id,fromBelow?stepCount(id)-1:0,true);}}
 function onLeave(id){const s=byId[id];if(!s)return;
  if(s.type==='compare'){clearTimeout(morphT[id]);played[id]=0;const box=$(`[data-morph="${id}"]`);box&&box.querySelectorAll('.hc').forEach(b=>{b.style.transitionDelay='0ms';b.style.background=b.dataset.ca;b.classList.remove('changed');});}
  if(s.type==='figures')$$(`#${CSS.escape(id)} .fig`).forEach(el=>{delete el.dataset.done;});}
@@ -438,6 +438,15 @@ const STEP={};
 const stepEls=id=>$$(`#${CSS.escape(id)} [data-step]`);
 const stepCount=id=>stepEls(id).reduce((n,el)=>Math.max(n,+el.dataset.step+1),0);
 function setStep(id,k,quiet){STEP[id]=k;const sec=document.getElementById(id);if(!quiet)sec.classList.add('stepped');stepEls(id).forEach(el=>el.classList.toggle('dim',+el.dataset.step!==k));}
+/* The scroll wheel and trackpad move through the steps too: one step per scroll gesture, and the page moves on only after the last step. */
+let enteredAt=0,wheelLast=0,wheelAcc=0,wheelStepped=false;
+main.addEventListener('wheel',e=>{const sec=secs[cur];if(!sec||Math.abs(e.deltaY)<Math.abs(e.deltaX))return;const id=sec.id,n=stepCount(id);if(!n)return;
+ if(Math.abs(main.scrollTop-sec.offsetTop)>4)return;
+ const now=performance.now();if(now-wheelLast>250){wheelStepped=false;wheelAcc=0;}wheelLast=now;
+ const dir=e.deltaY>0?1:-1,k=STEP[id]??0,canStep=dir>0?k<n-1:k>0;
+ if(!canStep&&!wheelStepped)return;
+ e.preventDefault();if(wheelStepped||now-enteredAt<600||!canStep)return;
+ wheelAcc+=e.deltaY;if(Math.abs(wheelAcc)>=40){stepBy(dir);wheelStepped=true;}},{passive:false});
 function stepBy(d){const id=secs[cur]&&secs[cur].id,n=id?stepCount(id):0;if(!n)return false;const k=(STEP[id]??0)+d;if(k<0||k>=n)return false;setStep(id,k);return true;}
 
 /* ---------- clicks ---------- */
