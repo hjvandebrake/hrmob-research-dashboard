@@ -4338,3 +4338,11 @@ html:not(.auth-locked) .auth-gate {
 .metric-plot-wrap svg.has-metric-focus circle.is-metric-focus { opacity: .85; }
 .metric-plot-wrap svg.has-metric-focus .metric-line-label.is-metric-focus { font-weight: 700; }
 .metric-partial-note { margin: 4px 0 0; }
+
+/* Conference budgets, tidier (27 October 2026): readouts as plain lines, the individual block as wide as the rest. */
+.rp-pool-readout { background: none; border-radius: 0; padding: 2px 0 2px 12px; border-left: 3px solid var(--ink-300); }
+.rp-pool-readout.rp-tone-good { background: none; border-left-color: var(--teal); }
+.rp-pool-readout.rp-tone-busy { background: none; border-left-color: var(--red); }
+.rp-mine { max-width: none; }
+.rp-pool-slider strong { color: var(--red); margin-left: 6px; }
+.rg-mail { font-weight: 600; color: var(--red); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }

@@ -137,6 +137,7 @@
         title: "Let the funding officer know",
         body: "For almost every grant you need the funding officer at some point, for example for the budget, the funder's rules, and the internal approval of the application. Contact them early, ideally when you start writing, so there is time to sort out the budget and any guarantees.",
         contact: "Lars van den Brink, FEB funding officer (FEB Research Office)",
+        email: "l.h.van.den.brink@rug.nl",
         next: "teaching",
         nextLabel: "Next",
       },
@@ -180,6 +181,7 @@
         title: "Arrange an embedding guarantee",
         body: "New or extended positions require an embedding guarantee: the faculty confirms that it can host the position. The funding officer drafts it and asks the department chair and the research director to confirm that they support the application before it goes for signature. Request it well before the deadline, and make sure the title matches your submission.",
         contact: "Lars van den Brink, FEB funding officer",
+        email: "l.h.van.den.brink@rug.nl",
         next: "checklist",
         nextLabel: "Next",
       },
@@ -305,12 +307,12 @@
     },
     "conference-budgets": {
       layout: "flow",
-      intro: "FEBRI gives the department a fixed travel budget every year, based on the number of colleagues in the career track or with FEBRI fellow status. I divide it among the colleagues who apply, in consultation with the management team. Because of budget cuts, next year's budget is 10% lower (as of October 2026).",
+      intro: "FEBRI gives the department a fixed travel budget each year, based on the number of colleagues in the career track or with FEBRI fellow status. I divide it among those who apply, with the management team. Next year the budget is 10% lower because of budget cuts.",
       stepsTitle: "How it works",
       steps: [
-        { title: "Ask for specific conferences", body: "Name the conferences and estimate the costs realistically; I raise requests that are too low. A lump sum is not possible, because every trip has to fit the faculty's CO2 limit." },
-        { title: "I balance all requests", body: "Your amount depends on how many colleagues apply and how much they ask for. In busy years everyone gets less, or I may give preference to colleagues who asked for little before." },
-        { title: "No news is good news", body: "If you ask for one or two conferences within reasonable limits, consider your request approved. I contact you only if your plans must change for financial or CO2 reasons." },
+        { title: "Name your conferences", body: "Give realistic costs for specific conferences. A lump sum is not possible because of the faculty's CO2 limit." },
+        { title: "I balance all requests", body: "In busy years everyone gets less, or colleagues who asked for little before get preference." },
+        { title: "No news is good news", body: "One or two conferences within reasonable limits count as approved. I only contact you if plans must change." },
       ],
       visual: "travel-share",
       note: { title: "Own funds help everyone", body: "Paying for a conference from your own funds makes room for colleagues. You can build them through executive teaching, externally funded projects, and grants. Contact me with questions about your request or your own funds.", label: "Email the research director", href: `${MAILTO}?subject=Travel%20budget` },
@@ -567,15 +569,15 @@
     return `<section class="rp-pool" aria-labelledby="rp-pool-title">
         <p class="rp-pool-tag">Illustration with made-up numbers</p>
         <h3 id="rp-pool-title" class="overview-h3">How the total budget shapes your share</h3>
-        <p class="rp-pool-lead">In this example, ${TRAVEL.eligible} colleagues could apply and the budget pays for ${TRAVEL.budget} European conferences. Real amounts and numbers of applicants differ every year.</p>
+        <p class="rp-pool-lead">In this example, ${TRAVEL.eligible} colleagues could apply and the budget pays for ${TRAVEL.budget} European conferences.</p>
         <div class="rp-pool-controls">
           <label class="rp-pool-slider">
-            <span>How many of the ${TRAVEL.eligible} colleagues apply this year?</span>
+            <span>How many colleagues apply? <strong id="rp-pool-count">${state.travelApplicants} of ${TRAVEL.eligible}</strong></span>
             <input type="range" min="${TRAVEL.minApplicants}" max="${TRAVEL.eligible}" step="1" value="${state.travelApplicants}" data-travel-applicants aria-describedby="rp-pool-readout">
           </label>
           <label class="switch rp-pool-cut">
             <input type="checkbox" data-travel-cut${state.travelCut ? " checked" : ""}>
-            <span class="switch-copy"><span>Next year: 10% less</span><small>Budget cuts</small></span>
+            <span class="switch-copy"><span>Next year: 10% less</span></span>
           </label>
         </div>
         <div id="rp-pool-viz" class="rp-pool-viz">${renderTravelPoolViz()}</div>
@@ -616,15 +618,17 @@
       tone = "busy";
       message = "A busy year: everyone gets less, or the research director may give preference to colleagues who asked for little in previous years.";
     }
+    const anyOver = running > budget + 1e-9;
+    const count = document.getElementById("rp-pool-count");
+    if (count) count.textContent = `${n} of ${TRAVEL.eligible}`;
     return `<div class="rp-people" aria-hidden="true">${people}</div>
-      <p class="rp-people-legend"><span class="is-applied">${n} apply</span><span>${TRAVEL.eligible - n} do not apply this year</span></p>
       <div class="rp-req-track" aria-hidden="true">
         <span class="rp-budget-zone" style="width:${pct(budget)}"></span>
         ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(fullBudget - budget)}"></span>` : ""}
         <span class="rp-req-blocks">${blocks}</span>
         <span class="rp-budget-line" style="left:${pct(budget)}"><span>Total budget${state.travelCut ? " after the 10% cut" : ""}</span></span>
       </div>
-      <p class="rp-req-legend"><span class="rp-key rp-key-1"></span>One European conference <span class="rp-key rp-key-2"></span>A conference outside Europe, or two in Europe <span class="rp-key rp-key-over"></span>Beyond the budget</p>
+      <p class="rp-req-legend"><span class="rp-key rp-key-1"></span>One European conference <span class="rp-key rp-key-2"></span>Outside Europe, or two in Europe${anyOver ? ' <span class="rp-key rp-key-over"></span>Beyond the budget' : ""}</p>
       <p id="rp-pool-readout" class="rp-pool-readout rp-tone-${tone}" aria-live="polite"><strong>${n} applicants ask for ${used}% of the budget.</strong> ${esc(message)}</p>`;
   }
 
@@ -662,7 +666,7 @@
         ${state.travelCut ? `<span class="rp-cut-zone" style="left:${pct(budget)};width:${pct(full - budget)}"></span>` : ""}
         <span class="rp-share-blocks">${blocks}</span>
       </div>
-      <p class="rp-req-legend" aria-hidden="true"><span class="rp-key rp-key-mine"></span>Your conferences <span class="rp-key rp-key-left"></span>Left for colleagues${state.travelCut ? ` <span class="rp-key rp-key-cut"></span>10% cut` : ""}<span class="rp-legend-note">One block is one European conference.</span></p>
+      <p class="rp-req-legend" aria-hidden="true"><span class="rp-key rp-key-mine"></span>Your conferences <span class="rp-key rp-key-left"></span>Left for colleagues${state.travelCut ? ` <span class="rp-key rp-key-cut"></span>10% cut` : ""}</p>
       <p id="rp-mine-readout" class="rp-pool-readout rp-tone-${allFit ? "good" : "busy"}" aria-live="polite"><span class="visually-hidden">${esc(lead)} </span>If ${who} for one European conference, what is left ${result}.${esc(large)}</p>`;
   }
 
@@ -903,7 +907,7 @@
     return `<p class="eye">${kindLabel}</p>
       <h3 class="rg-card-title">${esc(node.title)}</h3>
       <p class="rg-body">${esc(node.body)}</p>
-      ${node.contact ? `<p class="rg-contact"><span>Contact</span>${esc(node.contact)}</p>` : ""}
+      ${node.contact ? `<p class="rg-contact"><span>Contact</span>${esc(node.contact)}${node.email ? ` <a class="rg-mail" href="mailto:${esc(node.email)}">${esc(node.email)}</a>` : ""}</p>` : ""}
       ${actions}
       ${state.grantPath.length > 1 ? cardFoot() : ""}`;
   }
@@ -912,7 +916,7 @@
     const r = state.grantRecord;
     const items = [
       { done: true, who: "Your supervisor", what: "Supports the application." },
-      { who: "Lars van den Brink, FEB funding officer", what: "Budget, funder rules, and internal approval. Contact him early." },
+      { who: "Lars van den Brink, FEB funding officer", what: "Budget, funder rules, and internal approval. Contact him early.", email: "l.h.van.den.brink@rug.nl" },
     ];
     if (r.teaching === "yes") items.push({ who: "Scheduler or teaching director", what: "Plan the reduction of your teaching if the grant is awarded." });
     if (r.teaching === "unsure") items.push({ who: "Funding officer, then the scheduler", what: "Check whether the budget covers your own time. If it does, plan the teaching reduction with the scheduler or teaching director." });
@@ -923,7 +927,7 @@
     return `<p class="eye">Done</p>
       <h3 class="rg-card-title">Your checklist</h3>
       <ol class="rg-checklist">
-        ${items.map((item) => `<li class="${item.done ? "is-done" : ""}"><span class="rg-check" aria-hidden="true">${item.done ? "&#10003;" : ""}</span><div><strong>${esc(item.who)}</strong><span>${esc(item.what)}</span></div></li>`).join("")}
+        ${items.map((item) => `<li class="${item.done ? "is-done" : ""}"><span class="rg-check" aria-hidden="true">${item.done ? "&#10003;" : ""}</span><div><strong>${esc(item.who)}</strong><span>${esc(item.what)}${item.email ? ` <a class="rg-mail" href="mailto:${esc(item.email)}">${esc(item.email)}</a>` : ""}</span></div></li>`).join("")}
       </ol>
       <div class="rg-note">
         <strong>Research time</strong>
