@@ -700,7 +700,7 @@
           <img src="resources/follow-up/preview.webp" width="960" height="540" alt="Opening slide of the presentation Helping each other with grants" loading="lazy">
         </a>
         <div class="ai-guidance-copy">
-          <p>The presentation for our lunch meeting after the research day. It starts with a short look back at what we discussed and agreed on 15 September and an update on AI, with a sneak preview of my analysis for the faculty working group. Most of the meeting is about grants, including what FEB&rsquo;s strategic plan asks of us, the calls in the coming year, our funding coordinator Lars van den Brink, and how we can help each other with applications. On the three discussion slides you can add your ideas, and the last slide summarises them.</p>
+          <p>The presentation for our lunch meeting after the research day. It starts with a short look back at what we discussed and agreed on 15 September and an update on AI, with a sneak preview of my analysis for the faculty working group. Most of the meeting is about grants, including what FEB&rsquo;s strategic plan asks of us, the calls in the coming year, our funding coordinator Lars van den Brink, and how we can help each other with applications. The discussion slides show what we concluded at the lunch on 27 October, with our notes, and the last slide summarises them.</p>
           <div class="ai-guidance-actions">
             <a class="ai-guidance-open" href="resources/follow-up/">Open the presentation</a>
             <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Grant%20plans">Tell me about your plans</a>
