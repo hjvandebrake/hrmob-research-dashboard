@@ -35,8 +35,17 @@
       summary: "How the fixed travel budget is divided, and how much of it your conference plans take.",
     },
     {
+      key: "grants",
+      group: "department",
+      title: "Grants",
+      summary: "Our lunch meeting on grants: the calls in the coming year, help from colleagues, and what we concluded.",
+      blurb: "Interactive presentation on grants, with what we concluded on 27 October 2026.",
+      format: "Presentation",
+      image: "resources/grants/preview.webp",
+    },
+    {
       key: "research-day",
-      group: "downloads",
+      group: "department",
       title: "Research day slides",
       summary: "All slides from the HRM&OB research afternoon of 15 September 2026.",
       blurb: "All 63 slides from the research afternoon of 15 September 2026.",
@@ -46,7 +55,7 @@
     },
     {
       key: "ai-in-research",
-      group: "downloads",
+      group: "department",
       title: "Using AI well in research",
       hidden: true,
       summary: "My follow-up to the research day: what we want AI to do for our research, and where we need to be careful.",
@@ -55,17 +64,8 @@
       image: "resources/ai-in-research/preview.webp",
     },
     {
-      key: "grants",
-      group: "downloads",
-      title: "Grants",
-      summary: "Our lunch meeting on grants: the calls in the coming year, help from colleagues, and what we concluded.",
-      blurb: "Interactive presentation on grants, with what we concluded on 27 October 2026.",
-      format: "Presentation",
-      image: "resources/grants/preview.webp",
-    },
-    {
       key: "journal-scores",
-      group: "downloads",
+      group: "department",
       title: "Journal scores",
       summary: "The average AIP workbook, 2020 to 2024, used for the dashboard comparisons.",
       blurb: "Average AIP score per journal, 2020 to 2024.",
@@ -75,7 +75,7 @@
     },
     {
       key: "funding-workbook",
-      group: "downloads",
+      group: "department",
       title: "Funding opportunities workbook",
       blurb: "March 2026 planning archive; use the checked calls on Grants for current dates.",
       summary: "Funding opportunities and proposal notes from the planning workbook.",
@@ -87,12 +87,12 @@
 
   const GROUPS = [
     { key: "faq", view: "faq", title: "Frequently asked questions about research in our department" },
-    { key: "downloads", view: "resources", title: "Downloads" },
+    { key: "department", view: "resources", title: "From our department" },
   ];
   // Each group lives on one top-level tab: the FAQ tab (#faq) or the Resources tab (#resources).
   const VIEWS = {
     faq: { root: "faq-root", eye: "Research in HRM&OB", title: "FAQ", crumb: "FAQ", intro: "Answers to common questions about research in our department." },
-    resources: { root: "resources-root", eye: "Guidance", title: "Resources", crumb: "Resources", intro: "Presentations and downloads for our research." },
+    resources: { root: "resources-root", eye: "Guidance", title: "Resources", crumb: "Resources", intro: "Presentations and files from our department, and general updates for researchers." },
   };
   PAGES.forEach((page) => {
     page.view = GROUPS.find((group) => group.key === page.group).view;
@@ -372,23 +372,27 @@
     const v = VIEWS[view];
     const groups = GROUPS.filter((group) => group.view === view).map((group) => {
       const pages = PAGES.filter((page) => page.group === group.key);
-      const cards = pages.map((page, index) => (group.key === "downloads" ? downloadCard(page) : faqCard(page, index))).join("");
+      const cards = pages.map((page, index) => (group.key === "department" ? downloadCard(page) : faqCard(page, index))).join("");
       return `<section class="rp-group rp-group-${group.key}"${view === "faq" ? "" : ` aria-labelledby="rp-group-${group.key}"`}>
         ${view === "faq" ? "" : `<h3 id="rp-group-${group.key}" class="overview-h3">${esc(group.title)}</h3>`}
         ${group.key === "faq" ? `<p class="rp-disclaimer">${esc(FAQ_DISCLAIMER)}</p>` : ""}
         <div class="rp-cards">${cards}</div>
+        ${group.key === "department" ? `<p class="rp-more"><a class="section-link" href="#grants">Grant calls, opportunities and proposal tips</a></p>` : ""}
       </section>`;
     }).join("");
     const share = view === "resources"
       ? `<div class="rg-note rp-share"><strong>Something to share?</strong><p>Let me know if you have a presentation, dataset, tool, or anything else that would be useful for colleagues.</p><a class="section-link" href="${MAILTO}?subject=Something%20to%20share%20on%20the%20dashboard">Email the research director</a></div>`
       : "";
-    const news = view === "resources" ? `<section class="rp-group"><h3 class="overview-h3">Research News resources</h3>
-      <div class="rp-cards">${(resourceData.researchNewsResources || []).map((item) => `<a class="rp-card" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener"><span class="rp-card-text"><strong>${esc(item.name)}</strong><span>${esc(item.timing || item.sourceLabel)}</span></span></a>`).join("")}</div>
-      <p><a class="section-link" href="#grants">Grant calls, opportunities and proposal tips</a></p></section>` : "";
+    // General updates: workshops and news for all researchers, from FEB Research News (resource-data.json).
+    const updates = resourceData.researchNewsResources || [];
+    const news = view === "resources" && updates.length ? `<section class="rp-group rp-group-updates" aria-labelledby="rp-group-updates">
+      <h3 id="rp-group-updates" class="overview-h3">General updates</h3>
+      <p class="rp-group-intro">Workshops and news for all researchers, from FEB Research News.</p>
+      <div class="rp-cards">${updates.map((item) => `<a class="rp-card rp-news" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener"><span class="rp-card-body"><span class="rp-card-text"><strong>${esc(item.name)}</strong><span>${esc(item.timing || item.sourceLabel)}</span></span></span></a>`).join("")}</div>
+      </section>` : "";
     return `<div class="sec-head compact"><div><p class="eye">${esc(v.eye)}</p><h2 class="h2">${esc(v.title)}</h2></div></div>
       <p class="section-intro page-intro">${esc(v.intro)}</p>
-      <div class="rp-landing rp-landing-${view}">${groups}</div>
-      ${news}
+      <div class="rp-landing rp-landing-${view}">${groups}${news}</div>
       ${share}`;
   }
 

@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261028-grants";
+const DATA_VERSION = "20261028-resources";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -1883,7 +1883,7 @@ function syncViewContext() {
     network: `${roster} | Publication ties: ${publicationWindow}`,
     metrics: `${metricCohortLabel()} · HRM&OB affiliates ${state.includeAffiliatedResearchers?"included":"excluded"} · ${metricsWindow}`,
     grants: `${roster} | Profile-match evidence: ${publicationWindow} | Source and review dates are shown with the records`,
-    resources: "Presentations and downloads",
+    resources: "Department presentations and files, and general updates",
     faq: "Frequently asked questions about research in our department",
     contact: "Corrections, suggestions, and staff profile updates",
   };
