@@ -333,39 +333,50 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-09-25"
+      "sourceCheckedDate": "2026-10-28"
     },
     {
       "stage": "Senior",
-      "name": "NWO Vici SSH 2026",
+      "name": "NWO Vici SSH 2027",
       "funder": "NWO",
       "amount": "€1,500,000",
       "duration": "5 years",
       "eligibility": "PhD obtained max 15 years ago",
       "successRate": "10-15%",
-      "deadline": "The 2026 round closed 8 September 2026. NWO has not yet published a next round.",
+      "deadline": "The 2026 round closed 8 September 2026. The 2027 call is in preparation: pre-proposals 9 March 2027 and full proposals 7 September 2027, both 14:00 (subject to change).",
       "tips": "Funds an entire research group. Pre-proposal stage closed March 2026. Full proposal then interview. The highest-prestige NWO individual grant. Expect intense competition from across all SSH disciplines.",
       "link": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026",
       "workbookDeadline": "Full proposal: 8 September 2026",
-      "timing": "The 2026 round closed 8 September 2026. NWO has not yet published a next round.",
-      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-ssh-2026",
-      "sourceLabel": "NWO Vici SSH 2026",
+      "workbookName": "NWO Vici SSH 2026",
+      "timing": "The 2026 round closed 8 September 2026. The 2027 call is in preparation: pre-proposals 9 March 2027 and full proposals 7 September 2027, both 14:00 (subject to change).",
+      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talentprogramma-vici-sgw-2027",
+      "sourceLabel": "NWO Vici SSH 2027 (in preparation)",
       "sourceNote": "",
-      "deadlineDate": "2026-09-08",
-      "nextDeadlineDate": null,
+      "deadlineDate": "2027-03-09",
+      "nextDeadlineDate": "2027-03-09",
       "deadlineDates": [
         {
           "date": "2026-09-08",
-          "label": "Full proposal",
+          "label": "2026 full proposal",
           "status": "passed"
+        },
+        {
+          "date": "2027-03-09",
+          "label": "Pre-proposal (provisional)",
+          "status": "later"
+        },
+        {
+          "date": "2027-09-07",
+          "label": "Full proposal (provisional)",
+          "status": "later"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "passed",
-      "deadlineStatusLabel": "Passed",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-09-25"
+      "sourceCheckedDate": "2026-10-28"
     },
     {
       "stage": "Senior",
@@ -429,7 +440,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-09-25"
+      "sourceCheckedDate": "2026-10-28"
     },
     {
       "stage": "Senior",
@@ -504,29 +515,36 @@
     },
     {
       "stage": "Watch List",
-      "name": "NWO Gravitation (Zwaartekracht) 7th Round",
+      "name": "NWO Gravitation 2027",
       "funder": "NWO",
       "amount": "€19-23M",
       "duration": "Up to 10 years",
       "eligibility": "World-class research consortium",
       "successRate": "",
-      "deadline": "NWO plans a seventh round for 2026 but has not published dates.",
+      "deadline": "Deadline 30 March 2027, 14:00 CET. Only university Executive Boards submit, up to four proposals each; the UG chose its four consortia in 2025 (UG Funding News, October 2026).",
       "tips": "Budget €161M for approximately 6 to 7 consortia. Requires absolute world-leading position. SSH-oriented Gravitation projects exist. Extremely competitive but transformative if successful.",
       "link": "https://www.nwo.nl/en/researchprogrammes/gravitation",
       "workbookDeadline": "Call expected 2026. No date yet.",
-      "timing": "NWO plans a seventh round for 2026 but has not published dates.",
-      "sourceUrl": "https://www.nwo.nl/en/researchprogrammes/gravitation",
-      "sourceLabel": "NWO Gravitation",
+      "workbookName": "NWO Gravitation (Zwaartekracht) 7th Round",
+      "timing": "Deadline 30 March 2027, 14:00 CET. Only university Executive Boards submit, up to four proposals each; the UG chose its four consortia in 2025 (UG Funding News, October 2026).",
+      "sourceUrl": "https://www.nwo.nl/en/calls/gravitation-2027-frontier-research-for-consortia",
+      "sourceLabel": "NWO Gravitation 2027",
       "sourceNote": "",
-      "deadlineDate": null,
-      "nextDeadlineDate": null,
-      "deadlineDates": [],
+      "deadlineDate": "2027-03-30",
+      "nextDeadlineDate": "2027-03-30",
+      "deadlineDates": [
+        {
+          "date": "2027-03-30",
+          "label": "Proposal (university boards only)",
+          "status": "later"
+        }
+      ],
       "deadlineMonth": null,
-      "deadlinePrecision": "unconfirmed",
-      "deadlineStatus": "date-unconfirmed",
-      "deadlineStatusLabel": "Date not confirmed",
+      "deadlinePrecision": "day",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-09-25"
+      "sourceCheckedDate": "2026-10-28"
     },
     {
       "stage": "Watch List",
@@ -795,7 +813,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-09-25"
+      "sourceCheckedDate": "2026-10-28"
     },
     {
       "stage": "Watch List",
