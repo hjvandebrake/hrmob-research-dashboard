@@ -17,8 +17,8 @@
       icon: "grant",
       group: "faq",
       title: "What steps do I take when applying for a grant?",
-      summary: "Who to contact, and what a grant means for your teaching and for new positions.",
-      note: "I will refine these steps with the funding officer.",
+      summary: "Three steps: the department, the funding officer, and project control. Also for teaching grants.",
+      note: "Checked with Lars van den Brink, FEB funding officer, in October 2026.",
     },
     {
       key: "phd-supervision",
@@ -101,44 +101,68 @@
   // Grant application flow. Each node: kind (start, step, decision, branch, end), map label, title, body,
   // optional contact, and either next or answers [{label, next, record}].
   const GRANT_FLOW = {
-    order: ["start", "supervisor", "funding", "teaching", "hiring", "checklist"],
+    order: ["start", "department", "funding", "projectControl", "teaching", "hiring", "checklist"],
     nodes: {
       start: {
         kind: "start",
         map: "You want to apply",
         title: "You want to apply for a grant",
-        body: "Good. Most steps below take little time, but several people need to hear about your plans early. Walk through the questions to get a checklist of who to contact and what it means for your work.",
-        next: "supervisor",
-        nextLabel: "Start",
-      },
-      supervisor: {
-        kind: "decision",
-        map: "Discuss with your supervisor",
-        title: "Discuss the idea with your supervisor",
-        body: "Before you invest serious time, talk about the call, the fit with your research line, the timing, and what the application and the project would mean for your other tasks.",
-        contact: "Your supervisor",
-        question: "Does your supervisor support the application?",
+        body: "Applying takes three steps: the department, the funding officer, and project control. A few questions then show what the grant means for your teaching and for new positions, and you get a checklist of who to contact.",
+        question: "What kind of grant is it?",
         answers: [
-          { label: "Yes", next: "funding", record: { supervisor: "yes" } },
-          { label: "Not yet", next: "rework", record: { supervisor: "not-yet" } },
+          { label: "Research grant", next: "department", record: { start: "research" } },
+          { label: "Teaching grant", next: "teachingGrant", record: { start: "teaching" } },
+        ],
+      },
+      teachingGrant: {
+        kind: "branch",
+        parent: "start",
+        map: "Start with Lars",
+        title: "Teaching grants also go through the funding officer",
+        body: "Lars van den Brink handles teaching grants too. For Comenius grants he coordinates with the vice-dean for education, currently Pieter Jansen. The Centre for Teaching and Learning (formerly the Teaching Academy Groningen) also supports teaching grants, but it is not always clear who handles which one, so start with Lars. The three steps below apply as well.",
+        contact: "Lars van den Brink, FEB funding officer",
+        email: "l.h.van.den.brink@rug.nl",
+        next: "department",
+        nextLabel: "Next",
+      },
+      department: {
+        kind: "decision",
+        map: "Department",
+        title: "First, discuss it with the department",
+        body: "Before you invest serious time, talk to the department chair and the research director. The chair looks at what the application means for our teaching capacity, and at its content. The research director looks at the academic side: the topic, and whether it fits.",
+        contact: "Department chair and research director",
+        question: "Do the chair and the research director support the application?",
+        answers: [
+          { label: "Yes", next: "funding", record: { department: "yes" } },
+          { label: "Not yet", next: "rework", record: { department: "not-yet" } },
         ],
       },
       rework: {
         kind: "branch",
-        parent: "supervisor",
+        parent: "department",
         map: "Rework the plan",
         title: "Rework the plan first",
-        body: "Use the feedback to sharpen the idea, pick a better-fitting call, or move to a later round. Most funders have several rounds per year, and the call calendar on the Grants page shows what is coming. Then discuss it again.",
-        next: "supervisor",
+        body: "Use their feedback to sharpen the idea, pick a better-fitting call, or move to a later round. Most funders have several rounds per year, and the call calendar on the Grants page shows what is coming. Then discuss it again.",
+        next: "department",
         nextLabel: "Discuss again",
       },
       funding: {
         kind: "step",
-        map: "Inform the funding officer",
-        title: "Let the funding officer know",
-        body: "For almost every grant you need the funding officer at some point, for example for the budget, the funder's rules, and the internal approval of the application. Contact them early, ideally when you start writing, so there is time to sort out the budget and any guarantees.",
+        map: "Funding officer",
+        title: "Contact the funding officer",
+        body: "The funding officer knows the funder's rules and the internal approval, and arranges guarantees. Contact him early, ideally when you start writing. He is also setting up faculty groups in which applicants for calls such as Explore (formerly XS), Veni and Vidi can work together.",
         contact: "Lars van den Brink, FEB funding officer (FEB Research Office)",
         email: "l.h.van.den.brink@rug.nl",
+        next: "projectControl",
+        nextLabel: "Next",
+      },
+      projectControl: {
+        kind: "step",
+        map: "Project control",
+        title: "Check the budget with project control",
+        body: "Project control helps with the budget and gives advice on costs. You can also ask the funding officer about the budget. It does not matter much whether you see project control or the funding officer first, as long as you see both. Project control usually comes last.",
+        contact: "FEB project control",
+        email: "projectcontrol.feb@rug.nl",
         next: "teaching",
         nextLabel: "Next",
       },
@@ -159,7 +183,7 @@
         parent: "teaching",
         map: "Talk to the scheduler",
         title: "Discuss the teaching reduction",
-        body: "Teaching is planned well in advance. The hours in the grant budget determine how much teaching you hand over. Discuss with the scheduler or the teaching director which teaching that would be and from when, so the reduction can be planned if the grant is awarded. If you are not sure whether the grant pays for your own time, check the budget with the funding officer first.",
+        body: "The chair has already looked at what the application means for our teaching capacity. Teaching is planned well in advance, and the hours in the grant budget determine how much teaching you hand over. Discuss with the scheduler or the teaching director which teaching that would be and from when, so the reduction can be planned if the grant is awarded. If you are not sure whether the grant pays for your own time, check the budget with project control or the funding officer first.",
         contact: "Scheduler or teaching director",
         next: "hiring",
         nextLabel: "Next",
@@ -834,7 +858,7 @@
 
   function grantGo(next, record) {
     if (record) Object.assign(state.grantRecord, record);
-    if (next === "supervisor") delete state.grantRecord.supervisor;
+    if (next === "department") delete state.grantRecord.department;
     state.grantPath.push(next);
     redraw("rg-grant-card");
   }
@@ -847,7 +871,7 @@
       const nextId = state.grantPath[i + 1];
       const answer = (node.answers || []).find((item) => item.next === nextId);
       if (answer && answer.record) Object.assign(record, answer.record);
-      if (nextId === "supervisor") delete record.supervisor;
+      if (nextId === "department") delete record.department;
     }
     state.grantRecord = record;
     redraw("rg-grant-card");
@@ -920,12 +944,16 @@
   function renderChecklist() {
     const r = state.grantRecord;
     const items = [
-      { done: true, who: "Your supervisor", what: "Supports the application." },
-      { who: "Lars van den Brink, FEB funding officer", what: "Budget, funder rules, and internal approval. Contact him early.", email: "l.h.van.den.brink@rug.nl" },
+      { done: true, who: "Department chair and research director", what: "Support the application." },
+      r.start === "teaching"
+        ? { who: "Lars van den Brink, FEB funding officer", what: "Handles teaching grants and coordinates Comenius with the vice-dean for education. Contact him early.", email: "l.h.van.den.brink@rug.nl" }
+        : { who: "Lars van den Brink, FEB funding officer", what: "Funder rules, internal approval, and guarantees. Contact him early.", email: "l.h.van.den.brink@rug.nl" },
+      { who: "FEB project control", what: "Budget and advice. Usually the last step.", email: "projectcontrol.feb@rug.nl" },
     ];
     if (r.teaching === "yes") items.push({ who: "Scheduler or teaching director", what: "Plan the reduction of your teaching if the grant is awarded." });
-    if (r.teaching === "unsure") items.push({ who: "Funding officer, then the scheduler", what: "Check whether the budget covers your own time. If it does, plan the teaching reduction with the scheduler or teaching director." });
+    if (r.teaching === "unsure") items.push({ who: "Project control or the funding officer, then the scheduler", what: "Check whether the budget covers your own time. If it does, plan the teaching reduction with the scheduler or teaching director." });
     if (r.hiring === "yes") items.push({ who: "Funding officer, department chair, and research director", what: "Arrange an embedding guarantee for the new or extended positions, well before the deadline." });
+    items.push({ who: "Colleagues", what: "Ask for feedback yourself. There is no faculty feedback system at the moment; the funding officer is setting up groups for calls such as Explore, Veni and Vidi." });
     const timeNote = r.teaching === "yes"
       ? "If the grant is awarded and reduces your teaching, you are no longer eligible for the department research pool for that period, because the grant already buys your time."
       : "While you work on a grant, you count toward the grant-based half of the department research pool, provided you are eligible.";

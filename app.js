@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261028-timeline";
+const DATA_VERSION = "20261028-lars";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -3013,6 +3013,7 @@ function grantCollaborationType(call) {
 }
 
 function grantNextStep(call) {
+  if (call.kind === "teaching") return "Talk to Lars van den Brink, FEB funding officer";
   const text = normalizeSearchText(collaborativeGrantText(call));
   if (/consortium|horizon|cost|partner|partnership/.test(text)) return "Find partners";
   if (/deadline|call|eligibility/.test(text)) return "Review call";
@@ -9339,13 +9340,14 @@ function renderCallCalendar() {
     state.selectedCallKey = (onTimeline.find((record) => record.timing.kind !== "passed") || onTimeline[0] || undated[0])?.key || "";
   }
   callCalendarView = { start, end, today, items: onTimeline, records };
-  const chip = (record) => `<button type="button" class="viz-chip${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
+  const chip = (record) => `<button type="button" class="viz-chip${record.call.kind === "teaching" ? " is-teaching" : ""}${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
   els.callCalendar.innerHTML = `
     <div class="call-legend" aria-hidden="true">
       <span><i class="tone-soon"></i>Within 30 days</span>
       <span><i class="tone-upcoming"></i>Within 120 days</span>
       <span><i class="tone-later"></i>Later</span>
       <span><i class="tone-month"></i>Month known, day not confirmed</span>
+      ${records.some((record) => record.call.kind === "teaching") ? `<span><i class="tone-teaching"></i>Teaching grant</span>` : ""}
       ${state.resourceShowClosed ? `<span><i class="tone-passed"></i>Closed</span>` : ""}
       <span class="call-legend-hint">Select a call for its details</span>
     </div>
@@ -9426,12 +9428,12 @@ function drawCallCalendar() {
     const selected = item.record.key === state.selectedCallKey;
     const when = callWhenText(item.record.timing, view.today);
     const group = vizSvg("g", {
-      class: `call-pill tone-${tone}${isMonth ? " is-month" : ""}${selected ? " is-selected" : ""}`,
+      class: `call-pill tone-${tone}${isMonth ? " is-month" : ""}${item.record.call.kind === "teaching" ? " is-teaching" : ""}${selected ? " is-selected" : ""}`,
       "data-call-key": item.record.key,
       tabindex: 0,
       role: "button",
       "aria-pressed": String(selected),
-      "aria-label": `${item.record.call.name}. ${when}.`,
+      "aria-label": `${item.record.call.name}${item.record.call.kind === "teaching" ? " (teaching grant)" : ""}. ${when}.`,
     }, svg);
     if (isMonth) {
       vizSvg("rect", { class: "call-pill-shape", x: item.bandA.toFixed(1), y: y.toFixed(1), width: (item.bandB - item.bandA).toFixed(1), height: pillHeight, rx: 13 }, group);

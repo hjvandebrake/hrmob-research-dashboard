@@ -3649,6 +3649,7 @@ footer {
 .call-legend .tone-later { background: var(--ink-400); }
 .call-legend .tone-passed { background: var(--ink-300); }
 .call-legend .tone-month { background: var(--teal-lt); border-radius: 5px; box-shadow: inset 0 0 0 1px #86b9ba; width: 18px; }
+.call-legend .tone-teaching { background: oklch(97% 0.025 85); border: 1px dashed oklch(68% 0.08 80); border-radius: 5px; height: 11px; width: 18px; }
 .call-calendar-scroll { overflow-x: auto; }
 .call-grid { shape-rendering: crispEdges; stroke: var(--ink-200); stroke-width: 1; }
 .call-month-label { fill: var(--ink-500); font-size: 10.5px; font-weight: 600; }
@@ -3666,6 +3667,9 @@ footer {
 .call-pill.is-month .call-pill-shape { fill: var(--teal-lt); stroke: #86b9ba; }
 .call-pill.is-month.tone-soon .call-pill-shape { fill: var(--red-lt); stroke: #d7a58f; }
 .call-pill.is-month.tone-later .call-pill-shape { fill: var(--ink-100); stroke: var(--ink-300); }
+/* Teaching grants: a sand tint and dashed outline; the dot keeps the deadline colour. */
+.call-pill.is-teaching .call-pill-shape { fill: oklch(97% 0.025 85); stroke: oklch(68% 0.08 80); stroke-dasharray: 4 3; }
+.viz-chip.is-teaching { background: oklch(97% 0.025 85); border-color: oklch(68% 0.08 80); border-style: dashed; }
 .call-pill:hover .call-pill-shape { stroke: var(--ink-700); }
 .call-pill.is-selected .call-pill-shape { stroke: var(--red); stroke-width: 1.6; }
 .call-pill:focus-visible .call-pill-shape { stroke: var(--focus-ring); stroke-width: 2.4; }

@@ -1575,6 +1575,90 @@
       "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-09-25"
+    },
+    {
+      "name": "Comenius Teaching Fellows 2027",
+      "kind": "teaching",
+      "funder": "NKO (formerly NRO)",
+      "stage": "Teaching grant",
+      "amount": "€45,000–€50,000",
+      "eligibility": "At least two years of teaching experience in higher education. Applicants also review other applications in this round.",
+      "timing": "Applications close 12 November 2026, 14:00 CET.",
+      "why": "Course-level teaching innovation. 2027 themes: future forms of education, student wellbeing, labour-market alignment, or a free theme.",
+      "sourceUrl": "https://www.rug.nl/about-ug/organization/service-departments/centre-for-teaching-and-learning/educational-research-and-funding/comenius/",
+      "sourceLabel": "Comenius Teaching Fellows ho 2027 (Staatscourant 2026, 23166; UG Centre for Teaching and Learning)",
+      "sourceCheckedDate": "2026-10-28",
+      "deadline": "Applications close 12 November 2026, 14:00 CET.",
+      "deadlineDate": "2026-11-12",
+      "nextDeadlineDate": "2026-11-12",
+      "deadlineDates": [
+        {
+          "date": "2026-11-12",
+          "label": "Application",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source"
+    },
+    {
+      "name": "Comenius Senior Fellows 2027",
+      "kind": "teaching",
+      "funder": "NKO (formerly NRO)",
+      "stage": "Teaching grant",
+      "amount": "Up to €100,000",
+      "eligibility": "At least five years of teaching experience; one candidate per faculty. Only applicants who submitted an intention (30 June 2026) and pre-registration (17 September 2026) can apply.",
+      "timing": "Full applications close 21 January 2027, 14:00 CET, for pre-registered applicants only.",
+      "why": "Programme-level teaching innovation over about two years.",
+      "sourceUrl": "https://www.rug.nl/about-ug/organization/service-departments/centre-for-teaching-and-learning/educational-research-and-funding/comenius/",
+      "sourceLabel": "Comenius Senior Fellows ho 2027 (Staatscourant 2026, 17921; UG Centre for Teaching and Learning)",
+      "sourceCheckedDate": "2026-10-28",
+      "deadline": "Full applications close 21 January 2027, 14:00 CET, for pre-registered applicants only.",
+      "deadlineDate": "2027-01-21",
+      "nextDeadlineDate": "2027-01-21",
+      "deadlineDates": [
+        {
+          "date": "2027-01-21",
+          "label": "Full application (pre-registered only)",
+          "status": "upcoming"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source"
+    },
+    {
+      "name": "UG SoTL grant 2027",
+      "kind": "teaching",
+      "funder": "UG Centre for Teaching and Learning",
+      "stage": "Teaching grant",
+      "amount": "Up to €5,000 per project",
+      "eligibility": "UG or UMCG contract of at least 0.5 FTE, with at least 0.2 FTE teaching and direct student contact; one application per year.",
+      "timing": "Proposals close 31 May 2027, 23:59 CEST. Up to twelve grants.",
+      "why": "Small grant for research-informed inquiry into your own teaching, from one lecture to a whole course.",
+      "sourceUrl": "https://www.rug.nl/about-ug/organization/service-departments/centre-for-teaching-and-learning/educational-research-and-funding/sotl-grant?lang=en",
+      "sourceLabel": "UG CTL Scholarship of Teaching and Learning grant",
+      "sourceCheckedDate": "2026-10-28",
+      "deadline": "Proposals close 31 May 2027, 23:59 CEST. Up to twelve grants.",
+      "deadlineDate": "2027-05-31",
+      "nextDeadlineDate": "2027-05-31",
+      "deadlineDates": [
+        {
+          "date": "2027-05-31",
+          "label": "Proposal",
+          "status": "later"
+        }
+      ],
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
+      "deadlineSource": "official-source"
     }
   ],
   "tips": [
