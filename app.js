@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261027-lunchrecord";
+const DATA_VERSION = "20261028-grants";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -1724,7 +1724,10 @@ function applyRouteFromHash() {
     route.tab = "faq";
     route.legacyTab = true;
   }
-  if (route.tab === "resources") state.resourcePage = validResourcePage(route.detail, "resources") ? route.detail : "";
+  if (route.tab === "resources") {
+    const detail = route.detail === "follow-up" ? "grants" : route.detail; // "Follow-up" was renamed "Grants" on 28 October 2026
+    state.resourcePage = validResourcePage(detail, "resources") ? detail : "";
+  }
   if (route.tab === "faq") state.faqPage = validResourcePage(route.detail, "faq") ? route.detail : "";
   if (route.tab === "network") {
     state.networkPersonId = route.detail || "";

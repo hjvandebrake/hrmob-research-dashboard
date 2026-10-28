@@ -48,19 +48,20 @@
       key: "ai-in-research",
       group: "downloads",
       title: "Using AI well in research",
+      hidden: true,
       summary: "My follow-up to the research day: what we want AI to do for our research, and where we need to be careful.",
       blurb: "Interactive follow-up to the research day on AI in our research.",
       format: "Presentation",
       image: "resources/ai-in-research/preview.webp",
     },
     {
-      key: "follow-up",
+      key: "grants",
       group: "downloads",
-      title: "Follow-up",
-      summary: "The lunch meeting after the research day, with a short look back, an update on AI, and grants.",
-      blurb: "Interactive presentation for the lunch meeting after the research day, with grants as the main topic.",
+      title: "Grants",
+      summary: "Our lunch meeting on grants: the calls in the coming year, help from colleagues, and what we concluded.",
+      blurb: "Interactive presentation on grants, with what we concluded on 27 October 2026.",
       format: "Presentation",
-      image: "resources/follow-up/preview.webp",
+      image: "resources/grants/preview.webp",
     },
     {
       key: "journal-scores",
@@ -82,7 +83,7 @@
       file: "assets/downloads/hrmob-grant-opportunities-2026-2027.xlsx",
       direct: true,
     },
-  ];
+  ].filter((page) => !page.hidden); // hidden pages stay on the site but are not listed or routed
 
   const GROUPS = [
     { key: "faq", view: "faq", title: "Frequently asked questions about research in our department" },
@@ -464,7 +465,7 @@
     else if (FAQ_ARTICLES[page.key]) body = renderArticle(FAQ_ARTICLES[page.key]);
     else if (page.key === "research-day") body = renderSlides(page);
     else if (page.key === "ai-in-research") body = renderAiPresentation();
-    else if (page.key === "follow-up") body = renderFollowUp();
+    else if (page.key === "grants") body = renderGrants();
     else if (page.key === "research-time") body = renderTimeGuide();
     else if (page.key === "grant-steps") body = renderGrantGuide();
     else if (page.key === "journal-scores") body = renderJournalScores(page);
@@ -694,15 +695,15 @@
       </div>`;
   }
 
-  function renderFollowUp() {
+  function renderGrants() {
     return `<div class="ai-guidance rp-ai">
-        <a class="ai-guidance-preview" href="resources/follow-up/" aria-label="Open the presentation Helping each other with grants">
-          <img src="resources/follow-up/preview.webp" width="960" height="540" alt="Opening slide of the presentation Helping each other with grants" loading="lazy">
+        <a class="ai-guidance-preview" href="resources/grants/" aria-label="Open the presentation Helping each other with grants">
+          <img src="resources/grants/preview.webp" width="960" height="540" alt="Opening slide of the presentation Helping each other with grants" loading="lazy">
         </a>
         <div class="ai-guidance-copy">
-          <p>The presentation for our lunch meeting after the research day. It starts with a short look back at what we discussed and agreed on 15 September and an update on AI, with a sneak preview of my analysis for the faculty working group. Most of the meeting is about grants, including what FEB&rsquo;s strategic plan asks of us, the calls in the coming year, our funding coordinator Lars van den Brink, and how we can help each other with applications. The discussion slides show what we concluded at the lunch on 27 October, with our notes, and the last slide summarises them.</p>
+          <p>The presentation for our lunch meeting on grants after the research day. It starts with a short look back at what we discussed and agreed on 15 September. Most of it is about grants: what FEB&rsquo;s strategic plan asks of us, the calls in the coming year, our funding coordinator Lars van den Brink, and how we can help each other with applications. The discussion slides show what we concluded at the lunch on 27 October, with our notes, and the last slide summarises them.</p>
           <div class="ai-guidance-actions">
-            <a class="ai-guidance-open" href="resources/follow-up/">Open the presentation</a>
+            <a class="ai-guidance-open" href="resources/grants/">Open the presentation</a>
             <a class="section-link" href="mailto:h.j.van.de.brake@rug.nl?subject=Grant%20plans">Tell me about your plans</a>
           </div>
         </div>
