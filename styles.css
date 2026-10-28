@@ -4354,3 +4354,13 @@ html:not(.auth-locked) .auth-gate {
 .rp-mine { max-width: none; }
 .rp-pool-slider strong { color: var(--red); margin-left: 6px; }
 .rg-mail { font-weight: 600; color: var(--red); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* Grants page: link to the grant steps (Joost, 28 October 2026) */
+.grant-steps-callout { align-items: center; background: var(--white); border: 1px solid var(--ink-200); border-left: 4px solid var(--red); border-radius: 10px; color: var(--ink-900); display: flex; gap: 16px; margin: 0 0 22px; padding: 16px 20px; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
+.grant-steps-callout:hover { border-color: var(--red); box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.grant-steps-callout:hover .rp-card-icon { background: var(--red); color: var(--white); }
+.grant-steps-copy { display: flex; flex: 1; flex-direction: column; gap: 2px; min-width: 0; }
+.grant-steps-copy strong { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; }
+.grant-steps-copy span { color: var(--ink-700); font-size: 0.92rem; }
+.grant-steps-arrow { color: var(--red); flex: none; font-size: 1.3rem; }
+@media (max-width: 640px) { .grant-steps-callout { gap: 12px; padding: 14px; } .grant-steps-callout .rp-card-icon { flex-basis: 38px; height: 38px; width: 38px; } }

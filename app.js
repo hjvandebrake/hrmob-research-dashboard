@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261028-lars";
+const DATA_VERSION = "20261028-callout";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -9336,9 +9336,8 @@ function renderCallCalendar() {
     else if (timing.kind === "passed") { if (state.resourceShowClosed && timing.date >= start) onTimeline.push(record); }
     else undated.push(record);
   });
-  if (!records.some((record) => record.key === state.selectedCallKey)) {
-    state.selectedCallKey = (onTimeline.find((record) => record.timing.kind !== "passed") || onTimeline[0] || undated[0])?.key || "";
-  }
+  // No call is selected until someone picks one (Joost, 28 October 2026).
+  if (state.selectedCallKey && !records.some((record) => record.key === state.selectedCallKey)) state.selectedCallKey = "";
   callCalendarView = { start, end, today, items: onTimeline, records };
   const chip = (record) => `<button type="button" class="viz-chip${record.call.kind === "teaching" ? " is-teaching" : ""}${record.key === state.selectedCallKey ? " is-selected" : ""}" data-call-key="${escapeHtml(record.key)}" aria-pressed="${record.key === state.selectedCallKey}">${escapeHtml(record.call.name)}${record.timing.kind === "exact" ? ` <small>${escapeHtml(formatIsoDisplayDate(record.timing.date))}</small>` : record.timing.kind === "month" ? ` <small>${escapeHtml(formatIsoMonth(record.timing.month))}</small>` : ""}</button>`;
   els.callCalendar.innerHTML = `
