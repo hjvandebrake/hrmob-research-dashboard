@@ -19,6 +19,7 @@
       title: "What steps do I take when applying for a grant?",
       summary: "Three steps: the department, the funding officer, and project control. Also for teaching grants.",
       note: "Checked with Lars van den Brink, FEB funding officer, in October 2026.",
+      checked: true,
     },
     {
       key: "phd-supervision",
@@ -507,7 +508,7 @@
     const back = page.view === "faq" ? "All questions" : "All resources";
     return `<a class="rp-back" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>
       <div class="sec-head compact rp-head"><div class="rp-head-title">${page.icon ? `<span class="rp-head-icon">${icon(page.icon)}</span>` : ""}<h2 class="h2">${journalFinder ? "Journal finder" : esc(page.title)}</h2></div></div>
-      ${page.group === "faq" ? `<p class="rp-disclaimer">${esc(FAQ_DISCLAIMER)}</p>` : ""}
+      ${page.group === "faq" && !page.checked ? `<p class="rp-disclaimer">${esc(FAQ_DISCLAIMER)}</p>` : ""}
       <div class="rp-content">${body}</div>
       ${page.note ? `<p class="rg-status small-muted">${esc(page.note)}</p>` : ""}
       ${journalFinder ? "" : `<a class="rp-back rp-back-bottom" href="#${page.view}"><span aria-hidden="true">&larr;</span> Back to ${esc(back.toLowerCase())}</a>`}
