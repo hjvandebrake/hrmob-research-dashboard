@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-10-22",
+    "generatedOn": "2026-10-29",
     "people": 528,
-    "publicationsChecked": 4303,
+    "publicationsChecked": 4304,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 588,
     "additionalBenchmarkLinks": 38,
@@ -24973,16 +24973,6 @@
         {
           "personId": "mkt-jw-bolderdijk",
           "author": "Jan Willem Bolderdijk",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-lb-mulder",
-          "author": "Mulder, L. B.",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "mkt-jw-bolderdijk",
-          "author": "Bolderdijk, J. W.",
           "method": "unique compatible author name"
         }
       ]
@@ -82585,6 +82575,24 @@
       ]
     },
     {
+      "id": "doi:10.1007/s12144-026-10217-2",
+      "doi": "10.1007/s12144-026-10217-2",
+      "publicationIds": [
+        "doi:10.1007/s12144-026-10217-2",
+        "doi:10.5167/uzh-436863"
+      ],
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-de-bloom",
+          "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1007/s11218-026-10232-y",
       "doi": "10.1007/s11218-026-10232-y",
       "publicationIds": [
@@ -83576,23 +83584,6 @@
       ]
     },
     {
-      "id": "doi:10.3389/fpsyg.2023.1122200",
-      "doi": "10.3389/fpsyg.2023.1122200",
-      "publicationIds": [
-        "doi:10.3389/fpsyg.2023.1122200"
-      ],
-      "people": [
-        "hrmob-m-arnold"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-m-arnold",
-          "author": "Arnold, M.",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "rug:2f78fb8e678cb9fd",
       "doi": "",
       "publicationIds": [
@@ -83833,23 +83824,6 @@
         {
           "personId": "hrmob-j-jordan",
           "author": "Jennifer Jordan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.3389/fpsyg.2022.812187",
-      "doi": "10.3389/fpsyg.2022.812187",
-      "publicationIds": [
-        "doi:10.3389/fpsyg.2022.812187"
-      ],
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-de-bloom",
-          "author": "Jessica de Bloom",
           "method": "unique compatible author name"
         }
       ]
@@ -85689,23 +85663,6 @@
       ]
     },
     {
-      "id": "doi:10.1539/joh.k8004",
-      "doi": "10.1539/joh.k8004",
-      "publicationIds": [
-        "doi:10.1539/joh.k8004"
-      ],
-      "people": [
-        "hrmob-j-de-bloom"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-de-bloom",
-          "author": "Jessica de Bloom",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2561209575",
       "doi": "",
       "publicationIds": [
@@ -85849,23 +85806,6 @@
         {
           "personId": "hrmob-fa-rink",
           "author": "Floor A. Rink",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.3200/gntp.168.3.323-360",
-      "doi": "10.3200/gntp.168.3.323-360",
-      "publicationIds": [
-        "doi:10.3200/gntp.168.3.323-360"
-      ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]
@@ -86801,6 +86741,74 @@
         {
           "personId": "hrmob-o-janssen",
           "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.3389/fpsyg.2023.1122200",
+      "doi": "10.3389/fpsyg.2023.1122200",
+      "publicationIds": [
+        "doi:10.3389/fpsyg.2023.1122200"
+      ],
+      "people": [
+        "hrmob-m-arnold"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-m-arnold",
+          "author": "Miriam Arnold",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.3389/fpsyg.2022.812187",
+      "doi": "10.3389/fpsyg.2022.812187",
+      "publicationIds": [
+        "doi:10.3389/fpsyg.2022.812187"
+      ],
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-de-bloom",
+          "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1539/joh.k8004",
+      "doi": "10.1539/joh.k8004",
+      "publicationIds": [
+        "doi:10.1539/joh.k8004"
+      ],
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-de-bloom",
+          "author": "Jessica de Bloom",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.3200/gntp.168.3.323-360",
+      "doi": "10.3200/gntp.168.3.323-360",
+      "publicationIds": [
+        "doi:10.3200/gntp.168.3.323-360"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]

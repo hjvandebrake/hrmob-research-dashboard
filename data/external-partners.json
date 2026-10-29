@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedOn": "2026-10-22",
+    "generatedOn": "2026-10-29",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 786,
-    "cacheHits": 784,
-    "fetched": 2,
-    "coveredPublications": 782,
+    "eligiblePublications": 779,
+    "cacheHits": 779,
+    "fetched": 0,
+    "coveredPublications": 775,
     "missingCacheRecords": 0,
-    "offline": false,
-    "partnerCount": 783,
+    "offline": true,
+    "partnerCount": 778,
     "heldInstitutionIds": [
       "https://openalex.org/I4210153428"
     ]
@@ -19,7 +19,7 @@
       "institution": "University of Amsterdam",
       "country": "NL",
       "type": "education",
-      "publicationCount": 148,
+      "publicationCount": 147,
       "staffIds": [
         "BN",
         "CDD",
@@ -1182,17 +1182,6 @@
           ]
         },
         {
-          "id": "doi:10.1080/1047840x.2010.498781",
-          "year": 2010,
-          "title": "Processing Modes and Creativity: Why (Not)?",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Matthijs Baas"
-          ]
-        },
-        {
           "id": "doi:10.1016/j.jesp.2010.05.001",
           "year": 2010,
           "title": "Psychological distance boosts value-behavior correspondence in ultimatum bargaining and integrative negotiation",
@@ -1816,7 +1805,7 @@
       "institution": "Leiden University",
       "country": "NL",
       "type": "education",
-      "publicationCount": 86,
+      "publicationCount": 84,
       "staffIds": [
         "BN",
         "CDD",
@@ -1940,17 +1929,6 @@
             "Laura Carlotta Hoenig",
             "Michael Rojek-Giffin",
             "Daan T. Scheepers"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x23002698",
-          "year": 2024,
-          "title": "Peace as prerequisite rather than consequence of cooperation",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Angelo Romano"
           ]
         },
         {
@@ -2306,17 +2284,6 @@
             "Jörg Gross",
             "Sonja Veistola",
             "Eric van Dijk"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x1900116x",
-          "year": 2019,
-          "title": "Asymmetric conflict: Structures, strategies, and settlement",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
           ]
         },
         {
@@ -4342,7 +4309,7 @@
       "institution": "Tampere University",
       "country": "FI",
       "type": "education",
-      "publicationCount": 36,
+      "publicationCount": 37,
       "staffIds": [
         "FR",
         "JDB",
@@ -4376,6 +4343,17 @@
         "Yasushi Suko"
       ],
       "publications": [
+        {
+          "id": "doi:10.1007/s12144-026-10217-2",
+          "year": 2026,
+          "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Anne Mäkikangas"
+          ]
+        },
         {
           "id": "doi:10.1080/17521882.2024.2332188",
           "year": 2024,
@@ -5261,6 +5239,17 @@
           ]
         },
         {
+          "id": "doi:10.1007/s12144-026-10217-2",
+          "year": 2026,
+          "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Kang Leng Ho"
+          ]
+        },
+        {
           "id": "doi:10.1016/j.jesp.2026.104939",
           "year": 2026,
           "title": "Strategically prosocial: Using acts of kindness to secure more valuable interaction partners",
@@ -5361,17 +5350,6 @@
           "id": "doi:10.1037/pspa0000378",
           "year": 2024,
           "title": "On being unpredictable and winning.",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Jörg Gross"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x23002698",
-          "year": 2024,
-          "title": "Peace as prerequisite rather than consequence of cooperation",
           "staffIds": [
             "CDD"
           ],
@@ -6906,7 +6884,7 @@
       "institution": "Sapienza University of Rome",
       "country": "IT",
       "type": "education",
-      "publicationCount": 19,
+      "publicationCount": 18,
       "staffIds": [
         "CDD",
         "JJ",
@@ -7128,17 +7106,6 @@
           "authors": [
             "Mauro Giacomantonio",
             "Lucia Mannetti"
-          ]
-        },
-        {
-          "id": "doi:10.1080/1047840x.2010.498781",
-          "year": 2010,
-          "title": "Processing Modes and Creativity: Why (Not)?",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Mauro Giacomantonio"
           ]
         },
         {
@@ -8450,164 +8417,6 @@
       ]
     },
     {
-      "id": "de:hochschule bonn rhein sieg",
-      "institution": "Hochschule Bonn-Rhein-Sieg",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 12,
-      "staffIds": [
-        "FR",
-        "JDB"
-      ],
-      "authors": [
-        "Anniina Virtanen",
-        "Christine Syrek",
-        "Dirk Lehr",
-        "Jo Annika Reins",
-        "Ulla Kinnunen"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.3389/fdgth.2026.1698339",
-          "year": 2026,
-          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ijop.12761",
-          "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.shaw.2021.12.936",
-          "year": 2022,
-          "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.959296",
-          "year": 2022,
-          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.16993/sjwop.129",
-          "year": 2022,
-          "title": "Recovery Across Different Temporal Settings: How Lunchtime Activities Influence Evening Activities",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.812187",
-          "year": 2022,
-          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2021.784844",
-          "year": 2021,
-          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1186/s12889-020-09354-5",
-          "year": 2020,
-          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10902-020-00247-3",
-          "year": 2020,
-          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        },
-        {
-          "id": "doi:10.5117/2019.032.004.003",
-          "year": 2019,
-          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Anniina Virtanen",
-            "Jo Annika Reins",
-            "Christine Syrek",
-            "Dirk Lehr",
-            "Ulla Kinnunen"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10869-019-09672-5",
-          "year": 2019,
-          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christine Syrek"
-          ]
-        }
-      ]
-    },
-    {
       "id": "hu:e tv s lor nd university",
       "institution": "Eötvös Loránd University",
       "country": "HU",
@@ -8822,6 +8631,152 @@
             "Anna Kende",
             "Nóra Anna Lantos",
             "Boglárka Nyúl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:hochschule bonn rhein sieg",
+      "institution": "Hochschule Bonn-Rhein-Sieg",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 11,
+      "staffIds": [
+        "FR",
+        "JDB"
+      ],
+      "authors": [
+        "Anniina Virtanen",
+        "Christine Syrek",
+        "Dirk Lehr",
+        "Jo Annika Reins",
+        "Ulla Kinnunen"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fdgth.2026.1698339",
+          "year": 2026,
+          "title": "Effectiveness of the mobile application Holidaily in reducing work-related rumination when returning to work after vacation: a randomized controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ijop.12761",
+          "year": 2022,
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.shaw.2021.12.936",
+          "year": 2022,
+          "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
+          "staffIds": [
+            "FR",
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.959296",
+          "year": 2022,
+          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.16993/sjwop.129",
+          "year": 2022,
+          "title": "Recovery Across Different Temporal Settings: How Lunchtime Activities Influence Evening Activities",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.812187",
+          "year": 2022,
+          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2021.784844",
+          "year": 2021,
+          "title": "Well Recovered and More Creative? A Longitudinal Study on the Relationship Between Vacation and Creativity",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12889-020-09354-5",
+          "year": 2020,
+          "title": "Efficacy of a smartphone-based intervention — “Holidaily” — promoting recovery behaviour in workers after a vacation: study protocol for a randomised controlled trial",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10902-020-00247-3",
+          "year": 2020,
+          "title": "Need Satisfaction and Optimal Functioning at Leisure and Work: A Longitudinal Validation Study of the DRAMMA Model",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
+          ]
+        },
+        {
+          "id": "doi:10.5117/2019.032.004.003",
+          "year": 2019,
+          "title": "Promoting and prolonging the beneficial effects of a vacation with the help of a smartphone-based intervention",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Anniina Virtanen",
+            "Jo Annika Reins",
+            "Christine Syrek",
+            "Dirk Lehr",
+            "Ulla Kinnunen"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10869-019-09672-5",
+          "year": 2019,
+          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christine Syrek"
           ]
         }
       ]
@@ -17107,122 +17062,6 @@
       ]
     },
     {
-      "id": "at:university of vienna",
-      "institution": "University of Vienna",
-      "country": "AT",
-      "type": "education",
-      "publicationCount": 7,
-      "staffIds": [
-        "FR",
-        "JDB",
-        "JL",
-        "LM"
-      ],
-      "authors": [
-        "Boryana Todorova",
-        "Claus Lamm",
-        "Ekaterina Pronizius",
-        "Jana Kühnel",
-        "Jonas P. Nitschke",
-        "Kimberly C Doell",
-        "Markus Roman Tünte",
-        "Nace Mikuš",
-        "Sandra J. Geiger",
-        "Sari R. R. Nijssen",
-        "Stefan Schulreich",
-        "Vanessa Bühler"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Sandra J. Geiger"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Kimberly C Doell",
-            "Boryana Todorova",
-            "Ekaterina Pronizius",
-            "Claus Lamm",
-            "Sandra J. Geiger",
-            "Nace Mikuš",
-            "Sari R. R. Nijssen",
-            "Jonas P. Nitschke",
-            "Stefan Schulreich"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ijop.12761",
-          "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Jana Kühnel"
-          ]
-        },
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Jana Kühnel"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.812187",
-          "year": 2022,
-          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Jana Kühnel"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Vanessa Bühler",
-            "Markus Roman Tünte"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10869-019-09672-5",
-          "year": 2019,
-          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Jana Kühnel"
-          ]
-        }
-      ]
-    },
-    {
       "id": "gb:imperial college london",
       "institution": "Imperial College London",
       "country": "GB",
@@ -18294,6 +18133,109 @@
       ]
     },
     {
+      "id": "at:university of vienna",
+      "institution": "University of Vienna",
+      "country": "AT",
+      "type": "education",
+      "publicationCount": 6,
+      "staffIds": [
+        "JDB",
+        "JL",
+        "LM"
+      ],
+      "authors": [
+        "Boryana Todorova",
+        "Claus Lamm",
+        "Ekaterina Pronizius",
+        "Jana Kühnel",
+        "Jonas P. Nitschke",
+        "Kimberly C Doell",
+        "Markus Roman Tünte",
+        "Nace Mikuš",
+        "Sandra J. Geiger",
+        "Sari R. R. Nijssen",
+        "Stefan Schulreich",
+        "Vanessa Bühler"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Sandra J. Geiger"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Kimberly C Doell",
+            "Boryana Todorova",
+            "Ekaterina Pronizius",
+            "Claus Lamm",
+            "Sandra J. Geiger",
+            "Nace Mikuš",
+            "Sari R. R. Nijssen",
+            "Jonas P. Nitschke",
+            "Stefan Schulreich"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ijop.12761",
+          "year": 2022,
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Jana Kühnel"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2022.812187",
+          "year": 2022,
+          "title": "Unlimited Paid Time Off Policies: Unlocking the Best and Unleashing the Beast",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Jana Kühnel"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Vanessa Bühler",
+            "Markus Roman Tünte"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10869-019-09672-5",
+          "year": 2019,
+          "title": "Putting the Episodic Process Model to the Test: Explaining Intraindividual Fluctuations in Job Performance Across the Working Day",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Jana Kühnel"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ng:usmanu danfodiyo university",
       "institution": "Usmanu Danfodiyo University",
       "country": "NG",
@@ -18852,165 +18794,6 @@
           ],
           "authors": [
             "Frederik Anseel"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:harvard university press",
-      "institution": "Harvard University Press",
-      "country": "US",
-      "type": "other",
-      "publicationCount": 5,
-      "staffIds": [
-        "CDD",
-        "JJ",
-        "JL"
-      ],
-      "authors": [
-        "Amit Goldenberg",
-        "Eric Shuman",
-        "James Sidanius",
-        "Joseph B Bak Coleman",
-        "Julia A. Minson",
-        "Malavika Srinivasan",
-        "Martin Surbeck"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/19485506251383988",
-          "year": 2026,
-          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "James Sidanius"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Martin Surbeck"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Joseph B Bak Coleman",
-            "Amit Goldenberg",
-            "Eric Shuman"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2023.104257",
-          "year": 2023,
-          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Julia A. Minson"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2015.10.001",
-          "year": 2016,
-          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Malavika Srinivasan"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:leipzig university",
-      "institution": "Leipzig University",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 5,
-      "staffIds": [
-        "FR",
-        "JDB"
-      ],
-      "authors": [
-        "Carolin Dietz",
-        "Hannes Zacher",
-        "Michael Knoll",
-        "Oliver Weigelt"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1037/ocp0000347",
-          "year": 2023,
-          "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Oliver Weigelt"
-          ]
-        },
-        {
-          "id": "doi:10.16993/sjwop.181",
-          "year": 2023,
-          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Oliver Weigelt"
-          ]
-        },
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Oliver Weigelt",
-            "Carolin Dietz",
-            "Michael Knoll"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2021.682479",
-          "year": 2021,
-          "title": "The Forgotten Ones: Crafting for Meaning and for Affiliation in the Context of Finnish and Japanese Employees' Off-Job Lives",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Oliver Weigelt"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2017.01477",
-          "year": 2017,
-          "title": "Daily Use of Energy Management Strategies and Occupational Well-being: The Moderating Role of Job Demands",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Hannes Zacher"
           ]
         }
       ]
@@ -19739,6 +19522,74 @@
       ]
     },
     {
+      "id": "us:harvard university press",
+      "institution": "Harvard University Press",
+      "country": "US",
+      "type": "other",
+      "publicationCount": 4,
+      "staffIds": [
+        "CDD",
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Amit Goldenberg",
+        "Eric Shuman",
+        "James Sidanius",
+        "Joseph B Bak Coleman",
+        "Julia A. Minson",
+        "Malavika Srinivasan"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/19485506251383988",
+          "year": 2026,
+          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "James Sidanius"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Joseph B Bak Coleman",
+            "Amit Goldenberg",
+            "Eric Shuman"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2023.104257",
+          "year": 2023,
+          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Julia A. Minson"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Malavika Srinivasan"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:humboldt universit t zu berlin",
       "institution": "Humboldt-Universität zu Berlin",
       "country": "DE",
@@ -20121,6 +19972,69 @@
           ],
           "authors": [
             "Michael J. Platow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:leipzig university",
+      "institution": "Leipzig University",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "FR",
+        "JDB"
+      ],
+      "authors": [
+        "Hannes Zacher",
+        "Oliver Weigelt"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1037/ocp0000347",
+          "year": 2023,
+          "title": "Crafting and human energy: Needs-based crafting efforts across life domains shape employees’ daily energy trajectories.",
+          "staffIds": [
+            "FR",
+            "JDB"
+          ],
+          "authors": [
+            "Oliver Weigelt"
+          ]
+        },
+        {
+          "id": "doi:10.16993/sjwop.181",
+          "year": 2023,
+          "title": "The Effectiveness of a Hybrid Off-Job Crafting Intervention on Employees’ Psychological Needs Satisfaction and Well-Being",
+          "staffIds": [
+            "FR",
+            "JDB"
+          ],
+          "authors": [
+            "Oliver Weigelt"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2021.682479",
+          "year": 2021,
+          "title": "The Forgotten Ones: Crafting for Meaning and for Affiliation in the Context of Finnish and Japanese Employees' Off-Job Lives",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Oliver Weigelt"
+          ]
+        },
+        {
+          "id": "doi:10.3389/fpsyg.2017.01477",
+          "year": 2017,
+          "title": "Daily Use of Energy Management Strategies and Occupational Well-being: The Moderating Role of Job Demands",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Hannes Zacher"
           ]
         }
       ]
@@ -22942,6 +22856,61 @@
       ]
     },
     {
+      "id": "us:prevention institute",
+      "institution": "Prevention Institute",
+      "country": "US",
+      "type": "nonprofit",
+      "publicationCount": 3,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Georg F. Bauer",
+        "Georg Friedrich Bauer",
+        "Kang Leng Ho",
+        "Martin Tušl",
+        "Philipp Kerksieck"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s12144-026-10217-2",
+          "year": 2026,
+          "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Kang Leng Ho",
+            "Philipp Kerksieck",
+            "Georg Friedrich Bauer"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12889-024-18646-z",
+          "year": 2024,
+          "title": "A new perspective on balancing life domains: work–nonwork balance crafting",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Philipp Kerksieck"
+          ]
+        },
+        {
+          "id": "doi:10.1037/ocp0000372",
+          "year": 2024,
+          "title": "Needs-based job crafting: Validation of a new scale based on psychological needs.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Martin Tušl",
+            "Georg F. Bauer"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:psychologische hochschule berlin",
       "institution": "Psychologische Hochschule Berlin",
       "country": "DE",
@@ -25254,46 +25223,6 @@
       ]
     },
     {
-      "id": "us:georgia institute of technology",
-      "institution": "Georgia Institute of Technology",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "FR",
-        "JDB"
-      ],
-      "authors": [
-        "Christopher W. Wiese",
-        "Kimberly A. French"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Kimberly A. French"
-          ]
-        },
-        {
-          "id": "doi:10.3389/fpsyg.2022.959296",
-          "year": 2022,
-          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Christopher W. Wiese"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:goethe university frankfurt",
       "institution": "Goethe University Frankfurt",
       "country": "DE",
@@ -25998,45 +25927,6 @@
       ]
     },
     {
-      "id": "us:northeastern university",
-      "institution": "Northeastern University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Costas Panagopoulos",
-        "Sara M. Constantino"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Sara M. Constantino",
-            "Costas Panagopoulos"
-          ]
-        },
-        {
-          "id": "doi:10.1017/s0140525x23001024",
-          "year": 2023,
-          "title": "Community-engaged research is best positioned to catalyze systemic change",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Sara M. Constantino"
-          ]
-        }
-      ]
-    },
-    {
       "id": "no:norwegian university of science and technology",
       "institution": "Norwegian University of Science and Technology",
       "country": "NO",
@@ -26192,46 +26082,6 @@
           ],
           "authors": [
             "Aleksandra M. Herman"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:prevention institute",
-      "institution": "Prevention Institute",
-      "country": "US",
-      "type": "nonprofit",
-      "publicationCount": 2,
-      "staffIds": [
-        "JDB"
-      ],
-      "authors": [
-        "Georg F. Bauer",
-        "Martin Tušl",
-        "Philipp Kerksieck"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1186/s12889-024-18646-z",
-          "year": 2024,
-          "title": "A new perspective on balancing life domains: work–nonwork balance crafting",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Philipp Kerksieck"
-          ]
-        },
-        {
-          "id": "doi:10.1037/ocp0000372",
-          "year": 2024,
-          "title": "Needs-based job crafting: Validation of a new scale based on psychological needs.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Martin Tušl",
-            "Georg F. Bauer"
           ]
         }
       ]
@@ -27718,92 +27568,6 @@
       ]
     },
     {
-      "id": "at:university of graz",
-      "institution": "University of Graz",
-      "country": "AT",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "BN",
-        "FR",
-        "JDB"
-      ],
-      "authors": [
-        "Christian Rominger",
-        "Mathias Benedek",
-        "Roman Prem",
-        "Simon Ceh"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1002/jocb.70097",
-          "year": 2026,
-          "title": "Creative Cognition: A Collaborative Research Agenda",
-          "staffIds": [
-            "BN"
-          ],
-          "authors": [
-            "Mathias Benedek",
-            "Simon Ceh",
-            "Christian Rominger"
-          ]
-        },
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Roman Prem"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "il:university of haifa",
-      "institution": "University of Haifa",
-      "country": "IL",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "FR",
-        "JDB",
-        "JL"
-      ],
-      "authors": [
-        "Keren Kaplan Mintz",
-        "Shani Pindek"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Keren Kaplan Mintz"
-          ]
-        },
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Shani Pindek"
-          ]
-        }
-      ]
-    },
-    {
       "id": "de:university of hildesheim",
       "institution": "University of Hildesheim",
       "country": "DE",
@@ -28422,45 +28186,6 @@
           ],
           "authors": [
             "Denisa Vlasceanu"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gb:university of portsmouth",
-      "institution": "University of Portsmouth",
-      "country": "GB",
-      "type": "education",
-      "publicationCount": 2,
-      "staffIds": [
-        "CDD",
-        "JDB"
-      ],
-      "authors": [
-        "Esther Herrmann",
-        "Hartmut Blank"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Esther Herrmann"
-          ]
-        },
-        {
-          "id": "doi:10.1027/1864-9335/a000085",
-          "year": 2012,
-          "title": "Self-Monitoring and Linguistic Adaptation",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Hartmut Blank"
           ]
         }
       ]
@@ -29506,32 +29231,6 @@
           ],
           "authors": [
             "Ezra M. Markowitz"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nl:amsterdam umc location vrije universiteit amsterdam",
-      "institution": "Amsterdam UMC Location Vrije Universiteit Amsterdam",
-      "country": "NL",
-      "type": "healthcare",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Daniel Balliet"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x15000096",
-          "year": 2016,
-          "title": "Intergroup competition may not be needed for shaping group cooperation and cultural group selection",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Daniel Balliet"
           ]
         }
       ]
@@ -31808,6 +31507,32 @@
             "Kenneth A. Kovach",
             "Karens Tansey",
             "Eve Framiñan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:georgia institute of technology",
+      "institution": "Georgia Institute of Technology",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Christopher W. Wiese"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fpsyg.2022.959296",
+          "year": 2022,
+          "title": "Needs-based off-job crafting across different life domains and contexts: Testing a novel conceptual and measurement approach",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Christopher W. Wiese"
           ]
         }
       ]
@@ -34213,32 +33938,6 @@
       ]
     },
     {
-      "id": "de:max planck institute for evolutionary anthropology",
-      "institution": "Max Planck Institute for Evolutionary Anthropology",
-      "country": "DE",
-      "type": "facility",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Martin Surbeck"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Martin Surbeck"
-          ]
-        }
-      ]
-    },
-    {
       "id": "nl:max planck institute for psycholinguistics",
       "institution": "Max Planck Institute for Psycholinguistics",
       "country": "NL",
@@ -35111,6 +34810,34 @@
       ]
     },
     {
+      "id": "us:northeastern university",
+      "institution": "Northeastern University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Costas Panagopoulos",
+        "Sara M. Constantino"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Sara M. Constantino",
+            "Costas Panagopoulos"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gb:nottingham trent university",
       "institution": "Nottingham Trent University",
       "country": "GB",
@@ -35644,36 +35371,6 @@
           "authors": [
             "Héctor Carvacho",
             "Silvana D’Ottone"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:princeton university",
-      "institution": "Princeton University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Elke U. Weber",
-        "Holly Caggiano",
-        "Rohini Majumdar"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x23001024",
-          "year": 2023,
-          "title": "Community-engaged research is best positioned to catalyze systemic change",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Holly Caggiano",
-            "Rohini Majumdar",
-            "Elke U. Weber"
           ]
         }
       ]
@@ -39011,6 +38708,36 @@
       ]
     },
     {
+      "id": "at:university of graz",
+      "institution": "University of Graz",
+      "country": "AT",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "BN"
+      ],
+      "authors": [
+        "Christian Rominger",
+        "Mathias Benedek",
+        "Simon Ceh"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1002/jocb.70097",
+          "year": 2026,
+          "title": "Creative Cognition: A Collaborative Research Agenda",
+          "staffIds": [
+            "BN"
+          ],
+          "authors": [
+            "Mathias Benedek",
+            "Simon Ceh",
+            "Christian Rominger"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gb:university of greenwich",
       "institution": "University of Greenwich",
       "country": "GB",
@@ -39058,6 +38785,32 @@
           ],
           "authors": [
             "Silvia C. Kaps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "il:university of haifa",
+      "institution": "University of Haifa",
+      "country": "IL",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JL"
+      ],
+      "authors": [
+        "Keren Kaplan Mintz"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Keren Kaplan Mintz"
           ]
         }
       ]
@@ -39541,34 +39294,6 @@
       ]
     },
     {
-      "id": "ch:university of neuch tel",
-      "institution": "University of Neuchâtel",
-      "country": "CH",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "FR",
-        "JDB"
-      ],
-      "authors": [
-        "Laurenz L. Meier"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/iop.2022.66",
-          "year": 2022,
-          "title": "Moving from opposition to taking ownership of open science to make discoveries that matter",
-          "staffIds": [
-            "FR",
-            "JDB"
-          ],
-          "authors": [
-            "Laurenz L. Meier"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:university of nevada las vegas",
       "institution": "University of Nevada, Las Vegas",
       "country": "US",
@@ -39692,6 +39417,32 @@
           "authors": [
             "Gabriel Banik",
             "Pavol Kačmár"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gb:university of portsmouth",
+      "institution": "University of Portsmouth",
+      "country": "GB",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Hartmut Blank"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1027/1864-9335/a000085",
+          "year": 2012,
+          "title": "Self-Monitoring and Linguistic Adaptation",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Hartmut Blank"
           ]
         }
       ]
@@ -40117,6 +39868,32 @@
       ]
     },
     {
+      "id": "fi:university of tampere",
+      "institution": "University of Tampere",
+      "country": "FI",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JDB"
+      ],
+      "authors": [
+        "Anne Mäkikangas"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1007/s12144-026-10217-2",
+          "year": 2026,
+          "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Anne Mäkikangas"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ee:university of tartu",
       "institution": "University of Tartu",
       "country": "EE",
@@ -40333,32 +40110,6 @@
       ]
     },
     {
-      "id": "hu:university of veterinary medicine",
-      "institution": "University of Veterinary Medicine",
-      "country": "HU",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Friederike Range"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Friederike Range"
-          ]
-        }
-      ]
-    },
-    {
       "id": "pl:university of warsaw",
       "institution": "University of Warsaw",
       "country": "PL",
@@ -40568,32 +40319,6 @@
           ],
           "authors": [
             "Артур Аммалайнен"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fr:universit claude bernard lyon 1",
-      "institution": "Université Claude Bernard Lyon 1",
-      "country": "FR",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "Roman M. Wittig"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1017/s0140525x2510040x",
-          "year": 2025,
-          "title": "Group-mindedness as evolved solution to deal with group-living",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Roman M. Wittig"
           ]
         }
       ]
