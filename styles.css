@@ -3768,28 +3768,20 @@ footer {
   .pub-dot, .attention-layer, .call-pill-shape { transition: none; }
 }
 
-/* Research-attention heatmap, 25 September 2026. */
-.attention-head { align-items: start; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; margin: -4px 0 12px; }
-.attention-head .attention-subtitle { margin: 0; max-width: 640px; }
-.attention-wrap { border-top: 0; position: relative; }
-.attention-heatmap { border-collapse: separate; border-spacing: 2px; min-width: 640px; table-layout: fixed; }
-.attention-heatmap th, .attention-heatmap td { border: 0; letter-spacing: 0; padding: 0; text-transform: none; }
-.attention-heatmap thead th { color: var(--ink-500); font-size: 0.66rem; font-weight: 600; padding-bottom: 4px; text-align: center; }
-.attention-heatmap thead th.attention-label-col { text-align: left; }
-.attention-heatmap .attention-label-col, .attention-heatmap tbody th { width: 200px; }
-.attention-heatmap tbody th { background: var(--white); color: var(--ink-900); font-size: 0.78rem; font-weight: 600; left: 0; line-height: 1.2; padding-right: 10px; position: sticky; white-space: normal; z-index: 1; }
-.attention-cell { border-radius: 2px; cursor: default; font-size: 0.68rem; font-variant-numeric: tabular-nums; font-weight: 600; height: 30px; text-align: center; }
-.attention-heatmap.is-dense .attention-cell { font-size: 0.6rem; }
-.attention-heatmap .attention-summary { color: var(--ink-700); font-size: 0.74rem; font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; white-space: nowrap; width: 62px; }
-.attention-heatmap thead .attention-summary { color: var(--ink-500); font-size: 0.66rem; }
-@media (max-width: 700px) { .attention-heatmap .attention-label-col, .attention-heatmap tbody th { width: 130px; } }
-.attention-heatmap tfoot th { color: var(--ink-500); font-size: 0.7rem; font-weight: 600; padding-top: 4px; text-align: left; }
-.attention-heatmap tfoot td { color: var(--ink-500); font-size: 0.66rem; font-variant-numeric: tabular-nums; padding-top: 4px; text-align: center; }
-.attention-heatmap tfoot .attention-summary { color: var(--ink-500); }
-.attention-heatmap thead th.attention-label-col { color: var(--ink-500); font-weight: 600; }
-.attention-row-button { background: transparent; border: 0; color: var(--ink-900); cursor: pointer; font: inherit; font-weight: 600; line-height: 1.2; padding: 0; text-align: left; }
-.attention-row-button:hover { color: var(--red); }
-.attention-cell { cursor: pointer; }
+/* Research topics overview: clickable tiles, 2 November 2026. */
+.topic-overview-hint { color: var(--ink-500); font-size: 0.82rem; margin: -4px 0 14px; }
+.topic-tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.topic-tile { align-items: stretch; background: #fcfcfb; border: 1px solid var(--ink-200); border-radius: 5px; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; gap: 6px; padding: 14px 16px 12px; text-align: left; transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
+.topic-tile:hover { background: #faf7f3; border-color: var(--red); transform: translateY(-1px); }
+.topic-tile:focus-visible { border-color: var(--red); outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+.topic-tile-name { color: var(--ink-900); font-size: 0.95rem; font-weight: 700; line-height: 1.25; }
+.topic-tile-count { color: var(--ink-500); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.topic-tile-count b { color: var(--teal); font-size: 1rem; font-weight: 700; }
+.topic-tile-themes { color: var(--ink-500); font-size: 0.74rem; line-height: 1.4; }
+.topic-tile-bar { background: var(--ink-100); border-radius: 2px; display: block; flex: none; height: 4px; margin-top: auto; overflow: hidden; }
+.topic-tile-bar i { background: var(--teal); border-radius: 2px; display: block; height: 100%; }
+@media (max-width: 480px) { .topic-tiles { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .topic-tile { transition: none; } .topic-tile:hover { transform: none; } }
 
 /* Guidance panel: Using AI well in research (6 October 2026) */
 .ai-guidance { display: grid; grid-template-columns: minmax(220px, 380px) 1fr; gap: 28px; align-items: center; }

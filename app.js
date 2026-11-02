@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261102-eye";
+const DATA_VERSION = "20261102-topics";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -596,7 +596,7 @@ function cacheElements() {
   els.journalPublishedList = document.getElementById("journal-published-list");
   els.journalOpenAccessList = document.getElementById("journal-open-access-list");
   els.yearBars = document.getElementById("year-bars");
-  els.attentionRiver = document.getElementById("attention-river");
+  els.topicOverview = document.getElementById("topic-overview");
   els.callCalendar = document.getElementById("call-calendar");
   els.quickFind = document.getElementById("quick-find");
   els.quickFindInput = document.getElementById("quick-find-input");
@@ -4271,7 +4271,7 @@ function renderOverview() {
   const theses = activeTheses();
   const currentProjects = currentPhdProjects();
   renderYearBars(pubs);
-  renderAttentionRiver(pubs);
+  renderTopicOverview(pubs);
   renderAipBars(pubs);
   renderOverviewJournals(journals);
   renderOverviewGrants(grants);
@@ -8700,7 +8700,6 @@ const CALL_CALENDAR_MONTHS = 18;
 const VIZ_SVG_NS = "http://www.w3.org/2000/svg";
 const publicationFamilyLabelCache = new WeakMap();
 let publicationDotsView = null;
-let attentionRiverView = null;
 let callCalendarView = null;
 let vizTooltipElement = null;
 let vizTextContext = null;
@@ -9072,7 +9071,6 @@ const ATTENTION_CLUSTERS = [
   { label: "HRM, careers, and development", families: ["people management practices", "selection and recruitment", "performance management", "careers and employability", "learning and feedback"] },
 ];
 const ATTENTION_CLUSTER_BY_FAMILY = new Map(ATTENTION_CLUSTERS.flatMap((cluster, index) => cluster.families.map((family) => [family, index])));
-const ATTENTION_RAMP = [[243, 247, 247], [28, 86, 93]];
 
 // Each topic-tagged publication counts once: a paper whose families span several clusters is split equally between them.
 function publicationClusterWeights(pub) {
@@ -9083,96 +9081,41 @@ function publicationClusterWeights(pub) {
   return Array.from(clusters).map((index) => [index, 1 / clusters.size]);
 }
 
-function attentionCellStyle(t) {
-  const clamped = Math.max(0, Math.min(1, t));
-  const [from, to] = ATTENTION_RAMP;
-  const rgb = from.map((value, index) => Math.round(value + (to[index] - value) * clamped));
-  return `background:rgb(${rgb.join(",")});color:${clamped > 0.55 ? "#ffffff" : "var(--ink-900)"}`;
+function topicFamilyDisplay(label) {
+  return String(label).replace(/\bcsr\b/g, "CSR").replace(/^./, (letter) => letter.toUpperCase());
 }
 
-function renderAttentionRiver(pubs) {
-  if (!els.attentionRiver) return;
-  const currentYear = new Date().getFullYear();
-  const startYear = overviewStartYear(pubs);
-  const completed = pubs.filter((pub) => {
-    const year = publicationChartYear(pub);
-    return Number.isFinite(year) && year >= startYear && year < currentYear;
-  });
-  const allYears = [];
-  for (let year = startYear; year < currentYear; year += 1) allYears.push(year);
-  // Start at the first year with at least five topic-tagged papers, so a thin opening year does not dominate the colour scale.
-  const taggedCounts = countBy(completed.filter((pub) => publicationClusterWeights(pub).length).map(publicationChartYear), (year) => year);
-  const firstIndex = allYears.findIndex((year) => (taggedCounts.get(year) || 0) >= 5);
-  const years = firstIndex < 0 ? [] : allYears.slice(firstIndex);
-  if (years.length < 3) {
-    attentionRiverView = null;
-    els.attentionRiver.innerHTML = `<div class="staff-empty">Choose 10 years or more to follow research attention across at least three completed years.</div>`;
-    return;
-  }
-  const inRange = completed.filter((pub) => publicationChartYear(pub) >= years[0]);
-  const perYear = years.map((year) => {
-    const weights = ATTENTION_CLUSTERS.map(() => 0);
-    const families = ATTENTION_CLUSTERS.map(() => new Map());
-    let tagged = 0;
-    let untagged = 0;
-    inRange.filter((pub) => publicationChartYear(pub) === year).forEach((pub) => {
-      const parts = publicationClusterWeights(pub);
-      if (!parts.length) {
-        untagged += 1;
-        return;
-      }
-      tagged += 1;
-      parts.forEach(([index, weight]) => { weights[index] += weight; });
+// One clickable tile per research cluster: papers in the current window, active researchers and the most frequent topics.
+function renderTopicOverview(pubs) {
+  if (!els.topicOverview) return;
+  const activeIds = activePeopleSet();
+  const topics = ATTENTION_CLUSTERS.map((cluster, index) => {
+    const papers = clusterPublications(index, pubs);
+    const researchers = new Set();
+    const families = new Map();
+    papers.forEach((pub) => {
+      activeMatchedPeople(pub, activeIds).forEach((id) => researchers.add(id));
       publicationFamilyLabels(pub).forEach((label) => {
-        const index = ATTENTION_CLUSTER_BY_FAMILY.get(label);
-        if (index === undefined) return;
-        families[index].set(label, (families[index].get(label) || 0) + 1);
+        if (ATTENTION_CLUSTER_BY_FAMILY.get(label) === index) families.set(label, (families.get(label) || 0) + 1);
       });
     });
-    return { year, weights, families, tagged, untagged };
-  });
-  const cell = (clusterIndex, yearIndex) => {
-    const span = [perYear[yearIndex]];
-    const weight = span.reduce((sum, row) => sum + row.weights[clusterIndex], 0);
-    const tagged = span.reduce((sum, row) => sum + row.tagged, 0);
-    return { share: tagged ? weight / tagged : 0, weight, tagged, span };
-  };
-  const pooled = (clusterIndex, rows) => {
-    const tagged = rows.reduce((sum, row) => sum + row.tagged, 0);
-    return tagged ? rows.reduce((sum, row) => sum + row.weights[clusterIndex], 0) / tagged : 0;
-  };
-  const edge = years.length >= 6 ? 3 : 1;
-  const clusters = ATTENTION_CLUSTERS.map((cluster, index) => ({
-    ...cluster,
-    index,
-    overall: pooled(index, perYear),
-    change: pooled(index, perYear.slice(-edge)) - pooled(index, perYear.slice(0, edge)),
-    cells: years.map((_, yearIndex) => cell(index, yearIndex)),
-  })).sort((a, b) => b.overall - a.overall || a.label.localeCompare(b.label));
-  const maxShare = Math.max(0.1, ...clusters.flatMap((cluster) => cluster.cells.map((item) => item.share)));
-  const taggedTotal = perYear.reduce((sum, row) => sum + row.tagged, 0);
-  attentionRiverView = { years, perYear, clusters };
-  const range = `${years[0]}-${years[years.length - 1]}`;
-  const changeLabel = years.length >= 6 ? `${years[0]}-${years[2]} vs ${years[years.length - 3]}-${years[years.length - 1]}` : `${years[0]} vs ${years[years.length - 1]}`;
-  const yearLabel = (year, index) => (years.length > 12 && index % 2 === 1 && index !== years.length - 1 ? "" : years.length > 12 ? `’${String(year).slice(2)}` : String(year));
-  const changeText = (value) => {
-    const points = Math.round(value * 100);
-    if (!points) return "–";
-    return `${points > 0 ? "▲" : "▼"} ${Math.abs(points)}`;
-  };
-  els.attentionRiver.innerHTML = `
-    <div class="table-wrap attention-wrap" role="region" aria-label="Research topics by year" tabindex="0">
-      <table class="attention-heatmap${years.length > 12 ? " is-dense" : ""}">
-        <caption class="visually-hidden">Percent of each year's topic-tagged publications in each research cluster, ${escapeHtml(range)}. Each column adds up to 100%.</caption>
-        <thead><tr><th scope="col" class="attention-label-col">% of the year's papers</th>${years.map((year, index) => `<th scope="col" aria-label="${year}">${escapeHtml(yearLabel(year, index))}</th>`).join("")}<th scope="col" class="attention-summary" title="Share of all topic-tagged papers in ${escapeHtml(range)}">Total</th><th scope="col" class="attention-summary" title="${escapeHtml(`Percentage points, ${changeLabel}`)}">Change</th></tr></thead>
-        <tbody>${clusters.map((cluster) => `<tr>
-          <th scope="row"><button type="button" class="attention-row-button" data-cluster-open="${cluster.index}" title="${escapeHtml(cluster.families.join(", "))}">${escapeHtml(cluster.label)}</button></th>
-          ${cluster.cells.map((item, yearIndex) => `<td class="attention-cell" style="${attentionCellStyle(item.share / maxShare)}" data-cluster="${cluster.index}" data-year-index="${yearIndex}">${Math.round(item.share * 100)}<span class="visually-hidden">%</span></td>`).join("")}
-          <td class="attention-summary">${Math.round(cluster.overall * 100)}%</td>
-          <td class="attention-summary">${changeText(cluster.change)}</td>
-        </tr>`).join("")}</tbody>
-        <tfoot><tr><th scope="row">Papers</th>${perYear.map((row) => `<td class="attention-count">${row.tagged}</td>`).join("")}<td class="attention-summary">${taggedTotal}</td><td class="attention-summary"></td></tr></tfoot>
-      </table>
+    const top = Array.from(families.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 3).map(([label]) => topicFamilyDisplay(label)).filter((label) => label.toLowerCase() !== cluster.label.toLowerCase());
+    return { ...cluster, index, papers: papers.length, researchers: researchers.size, top };
+  }).filter((topic) => topic.papers).sort((a, b) => b.papers - a.papers || a.label.localeCompare(b.label));
+  if (!topics.length) {
+    els.topicOverview.innerHTML = `<div class="staff-empty">No topic-tagged publications in this period.</div>`;
+    return;
+  }
+  const max = topics[0].papers;
+  els.topicOverview.innerHTML = `
+    <p class="topic-overview-hint">Select a topic to see who works on it and recent papers.</p>
+    <div class="topic-tiles">${topics.map((topic) => `
+      <button type="button" class="topic-tile" data-cluster-open="${topic.index}" aria-label="${escapeHtml(`${topic.label}: ${topic.papers} paper${topic.papers === 1 ? "" : "s"}, ${topic.researchers} researcher${topic.researchers === 1 ? "" : "s"}`)}">
+        <span class="topic-tile-name">${escapeHtml(topic.label)}</span>
+        <span class="topic-tile-count"><b>${topic.papers}</b> paper${topic.papers === 1 ? "" : "s"} · ${topic.researchers} researcher${topic.researchers === 1 ? "" : "s"}</span>
+        ${topic.top.length ? `<span class="topic-tile-themes">${escapeHtml(topic.top.join(" · "))}</span>` : ""}
+        <span class="topic-tile-bar" aria-hidden="true"><i style="width:${Math.max(4, Math.round((topic.papers / max) * 100))}%"></i></span>
+      </button>`).join("")}
     </div>`;
 }
 
@@ -9209,22 +9152,6 @@ function showClusterOverlay(index) {
   els.topicOverlay.hidden = false;
   document.body.classList.add("overlay-open");
   requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
-}
-
-function attentionCellTooltip(clusterIndex, yearIndex) {
-  const view = attentionRiverView;
-  const cluster = view?.clusters.find((item) => item.index === clusterIndex);
-  if (!cluster) return "";
-  const item = cluster.cells[yearIndex];
-  const year = view.years[yearIndex];
-  const spanLabel = String(year);
-  const families = new Map();
-  item.span.forEach((row) => row.families[clusterIndex].forEach((count, label) => families.set(label, (families.get(label) || 0) + count)));
-  const familyText = Array.from(families.entries()).sort((a, b) => b[1] - a[1]).map(([label, count]) => `${label} ${count}`).join(", ");
-  return `<strong class="viz-tip-title">${escapeHtml(cluster.label)}</strong>
-    <span class="viz-tip-meta">${escapeHtml(spanLabel)}</span>
-    <span class="viz-tip-row"><b>${Math.round(item.share * 100)}%</b>of ${item.tagged} topic-tagged publication${item.tagged === 1 ? "" : "s"} (${item.weight.toFixed(item.weight % 1 ? 1 : 0)} after splitting)</span>
-    ${familyText ? `<span class="viz-tip-meta">${escapeHtml(`Papers by topic: ${familyText}`)}</span>` : ""}`;
 }
 
 /* ---------- Grant call calendar: the next eighteen months ---------- */
@@ -9677,22 +9604,9 @@ function attachVisualUpgradeEvents() {
       els.yearBars.querySelector("[data-dot-person]")?.focus();
     }
   });
-  els.attentionRiver?.addEventListener("click", (event) => {
-    const target = event.target.closest("[data-cluster-open], [data-cluster]");
-    if (!target) return;
-    hideVizTooltip();
-    showClusterOverlay(Number(target.dataset.clusterOpen ?? target.dataset.cluster));
-  });
-  els.attentionRiver?.addEventListener("pointerover", (event) => {
-    const cell = event.target.closest("[data-cluster]");
-    if (!cell) return;
-    showVizTooltip(event, attentionCellTooltip(Number(cell.dataset.cluster), Number(cell.dataset.yearIndex)));
-  });
-  els.attentionRiver?.addEventListener("pointermove", (event) => {
-    if (event.target.closest("[data-cluster]")) moveVizTooltip(event);
-  });
-  els.attentionRiver?.addEventListener("pointerout", (event) => {
-    if (event.target.closest("[data-cluster]") && !event.relatedTarget?.closest?.("[data-cluster]")) hideVizTooltip();
+  els.topicOverview?.addEventListener("click", (event) => {
+    const target = event.target.closest("[data-cluster-open]");
+    if (target) showClusterOverlay(Number(target.dataset.clusterOpen));
   });
   els.callCalendar?.addEventListener("click", (event) => {
     const target = event.target.closest("[data-call-key]");
