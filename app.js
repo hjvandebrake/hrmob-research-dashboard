@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261102-affiliates";
+const DATA_VERSION = "20261102-netnames";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -4329,6 +4329,8 @@ function renderOverviewNetwork() {
 
 const OVERVIEW_NETWORK_SIZE = { width: 1100, height: 680 };
 const OVERVIEW_NETWORK_MIN_SHARED = 2;
+const OVERVIEW_EXTERNAL_LABEL_MIN = 3;
+const OVERVIEW_EXTERNAL_LABELS_PER_RESEARCHER = 2;
 
 function buildOverviewNetworkMarkup(people, pubs) {
   const ids = new Set(people.map((person) => person.id));
@@ -4364,6 +4366,18 @@ function buildOverviewNetworkMarkup(people, pubs) {
   [...faculty.edges, ...external.edges].forEach((edge) => {
     if (index.has(edge.source) && index.has(edge.target)) edges.push({ s: index.get(edge.source), t: index.get(edge.target), count: edge.count, internal: false });
   });
+  // Name each researcher's closest coauthors outside FEB (Joost, 2 November 2026); the rest stay unnamed dots.
+  const outsideTies = new Map();
+  edges.forEach((edge) => {
+    if (edge.internal || nodes[edge.t].kind !== "external") return;
+    if (!outsideTies.has(edge.s)) outsideTies.set(edge.s, []);
+    outsideTies.get(edge.s).push(edge);
+  });
+  outsideTies.forEach((list) => list
+    .filter((edge) => edge.count >= OVERVIEW_EXTERNAL_LABEL_MIN)
+    .sort((a, b) => b.count - a.count || nodes[a.t].label.localeCompare(nodes[b.t].label))
+    .slice(0, OVERVIEW_EXTERNAL_LABELS_PER_RESEARCHER)
+    .forEach((edge) => { nodes[edge.t].named = true; }));
   const noteText = nodes.length
     ? `Who publishes with whom, ${activeWindowLabel()}. Hover over a researcher to see how many papers they share.`
     : "No publications in the selected years.";
@@ -4396,11 +4410,12 @@ function buildOverviewNetworkMarkup(people, pubs) {
       <circle cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" r="${r.toFixed(1)}"/>
     </g>`;
   }).join("");
-  // FEB colleague names sit behind the dots so they never cover anything; hovering a researcher
-  // brings the names of their coauthors to the front (renderOverviewNetworkFocus).
+  // FEB colleague and named outside-coauthor names sit behind the dots so they never cover anything;
+  // hovering a researcher brings the names of their coauthors to the front (renderOverviewNetworkFocus).
   const facultyLabelMarkup = nodes.map((node, i) => {
-    if (node.kind !== "faculty") return "";
-    return `${node.leader ? `<line class="onet-leader" data-i="${i}" x1="${node.x.toFixed(1)}" y1="${node.y.toFixed(1)}" x2="${node.lx.toFixed(1)}" y2="${(node.ly - 4).toFixed(1)}"/>` : ""}<text class="onet-faculty-label" data-i="${i}" x="${node.lx.toFixed(1)}" y="${node.ly.toFixed(1)}" text-anchor="${node.anchor}">${escapeHtml(facultyMapLabel(node))}</text>`;
+    if (node.kind !== "faculty" && !node.named) return "";
+    const external = node.kind === "external";
+    return `${node.leader ? `<line class="onet-leader${external ? " is-external" : ""}" data-i="${i}" x1="${node.x.toFixed(1)}" y1="${node.y.toFixed(1)}" x2="${node.lx.toFixed(1)}" y2="${(node.ly - 4).toFixed(1)}"/>` : ""}<text class="${external ? "onet-external-label" : "onet-faculty-label"}" data-i="${i}" x="${node.lx.toFixed(1)}" y="${node.ly.toFixed(1)}" text-anchor="${node.anchor}">${escapeHtml(overviewMapLabel(node))}</text>`;
   }).join("");
   // Researcher names sit on top of every dot and line so they stay readable.
   const memberLabelMarkup = nodes.map((node, i) => {
@@ -4410,13 +4425,15 @@ function buildOverviewNetworkMarkup(people, pubs) {
   return { markup: `<g class="onet-edges">${edgeMarkup}</g><g class="onet-back-labels">${facultyLabelMarkup}</g><g class="onet-outside">${outsideMarkup}</g><g class="onet-members">${memberMarkup}</g><g class="onet-labels">${memberLabelMarkup}</g><g class="onet-front-labels"></g>`, note: noteText, nodes, edges };
 }
 
-// Greedy label placement: researchers first (largest first), then FEB colleagues. Each label takes the
-// first candidate spot that clears earlier labels and researcher circles; FEB labels that end up
-// away from their dot get a thin leader line.
+// Greedy label placement: researchers first (largest first), then FEB colleagues, then named outside
+// coauthors. Each label takes the first candidate spot that clears earlier labels and researcher
+// circles; coauthor labels that end up away from their dot get a thin leader line.
 function placeOverviewNetworkLabels(nodes) {
   const { width, height } = OVERVIEW_NETWORK_SIZE;
   const placed = [];
   const discs = nodes.filter((node) => node.kind === "member").map((node) => ({ x: node.x, y: node.y, r: node.r || 10 }));
+  // Small coauthor dots also repel labels, more gently than researcher circles.
+  const dots = nodes.filter((node) => node.kind !== "member").map((node) => ({ x: node.x, y: node.y, r: 3.6 + Math.min(4, Math.sqrt(node.count) * 1.1) }));
   const overlaps = (box) => {
     let score = 0;
     placed.forEach((other) => {
@@ -4429,17 +4446,23 @@ function placeOverviewNetworkLabels(nodes) {
       const cy = Math.max(box.y1, Math.min(disc.y, box.y2));
       if ((cx - disc.x) ** 2 + (cy - disc.y) ** 2 < disc.r * disc.r) score += 60;
     });
+    dots.forEach((dot) => {
+      const cx = Math.max(box.x1, Math.min(dot.x, box.x2));
+      const cy = Math.max(box.y1, Math.min(dot.y, box.y2));
+      if ((cx - dot.x) ** 2 + (cy - dot.y) ** 2 < dot.r * dot.r) score += 25;
+    });
     if (box.x1 < 2 || box.x2 > width - 2 || box.y1 < 2 || box.y2 > height - 2) score += 500;
     return score;
   };
+  const rank = { member: 0, faculty: 1, external: 2 };
   const order = nodes
     .map((node, i) => i)
-    .filter((i) => nodes[i].kind === "member" || nodes[i].kind === "faculty")
-    .sort((a, b) => (nodes[a].kind === nodes[b].kind ? nodes[b].count - nodes[a].count : nodes[a].kind === "member" ? -1 : 1));
+    .filter((i) => nodes[i].kind === "member" || nodes[i].kind === "faculty" || nodes[i].named)
+    .sort((a, b) => rank[nodes[a].kind] - rank[nodes[b].kind] || nodes[b].count - nodes[a].count);
   order.forEach((i) => {
     const node = nodes[i];
     const member = node.kind === "member";
-    const text = member ? node.label : facultyMapLabel(node);
+    const text = overviewMapLabel(node);
     const size = member ? 12 : 10.5;
     const w = text.length * size * 0.54 + 6;
     const h = size + 4;
@@ -4483,6 +4506,11 @@ function labelBackground(node, index, cls) {
   if (!node.box) return "";
   const b = node.box;
   return `<rect class="${cls}"${index === null ? "" : ` data-i="${index}"`} x="${(b.x1 - 1).toFixed(1)}" y="${(b.y1 - 0.5).toFixed(1)}" width="${(b.x2 - b.x1 + 2).toFixed(1)}" height="${(b.y2 - b.y1 + 1).toFixed(1)}" rx="3"/>`;
+}
+
+function overviewMapLabel(node) {
+  if (node.kind === "member") return node.label;
+  return node.kind === "faculty" ? facultyMapLabel(node) : shortFacultyName(node.label);
 }
 
 // Short name for a coauthor in another FEB department: surname plus department code.
@@ -4683,7 +4711,9 @@ function bindOverviewNetworkHover(svg) {
   svg.addEventListener("focusout", () => focus(null));
 }
 
-// On hover: bring the hovered researcher's FEB coauthor names to the front, and list all ties.
+const OVERVIEW_INFO_OUTSIDE_LIMIT = 5;
+
+// On hover: bring the hovered researcher's named coauthors to the front, and list their ties.
 function renderOverviewNetworkFocus(svg, info, index) {
   const front = svg.querySelector(".onet-front-labels");
   if (front) front.innerHTML = "";
@@ -4692,10 +4722,10 @@ function renderOverviewNetworkFocus(svg, info, index) {
     return;
   }
   if (front) {
-    svg.querySelectorAll(".onet-back-labels .onet-faculty-label.is-hot").forEach((label) => {
+    svg.querySelectorAll(".onet-back-labels text.is-hot").forEach((label) => {
       const box = label.getBBox();
       const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-      bg.setAttribute("class", "onet-label-bg is-faculty");
+      bg.setAttribute("class", `onet-label-bg ${label.classList.contains("onet-external-label") ? "is-external" : "is-faculty"}`);
       bg.setAttribute("x", (box.x - 3).toFixed(1));
       bg.setAttribute("y", (box.y - 1).toFixed(1));
       bg.setAttribute("width", (box.width + 6).toFixed(1));
@@ -4713,9 +4743,12 @@ function renderOverviewNetworkFocus(svg, info, index) {
   if (!info) return;
   const named = ties.filter(({ other }) => other.kind !== "external");
   const outside = ties.filter(({ other }) => other.kind === "external");
-  const counts = outside.map(({ edge }) => edge.count);
+  const shownOutside = outside.slice(0, OVERVIEW_INFO_OUTSIDE_LIMIT);
+  const moreOutside = outside.length - shownOutside.length;
   const outsideText = outside.length
-    ? `<p>${outside.length} other coauthor${outside.length === 1 ? "" : "s"}, ${Math.min(...counts) === Math.max(...counts) ? `${counts[0]} shared papers each` : `${Math.min(...counts)} to ${Math.max(...counts)} shared papers`}</p>`
+    ? `<span class="onet-info-sub">Outside FEB:</span>
+      <ul>${shownOutside.map(({ edge, other }) => `<li><span>${escapeHtml(shortFacultyName(other.label))}</span><b>${edge.count}</b></li>`).join("")}</ul>
+      ${moreOutside ? `<p>and ${moreOutside} more coauthor${moreOutside === 1 ? "" : "s"} outside FEB</p>` : ""}`
     : "";
   info.innerHTML = `<strong>${escapeHtml(person.label)}</strong>
     <span>${person.count} paper${person.count === 1 ? "" : "s"} in the selected years. Shared papers:</span>
@@ -7212,6 +7245,8 @@ function canonicalExternalAuthor(value) {
   // Same coauthor confirmed in RUG's records for DOI 10.1002/job.2260.
   // Keep this explicit; a general surname/first-initial merge would conflate people.
   if (["peter essens", "essens p", "essens peter", "p j m d essens", "peter j m d essens", "essens p j m d"].includes(normalizeSearchText(author))) return "Peter J. M. D. Essens";
+  // "Frank H. Walter" appears on papers with the same HRM&OB coauthors (FR, GVV, TDV, JVB) as "Frank Walter".
+  if (["frank h walter", "walter frank h", "walter f h", "f h walter"].includes(normalizeSearchText(author))) return "Frank Walter";
   return author;
 }
 
