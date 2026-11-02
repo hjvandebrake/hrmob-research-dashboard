@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261102-topics";
+const DATA_VERSION = "20261102-affiliates";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -9106,7 +9106,6 @@ function renderTopicOverview(pubs) {
     els.topicOverview.innerHTML = `<div class="staff-empty">No topic-tagged publications in this period.</div>`;
     return;
   }
-  const max = topics[0].papers;
   els.topicOverview.innerHTML = `
     <p class="topic-overview-hint">Select a topic to see who works on it and recent papers.</p>
     <div class="topic-tiles">${topics.map((topic) => `
@@ -9114,7 +9113,6 @@ function renderTopicOverview(pubs) {
         <span class="topic-tile-name">${escapeHtml(topic.label)}</span>
         <span class="topic-tile-count"><b>${topic.papers}</b> paper${topic.papers === 1 ? "" : "s"} · ${topic.researchers} researcher${topic.researchers === 1 ? "" : "s"}</span>
         ${topic.top.length ? `<span class="topic-tile-themes">${escapeHtml(topic.top.join(" · "))}</span>` : ""}
-        <span class="topic-tile-bar" aria-hidden="true"><i style="width:${Math.max(4, Math.round((topic.papers / max) * 100))}%"></i></span>
       </button>`).join("")}
     </div>`;
 }

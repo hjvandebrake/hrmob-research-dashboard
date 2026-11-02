@@ -11,9 +11,10 @@
     "affiliatedResearchers": [
       "CDD",
       "JJ",
+      "JS",
       "MR"
     ],
-    "affiliationSelection": "Off by default. The HRM&OB selection adds Carsten de Dreu, Michelle Ryan and Jennifer Jordan to both paper counts and headcount. Other departments are unchanged.",
+    "affiliationSelection": "Off by default. The HRM&OB selection adds Carsten de Dreu, Janka Stoker, Michelle Ryan and Jennifer Jordan to both paper counts and headcount. Other departments are unchanged.",
     "excludedOfficeStaff": [
       "acc-g-kok",
       "acc-rcj-oosterhoff-verbruggen",
@@ -257,7 +258,7 @@
       "recordsWithoutRetainedPeople": 99
     },
     "comparisonAudit": {
-      "generatedOn": "2026-10-29",
+      "generatedOn": "2026-11-02",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -276,10 +277,10 @@
       "departments": [
         {
           "department": "HRM&OB",
-          "currentHeadcount": 18,
-          "withAnyLinkedRecord": 18,
+          "currentHeadcount": 17,
+          "withAnyLinkedRecord": 17,
           "unavailableProfiles": 0,
-          "profilesWithAtMost10ParsedArticles": 18,
+          "profilesWithAtMost10ParsedArticles": 17,
           "roleUnspecified": 0,
           "verifiedCompletePublicationLists": 0,
           "historicalHeadcountsAvailable": false
@@ -1329,10 +1330,10 @@
           "departments": [
             {
               "department": "HRM&OB",
-              "currentHeadcount": 18,
-              "withAnyLinkedRecord": 18,
+              "currentHeadcount": 17,
+              "withAnyLinkedRecord": 17,
               "unavailableProfiles": 0,
-              "profilesWithAtMost10ParsedArticles": 18,
+              "profilesWithAtMost10ParsedArticles": 17,
               "roleUnspecified": 0,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -2194,7 +2195,7 @@
       "rejectedOrcids": [],
       "listedOnCurrentRoster": true,
       "coreId": "JS",
-      "affiliated": false,
+      "affiliated": true,
       "appointmentSection": "unknown",
       "role": "Professor of Leadership and Organizational Change, Director centre of expertise In the LEAD",
       "publicationPageStatus": 200,

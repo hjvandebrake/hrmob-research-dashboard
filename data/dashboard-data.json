@@ -1037,7 +1037,7 @@
       "photo": "assets/people/stoker.png",
       "rank": "full_professor",
       "joinedYear": 2003,
-      "affiliated": false
+      "affiliated": true
     },
     {
       "id": "GVV",

@@ -3771,15 +3771,13 @@ footer {
 /* Research topics overview: clickable tiles, 2 November 2026. */
 .topic-overview-hint { color: var(--ink-500); font-size: 0.82rem; margin: -4px 0 14px; }
 .topic-tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-.topic-tile { align-items: stretch; background: #fcfcfb; border: 1px solid var(--ink-200); border-radius: 5px; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; gap: 6px; padding: 14px 16px 12px; text-align: left; transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
+.topic-tile { align-items: stretch; background: #fcfcfb; border: 1px solid var(--ink-200); border-radius: 5px; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; gap: 6px; padding: 14px 16px; text-align: left; transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
 .topic-tile:hover { background: #faf7f3; border-color: var(--red); transform: translateY(-1px); }
 .topic-tile:focus-visible { border-color: var(--red); outline: 3px solid var(--focus-ring); outline-offset: 2px; }
 .topic-tile-name { color: var(--ink-900); font-size: 0.95rem; font-weight: 700; line-height: 1.25; }
 .topic-tile-count { color: var(--ink-500); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 .topic-tile-count b { color: var(--teal); font-size: 1rem; font-weight: 700; }
 .topic-tile-themes { color: var(--ink-500); font-size: 0.74rem; line-height: 1.4; }
-.topic-tile-bar { background: var(--ink-100); border-radius: 2px; display: block; flex: none; height: 4px; margin-top: auto; overflow: hidden; }
-.topic-tile-bar i { background: var(--teal); border-radius: 2px; display: block; height: 100%; }
 @media (max-width: 480px) { .topic-tiles { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .topic-tile { transition: none; } .topic-tile:hover { transform: none; } }
 
