@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261029-refresh2";
+const DATA_VERSION = "20261102-eye";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -489,6 +489,18 @@ async function startDashboard() {
 function setupAuthGate() {
   if (!els.authForm) return;
   els.authForm.addEventListener("submit", handleAuthSubmit);
+  els.authReveal?.addEventListener("click", () => {
+    setAuthPasswordVisible(els.authPassword?.type === "password");
+  });
+}
+
+function setAuthPasswordVisible(visible) {
+  if (!els.authPassword || !els.authReveal) return;
+  els.authPassword.type = visible ? "text" : "password";
+  const label = visible ? "Hide password" : "Show password";
+  els.authReveal.setAttribute("aria-pressed", String(visible));
+  els.authReveal.setAttribute("aria-label", label);
+  els.authReveal.title = label;
 }
 
 async function handleAuthSubmit(event) {
@@ -516,6 +528,7 @@ async function handleAuthSubmit(event) {
       // Session storage can be unavailable in hardened browser modes; continue for this page load.
     }
     if (els.authStatus) els.authStatus.textContent = "";
+    setAuthPasswordVisible(false);
     await startDashboard();
   } catch (_) {
     if (els.authStatus) els.authStatus.textContent = "Password check is unavailable in this browser.";
@@ -561,6 +574,7 @@ function cacheElements() {
   els.authGate = document.getElementById("auth-gate");
   els.authForm = document.getElementById("auth-form");
   els.authPassword = document.getElementById("auth-password");
+  els.authReveal = document.getElementById("auth-reveal");
   els.authStatus = document.getElementById("auth-status");
   els.skipLink = document.querySelector(".skip-link");
   els.mainContent = document.getElementById("main-content");

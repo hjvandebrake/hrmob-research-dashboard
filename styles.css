@@ -4240,16 +4240,25 @@ html:not(.auth-locked) .auth-gate {
   line-height: 1.42;
   margin: 0 0 18px;
 }
-.auth-card label {
-  color: var(--ink-400);
+.auth-field {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.auth-card label {
+  color: var(--ink-400);
   font-size: 0.66rem;
   font-weight: 700;
-  gap: 6px;
   letter-spacing: 0.08em;
-  margin-bottom: 14px;
   text-transform: uppercase;
+}
+.auth-password-wrap {
+  position: relative;
+}
+.auth-password-wrap input {
+  padding-right: 46px;
+  width: 100%;
 }
 .auth-card input {
   border: 1px solid var(--ink-200);
@@ -4279,6 +4288,48 @@ html:not(.auth-locked) .auth-gate {
   border-color: var(--red-dk);
   outline: 2px solid var(--red-lt);
   outline-offset: 3px;
+}
+.auth-card .auth-reveal {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  bottom: 1px;
+  color: var(--ink-400);
+  display: flex;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 42px;
+}
+.auth-card .auth-reveal:hover,
+.auth-card .auth-reveal:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ink-900);
+}
+.auth-card .auth-reveal:hover {
+  outline: none;
+}
+.auth-card .auth-reveal:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: -3px;
+}
+.auth-reveal svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+.auth-reveal .auth-eye-off,
+.auth-reveal[aria-pressed="true"] .auth-eye {
+  display: none;
+}
+.auth-reveal[aria-pressed="true"] .auth-eye-off {
+  display: block;
 }
 .auth-status {
   color: var(--red) !important;
