@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "source": "Public RUG staff profile and CV pages.",
     "people": 19,
     "peopleWithRole": 19,
     "peopleWithPhdYear": 13,
-    "peopleWithErrors": 0
+    "peopleWithErrors": 1
   },
   "people": [
     {
@@ -28,7 +28,9 @@
       "externalCvLinks": [],
       "lastModified": "24 September 2026 11.16 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "MA",
@@ -51,7 +53,9 @@
       "externalCvLinks": [],
       "lastModified": "20 July 2026 09.37 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "SB",
@@ -74,7 +78,9 @@
       "externalCvLinks": [],
       "lastModified": "03 March 2026 07.44 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JDB",
@@ -98,7 +104,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 1.29 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JVB",
@@ -120,7 +128,9 @@
       "externalCvLinks": [],
       "lastModified": "20 May 2026 11.40 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "CDD",
@@ -144,7 +154,9 @@
       "externalCvLinks": [],
       "lastModified": "13 May 2025 07.35 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "OJ",
@@ -166,7 +178,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 11.23 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JL",
@@ -192,7 +206,9 @@
       ],
       "lastModified": "25 August 2026 07.45 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "LM",
@@ -215,7 +231,9 @@
       "externalCvLinks": [],
       "lastModified": "30 March 2026 10.19 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JMA",
@@ -239,7 +257,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 1.09 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "BN",
@@ -261,7 +281,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 12.25 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JO",
@@ -283,7 +305,9 @@
       "externalCvLinks": [],
       "lastModified": "17 September 2026 4.00 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "FR",
@@ -304,9 +328,11 @@
       "phdEvidenceSourceUrl": "https://www.rug.nl/staff/f.a.rink/cv?lang=en",
       "phdConfidence": 0.9,
       "externalCvLinks": [],
-      "lastModified": "27 October 2026 07.35 a.m.",
+      "lastModified": "05 November 2026 07.33 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "MR",
@@ -328,7 +354,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 12.19 p.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JS",
@@ -352,7 +380,9 @@
       "externalCvLinks": [],
       "lastModified": "11 February 2026 07.36 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "GVV",
@@ -376,7 +406,9 @@
       "externalCvLinks": [],
       "lastModified": "01 March 2024 11.36 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "TDV",
@@ -400,7 +432,9 @@
       "externalCvLinks": [],
       "lastModified": "05 January 2026 07.43 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "YY",
@@ -422,7 +456,9 @@
       "externalCvLinks": [],
       "lastModified": "19 June 2025 10.00 a.m.",
       "sourceStatus": "fetched",
-      "errors": []
+      "errors": [],
+      "profileSourceStatus": "web",
+      "cvSourceStatus": "web"
     },
     {
       "personId": "JJ",
@@ -443,8 +479,13 @@
       "phdConfidence": 0.78,
       "externalCvLinks": [],
       "lastModified": "30 June 2026 07.42 a.m.",
-      "sourceStatus": "fetched",
-      "errors": []
+      "sourceStatus": "cached-after-source-error",
+      "errors": [
+        "profile: cache-fallback (captured 2026-10-29T10:16:14.834331+00:00): HTTP Error 404: ",
+        "cv: cache-fallback (captured 2026-10-29T10:16:15.934336+00:00): HTTP Error 404: "
+      ],
+      "profileSourceStatus": "cache-fallback (captured 2026-10-29T10:16:14.834331+00:00): HTTP Error 404: ",
+      "cvSourceStatus": "cache-fallback (captured 2026-10-29T10:16:15.934336+00:00): HTTP Error 404: "
     }
   ]
 }

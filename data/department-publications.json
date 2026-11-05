@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "rostersCheckedOn": "2026-09-07",
     "people": 512,
     "pagesChecked": 515,
-    "pagesFailed": 151,
+    "pagesFailed": 150,
     "mergedWorkVersions": 1,
     "fromYear": 2005,
     "method": "Unique journal publications linked to current departmental rosters, including PhD students and all staff ranks. One count per paper per department. Joint papers count once in each participating department. Historical affiliations are not reconstructed.",
@@ -64,8 +64,8 @@
       "unknownPeople": 38,
       "knownExcludedPeople": 195,
       "roleCategoryCounts": {
-        "assistant_professor": 115,
-        "associate_professor": 65,
+        "assistant_professor": 114,
+        "associate_professor": 66,
         "emeritus": 8,
         "honorary": 3,
         "lecturer": 33,
@@ -135,8 +135,8 @@
           "unknownPeople": 14,
           "knownExcludedPeople": 35,
           "roleCategoryCounts": {
-            "assistant_professor": 17,
-            "associate_professor": 12,
+            "assistant_professor": 16,
+            "associate_professor": 13,
             "emeritus": 1,
             "lecturer": 2,
             "phd": 32,
@@ -258,7 +258,7 @@
       "recordsWithoutRetainedPeople": 99
     },
     "comparisonAudit": {
-      "generatedOn": "2026-11-02",
+      "generatedOn": "2026-11-05",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -268,9 +268,9 @@
       ],
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
-        "title": 638,
-        "issn": 2622,
-        "unmatched": 557,
+        "title": 639,
+        "issn": 2648,
+        "unmatched": 559,
         "title-alias": 3,
         "excluded-doi-mismatch": 2
       },
@@ -353,9 +353,59 @@
           "reason": "Non-counted publication type: "
         },
         {
+          "id": "work:90c0f47f4f881431cc2d",
+          "title": "Dark side of the day: Overnight price jumps and short-term return predictability",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.jbef.2026.101220. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+        },
+        {
+          "id": "work:2489a1a02ed9803e46a0",
+          "title": "Daughters like mothers? New evidence of inter-generational transmission of labor market stereotypical behavior",
+          "reason": "Verified duplicate source record; counted once as doi:10.1007/s00148-026-01185-9. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330"
+        },
+        {
+          "id": "work:c0367483abcd04acef01",
+          "title": "Drivers and persistence of energy poverty: An empirical analysis of country and gender heterogeneity in Spain and the Netherlands",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.enpol.2026.115318. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7"
+        },
+        {
+          "id": "work:65201f8610b172dd9e4e",
+          "title": "Economic assessment of the role of nuclear and renewables in future decarbonized electricity markets",
+          "reason": "Verified duplicate source record; counted once as doi:10.1177/01956574261450943. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+        },
+        {
+          "id": "work:6fa904f8473926f2ff94",
+          "title": "Household demand and willingness to pay for grid electricity: Evidence from Burkina Faso",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.enpol.2026.115511. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad"
+        },
+        {
+          "id": "work:18160e0dec69e2a1483c",
+          "title": "Let Me Check on You: Worker Well-Being Under AI and Human Health and Safety Monitoring",
+          "reason": "Verified duplicate source record; counted once as doi:10.1177/29782244261475886. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a"
+        },
+        {
+          "id": "work:765880b63c7df0c335c4",
+          "title": "Mitigating carbon leakage under the EU ETS: How does state aid for indirect emission costs affect firm profits?",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.eneco.2025.109024. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31"
+        },
+        {
+          "id": "work:975dd2148af53085f938",
+          "title": "The psychological attributes and contextual factors in financial planning for retirement: evidence from Indonesia",
+          "reason": "Verified duplicate source record; counted once as doi:10.1007/s12144-026-09773-4. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392"
+        },
+        {
+          "id": "work:97cd6de53208944f941d",
+          "title": "Women's Empowerment, WaSH, and Child Feeding: Implications for Childhood Stunting in South Asia",
+          "reason": "Verified duplicate source record; counted once as doi:10.1111/mcn.70223. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29"
+        },
+        {
           "id": "doi:10.1093/eurpub/ckaf161.629",
           "title": "Governing the long-term: platforms and complex public health risks",
           "reason": "No retained departmental author link after source review."
+        },
+        {
+          "id": "work:096b422bd4932b517e8a",
+          "title": "Information preferences, reference points and hedonic editing: experimental evidence",
+          "reason": "Verified duplicate source record; counted once as doi:10.1017/eec.2026.10052. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152"
         },
         {
           "id": "doi:10.1038/s41558-025-02267-4",
@@ -993,6 +1043,11 @@
           "reason": "Non-counted publication type: Subtype awaiting publisher review"
         },
         {
+          "id": "work:c328c53b31f8c409d01b",
+          "title": "Protected or exposed: the impact of rainfall shocks on children's nutritional vulnerability and the role of women's empowerment",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.wdp.2026.100832. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2"
+        },
+        {
           "id": "doi:10.1093/occmed/kqae023.0423",
           "title": "SS74-03 NEEDS-BASED CRAFTING: HOW WORKERS’ PROACTIVE SHAPING OF WORK AND LEISURE EXPERIENCES AFFECTS THEIR HEALTH, WELLBEING AND PERFORMANCE",
           "reason": "Conference presentation abstract: Occupational Medicine 74 Supplement 1, SS74-03. https://academic.oup.com/occmed/article/74/Supplement_1/0/7706909"
@@ -1141,21 +1196,46 @@
           "id": "work:publisher-201ef51119feffc38294",
           "title": "Bevrijd de deeleconomie",
           "reason": "Non-counted publication type: Editorial"
+        },
+        {
+          "id": "work:d2e54ee9c89795f1bdbb",
+          "title": "Visual strategies in influencer marketing campaigns: The role of consistency",
+          "reason": "Verified duplicate source record; counted once as doi:10.1007/s11747-026-01188-8. Exact official staff work/Pure UUID enriched with publisher DOI; retain the raw source row and count the canonical DOI once. https://doi.org/10.1007/s11747-026-01188-8 https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8 https://www.rug.nl/staff/a.boluki/research?lang=en"
+        },
+        {
+          "id": "work:1250a3caf2874189d92f",
+          "title": "Advancing Rigor in Operations Management Qualitative Research: From Proceduralism to Reflexive Reasoning",
+          "reason": "Verified duplicate source record; counted once as doi:10.1002/joom.70051. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2"
+        },
+        {
+          "id": "work:19870ab14924fd4bc1ca",
+          "title": "Collaborative knowledge building for innovation: insights from market engagement in circular public procurement",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.jik.2026.101129. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+        },
+        {
+          "id": "work:a008c64b9ec029eb003a",
+          "title": "Cash crops vs. food security? Examining the role of Cocoa-Cashew intercropping in smallholder farming systems",
+          "reason": "Verified duplicate source record; counted once as doi:10.1186/s40066-026-00620-0. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2"
+        },
+        {
+          "id": "work:c877b2ffd6dd90fe110f",
+          "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
+          "reason": "Verified duplicate source record; counted once as doi:10.1016/j.ijhydene.2026.155791. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
         }
       ],
       "yearBasisCounts": {
-        "official-reference": 948,
+        "official-reference": 949,
         "publisher-issue": 2446,
-        "publisher-first-publication": 294,
-        "reviewed-official-record": 25,
+        "publisher-first-publication": 295,
+        "reviewed-official-record": 52,
         "stored-unverified": 107,
         "publisher-override": 1,
         "reviewed-original-issue": 1
       },
       "doiTitleChecks": {
-        "no-doi": 820,
-        "title-agreement": 2725,
-        "unavailable": 275,
+        "no-doi": 821,
+        "title-agreement": 2726,
+        "unavailable": 302,
         "excluded-mismatch": 2
       },
       "comparisonCohort": {
@@ -1188,8 +1268,8 @@
         "unknownPeople": 38,
         "knownExcludedPeople": 195,
         "roleCategoryCounts": {
-          "assistant_professor": 115,
-          "associate_professor": 65,
+          "assistant_professor": 114,
+          "associate_professor": 66,
           "emeritus": 8,
           "honorary": 3,
           "lecturer": 33,
@@ -1259,8 +1339,8 @@
             "unknownPeople": 14,
             "knownExcludedPeople": 35,
             "roleCategoryCounts": {
-              "assistant_professor": 17,
-              "associate_professor": 12,
+              "assistant_professor": 16,
+              "associate_professor": 13,
               "emeritus": 1,
               "lecturer": 2,
               "phd": 32,
@@ -1530,7 +1610,7 @@
           "https://www.rug.nl/staff/m.arnold/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1577,7 +1657,7 @@
           "https://www.rug.nl/staff/s.berger/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1625,7 +1705,7 @@
           "https://www.rug.nl/staff/j.de.bloom/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1677,7 +1757,7 @@
           "https://www.rug.nl/staff/h.j.van.de.brake/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1724,7 +1804,7 @@
           "https://www.rug.nl/staff/o.janssen/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1773,7 +1853,7 @@
           "https://www.rug.nl/staff/j.m.lees/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1824,7 +1904,7 @@
           "https://www.rug.nl/staff/j.m.mascareno/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1872,7 +1952,7 @@
           "https://www.rug.nl/staff/h.b.m.molleman/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1920,7 +2000,7 @@
           "https://www.rug.nl/staff/l.b.mulder/?lang=en"
         ],
         "evidenceText": "Associate Professor (with IUS promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1969,7 +2049,7 @@
           "https://www.rug.nl/staff/n.h.nguyen/?lang=en"
         ],
         "evidenceText": "Assistant Professor in Human Resource Management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2017,7 +2097,7 @@
           "https://www.rug.nl/staff/b.a.nijstad/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2064,7 +2144,7 @@
           "https://www.rug.nl/staff/j.oedzes/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2112,7 +2192,7 @@
           "https://www.rug.nl/staff/f.a.rink/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2160,7 +2240,7 @@
           "https://www.rug.nl/staff/m.ryan/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2208,7 +2288,7 @@
           "https://www.rug.nl/staff/j.i.stoker/?lang=en"
         ],
         "evidenceText": "Professor of Leadership and Organizational Change, Director centre of expertise In the LEAD",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2257,7 +2337,7 @@
           "https://www.rug.nl/staff/g.s.van.der.vegt/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2307,7 +2387,7 @@
           "https://www.rug.nl/staff/thom.de.vries/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2354,7 +2434,7 @@
           "https://www.rug.nl/staff/yingjie.yuan/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2401,7 +2481,7 @@
           "https://www.rug.nl/staff/t.h.a.bijmolt/?lang=en"
         ],
         "evidenceText": "Full Professor, Chairman of the department",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The main official profile explicitly establishes academic professor rank; head-of-department status alone was not used."
       }
     },
@@ -2447,7 +2527,7 @@
           "https://www.rug.nl/staff/j.van.doorn/?lang=en"
         ],
         "evidenceText": "Professor of Service Marketing",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2494,7 +2574,7 @@
           "https://www.rug.nl/staff/b.m.fennis/?lang=en"
         ],
         "evidenceText": "Full Professor in Consumer Behavior",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2541,7 +2621,7 @@
           "https://www.rug.nl/staff/m.j.gijsenberg/?lang=en"
         ],
         "evidenceText": "Full Professor of Marketing Dynamics",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2587,7 +2667,7 @@
           "https://www.rug.nl/staff/k.van.ittersum/?lang=en"
         ],
         "evidenceText": "Professor of Marketing and Consumer Well-Being",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2681,7 +2761,7 @@
           "https://www.rug.nl/staff/p.c.verhoef/?lang=en"
         ],
         "evidenceText": "Dean, Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2728,7 +2808,7 @@
           "https://www.rug.nl/staff/j.e.wieringa/?lang=en"
         ],
         "evidenceText": "Full professor of Research Methods in Business",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2774,7 +2854,7 @@
           "https://www.rug.nl/staff/j.w.bolderdijk/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2820,7 +2900,7 @@
           "https://www.rug.nl/staff/h.risselada/?lang=en"
         ],
         "evidenceText": "Associate professor (with ius promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2867,7 +2947,7 @@
           "https://www.rug.nl/staff/m.c.leliveld/?lang=en"
         ],
         "evidenceText": "Professor of Consumer Ethics, Aletta Jacobs chair",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2914,7 +2994,7 @@
           "https://www.rug.nl/staff/m.moeini.jazani/?lang=en"
         ],
         "evidenceText": "Associate Professor of Marketing",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3196,7 +3276,7 @@
           "https://www.rug.nl/staff/j.holthower/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3242,7 +3322,7 @@
           "https://www.rug.nl/staff/m.keizer/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3289,7 +3369,7 @@
           "https://www.rug.nl/staff/x.luo/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3383,7 +3463,7 @@
           "https://www.rug.nl/staff/j.e.m.van.nierop/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3430,7 +3510,7 @@
           "https://www.rug.nl/staff/s.m.rizio/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3603,7 +3683,7 @@
           "https://www.rug.nl/staff/p.m.m.de.faria/?lang=en"
         ],
         "evidenceText": "Professor of Innovation Management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The main official profile explicitly establishes academic professor rank; head-of-department status alone was not used."
       }
     },
@@ -3651,7 +3731,7 @@
           "https://www.rug.nl/staff/albert.boonstra/?lang=en"
         ],
         "evidenceText": "Professor of Information Management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3700,7 +3780,7 @@
           "https://www.rug.nl/staff/d.j.langley/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3748,7 +3828,7 @@
           "https://www.rug.nl/staff/f.noseleit/?lang=en"
         ],
         "evidenceText": "Professor of Entrepreneurship and Innovation",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3846,7 +3926,7 @@
           "https://www.rug.nl/staff/m.wyrwich/?lang=en"
         ],
         "evidenceText": "Full Professor of Entrepreneurship and Regional Development",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3895,7 +3975,7 @@
           "https://www.rug.nl/staff/w.g.biemans/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3944,7 +4024,7 @@
           "https://www.rug.nl/staff/m.j.brand/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3993,7 +4073,7 @@
           "https://www.rug.nl/staff/t.l.j.broekhuizen/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4044,7 +4124,7 @@
           "https://www.rug.nl/staff/i.estrada.vaquero/?lang=en"
         ],
         "evidenceText": "Aletta Jacobs Professor Collaboration Strategy; Director MSc BA - Business Administration",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4092,7 +4172,7 @@
           "https://www.rug.nl/staff/m.hanisch/?lang=en"
         ],
         "evidenceText": "Associate Professor (ius promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4142,7 +4222,7 @@
           "https://www.rug.nl/staff/k.r.e.huizingh/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4192,7 +4272,7 @@
           "https://www.rug.nl/staff/b.c.mitzinneck/?lang=en"
         ],
         "evidenceText": "Associate Professor | PhD Coordinator",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4245,7 +4325,7 @@
           "https://www.rug.nl/staff/m.a.g.van.offenbeek/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4294,7 +4374,7 @@
           "https://www.rug.nl/staff/o.p.roemeling/?lang=en"
         ],
         "evidenceText": "Program director BDK, Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4343,7 +4423,7 @@
           "https://www.rug.nl/staff/p.j.steinberg/?lang=en"
         ],
         "evidenceText": "Associate Professor (with ius promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4391,7 +4471,7 @@
           "https://www.rug.nl/staff/s.asad/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4517,7 +4597,7 @@
           "https://www.rug.nl/staff/o.belousova/?lang=en"
         ],
         "evidenceText": "Assistant professor (tenured)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4566,7 +4646,7 @@
           "https://www.rug.nl/staff/c.carroll/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4616,7 +4696,7 @@
           "https://www.rug.nl/staff/s.m.costa/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4665,7 +4745,7 @@
           "https://www.rug.nl/staff/e.p.m.croonen/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4775,7 +4855,7 @@
           "https://www.rug.nl/staff/n.e.fabian/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4823,7 +4903,7 @@
           "https://www.rug.nl/staff/a.fakha/?lang=en"
         ],
         "evidenceText": "Assistant Professor of Innovation Management & Strategy",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4872,7 +4952,7 @@
           "https://www.rug.nl/staff/a.j.frederiks/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4922,7 +5002,7 @@
           "https://www.rug.nl/staff/m.l.hage/?lang=en"
         ],
         "evidenceText": "Associate professor Change Management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4971,7 +5051,7 @@
           "https://www.rug.nl/staff/k.s.heucher/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5022,7 +5102,7 @@
           "https://www.rug.nl/staff/p.m.infantes.sanchez/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5070,7 +5150,7 @@
           "https://www.rug.nl/staff/m.kleine/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5118,7 +5198,7 @@
           "https://www.rug.nl/staff/i.kozlinska/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5167,7 +5247,7 @@
           "https://www.rug.nl/staff/p.j.o.kuusela/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5329,7 +5409,7 @@
           "https://www.rug.nl/staff/h.m.ortiz.almeyda/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5425,7 +5505,7 @@
           "https://www.rug.nl/staff/e.smailhodzic/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5473,7 +5553,7 @@
           "https://www.rug.nl/staff/d.speldekamp/?lang=en"
         ],
         "evidenceText": "Coordinator external relations FEB Career Services & Corporate Relations, Assistant Professor Innovation Management & Strategy",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5520,7 +5600,7 @@
           "https://www.rug.nl/staff/m.aerts-veenstra/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5566,7 +5646,7 @@
           "https://www.rug.nl/staff/i.bakir/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5613,7 +5693,7 @@
           "https://www.rug.nl/staff/j.a.c.bokhorst/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5659,7 +5739,7 @@
           "https://www.rug.nl/staff/s.boscari/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5707,7 +5787,7 @@
           "https://www.rug.nl/staff/h.broekhuis/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5753,7 +5833,7 @@
           "https://www.rug.nl/staff/p.buijs/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5799,7 +5879,7 @@
           "https://www.rug.nl/staff/m.dienstknecht/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5845,7 +5925,7 @@
           "https://www.rug.nl/staff/d.p.van.donk/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5938,7 +6018,7 @@
           "https://www.rug.nl/staff/c.emmanouilidis/?lang=en"
         ],
         "evidenceText": "Associate Professor with Ius Promovendi",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5985,7 +6065,7 @@
           "https://www.rug.nl/staff/n.d.van.foreest/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6032,7 +6112,7 @@
           "https://www.rug.nl/staff/l.m.gelsomino/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6079,7 +6159,7 @@
           "https://www.rug.nl/staff/g.b.huitema/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6125,7 +6205,7 @@
           "https://www.rug.nl/staff/b.de.jonge/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6172,7 +6252,7 @@
           "https://www.rug.nl/staff/o.a.kilic/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6219,7 +6299,7 @@
           "https://www.rug.nl/staff/m.j.land/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6266,7 +6346,7 @@
           "https://www.rug.nl/staff/j.a.lopez.alvarez/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6312,7 +6392,7 @@
           "https://www.rug.nl/staff/l.maruster/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6359,7 +6439,7 @@
           "https://www.rug.nl/staff/e.i.metting/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6408,7 +6488,7 @@
           "https://www.rug.nl/staff/a.c.noort/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6454,7 +6534,7 @@
           "https://www.rug.nl/staff/k.peters/?lang=en"
         ],
         "evidenceText": "Assistant Professor & profile coordinator Technology Management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6550,7 +6630,7 @@
           "https://www.rug.nl/staff/j.riezebos/?lang=en"
         ],
         "evidenceText": "Full Professor Operations and Educational Innovation",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6596,7 +6676,7 @@
           "https://www.rug.nl/staff/a.rijal/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6642,7 +6722,7 @@
           "https://www.rug.nl/staff/w.romeijnders/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6688,7 +6768,7 @@
           "https://www.rug.nl/staff/k.j.roodbergen/?lang=en"
         ],
         "evidenceText": "Professor of Quantitative Logistics",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6734,7 +6814,7 @@
           "https://www.rug.nl/staff/e.rosca/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6821,14 +6901,14 @@
       "publicationPageStatus": 200,
       "publicationPageArticles": 5,
       "comparisonEligible": true,
-      "comparisonRole": "Assistant Professor",
-      "comparisonRoleCategory": "assistant_professor",
+      "comparisonRole": "Associate Professor",
+      "comparisonRoleCategory": "associate_professor",
       "comparisonRoleEvidence": {
         "evidenceUrls": [
           "https://www.rug.nl/staff/a.p.seepma/?lang=en"
         ],
-        "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "evidenceText": "Associate Professor",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6875,7 +6955,7 @@
           "https://www.rug.nl/staff/r.h.teunter/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6921,7 +7001,7 @@
           "https://www.rug.nl/staff/e.ursavas/?lang=en"
         ],
         "evidenceText": "Professor of Energy Logistics",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6969,7 +7049,7 @@
           "https://www.rug.nl/staff/j.t.van.der.vaart/?lang=en"
         ],
         "evidenceText": "Professor, Department Chair",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7015,7 +7095,7 @@
           "https://www.rug.nl/staff/j.veldman/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7061,7 +7141,7 @@
           "https://www.rug.nl/staff/i.f.a.vis/?lang=en"
         ],
         "evidenceText": "Professor of Industrial Engineering",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7107,7 +7187,7 @@
           "https://www.rug.nl/staff/jan.de.vries/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7153,7 +7233,7 @@
           "https://www.rug.nl/staff/s.waschull/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7200,7 +7280,7 @@
           "https://www.rug.nl/staff/w.m.c.van.wezel/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7246,7 +7326,7 @@
           "https://www.rug.nl/staff/c.xiao/?lang=en"
         ],
         "evidenceText": "Associate professor of sustainable supply chain management",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7292,7 +7372,7 @@
           "https://www.rug.nl/staff/d.j.van.der.zee/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7341,7 +7421,7 @@
           "https://www.rug.nl/staff/x.zhu/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7389,7 +7469,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7436,7 +7516,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor of International Economics (with ius promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7484,7 +7564,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7532,7 +7612,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor & Postdoctoral Researcher Centre of Expertise In the LEAD",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7628,7 +7708,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7675,7 +7755,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7724,7 +7804,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7821,7 +7901,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7868,7 +7948,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor (ius promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7963,7 +8043,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8057,7 +8137,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8105,7 +8185,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8152,7 +8232,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8203,7 +8283,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8250,7 +8330,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8345,7 +8425,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor of Macro-finance and Sustainability (UD1)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8439,7 +8519,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8488,7 +8568,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8534,7 +8614,7 @@
           "https://www.rug.nl/staff/l.bellora-bienengraeber/?lang=en"
         ],
         "evidenceText": "Associate Professor of Management Accounting and Control",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8581,7 +8661,7 @@
           "https://www.rug.nl/staff/o.p.g.bik/?lang=en"
         ],
         "evidenceText": "Professor of Audit & Assurance",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8628,7 +8708,7 @@
           "https://www.rug.nl/staff/i.j.j.burgers/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8724,7 +8804,7 @@
           "https://www.rug.nl/staff/k.g.k.w.derfuss/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8818,7 +8898,7 @@
           "https://www.rug.nl/staff/j.a.emanuels/?lang=en"
         ],
         "evidenceText": "Professor Accounting Information Systems",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8864,7 +8944,7 @@
           "https://www.rug.nl/staff/s.firk/?lang=en"
         ],
         "evidenceText": "Associate Professor in Management Accounting & Control (with Ius Promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8957,7 +9037,7 @@
           "https://www.rug.nl/staff/c.p.a.heijes/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9004,7 +9084,7 @@
           "https://www.rug.nl/staff/j.c.hennig/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9051,7 +9131,7 @@
           "https://www.rug.nl/staff/r.l.ter.hoeven/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9145,7 +9225,7 @@
           "https://www.rug.nl/staff/r.b.h.hooghiemstra/?lang=en"
         ],
         "evidenceText": "Professor in Financial Reporting and Corporate Governance",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9192,7 +9272,7 @@
           "https://www.rug.nl/staff/c.a.huijgen/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9231,14 +9311,14 @@
       "publicationPageStatus": 200,
       "publicationPageArticles": 10,
       "comparisonEligible": true,
-      "comparisonRole": "Associate Professor of Sustainability Accounting",
+      "comparisonRole": "Associate Professor of Sustainability Accounting (with Ius Promovendi)",
       "comparisonRoleCategory": "associate_professor",
       "comparisonRoleEvidence": {
         "evidenceUrls": [
           "https://www.rug.nl/staff/n.hussain/?lang=en"
         ],
-        "evidenceText": "Associate Professor of Sustainability Accounting",
-        "checkedOn": "2026-10-29",
+        "evidenceText": "Associate Professor of Sustainability Accounting (with Ius Promovendi)",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9286,7 +9366,7 @@
           "https://www.rug.nl/staff/a.e.m.kamp-roelands/?lang=en"
         ],
         "evidenceText": "Professor non-financial information, integrated reporting and assurance - C.R. Rao foundation",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9332,7 +9412,7 @@
           "https://www.rug.nl/staff/y.karaibrahimoglu/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9427,7 +9507,7 @@
           "https://www.rug.nl/staff/k.linke/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9473,7 +9553,7 @@
           "https://www.rug.nl/staff/s.mansouri/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9520,7 +9600,7 @@
           "https://www.rug.nl/staff/t.a.marra/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9566,7 +9646,7 @@
           "https://www.rug.nl/staff/j.offerein/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9613,7 +9693,7 @@
           "https://www.rug.nl/staff/j.t.reilley/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9707,7 +9787,7 @@
           "https://www.rug.nl/staff/a.c.w.sneller/?lang=en"
         ],
         "evidenceText": "Professor of Digitalization & AI in Accounting, Control, Governance, and Auditing",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9754,7 +9834,7 @@
           "https://www.rug.nl/staff/m.p.van.der.steen/?lang=en"
         ],
         "evidenceText": "Associate Professor of Management Accounting",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9801,7 +9881,7 @@
           "https://www.rug.nl/staff/a.k.tank/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9847,7 +9927,7 @@
           "https://www.rug.nl/staff/s.tillema/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9894,7 +9974,7 @@
           "https://www.rug.nl/staff/d.veltrop/?lang=en"
         ],
         "evidenceText": "Professor of Corporate Governance and Behavior",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-05",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -10995,8 +11075,8 @@
       "affiliated": false,
       "appointmentSection": "phd",
       "role": "",
-      "publicationPageStatus": 404,
-      "publicationPageArticles": null,
+      "publicationPageStatus": 200,
+      "publicationPageArticles": 1,
       "comparisonEligible": false,
       "comparisonRole": "Ph.D. Candidate",
       "comparisonRoleCategory": "phd",
@@ -25108,38 +25188,6 @@
       "doiTitleCheck": "no-doi"
     },
     {
-      "id": "work:1250a3caf2874189d92f",
-      "title": "Advancing Rigor in Operations Management Qualitative Research: From Proceduralism to Reflexive Reasoning",
-      "year": 2026,
-      "doi": "",
-      "url": "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2",
-      "journal": "Journal of Operations Management",
-      "people": [
-        "ops-e-rosca"
-      ],
-      "aip": 96.377,
-      "authors": [
-        "Wilhelm, M.",
-        "Wölfl, K.",
-        "Rosca, E.",
-        "Scholten, K."
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "JOURNAL OF OPERATIONS MANAGEMENT",
-      "aipMatchMethod": "title",
-      "officialProfilePeople": [
-        "ops-e-rosca"
-      ],
-      "comparisonYear": 2026,
-      "comparisonYearBasis": "official-reference",
-      "comparisonYearSource": "https://www.rug.nl/staff/e.rosca/research?lang=en",
-      "doiTitleCheck": "no-doi"
-    },
-    {
       "id": "doi:10.1177/01461672241288332",
       "title": "Alluring or Alarming? The Polarizing Effect of Forbidden Knowledge in Political Discourse",
       "year": 2026,
@@ -25307,40 +25355,6 @@
       "doiTitleCheck": "title-agreement"
     },
     {
-      "id": "work:c877b2ffd6dd90fe110f",
-      "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
-      "year": 2026,
-      "doi": "",
-      "url": "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8",
-      "journal": "International Journal of Hydrogen Energy",
-      "people": [
-        "ops-e-ursavas",
-        "ops-x-zhu"
-      ],
-      "aip": 71.676,
-      "authors": [
-        "Everink, R.",
-        "Tekeli, S.",
-        "Zhu, S. X.",
-        "Ursavas, E."
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "INTERNATIONAL JOURNAL OF HYDROGEN ENERGY",
-      "aipMatchMethod": "title",
-      "officialProfilePeople": [
-        "ops-e-ursavas",
-        "ops-x-zhu"
-      ],
-      "comparisonYear": 2026,
-      "comparisonYearBasis": "official-reference",
-      "comparisonYearSource": "https://www.rug.nl/staff/e.ursavas/research?lang=en",
-      "doiTitleCheck": "no-doi"
-    },
-    {
       "id": "doi:10.1007/s10290-026-00654-3",
       "title": "Assortative matching in cross-border mergers and acquisitions",
       "year": 2026,
@@ -25505,38 +25519,6 @@
       "doiTitleCheck": "title-agreement"
     },
     {
-      "id": "work:a008c64b9ec029eb003a",
-      "title": "Cash crops vs. food security? Examining the role of Cocoa-Cashew intercropping in smallholder farming systems",
-      "year": 2026,
-      "doi": "",
-      "url": "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2",
-      "journal": "Agriculture and Food Security",
-      "people": [
-        "gem-p-rao-sahib"
-      ],
-      "aip": null,
-      "authors": [
-        "Chandran MC, S.",
-        "Chandran, R.",
-        "Sahib, P. R.",
-        "Achuthan, K."
-      ],
-      "departments": [
-        "GEM"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "",
-      "aipMatchMethod": "unmatched",
-      "officialProfilePeople": [
-        "gem-p-rao-sahib"
-      ],
-      "comparisonYear": 2026,
-      "comparisonYearBasis": "official-reference",
-      "comparisonYearSource": "https://www.rug.nl/staff/p.rao.sahib/research?lang=en",
-      "doiTitleCheck": "no-doi"
-    },
-    {
       "id": "work:e28d7fed559f016f0d16",
       "title": "Central bank independence and accountability",
       "year": 2026,
@@ -25564,40 +25546,6 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/jakob.de.haan/research?lang=en",
-      "doiTitleCheck": "no-doi"
-    },
-    {
-      "id": "work:19870ab14924fd4bc1ca",
-      "title": "Collaborative knowledge building for innovation: insights from market engagement in circular public procurement",
-      "year": 2026,
-      "doi": "",
-      "url": "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7",
-      "journal": "Journal of Innovation and Knowledge",
-      "people": [
-        "ops-aj-dreischerf",
-        "ops-e-rosca"
-      ],
-      "aip": 88.856,
-      "authors": [
-        "Arshad, H.",
-        "Dreischerf, A.",
-        "Modic, D.",
-        "Rosca, E."
-      ],
-      "departments": [
-        "Operations"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "Journal of Innovation & Knowledge",
-      "aipMatchMethod": "title",
-      "officialProfilePeople": [
-        "ops-aj-dreischerf",
-        "ops-e-rosca"
-      ],
-      "comparisonYear": 2026,
-      "comparisonYearBasis": "official-reference",
-      "comparisonYearSource": "https://www.rug.nl/staff/a.j.dreischerf/research?lang=en",
       "doiTitleCheck": "no-doi"
     },
     {
@@ -25823,8 +25771,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.jbef.2026.101220. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d",
+      "countedInComparison": false,
       "aipJournal": "Journal of Behavioral and Experimental Finance",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -25834,7 +25782,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/h.gonenc/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.jbef.2026.101220",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+        ]
+      }
     },
     {
       "id": "work:c4700f8757122a66c5b8",
@@ -25885,8 +25840,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1007/s00148-026-01185-9. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330",
+      "countedInComparison": false,
       "aipJournal": "JOURNAL OF POPULATION ECONOMICS",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -25895,7 +25850,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/a.postepska/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1007/s00148-026-01185-9",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330"
+        ]
+      }
     },
     {
       "id": "work:5ff4918d157e7caa3320",
@@ -26206,8 +26168,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.enpol.2026.115318. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7",
+      "countedInComparison": false,
       "aipJournal": "Energy Policy",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -26216,7 +26178,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/machiel.mulder/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.enpol.2026.115318",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7"
+        ]
+      }
     },
     {
       "id": "doi:10.1108/cpoib-09-2024-0101",
@@ -26268,8 +26237,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1177/01956574261450943. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491",
+      "countedInComparison": false,
       "aipJournal": "ENERGY JOURNAL",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -26279,7 +26248,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/a.t.veenstra/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1177/01956574261450943",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+        ]
+      }
     },
     {
       "id": "work:d599b3a164166528cb83",
@@ -27225,8 +27201,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.enpol.2026.115511. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad",
+      "countedInComparison": false,
       "aipJournal": "Energy Policy",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -27235,7 +27211,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/a.postepska/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.enpol.2026.115511",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad"
+        ]
+      }
     },
     {
       "id": "work:6aff0c092e82b8fcc6f3",
@@ -28377,8 +28360,8 @@
       "departments": [
         "GEM"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1177/29782244261475886. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a",
+      "countedInComparison": false,
       "aipJournal": "",
       "aipMatchMethod": "unmatched",
       "officialProfilePeople": [
@@ -28387,7 +28370,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/m.v.nikolova/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1177/29782244261475886",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a"
+        ]
+      }
     },
     {
       "id": "work:fa3bfab7ae288873b6fb",
@@ -28809,8 +28799,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.eneco.2025.109024. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31",
+      "countedInComparison": false,
       "aipJournal": "Energy Economics",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -28819,7 +28809,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/m.kesina/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.eneco.2025.109024",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31"
+        ]
+      }
     },
     {
       "id": "doi:10.1111/joop.70146",
@@ -30536,8 +30533,8 @@
       "departments": [
         "HRM&OB"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1007/s12144-026-09773-4. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392",
+      "countedInComparison": false,
       "aipJournal": "CURRENT PSYCHOLOGY",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -30546,7 +30543,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/h.y.paryono/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1007/s12144-026-09773-4",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392"
+        ]
+      }
     },
     {
       "id": "work:f2e7b4daa77ffbfd7042",
@@ -31329,8 +31333,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1111/mcn.70223. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29",
+      "countedInComparison": false,
       "aipJournal": "Maternal and Child Nutrition",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -31339,7 +31343,14 @@
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/b.w.lensink/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1111/mcn.70223",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29"
+        ]
+      }
     },
     {
       "id": "work:f6c0cb769d5ff51ea3eb",
@@ -35775,8 +35786,8 @@
       "departments": [
         "EEF"
       ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1017/eec.2026.10052. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152",
+      "countedInComparison": false,
       "aipJournal": "EXPERIMENTAL ECONOMICS",
       "aipMatchMethod": "title",
       "officialProfilePeople": [
@@ -35786,7 +35797,14 @@
       "comparisonYear": 2025,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/a.n.peter/research?lang=en",
-      "doiTitleCheck": "no-doi"
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1017/eec.2026.10052",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152"
+        ]
+      }
     },
     {
       "id": "doi:10.1057/s41267-025-00818-7",
@@ -76113,7 +76131,7 @@
     {
       "id": "doi:10.1016/j.joep.2019.102242",
       "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
-      "year": 2020,
+      "year": 2019,
       "doi": "10.1016/j.joep.2019.102242",
       "url": "https://openalex.org/W2992972654",
       "journal": "Journal of Economic Psychology",
@@ -83685,7 +83703,7 @@
       "title": "Intense Self-Regulatory Effort Increases Need for Conservation and Reduces Attractiveness of Energy-Requiring Rewards",
       "year": 2019,
       "doi": "10.1027/1864-9335/a000395",
-      "url": "https://research.rug.nl/en/publications/6d1f10a2-1d22-466f-8795-bab1c544a319",
+      "url": "https://openalex.org/W2965655506",
       "journal": "Social Psychology",
       "people": [
         "hrmob-j-jordan",
@@ -83693,9 +83711,9 @@
       ],
       "aip": 80.449,
       "authors": [
-        "Giacomantonio, M.",
-        "Jordan, J.",
-        "Fennis, B. M."
+        "Mauro Giacomantonio",
+        "Jennifer Jordan",
+        "Bob M. Fennis"
       ],
       "departments": [
         "HRM&OB",
@@ -85010,7 +85028,7 @@
       "title": "Social and Personal Power: A Closer Examination",
       "year": 2019,
       "doi": "10.1027/1864-9335/a000389",
-      "url": "https://openalex.org/W2967960657",
+      "url": "https://doi.org/10.1027/1864-9335/a000389",
       "journal": "Social Psychology",
       "people": [
         "hrmob-ji-stoker"
@@ -99743,7 +99761,7 @@
       "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
       "year": 2016,
       "doi": "10.1016/j.jesp.2015.10.001",
-      "url": "https://research.rug.nl/en/publications/bbd5bb3c-61a0-4672-89b4-36db0f2aa1e3",
+      "url": "https://openalex.org/W2309036171",
       "journal": "Journal of Experimental Social Psychology",
       "people": [
         "hrmob-j-jordan"
@@ -101931,19 +101949,19 @@
     },
     {
       "id": "doi:10.1002/ejsp.2101",
-      "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
+      "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others' transgressions",
       "year": 2015,
       "doi": "10.1002/ejsp.2101",
-      "url": "https://research.rug.nl/en/publications/747d7679-304b-4bc5-b908-d2e2827dff49",
+      "url": "https://openalex.org/W2097631358",
       "journal": "European Journal of Social Psychology",
       "people": [
         "hrmob-j-jordan"
       ],
       "aip": 90.98,
       "authors": [
-        "Jordan, J.",
-        "Flynn, F. J.",
-        "Cohen, T. R."
+        "Jennifer Jordan",
+        "Francis J. Flynn",
+        "Taya R. Cohen"
       ],
       "departments": [
         "HRM&OB"
@@ -127925,7 +127943,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Peter Verboon",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "departments": [
         "HRM&OB"
@@ -128579,7 +128597,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "departments": [
         "HRM&OB"
@@ -128693,7 +128711,7 @@
       ],
       "aip": 13.436,
       "authors": [
-        "David De Cremer",
+        "David De Cremer A",
         "Laetitia B. Mulder"
       ],
       "departments": [
@@ -133331,7 +133349,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer",
+        "David De Cremer A",
         "Henk Wilke"
       ],
       "departments": [
@@ -134948,7 +134966,7 @@
         "Laetitia B. Mulder",
         "Eric van Dijk",
         "Henk Wilke",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "departments": [
         "HRM&OB"
@@ -135177,7 +135195,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer",
+        "David De Cremer A",
         "Henk Wilke"
       ],
       "departments": [
@@ -143200,8 +143218,8 @@
         "EEF"
       ],
       "doiTitleCheck": "no-doi",
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.wdp.2026.100832. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2",
+      "countedInComparison": false,
       "comparisonYear": 2026,
       "comparisonYearBasis": "official-reference",
       "comparisonYearSource": "https://www.rug.nl/staff/a.g.geis/research?lang=en",
@@ -143209,7 +143227,14 @@
       "aipMatchMethod": "title",
       "officialProfilePeople": [
         "eef-a-geis"
-      ]
+      ],
+      "comparisonDuplicateOf": "doi:10.1016/j.wdp.2026.100832",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2"
+        ]
+      }
     },
     {
       "id": "work:c229918316b2c0cdca31",
@@ -147046,6 +147071,1612 @@
       "aipJournal": "CURRENT PSYCHOLOGY",
       "aipMatchMethod": "issn",
       "officialProfilePeople": []
+    },
+    {
+      "id": "doi:10.1002/joom.70051",
+      "title": "Advancing Rigor in Operations Management Qualitative Research: From Proceduralism to Reflexive Reasoning",
+      "year": 2026,
+      "doi": "10.1002/joom.70051",
+      "url": "",
+      "journal": "Journal of Operations Management",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "aip": 96.377,
+      "authors": [
+        "Miriam Wilhelm",
+        "Katja Wölfl",
+        "Eugenia Rosca",
+        "Kirstin Scholten"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/advancing-rigor-in-operations-management-qualitative-research-fro/",
+        "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-e-rosca"
+      ],
+      "officialProfilePeople": [
+        "ops-e-rosca"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/advancing-rigor-in-operations-management-qualitative-research-fro/",
+      "aipJournal": "JOURNAL OF OPERATIONS MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "ops-e-rosca"
+      ],
+      "mergedSourceRecordIds": [
+        "work:1250a3caf2874189d92f"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ijhydene.2026.155791",
+      "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
+      "year": 2026,
+      "doi": "10.1016/j.ijhydene.2026.155791",
+      "url": "",
+      "journal": "International Journal of Hydrogen Energy",
+      "people": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "aip": 71.676,
+      "authors": [
+        "Remco Everink",
+        "Songul Tekeli",
+        "Stuart X. Zhu",
+        "Evrim Ursavas"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/assessing-the-feasibility-of-power-to-hydrogen-pathways-in-the-ne/",
+        "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "officialProfilePeople": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/assessing-the-feasibility-of-power-to-hydrogen-pathways-in-the-ne/",
+      "aipJournal": "INTERNATIONAL JOURNAL OF HYDROGEN ENERGY",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "mergedSourceRecordIds": [
+        "work:c877b2ffd6dd90fe110f"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.omega.2026.103628",
+      "title": "Auction design and operational strategy for hybrid recycling platforms under information asymmetry",
+      "year": 2026,
+      "doi": "10.1016/j.omega.2026.103628",
+      "url": "",
+      "journal": "Omega (United Kingdom)",
+      "people": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "aip": 90.869,
+      "authors": [
+        "Dongmei Xue",
+        "Ruud H. Teunter",
+        "Stuart X. Zhu",
+        "Weihua Zhou"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/auction-design-and-operational-strategy-for-hybrid-recycling-plat/",
+        "https://research.rug.nl/en/publications/5977f830-57c3-4add-8c1a-a2860f484a84"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "officialProfilePeople": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/auction-design-and-operational-strategy-for-hybrid-recycling-plat/",
+      "aipJournal": "OMEGA-INTERNATIONAL JOURNAL OF MANAGEMENT SCIENCE",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1186/s40066-026-00620-0",
+      "title": "Cash crops vs. food security? Examining the role of Cocoa-Cashew intercropping in smallholder farming systems",
+      "year": 2026,
+      "doi": "10.1186/s40066-026-00620-0",
+      "url": "",
+      "journal": "Agriculture and Food Security",
+      "people": [
+        "gem-p-rao-sahib"
+      ],
+      "aip": null,
+      "authors": [
+        "Sarath Chandran MC",
+        "Renju Chandran",
+        "Padma Rao Sahib",
+        "Krishnashree Achuthan"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/cash-crops-vs-food-security-examining-the-role-of-cocoa-cashew-in/",
+        "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "gem-p-rao-sahib"
+      ],
+      "officialProfilePeople": [
+        "gem-p-rao-sahib"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/cash-crops-vs-food-security-examining-the-role-of-cocoa-cashew-in/",
+      "aipJournal": "",
+      "aipMatchMethod": "unmatched",
+      "reviewedDuplicateOfficialPeople": [
+        "gem-p-rao-sahib"
+      ],
+      "mergedSourceRecordIds": [
+        "work:a008c64b9ec029eb003a"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.jik.2026.101129",
+      "title": "Collaborative knowledge building for innovation: insights from market engagement in circular public procurement",
+      "year": 2026,
+      "doi": "10.1016/j.jik.2026.101129",
+      "url": "",
+      "journal": "Journal of Innovation and Knowledge",
+      "people": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "aip": 88.856,
+      "authors": [
+        "Hareem Arshad",
+        "Anna Dreischerf",
+        "Dolores Modic",
+        "Eugenia Rosca"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/collaborative-knowledge-building-for-innovation-insights-from-mar/",
+        "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "officialProfilePeople": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/collaborative-knowledge-building-for-innovation-insights-from-mar/",
+      "aipJournal": "Journal of Innovation & Knowledge",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "mergedSourceRecordIds": [
+        "work:19870ab14924fd4bc1ca"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.respol.2026.105579",
+      "title": "Follow the technology or follow the leader? Radical innovation and strategic leadership at a crossroads",
+      "year": 2026,
+      "doi": "10.1016/j.respol.2026.105579",
+      "url": "",
+      "journal": "Research Policy",
+      "people": [
+        "ims-s-asad"
+      ],
+      "aip": 96.348,
+      "authors": [
+        "Sarosh Asad",
+        "Mariano L.M. Heyden",
+        "Lorenz Graf-Vlachy",
+        "Elizabeth J. Altman",
+        "Donald C. Hambrick",
+        "Zeki Simsek",
+        "Mary Tripsas"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/follow-the-technology-or-follow-the-leader-radical-innovation-and/",
+        "https://research.rug.nl/en/publications/ee917511-a733-42bd-82c3-1211e7f545bb"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ims-s-asad"
+      ],
+      "officialProfilePeople": [
+        "ims-s-asad"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/follow-the-technology-or-follow-the-leader-radical-innovation-and/",
+      "aipJournal": "RESEARCH POLICY",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1007/s10551-026-06362-0",
+      "title": "Leading by Example: The Role of Buyers’ Employee-Focused Stakeholder Orientation in Suppliers’ Working Conditions in Global Value Chains",
+      "year": 2026,
+      "doi": "10.1007/s10551-026-06362-0",
+      "url": "",
+      "journal": "Journal of Business Ethics",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "aip": 91.476,
+      "authors": [
+        "Eugenia Rosca",
+        "Addisu Lashitew",
+        "Sehwon Kang"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/leading-by-example-the-role-of-buyers-employee-focused-stakeholde/",
+        "https://research.rug.nl/en/publications/6766fa03-0fe2-45a7-b000-17b1110c82f1"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-e-rosca"
+      ],
+      "officialProfilePeople": [
+        "ops-e-rosca"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/leading-by-example-the-role-of-buyers-employee-focused-stakeholde/",
+      "aipJournal": "JOURNAL OF BUSINESS ETHICS",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1016/j.omega.2026.103631",
+      "title": "Programmatic or sponsored advertising? Control, costs, and consumer utility in platform competition",
+      "year": 2026,
+      "doi": "10.1016/j.omega.2026.103631",
+      "url": "",
+      "journal": "Omega (United Kingdom)",
+      "people": [
+        "ops-x-zhu"
+      ],
+      "aip": 90.869,
+      "authors": [
+        "Dan Gao",
+        "He Xu",
+        "Stuart X. Zhu"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/programmatic-or-sponsored-advertising-control-costs-and-consumer-/",
+        "https://research.rug.nl/en/publications/9f73b1ad-a637-41d8-9ad3-5892b1edf458"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-x-zhu"
+      ],
+      "officialProfilePeople": [
+        "ops-x-zhu"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/programmatic-or-sponsored-advertising-control-costs-and-consumer-/",
+      "aipJournal": "OMEGA-INTERNATIONAL JOURNAL OF MANAGEMENT SCIENCE",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1016/j.tra.2026.105173",
+      "title": "Take it to the streets: Spatial and sociodemographic determinants of e-commerce demand in the Netherlands",
+      "year": 2026,
+      "doi": "10.1016/j.tra.2026.105173",
+      "url": "",
+      "journal": "Transportation Research Part A: Policy and Practice",
+      "people": [
+        "ops-dp-van-donk",
+        "ops-p-buijs",
+        "ops-s-wolf"
+      ],
+      "aip": 90.54,
+      "authors": [
+        "Sanne Wolf",
+        "Paul Buijs",
+        "Dirk Pieter van Donk"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+        "https://research.rug.nl/en/publications/e8858dfe-fe76-407e-87f2-e29d4c787bb3"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-dp-van-donk",
+        "ops-p-buijs",
+        "ops-s-wolf"
+      ],
+      "officialProfilePeople": [
+        "ops-dp-van-donk",
+        "ops-p-buijs",
+        "ops-s-wolf"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+      "aipJournal": "TRANSPORTATION RESEARCH PART A-POLICY AND PRACTICE",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "id": "doi:10.1037/gdn0000259",
+      "title": "Team members’ levels of expertise and team performance: The mediating role of collective learning and the moderating role of team psychological safety.",
+      "year": 2026,
+      "doi": "10.1037/gdn0000259",
+      "url": "https://doi.org/10.1037/gdn0000259",
+      "journal": "Group Dynamics: Theory, Research, and Practice",
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "aip": 70.293,
+      "authors": [
+        "Francisco J. Trincado-Munoz",
+        "Filip Agneessens",
+        "Yeliz Gedik",
+        "Gerben S. van der Vegt",
+        "Floor A. Rink"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-first-publication",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1037%2Fgdn0000259",
+      "aipJournal": "GROUP DYNAMICS-THEORY RESEARCH AND PRACTICE",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": [],
+      "provisional": false,
+      "publicationDate": "2026-11-02",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fgdn0000259",
+      "publicationDateType": "published-online",
+      "publicationDatePrecision": "day",
+      "evidence": [
+        "Public-source review: APA publisher-deposited Crossref record confirms five-author byline, online publication 2 November 2026, journal and work-level ORCIDs matching the retained official identities of Gerben van der Vegt and Floor Rink. AIP 70.293 via ISSN. Source: https://api.crossref.org/works/10.1037%2Fgdn0000259"
+      ]
+    },
+    {
+      "id": "work:d2e54ee9c89795f1bdbb",
+      "title": "Visual strategies in influencer marketing campaigns: The role of consistency",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/ee0ea7ff-3105-4cd4-bb6d-8ca731a505a8",
+      "journal": "Journal of the Academy of Marketing Science",
+      "people": [
+        "mkt-a-boluki",
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "aip": 98.163,
+      "authors": [
+        "Boluki, A.",
+        "Shehu, E.",
+        "Bijmolt, T. H. A."
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "doiTitleCheck": "no-doi",
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1007/s11747-026-01188-8. Exact official staff work/Pure UUID enriched with publisher DOI; retain the raw source row and count the canonical DOI once. https://doi.org/10.1007/s11747-026-01188-8 https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8 https://www.rug.nl/staff/a.boluki/research?lang=en",
+      "countedInComparison": false,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/a.boluki/research?lang=en",
+      "aipJournal": "JOURNAL OF THE ACADEMY OF MARKETING SCIENCE",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "mkt-a-boluki"
+      ],
+      "comparisonDuplicateOf": "doi:10.1007/s11747-026-01188-8",
+      "duplicateSourceReview": {
+        "reason": "Exact official staff work/Pure UUID enriched with publisher DOI; retain the raw source row and count the canonical DOI once.",
+        "sources": [
+          "https://doi.org/10.1007/s11747-026-01188-8",
+          "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+          "https://www.rug.nl/staff/a.boluki/research?lang=en"
+        ]
+      }
+    },
+    {
+      "id": "doi:10.1080/01441647.2026.2732021",
+      "title": "Where goods meet people: a conceptual framework integrating urban freight transport into land use and public space",
+      "year": 2026,
+      "doi": "10.1080/01441647.2026.2732021",
+      "url": "",
+      "journal": "Transport Reviews",
+      "people": [
+        "ops-p-buijs"
+      ],
+      "aip": 96.292,
+      "authors": [
+        "Paul Buijs",
+        "Bram Kin",
+        "Heleen Buldeo Rai",
+        "Jorge Gil"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/where-goods-meet-people-a-conceptual-framework-integrating-urban-/",
+        "https://research.rug.nl/en/publications/488c4c22-c056-4f9c-975a-1798b1f62d63"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "ops-p-buijs"
+      ],
+      "officialProfilePeople": [
+        "ops-p-buijs"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/where-goods-meet-people-a-conceptual-framework-integrating-urban-/",
+      "aipJournal": "TRANSPORT REVIEWS",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Household demand and willingness to pay for grid electricity: Evidence from Burkina Faso",
+      "year": 2026,
+      "journal": "Energy Policy",
+      "authors": [
+        "Postepska, A.",
+        "Sarr, L."
+      ],
+      "url": "https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad",
+      "issns": [
+        "0301-4215"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-08-21",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "4982713d-2358-4b51-908f-47c5a9f2eaad",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.enpol.2026.115511",
+      "doi": "10.1016/j.enpol.2026.115511",
+      "people": [
+        "eef-a-postepska"
+      ],
+      "aip": 89.589,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/household-demand-and-willingness-to-pay-for-grid-electricity-evid/",
+        "https://www.rug.nl/staff/a.postepska/",
+        "https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-a-postepska"
+      ],
+      "officialProfilePeople": [
+        "eef-a-postepska"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/household-demand-and-willingness-to-pay-for-grid-electricity-evid/",
+      "aipJournal": "Energy Policy",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-a-postepska"
+      ],
+      "mergedSourceRecordIds": [
+        "work:6fa904f8473926f2ff94"
+      ]
+    },
+    {
+      "title": "Daughters like mothers? New evidence of inter-generational transmission of labor market stereotypical behavior",
+      "year": 2026,
+      "journal": "Journal of Population Economics",
+      "authors": [
+        "Nieuwenhuis, A.",
+        "Postepska, A."
+      ],
+      "url": "https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330",
+      "issns": [
+        "0933-1433"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-08-21",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "cb5b0336-5949-45b8-b9c3-7429631be330",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1007/s00148-026-01185-9",
+      "doi": "10.1007/s00148-026-01185-9",
+      "people": [
+        "eef-a-postepska"
+      ],
+      "aip": 92.711,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/daughters-like-mothers-new-evidence-of-inter-generational-transmi/",
+        "https://www.rug.nl/staff/a.postepska/",
+        "https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-a-postepska"
+      ],
+      "officialProfilePeople": [
+        "eef-a-postepska"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/daughters-like-mothers-new-evidence-of-inter-generational-transmi/",
+      "aipJournal": "JOURNAL OF POPULATION ECONOMICS",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-a-postepska"
+      ],
+      "mergedSourceRecordIds": [
+        "work:2489a1a02ed9803e46a0"
+      ]
+    },
+    {
+      "title": "Measuring ESG: A Critical Reflection",
+      "year": 2026,
+      "journal": "Journal of Economic Surveys",
+      "authors": [
+        "Gunther Capelle-Blancard",
+        "Sarah Desaivres",
+        "Bert Scholtens"
+      ],
+      "url": "https://research.rug.nl/en/publications/3b6d251d-36bd-4dd2-b934-cf0b15f079f8",
+      "issns": [
+        "0950-0804"
+      ],
+      "publicationKind": "Short survey",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-06-08",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "3b6d251d-36bd-4dd2-b934-cf0b15f079f8",
+      "pureOutputClassification": "Onderzoeksoutput : Short survey › peer review",
+      "id": "doi:10.1111/joes.70128",
+      "doi": "10.1111/joes.70128",
+      "people": [
+        "eef-ljr-scholtens"
+      ],
+      "aip": 94.325,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/measuring-esg-a-critical-reflection/",
+        "https://www.rug.nl/staff/l.j.r.scholtens/",
+        "https://research.rug.nl/en/publications/3b6d251d-36bd-4dd2-b934-cf0b15f079f8"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-ljr-scholtens"
+      ],
+      "officialProfilePeople": [
+        "eef-ljr-scholtens"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/nl/publications/measuring-esg-a-critical-reflection/",
+      "aipJournal": "JOURNAL OF ECONOMIC SURVEYS",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "For the future of our grandchildren: Grandparenthood and climate change concerns",
+      "year": 2026,
+      "journal": "European Economic Review",
+      "authors": [
+        "Lieke Voorintholt",
+        "Gerard J. van den Berg",
+        "Adriaan R. Soetevent"
+      ],
+      "url": "https://research.rug.nl/en/publications/efdd49d3-da56-4d5b-9cdb-a3e169d24946",
+      "issns": [
+        "0014-2921"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-09-29",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "efdd49d3-da56-4d5b-9cdb-a3e169d24946",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.euroecorev.2026.105482",
+      "doi": "10.1016/j.euroecorev.2026.105482",
+      "people": [
+        "eef-ar-soetevent"
+      ],
+      "aip": 93.261,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/for-the-future-of-our-grandchildren-grandparenthood-and-climate-c/",
+        "https://www.rug.nl/staff/a.r.soetevent/",
+        "https://research.rug.nl/en/publications/efdd49d3-da56-4d5b-9cdb-a3e169d24946"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-ar-soetevent"
+      ],
+      "officialProfilePeople": [
+        "eef-ar-soetevent"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/for-the-future-of-our-grandchildren-grandparenthood-and-climate-c/",
+      "aipJournal": "EUROPEAN ECONOMIC REVIEW",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Information preferences, reference points and hedonic editing: experimental evidence",
+      "year": 2025,
+      "journal": "Experimental Economics",
+      "authors": [
+        "Peter, N.",
+        "Van Oldeniel, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152",
+      "issns": [
+        "1386-4157"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-07-30",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "a09eeb8a-aa62-4492-8af9-b9eec93fe152",
+      "pureOutputClassification": "Onderzoeksoutput : Article › Academic › peer review",
+      "id": "doi:10.1017/eec.2026.10052",
+      "doi": "10.1017/eec.2026.10052",
+      "people": [
+        "eef-an-peter",
+        "eef-mm-van-oldeniel"
+      ],
+      "aip": 94.513,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/information-preferences-reference-points-and-hedonic-editing-expe/",
+        "https://www.rug.nl/staff/a.n.peter/",
+        "https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-an-peter"
+      ],
+      "officialProfilePeople": [
+        "eef-an-peter",
+        "eef-mm-van-oldeniel"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2025,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/nl/publications/information-preferences-reference-points-and-hedonic-editing-expe/",
+      "aipJournal": "EXPERIMENTAL ECONOMICS",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-an-peter",
+        "eef-mm-van-oldeniel"
+      ],
+      "mergedSourceRecordIds": [
+        "work:096b422bd4932b517e8a"
+      ]
+    },
+    {
+      "title": "Let Me Check on You: Worker Well-Being Under AI and Human Health and Safety Monitoring",
+      "year": 2026,
+      "journal": "Journal of Wellbeing Economics",
+      "authors": [
+        "Nikolova, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a",
+      "issns": [],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-08-18",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "e56e2548-e5f8-4142-be07-19a7a2cf288a",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1177/29782244261475886",
+      "doi": "10.1177/29782244261475886",
+      "people": [
+        "gem-mv-nikolova"
+      ],
+      "aip": null,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/let-me-check-on-you-worker-well-being-under-ai-and-human-health-a/",
+        "https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "GEM"
+      ],
+      "curatedSourcePeople": [
+        "gem-mv-nikolova"
+      ],
+      "officialProfilePeople": [
+        "gem-mv-nikolova"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/let-me-check-on-you-worker-well-being-under-ai-and-human-health-a/",
+      "aipJournal": "",
+      "aipMatchMethod": "unmatched",
+      "reviewedDuplicateOfficialPeople": [
+        "gem-mv-nikolova"
+      ],
+      "mergedSourceRecordIds": [
+        "work:18160e0dec69e2a1483c"
+      ]
+    },
+    {
+      "title": "Promoting hydrogen through supporting consumers or producers?: An international welfare economic analysis",
+      "year": 2026,
+      "journal": "Climate policy",
+      "authors": [
+        "Xinyu Li",
+        "Machiel Mulder"
+      ],
+      "url": "https://research.rug.nl/en/publications/d831ac42-f90e-4886-bd7c-2fec15f0d1d4",
+      "issns": [
+        "1469-3062"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-10-07",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "d831ac42-f90e-4886-bd7c-2fec15f0d1d4",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1080/14693062.2026.2654964",
+      "doi": "10.1080/14693062.2026.2654964",
+      "people": [
+        "eef-m-mulder"
+      ],
+      "aip": 91.752,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/promoting-hydrogen-through-supporting-consumers-or-producers-an-i/",
+        "https://research.rug.nl/en/publications/d831ac42-f90e-4886-bd7c-2fec15f0d1d4"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-m-mulder"
+      ],
+      "officialProfilePeople": [
+        "eef-m-mulder"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/promoting-hydrogen-through-supporting-consumers-or-producers-an-i/",
+      "aipJournal": "CLIMATE POLICY",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Mortgage design, repayment schedules, and household borrowing",
+      "year": 2026,
+      "journal": "Review of Financial Studies",
+      "authors": [
+        "Claes Bäckman",
+        "P. Moran",
+        "Peter van Santen"
+      ],
+      "url": "https://research.rug.nl/en/publications/87035d7b-0ef3-471c-9415-9c22bda1f76d",
+      "issns": [
+        "0893-9454"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-09-21",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "87035d7b-0ef3-471c-9415-9c22bda1f76d",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1093/rfs/hhaf115",
+      "doi": "10.1093/rfs/hhaf115",
+      "people": [
+        "eef-pc-van-santen"
+      ],
+      "aip": 99.354,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/mortgage-design-repayment-schedules-and-household-borrowing/",
+        "https://www.rug.nl/staff/p.c.van.santen/",
+        "https://research.rug.nl/en/publications/87035d7b-0ef3-471c-9415-9c22bda1f76d"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-pc-van-santen"
+      ],
+      "officialProfilePeople": [
+        "eef-pc-van-santen"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/mortgage-design-repayment-schedules-and-household-borrowing/",
+      "aipJournal": "REVIEW OF FINANCIAL STUDIES",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Women's Empowerment, WaSH, and Child Feeding: Implications for Childhood Stunting in South Asia",
+      "year": 2026,
+      "journal": "Maternal and child nutrition",
+      "authors": [
+        "Jolly, S. P.",
+        "Biesma, R.",
+        "Lensink, R.",
+        "Bhuyan, M. K.",
+        "Afsana, K.",
+        "van der Schans, J."
+      ],
+      "url": "https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29",
+      "issns": [
+        "1740-8695"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-07-23",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "0d3afe02-16d3-4e94-87a5-36fa8a48bd29",
+      "pureOutputClassification": "Onderzoeksoutput : Article › Academic › peer review",
+      "id": "doi:10.1111/mcn.70223",
+      "doi": "10.1111/mcn.70223",
+      "people": [
+        "eef-bw-lensink"
+      ],
+      "aip": 81.179,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/womens-empowerment-wash-and-child-feeding-implications-for-childh/",
+        "https://www.rug.nl/staff/b.w.lensink/",
+        "https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-bw-lensink"
+      ],
+      "officialProfilePeople": [
+        "eef-bw-lensink"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/nl/publications/womens-empowerment-wash-and-child-feeding-implications-for-childh/",
+      "aipJournal": "Maternal and Child Nutrition",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-bw-lensink"
+      ],
+      "mergedSourceRecordIds": [
+        "work:97cd6de53208944f941d"
+      ]
+    },
+    {
+      "title": "Protected or exposed: the impact of rainfall shocks on children's nutritional vulnerability and the role of women's empowerment",
+      "year": 2026,
+      "journal": "World Development Perspectives",
+      "authors": [
+        "Geis, A."
+      ],
+      "url": "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2",
+      "issns": [
+        "2452-2929"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-09-15",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "aebd8eb7-9924-44f7-a51a-079e83d7e4b2",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.wdp.2026.100832",
+      "doi": "10.1016/j.wdp.2026.100832",
+      "people": [
+        "eef-a-geis"
+      ],
+      "aip": 62.793,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/protected-or-exposed-the-impact-of-rainfall-shocks-on-childrens-n/",
+        "https://www.rug.nl/staff/a.g.geis/",
+        "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-a-geis"
+      ],
+      "officialProfilePeople": [
+        "eef-a-geis"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/protected-or-exposed-the-impact-of-rainfall-shocks-on-childrens-n/",
+      "aipJournal": "World Development Perspectives",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-a-geis"
+      ],
+      "mergedSourceRecordIds": [
+        "work:c328c53b31f8c409d01b"
+      ]
+    },
+    {
+      "title": "The psychological attributes and contextual factors in financial planning for retirement: evidence from Indonesia",
+      "year": 2026,
+      "journal": "Current Psychology",
+      "authors": [
+        "Shabrina, Z. R. N.",
+        "Prasastyoga, B.",
+        "Paryono, H.",
+        "van Dillen, L. F.",
+        "van Dijk, W. W.",
+        "Leviastuti, A.",
+        "Stallen, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392",
+      "issns": [
+        "1046-1310"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-07",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "525b4d50-a83c-4c00-906b-b4c680f60392",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1007/s12144-026-09773-4",
+      "doi": "10.1007/s12144-026-09773-4",
+      "people": [
+        "hrmob-hy-paryono"
+      ],
+      "aip": 64.981,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/the-psychological-attributes-and-contextual-factors-in-financial-/",
+        "https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "HRM&OB"
+      ],
+      "curatedSourcePeople": [
+        "hrmob-hy-paryono"
+      ],
+      "officialProfilePeople": [
+        "hrmob-hy-paryono"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/the-psychological-attributes-and-contextual-factors-in-financial-/",
+      "aipJournal": "CURRENT PSYCHOLOGY",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "hrmob-hy-paryono"
+      ],
+      "mergedSourceRecordIds": [
+        "work:975dd2148af53085f938"
+      ]
+    },
+    {
+      "title": "Drivers and persistence of energy poverty: An empirical analysis of country and gender heterogeneity in Spain and the Netherlands",
+      "year": 2026,
+      "journal": "Energy Policy",
+      "authors": [
+        "Masciandaro, C.",
+        "Jove-Llopis, E.",
+        "Mulder, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7",
+      "issns": [
+        "0301-4215"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-04-23",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.enpol.2026.115318",
+      "doi": "10.1016/j.enpol.2026.115318",
+      "people": [
+        "eef-m-mulder"
+      ],
+      "aip": 89.589,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/drivers-and-persistence-of-energy-poverty-an-empirical-analysis-o/",
+        "https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-m-mulder"
+      ],
+      "officialProfilePeople": [
+        "eef-m-mulder"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/drivers-and-persistence-of-energy-poverty-an-empirical-analysis-o/",
+      "aipJournal": "Energy Policy",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-m-mulder"
+      ],
+      "mergedSourceRecordIds": [
+        "work:c0367483abcd04acef01"
+      ]
+    },
+    {
+      "title": "Reducing peak load from electric vehicles through grid tariffs: Evidence from a randomized field experiement",
+      "year": 2026,
+      "journal": "Journal of Environmental Economics and Management",
+      "authors": [
+        "Floris van Montfoort",
+        "Peter Dijkstra",
+        "Machiel Mulder",
+        "David Kopanyi"
+      ],
+      "url": "https://research.rug.nl/en/publications/2f891383-91a1-46c1-9647-e7ee96350f2a",
+      "issns": [
+        "0095-0696"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-05-15",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "2f891383-91a1-46c1-9647-e7ee96350f2a",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.jeem.2026.103354",
+      "doi": "10.1016/j.jeem.2026.103354",
+      "people": [
+        "eef-m-mulder"
+      ],
+      "aip": 95.514,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/reducing-peak-load-from-electric-vehicles-through-grid-tariffs-ev-2/",
+        "https://research.rug.nl/en/publications/2f891383-91a1-46c1-9647-e7ee96350f2a"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-m-mulder"
+      ],
+      "officialProfilePeople": [
+        "eef-m-mulder"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/reducing-peak-load-from-electric-vehicles-through-grid-tariffs-ev-2/",
+      "aipJournal": "JOURNAL OF ENVIRONMENTAL ECONOMICS AND MANAGEMENT",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "Economic assessment of the role of nuclear and renewables in future decarbonized electricity markets",
+      "year": 2026,
+      "journal": "Energy journal",
+      "authors": [
+        "Veenstra, A.",
+        "Li, X.",
+        "Mulder, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491",
+      "issns": [
+        "0195-6574"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-07",
+      "publicationDatePrecision": "month",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "1ed94df9-38f3-4512-98bb-f6c3e8b2a491",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1177/01956574261450943",
+      "doi": "10.1177/01956574261450943",
+      "people": [
+        "eef-at-veenstra",
+        "eef-m-mulder"
+      ],
+      "aip": 72.866,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/economic-assessment-of-the-role-of-nuclear-and-renewables-in-futu/",
+        "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-at-veenstra",
+        "eef-m-mulder"
+      ],
+      "officialProfilePeople": [
+        "eef-at-veenstra",
+        "eef-m-mulder"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/economic-assessment-of-the-role-of-nuclear-and-renewables-in-futu/",
+      "aipJournal": "ENERGY JOURNAL",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-at-veenstra",
+        "eef-m-mulder"
+      ],
+      "mergedSourceRecordIds": [
+        "work:65201f8610b172dd9e4e"
+      ]
+    },
+    {
+      "title": "Mitigating carbon leakage under the EU ETS: How does state aid for indirect emission costs affect firm profits?",
+      "year": 2026,
+      "journal": "Energy Economics",
+      "authors": [
+        "Masciandaro, C.",
+        "Kesina, M.",
+        "Mulder, M."
+      ],
+      "url": "https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31",
+      "issns": [
+        "0140-9883"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2025-12-04",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "4ee32879-04fa-4a86-a190-70918fb6ec31",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.eneco.2025.109024",
+      "doi": "10.1016/j.eneco.2025.109024",
+      "people": [
+        "eef-m-kesina",
+        "eef-m-mulder"
+      ],
+      "aip": 92.076,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/mitigating-carbon-leakage-under-the-eu-ets-how-does-state-aid-for-2/",
+        "https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-m-mulder"
+      ],
+      "officialProfilePeople": [
+        "eef-m-kesina",
+        "eef-m-mulder"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/mitigating-carbon-leakage-under-the-eu-ets-how-does-state-aid-for-2/",
+      "aipJournal": "Energy Economics",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-m-kesina"
+      ],
+      "mergedSourceRecordIds": [
+        "work:765880b63c7df0c335c4"
+      ]
+    },
+    {
+      "title": "Dark side of the day: Overnight price jumps and short-term return predictability",
+      "year": 2026,
+      "journal": "Journal of Behavioral and Experimental Finance",
+      "authors": [
+        "Bahcivan, H.",
+        "Dam, L.",
+        "Gonenc, H."
+      ],
+      "url": "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d",
+      "issns": [
+        "2214-6350"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure publication record",
+      "publicationDate": "2026-08-25",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-pure-publication-status",
+      "pureUuid": "a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d",
+      "pureOutputClassification": "Research output : Contribution to journal › Article › Academic › peer-review",
+      "id": "doi:10.1016/j.jbef.2026.101220",
+      "doi": "10.1016/j.jbef.2026.101220",
+      "people": [
+        "eef-h-gonenc",
+        "eef-l-dam"
+      ],
+      "aip": 88.731,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/dark-side-of-the-day-overnight-price-jumps-and-short-term-return-/",
+        "https://www.rug.nl/staff/l.dam/?lang=en",
+        "https://www.rug.nl/staff/h.gonenc/",
+        "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-h-gonenc",
+        "eef-l-dam"
+      ],
+      "officialProfilePeople": [
+        "eef-h-gonenc",
+        "eef-l-dam"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://research.rug.nl/en/publications/dark-side-of-the-day-overnight-price-jumps-and-short-term-return-/",
+      "aipJournal": "Journal of Behavioral and Experimental Finance",
+      "aipMatchMethod": "issn",
+      "reviewedDuplicateOfficialPeople": [
+        "eef-h-gonenc",
+        "eef-l-dam"
+      ],
+      "mergedSourceRecordIds": [
+        "work:90c0f47f4f881431cc2d"
+      ]
+    },
+    {
+      "id": "work:1250a3caf2874189d92f",
+      "title": "Advancing Rigor in Operations Management Qualitative Research: From Proceduralism to Reflexive Reasoning",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2",
+      "journal": "Journal of Operations Management",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "aip": 96.377,
+      "authors": [
+        "Wilhelm, M.",
+        "Wölfl, K.",
+        "Rosca, E.",
+        "Scholten, K."
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1002/joom.70051. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2",
+      "countedInComparison": false,
+      "aipJournal": "JOURNAL OF OPERATIONS MANAGEMENT",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "ops-e-rosca"
+      ],
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/e.rosca/research?lang=en",
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1002/joom.70051",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2"
+        ]
+      }
+    },
+    {
+      "id": "work:19870ab14924fd4bc1ca",
+      "title": "Collaborative knowledge building for innovation: insights from market engagement in circular public procurement",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7",
+      "journal": "Journal of Innovation and Knowledge",
+      "people": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "aip": 88.856,
+      "authors": [
+        "Arshad, H.",
+        "Dreischerf, A.",
+        "Modic, D.",
+        "Rosca, E."
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.jik.2026.101129. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7",
+      "countedInComparison": false,
+      "aipJournal": "Journal of Innovation & Knowledge",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/a.j.dreischerf/research?lang=en",
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.jik.2026.101129",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+        ]
+      }
+    },
+    {
+      "id": "work:a008c64b9ec029eb003a",
+      "title": "Cash crops vs. food security? Examining the role of Cocoa-Cashew intercropping in smallholder farming systems",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2",
+      "journal": "Agriculture and Food Security",
+      "people": [
+        "gem-p-rao-sahib"
+      ],
+      "aip": null,
+      "authors": [
+        "Chandran MC, S.",
+        "Chandran, R.",
+        "Sahib, P. R.",
+        "Achuthan, K."
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1186/s40066-026-00620-0. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2",
+      "countedInComparison": false,
+      "aipJournal": "",
+      "aipMatchMethod": "unmatched",
+      "officialProfilePeople": [
+        "gem-p-rao-sahib"
+      ],
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/p.rao.sahib/research?lang=en",
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1186/s40066-026-00620-0",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2"
+        ]
+      }
+    },
+    {
+      "id": "work:c877b2ffd6dd90fe110f",
+      "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
+      "year": 2026,
+      "doi": "",
+      "url": "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8",
+      "journal": "International Journal of Hydrogen Energy",
+      "people": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "aip": 71.676,
+      "authors": [
+        "Everink, R.",
+        "Tekeli, S.",
+        "Zhu, S. X.",
+        "Ursavas, E."
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "comparisonExclusionReason": "Verified duplicate source record; counted once as doi:10.1016/j.ijhydene.2026.155791. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8",
+      "countedInComparison": false,
+      "aipJournal": "INTERNATIONAL JOURNAL OF HYDROGEN ENERGY",
+      "aipMatchMethod": "title",
+      "officialProfilePeople": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "official-reference",
+      "comparisonYearSource": "https://www.rug.nl/staff/e.ursavas/research?lang=en",
+      "doiTitleCheck": "no-doi",
+      "comparisonDuplicateOf": "doi:10.1016/j.ijhydene.2026.155791",
+      "duplicateSourceReview": {
+        "reason": "Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once.",
+        "sources": [
+          "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
+        ]
+      }
+    },
+    {
+      "id": "doi:10.1007/s11747-026-01188-8",
+      "title": "Visual strategies in influencer marketing campaigns: The role of consistency",
+      "year": 2026,
+      "doi": "10.1007/s11747-026-01188-8",
+      "url": "https://research.rug.nl/en/publications/ee0ea7ff-3105-4cd4-bb6d-8ca731a505a8",
+      "journal": "Journal of the Academy of Marketing Science",
+      "people": [
+        "mkt-a-boluki",
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "aip": 98.163,
+      "authors": [
+        "Boluki, A.",
+        "Shehu, E.",
+        "Bijmolt, T. H. A."
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "doiTitleCheck": "unavailable",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYearSource": "https://doi.org/10.1007/s11747-026-01188-8",
+      "aipJournal": "JOURNAL OF THE ACADEMY OF MARKETING SCIENCE",
+      "aipMatchMethod": "issn",
+      "officialProfilePeople": [
+        "mkt-a-boluki",
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "curatedSourceEvidence": [
+        "https://doi.org/10.1007/s11747-026-01188-8",
+        "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+        "https://www.rug.nl/staff/a.boluki/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05",
+      "curatedSourcePeople": [
+        "mkt-a-boluki",
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "reviewedDuplicateOfficialPeople": [
+        "mkt-a-boluki"
+      ],
+      "mergedSourceRecordIds": [
+        "work:d2e54ee9c89795f1bdbb"
+      ]
     }
   ]
 }

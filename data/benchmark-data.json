@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -18,7 +18,7 @@
       "associate_professor",
       "full_professor"
     ],
-    "identityReviewedOn": "2026-10-29",
+    "identityReviewedOn": "2026-11-05",
     "identityConflictPeople": [
       "acc-da-de-waard",
       "gem-x-ye",
@@ -51,6 +51,7 @@
       "Accounting auditing & accountability journal/Accounting, auditing & accountability journal",
       "Acta Scientific Pharmaceutical Sciences",
       "Actual Problems of Economics",
+      "Agriculture and Food Security",
       "Aptisi Transactions On Technopreneurship",
       "Artvin Çoruh Üniversitesi Orman Fakültesi Dergisi",
       "BMJ",
@@ -1689,7 +1690,7 @@
       "family": "Seepma",
       "given": "Aline",
       "department": "Operations",
-      "rank": "assistant_professor",
+      "rank": "associate_professor",
       "decision": "include",
       "includedInDenominator": true,
       "denominatorExclusion": "",
@@ -2647,6 +2648,34 @@
       ]
     },
     {
+      "id": "doi:10.1080/01441647.2026.2732021",
+      "year": 2026,
+      "title": "Where goods meet people: a conceptual framework integrating urban freight transport into land use and public space",
+      "doi": "10.1080/01441647.2026.2732021",
+      "journal": "Transport Reviews",
+      "authors": [
+        "Paul Buijs",
+        "Bram Kin",
+        "Heleen Buldeo Rai",
+        "Jorge Gil"
+      ],
+      "aip": 96.292,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-p-buijs"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-p-buijs"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.chbr.2026.101054",
       "year": 2026,
       "title": "When proximal collaboration with AI hinders innovation: The moderating role of idea originality and reliance on AI",
@@ -2726,6 +2755,35 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "doi:10.1007/s11747-026-01188-8",
+      "year": 2026,
+      "title": "Visual strategies in influencer marketing campaigns: The role of consistency",
+      "doi": "10.1007/s11747-026-01188-8",
+      "journal": "Journal of the Academy of Marketing Science",
+      "authors": [
+        "Ali Boluki",
+        "Edlira Shehu",
+        "Tammo H. A. Bijmolt"
+      ],
+      "aip": 98.163,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {
@@ -3079,6 +3137,35 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.tra.2026.105173",
+      "year": 2026,
+      "title": "Take it to the streets: Spatial and sociodemographic determinants of e-commerce demand in the Netherlands",
+      "doi": "10.1016/j.tra.2026.105173",
+      "journal": "Transportation Research Part A: Policy and Practice",
+      "authors": [
+        "Sanne Wolf",
+        "Paul Buijs",
+        "Dirk Pieter van Donk"
+      ],
+      "aip": 90.54,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-dp-van-donk",
+        "ops-p-buijs"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-dp-van-donk",
+        "ops-p-buijs"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1177/01492063261420752",
       "year": 2026,
       "title": "Success and Failure in Blockchain-Based Interorganizational Ecosystems: A Governance Perspective",
@@ -3157,6 +3244,33 @@
       ],
       "allDepartments": [
         "HRM&OB"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.omega.2026.103631",
+      "year": 2026,
+      "title": "Programmatic or sponsored advertising? Control, costs, and consumer utility in platform competition",
+      "doi": "10.1016/j.omega.2026.103631",
+      "journal": "Omega (United Kingdom)",
+      "authors": [
+        "Dan Gao",
+        "He Xu",
+        "Stuart X. Zhu"
+      ],
+      "aip": 90.869,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-x-zhu"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-x-zhu"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -3457,6 +3571,33 @@
       "departments": [],
       "allPeople": [
         "ops-j-de-vries"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1007/s10551-026-06362-0",
+      "year": 2026,
+      "title": "Leading by Example: The Role of Buyers’ Employee-Focused Stakeholder Orientation in Suppliers’ Working Conditions in Global Value Chains",
+      "doi": "10.1007/s10551-026-06362-0",
+      "journal": "Journal of Business Ethics",
+      "authors": [
+        "Eugenia Rosca",
+        "Addisu Lashitew",
+        "Sehwon Kang"
+      ],
+      "aip": 91.476,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-rosca"
       ],
       "allDepartments": [
         "Operations"
@@ -3809,6 +3950,37 @@
       ],
       "allDepartments": [
         "Accounting"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.respol.2026.105579",
+      "year": 2026,
+      "title": "Follow the technology or follow the leader? Radical innovation and strategic leadership at a crossroads",
+      "doi": "10.1016/j.respol.2026.105579",
+      "journal": "Research Policy",
+      "authors": [
+        "Sarosh Asad",
+        "Mariano L.M. Heyden",
+        "Lorenz Graf-Vlachy",
+        "Elizabeth J. Altman",
+        "Donald C. Hambrick",
+        "Zeki Simsek",
+        "Mary Tripsas"
+      ],
+      "aip": 96.348,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ims-s-asad"
+      ],
+      "departments": [
+        "IM&S"
+      ],
+      "allPeople": [
+        "ims-s-asad"
+      ],
+      "allDepartments": [
+        "IM&S"
       ]
     },
     {
@@ -4190,6 +4362,63 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.jik.2026.101129",
+      "year": 2026,
+      "title": "Collaborative knowledge building for innovation: insights from market engagement in circular public procurement",
+      "doi": "10.1016/j.jik.2026.101129",
+      "journal": "Journal of Innovation and Knowledge",
+      "authors": [
+        "Hareem Arshad",
+        "Anna Dreischerf",
+        "Dolores Modic",
+        "Eugenia Rosca"
+      ],
+      "aip": 88.856,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s40066-026-00620-0",
+      "year": 2026,
+      "title": "Cash crops vs. food security? Examining the role of Cocoa-Cashew intercropping in smallholder farming systems",
+      "doi": "10.1186/s40066-026-00620-0",
+      "journal": "Agriculture and Food Security",
+      "authors": [
+        "Sarath Chandran MC",
+        "Renju Chandran",
+        "Padma Rao Sahib",
+        "Krishnashree Achuthan"
+      ],
+      "aip": null,
+      "aipComparable": true,
+      "aipStatus": "unmatched",
+      "people": [
+        "gem-p-rao-sahib"
+      ],
+      "departments": [
+        "GEM"
+      ],
+      "allPeople": [
+        "gem-p-rao-sahib"
+      ],
+      "allDepartments": [
+        "GEM"
+      ]
+    },
+    {
       "id": "doi:10.1016/j.jinteco.2026.104236",
       "year": 2026,
       "title": "Careers in multinational enterprises",
@@ -4297,6 +4526,36 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.omega.2026.103628",
+      "year": 2026,
+      "title": "Auction design and operational strategy for hybrid recycling platforms under information asymmetry",
+      "doi": "10.1016/j.omega.2026.103628",
+      "journal": "Omega (United Kingdom)",
+      "authors": [
+        "Dongmei Xue",
+        "Ruud H. Teunter",
+        "Stuart X. Zhu",
+        "Weihua Zhou"
+      ],
+      "aip": 90.869,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "allDepartments": [
+        "Operations"
+      ]
+    },
+    {
       "id": "doi:10.1007/s10290-026-00654-3",
       "year": 2026,
       "title": "Assortative matching in cross-border mergers and acquisitions",
@@ -4318,6 +4577,36 @@
       ],
       "allDepartments": [
         "GEM"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ijhydene.2026.155791",
+      "year": 2026,
+      "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
+      "doi": "10.1016/j.ijhydene.2026.155791",
+      "journal": "International Journal of Hydrogen Energy",
+      "authors": [
+        "Remco Everink",
+        "Songul Tekeli",
+        "Stuart X. Zhu",
+        "Evrim Ursavas"
+      ],
+      "aip": 71.676,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -4381,6 +4670,34 @@
       ],
       "allDepartments": [
         "Marketing"
+      ]
+    },
+    {
+      "id": "doi:10.1002/joom.70051",
+      "year": 2026,
+      "title": "Advancing Rigor in Operations Management Qualitative Research: From Proceduralism to Reflexive Reasoning",
+      "doi": "10.1002/joom.70051",
+      "journal": "Journal of Operations Management",
+      "authors": [
+        "Miriam Wilhelm",
+        "Katja Wölfl",
+        "Eugenia Rosca",
+        "Kirstin Scholten"
+      ],
+      "aip": 96.377,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "ops-e-rosca"
+      ],
+      "departments": [
+        "Operations"
+      ],
+      "allPeople": [
+        "ops-e-rosca"
+      ],
+      "allDepartments": [
+        "Operations"
       ]
     },
     {
@@ -86925,7 +87242,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 170,
     "qualityDecisionCounts": {
@@ -86967,7 +87284,7 @@
       "include": 138
     },
     "denominatorUsablePeople": 58,
-    "rankableAipGapRows": 205,
+    "rankableAipGapRows": 206,
     "aipNotInSourceRows": 162,
     "possibleDuplicateGroups": 0,
     "residualNonCountedRecords": 0,

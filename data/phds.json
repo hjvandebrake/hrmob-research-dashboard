@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
-    "sourceNote": "All 19 supplied roster identities received fresh public profile, CV, research and project-page checks on 29 October 2026; available award and thesis source pages were rechecked. No additional competitive award or completed thesis passed the source threshold. Missing or unavailable public records do not establish absence. Manual-review leads and coverage are documented in REFRESH-2026-10-29.md.",
+    "generatedOn": "2026-11-05",
+    "sourceNote": "All 19 supplied roster identities reviewed against public profile, CV, research and project pages on 5 November 2026. Prior public evidence is retained when current sources are unavailable. Award and defended-thesis decisions, source failures and manual-review leads are documented in REFRESH-2026-11-05.md.",
     "scope": "Completed/defended PhDs only; committee/examiner roles are excluded.",
     "currentProjectsGeneratedOn": "2026-08-11",
     "currentProjectsSourceNote": "Current/ongoing PhD status and supervisor mappings are based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23 and subsequent staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.",
     "currentProjectsScope": "Current/ongoing PhD projects supervised by supplied department members; defended theses remain in theses[].",
-    "reviewedOn": "2026-10-29",
-    "currentProjectsReviewedOn": "2026-10-29"
+    "reviewedOn": "2026-11-05",
+    "currentProjectsReviewedOn": "2026-11-05"
   },
   "theses": [
     {
@@ -30,7 +30,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-role-of-social-context-in-hybrid-working-from-home-arrangemen/",
-      "sourceCheckedOn": "2026-10-15",
+      "sourceCheckedOn": "2026-11-05",
       "additionalSourceUrls": [
         "https://www.rug.nl/about-ug/latest-news/events/promoties/?hfId=124323"
       ],
@@ -52,7 +52,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/taking-the-helm-in-dire-straits-leadership-in-times-of-crisis/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-chen-2025-team-absorption",
@@ -78,7 +78,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/overcoming-challenges-in-team-absorption-of-external-information-",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-van-hinsberg-2025-cracked-ceilings",
@@ -104,7 +104,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/cracked-ceilings-unstable-footing-persistent-risks-in-womens-repr/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-zhang-2025-objectification",
@@ -126,7 +126,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/objectification-in-the-leader-follower-relationship",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-prompeler-2024-esg-boardroom",
@@ -148,7 +148,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/environmental-social-and-governance-demands-in-the-boardroom-expl",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-aral-2024-productivity",
@@ -166,7 +166,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-productivity-puzzle-management-practices-and-leadership/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-ivanovic-2024-communication-resilience",
@@ -188,7 +188,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/communication-markers-of-resilience-activity-timing-and-mechanism",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-wong-2024-between-cracks",
@@ -210,7 +210,7 @@
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2024?hfId=122016&lang=en",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-ahrens-2024-boards",
@@ -232,7 +232,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/synthesizing-and-extending-behavioral-research-on-boards-of-direc",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-pit-2024-beyond-contract",
@@ -250,7 +250,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/beyond-the-contract-exploring-the-multi-faceted-nature-of-governa",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-weck-2023-upper-echelon",
@@ -268,7 +268,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/influence-at-the-upper-echelon-an-in-depth-analysis-of-boards-and",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-kosenkranius-2023-needs-crafting",
@@ -290,7 +290,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/needs-based-crafting-the-antecedents-and-outcomes-of-employees-cr/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-wronska-2023-creative-state",
@@ -308,7 +308,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-creative-state-of-mind-penetrating-creativity-in-the-here-and/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-kujanpaa-2022-leisure",
@@ -326,7 +326,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/in-need-of-leisure-investigating-the-relationship-between-off-job",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-tolkamp-2022-creativity",
@@ -344,7 +344,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/understanding-acts-of-creativity-an-examination-of-the-creative-p",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-bonvanie-lenferink-2021-health-self-management",
@@ -362,7 +362,7 @@
       "sourceUrl": "https://research.rug.nl/en/publications/health-self-management-applications-in-the-workplace-multidiscipl/",
       "institution": "University of Groningen",
       "sourceLabel": "RUG research portal",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-kuilman-2021-ethical-decision-making",
@@ -380,7 +380,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/antecedents-of-ethical-decision-making-by-physician-assistants-an/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-wu-2021-team-creativity",
@@ -402,7 +402,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/exploiting-individual-creative-inputs-for-team-creativity-a-role-",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-feenstra-2020-power-organizational-life",
@@ -424,7 +424,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/power-in-organizational-life-an-investigation-of-how-stable-and-u",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-oedzes-2020-informal-hierarchy",
@@ -446,7 +446,7 @@
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/events/promoties/promoties-2020?hfId=117569&lang=en",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-shao-2020-workplace-tensions",
@@ -464,7 +464,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/individual-approaches-to-workplace-tensions-implications-for-crea/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-de-waal-2020-effective-supervision",
@@ -486,7 +486,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-balancing-act-of-effective-supervision-understanding-the-rela/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-liu-2019-employee-creativity",
@@ -504,7 +504,7 @@
       "sourceUrl": "https://research.rug.nl/en/publications/employee-incremental-and-radical-creativity-differential-antecede/",
       "institution": "University of Groningen",
       "sourceLabel": "RUG research portal",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-van-de-brake-2019-multiple-team-membership",
@@ -526,7 +526,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/individual-employees-multiple-team-membership-a-double-edged-swor/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-voorn-2018-dependent-leaders",
@@ -544,7 +544,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/dependent-leaders-role-specific-challenges-for-middle-managers/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-manheim-2017-shared-leadership",
@@ -566,7 +566,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/shared-leadership-in-teams-a-theoretical-and-empirical-investigat",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-martinescu-2017-gossip",
@@ -588,7 +588,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/why-we-gossip-a-functional-perspective-on-the-self-relevance-of-g/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-zhang-2017-upward-voice",
@@ -606,7 +606,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/upward-voice-and-influence",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-said-2016-leadership-creativity",
@@ -628,7 +628,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/rethinking-the-leadership-employee-creativity-relationship-a-regu/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-vriend-2016-unethically-motivated",
@@ -650,7 +650,7 @@
       "sourceUrl": "https://research.rug.nl/en/publications/unethically-motivated-how-management-tools-elicit-functional-unet/",
       "institution": "University of Groningen",
       "sourceLabel": "RUG research portal",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-cantimur-2015-bright-side-hierarchies",
@@ -672,7 +672,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/the-bright-side-of-hierarchies-the-origins-and-consequences-of-so/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-de-vries-2015-interteam-coordination",
@@ -690,7 +690,7 @@
       ],
       "sourceLabel": "RUG PhD ceremony",
       "sourceUrl": "https://www.rug.nl/about-ug/latest-news/news/archief2015/promoties/promoties-2015?hfId=100884&lang=en",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-ponsioen-2014-contagious-business",
@@ -708,7 +708,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/contagious-business-when-we-copy-unethical-behavior/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-sijbom-2013-employee-creativity",
@@ -726,7 +726,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/leaders-reactions-to-employee-creativity-an-achievement-goal-appr",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-van-der-kam-2012-self-enhancement",
@@ -752,7 +752,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/leader-self-enhancement-an-interpersonal-approach",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-de-poel-2011-change-leadership",
@@ -770,7 +770,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/making-a-difference-about-the-mechanism-underlying-effective-lead/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-poortvliet-2008-information-exchange",
@@ -788,7 +788,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/information-exchange-examined-an-interpersonal-account-of-achieve/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     },
     {
       "id": "phd-de-jong-2008-task-dependence",
@@ -806,7 +806,7 @@
       ],
       "sourceLabel": "RUG research portal",
       "sourceUrl": "https://research.rug.nl/en/publications/asymmetry-in-task-dependence-among-team-members/",
-      "sourceCheckedOn": "2026-10-15"
+      "sourceCheckedOn": "2026-11-05"
     }
   ],
   "currentProjects": [

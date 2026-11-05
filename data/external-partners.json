@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 779,
-    "cacheHits": 779,
+    "eligiblePublications": 780,
+    "cacheHits": 780,
     "fetched": 0,
-    "coveredPublications": 775,
+    "coveredPublications": 776,
     "missingCacheRecords": 0,
     "offline": true,
-    "partnerCount": 778,
+    "partnerCount": 783,
     "heldInstitutionIds": [
       "https://openalex.org/I4210153428"
     ]
@@ -608,7 +608,9 @@
           ],
           "authors": [
             "Quentin F. Gronau",
-            "Alexander Ly"
+            "Alexander Ly",
+            "Maarten Marsman",
+            "Eric‐Jan Wagenmakers"
           ]
         },
         {
@@ -7290,7 +7292,7 @@
         {
           "id": "doi:10.1002/ejsp.2101",
           "year": 2015,
-          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
+          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others' transgressions",
           "staffIds": [
             "JJ"
           ],
@@ -11782,6 +11784,140 @@
       ]
     },
     {
+      "id": "us:harvard university",
+      "institution": "Harvard University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 9,
+      "staffIds": [
+        "CDD",
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Amit Goldenberg",
+        "Eric Shuman",
+        "Evan DeFilippis",
+        "Francesca Gino",
+        "Hanne K. Collins",
+        "Isaias Ghezae",
+        "Joshua D. Greene",
+        "Kara Luo",
+        "Malavika Srinivasan",
+        "Max H. Bazerman",
+        "Mina Cikara",
+        "Peggah R. Khorrami"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Isaias Ghezae",
+            "Mina Cikara",
+            "Hanne K. Collins",
+            "Evan DeFilippis",
+            "Joshua D. Greene",
+            "Kara Luo"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Amit Goldenberg",
+            "Eric Shuman"
+          ]
+        },
+        {
+          "id": "doi:10.1093/pnasnexus/pgae324",
+          "year": 2024,
+          "title": "Why partisans feel hated: Distinct static and dynamic relationships with animosity meta-perceptions",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Mina Cikara"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41562-021-01092-x",
+          "year": 2021,
+          "title": "The general fault in our fault lines",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Peggah R. Khorrami",
+            "Mina Cikara"
+          ]
+        },
+        {
+          "id": "doi:10.1098/rstb.2020.0143",
+          "year": 2021,
+          "title": "Understanding and combating misperceived polarization",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Mina Cikara"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41562-019-0766-4",
+          "year": 2019,
+          "title": "Inaccurate group meta-perceptions drive negative out-group attributions in competitive contexts",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Mina Cikara"
+          ]
+        },
+        {
+          "id": "doi:10.1111/spc3.12327",
+          "year": 2017,
+          "title": "Is the moral domain unique? A social influence perspective for the study of moral cognition",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Francesca Gino"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Malavika Srinivasan"
+          ]
+        },
+        {
+          "id": "doi:10.1002/bdm.426",
+          "year": 2002,
+          "title": "What we want to do versus what we think we should do: an empirical investigation of intrapersonal conflict",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Max H. Bazerman"
+          ]
+        }
+      ]
+    },
+    {
       "id": "hk:hong kong polytechnic university",
       "institution": "Hong Kong Polytechnic University",
       "country": "HK",
@@ -12639,6 +12775,137 @@
           ],
           "authors": [
             "Claudia Zúñiga"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de:university of cologne",
+      "institution": "University of Cologne",
+      "country": "DE",
+      "type": "education",
+      "publicationCount": 9,
+      "staffIds": [
+        "BN",
+        "FR",
+        "JJ",
+        "JS",
+        "LM"
+      ],
+      "authors": [
+        "Alexandra Fleischmann",
+        "Fabia Högden",
+        "Frederik Aust",
+        "Joris Lammers",
+        "Nicole J. Hartwich",
+        "Rebecca Hofstein Grady",
+        "Timo P. Luoma"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1108/gm-10-2022-0331",
+          "year": 2023,
+          "title": "Managerial stereotypes over time: the rise of feminine leadership",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2023.104528",
+          "year": 2023,
+          "title": "Psychological power increases the desire for social distance but reduces the sense of social distance",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1177/15480518211007452",
+          "year": 2022,
+          "title": "Leading and Working From Home in Times of COVID-19: On the Perceived Changes in Leadership Behaviors",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1027/1864-9335/a000389",
+          "year": 2019,
+          "title": "Social and Personal Power: A Closer Examination",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1027/1864-9335/a000359",
+          "year": 2019,
+          "title": "You Can Leave Your Glasses on",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Alexandra Fleischmann",
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1177/2515245917747646",
+          "year": 2018,
+          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
+          "staffIds": [
+            "BN",
+            "FR",
+            "LM"
+          ],
+          "authors": [
+            "Frederik Aust",
+            "Fabia Högden"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10508-018-1285-5",
+          "year": 2018,
+          "title": "Power Affects Sexual Assertiveness and Sexual Esteem Equally in Women and Men",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Rebecca Hofstein Grady",
+            "Nicole J. Hartwich",
+            "Timo P. Luoma"
+          ]
+        },
+        {
+          "id": "doi:10.1177/0146167216634064",
+          "year": 2016,
+          "title": "To Have Control Over or to Be Free From Others? The Desire for Power Reflects a Need for Autonomy",
+          "staffIds": [
+            "FR",
+            "JS"
+          ],
+          "authors": [
+            "Joris Lammers"
           ]
         }
       ]
@@ -13604,127 +13871,6 @@
       ]
     },
     {
-      "id": "us:harvard university",
-      "institution": "Harvard University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 8,
-      "staffIds": [
-        "CDD",
-        "JL"
-      ],
-      "authors": [
-        "Amit Goldenberg",
-        "Eric Shuman",
-        "Evan DeFilippis",
-        "Francesca Gino",
-        "Hanne K. Collins",
-        "Isaias Ghezae",
-        "Joshua D. Greene",
-        "Kara Luo",
-        "Max H. Bazerman",
-        "Mina Cikara",
-        "Peggah R. Khorrami"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Isaias Ghezae",
-            "Mina Cikara",
-            "Hanne K. Collins",
-            "Evan DeFilippis",
-            "Joshua D. Greene",
-            "Kara Luo"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Amit Goldenberg",
-            "Eric Shuman"
-          ]
-        },
-        {
-          "id": "doi:10.1093/pnasnexus/pgae324",
-          "year": 2024,
-          "title": "Why partisans feel hated: Distinct static and dynamic relationships with animosity meta-perceptions",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Mina Cikara"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-021-01092-x",
-          "year": 2021,
-          "title": "The general fault in our fault lines",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Peggah R. Khorrami",
-            "Mina Cikara"
-          ]
-        },
-        {
-          "id": "doi:10.1098/rstb.2020.0143",
-          "year": 2021,
-          "title": "Understanding and combating misperceived polarization",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Mina Cikara"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41562-019-0766-4",
-          "year": 2019,
-          "title": "Inaccurate group meta-perceptions drive negative out-group attributions in competitive contexts",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Mina Cikara"
-          ]
-        },
-        {
-          "id": "doi:10.1111/spc3.12327",
-          "year": 2017,
-          "title": "Is the moral domain unique? A social influence perspective for the study of moral cognition",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Francesca Gino"
-          ]
-        },
-        {
-          "id": "doi:10.1002/bdm.426",
-          "year": 2002,
-          "title": "What we want to do versus what we think we should do: an empirical investigation of intrapersonal conflict",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Max H. Bazerman"
-          ]
-        }
-      ]
-    },
-    {
       "id": "kz:maqsut narikbayev university",
       "institution": "Maqsut Narikbayev University",
       "country": "KZ",
@@ -14305,120 +14451,6 @@
           ],
           "authors": [
             "Qing Han"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "de:university of cologne",
-      "institution": "University of Cologne",
-      "country": "DE",
-      "type": "education",
-      "publicationCount": 8,
-      "staffIds": [
-        "BN",
-        "FR",
-        "JS",
-        "LM"
-      ],
-      "authors": [
-        "Alexandra Fleischmann",
-        "Fabia Högden",
-        "Frederik Aust",
-        "Joris Lammers"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1108/gm-10-2022-0331",
-          "year": 2023,
-          "title": "Managerial stereotypes over time: the rise of feminine leadership",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2023.104528",
-          "year": 2023,
-          "title": "Psychological power increases the desire for social distance but reduces the sense of social distance",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1177/15480518211007452",
-          "year": 2022,
-          "title": "Leading and Working From Home in Times of COVID-19: On the Perceived Changes in Leadership Behaviors",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1027/1864-9335/a000389",
-          "year": 2019,
-          "title": "Social and Personal Power: A Closer Examination",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1027/1864-9335/a000359",
-          "year": 2019,
-          "title": "You Can Leave Your Glasses on",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Alexandra Fleischmann",
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1177/2515245917747646",
-          "year": 2018,
-          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
-          "staffIds": [
-            "BN",
-            "FR",
-            "LM"
-          ],
-          "authors": [
-            "Frederik Aust",
-            "Fabia Högden"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10508-018-1285-5",
-          "year": 2018,
-          "title": "Power Affects Sexual Assertiveness and Sexual Esteem Equally in Women and Men",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
-          ]
-        },
-        {
-          "id": "doi:10.1177/0146167216634064",
-          "year": 2016,
-          "title": "To Have Control Over or to Be Free From Others? The Desire for Power Reflects a Need for Autonomy",
-          "staffIds": [
-            "FR",
-            "JS"
-          ],
-          "authors": [
-            "Joris Lammers"
           ]
         }
       ]
@@ -18052,7 +18084,7 @@
         "Hadiya Roderique",
         "Hossein Rahnama",
         "Israr Qureshi",
-        "Matt Motyl",
+        "Matt S. Motyl",
         "Michael Inzlicht",
         "Michael Schaerer",
         "Nina Mažar"
@@ -18104,7 +18136,7 @@
             "Israr Qureshi",
             "Michael Schaerer",
             "Brittany E. Hanson",
-            "Matt Motyl",
+            "Matt S. Motyl",
             "Anthony N. Washburn"
           ]
         },
@@ -18542,7 +18574,7 @@
         {
           "id": "doi:10.1002/ejsp.2101",
           "year": 2015,
-          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
+          "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others' transgressions",
           "staffIds": [
             "JJ"
           ],
@@ -18883,6 +18915,91 @@
       ]
     },
     {
+      "id": "us:university of illinois urbana champaign",
+      "institution": "University of Illinois Urbana-Champaign",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 5,
+      "staffIds": [
+        "CDD",
+        "JJ"
+      ],
+      "authors": [
+        "Andrei Cimpian",
+        "B.J.M. Emans",
+        "Christina M. Tworek",
+        "Daniel Storage",
+        "Evert Van de Vliert",
+        "Harry C. Triandis",
+        "Joselito C. Lualhati",
+        "Peter J. Carnevale",
+        "Tahira M. Probst"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Christina M. Tworek",
+            "Andrei Cimpian",
+            "Daniel Storage"
+          ]
+        },
+        {
+          "id": "doi:10.1177/147059580111008",
+          "year": 2001,
+          "title": "Culture and Deception in Business Negotiations: A Multilevel Analysis",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Harry C. Triandis",
+            "Peter J. Carnevale",
+            "Tahira M. Probst"
+          ]
+        },
+        {
+          "id": "doi:10.1080/14792779443000021",
+          "year": 1995,
+          "title": "Outcome Frames in Bilateral Negotiation: Resistance to Concession Making and Frame Adoption",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Peter J. Carnevale"
+          ]
+        },
+        {
+          "id": "doi:10.1006/obhd.1994.1076",
+          "year": 1994,
+          "title": "Effects of Gain-Loss Frames in Negotiation: Loss Aversion, Mismatching, and Frame Adoption",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Peter J. Carnevale",
+            "B.J.M. Emans",
+            "Evert Van de Vliert"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.2420240407",
+          "year": 1994,
+          "title": "Effects of gain—loss frames on satisfaction with self–other outcome‐differences",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Joselito C. Lualhati"
+          ]
+        }
+      ]
+    },
+    {
       "id": "at:university of salzburg",
       "institution": "University of Salzburg",
       "country": "AT",
@@ -19042,7 +19159,7 @@
         "Hoai Huong Ngo",
         "Jesse Graham",
         "Sarah E. Frick",
-        "Thomas J. Donahue",
+        "Thomas Donahue",
         "Евгений Николаевич Осин"
       ],
       "publications": [
@@ -19098,7 +19215,7 @@
             "JJ"
           ],
           "authors": [
-            "Thomas J. Donahue",
+            "Thomas Donahue",
             "Sarah E. Frick",
             "Jesse Graham",
             "Adam Hahn",
@@ -19517,74 +19634,6 @@
             "Lea Jakob",
             "Jáchym Vintr",
             "Marek Albert Vranka"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:harvard university press",
-      "institution": "Harvard University Press",
-      "country": "US",
-      "type": "other",
-      "publicationCount": 4,
-      "staffIds": [
-        "CDD",
-        "JJ",
-        "JL"
-      ],
-      "authors": [
-        "Amit Goldenberg",
-        "Eric Shuman",
-        "James Sidanius",
-        "Joseph B Bak Coleman",
-        "Julia A. Minson",
-        "Malavika Srinivasan"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/19485506251383988",
-          "year": 2026,
-          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "James Sidanius"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Joseph B Bak Coleman",
-            "Amit Goldenberg",
-            "Eric Shuman"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.obhdp.2023.104257",
-          "year": 2023,
-          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Julia A. Minson"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.jesp.2015.10.001",
-          "year": 2016,
-          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Malavika Srinivasan"
           ]
         }
       ]
@@ -20240,6 +20289,174 @@
       ]
     },
     {
+      "id": "us:michigan state university",
+      "institution": "Michigan State University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "CDD",
+        "GVV",
+        "JJ",
+        "LM",
+        "TDV"
+      ],
+      "authors": [
+        "Donald Edward Conlon",
+        "Felix Cheung",
+        "John R. Hollenbeck",
+        "Katelin E. Leahy",
+        "William J. Chopik"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "William J. Chopik",
+            "Katelin E. Leahy"
+          ]
+        },
+        {
+          "id": "doi:10.1111/ncmr.12185",
+          "year": 2020,
+          "title": "From the Field to the Laboratory: The Theory‐Practice Research of Peter J. Carnevale",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Donald Edward Conlon"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Felix Cheung"
+          ]
+        },
+        {
+          "id": "doi:10.5465/amj.2014.0385",
+          "year": 2015,
+          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
+          "staffIds": [
+            "GVV",
+            "TDV"
+          ],
+          "authors": [
+            "John R. Hollenbeck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:new york university",
+      "institution": "New York University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 4,
+      "staffIds": [
+        "BN",
+        "FR",
+        "JJ",
+        "JL",
+        "LM"
+      ],
+      "authors": [
+        "Adam Hahn",
+        "Ali Javeed",
+        "Danielle Goldwert",
+        "Eric Shuman",
+        "Hoai Huong Ngo",
+        "Jay Joseph Van Bavel",
+        "Jesse Graham",
+        "John T. Jost",
+        "Ke Fang",
+        "Kimberly C Doell",
+        "Maureen A. Craig",
+        "Michael Berkebile-Weinberg",
+        "Ryan F. Lei",
+        "Sarah E. Frick",
+        "Steve Rathje",
+        "Thomas Donahue",
+        "Yash Patel",
+        "Yifei Pei"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Jay Joseph Van Bavel",
+            "Kimberly C Doell",
+            "Ali Javeed",
+            "John T. Jost",
+            "Steve Rathje"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Yash Patel",
+            "Michael Berkebile-Weinberg",
+            "Yifei Pei",
+            "Steve Rathje",
+            "Danielle Goldwert",
+            "Ke Fang",
+            "John T. Jost",
+            "Eric Shuman",
+            "Jay Joseph Van Bavel"
+          ]
+        },
+        {
+          "id": "doi:10.1177/2515245917747646",
+          "year": 2018,
+          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
+          "staffIds": [
+            "BN",
+            "FR",
+            "LM"
+          ],
+          "authors": [
+            "Maureen A. Craig",
+            "Ryan F. Lei"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Thomas Donahue",
+            "Sarah E. Frick",
+            "Jesse Graham",
+            "Adam Hahn",
+            "Hoai Huong Ngo"
+          ]
+        }
+      ]
+    },
+    {
       "id": "us:northern arizona university",
       "institution": "Northern Arizona University",
       "country": "US",
@@ -20843,7 +21060,7 @@
         "Jesse Graham",
         "Michael Tyrala",
         "Sarah E. Frick",
-        "Thomas J. Donahue"
+        "Thomas Donahue"
       ],
       "publications": [
         {
@@ -20878,7 +21095,8 @@
             "JJ"
           ],
           "authors": [
-            "Thomas J. Donahue",
+            "Felix Cheung",
+            "Thomas Donahue",
             "Sarah E. Frick",
             "Jesse Graham",
             "Adam Hahn",
@@ -20894,74 +21112,6 @@
           ],
           "authors": [
             "Catherine K. Lam"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of illinois urbana champaign",
-      "institution": "University of Illinois Urbana-Champaign",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 4,
-      "staffIds": [
-        "CDD"
-      ],
-      "authors": [
-        "B.J.M. Emans",
-        "Evert Van de Vliert",
-        "Harry C. Triandis",
-        "Joselito C. Lualhati",
-        "Peter J. Carnevale",
-        "Tahira M. Probst"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1177/147059580111008",
-          "year": 2001,
-          "title": "Culture and Deception in Business Negotiations: A Multilevel Analysis",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Harry C. Triandis",
-            "Peter J. Carnevale",
-            "Tahira M. Probst"
-          ]
-        },
-        {
-          "id": "doi:10.1080/14792779443000021",
-          "year": 1995,
-          "title": "Outcome Frames in Bilateral Negotiation: Resistance to Concession Making and Frame Adoption",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Peter J. Carnevale"
-          ]
-        },
-        {
-          "id": "doi:10.1006/obhd.1994.1076",
-          "year": 1994,
-          "title": "Effects of Gain-Loss Frames in Negotiation: Loss Aversion, Mismatching, and Frame Adoption",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Peter J. Carnevale",
-            "B.J.M. Emans",
-            "Evert Van de Vliert"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.2420240407",
-          "year": 1994,
-          "title": "Effects of gain—loss frames on satisfaction with self–other outcome‐differences",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Joselito C. Lualhati"
           ]
         }
       ]
@@ -21426,9 +21576,11 @@
       ],
       "authors": [
         "Christopher McCusker",
-        "Jason Dana",
+        "George A. Newman",
+        "Jason D. Dana",
         "John F. Dovidio",
-        "Molly J. Crockett"
+        "Molly J. Crockett",
+        "Victoria L. Brescoll"
       ],
       "publications": [
         {
@@ -21461,7 +21613,9 @@
             "JJ"
           ],
           "authors": [
-            "Jason Dana"
+            "Jason D. Dana",
+            "Victoria L. Brescoll",
+            "George A. Newman"
           ]
         },
         {
@@ -22091,6 +22245,61 @@
       ]
     },
     {
+      "id": "us:harvard university press",
+      "institution": "Harvard University Press",
+      "country": "US",
+      "type": "other",
+      "publicationCount": 3,
+      "staffIds": [
+        "CDD",
+        "JL"
+      ],
+      "authors": [
+        "Amit Goldenberg",
+        "Eric Shuman",
+        "James Sidanius",
+        "Joseph B Bak Coleman",
+        "Julia A. Minson"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1177/19485506251383988",
+          "year": 2026,
+          "title": "Anti-Egalitarians Are Lenient Toward Corporate Misconduct: Mixed Evidence for the Role of Threat and Mind Perception",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "James Sidanius"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Joseph B Bak Coleman",
+            "Amit Goldenberg",
+            "Eric Shuman"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.obhdp.2023.104257",
+          "year": 2023,
+          "title": "Experimental studies of conflict: Challenges, solutions, and advice to junior scholars",
+          "staffIds": [
+            "CDD"
+          ],
+          "authors": [
+            "Julia A. Minson"
+          ]
+        }
+      ]
+    },
+    {
       "id": "be:hasselt university",
       "institution": "Hasselt University",
       "country": "BE",
@@ -22551,140 +22760,6 @@
           "authors": [
             "Anandita Sabherwal",
             "Ganga Shreedhar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:michigan state university",
-      "institution": "Michigan State University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "CDD",
-        "GVV",
-        "LM",
-        "TDV"
-      ],
-      "authors": [
-        "Donald Edward Conlon",
-        "John R. Hollenbeck",
-        "Katelin E. Leahy",
-        "William J. Chopik"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "William J. Chopik",
-            "Katelin E. Leahy"
-          ]
-        },
-        {
-          "id": "doi:10.1111/ncmr.12185",
-          "year": 2020,
-          "title": "From the Field to the Laboratory: The Theory‐Practice Research of Peter J. Carnevale",
-          "staffIds": [
-            "CDD"
-          ],
-          "authors": [
-            "Donald Edward Conlon"
-          ]
-        },
-        {
-          "id": "doi:10.5465/amj.2014.0385",
-          "year": 2015,
-          "title": "Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives",
-          "staffIds": [
-            "GVV",
-            "TDV"
-          ],
-          "authors": [
-            "John R. Hollenbeck"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:new york university",
-      "institution": "New York University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 3,
-      "staffIds": [
-        "BN",
-        "FR",
-        "JL",
-        "LM"
-      ],
-      "authors": [
-        "Ali Javeed",
-        "Danielle Goldwert",
-        "Eric Shuman",
-        "Jay Joseph Van Bavel",
-        "John T. Jost",
-        "Ke Fang",
-        "Kimberly C Doell",
-        "Maureen A. Craig",
-        "Michael Berkebile-Weinberg",
-        "Ryan F. Lei",
-        "Steve Rathje",
-        "Yash Patel",
-        "Yifei Pei"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Jay Joseph Van Bavel",
-            "Kimberly C Doell",
-            "Ali Javeed",
-            "John T. Jost",
-            "Steve Rathje"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Yash Patel",
-            "Michael Berkebile-Weinberg",
-            "Yifei Pei",
-            "Steve Rathje",
-            "Danielle Goldwert",
-            "Ke Fang",
-            "John T. Jost",
-            "Eric Shuman",
-            "Jay Joseph Van Bavel"
-          ]
-        },
-        {
-          "id": "doi:10.1177/2515245917747646",
-          "year": 2018,
-          "title": "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",
-          "staffIds": [
-            "BN",
-            "FR",
-            "LM"
-          ],
-          "authors": [
-            "Maureen A. Craig",
-            "Ryan F. Lei"
           ]
         }
       ]
@@ -23835,7 +23910,8 @@
         "Eric‐Jan Wagenmakers",
         "Jesse Chandler",
         "Justin E. Heinze",
-        "Kristie Hein"
+        "Kristie Hein",
+        "Walter J. Sowden"
       ],
       "publications": [
         {
@@ -23870,8 +23946,10 @@
           "authors": [
             "Justin E. Heinze",
             "Eric‐Jan Wagenmakers",
+            "Jesse Chandler",
             "Kristie Hein",
-            "Aaron M. Sackett"
+            "Aaron M. Sackett",
+            "Walter J. Sowden"
           ]
         }
       ]
@@ -24335,6 +24413,45 @@
           ],
           "authors": [
             "Daniela P. Fernández"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:american university",
+      "institution": "American University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Hayley Blunden",
+        "Sophie-Charlotte Darroux"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Hayley Blunden"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Sophie-Charlotte Darroux"
           ]
         }
       ]
@@ -25383,6 +25500,63 @@
       ]
     },
     {
+      "id": "fr:insead",
+      "institution": "INSEAD",
+      "country": "FR",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "JS"
+      ],
+      "authors": [
+        "Cong Wei",
+        "Eliza Bivolaru",
+        "Eric Luis Uhlmann",
+        "Lynn Wong",
+        "Manfred Kets De Vries",
+        "Martin Schweinsberg",
+        "Michael Schaerer",
+        "Nico Thornley",
+        "Nikhil Madan",
+        "Sophie-Charlotte Darroux",
+        "Warren Tierney"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.3389/fpsyg.2021.738120",
+          "year": 2021,
+          "title": "Relating Cultural Distance to Self-Other Agreement of Leader–Observer Dyads: The Role of Hierarchical Position",
+          "staffIds": [
+            "JS"
+          ],
+          "authors": [
+            "Manfred Kets De Vries"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Martin Schweinsberg",
+            "Nikhil Madan",
+            "Warren Tierney",
+            "Eliza Bivolaru",
+            "Michael Schaerer",
+            "Nico Thornley",
+            "Lynn Wong",
+            "Cong Wei",
+            "Sophie-Charlotte Darroux",
+            "Eric Luis Uhlmann"
+          ]
+        }
+      ]
+    },
+    {
       "id": "sg:insead",
       "institution": "INSEAD",
       "country": "SG",
@@ -26266,20 +26440,23 @@
       ],
       "authors": [
         "Adam Hahn",
-        "Alexandra Mislin",
+        "Alexandra A. Mislin",
         "Andrei Cimpian",
+        "Andrew Canavan",
         "Anne-Laure Sellier",
         "Brittany E. Hanson",
         "Christina M. Tworek",
         "Christopher W. Bauman",
+        "Diana Cordon",
         "Eric Luis Uhlmann",
-        "Erik Wetter",
+        "Erik Wilhelm Wetter",
         "Evelina Bonnier",
-        "Fiery Cushman",
-        "George Newman",
+        "Fiery Andrews Cushman",
+        "George A. Newman",
         "Jay J. Van Bavel",
+        "Jennifer Miles",
         "Jesse Chandler",
-        "Lily J. Jiang",
+        "Lily I. Jiang",
         "Maarten Marsman",
         "Magnus Johannesson",
         "Mark A. Clark",
@@ -26315,21 +26492,24 @@
             "Christina M. Tworek",
             "Christopher W. Bauman",
             "Victoria L. Brescoll",
+            "Andrew Canavan",
             "Jesse Chandler",
             "Sapna Cheryan",
             "Andrei Cimpian",
             "Mark A. Clark",
-            "Fiery Cushman",
+            "Diana Cordon",
+            "Fiery Andrews Cushman",
             "Adam Hahn",
             "Brittany E. Hanson",
-            "Lily J. Jiang",
+            "Lily I. Jiang",
             "Tehlyr Kellogg",
-            "Alexandra Mislin",
-            "George Newman",
+            "Jennifer Miles",
+            "Alexandra A. Mislin",
+            "George A. Newman",
             "Anne-Laure Sellier",
             "Walter J. Sowden",
             "Jay J. Van Bavel",
-            "Erik Wetter",
+            "Erik Wilhelm Wetter",
             "Eric Luis Uhlmann"
           ]
         }
@@ -27226,6 +27406,55 @@
       ]
     },
     {
+      "id": "us:university of california irvine",
+      "institution": "University of California, Irvine",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Christopher W. Bauman",
+        "Jennifer Miles",
+        "John Kelly",
+        "Mertcan Güngör",
+        "Peter H. Ditto",
+        "Rebecca Hofstein Grady",
+        "Shiri Spitz Siddiqi"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1126/science.adh4764",
+          "year": 2024,
+          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Mertcan Güngör",
+            "John Kelly",
+            "Shiri Spitz Siddiqi"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Christopher W. Bauman",
+            "Peter H. Ditto",
+            "Rebecca Hofstein Grady",
+            "Jennifer Miles"
+          ]
+        }
+      ]
+    },
+    {
       "id": "us:university of california los angeles",
       "institution": "University of California, Los Angeles",
       "country": "US",
@@ -27326,7 +27555,7 @@
         "JL"
       ],
       "authors": [
-        "Daniel Diermeier",
+        "Daniel A. Diermeier",
         "Daniel Storage",
         "David Tannenbaum",
         "Roman A. Gallardo"
@@ -27351,7 +27580,7 @@
             "JJ"
           ],
           "authors": [
-            "Daniel Diermeier",
+            "Daniel A. Diermeier",
             "David Tannenbaum",
             "Daniel Storage"
           ]
@@ -27620,7 +27849,7 @@
         "Anthony N. Washburn",
         "Brittany E. Hanson",
         "Israr Qureshi",
-        "Matt Motyl",
+        "Matt S. Motyl",
         "Michael H. Pasek",
         "Michael Schaerer",
         "Rebecca Littman"
@@ -27649,7 +27878,7 @@
             "Israr Qureshi",
             "Michael Schaerer",
             "Brittany E. Hanson",
-            "Matt Motyl",
+            "Matt S. Motyl",
             "Anthony N. Washburn"
           ]
         }
@@ -27850,6 +28079,49 @@
           ],
           "authors": [
             "Sabine Sonnentag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:university of massachusetts amherst",
+      "institution": "University of Massachusetts Amherst",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "JL"
+      ],
+      "authors": [
+        "Erik W. Cheries",
+        "Ezra M. Markowitz",
+        "Harvey Packham",
+        "Xiaomin Sun"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Ezra M. Markowitz"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Erik W. Cheries",
+            "Harvey Packham",
+            "Xiaomin Sun"
           ]
         }
       ]
@@ -28230,6 +28502,88 @@
       ]
     },
     {
+      "id": "us:university of south florida",
+      "institution": "University of South Florida",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "LM"
+      ],
+      "authors": [
+        "Nathan C. Higgins",
+        "P. Scott Ramsay",
+        "Sarah E. Frick",
+        "Wendy L. Bedwell"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Nathan C. Higgins"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Wendy L. Bedwell",
+            "Sarah E. Frick",
+            "P. Scott Ramsay"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:university of southern california",
+      "institution": "University of Southern California",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 2,
+      "staffIds": [
+        "JJ",
+        "LM"
+      ],
+      "authors": [
+        "Jesse Graham",
+        "Zachariah Berry"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1038/s41586-025-10078-y",
+          "year": 2026,
+          "title": "Investigating the replicability of the social and behavioural sciences",
+          "staffIds": [
+            "LM"
+          ],
+          "authors": [
+            "Zachariah Berry"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Jesse Graham"
+          ]
+        }
+      ]
+    },
+    {
       "id": "no:university of stavanger",
       "institution": "University of Stavanger",
       "country": "NO",
@@ -28324,7 +28678,9 @@
         "JJ"
       ],
       "authors": [
-        "Eli Awtrey",
+        "Eli C. Awtrey",
+        "Lily I. Jiang",
+        "Sapna Cheryan",
         "Xiao Ping Chen"
       ],
       "publications": [
@@ -28336,7 +28692,9 @@
             "JJ"
           ],
           "authors": [
-            "Eli Awtrey"
+            "Eli C. Awtrey",
+            "Sapna Cheryan",
+            "Lily I. Jiang"
           ]
         },
         {
@@ -28365,6 +28723,7 @@
         "LM"
       ],
       "authors": [
+        "Daniel Storage",
         "Deanna M. Kennedy",
         "Eric‐Jan Wagenmakers"
       ],
@@ -28391,7 +28750,8 @@
           ],
           "authors": [
             "Eric‐Jan Wagenmakers",
-            "Deanna M. Kennedy"
+            "Deanna M. Kennedy",
+            "Daniel Storage"
           ]
         }
       ]
@@ -29151,32 +29511,6 @@
           ],
           "authors": [
             "Michael J. Morais"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:american university",
-      "institution": "American University",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Hayley Blunden"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Hayley Blunden"
           ]
         }
       ]
@@ -30472,32 +30806,6 @@
       ]
     },
     {
-      "id": "ca:concordia university",
-      "institution": "Concordia University",
-      "country": "CA",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JS"
-      ],
-      "authors": [
-        "Seth M. Spain"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1016/j.leaqua.2019.01.001",
-          "year": 2019,
-          "title": "The Leadership Quarterly: State of the journal",
-          "staffIds": [
-            "JS"
-          ],
-          "authors": [
-            "Seth M. Spain"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:concordia university",
       "institution": "Concordia University",
       "country": "US",
@@ -30520,6 +30828,32 @@
             "BN",
             "FR",
             "LM"
+          ],
+          "authors": [
+            "Seth M. Spain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca:concordia university",
+      "institution": "Concordia University",
+      "country": "CA",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JS"
+      ],
+      "authors": [
+        "Seth M. Spain"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.leaqua.2019.01.001",
+          "year": 2019,
+          "title": "The Leadership Quarterly: State of the journal",
+          "staffIds": [
+            "JS"
           ],
           "authors": [
             "Seth M. Spain"
@@ -31741,7 +32075,9 @@
         "JJ"
       ],
       "authors": [
-        "S. Amy Sommer"
+        "Anne-Laure Sellier",
+        "S. Amy Sommer",
+        "Tatiana Sokolova"
       ],
       "publications": [
         {
@@ -31752,7 +32088,9 @@
             "JJ"
           ],
           "authors": [
-            "S. Amy Sommer"
+            "S. Amy Sommer",
+            "Anne-Laure Sellier",
+            "Tatiana Sokolova"
           ]
         }
       ]
@@ -32156,27 +32494,27 @@
       ]
     },
     {
-      "id": "fr:insead",
-      "institution": "INSEAD",
-      "country": "FR",
+      "id": "es:ie university",
+      "institution": "IE University",
+      "country": "ES",
       "type": "education",
       "publicationCount": 1,
       "staffIds": [
-        "JS"
+        "JJ"
       ],
       "authors": [
-        "Manfred Kets De Vries"
+        "Israr Qureshi"
       ],
       "publications": [
         {
-          "id": "doi:10.3389/fpsyg.2021.738120",
-          "year": 2021,
-          "title": "Relating Cultural Distance to Self-Other Agreement of Leader–Observer Dyads: The Role of Hierarchical Position",
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
           "staffIds": [
-            "JS"
+            "JJ"
           ],
           "authors": [
-            "Manfred Kets De Vries"
+            "Israr Qureshi"
           ]
         }
       ]
@@ -32229,6 +32567,48 @@
           ],
           "authors": [
             "Jakob de Haan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:illinois institute of technology",
+      "institution": "Illinois Institute of Technology",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JJ"
+      ],
+      "authors": [
+        "Andrew Canavan",
+        "Carlos T. Wilson",
+        "Diana Cordon",
+        "Heidi Maibuecher",
+        "Kristie Hein",
+        "Nicole Legate",
+        "Tabitha Anderson",
+        "Tehlyr Kellogg",
+        "Thomas Donahue"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Tabitha Anderson",
+            "Andrew Canavan",
+            "Diana Cordon",
+            "Thomas Donahue",
+            "Kristie Hein",
+            "Tehlyr Kellogg",
+            "Nicole Legate",
+            "Heidi Maibuecher",
+            "Carlos T. Wilson"
           ]
         }
       ]
@@ -32499,6 +32879,32 @@
           "authors": [
             "Priya Silverstein",
             "Elisabeth Julie Vargo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:institute for social research",
+      "institution": "Institute for Social Research",
+      "country": "US",
+      "type": "other",
+      "publicationCount": 1,
+      "staffIds": [
+        "JJ"
+      ],
+      "authors": [
+        "Jesse Chandler"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Jesse Chandler"
           ]
         }
       ]
@@ -33910,6 +34316,32 @@
       ]
     },
     {
+      "id": "us:mathematica policy research",
+      "institution": "Mathematica Policy Research",
+      "country": "US",
+      "type": "facility",
+      "publicationCount": 1,
+      "staffIds": [
+        "JJ"
+      ],
+      "authors": [
+        "Jesse Chandler"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Jesse Chandler"
+          ]
+        }
+      ]
+    },
+    {
       "id": "de:max planck institute for behavioral economics",
       "institution": "Max Planck Institute for Behavioral Economics",
       "country": "DE",
@@ -34178,38 +34610,6 @@
       ]
     },
     {
-      "id": "us:michigan united",
-      "institution": "Michigan United",
-      "country": "US",
-      "type": "nonprofit",
-      "publicationCount": 1,
-      "staffIds": [
-        "JJ"
-      ],
-      "authors": [
-        "Aaron M. Sackett",
-        "Eric‐Jan Wagenmakers",
-        "Justin E. Heinze",
-        "Kristie Hein"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1016/j.jesp.2015.10.001",
-          "year": 2016,
-          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
-          "staffIds": [
-            "JJ"
-          ],
-          "authors": [
-            "Justin E. Heinze",
-            "Eric‐Jan Wagenmakers",
-            "Kristie Hein",
-            "Aaron M. Sackett"
-          ]
-        }
-      ]
-    },
-    {
       "id": "nl:ministry of defence",
       "institution": "Ministry of Defence",
       "country": "NL",
@@ -34235,6 +34635,32 @@
             "Rick van der Kleij",
             "Jan Maarten Schraagen",
             "Peter Werkhoven"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au:monash university",
+      "institution": "Monash University",
+      "country": "AU",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JJ"
+      ],
+      "authors": [
+        "Jun Gu"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Jun Gu"
           ]
         }
       ]
@@ -35791,6 +36217,32 @@
           "authors": [
             "Hillie Aaldering",
             "Gerben A. van Kleef"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us:roosevelt university",
+      "institution": "Roosevelt University",
+      "country": "US",
+      "type": "education",
+      "publicationCount": 1,
+      "staffIds": [
+        "JJ"
+      ],
+      "authors": [
+        "Toshio Murase"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1016/j.jesp.2015.10.001",
+          "year": 2016,
+          "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
+          "staffIds": [
+            "JJ"
+          ],
+          "authors": [
+            "Toshio Murase"
           ]
         }
       ]
@@ -38398,36 +38850,6 @@
       ]
     },
     {
-      "id": "us:university of california irvine",
-      "institution": "University of California, Irvine",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "John Kelly",
-        "Mertcan Güngör",
-        "Shiri Spitz Siddiqi"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1126/science.adh4764",
-          "year": 2024,
-          "title": "Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Mertcan Güngör",
-            "John Kelly",
-            "Shiri Spitz Siddiqi"
-          ]
-        }
-      ]
-    },
-    {
       "id": "us:university of california riverside",
       "institution": "University of California, Riverside",
       "country": "US",
@@ -39119,7 +39541,7 @@
         "JJ"
       ],
       "authors": [
-        "Luke Zhu"
+        "Luke Lei Zhu"
       ],
       "publications": [
         {
@@ -39130,7 +39552,7 @@
             "JJ"
           ],
           "authors": [
-            "Luke Zhu"
+            "Luke Lei Zhu"
           ]
         }
       ]
@@ -39157,32 +39579,6 @@
           ],
           "authors": [
             "Sara Tement"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of massachusetts amherst",
-      "institution": "University of Massachusetts Amherst",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "JL"
-      ],
-      "authors": [
-        "Ezra M. Markowitz"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Ezra M. Markowitz"
           ]
         }
       ]
@@ -39712,32 +40108,6 @@
       ]
     },
     {
-      "id": "us:university of south florida",
-      "institution": "University of South Florida",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "LM"
-      ],
-      "authors": [
-        "Nathan C. Higgins"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Nathan C. Higgins"
-          ]
-        }
-      ]
-    },
-    {
       "id": "gb:university of southampton",
       "institution": "University of Southampton",
       "country": "GB",
@@ -39759,32 +40129,6 @@
           ],
           "authors": [
             "Christian Bokhove"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "us:university of southern california",
-      "institution": "University of Southern California",
-      "country": "US",
-      "type": "education",
-      "publicationCount": 1,
-      "staffIds": [
-        "LM"
-      ],
-      "authors": [
-        "Zachariah Berry"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1038/s41586-025-10078-y",
-          "year": 2026,
-          "title": "Investigating the replicability of the social and behavioural sciences",
-          "staffIds": [
-            "LM"
-          ],
-          "authors": [
-            "Zachariah Berry"
           ]
         }
       ]

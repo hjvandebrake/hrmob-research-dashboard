@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-10-29",
+    "generatedOn": "2026-11-05",
     "people": 528,
-    "publicationsChecked": 4304,
+    "publicationsChecked": 4315,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 588,
     "additionalBenchmarkLinks": 38,
@@ -43544,16 +43544,6 @@
           "personId": "mkt-bm-fennis",
           "author": "Bob M. Fennis",
           "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jordan, J.",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "mkt-bm-fennis",
-          "author": "Fennis, B. M.",
-          "method": "unique compatible author name"
         }
       ]
     },
@@ -82575,22 +82565,374 @@
       ]
     },
     {
-      "id": "doi:10.1007/s12144-026-10217-2",
-      "doi": "10.1007/s12144-026-10217-2",
+      "id": "doi:10.1016/j.respol.2026.105579",
+      "doi": "10.1016/j.respol.2026.105579",
       "publicationIds": [
-        "doi:10.1007/s12144-026-10217-2",
-        "doi:10.5167/uzh-436863"
+        "doi:10.1016/j.respol.2026.105579"
       ],
       "people": [
-        "hrmob-j-de-bloom"
+        "ims-s-asad"
       ],
       "matches": [
         {
-          "personId": "hrmob-j-de-bloom",
-          "author": "Jessica de Bloom",
+          "personId": "ims-s-asad",
+          "author": "Sarosh Asad",
           "method": "unique compatible author name"
+        },
+        {
+          "personId": "ims-s-asad",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/follow-the-technology-or-follow-the-leader-radical-innovation-and/",
+            "https://research.rug.nl/en/publications/ee917511-a733-42bd-82c3-1211e7f545bb"
+          ]
         }
-      ]
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/follow-the-technology-or-follow-the-leader-radical-innovation-and/",
+        "https://research.rug.nl/en/publications/ee917511-a733-42bd-82c3-1211e7f545bb"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1007/s10551-026-06362-0",
+      "doi": "10.1007/s10551-026-06362-0",
+      "publicationIds": [
+        "doi:10.1007/s10551-026-06362-0"
+      ],
+      "people": [
+        "ops-e-rosca"
+      ],
+      "matches": [
+        {
+          "personId": "ops-e-rosca",
+          "author": "Eugenia Rosca",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-e-rosca",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/leading-by-example-the-role-of-buyers-employee-focused-stakeholde/",
+            "https://research.rug.nl/en/publications/6766fa03-0fe2-45a7-b000-17b1110c82f1"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/leading-by-example-the-role-of-buyers-employee-focused-stakeholde/",
+        "https://research.rug.nl/en/publications/6766fa03-0fe2-45a7-b000-17b1110c82f1"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1002/joom.70051",
+      "doi": "10.1002/joom.70051",
+      "publicationIds": [
+        "doi:10.1002/joom.70051"
+      ],
+      "people": [
+        "ops-e-rosca"
+      ],
+      "matches": [
+        {
+          "personId": "ops-e-rosca",
+          "author": "Eugenia Rosca",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-e-rosca",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/advancing-rigor-in-operations-management-qualitative-research-fro/",
+            "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/advancing-rigor-in-operations-management-qualitative-research-fro/",
+        "https://research.rug.nl/en/publications/0c5523e4-808f-4044-afc2-8f7478bb19d2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1080/01441647.2026.2732021",
+      "doi": "10.1080/01441647.2026.2732021",
+      "publicationIds": [
+        "doi:10.1080/01441647.2026.2732021"
+      ],
+      "people": [
+        "ops-p-buijs"
+      ],
+      "matches": [
+        {
+          "personId": "ops-p-buijs",
+          "author": "Paul Buijs",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-p-buijs",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/where-goods-meet-people-a-conceptual-framework-integrating-urban-/",
+            "https://research.rug.nl/en/publications/488c4c22-c056-4f9c-975a-1798b1f62d63"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/where-goods-meet-people-a-conceptual-framework-integrating-urban-/",
+        "https://research.rug.nl/en/publications/488c4c22-c056-4f9c-975a-1798b1f62d63"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.tra.2026.105173",
+      "doi": "10.1016/j.tra.2026.105173",
+      "publicationIds": [
+        "doi:10.1016/j.tra.2026.105173"
+      ],
+      "people": [
+        "ops-dp-van-donk",
+        "ops-p-buijs",
+        "ops-s-wolf"
+      ],
+      "matches": [
+        {
+          "personId": "ops-s-wolf",
+          "author": "Sanne Wolf",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-p-buijs",
+          "author": "Paul Buijs",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-dp-van-donk",
+          "author": "Dirk Pieter van Donk",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-dp-van-donk",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+            "https://research.rug.nl/en/publications/e8858dfe-fe76-407e-87f2-e29d4c787bb3"
+          ]
+        },
+        {
+          "personId": "ops-p-buijs",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+            "https://research.rug.nl/en/publications/e8858dfe-fe76-407e-87f2-e29d4c787bb3"
+          ]
+        },
+        {
+          "personId": "ops-s-wolf",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+            "https://research.rug.nl/en/publications/e8858dfe-fe76-407e-87f2-e29d4c787bb3"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/take-it-to-the-streets-spatial-and-sociodemographic-determinants-/",
+        "https://research.rug.nl/en/publications/e8858dfe-fe76-407e-87f2-e29d4c787bb3"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.omega.2026.103631",
+      "doi": "10.1016/j.omega.2026.103631",
+      "publicationIds": [
+        "doi:10.1016/j.omega.2026.103631"
+      ],
+      "people": [
+        "ops-x-zhu"
+      ],
+      "matches": [
+        {
+          "personId": "ops-x-zhu",
+          "author": "Stuart X. Zhu",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-x-zhu",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/programmatic-or-sponsored-advertising-control-costs-and-consumer-/",
+            "https://research.rug.nl/en/publications/9f73b1ad-a637-41d8-9ad3-5892b1edf458"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/programmatic-or-sponsored-advertising-control-costs-and-consumer-/",
+        "https://research.rug.nl/en/publications/9f73b1ad-a637-41d8-9ad3-5892b1edf458"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.jik.2026.101129",
+      "doi": "10.1016/j.jik.2026.101129",
+      "publicationIds": [
+        "doi:10.1016/j.jik.2026.101129"
+      ],
+      "people": [
+        "ops-aj-dreischerf",
+        "ops-e-rosca"
+      ],
+      "matches": [
+        {
+          "personId": "ops-aj-dreischerf",
+          "author": "Anna Dreischerf",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-e-rosca",
+          "author": "Eugenia Rosca",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-aj-dreischerf",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/collaborative-knowledge-building-for-innovation-insights-from-mar/",
+            "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+          ]
+        },
+        {
+          "personId": "ops-e-rosca",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/collaborative-knowledge-building-for-innovation-insights-from-mar/",
+            "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/collaborative-knowledge-building-for-innovation-insights-from-mar/",
+        "https://research.rug.nl/en/publications/7b665e6e-6f3a-4468-9a0d-9dad563049b7"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1186/s40066-026-00620-0",
+      "doi": "10.1186/s40066-026-00620-0",
+      "publicationIds": [
+        "doi:10.1186/s40066-026-00620-0"
+      ],
+      "people": [
+        "gem-p-rao-sahib"
+      ],
+      "matches": [
+        {
+          "personId": "gem-p-rao-sahib",
+          "author": "Padma Rao Sahib",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "gem-p-rao-sahib",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/cash-crops-vs-food-security-examining-the-role-of-cocoa-cashew-in/",
+            "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/cash-crops-vs-food-security-examining-the-role-of-cocoa-cashew-in/",
+        "https://research.rug.nl/en/publications/45ae1ca1-2b7b-4034-91f8-626b4c4863f2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.omega.2026.103628",
+      "doi": "10.1016/j.omega.2026.103628",
+      "publicationIds": [
+        "doi:10.1016/j.omega.2026.103628"
+      ],
+      "people": [
+        "ops-rh-teunter",
+        "ops-x-zhu"
+      ],
+      "matches": [
+        {
+          "personId": "ops-rh-teunter",
+          "author": "Ruud H. Teunter",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-x-zhu",
+          "author": "Stuart X. Zhu",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-rh-teunter",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/auction-design-and-operational-strategy-for-hybrid-recycling-plat/",
+            "https://research.rug.nl/en/publications/5977f830-57c3-4add-8c1a-a2860f484a84"
+          ]
+        },
+        {
+          "personId": "ops-x-zhu",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/auction-design-and-operational-strategy-for-hybrid-recycling-plat/",
+            "https://research.rug.nl/en/publications/5977f830-57c3-4add-8c1a-a2860f484a84"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/auction-design-and-operational-strategy-for-hybrid-recycling-plat/",
+        "https://research.rug.nl/en/publications/5977f830-57c3-4add-8c1a-a2860f484a84"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.ijhydene.2026.155791",
+      "doi": "10.1016/j.ijhydene.2026.155791",
+      "publicationIds": [
+        "doi:10.1016/j.ijhydene.2026.155791"
+      ],
+      "people": [
+        "ops-e-ursavas",
+        "ops-x-zhu"
+      ],
+      "matches": [
+        {
+          "personId": "ops-x-zhu",
+          "author": "Stuart X. Zhu",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-e-ursavas",
+          "author": "Evrim Ursavas",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "ops-e-ursavas",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/assessing-the-feasibility-of-power-to-hydrogen-pathways-in-the-ne/",
+            "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
+          ]
+        },
+        {
+          "personId": "ops-x-zhu",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/assessing-the-feasibility-of-power-to-hydrogen-pathways-in-the-ne/",
+            "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/assessing-the-feasibility-of-power-to-hydrogen-pathways-in-the-ne/",
+        "https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
     },
     {
       "id": "doi:10.1007/s11218-026-10232-y",
@@ -82976,6 +83318,29 @@
       ]
     },
     {
+      "id": "doi:10.1037/gdn0000259",
+      "doi": "10.1037/gdn0000259",
+      "publicationIds": [
+        "doi:10.1037/gdn0000259"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt",
+        "hrmob-fa-rink"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1177/10596011261486495",
       "doi": "10.1177/10596011261486495",
       "publicationIds": [
@@ -83039,6 +83404,24 @@
         {
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Lees",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1007/s12144-026-10217-2",
+      "doi": "10.1007/s12144-026-10217-2",
+      "publicationIds": [
+        "doi:10.1007/s12144-026-10217-2",
+        "doi:10.5167/uzh-436863"
+      ],
+      "people": [
+        "hrmob-j-de-bloom"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-de-bloom",
+          "author": "Jessica de Bloom",
           "method": "unique compatible author name"
         }
       ]
@@ -83584,6 +83967,23 @@
       ]
     },
     {
+      "id": "doi:10.3389/fpsyg.2023.1122200",
+      "doi": "10.3389/fpsyg.2023.1122200",
+      "publicationIds": [
+        "doi:10.3389/fpsyg.2023.1122200"
+      ],
+      "people": [
+        "hrmob-m-arnold"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-m-arnold",
+          "author": "Miriam Arnold",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "rug:2f78fb8e678cb9fd",
       "doi": "",
       "publicationIds": [
@@ -83642,23 +84042,6 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka Ireen Stoker",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/amj.2023.4004",
-      "doi": "10.5465/amj.2023.4004",
-      "publicationIds": [
-        "doi:10.5465/amj.2023.4004"
-      ],
-      "people": [
-        "hrmob-fa-rink"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor A. Rink",
           "method": "unique compatible author name"
         }
       ]
@@ -84132,35 +84515,6 @@
       ]
     },
     {
-      "id": "openalex:W3043319934",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W3043319934"
-      ],
-      "people": [
-        "hrmob-hj-van-de-brake",
-        "hrmob-fa-rink",
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-hj-van-de-brake",
-          "author": "Hendrik Johan Van De Brake",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor A. Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1016/j.tics.2020.06.005",
       "doi": "10.1016/j.tics.2020.06.005",
       "publicationIds": [
@@ -84575,23 +84929,6 @@
       ]
     },
     {
-      "id": "openalex:W7208183509",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W7208183509"
-      ],
-      "people": [
-        "hrmob-s-berger"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-s-berger",
-          "author": "Stefan Berger",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2889041131",
       "doi": "",
       "publicationIds": [
@@ -84672,23 +85009,6 @@
         {
           "personId": "hrmob-jm-lees",
           "author": "Jeffrey Martin Lees",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "openalex:W2608212936",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2608212936"
-      ],
-      "people": [
-        "hrmob-j-jordan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-j-jordan",
-          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]
@@ -84826,35 +85146,6 @@
       ]
     },
     {
-      "id": "openalex:W2475758582",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2475758582"
-      ],
-      "people": [
-        "hrmob-fa-rink",
-        "hrmob-mk-ryan",
-        "hrmob-ji-stoker"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-fa-rink",
-          "author": "Floor A. Rink",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-ji-stoker",
-          "author": "Janka Ireen Stoker",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2547411292",
       "doi": "",
       "publicationIds": [
@@ -84884,23 +85175,6 @@
       ]
     },
     {
-      "id": "doi:10.5553/geno/092150772015028002006",
-      "doi": "10.5553/geno/092150772015028002006",
-      "publicationIds": [
-        "doi:10.5553/geno/092150772015028002006"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "doi:10.1002/ejsp.2101",
       "doi": "10.1002/ejsp.2101",
       "publicationIds": [
@@ -84912,7 +85186,7 @@
       "matches": [
         {
           "personId": "hrmob-j-jordan",
-          "author": "Jordan, J.",
+          "author": "Jennifer Jordan",
           "method": "unique compatible author name"
         }
       ]
@@ -84988,23 +85262,6 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka Ireen Stoker",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/amj.2015.4004",
-      "doi": "10.5465/amj.2015.4004",
-      "publicationIds": [
-        "doi:10.5465/amj.2015.4004"
-      ],
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
           "method": "unique compatible author name"
         }
       ]
@@ -85594,29 +85851,6 @@
       ]
     },
     {
-      "id": "openalex:W2582552463",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2582552463"
-      ],
-      "people": [
-        "hrmob-ji-stoker",
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-ji-stoker",
-          "author": "Janka Ireen Stoker",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2483445560",
       "doi": "",
       "publicationIds": [
@@ -85692,23 +85926,6 @@
         {
           "personId": "hrmob-ji-stoker",
           "author": "Janka Ireen Stoker",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "openalex:W2574310077",
-      "doi": "",
-      "publicationIds": [
-        "openalex:W2574310077"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
           "method": "unique compatible author name"
         }
       ]
@@ -86236,23 +86453,6 @@
       ]
     },
     {
-      "id": "doi:10.5465/30040663",
-      "doi": "10.5465/30040663",
-      "publicationIds": [
-        "doi:10.5465/30040663"
-      ],
-      "people": [
-        "hrmob-gs-van-der-vegt"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-gs-van-der-vegt",
-          "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
       "id": "openalex:W2514815842",
       "doi": "",
       "publicationIds": [
@@ -86325,23 +86525,6 @@
       "doi": "10.1177/106939702237305",
       "publicationIds": [
         "doi:10.1177/106939702237305"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.5465/3069431",
-      "doi": "10.5465/3069431",
-      "publicationIds": [
-        "doi:10.5465/3069431"
       ],
       "people": [
         "hrmob-o-janssen"
@@ -86435,23 +86618,6 @@
         {
           "personId": "hrmob-gs-van-der-vegt",
           "author": "Gerben S. van der Vegt",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1177/089484530102800202",
-      "doi": "10.1177/089484530102800202",
-      "publicationIds": [
-        "doi:10.1177/089484530102800202"
-      ],
-      "people": [
-        "hrmob-ji-stoker"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-ji-stoker",
-          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -86580,23 +86746,6 @@
       "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g",
       "publicationIds": [
         "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g"
-      ],
-      "people": [
-        "hrmob-o-janssen"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-o-janssen",
-          "author": "Onne Janssen",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
-      "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
-      "publicationIds": [
-        "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7"
       ],
       "people": [
         "hrmob-o-janssen"
@@ -86746,18 +86895,252 @@
       ]
     },
     {
-      "id": "doi:10.3389/fpsyg.2023.1122200",
-      "doi": "10.3389/fpsyg.2023.1122200",
+      "id": "doi:10.5465/amj.2023.4004",
+      "doi": "10.5465/amj.2023.4004",
       "publicationIds": [
-        "doi:10.3389/fpsyg.2023.1122200"
+        "doi:10.5465/amj.2023.4004"
       ],
       "people": [
-        "hrmob-m-arnold"
+        "hrmob-fa-rink"
       ],
       "matches": [
         {
-          "personId": "hrmob-m-arnold",
-          "author": "Miriam Arnold",
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W3043319934",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W3043319934"
+      ],
+      "people": [
+        "hrmob-hj-van-de-brake",
+        "hrmob-fa-rink",
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-hj-van-de-brake",
+          "author": "Hendrik Johan Van De Brake",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W7208183509",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W7208183509"
+      ],
+      "people": [
+        "hrmob-s-berger"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-s-berger",
+          "author": "Stefan Berger",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2608212936",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2608212936"
+      ],
+      "people": [
+        "hrmob-j-jordan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-j-jordan",
+          "author": "Jennifer Jordan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2475758582",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2475758582"
+      ],
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-mk-ryan",
+        "hrmob-ji-stoker"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-fa-rink",
+          "author": "Floor A. Rink",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5553/geno/092150772015028002006",
+      "doi": "10.5553/geno/092150772015028002006",
+      "publicationIds": [
+        "doi:10.5553/geno/092150772015028002006"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "doi": "10.5465/amj.2015.4004",
+      "publicationIds": [
+        "doi:10.5465/amj.2015.4004"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2582552463",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2582552463"
+      ],
+      "people": [
+        "hrmob-ji-stoker",
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2574310077",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2574310077"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/30040663",
+      "doi": "10.5465/30040663",
+      "publicationIds": [
+        "doi:10.5465/30040663"
+      ],
+      "people": [
+        "hrmob-gs-van-der-vegt"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-gs-van-der-vegt",
+          "author": "Gerben S. van der Vegt",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.5465/3069431",
+      "doi": "10.5465/3069431",
+      "publicationIds": [
+        "doi:10.5465/3069431"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1177/089484530102800202",
+      "doi": "10.1177/089484530102800202",
+      "publicationIds": [
+        "doi:10.1177/089484530102800202"
+      ],
+      "people": [
+        "hrmob-ji-stoker"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "publicationIds": [
+        "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7"
+      ],
+      "people": [
+        "hrmob-o-janssen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-o-janssen",
+          "author": "Onne Janssen",
           "method": "unique compatible author name"
         }
       ]
@@ -92320,6 +92703,493 @@
         "https://www.rug.nl/staff/d.j.van.der.zee/research?lang=en"
       ],
       "curatedSourceCheckedOn": "2026-10-22"
+    },
+    {
+      "id": "doi:10.1016/j.enpol.2026.115511",
+      "doi": "10.1016/j.enpol.2026.115511",
+      "publicationIds": [
+        "doi:10.1016/j.enpol.2026.115511"
+      ],
+      "people": [
+        "eef-a-postepska"
+      ],
+      "matches": [
+        {
+          "personId": "eef-a-postepska",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/household-demand-and-willingness-to-pay-for-grid-electricity-evid/",
+            "https://www.rug.nl/staff/a.postepska/",
+            "https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/household-demand-and-willingness-to-pay-for-grid-electricity-evid/",
+        "https://www.rug.nl/staff/a.postepska/",
+        "https://research.rug.nl/en/publications/4982713d-2358-4b51-908f-47c5a9f2eaad"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1007/s00148-026-01185-9",
+      "doi": "10.1007/s00148-026-01185-9",
+      "publicationIds": [
+        "doi:10.1007/s00148-026-01185-9"
+      ],
+      "people": [
+        "eef-a-postepska"
+      ],
+      "matches": [
+        {
+          "personId": "eef-a-postepska",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/daughters-like-mothers-new-evidence-of-inter-generational-transmi/",
+            "https://www.rug.nl/staff/a.postepska/",
+            "https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/daughters-like-mothers-new-evidence-of-inter-generational-transmi/",
+        "https://www.rug.nl/staff/a.postepska/",
+        "https://research.rug.nl/en/publications/cb5b0336-5949-45b8-b9c3-7429631be330"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1111/joes.70128",
+      "doi": "10.1111/joes.70128",
+      "publicationIds": [
+        "doi:10.1111/joes.70128"
+      ],
+      "people": [
+        "eef-ljr-scholtens"
+      ],
+      "matches": [
+        {
+          "personId": "eef-ljr-scholtens",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/measuring-esg-a-critical-reflection/",
+            "https://www.rug.nl/staff/l.j.r.scholtens/",
+            "https://research.rug.nl/en/publications/3b6d251d-36bd-4dd2-b934-cf0b15f079f8"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/measuring-esg-a-critical-reflection/",
+        "https://www.rug.nl/staff/l.j.r.scholtens/",
+        "https://research.rug.nl/en/publications/3b6d251d-36bd-4dd2-b934-cf0b15f079f8"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.euroecorev.2026.105482",
+      "doi": "10.1016/j.euroecorev.2026.105482",
+      "publicationIds": [
+        "doi:10.1016/j.euroecorev.2026.105482"
+      ],
+      "people": [
+        "eef-ar-soetevent"
+      ],
+      "matches": [
+        {
+          "personId": "eef-ar-soetevent",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/for-the-future-of-our-grandchildren-grandparenthood-and-climate-c/",
+            "https://www.rug.nl/staff/a.r.soetevent/",
+            "https://research.rug.nl/en/publications/efdd49d3-da56-4d5b-9cdb-a3e169d24946"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/for-the-future-of-our-grandchildren-grandparenthood-and-climate-c/",
+        "https://www.rug.nl/staff/a.r.soetevent/",
+        "https://research.rug.nl/en/publications/efdd49d3-da56-4d5b-9cdb-a3e169d24946"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1017/eec.2026.10052",
+      "doi": "10.1017/eec.2026.10052",
+      "publicationIds": [
+        "doi:10.1017/eec.2026.10052"
+      ],
+      "people": [
+        "eef-an-peter"
+      ],
+      "matches": [
+        {
+          "personId": "eef-an-peter",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/information-preferences-reference-points-and-hedonic-editing-expe/",
+            "https://www.rug.nl/staff/a.n.peter/",
+            "https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/information-preferences-reference-points-and-hedonic-editing-expe/",
+        "https://www.rug.nl/staff/a.n.peter/",
+        "https://research.rug.nl/en/publications/a09eeb8a-aa62-4492-8af9-b9eec93fe152"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1177/29782244261475886",
+      "doi": "10.1177/29782244261475886",
+      "publicationIds": [
+        "doi:10.1177/29782244261475886"
+      ],
+      "people": [
+        "gem-mv-nikolova"
+      ],
+      "matches": [
+        {
+          "personId": "gem-mv-nikolova",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/let-me-check-on-you-worker-well-being-under-ai-and-human-health-a/",
+            "https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/let-me-check-on-you-worker-well-being-under-ai-and-human-health-a/",
+        "https://research.rug.nl/en/publications/e56e2548-e5f8-4142-be07-19a7a2cf288a"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1080/14693062.2026.2654964",
+      "doi": "10.1080/14693062.2026.2654964",
+      "publicationIds": [
+        "doi:10.1080/14693062.2026.2654964"
+      ],
+      "people": [
+        "eef-m-mulder"
+      ],
+      "matches": [
+        {
+          "personId": "eef-m-mulder",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/promoting-hydrogen-through-supporting-consumers-or-producers-an-i/",
+            "https://research.rug.nl/en/publications/d831ac42-f90e-4886-bd7c-2fec15f0d1d4"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/promoting-hydrogen-through-supporting-consumers-or-producers-an-i/",
+        "https://research.rug.nl/en/publications/d831ac42-f90e-4886-bd7c-2fec15f0d1d4"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1093/rfs/hhaf115",
+      "doi": "10.1093/rfs/hhaf115",
+      "publicationIds": [
+        "doi:10.1093/rfs/hhaf115"
+      ],
+      "people": [
+        "eef-pc-van-santen"
+      ],
+      "matches": [
+        {
+          "personId": "eef-pc-van-santen",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/mortgage-design-repayment-schedules-and-household-borrowing/",
+            "https://www.rug.nl/staff/p.c.van.santen/",
+            "https://research.rug.nl/en/publications/87035d7b-0ef3-471c-9415-9c22bda1f76d"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/mortgage-design-repayment-schedules-and-household-borrowing/",
+        "https://www.rug.nl/staff/p.c.van.santen/",
+        "https://research.rug.nl/en/publications/87035d7b-0ef3-471c-9415-9c22bda1f76d"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1111/mcn.70223",
+      "doi": "10.1111/mcn.70223",
+      "publicationIds": [
+        "doi:10.1111/mcn.70223"
+      ],
+      "people": [
+        "eef-bw-lensink"
+      ],
+      "matches": [
+        {
+          "personId": "eef-bw-lensink",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/nl/publications/womens-empowerment-wash-and-child-feeding-implications-for-childh/",
+            "https://www.rug.nl/staff/b.w.lensink/",
+            "https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/nl/publications/womens-empowerment-wash-and-child-feeding-implications-for-childh/",
+        "https://www.rug.nl/staff/b.w.lensink/",
+        "https://research.rug.nl/en/publications/0d3afe02-16d3-4e94-87a5-36fa8a48bd29"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.wdp.2026.100832",
+      "doi": "10.1016/j.wdp.2026.100832",
+      "publicationIds": [
+        "doi:10.1016/j.wdp.2026.100832"
+      ],
+      "people": [
+        "eef-a-geis"
+      ],
+      "matches": [
+        {
+          "personId": "eef-a-geis",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/protected-or-exposed-the-impact-of-rainfall-shocks-on-childrens-n/",
+            "https://www.rug.nl/staff/a.g.geis/",
+            "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/protected-or-exposed-the-impact-of-rainfall-shocks-on-childrens-n/",
+        "https://www.rug.nl/staff/a.g.geis/",
+        "https://research.rug.nl/en/publications/aebd8eb7-9924-44f7-a51a-079e83d7e4b2"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1007/s12144-026-09773-4",
+      "doi": "10.1007/s12144-026-09773-4",
+      "publicationIds": [
+        "doi:10.1007/s12144-026-09773-4"
+      ],
+      "people": [
+        "hrmob-hy-paryono"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-hy-paryono",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/the-psychological-attributes-and-contextual-factors-in-financial-/",
+            "https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/the-psychological-attributes-and-contextual-factors-in-financial-/",
+        "https://research.rug.nl/en/publications/525b4d50-a83c-4c00-906b-b4c680f60392"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.enpol.2026.115318",
+      "doi": "10.1016/j.enpol.2026.115318",
+      "publicationIds": [
+        "doi:10.1016/j.enpol.2026.115318"
+      ],
+      "people": [
+        "eef-m-mulder"
+      ],
+      "matches": [
+        {
+          "personId": "eef-m-mulder",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/drivers-and-persistence-of-energy-poverty-an-empirical-analysis-o/",
+            "https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/drivers-and-persistence-of-energy-poverty-an-empirical-analysis-o/",
+        "https://research.rug.nl/en/publications/5bbcf3ec-64f2-4e1c-a0a8-99d0544827c7"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.jeem.2026.103354",
+      "doi": "10.1016/j.jeem.2026.103354",
+      "publicationIds": [
+        "doi:10.1016/j.jeem.2026.103354"
+      ],
+      "people": [
+        "eef-m-mulder"
+      ],
+      "matches": [
+        {
+          "personId": "eef-m-mulder",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/reducing-peak-load-from-electric-vehicles-through-grid-tariffs-ev-2/",
+            "https://research.rug.nl/en/publications/2f891383-91a1-46c1-9647-e7ee96350f2a"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/reducing-peak-load-from-electric-vehicles-through-grid-tariffs-ev-2/",
+        "https://research.rug.nl/en/publications/2f891383-91a1-46c1-9647-e7ee96350f2a"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1177/01956574261450943",
+      "doi": "10.1177/01956574261450943",
+      "publicationIds": [
+        "doi:10.1177/01956574261450943"
+      ],
+      "people": [
+        "eef-at-veenstra",
+        "eef-m-mulder"
+      ],
+      "matches": [
+        {
+          "personId": "eef-at-veenstra",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/economic-assessment-of-the-role-of-nuclear-and-renewables-in-futu/",
+            "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+          ]
+        },
+        {
+          "personId": "eef-m-mulder",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/economic-assessment-of-the-role-of-nuclear-and-renewables-in-futu/",
+            "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/economic-assessment-of-the-role-of-nuclear-and-renewables-in-futu/",
+        "https://research.rug.nl/en/publications/1ed94df9-38f3-4512-98bb-f6c3e8b2a491"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.eneco.2025.109024",
+      "doi": "10.1016/j.eneco.2025.109024",
+      "publicationIds": [
+        "doi:10.1016/j.eneco.2025.109024"
+      ],
+      "people": [
+        "eef-m-mulder"
+      ],
+      "matches": [
+        {
+          "personId": "eef-m-mulder",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/mitigating-carbon-leakage-under-the-eu-ets-how-does-state-aid-for-2/",
+            "https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/mitigating-carbon-leakage-under-the-eu-ets-how-does-state-aid-for-2/",
+        "https://research.rug.nl/en/publications/4ee32879-04fa-4a86-a190-70918fb6ec31"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1016/j.jbef.2026.101220",
+      "doi": "10.1016/j.jbef.2026.101220",
+      "publicationIds": [
+        "doi:10.1016/j.jbef.2026.101220"
+      ],
+      "people": [
+        "eef-h-gonenc",
+        "eef-l-dam"
+      ],
+      "matches": [
+        {
+          "personId": "eef-h-gonenc",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/dark-side-of-the-day-overnight-price-jumps-and-short-term-return-/",
+            "https://www.rug.nl/staff/l.dam/?lang=en",
+            "https://www.rug.nl/staff/h.gonenc/",
+            "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+          ]
+        },
+        {
+          "personId": "eef-l-dam",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/dark-side-of-the-day-overnight-price-jumps-and-short-term-return-/",
+            "https://www.rug.nl/staff/l.dam/?lang=en",
+            "https://www.rug.nl/staff/h.gonenc/",
+            "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/dark-side-of-the-day-overnight-price-jumps-and-short-term-return-/",
+        "https://www.rug.nl/staff/l.dam/?lang=en",
+        "https://www.rug.nl/staff/h.gonenc/",
+        "https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
+    },
+    {
+      "id": "doi:10.1007/s11747-026-01188-8",
+      "doi": "10.1007/s11747-026-01188-8",
+      "publicationIds": [
+        "doi:10.1007/s11747-026-01188-8"
+      ],
+      "people": [
+        "mkt-a-boluki",
+        "mkt-e-shehu",
+        "mkt-tha-bijmolt"
+      ],
+      "matches": [
+        {
+          "personId": "mkt-a-boluki",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://doi.org/10.1007/s11747-026-01188-8",
+            "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+            "https://www.rug.nl/staff/a.boluki/research?lang=en"
+          ]
+        },
+        {
+          "personId": "mkt-e-shehu",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://doi.org/10.1007/s11747-026-01188-8",
+            "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+            "https://www.rug.nl/staff/a.boluki/research?lang=en"
+          ]
+        },
+        {
+          "personId": "mkt-tha-bijmolt",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://doi.org/10.1007/s11747-026-01188-8",
+            "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+            "https://www.rug.nl/staff/a.boluki/research?lang=en"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://doi.org/10.1007/s11747-026-01188-8",
+        "https://api.crossref.org/works/10.1007%2Fs11747-026-01188-8",
+        "https://www.rug.nl/staff/a.boluki/research?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-11-05"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedOn": "2026-10-29",
-    "retainedPreviouslyVerifiedRecords": 407,
-    "sourceRequestErrors": 3,
+    "generatedOn": "2026-11-05",
+    "retainedPreviouslyVerifiedRecords": 420,
+    "sourceRequestErrors": 4,
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-10-29"
+      "to": "2026-11-05"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-10-29"
+      "to": "2026-11-05"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -639,7 +639,7 @@
       "Zeitschrift für Sozialpsychologie",
       "eLife"
     ],
-    "identityReviewedOn": "2026-10-29",
+    "identityReviewedOn": "2026-11-05",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately."
   },
   "people": [
@@ -1156,54 +1156,6 @@
     }
   ],
   "publications": [
-    {
-      "id": "doi:10.5167/uzh-436863",
-      "doi": "10.5167/uzh-436863",
-      "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
-      "year": 2026,
-      "yearSource": "openalex",
-      "journal": "Zurich Open Repository and Archive (University of Zurich)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://link.springer.com/article/10.1007/s12144-026-10217-2",
-      "authors": [
-        "Kang Leng Ho",
-        "Jessica de Bloom",
-        "Philipp Kerksieck",
-        "Anne Mäkikangas",
-        "Georg F. Bauer"
-      ],
-      "matchedPeople": [
-        "JDB"
-      ],
-      "sourcePeople": [
-        "JDB"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de",
-        "Publisher individual byline and explicit Groningen HRM&OB affiliation identify Jessica de Bloom; journal article published online 27 October 2026, verified 29 October 2026. Source: https://link.springer.com/article/10.1007/s12144-026-10217-2"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "stress and strain",
-        "wellbeing",
-        "job crafting"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
     {
       "id": "doi:10.1080/02678373.2026.2618071",
       "doi": "10.1080/02678373.2026.2618071",
@@ -3391,6 +3343,64 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1037/gdn0000259",
+      "doi": "10.1037/gdn0000259",
+      "title": "Team members’ levels of expertise and team performance: The mediating role of collective learning and the moderating role of team psychological safety.",
+      "year": 2026,
+      "yearSource": "crossref-other",
+      "journal": "Group Dynamics: Theory, Research, and Practice",
+      "issns": [
+        "1930-7802",
+        "1089-2699"
+      ],
+      "sourceType": "journal-article",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "American Psychological Association (APA)",
+      "url": "https://doi.org/10.1037/gdn0000259",
+      "authors": [
+        "Francisco J. Trincado-Munoz",
+        "Filip Agneessens",
+        "Yeliz Gedik",
+        "Gerben S. van der Vegt",
+        "Floor A. Rink"
+      ],
+      "matchedPeople": [
+        "FR",
+        "GVV"
+      ],
+      "sourcePeople": [
+        "FR",
+        "GVV"
+      ],
+      "aip": 70.293,
+      "aipJournal": "GROUP DYNAMICS-THEORY RESEARCH AND PRACTICE",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Crossref public metadata",
+      "evidence": [
+        "Crossref ORCID matched for Rink, F.A.",
+        "Crossref ORCID matched for Vegt, G.S. van der",
+        "Public-source review: APA publisher-deposited Crossref record confirms five-author byline, online publication 2 November 2026, journal and work-level ORCIDs matching the retained official identities of Gerben van der Vegt and Floor Rink. AIP 70.293 via ISSN. Source: https://api.crossref.org/works/10.1037%2Fgdn0000259"
+      ],
+      "provisional": false,
+      "previousIds": [],
+      "topicFamilies": [
+        "teams and groups",
+        "psychological safety",
+        "learning and feedback"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "publicationDate": "2026-11-02",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fgdn0000259",
+      "publicationDateType": "published-online",
+      "publicationDatePrecision": "day"
+    },
+    {
       "id": "doi:10.1177/10596011261486495",
       "doi": "10.1177/10596011261486495",
       "title": "Juggling Hats and Ladders: A Social Identity and Social Status Framework for Multiple Team Membership",
@@ -3831,7 +3841,7 @@
       "doi": "10.1007/s12144-026-10217-2",
       "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
       "year": 2026,
-      "yearSource": "openalex",
+      "yearSource": "curated-reference",
       "journal": "Current Psychology",
       "issns": [
         "1046-1310",
@@ -3860,12 +3870,15 @@
       "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
       "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "Curated public web seed",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de",
-        "Publisher individual byline and explicit Groningen HRM&OB affiliation identify Jessica de Bloom; journal article published online 27 October 2026, verified 29 October 2026. Source: https://link.springer.com/article/10.1007/s12144-026-10217-2"
+        "Publisher individual byline and explicit Groningen HRM&OB affiliation identify Jessica de Bloom; journal article published online 27 October 2026, verified 29 October 2026. Source: https://link.springer.com/article/10.1007/s12144-026-10217-2",
+        "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
-      "provisional": false,
+      "provisional": true,
+      "publicationDate": "2026-10-27",
+      "publicationDateSource": "https://link.springer.com/article/10.1007/s12144-026-10217-2",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "stress and strain",
@@ -3875,10 +3888,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "publicationDate": "2026-10-27",
-      "publicationDateSource": "https://link.springer.com/article/10.1007/s12144-026-10217-2",
-      "publicationDateType": "published-online"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1007/s12144-025-08973-8",
@@ -5452,11 +5462,12 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Dreu, C. de lists this as a peer-reviewed journal publication.",
+        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/groupmindedness-as-evolved-solution-to-deal-with-groupliving/4799024E954AD7B160582C9D19C70BB0",
         "Crossref ORCID matched for Dreu, C. de",
-        "OpenAlex author matched to University of Groningen for Dreu, C. de",
-        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/groupmindedness-as-evolved-solution-to-deal-with-groupliving/4799024E954AD7B160582C9D19C70BB0"
+        "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "previousIds": [
         "rug:616c873a926d3631"
       ],
@@ -5466,8 +5477,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1007/s10508-025-03114-5",
@@ -7462,6 +7472,61 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1111/bjso.12709",
+      "doi": "10.1111/bjso.12709",
+      "title": "The sound of silence: The importance of bystander support for confronters in the prevention of norm erosion",
+      "year": 2024,
+      "yearSource": "rug-reference",
+      "journal": "British Journal of Social Psychology",
+      "issns": [],
+      "sourceType": "RUG staff page",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde",
+      "authors": [
+        "Anna S.C. Tirion",
+        "Laetitia B. Mulder",
+        "Tim Kurz",
+        "Namkje Koudenburg",
+        "Annayah M.B. Prosser",
+        "Paul Bain",
+        "Jan Willem Bolderdijk"
+      ],
+      "matchedPeople": [
+        "LM"
+      ],
+      "sourcePeople": [
+        "LM"
+      ],
+      "aip": 92.38,
+      "aipJournal": "BRITISH JOURNAL OF SOCIAL PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "title",
+      "subjects": [],
+      "source": "University of Groningen staff publication page",
+      "evidence": [
+        "RUG staff publication page for Mulder, L.B. lists this as a peer-reviewed journal publication.",
+        "Full individual citation byline and exact DOI verified at official Pure work on 29 October 2026: https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde",
+        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
+        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 29 October 2026. Source: https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde"
+      ],
+      "provisional": true,
+      "publicationDate": "2024-04",
+      "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fbjso.12709",
+      "publicationDateType": "published-print",
+      "previousIds": [
+        "rug:9b919959b6f6d1a2"
+      ],
+      "topicFamilies": [
+        "voice and silence"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1017/s0140525x23002698",
       "doi": "10.1017/s0140525x23002698",
       "title": "Peace as prerequisite rather than consequence of cooperation",
@@ -7496,10 +7561,11 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Dreu, C. de",
-        "OpenAlex author matched to University of Groningen for Dreu, C. de",
-        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/peace-as-prerequisite-rather-than-consequence-of-cooperation/9A8AE674AEA0F9C31A0D4CE2F0C610C2"
+        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/peace-as-prerequisite-rather-than-consequence-of-cooperation/9A8AE674AEA0F9C31A0D4CE2F0C610C2",
+        "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "publicationDate": "2024-01-15",
       "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x23002698",
       "publicationDateType": "published-online",
@@ -7511,8 +7577,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1017/s0140525x23003497",
@@ -8813,6 +8878,55 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.3389/fpsyg.2023.1122200",
+      "doi": "10.3389/fpsyg.2023.1122200",
+      "title": "Dealing with information overload: a comprehensive review",
+      "year": 2023,
+      "yearSource": "rug-reference",
+      "journal": "Frontiers in Psychology",
+      "issns": [],
+      "sourceType": "RUG staff page",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53",
+      "authors": [
+        "Miriam Arnold",
+        "Mascha Goldschmitt",
+        "Thomas Rigotti"
+      ],
+      "matchedPeople": [
+        "MA"
+      ],
+      "sourcePeople": [
+        "MA"
+      ],
+      "aip": 78.713,
+      "aipJournal": "Frontiers in Psychology",
+      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
+      "aipMatchMethod": "title",
+      "subjects": [],
+      "source": "University of Groningen staff publication page",
+      "evidence": [
+        "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication.",
+        "Full individual citation byline and exact DOI verified at official Pure work on 29 October 2026: https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53",
+        "OpenAlex author matched to University of Groningen for Arnold, M.",
+        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 29 October 2026. Source: https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53"
+      ],
+      "provisional": true,
+      "publicationDate": "2023-06-21",
+      "publicationDateSource": "https://api.crossref.org/works/10.3389%2Ffpsyg.2023.1122200",
+      "publicationDateType": "published-online",
+      "previousIds": [
+        "rug:43baee2bcd184294"
+      ],
+      "topicFamilies": [],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.3389/fpsyg.2022.1022299",
       "doi": "10.3389/fpsyg.2022.1022299",
       "title": "A configurational approach to leadership behavior through archetypal analysis",
@@ -9179,10 +9293,11 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Lees, J.M. lists this as a peer-reviewed journal publication.",
-        "Crossref ORCID matched for Lees, J.M.",
-        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/communityengaged-research-is-best-positioned-to-catalyze-systemic-change/C72A5896341280290F94F7ACF2E5B6C3"
+        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Open Peer Commentary; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/communityengaged-research-is-best-positioned-to-catalyze-systemic-change/C72A5896341280290F94F7ACF2E5B6C3",
+        "Crossref ORCID matched for Lees, J.M."
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "publicationDate": "2023-08-30",
       "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x23001024",
       "publicationDateType": "published-online",
@@ -9193,8 +9308,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.2308/ajpt-2020-022",
@@ -9418,59 +9532,6 @@
       "display": false,
       "aipComparable": false,
       "aipStatus": "not-rankable"
-    },
-    {
-      "id": "doi:10.5465/amj.2023.4004",
-      "doi": "10.5465/amj.2023.4004",
-      "title": "Publishing Multimethod Research in AMJ: A Review and Best-Practice Recommendations",
-      "year": 2023,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W4385841328",
-      "authors": [
-        "Ned M. Wellman",
-        "Christian Tröster",
-        "Matthew G. Grimes",
-        "Quinetta M. Roberson",
-        "Floor A. Rink",
-        "Marc B. Gruber"
-      ],
-      "matchedPeople": [
-        "FR"
-      ],
-      "sourcePeople": [
-        "FR"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Reviewed editorial under the department editorial policy (data/editorial-publications.json).",
-        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
-      ],
-      "provisional": true,
-      "outputType": "Editorial",
-      "counted": false,
-      "display": false,
-      "publicationDate": "2023-08",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2023.4004",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [],
-      "aipComparable": true,
-      "aipStatus": "matched"
     },
     {
       "id": "doi:10.5465/amj.2020.1136",
@@ -10931,10 +10992,11 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Bloom, J. de",
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Commentaries; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/industrial-and-organizational-psychology/article/moving-from-opposition-to-taking-ownership-of-open-science-to-make-discoveries-that-matter/C9F0456979F5728165321CB0DD1A8B84"
+        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Commentaries; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/industrial-and-organizational-psychology/article/moving-from-opposition-to-taking-ownership-of-open-science-to-make-discoveries-that-matter/C9F0456979F5728165321CB0DD1A8B84",
+        "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "publicationDate": "2022-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fiop.2022.66",
       "publicationDateType": "published-print",
@@ -10943,8 +11005,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1093/heapro/daac159",
@@ -11257,7 +11318,7 @@
       "doi": "10.3389/fpsyg.2022.931314",
       "title": "Reaching the top but not feeling on top of the world: Examining women’s internalized power threats",
       "year": 2022,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "Frontiers in Psychology",
       "issns": [
         "1664-1078"
@@ -11296,8 +11357,8 @@
       "evidence": [
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
@@ -14001,59 +14062,6 @@
       "aipStatus": "not-rankable"
     },
     {
-      "id": "openalex:W3043319934",
-      "doi": "",
-      "title": "Multiple Team Membership and Individual Job Performance : The Role of Employees' Information-Sharing Networks",
-      "year": 2020,
-      "yearSource": "openalex",
-      "journal": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W3043319934",
-      "authors": [
-        "Hendrik Johan Van De Brake",
-        "Frank H. Walter",
-        "Floor A. Rink",
-        "Peter J. M. D. Essens",
-        "Gerben S. van der Vegt"
-      ],
-      "matchedPeople": [
-        "JVB",
-        "FR",
-        "GVV"
-      ],
-      "sourcePeople": [
-        "FR",
-        "GVV"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups",
-        "multiple team membership",
-        "performance management",
-        "social networks",
-        "technology and AI"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
-    {
       "id": "doi:10.1016/j.tics.2020.06.005",
       "doi": "10.1016/j.tics.2020.06.005",
       "title": "Group Cooperation, Carrying-Capacity Stress, and Intergroup Conflict",
@@ -14600,8 +14608,8 @@
       "evidence": [
         "RUG staff publication page for Stoker, J.I. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2020-03",
@@ -15056,62 +15064,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1016/j.joep.2019.102242",
-      "doi": "10.1016/j.joep.2019.102242",
-      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
-      "year": 2020,
-      "yearSource": "rug-reference",
-      "journal": "Journal of Economic Psychology",
-      "issns": [
-        "0167-4870",
-        "1872-7719"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2992972654",
-      "authors": [
-        "Laetitia B. Mulder",
-        "Floor A. Rink",
-        "Jennifer Jordan"
-      ],
-      "matchedPeople": [
-        "LM",
-        "FR",
-        "JJ"
-      ],
-      "sourcePeople": [
-        "LM",
-        "FR",
-        "JJ"
-      ],
-      "aip": 85.619,
-      "aipJournal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
-      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
-      ],
-      "provisional": true,
-      "publicationDate": "2020-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "ethics and morality"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1007/s10551-018-4070-4",
       "doi": "10.1007/s10551-018-4070-4",
       "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
@@ -15302,8 +15254,8 @@
       "evidence": [
         "RUG staff publication page for Janssen, O. lists this as a peer-reviewed journal publication.",
         "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2020-07-10",
@@ -16030,72 +15982,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1016/j.leaqua.2019.01.001",
-      "doi": "10.1016/j.leaqua.2019.01.001",
-      "title": "The Leadership Quarterly: State of the journal",
-      "year": 2019,
-      "yearSource": "openalex",
-      "journal": "The Leadership Quarterly",
-      "issns": [
-        "1048-9843",
-        "1873-3409"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2912204547",
-      "authors": [
-        "John Antonakis",
-        "George C. Banks",
-        "Nicolas Bastardoz",
-        "Michael S. Cole",
-        "David V. Day",
-        "Alice H. Eagly",
-        "Olga Epitropaki",
-        "Roseanne J. Foti",
-        "William L. Gardner",
-        "S. Alexander Haslam",
-        "Michael A. Hogg",
-        "Ronit Kark",
-        "Kevin B. Lowe",
-        "Philip M. Podsakoff",
-        "Seth Michael Spain",
-        "Janka Ireen Stoker",
-        "Niels Van Quaquebeke",
-        "Mark van Vugt",
-        "Dusya M. Vera",
-        "Roberto A. Weber"
-      ],
-      "matchedPeople": [
-        "JS"
-      ],
-      "sourcePeople": [
-        "JS"
-      ],
-      "aip": 97.556,
-      "aipJournal": "LEADERSHIP QUARTERLY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Stoker, J.I."
-      ],
-      "provisional": true,
-      "publicationDate": "2019-02",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.leaqua.2019.01.001",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "leadership"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1027/1864-9335/a000359",
       "doi": "10.1027/1864-9335/a000359",
       "title": "You Can Leave Your Glasses on",
@@ -16155,11 +16041,11 @@
         "1864-9335",
         "2151-2590"
       ],
-      "sourceType": "journal",
+      "sourceType": "journal-article",
       "publicationKind": "Journal",
       "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2967960657",
+      "publisher": "Hogrefe Publishing Group",
+      "url": "https://doi.org/10.1027/1864-9335/a000389",
       "authors": [
         "Joris Lammers",
         "Janka Ireen Stoker"
@@ -16175,10 +16061,10 @@
       "aipCategory": "PSYCHOLOGY, SOCIAL",
       "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "OpenAlex public metadata",
+      "source": "Crossref public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "Crossref author affiliation mentions Groningen for Stoker, J.I."
+        "Crossref author affiliation mentions Groningen for Stoker, J.I.",
+        "OpenAlex author matched to University of Groningen for Stoker, J.I."
       ],
       "provisional": true,
       "publicationDate": "2019-07",
@@ -16198,18 +16084,21 @@
       "doi": "10.1027/1864-9335/a000395",
       "title": "Intense Self-Regulatory Effort Increases Need for Conservation and Reduces Attractiveness of Energy-Requiring Rewards",
       "year": 2019,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "Social Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "1864-9335",
+        "2151-2590"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/6d1f10a2-1d22-466f-8795-bab1c544a319",
+      "url": "https://openalex.org/W2965655506",
       "authors": [
-        "Giacomantonio, M.",
-        "Jordan, J.",
-        "Fennis, B. M."
+        "Mauro Giacomantonio",
+        "Jennifer Jordan",
+        "Bob M. Fennis"
       ],
       "matchedPeople": [
         "JJ"
@@ -16220,12 +16109,12 @@
       "aip": 80.449,
       "aipJournal": "Social Psychology",
       "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2019-09",
@@ -16638,6 +16527,62 @@
       "previousIds": [],
       "topicFamilies": [
         "wellbeing"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1016/j.joep.2019.102242",
+      "doi": "10.1016/j.joep.2019.102242",
+      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
+      "year": 2019,
+      "yearSource": "openalex",
+      "journal": "Journal of Economic Psychology",
+      "issns": [
+        "0167-4870",
+        "1872-7719"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2992972654",
+      "authors": [
+        "Laetitia B. Mulder",
+        "Floor A. Rink",
+        "Jennifer Jordan"
+      ],
+      "matchedPeople": [
+        "LM",
+        "FR",
+        "JJ"
+      ],
+      "sourcePeople": [
+        "LM",
+        "FR",
+        "JJ"
+      ],
+      "aip": 85.619,
+      "aipJournal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
+      ],
+      "provisional": true,
+      "publicationDate": "2020-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "ethics and morality"
       ],
       "counted": true,
       "display": true,
@@ -17134,10 +17079,11 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Dreu, C. de",
-        "OpenAlex author matched to University of Groningen for Dreu, C. de",
-        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Authors’ Response; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/asymmetric-conflict-structures-strategies-and-settlement/588B070123419A93B127A3FDEF4258C6"
+        "Public-source review: Cambridge publisher explicitly classifies this exact DOI as Authors’ Response; excluded under the current commentary/service-record policy. Individual authorship evidence is retained. Source: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/asymmetric-conflict-structures-strategies-and-settlement/588B070123419A93B127A3FDEF4258C6",
+        "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
+      "sourceReviewCounted": false,
       "publicationDate": "2019-08-13",
       "publicationDateSource": "https://api.crossref.org/works/10.1017%2Fs0140525x1900116x",
       "publicationDateType": "published-online",
@@ -17149,8 +17095,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "sourceReviewCounted": false
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1111/apps.12155",
@@ -18250,48 +18195,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "openalex:W7208183509",
-      "doi": "",
-      "title": "Das Konzept «Speed». Sieben Leadership-Prinzipien aus dem Porsche Motorsport",
-      "year": 2018,
-      "yearSource": "openalex",
-      "journal": "Alexandria (UniSG) (University of St.Gallen)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W7208183509",
-      "authors": [
-        "Heike Bruch",
-        "Stefan Berger"
-      ],
-      "matchedPeople": [
-        "SB"
-      ],
-      "sourcePeople": [
-        "SB"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Berger, S."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "leadership"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
-    {
       "id": "openalex:W2889041131",
       "doi": "",
       "title": "Das Konzept Speed: Sieben Leadership-Prinzipien im Porsche Motorsport",
@@ -19215,7 +19118,7 @@
       "doi": "10.1111/apps.12104",
       "title": "The Hazard of Teetering at the Top and Being Tied to the Bottom: The Interactive Relationship of Power, Stability, and Social Dominance Orientation with Work Stress",
       "year": 2017,
-      "yearSource": "rug-reference",
+      "yearSource": "crossref-print",
       "journal": "Applied Psychology",
       "issns": [
         "0269-994X",
@@ -19250,8 +19153,8 @@
       "evidence": [
         "OpenAlex author matched to University of Groningen for Stoker, J.I.",
         "Crossref author affiliation mentions Groningen for Stoker, J.I.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2017-10",
@@ -19577,7 +19480,7 @@
       "doi": "10.1016/j.obhdp.2016.09.003",
       "title": "Reaching the top and avoiding the bottom: How ranking motivates unethical intentions and behavior",
       "year": 2016,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "Organizational Behavior and Human Decision Processes",
       "issns": [
         "0749-5978",
@@ -19609,8 +19512,8 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2016-11",
@@ -19674,116 +19577,6 @@
       "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
-    },
-    {
-      "id": "openalex:W2608212936",
-      "doi": "",
-      "title": "Data Descriptor: Data from a pre-publication independent replication initiative examining ten moral judgement effects",
-      "year": 2016,
-      "yearSource": "openalex",
-      "journal": "Kölner Universitäts PublikationsServer (Universität zu Köln)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2608212936",
-      "authors": [
-        "Warren Tierney",
-        "Martin Schweinsberg",
-        "Jennifer Jordan",
-        "Deanna M. Kennedy",
-        "Israr Qureshi",
-        "S. Amy Sommer",
-        "Nico Thornley",
-        "Nikhil Madan",
-        "Michelangelo Vianello",
-        "Eli C. Awtrey",
-        "Luke Lei Zhu",
-        "Daniel A. Diermeier",
-        "Justin E. Heinze",
-        "Malavika Srinivasan",
-        "David Tannenbaum",
-        "Eliza Bivolaru",
-        "Jason D. Dana",
-        "Clintin P. Davis‐Stober",
-        "Quentin F. Gronau",
-        "Andrew Hafenbrack",
-        "Eko Yi Liao",
-        "Alexander Ly",
-        "Maarten Marsman",
-        "Michael Schaerer",
-        "Christina M. Tworek",
-        "Lynn Wong",
-        "Tabitha Anderson",
-        "Christopher W. Bauman",
-        "Wendy L. Bedwell",
-        "Victoria L. Brescoll",
-        "Andrew Canavan",
-        "Jesse Chandler",
-        "Sapna Cheryan",
-        "Felix Cheung",
-        "Andrei Cimpian",
-        "Mark A. Clark",
-        "Diana Cordon",
-        "Peter H. Ditto",
-        "Alice Amell",
-        "Sarah E. Frick",
-        "Rebecca Hofstein Grady",
-        "Jesse Graham",
-        "Jun Gu",
-        "Adam Hahn",
-        "Brittany Elyse Hanson",
-        "Nicole J. Hartwich",
-        "Kristie Hein",
-        "Lily J. Jiang",
-        "Tehlyr Kellogg",
-        "Nicole Legate",
-        "Timo P. Luoma",
-        "Heidi Maibeucher",
-        "Peter Meindl",
-        "Daniel C. Molden",
-        "Matt S. Motyl",
-        "George A. Newman",
-        "Hoai Huong Ngo",
-        "Harvey Packham",
-        "P. Scott Ramsay",
-        "Jennifer L. Ray",
-        "Aaron M. Sackett",
-        "Anne-Laure Sellier",
-        "Tatiana Sokolova",
-        "Xiaomin Sun",
-        "Jay J. Van Bavel",
-        "Anthony N. Washburn",
-        "Erik Wilhelm Wetter",
-        "Carlos T. Wilson",
-        "Sophie-Charlotte Darroux",
-        "Eric Luis Uhlmann"
-      ],
-      "matchedPeople": [
-        "JJ"
-      ],
-      "sourcePeople": [
-        "JJ"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Jordan, J."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "ethics and morality"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
     },
     {
       "id": "doi:10.1080/09669582.2016.1229323",
@@ -19892,14 +19685,17 @@
       "doi": "10.1016/j.jesp.2015.10.001",
       "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
       "year": 2016,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "Journal of Experimental Social Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "0022-1031",
+        "1096-0465"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/bbd5bb3c-61a0-4672-89b4-36db0f2aa1e3",
+      "url": "https://openalex.org/W2309036171",
       "authors": [
         "Martin Schweinsberg",
         "Nikhil Madan",
@@ -19993,12 +19789,12 @@
       "aip": 94.22,
       "aipJournal": "JOURNAL OF EXPERIMENTAL SOCIAL PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2016-09",
@@ -20795,56 +20591,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "openalex:W2475758582",
-      "doi": "",
-      "title": "Exploring Resources, Life-Balance and Well-Being of Women Who Work in a Global Context",
-      "year": 2015,
-      "yearSource": "openalex",
-      "journal": "Springer US",
-      "issns": [],
-      "sourceType": "journal",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2475758582",
-      "authors": [
-        "Floor A. Rink",
-        "Michelle K. Ryan",
-        "Janka Ireen Stoker"
-      ],
-      "matchedPeople": [
-        "FR",
-        "MR",
-        "JS"
-      ],
-      "sourcePeople": [
-        "FR",
-        "JS",
-        "MR"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "wellbeing",
-        "gender and leadership"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
-    {
       "id": "openalex:W2547411292",
       "doi": "",
       "title": "Auswahl von Männern und Frauen als Führungskräfte",
@@ -21483,55 +21229,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.5553/geno/092150772015028002006",
-      "doi": "10.5553/geno/092150772015028002006",
-      "title": "Reacties van leidinggevenden op radicale creatieve ideeën van medewerkers",
-      "year": 2015,
-      "yearSource": "openalex",
-      "journal": "Gedrag & Organisatie",
-      "issns": [
-        "0921-5077",
-        "1875-7235"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2410172373",
-      "authors": [
-        "Roy B. L. Sijbom",
-        "Onne Janssen",
-        "Nico W. Van Yperen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 6.934,
-      "aipJournal": "Gedrag & Organisatie",
-      "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.5117/2015.028.002.006. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5553/geno/092150772015028002006"
-      ],
-      "provisional": true,
-      "reviewHold": true,
-      "publicationDate": "2015-05",
-      "publicationDateSource": "https://api.crossref.org/works/10.5553/geno/092150772015028002006",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.3389/fpsyg.2015.01878",
       "doi": "10.3389/fpsyg.2015.01878",
       "title": "The Moral Self-Image Scale: Measuring and Understanding the Malleability of the Moral Self",
@@ -21583,20 +21280,23 @@
     {
       "id": "doi:10.1002/ejsp.2101",
       "doi": "10.1002/ejsp.2101",
-      "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others’ transgressions",
+      "title": "Forgive them for I have sinned: The relationship between guilt and forgiveness of others' transgressions",
       "year": 2015,
-      "yearSource": "rug-reference",
+      "yearSource": "openalex",
       "journal": "European Journal of Social Psychology",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "0046-2772",
+        "1099-0992"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/747d7679-304b-4bc5-b908-d2e2827dff49",
+      "url": "https://openalex.org/W2097631358",
       "authors": [
-        "Jordan, J.",
-        "Flynn, F. J.",
-        "Cohen, T. R."
+        "Jennifer Jordan",
+        "Francis J. Flynn",
+        "Taya R. Cohen"
       ],
       "matchedPeople": [
         "JJ"
@@ -21607,12 +21307,12 @@
       "aip": 90.98,
       "aipJournal": "EUROPEAN JOURNAL OF SOCIAL PSYCHOLOGY",
       "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Jordan, J."
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2015-06",
@@ -21838,59 +21538,6 @@
       "display": false,
       "aipComparable": false,
       "aipStatus": "not-rankable"
-    },
-    {
-      "id": "doi:10.5465/amj.2015.4004",
-      "doi": "10.5465/amj.2015.4004",
-      "title": "Managing Risk and Resilience",
-      "year": 2015,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2248438086",
-      "authors": [
-        "Gerben S. van der Vegt",
-        "Peter J. M. D. Essens",
-        "Margareta Wahlström",
-        "Gerard George"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
-        "Reviewed editorial under the department editorial policy (data/editorial-publications.json).",
-        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
-      ],
-      "provisional": true,
-      "outputType": "Editorial",
-      "counted": false,
-      "display": false,
-      "publicationDate": "2015-08",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "crisis and resilience"
-      ],
-      "aipComparable": true,
-      "aipStatus": "matched"
     },
     {
       "id": "doi:10.5465/amj.2014.0385",
@@ -25995,53 +25642,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "openalex:W2582552463",
-      "doi": "",
-      "title": "Management teams bij het rijk : De rol van onderlinge verschillen",
-      "year": 2010,
-      "yearSource": "openalex",
-      "journal": "",
-      "issns": [],
-      "sourceType": "",
-      "publicationKind": "Unknown source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2582552463",
-      "authors": [
-        "Anne Nederveen Pieterse",
-        "Floortje Rink",
-        "Janka Ireen Stoker",
-        "Michelle K. Ryan"
-      ],
-      "matchedPeople": [
-        "MR",
-        "JS"
-      ],
-      "sourcePeople": [
-        "JS",
-        "MR"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
-    {
       "id": "openalex:W2483445560",
       "doi": "",
       "title": "Management teams bij het rijk",
@@ -26877,50 +26477,6 @@
       "aipStatus": "not-rankable"
     },
     {
-      "id": "openalex:W2574310077",
-      "doi": "",
-      "title": "Social and organizational psychological research on creativity and innovation in the Netherlands: an overview",
-      "year": 2008,
-      "yearSource": "openalex",
-      "journal": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W2574310077",
-      "authors": [
-        "Eric F. Rietzschel",
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": null,
-      "aipJournal": "",
-      "aipCategory": "",
-      "aipMatchMethod": "unmatched",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "creativity",
-        "innovation",
-        "technology and AI"
-      ],
-      "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
-    },
-    {
       "id": "openalex:W2565860399",
       "doi": "",
       "title": "Shared leadership: A literature review",
@@ -26983,7 +26539,7 @@
       "url": "https://openalex.org/W2534452000",
       "authors": [
         "Eric van Dijk",
-        "David De Cremer",
+        "David De Cremer A",
         "Laetitia B. Mulder",
         "Jeroen Stouten"
       ],
@@ -27029,7 +26585,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "matchedPeople": [
         "LM"
@@ -27571,7 +27127,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Peter Verboon",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "matchedPeople": [
         "LM"
@@ -27869,7 +27425,7 @@
       "publisher": "",
       "url": "https://openalex.org/W2096859051",
       "authors": [
-        "David De Cremer",
+        "David De Cremer A",
         "Laetitia B. Mulder"
       ],
       "matchedPeople": [
@@ -28106,7 +27662,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer",
+        "David De Cremer A",
         "Henk Wilke"
       ],
       "matchedPeople": [
@@ -28679,7 +28235,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "matchedPeople": [
         "LM"
@@ -28974,7 +28530,7 @@
       "authors": [
         "Laetitia B. Mulder",
         "Eric van Dijk",
-        "David De Cremer",
+        "David De Cremer A",
         "Henk Wilke"
       ],
       "matchedPeople": [
@@ -29024,7 +28580,7 @@
         "Laetitia B. Mulder",
         "Eric van Dijk",
         "Henk Wilke",
-        "David De Cremer"
+        "David De Cremer A"
       ],
       "matchedPeople": [
         "LM"
@@ -29136,12 +28692,12 @@
         "Verified duplicate reconciled: English and Dutch titles refer to the same de Jong and Janssen 2005 article, 18(2), 66-82. The publisher provides both titles. Source: https://www.aup-online.com/content/journals/10.5117/2005.018.002.001"
       ],
       "provisional": true,
-      "previousIds": [
-        "openalex:W10461089"
-      ],
       "publicationDate": "2005-06-01",
       "publicationDateSource": "https://api.crossref.org/works/10.5117%2F2005.018.002.001",
       "publicationDateType": "published-print",
+      "previousIds": [
+        "openalex:W10461089"
+      ],
       "topicFamilies": [
         "stress and strain"
       ],
@@ -29952,57 +29508,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.5465/30040663",
-      "doi": "10.5465/30040663",
-      "title": "Informational Dissimilarity and Organizational Citizenship Behavior: The Role of Intrateam Interdependence and Team Identification",
-      "year": 2003,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W4243161684",
-      "authors": [
-        "Gerben S. van der Vegt",
-        "Evert Van de Vliert",
-        "Aad Oosterhof"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "publicationDate": "2003-12-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465%2F30040663",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups",
-        "collaboration and coordination",
-        "identity and belonging"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "openalex:W2514815842",
       "doi": "",
       "title": "Onderzoek naar conflict en welzijn in de sector verpleging en verzorging.",
@@ -30236,58 +29741,6 @@
       ],
       "counted": true,
       "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.5465/3069431",
-      "doi": "10.5465/3069431",
-      "title": "Fatigued and Dissatisfied or Fatigued but Satisfied? Goal Orientations and Responses to High Job Demands",
-      "year": 2002,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4237135223",
-      "authors": [
-        "Nico W. Van Yperen",
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069431. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069431"
-      ],
-      "provisional": true,
-      "reviewHold": true,
-      "publicationDate": "2002-12-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465/3069431",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "stress and strain",
-        "work design",
-        "motivation and goals"
-      ],
-      "counted": false,
-      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -30530,56 +29983,6 @@
         "teams and groups",
         "collaboration and coordination",
         "wellbeing"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1177/089484530102800202",
-      "doi": "10.1177/089484530102800202",
-      "title": "Competence Development and Appraisal in Organizations",
-      "year": 2001,
-      "yearSource": "openalex",
-      "journal": "Journal of Career Development",
-      "issns": [
-        "0894-8453",
-        "1556-0856",
-        "1573-3548"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2104276344",
-      "authors": [
-        "Janka Ireen Stoker",
-        "BEATRICE I. J. M. VAN DER HEIJDEN"
-      ],
-      "matchedPeople": [
-        "JS"
-      ],
-      "sourcePeople": [
-        "JS"
-      ],
-      "aip": 66.415,
-      "aipJournal": "JOURNAL OF CAREER DEVELOPMENT",
-      "aipCategory": "PSYCHOLOGY, APPLIED",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Stoker, J.I."
-      ],
-      "provisional": true,
-      "publicationDate": "2001-12",
-      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F089484530102800202",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "learning and feedback",
-        "careers and employability"
       ],
       "counted": true,
       "display": true,
@@ -30968,58 +30371,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
-      "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
-      "title": "Constructive conflict at work",
-      "year": 1999,
-      "yearSource": "openalex",
-      "journal": "Journal of Organizational Behavior",
-      "issns": [
-        "0894-3796",
-        "1099-1379"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4248103930",
-      "authors": [
-        "Evert Van de Vliert",
-        "Aukje Nauta",
-        "Ellen Giebels",
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 97.389,
-      "aipJournal": "JOURNAL OF ORGANIZATIONAL BEHAVIOR",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7"
-      ],
-      "provisional": true,
-      "reviewHold": true,
-      "publicationDate": "1999-07",
-      "publicationDateSource": "https://api.crossref.org/works/10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "conflict"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1080/10429247.1999.11415036",
       "doi": "10.1080/10429247.1999.11415036",
       "title": "Self-Managing Teams in Manufacturing Companies: Implications for the Engineering Function",
@@ -31391,54 +30742,219 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1111/bjso.12709",
-      "doi": "10.1111/bjso.12709",
-      "title": "The sound of silence: The importance of bystander support for confronters in the prevention of norm erosion",
-      "year": 2024,
-      "yearSource": "rug-reference",
-      "journal": "British Journal of Social Psychology",
+      "id": "doi:10.5167/uzh-436863",
+      "doi": "10.5167/uzh-436863",
+      "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
+      "year": 2026,
+      "yearSource": "openalex",
+      "journal": "Zurich Open Repository and Archive (University of Zurich)",
       "issns": [],
-      "sourceType": "RUG staff page",
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://link.springer.com/article/10.1007/s12144-026-10217-2",
+      "authors": [
+        "Kang Leng Ho",
+        "Jessica de Bloom",
+        "Philipp Kerksieck",
+        "Anne Mäkikangas",
+        "Georg F. Bauer"
+      ],
+      "matchedPeople": [
+        "JDB"
+      ],
+      "sourcePeople": [
+        "JDB"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Bloom, J. de",
+        "Publisher individual byline and explicit Groningen HRM&OB affiliation identify Jessica de Bloom; journal article published online 27 October 2026, verified 29 October 2026. Source: https://link.springer.com/article/10.1007/s12144-026-10217-2"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "stress and strain",
+        "wellbeing",
+        "job crafting"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "doi:10.5465/amj.2023.4004",
+      "doi": "10.5465/amj.2023.4004",
+      "title": "Publishing Multimethod Research in AMJ: A Review and Best-Practice Recommendations",
+      "year": 2023,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde",
+      "url": "https://openalex.org/W4385841328",
       "authors": [
-        "Anna S.C. Tirion",
-        "Laetitia B. Mulder",
-        "Tim Kurz",
-        "Namkje Koudenburg",
-        "Annayah M.B. Prosser",
-        "Paul Bain",
-        "Jan Willem Bolderdijk"
+        "Ned M. Wellman",
+        "Christian Tröster",
+        "Matthew G. Grimes",
+        "Quinetta M. Roberson",
+        "Floor A. Rink",
+        "Marc B. Gruber"
       ],
       "matchedPeople": [
-        "LM"
+        "FR"
       ],
       "sourcePeople": [
-        "LM"
+        "FR"
       ],
-      "aip": 92.38,
-      "aipJournal": "BRITISH JOURNAL OF SOCIAL PSYCHOLOGY",
-      "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "title",
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Mulder, L.B. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
-        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 29 October 2026. Source: https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde",
-        "Full individual citation byline and exact DOI verified at official Pure work on 29 October 2026: https://research.rug.nl/en/publications/0eaaf1c6-bd1f-4fec-b37a-73a76df05cde"
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "Reviewed editorial under the department editorial policy (data/editorial-publications.json).",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:9b919959b6f6d1a2"
-      ],
-      "publicationDate": "2024-04",
-      "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fbjso.12709",
+      "outputType": "Editorial",
+      "counted": false,
+      "display": false,
+      "publicationDate": "2023-08",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2023.4004",
       "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [],
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "openalex:W3043319934",
+      "doi": "",
+      "title": "Multiple Team Membership and Individual Job Performance : The Role of Employees' Information-Sharing Networks",
+      "year": 2020,
+      "yearSource": "openalex",
+      "journal": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W3043319934",
+      "authors": [
+        "Hendrik Johan Van De Brake",
+        "Frank H. Walter",
+        "Floor A. Rink",
+        "Peter J. M. D. Essens",
+        "Gerben S. van der Vegt"
+      ],
+      "matchedPeople": [
+        "JVB",
+        "FR",
+        "GVV"
+      ],
+      "sourcePeople": [
+        "FR",
+        "GVV"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "previousIds": [],
       "topicFamilies": [
-        "voice and silence"
+        "teams and groups",
+        "multiple team membership",
+        "performance management",
+        "social networks",
+        "technology and AI"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "doi:10.1016/j.leaqua.2019.01.001",
+      "doi": "10.1016/j.leaqua.2019.01.001",
+      "title": "The Leadership Quarterly: State of the journal",
+      "year": 2019,
+      "yearSource": "openalex",
+      "journal": "The Leadership Quarterly",
+      "issns": [
+        "1048-9843",
+        "1873-3409"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2912204547",
+      "authors": [
+        "John Antonakis",
+        "George C. Banks",
+        "Nicolas Bastardoz",
+        "Michael S. Cole",
+        "David V. Day",
+        "Alice H. Eagly",
+        "Olga Epitropaki",
+        "Roseanne J. Foti",
+        "William L. Gardner",
+        "S. Alexander Haslam",
+        "Michael A. Hogg",
+        "Ronit Kark",
+        "Kevin B. Lowe",
+        "Philip M. Podsakoff",
+        "Seth Michael Spain",
+        "Janka Ireen Stoker",
+        "Niels Van Quaquebeke",
+        "Mark van Vugt",
+        "Dusya M. Vera",
+        "Roberto A. Weber"
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": 97.556,
+      "aipJournal": "LEADERSHIP QUARTERLY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I."
+      ],
+      "provisional": true,
+      "publicationDate": "2019-02",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.leaqua.2019.01.001",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "leadership"
       ],
       "counted": true,
       "display": true,
@@ -31446,51 +30962,605 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.3389/fpsyg.2023.1122200",
-      "doi": "10.3389/fpsyg.2023.1122200",
-      "title": "Dealing with information overload: a comprehensive review",
-      "year": 2023,
-      "yearSource": "rug-reference",
-      "journal": "Frontiers in Psychology",
+      "id": "openalex:W7208183509",
+      "doi": "",
+      "title": "Das Konzept «Speed». Sieben Leadership-Prinzipien aus dem Porsche Motorsport",
+      "year": 2018,
+      "yearSource": "openalex",
+      "journal": "Alexandria (UniSG) (University of St.Gallen)",
       "issns": [],
-      "sourceType": "RUG staff page",
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W7208183509",
+      "authors": [
+        "Heike Bruch",
+        "Stefan Berger"
+      ],
+      "matchedPeople": [
+        "SB"
+      ],
+      "sourcePeople": [
+        "SB"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Berger, S."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "leadership"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "openalex:W2608212936",
+      "doi": "",
+      "title": "Data Descriptor: Data from a pre-publication independent replication initiative examining ten moral judgement effects",
+      "year": 2016,
+      "yearSource": "openalex",
+      "journal": "Kölner Universitäts PublikationsServer (Universität zu Köln)",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2608212936",
+      "authors": [
+        "Warren Tierney",
+        "Martin Schweinsberg",
+        "Jennifer Jordan",
+        "Deanna M. Kennedy",
+        "Israr Qureshi",
+        "S. Amy Sommer",
+        "Nico Thornley",
+        "Nikhil Madan",
+        "Michelangelo Vianello",
+        "Eli C. Awtrey",
+        "Luke Lei Zhu",
+        "Daniel A. Diermeier",
+        "Justin E. Heinze",
+        "Malavika Srinivasan",
+        "David Tannenbaum",
+        "Eliza Bivolaru",
+        "Jason D. Dana",
+        "Clintin P. Davis‐Stober",
+        "Quentin F. Gronau",
+        "Andrew Hafenbrack",
+        "Eko Yi Liao",
+        "Alexander Ly",
+        "Maarten Marsman",
+        "Michael Schaerer",
+        "Christina M. Tworek",
+        "Lynn Wong",
+        "Tabitha Anderson",
+        "Christopher W. Bauman",
+        "Wendy L. Bedwell",
+        "Victoria L. Brescoll",
+        "Andrew Canavan",
+        "Jesse Chandler",
+        "Sapna Cheryan",
+        "Felix Cheung",
+        "Andrei Cimpian",
+        "Mark A. Clark",
+        "Diana Cordon",
+        "Peter H. Ditto",
+        "Alice Amell",
+        "Sarah E. Frick",
+        "Rebecca Hofstein Grady",
+        "Jesse Graham",
+        "Jun Gu",
+        "Adam Hahn",
+        "Brittany Elyse Hanson",
+        "Nicole J. Hartwich",
+        "Kristie Hein",
+        "Lily J. Jiang",
+        "Tehlyr Kellogg",
+        "Nicole Legate",
+        "Timo P. Luoma",
+        "Heidi Maibeucher",
+        "Peter Meindl",
+        "Daniel C. Molden",
+        "Matt S. Motyl",
+        "George A. Newman",
+        "Hoai Huong Ngo",
+        "Harvey Packham",
+        "P. Scott Ramsay",
+        "Jennifer L. Ray",
+        "Aaron M. Sackett",
+        "Anne-Laure Sellier",
+        "Tatiana Sokolova",
+        "Xiaomin Sun",
+        "Jay J. Van Bavel",
+        "Anthony N. Washburn",
+        "Erik Wilhelm Wetter",
+        "Carlos T. Wilson",
+        "Sophie-Charlotte Darroux",
+        "Eric Luis Uhlmann"
+      ],
+      "matchedPeople": [
+        "JJ"
+      ],
+      "sourcePeople": [
+        "JJ"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Jordan, J."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "ethics and morality"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "openalex:W2475758582",
+      "doi": "",
+      "title": "Exploring Resources, Life-Balance and Well-Being of Women Who Work in a Global Context",
+      "year": 2015,
+      "yearSource": "openalex",
+      "journal": "Springer US",
+      "issns": [],
+      "sourceType": "journal",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2475758582",
+      "authors": [
+        "Floor A. Rink",
+        "Michelle K. Ryan",
+        "Janka Ireen Stoker"
+      ],
+      "matchedPeople": [
+        "FR",
+        "MR",
+        "JS"
+      ],
+      "sourcePeople": [
+        "FR",
+        "JS",
+        "MR"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "wellbeing",
+        "gender and leadership"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "doi:10.5553/geno/092150772015028002006",
+      "doi": "10.5553/geno/092150772015028002006",
+      "title": "Reacties van leidinggevenden op radicale creatieve ideeën van medewerkers",
+      "year": 2015,
+      "yearSource": "openalex",
+      "journal": "Gedrag & Organisatie",
+      "issns": [
+        "0921-5077",
+        "1875-7235"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2410172373",
+      "authors": [
+        "Roy B. L. Sijbom",
+        "Onne Janssen",
+        "Nico W. Van Yperen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 6.934,
+      "aipJournal": "Gedrag & Organisatie",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.5117/2015.028.002.006. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5553/geno/092150772015028002006"
+      ],
+      "provisional": true,
+      "reviewHold": true,
+      "publicationDate": "2015-05",
+      "publicationDateSource": "https://api.crossref.org/works/10.5553/geno/092150772015028002006",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [],
+      "counted": false,
+      "display": false,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.5465/amj.2015.4004",
+      "doi": "10.5465/amj.2015.4004",
+      "title": "Managing Risk and Resilience",
+      "year": 2015,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53",
+      "url": "https://openalex.org/W2248438086",
       "authors": [
-        "Miriam Arnold",
-        "Mascha Goldschmitt",
-        "Thomas Rigotti"
+        "Gerben S. van der Vegt",
+        "Peter J. M. D. Essens",
+        "Margareta Wahlström",
+        "Gerard George"
       ],
       "matchedPeople": [
-        "MA"
+        "GVV"
       ],
       "sourcePeople": [
-        "MA"
+        "GVV"
       ],
-      "aip": 78.713,
-      "aipJournal": "Frontiers in Psychology",
-      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "title",
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "OpenAlex public metadata",
       "evidence": [
-        "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication.",
-        "OpenAlex author matched to University of Groningen for Arnold, M.",
-        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 29 October 2026. Source: https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53",
-        "Full individual citation byline and exact DOI verified at official Pure work on 29 October 2026: https://research.rug.nl/en/publications/638cf7dd-ed9b-478d-a060-138781552d53"
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
+        "Reviewed editorial under the department editorial policy (data/editorial-publications.json).",
+        "Counted as an editorial under the department editorial policy (data/editorial-publications.json)."
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:43baee2bcd184294"
+      "outputType": "Editorial",
+      "counted": false,
+      "display": false,
+      "publicationDate": "2015-08",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465%2Famj.2015.4004",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "crisis and resilience"
       ],
-      "publicationDate": "2023-06-21",
-      "publicationDateSource": "https://api.crossref.org/works/10.3389%2Ffpsyg.2023.1122200",
-      "publicationDateType": "published-online",
-      "topicFamilies": [],
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "openalex:W2582552463",
+      "doi": "",
+      "title": "Management teams bij het rijk : De rol van onderlinge verschillen",
+      "year": 2010,
+      "yearSource": "openalex",
+      "journal": "",
+      "issns": [],
+      "sourceType": "",
+      "publicationKind": "Unknown source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2582552463",
+      "authors": [
+        "Anne Nederveen Pieterse",
+        "Floortje Rink",
+        "Janka Ireen Stoker",
+        "Michelle K. Ryan"
+      ],
+      "matchedPeople": [
+        "MR",
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS",
+        "MR"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "teams and groups"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "openalex:W2574310077",
+      "doi": "",
+      "title": "Social and organizational psychological research on creativity and innovation in the Netherlands: an overview",
+      "year": 2008,
+      "yearSource": "openalex",
+      "journal": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
+      "issns": [],
+      "sourceType": "repository",
+      "publicationKind": "Repository / preprint / non-journal source",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2574310077",
+      "authors": [
+        "Eric F. Rietzschel",
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "creativity",
+        "innovation",
+        "technology and AI"
+      ],
+      "counted": false,
+      "display": true,
+      "aipComparable": false,
+      "aipStatus": "not-rankable"
+    },
+    {
+      "id": "doi:10.5465/30040663",
+      "doi": "10.5465/30040663",
+      "title": "Informational Dissimilarity and Organizational Citizenship Behavior: The Role of Intrateam Interdependence and Team Identification",
+      "year": 2003,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W4243161684",
+      "authors": [
+        "Gerben S. van der Vegt",
+        "Evert Van de Vliert",
+        "Aad Oosterhof"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "publicationDate": "2003-12-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465%2F30040663",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "teams and groups",
+        "collaboration and coordination",
+        "identity and belonging"
+      ],
       "counted": true,
       "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.5465/3069431",
+      "doi": "10.5465/3069431",
+      "title": "Fatigued and Dissatisfied or Fatigued but Satisfied? Goal Orientations and Responses to High Job Demands",
+      "year": 2002,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W4237135223",
+      "authors": [
+        "Nico W. Van Yperen",
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069431. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069431"
+      ],
+      "provisional": true,
+      "reviewHold": true,
+      "publicationDate": "2002-12-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465/3069431",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "stress and strain",
+        "work design",
+        "motivation and goals"
+      ],
+      "counted": false,
+      "display": false,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1177/089484530102800202",
+      "doi": "10.1177/089484530102800202",
+      "title": "Competence Development and Appraisal in Organizations",
+      "year": 2001,
+      "yearSource": "openalex",
+      "journal": "Journal of Career Development",
+      "issns": [
+        "0894-8453",
+        "1556-0856",
+        "1573-3548"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2104276344",
+      "authors": [
+        "Janka Ireen Stoker",
+        "BEATRICE I. J. M. VAN DER HEIJDEN"
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": 66.415,
+      "aipJournal": "JOURNAL OF CAREER DEVELOPMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
+        "Verified duplicate reconciled: Publisher migration duplicate: identical Stoker/Van der Heijden byline, Journal of Career Development volume 28 issue 2 pages 97–113 (2001). Fresh Crossref records for both registrations and the current SAGE article confirm the exact work identity; the old Kluwer registration has no deposited title. Source: https://journals.sagepub.com/doi/10.1177/089484530102800202"
+      ],
+      "provisional": true,
+      "publicationDate": "2001-12",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F089484530102800202",
+      "publicationDateType": "published-print",
+      "previousIds": [
+        "doi:10.1023/a:1012538710018"
+      ],
+      "topicFamilies": [
+        "learning and feedback",
+        "careers and employability"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "doi": "10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "title": "Constructive conflict at work",
+      "year": 1999,
+      "yearSource": "openalex",
+      "journal": "Journal of Organizational Behavior",
+      "issns": [
+        "0894-3796",
+        "1099-1379"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W4248103930",
+      "authors": [
+        "Evert Van de Vliert",
+        "Aukje Nauta",
+        "Ellen Giebels",
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 97.389,
+      "aipJournal": "JOURNAL OF ORGANIZATIONAL BEHAVIOR",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.0.co;2-g. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7"
+      ],
+      "provisional": true,
+      "reviewHold": true,
+      "publicationDate": "1999-07",
+      "publicationDateSource": "https://api.crossref.org/works/10.1002/(sici)1099-1379(199907)20:4<475::aid-job897>3.3.co;2-7",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "conflict"
+      ],
+      "counted": false,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
