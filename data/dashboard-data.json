@@ -16537,8 +16537,8 @@
       "id": "doi:10.1016/j.joep.2019.102242",
       "doi": "10.1016/j.joep.2019.102242",
       "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
-      "year": 2019,
-      "yearSource": "openalex",
+      "year": 2020,
+      "yearSource": "publisher-issue",
       "journal": "Journal of Economic Psychology",
       "issns": [
         "0167-4870",
@@ -16574,7 +16574,8 @@
         "OpenAlex author matched to University of Groningen for Mulder, L.B.",
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "OpenAlex author matched to University of Groningen for Jordan, J.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
+        "Public-source review: Fresh publisher-deposited Crossref metadata confirms January 2020 issue year. Preserve the verified issue year rather than the older OpenAlex 2019 year. Source: https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242"
       ],
       "provisional": true,
       "publicationDate": "2020-01",
