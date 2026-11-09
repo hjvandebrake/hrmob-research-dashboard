@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedOn": "2026-11-05",
-    "retainedPreviouslyVerifiedRecords": 420,
+    "generatedOn": "2026-11-09",
+    "retainedPreviouslyVerifiedRecords": 421,
     "sourceRequestErrors": 4,
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-11-05"
+      "to": "2026-11-09"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-11-05"
+      "to": "2026-11-09"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -639,7 +639,7 @@
       "Zeitschrift für Sozialpsychologie",
       "eLife"
     ],
-    "identityReviewedOn": "2026-11-05",
+    "identityReviewedOn": "2026-11-09",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately."
   },
   "people": [
@@ -1261,7 +1261,8 @@
       "counted": true,
       "display": true,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source"
+      "aipStatus": "reviewed-not-in-aip-source",
+      "authorCount": 4
     },
     {
       "id": "doi:10.1007/s11218-026-10232-y",
@@ -1574,7 +1575,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 5
     },
     {
       "id": "doi:10.1111/rego.70147",
@@ -1727,7 +1729,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 7
     },
     {
       "id": "doi:10.1177/01461672261437934",
@@ -2659,7 +2662,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 379
     },
     {
       "id": "doi:10.1080/17512786.2024.2441283",
@@ -2961,7 +2965,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 4
     },
     {
       "id": "doi:10.1016/j.jenvp.2026.103024",
@@ -3326,13 +3331,17 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Ryan, M.K.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K."
+        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
+        "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
+        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 9 November 2026. Source: https://research.rug.nl/en/publications/53573913-c0bb-4150-a88e-118fe74fb6a3"
       ],
       "provisional": true,
       "publicationDate": "2026-06-25",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F02134748261446390",
       "publicationDateType": "published-online",
-      "previousIds": [],
+      "previousIds": [
+        "rug:53c7a24cf4e7f127"
+      ],
       "topicFamilies": [
         "stereotypes and bias",
         "gender and leadership"
@@ -3381,10 +3390,14 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Rink, F.A.",
-        "Crossref ORCID matched for Vegt, G.S. van der",
-        "Public-source review: APA publisher-deposited Crossref record confirms five-author byline, online publication 2 November 2026, journal and work-level ORCIDs matching the retained official identities of Gerben van der Vegt and Floor Rink. AIP 70.293 via ISSN. Source: https://api.crossref.org/works/10.1037%2Fgdn0000259"
+        "Public-source review: APA publisher-deposited Crossref record confirms five-author byline, online publication 2 November 2026, journal and work-level ORCIDs matching the retained official identities of Gerben van der Vegt and Floor Rink. AIP 70.293 via ISSN. Source: https://api.crossref.org/works/10.1037%2Fgdn0000259",
+        "Crossref ORCID matched for Vegt, G.S. van der"
       ],
       "provisional": false,
+      "publicationDate": "2026-11-02",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fgdn0000259",
+      "publicationDateType": "published-online",
+      "publicationDatePrecision": "day",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -3394,11 +3407,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "publicationDate": "2026-11-02",
-      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fgdn0000259",
-      "publicationDateType": "published-online",
-      "publicationDatePrecision": "day"
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1177/10596011261486495",
@@ -3610,7 +3619,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 6
     },
     {
       "id": "doi:10.1080/09540253.2025.2568394",
@@ -3888,7 +3898,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 5
     },
     {
       "id": "doi:10.1007/s12144-025-08973-8",
@@ -4108,7 +4119,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 4
     },
     {
       "id": "doi:10.5465/amj.2024.0176",
@@ -4433,7 +4445,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 3
     },
     {
       "id": "doi:10.1177/10888683251350913",
@@ -5073,7 +5086,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 2
     },
     {
       "id": "doi:10.1111/jasp.13075",
@@ -5181,7 +5195,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 3
     },
     {
       "id": "curated:hbr-2025-digital-disruption",
@@ -5580,7 +5595,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 3
     },
     {
       "id": "doi:10.32617/1277-6888bae7e000e",
@@ -6035,7 +6051,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 4
     },
     {
       "id": "doi:10.1038/s41597-024-03865-1",
@@ -7524,7 +7541,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 7
     },
     {
       "id": "doi:10.1017/s0140525x23002698",
@@ -7635,7 +7653,8 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 5
     },
     {
       "id": "doi:10.1186/s12889-024-18646-z",
@@ -8924,7 +8943,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 3
     },
     {
       "id": "doi:10.3389/fpsyg.2022.1022299",
@@ -15064,6 +15084,63 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1016/j.joep.2019.102242",
+      "doi": "10.1016/j.joep.2019.102242",
+      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
+      "year": 2020,
+      "yearSource": "publisher-issue",
+      "journal": "Journal of Economic Psychology",
+      "issns": [
+        "0167-4870",
+        "1872-7719"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2992972654",
+      "authors": [
+        "Laetitia B. Mulder",
+        "Floor A. Rink",
+        "Jennifer Jordan"
+      ],
+      "matchedPeople": [
+        "LM",
+        "FR",
+        "JJ"
+      ],
+      "sourcePeople": [
+        "LM",
+        "FR",
+        "JJ"
+      ],
+      "aip": 85.619,
+      "aipJournal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
+        "Public-source review: Fresh publisher-deposited Crossref metadata confirms January 2020 issue year. Preserve the verified issue year rather than the older OpenAlex 2019 year. Source: https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242",
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "OpenAlex author matched to University of Groningen for Jordan, J.",
+        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
+      ],
+      "provisional": true,
+      "publicationDate": "2020-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "ethics and morality"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1007/s10551-018-4070-4",
       "doi": "10.1007/s10551-018-4070-4",
       "title": "The Interactive Effect of a Leader's Sense of Uniqueness and Sense of Belongingness on Followers' Perceptions of Leader Authenticity",
@@ -16527,63 +16604,6 @@
       "previousIds": [],
       "topicFamilies": [
         "wellbeing"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1016/j.joep.2019.102242",
-      "doi": "10.1016/j.joep.2019.102242",
-      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
-      "year": 2020,
-      "yearSource": "publisher-issue",
-      "journal": "Journal of Economic Psychology",
-      "issns": [
-        "0167-4870",
-        "1872-7719"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2992972654",
-      "authors": [
-        "Laetitia B. Mulder",
-        "Floor A. Rink",
-        "Jennifer Jordan"
-      ],
-      "matchedPeople": [
-        "LM",
-        "FR",
-        "JJ"
-      ],
-      "sourcePeople": [
-        "LM",
-        "FR",
-        "JJ"
-      ],
-      "aip": 85.619,
-      "aipJournal": "JOURNAL OF ECONOMIC PSYCHOLOGY",
-      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Mulder, L.B.",
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "OpenAlex author matched to University of Groningen for Jordan, J.",
-        "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication.",
-        "Public-source review: Fresh publisher-deposited Crossref metadata confirms January 2020 issue year. Preserve the verified issue year rather than the older OpenAlex 2019 year. Source: https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242"
-      ],
-      "provisional": true,
-      "publicationDate": "2020-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.joep.2019.102242",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "ethics and morality"
       ],
       "counted": true,
       "display": true,
@@ -19747,11 +19767,11 @@
         "Jesse Graham",
         "Jun Gu",
         "Adam Hahn",
-        "Brittany Elyse Hanson",
+        "Brittany E. Hanson",
         "Nicole J. Hartwich",
         "Kristie Hein",
         "Yoel Inbar",
-        "Lily J. Jiang",
+        "Lily I. Jiang",
         "Tehlyr Kellogg",
         "Deanna M. Kennedy",
         "Nicole Legate",
@@ -19773,7 +19793,7 @@
         "Walter J. Sowden",
         "Daniel Storage",
         "Xiaomin Sun",
-        "Jay J. Van Bavel",
+        "Jay Joseph Van Bavel",
         "Anthony N. Washburn",
         "Cong Wei",
         "Erik Wilhelm Wetter",
@@ -23242,19 +23262,19 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1080/19416520.2013.766405",
-      "doi": "10.1080/19416520.2013.766405",
+      "id": "doi:10.5465/19416520.2013.766405",
+      "doi": "10.5465/19416520.2013.766405",
       "title": "Team Receptivity to Newcomers: Five Decades of Evidence and Future Research Themes",
       "year": 2013,
-      "yearSource": "openalex",
+      "yearSource": "crossref-print",
       "journal": "Academy of Management Annals",
       "issns": [
         "1941-6067",
         "1941-6520"
       ],
       "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
+      "publicationKind": "Journal",
+      "rankableJournal": true,
       "publisher": "",
       "url": "https://openalex.org/W4252010774",
       "authors": [
@@ -23279,62 +23299,7 @@
       "source": "OpenAlex public metadata",
       "evidence": [
         "OpenAlex author matched to University of Groningen for Rink, F.A.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.5465/19416520.2013.766405. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.1080/19416520.2013.766405",
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "reviewHold": true,
-      "publicationDate": "2013-06",
-      "publicationDateSource": "https://api.crossref.org/works/10.1080/19416520.2013.766405",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.5465/19416520.2013.766405",
-      "doi": "10.5465/19416520.2013.766405",
-      "title": "Team Receptivity to Newcomers: Five Decades of Evidence and Future Research Themes",
-      "year": 2013,
-      "yearSource": "crossref-print",
-      "journal": "Academy of Management Annals",
-      "issns": [
-        "1941-6520",
-        "1941-6067"
-      ],
-      "sourceType": "journal-article",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "Academy of Management",
-      "url": "https://doi.org/10.5465/19416520.2013.766405",
-      "authors": [
-        "Floor A. Rink",
-        "Aimée A. Kane",
-        "Naomi Ellemers",
-        "Gerben S. van der Vegt"
-      ],
-      "matchedPeople": [
-        "FR",
-        "GVV"
-      ],
-      "sourcePeople": [
-        "FR",
-        "GVV"
-      ],
-      "aip": 99.688,
-      "aipJournal": "Academy of Management Annals",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "Crossref public metadata",
-      "evidence": [
         "Crossref author affiliation mentions Groningen for Rink, F.A.",
-        "OpenAlex author matched to University of Groningen for Rink, F.A.",
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
@@ -29356,9 +29321,9 @@
       "aipStatus": "not-rankable"
     },
     {
-      "id": "doi:10.2307/20159587",
-      "doi": "10.2307/20159587",
-      "title": "EMPLOYEES' GOAL ORIENTATIONS, THE QUALITY OF LEADER-MEMBER EXCHANGE, AND THE OUTCOMES OF JOB PERFORMANCE AND JOB SATISFACTION.",
+      "id": "doi:10.5465/20159587",
+      "doi": "10.5465/20159587",
+      "title": "Employees' Goal Orientations, the Quality of Leader-Member Exchange, and the Outcomes of Job Performance and Job Satisfaction",
       "year": 2004,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -29367,8 +29332,8 @@
         "1948-0989"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2162082099",
       "authors": [
@@ -29388,12 +29353,11 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/20159587. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/20159587"
       ],
       "provisional": true,
-      "publicationDate": "2004-06-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.2307%2F20159587",
-      "publicationDateType": "published-print",
+      "reviewHold": true,
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -29401,8 +29365,8 @@
         "motivation and goals",
         "performance management"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -29448,60 +29412,6 @@
       "topicFamilies": [
         "innovation",
         "conflict"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1016/s0149-2063(03)00033-3",
-      "doi": "10.1016/s0149-2063(03)00033-3",
-      "title": "Joint Impact of Interdependence and Group Diversity on Innovation",
-      "year": 2003,
-      "yearSource": "openalex",
-      "journal": "Journal of Management",
-      "issns": [
-        "0149-2063",
-        "1557-1211"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2124610241",
-      "authors": [
-        "Gerben S. van der Vegt",
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ",
-        "GVV"
-      ],
-      "sourcePeople": [
-        "OJ",
-        "GVV"
-      ],
-      "aip": 98.808,
-      "aipJournal": "JOURNAL OF MANAGEMENT",
-      "aipCategory": "PSYCHOLOGY, APPLIED",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "publicationDate": "2003-10",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fs0149-2063%2803%2900033-3",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups",
-        "collaboration and coordination",
-        "innovation",
-        "diversity and inclusion"
       ],
       "counted": true,
       "display": true,
@@ -29746,9 +29656,9 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.2307/3069431",
-      "doi": "10.2307/3069431",
-      "title": "FATIGUED AND DISSATISFIED OR FATIGUED BUT SATISFIED? GOAL ORIENTATIONS AND RESPONSES TO HIGH JOB DEMANDS.",
+      "id": "doi:10.5465/3069431",
+      "doi": "10.5465/3069431",
+      "title": "Fatigued and Dissatisfied or Fatigued but Satisfied? Goal Orientations and Responses to High Job Demands",
       "year": 2002,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -29757,12 +29667,12 @@
         "1948-0989"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W1752009069",
       "authors": [
-        "N. W. Van Preen",
+        "Nico W. Van Yperen",
         "Onne Janssen"
       ],
       "matchedPeople": [
@@ -29778,11 +29688,13 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069431. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069431"
       ],
       "provisional": true,
+      "reviewHold": true,
       "publicationDate": "2002-12-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.2307%2F3069431",
+      "publicationDateSource": "https://api.crossref.org/works/10.5465/3069431",
       "publicationDateType": "published-print",
       "previousIds": [],
       "topicFamilies": [
@@ -29790,8 +29702,8 @@
         "work design",
         "motivation and goals"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -29991,9 +29903,62 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.2307/3069447",
-      "doi": "10.2307/3069447",
-      "title": "FAIRNESS PERCEPTIONS AS A MODERATOR IN THE CURVILINEAR RELATIONSHIPS BETWEEN JOB DEMANDS, AND JOB PERFORMANCE AND JOB SATISFACTION.",
+      "id": "doi:10.1177/089484530102800202",
+      "doi": "10.1177/089484530102800202",
+      "title": "Competence Development and Appraisal in Organizations",
+      "year": 2001,
+      "yearSource": "openalex",
+      "journal": "Journal of Career Development",
+      "issns": [
+        "0894-8453",
+        "1556-0856",
+        "1573-3548"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2104276344",
+      "authors": [
+        "Janka Ireen Stoker",
+        "BEATRICE I. J. M. VAN DER HEIJDEN"
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": 66.415,
+      "aipJournal": "JOURNAL OF CAREER DEVELOPMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
+        "Verified duplicate reconciled: Publisher migration duplicate: identical Stoker/Van der Heijden byline, Journal of Career Development volume 28 issue 2 pages 97–113 (2001). Fresh Crossref records for both registrations and the current SAGE article confirm the exact work identity; the old Kluwer registration has no deposited title. Source: https://journals.sagepub.com/doi/10.1177/089484530102800202"
+      ],
+      "provisional": true,
+      "publicationDate": "2001-12",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F089484530102800202",
+      "publicationDateType": "published-print",
+      "previousIds": [
+        "doi:10.1023/a:1012538710018"
+      ],
+      "topicFamilies": [
+        "learning and feedback",
+        "careers and employability"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.5465/3069447",
+      "doi": "10.5465/3069447",
+      "title": "Fairness Perceptions as a Moderator in the Curvilinear Relationships Between Job Demands, and Job Performance and Job Satisfaction",
       "year": 2001,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -30002,8 +29967,8 @@
         "1948-0989"
       ],
       "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W2335226118",
       "authors": [
@@ -30022,9 +29987,11 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069447. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069447"
       ],
       "provisional": true,
+      "reviewHold": true,
       "previousIds": [],
       "topicFamilies": [
         "stress and strain",
@@ -30033,8 +30000,8 @@
         "justice and fairness",
         "performance management"
       ],
-      "counted": true,
-      "display": true,
+      "counted": false,
+      "display": false,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -30743,6 +30710,267 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1080/19416520.2013.766405",
+      "doi": "10.1080/19416520.2013.766405",
+      "title": "Team Receptivity to Newcomers: Five Decades of Evidence and Future Research Themes",
+      "year": 2013,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Annals",
+      "issns": [
+        "1941-6067",
+        "1941-6520"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W4252010774",
+      "authors": [
+        "Floor A. Rink",
+        "Aimée A. Kane",
+        "Naomi Ellemers",
+        "Gerben S. van der Vegt"
+      ],
+      "matchedPeople": [
+        "FR",
+        "GVV"
+      ],
+      "sourcePeople": [
+        "FR",
+        "GVV"
+      ],
+      "aip": 99.688,
+      "aipJournal": "Academy of Management Annals",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Rink, F.A.",
+        "Public-source review: Possible duplicate registration or DOI mismatch against 10.5465/19416520.2013.766405. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.1080/19416520.2013.766405",
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "reviewHold": true,
+      "publicationDate": "2013-06",
+      "publicationDateSource": "https://api.crossref.org/works/10.1080/19416520.2013.766405",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "teams and groups"
+      ],
+      "counted": false,
+      "display": false,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.2307/20159587",
+      "doi": "10.2307/20159587",
+      "title": "EMPLOYEES' GOAL ORIENTATIONS, THE QUALITY OF LEADER-MEMBER EXCHANGE, AND THE OUTCOMES OF JOB PERFORMANCE AND JOB SATISFACTION.",
+      "year": 2004,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2162082099",
+      "authors": [
+        "Onne Janssen",
+        "Nico W. Van Yperen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "publicationDate": "2004-06-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.2307%2F20159587",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "leadership",
+        "wellbeing",
+        "motivation and goals",
+        "performance management"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1016/s0149-2063(03)00033-3",
+      "doi": "10.1016/s0149-2063(03)00033-3",
+      "title": "Joint Impact of Interdependence and Group Diversity on Innovation",
+      "year": 2003,
+      "yearSource": "openalex",
+      "journal": "Journal of Management",
+      "issns": [
+        "0149-2063",
+        "1557-1211"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2124610241",
+      "authors": [
+        "Gerben S. van der Vegt",
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ",
+        "GVV"
+      ],
+      "sourcePeople": [
+        "OJ",
+        "GVV"
+      ],
+      "aip": 98.808,
+      "aipJournal": "JOURNAL OF MANAGEMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O.",
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der",
+        "Verified duplicate reconciled: Two Crossref registrations of one article: identical title, Van der Vegt and Janssen byline, Journal of Management, October 2003. Same OpenAlex work W2124610241. Publisher DOI migration alias, verified 9 November 2026. Source: https://api.crossref.org/works/10.1016/s0149-2063_03_00033-3"
+      ],
+      "provisional": true,
+      "publicationDate": "2003-10",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fs0149-2063%2803%2900033-3",
+      "publicationDateType": "published-print",
+      "previousIds": [
+        "doi:10.1016/s0149-2063_03_00033-3"
+      ],
+      "topicFamilies": [
+        "teams and groups",
+        "collaboration and coordination",
+        "innovation",
+        "diversity and inclusion"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.2307/3069431",
+      "doi": "10.2307/3069431",
+      "title": "FATIGUED AND DISSATISFIED OR FATIGUED BUT SATISFIED? GOAL ORIENTATIONS AND RESPONSES TO HIGH JOB DEMANDS.",
+      "year": 2002,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W1752009069",
+      "authors": [
+        "N. W. Van Preen",
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "publicationDate": "2002-12-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.2307%2F3069431",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "stress and strain",
+        "work design",
+        "motivation and goals"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.2307/3069447",
+      "doi": "10.2307/3069447",
+      "title": "FAIRNESS PERCEPTIONS AS A MODERATOR IN THE CURVILINEAR RELATIONSHIPS BETWEEN JOB DEMANDS, AND JOB PERFORMANCE AND JOB SATISFACTION.",
+      "year": 2001,
+      "yearSource": "openalex",
+      "journal": "Academy of Management Journal",
+      "issns": [
+        "0001-4273",
+        "1948-0989"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2335226118",
+      "authors": [
+        "Onne Janssen"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 99.152,
+      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
+      "aipCategory": "BUSINESS",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "stress and strain",
+        "wellbeing",
+        "work design",
+        "justice and fairness",
+        "performance management"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.5167/uzh-436863",
       "doi": "10.5167/uzh-436863",
       "title": "Mental well-being during the COVID-19 pandemic and its antecedents of crafting, work and home demands and resources: longitudinal profile analyses in Germany, Switzerland and Austria",
@@ -31402,111 +31630,6 @@
         "teams and groups",
         "collaboration and coordination",
         "identity and belonging"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.5465/3069431",
-      "doi": "10.5465/3069431",
-      "title": "Fatigued and Dissatisfied or Fatigued but Satisfied? Goal Orientations and Responses to High Job Demands",
-      "year": 2002,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4237135223",
-      "authors": [
-        "Nico W. Van Yperen",
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069431. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069431"
-      ],
-      "provisional": true,
-      "reviewHold": true,
-      "publicationDate": "2002-12-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.5465/3069431",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "stress and strain",
-        "work design",
-        "motivation and goals"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1177/089484530102800202",
-      "doi": "10.1177/089484530102800202",
-      "title": "Competence Development and Appraisal in Organizations",
-      "year": 2001,
-      "yearSource": "openalex",
-      "journal": "Journal of Career Development",
-      "issns": [
-        "0894-8453",
-        "1556-0856",
-        "1573-3548"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2104276344",
-      "authors": [
-        "Janka Ireen Stoker",
-        "BEATRICE I. J. M. VAN DER HEIJDEN"
-      ],
-      "matchedPeople": [
-        "JS"
-      ],
-      "sourcePeople": [
-        "JS"
-      ],
-      "aip": 66.415,
-      "aipJournal": "JOURNAL OF CAREER DEVELOPMENT",
-      "aipCategory": "PSYCHOLOGY, APPLIED",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
-        "Verified duplicate reconciled: Publisher migration duplicate: identical Stoker/Van der Heijden byline, Journal of Career Development volume 28 issue 2 pages 97–113 (2001). Fresh Crossref records for both registrations and the current SAGE article confirm the exact work identity; the old Kluwer registration has no deposited title. Source: https://journals.sagepub.com/doi/10.1177/089484530102800202"
-      ],
-      "provisional": true,
-      "publicationDate": "2001-12",
-      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F089484530102800202",
-      "publicationDateType": "published-print",
-      "previousIds": [
-        "doi:10.1023/a:1012538710018"
-      ],
-      "topicFamilies": [
-        "learning and feedback",
-        "careers and employability"
       ],
       "counted": true,
       "display": true,
@@ -32821,7 +32944,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 102
     },
     {
       "id": "doi:10.1038/s41598-023-33167-2",
@@ -33328,7 +33452,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 102
     },
     {
       "id": "doi:10.1177/03616843221084048",
@@ -33925,7 +34050,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 101
     },
     {
       "id": "doi:10.1080/08038740.2021.1884598",
@@ -34172,7 +34298,8 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched"
+      "aipStatus": "matched",
+      "authorCount": 103
     },
     {
       "id": "doi:10.1177/1368430220984248",
@@ -47226,56 +47353,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.5465/20159587",
-      "doi": "10.5465/20159587",
-      "title": "Employees' Goal Orientations, the Quality of Leader-Member Exchange, and the Outcomes of Job Performance and Job Satisfaction",
-      "year": 2004,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4252917505",
-      "authors": [
-        "Onne Janssen",
-        "Nico W. Van Yperen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/20159587. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/20159587"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "leadership",
-        "wellbeing",
-        "motivation and goals",
-        "performance management"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "reviewHold": true
-    },
-    {
       "id": "doi:10.1023/a:1026032628634",
       "doi": "10.1023/a:1026032628634",
       "title": "Social Motives in Integrative Negotiation: The Mediating Influence of Procedural Fairness",
@@ -48712,56 +48789,6 @@
       "display": true,
       "aipComparable": false,
       "aipStatus": "not-rankable"
-    },
-    {
-      "id": "doi:10.5465/3069447",
-      "doi": "10.5465/3069447",
-      "title": "Fairness Perceptions as a Moderator in the Curvilinear Relationships Between Job Demands, and Job Performance and Job Satisfaction",
-      "year": 2001,
-      "yearSource": "openalex",
-      "journal": "Academy of Management Journal",
-      "issns": [
-        "0001-4273",
-        "1948-0989"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Out-of-scope / duplicate DOI awaiting source review",
-      "rankableJournal": false,
-      "publisher": "",
-      "url": "https://openalex.org/W4238837702",
-      "authors": [
-        "Onne Janssen"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 99.152,
-      "aipJournal": "ACADEMY OF MANAGEMENT JOURNAL",
-      "aipCategory": "BUSINESS",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O.",
-        "Public-source review: Possible duplicate registration or DOI mismatch against 10.2307/3069447. Keep excluded until both publisher identities/registrations are verified; title similarity alone is insufficient. Source: https://api.crossref.org/works/10.5465/3069447"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "stress and strain",
-        "wellbeing",
-        "work design",
-        "justice and fairness",
-        "performance management"
-      ],
-      "counted": false,
-      "display": false,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "reviewHold": true
     },
     {
       "id": "openalex:W2588226579",
@@ -52054,6 +52081,215 @@
       "aipStatus": "matched",
       "previousIds": [],
       "reviewHold": true
+    },
+    {
+      "id": "doi:10.1177/19485506221129687",
+      "doi": "10.1177/19485506221129687",
+      "title": "Gendered Self-Views across 62 Countries: A Test of Competing Models",
+      "year": 2023,
+      "yearSource": "curated-reference",
+      "journal": "Social Psychological and Personality Science",
+      "issns": [
+        "1948-5506",
+        "1948-5514"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+      "authors": [
+        "Natasza Kosakowska-Berezecka",
+        "Jennifer K. Bosson",
+        "Paweł Jurek",
+        "Tomasz Besta",
+        "Michał Olech",
+        "Joseph A. Vandello",
+        "Michael Bender",
+        "Justine Dandy",
+        "Vera Hoorens",
+        "Inga Jasinskaja-Lahti",
+        "Eric Mankowski",
+        "Satu Venäläinen",
+        "Sami Abuhamdeh",
+        "Collins Badu Agyemang",
+        "Gülçin Akbaş",
+        "Nihan Albayrak-Aydemir",
+        "Soline Ammirati",
+        "Joel Anderson",
+        "Gulnaz Anjum",
+        "Amarina Ariyanto",
+        "John Jamir Benzon R. Aruta",
+        "Mujeeba Ashraf",
+        "Aistė Bakaitytė",
+        "Maja Becker",
+        "Chiara Bertolli",
+        "Dashamir Bërxulli",
+        "Deborah L. Best",
+        "Chongzeng Bi",
+        "Katharina Block",
+        "Mandy Boehnke",
+        "Renata Bongiorno",
+        "Janine Bosak",
+        "Annalisa Casini",
+        "Qingwei Chen",
+        "Peilian Chi",
+        "Vera Cubela Adoric",
+        "Serena Daalmans",
+        "Soledad de Lemus",
+        "Sandesh Dhakal",
+        "Nikolay Dvorianchikov",
+        "Sonoko Egami",
+        "Edgardo Etchezahar",
+        "Carla Sofia Esteves",
+        "Laura Froehlich",
+        "Efrain Garcia-Sanchez",
+        "Alin Gavreliuc",
+        "Dana Gavreliuc",
+        "Ángel Gomez",
+        "Francesca Guizzo",
+        "Sylvie Graf",
+        "Hedy Greijdanus",
+        "Ani Grigoryan",
+        "Joanna Grzymała-Moszczyńska",
+        "Keltouma Guerch",
+        "Marie Gustafsson Sendén",
+        "Miriam-Linnea Hale",
+        "Hannah Hämer",
+        "Mika Hirai",
+        "Lam Hoang Duc",
+        "Martina Hřebíčková",
+        "Paul B. Hutchings",
+        "Dorthe Høj Jensen",
+        "Serdar Karabati",
+        "Kaltrina Kelmendi",
+        "Gabriella Kengyel",
+        "Narine Khachatryan",
+        "Rawan Ghazzawi",
+        "Mary Kinahan",
+        "Teri A. Kirby",
+        "Monika Kovacs",
+        "Desiree Kozlowski",
+        "Vladislav Krivoshchekov",
+        "Kuba Kryś",
+        "Clara Kulich",
+        "Tai Kurosawa",
+        "Nhan Thi Lac An",
+        "Javier Labarthe-Carrara",
+        "Mary Anne Lauri",
+        "Ioana Latu",
+        "Abiodun Musbau Lawal",
+        "Junyi Li",
+        "Jana Lindner",
+        "Anna Lindqvist",
+        "Angela T. Maitner",
+        "Elena Makarova",
+        "Ana Makashvili",
+        "Shera Malayeri",
+        "Sadia Malik",
+        "Tiziana Mancini",
+        "Claudia Manzi",
+        "Silvia Mari",
+        "Sarah E. Martiny",
+        "Claude-Hélène Mayer",
+        "Vladimir Mihić",
+        "Jasna MiloševićĐorđević",
+        "Eva Moreno-Bella",
+        "Silvia Moscatelli",
+        "Andrew Bryan Moynihan",
+        "Dominique Muller",
+        "Erita Narhetali",
+        "Félix Neto",
+        "Kimberly A. Noels",
+        "Boglárka Nyúl",
+        "Emma C. O’Connor",
+        "Danielle P. Ochoa",
+        "Sachiko Ohno",
+        "Sulaiman Olanrewaju Adebayo",
+        "Randall Osborne",
+        "Maria Giuseppina Pacilli",
+        "Jorge Palacio",
+        "Snigdha Patnaik",
+        "Vassilis Pavlopoulos",
+        "Pablo Pérez de León",
+        "Ivana Piterová",
+        "Juliana Barreiros Porto",
+        "Angelica Puzio",
+        "Joanna Pyrkosz-Pacyna",
+        "Erico Rentería Pérez",
+        "Emma Renström",
+        "Tiphaine Rousseaux",
+        "Michelle K. Ryan",
+        "Saba Safdar",
+        "Mario Sainz",
+        "Marco Salvati",
+        "Adil Samekin",
+        "Simon Schindler",
+        "A. Timur Sevincer",
+        "Masoumeh Seydi",
+        "Debra Shepherd",
+        "Sara Sherbaji",
+        "Toni Schmader",
+        "Cláudia Simão",
+        "Rosita Sobhie",
+        "Jurand Sobiecki",
+        "Lucille De Souza",
+        "Emma Sarter",
+        "Dijana Sulejmanović",
+        "Katie E. Sullivan",
+        "Mariko Tatsumi",
+        "Lucy Tavitian-Elmadjian",
+        "Suparna Jain Thakur",
+        "Quang Thi Mong Chi",
+        "Beatriz Torre",
+        "Ana Torres",
+        "Claudio V. Torres",
+        "Beril Türkoğlu",
+        "Joaquín Ungaretti",
+        "Timothy Valshtein",
+        "Colette Van Laar",
+        "Jolanda van der Noll",
+        "Vadym Vasiutynskyi",
+        "Christin-Melanie Vauclair",
+        "Neharika Vohra",
+        "Marta Walentynowicz",
+        "Colleen Ward",
+        "Anna Włodarczyk",
+        "Yaping Yang",
+        "Vincent Yzerbyt",
+        "Valeska Zanello",
+        "Antonella Ludmila Zapata-Calvente",
+        "Magdalena Zawisza",
+        "Rita Žukauskienė",
+        "Magdalena Żadkowska"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 95.422,
+      "aipJournal": "Social Psychological and Personality Science",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Curated public web seed",
+      "evidence": [
+        "Exact official Pure work with Michelle K. Ryan identified by Pure person UUID and named in the publisher-deposited byline; online 7 November 2022, issue September 2023. Verified 9 November 2026. Source: https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d"
+      ],
+      "provisional": true,
+      "topicFamilies": [
+        "identity and belonging",
+        "gender and leadership"
+      ],
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "counted": true,
+      "display": true,
+      "publicationDate": "2023-09",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F19485506221129687",
+      "publicationDateType": "published-print"
     }
   ]
 }

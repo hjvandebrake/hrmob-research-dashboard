@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-05",
+    "generatedOn": "2026-11-09",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -18,7 +18,7 @@
       "associate_professor",
       "full_professor"
     ],
-    "identityReviewedOn": "2026-11-05",
+    "identityReviewedOn": "2026-11-09",
     "identityConflictPeople": [
       "acc-da-de-waard",
       "gem-x-ye",
@@ -41,8 +41,8 @@
     ],
     "professorRoleReviewCheckedOn": "2026-10-29",
     "denominatorRosterCheckedOn": "2026-09-07",
-    "quarantinedPublications": 683,
-    "excludedNonArticleOutputs": 144,
+    "quarantinedPublications": 682,
+    "excludedNonArticleOutputs": 142,
     "uncorroboratedAuthorLinks": 177,
     "unmatchedRankableJournals": [
       "ACM SIGMIS Database the DATABASE for Advances in Information Systems",
@@ -14342,6 +14342,31 @@
       ]
     },
     {
+      "id": "doi:10.5117/mab.98.127795",
+      "year": 2024,
+      "title": "100 jaar MAB: de ontwikkelingen in meervoudige waardecreatie door ondernemingen",
+      "doi": "10.5117/mab.98.127795",
+      "journal": "Maandblad Voor Accountancy en Bedrijfseconomie",
+      "authors": [
+        "Nancy Kamp-Roelands"
+      ],
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [
+        "acc-aem-kamp-roelands"
+      ],
+      "departments": [
+        "Accounting"
+      ],
+      "allPeople": [
+        "acc-aem-kamp-roelands"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
       "id": "doi:10.1007/s11747-024-01041-w",
       "year": 2024,
       "title": "(Un)intended spillovers of green government policies: The case of plastic regulations",
@@ -14775,6 +14800,28 @@
       ],
       "allPeople": [
         "acc-rl-ter-hoeven"
+      ],
+      "allDepartments": [
+        "Accounting"
+      ]
+    },
+    {
+      "id": "doi:10.5117/mab.97.95839",
+      "year": 2023,
+      "title": "Verslaggevingsstandaarden en auditkwaliteit: een literatuurstudie",
+      "doi": "10.5117/mab.97.95839",
+      "journal": "Maandblad Voor Accountancy en Bedrijfseconomie",
+      "authors": [
+        "Niels van der Meer",
+        "Dick de Waard"
+      ],
+      "aip": null,
+      "aipComparable": false,
+      "aipStatus": "reviewed-not-in-aip-source",
+      "people": [],
+      "departments": [],
+      "allPeople": [
+        "acc-da-de-waard"
       ],
       "allDepartments": [
         "Accounting"
@@ -19979,6 +20026,34 @@
       ],
       "allDepartments": [
         "IM&S"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.jbusres.2023.114380",
+      "year": 2023,
+      "title": "$240 for Illinois Avenue, please: Economic inequality increases preference for personal control appeals",
+      "doi": "10.1016/j.jbusres.2023.114380",
+      "journal": "Journal of Business Research",
+      "authors": [
+        "Sumaya Albalooshi",
+        "Mehrad Moeini‐Jazani"
+      ],
+      "aip": 92.135,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "mkt-m-moeini-jazani",
+        "mkt-saeg-albalooshi"
+      ],
+      "departments": [
+        "Marketing"
+      ],
+      "allPeople": [
+        "mkt-m-moeini-jazani",
+        "mkt-saeg-albalooshi"
+      ],
+      "allDepartments": [
+        "Marketing"
       ]
     },
     {
@@ -25514,6 +25589,7 @@
         "Accounting"
       ],
       "allPeople": [
+        "acc-pmg-dirks",
         "acc-s-firk"
       ],
       "allDepartments": [
@@ -37625,6 +37701,35 @@
       ]
     },
     {
+      "id": "doi:10.1016/j.joep.2019.102242",
+      "year": 2020,
+      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
+      "doi": "10.1016/j.joep.2019.102242",
+      "journal": "Journal of Economic Psychology",
+      "authors": [
+        "Laetitia B. Mulder",
+        "Floor Rink",
+        "Jennifer Jordan"
+      ],
+      "aip": 85.619,
+      "aipComparable": true,
+      "aipStatus": "matched",
+      "people": [
+        "hrmob-fa-rink",
+        "hrmob-lb-mulder"
+      ],
+      "departments": [
+        "HRM&OB"
+      ],
+      "allPeople": [
+        "hrmob-fa-rink",
+        "hrmob-lb-mulder"
+      ],
+      "allDepartments": [
+        "HRM&OB"
+      ]
+    },
+    {
       "id": "doi:10.1080/0305764x.2020.1720603",
       "year": 2020,
       "title": "Connecting students and researchers: the secondary school student’s voice in foreign language education research",
@@ -41723,35 +41828,6 @@
       ],
       "allDepartments": [
         "Operations"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.joep.2019.102242",
-      "year": 2019,
-      "title": "Constraining temptation: How specific and general rules mitigate the effect of personal gain on unethical behavior",
-      "doi": "10.1016/j.joep.2019.102242",
-      "journal": "Journal of Economic Psychology",
-      "authors": [
-        "Laetitia B. Mulder",
-        "Floor Rink",
-        "Jennifer Jordan"
-      ],
-      "aip": 85.619,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "hrmob-fa-rink",
-        "hrmob-lb-mulder"
-      ],
-      "departments": [
-        "HRM&OB"
-      ],
-      "allPeople": [
-        "hrmob-fa-rink",
-        "hrmob-lb-mulder"
-      ],
-      "allDepartments": [
-        "HRM&OB"
       ]
     },
     {
@@ -87242,7 +87318,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-11-05",
+    "generatedOn": "2026-11-09",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 170,
     "qualityDecisionCounts": {
@@ -87285,7 +87361,7 @@
     },
     "denominatorUsablePeople": 58,
     "rankableAipGapRows": 206,
-    "aipNotInSourceRows": 162,
+    "aipNotInSourceRows": 163,
     "possibleDuplicateGroups": 0,
     "residualNonCountedRecords": 0,
     "topUnmatchedAipJournals": [
