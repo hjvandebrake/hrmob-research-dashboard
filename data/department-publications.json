@@ -348,11 +348,6 @@
       ],
       "excludedOutputs": [
         {
-          "id": "doi:10.1016/j.actpsy.2026.107089",
-          "title": "Are Risky Driving, Health Behaviors, and Cardiometabolic Risk Interrelated? Findings from The Cooper Center Longitudinal Study",
-          "reason": "Non-counted publication type: "
-        },
-        {
           "id": "work:90c0f47f4f881431cc2d",
           "title": "Dark side of the day: Overnight price jumps and short-term return predictability",
           "reason": "Verified duplicate source record; counted once as doi:10.1016/j.jbef.2026.101220. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/a09e6e8c-0b39-4dfb-83b5-9de87b2e9e6d"
@@ -1221,26 +1216,16 @@
           "id": "work:c877b2ffd6dd90fe110f",
           "title": "Assessing the feasibility of power-to-hydrogen pathways in the Netherlands’ industrial clusters: A techno-economic analysis for 2024, 2030, and 2050",
           "reason": "Verified duplicate source record; counted once as doi:10.1016/j.ijhydene.2026.155791. Exact institutional Pure UUID links the previously DOI-less row to this DOI. Both source records are retained; count the canonical DOI once. https://research.rug.nl/en/publications/d6af2209-58b4-4634-9dc2-ae36de23cbb8"
-        },
-        {
-          "id": "doi:10.1016/j.jbusres.2023.114380",
-          "title": "$240 for Illinois Avenue, please: Economic inequality increases preference for personal control appeals",
-          "reason": "Non-counted publication type: Conference abstract / meeting supplement"
-        },
-        {
-          "id": "doi:10.5117/mab.98.127795",
-          "title": "100 jaar MAB: de ontwikkelingen in meervoudige waardecreatie door ondernemingen",
-          "reason": "Non-counted publication type: Conference abstract / meeting supplement"
         }
       ],
       "yearBasisCounts": {
         "official-reference": 929,
         "publisher-issue": 2638,
-        "reviewed-official-record": 69,
+        "reviewed-official-record": 68,
         "publisher-first-publication": 290,
         "stored-unverified": 102,
         "publisher-override": 1,
-        "reviewed-original-issue": 1
+        "reviewed-original-issue": 2
       },
       "doiTitleChecks": {
         "no-doi": 819,
@@ -25320,8 +25305,8 @@
       "departments": [
         "Marketing"
       ],
-      "comparisonExclusionReason": "Non-counted publication type: ",
-      "countedInComparison": false,
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
       "aipJournal": "ACTA PSYCHOLOGICA",
       "aipMatchMethod": "issn",
       "officialProfilePeople": [
@@ -67250,8 +67235,8 @@
       "officialProfilePeople": [
         "eef-jo-mierau"
       ],
-      "comparisonYear": 2021,
-      "comparisonYearBasis": "reviewed-official-record",
+      "comparisonYear": 2022,
+      "comparisonYearBasis": "reviewed-original-issue",
       "comparisonYearSource": "https://research.rug.nl/en/publications/dea83817-e301-4832-b1bf-b58e25dffe0c",
       "doiTitleCheck": "title-agreement",
       "curatedSourceEvidence": [
@@ -155396,7 +155381,7 @@
       "issns": [
         "0148-2963"
       ],
-      "publicationKind": "Conference abstract / meeting supplement",
+      "publicationKind": "Article",
       "sourceType": "Official RUG Pure OAI publication record",
       "publicationDate": "2024-01",
       "publicationDatePrecision": "month",
@@ -155427,10 +155412,10 @@
         "mkt-m-moeini-jazani",
         "mkt-saeg-albalooshi"
       ],
-      "rankableJournal": false,
+      "rankableJournal": true,
       "doiTitleCheck": "title-agreement",
-      "comparisonExclusionReason": "Non-counted publication type: Conference abstract / meeting supplement",
-      "countedInComparison": false,
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
       "comparisonYear": 2024,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jbusres.2023.114380",
@@ -157078,7 +157063,7 @@
         "2543-1684",
         "0924-6304"
       ],
-      "publicationKind": "Conference abstract / meeting supplement",
+      "publicationKind": "Article",
       "sourceType": "Official RUG Pure OAI publication record",
       "publicationDate": "2024-11-14",
       "publicationDatePrecision": "day",
@@ -157106,10 +157091,10 @@
       "officialProfilePeople": [
         "acc-aem-kamp-roelands"
       ],
-      "rankableJournal": false,
+      "rankableJournal": true,
       "doiTitleCheck": "title-agreement",
-      "comparisonExclusionReason": "Non-counted publication type: Conference abstract / meeting supplement",
-      "countedInComparison": false,
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
       "comparisonYear": 2024,
       "comparisonYearBasis": "reviewed-official-record",
       "comparisonYearSource": "https://research.rug.nl/en/publications/8472ddf7-007c-4387-8b6c-c9ae82673bf3",
