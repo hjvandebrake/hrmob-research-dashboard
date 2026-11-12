@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-09",
+    "generatedOn": "2026-11-12",
     "rostersCheckedOn": "2026-09-07",
     "people": 512,
     "pagesChecked": 515,
@@ -36,7 +36,7 @@
     ],
     "comparisonCohort": {
       "policy": "professors-and-postdocs",
-      "checkedOn": "2026-10-29",
+      "checkedOn": "2026-11-12",
       "reviewFile": "data/comparison-cohort-review.json",
       "missingDecisionPeople": [
         "acc-g-kok",
@@ -59,12 +59,12 @@
       ],
       "scope": "Role verification only; this does not establish complete publication coverage.",
       "totalPeople": 512,
-      "eligiblePeople": 279,
-      "excludedPeople": 233,
-      "unknownPeople": 38,
+      "eligiblePeople": 278,
+      "excludedPeople": 234,
+      "unknownPeople": 39,
       "knownExcludedPeople": 195,
       "roleCategoryCounts": {
-        "assistant_professor": 114,
+        "assistant_professor": 113,
         "associate_professor": 66,
         "emeritus": 8,
         "honorary": 3,
@@ -75,7 +75,7 @@
         "postdoc": 7,
         "professor": 92,
         "support": 5,
-        "unknown": 38
+        "unknown": 39
       },
       "departments": {
         "HRM&OB": {
@@ -97,19 +97,19 @@
         },
         "Marketing": {
           "totalPeople": 46,
-          "eligiblePeople": 22,
-          "excludedPeople": 24,
-          "unknownPeople": 2,
+          "eligiblePeople": 21,
+          "excludedPeople": 25,
+          "unknownPeople": 3,
           "knownExcludedPeople": 22,
           "roleCategoryCounts": {
-            "assistant_professor": 7,
+            "assistant_professor": 6,
             "associate_professor": 4,
             "emeritus": 1,
             "lecturer": 9,
             "mixed_excluded": 4,
             "phd": 8,
             "professor": 11,
-            "unknown": 2
+            "unknown": 3
           }
         },
         "IM&S": {
@@ -258,7 +258,7 @@
       "recordsWithoutRetainedPeople": 99
     },
     "comparisonAudit": {
-      "generatedOn": "2026-11-09",
+      "generatedOn": "2026-11-12",
       "fairComparisonEstablished": false,
       "reasons": [
         "Publication capture differs by department; many public profiles expose a short selection.",
@@ -268,8 +268,8 @@
       ],
       "aipSourceSha256": "fbf3696440ffc8cbf781f319d5dd67ac62ce0a49e38f98fe2d2931e81ff257f9",
       "aipMatchMethods": {
-        "title": 639,
-        "issn": 2814,
+        "title": 638,
+        "issn": 2815,
         "unmatched": 572,
         "title-alias": 3,
         "excluded-doi-mismatch": 2
@@ -287,10 +287,10 @@
         },
         {
           "department": "Marketing",
-          "currentHeadcount": 22,
-          "withAnyLinkedRecord": 20,
+          "currentHeadcount": 21,
+          "withAnyLinkedRecord": 19,
           "unavailableProfiles": 1,
-          "profilesWithAtMost10ParsedArticles": 21,
+          "profilesWithAtMost10ParsedArticles": 20,
           "roleUnspecified": 0,
           "verifiedCompletePublicationLists": 0,
           "historicalHeadcountsAvailable": false
@@ -1235,7 +1235,7 @@
       },
       "comparisonCohort": {
         "policy": "professors-and-postdocs",
-        "checkedOn": "2026-10-29",
+        "checkedOn": "2026-11-12",
         "reviewFile": "data/comparison-cohort-review.json",
         "missingDecisionPeople": [
           "acc-g-kok",
@@ -1258,12 +1258,12 @@
         ],
         "scope": "Role verification only; this does not establish complete publication coverage.",
         "totalPeople": 512,
-        "eligiblePeople": 279,
-        "excludedPeople": 233,
-        "unknownPeople": 38,
+        "eligiblePeople": 278,
+        "excludedPeople": 234,
+        "unknownPeople": 39,
         "knownExcludedPeople": 195,
         "roleCategoryCounts": {
-          "assistant_professor": 114,
+          "assistant_professor": 113,
           "associate_professor": 66,
           "emeritus": 8,
           "honorary": 3,
@@ -1274,7 +1274,7 @@
           "postdoc": 7,
           "professor": 92,
           "support": 5,
-          "unknown": 38
+          "unknown": 39
         },
         "departments": {
           "HRM&OB": {
@@ -1296,19 +1296,19 @@
           },
           "Marketing": {
             "totalPeople": 46,
-            "eligiblePeople": 22,
-            "excludedPeople": 24,
-            "unknownPeople": 2,
+            "eligiblePeople": 21,
+            "excludedPeople": 25,
+            "unknownPeople": 3,
             "knownExcludedPeople": 22,
             "roleCategoryCounts": {
-              "assistant_professor": 7,
+              "assistant_professor": 6,
               "associate_professor": 4,
               "emeritus": 1,
               "lecturer": 9,
               "mixed_excluded": 4,
               "phd": 8,
               "professor": 11,
-              "unknown": 2
+              "unknown": 3
             }
           },
           "IM&S": {
@@ -1415,10 +1415,10 @@
             },
             {
               "department": "Marketing",
-              "currentHeadcount": 22,
-              "withAnyLinkedRecord": 20,
+              "currentHeadcount": 21,
+              "withAnyLinkedRecord": 19,
               "unavailableProfiles": 1,
-              "profilesWithAtMost10ParsedArticles": 21,
+              "profilesWithAtMost10ParsedArticles": 20,
               "roleUnspecified": 0,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -1489,10 +1489,10 @@
             },
             {
               "department": "Marketing",
-              "currentHeadcount": 22,
-              "withAnyLinkedRecord": 20,
+              "currentHeadcount": 21,
+              "withAnyLinkedRecord": 19,
               "unavailableProfiles": 1,
-              "profilesWithAtMost10ParsedArticles": 21,
+              "profilesWithAtMost10ParsedArticles": 20,
               "roleUnspecified": 0,
               "verifiedCompletePublicationLists": 0,
               "historicalHeadcountsAvailable": false
@@ -1605,7 +1605,7 @@
           "https://www.rug.nl/staff/m.arnold/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1652,7 +1652,7 @@
           "https://www.rug.nl/staff/s.berger/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1700,7 +1700,7 @@
           "https://www.rug.nl/staff/j.de.bloom/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1752,7 +1752,7 @@
           "https://www.rug.nl/staff/h.j.van.de.brake/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1799,7 +1799,7 @@
           "https://www.rug.nl/staff/o.janssen/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1848,7 +1848,7 @@
           "https://www.rug.nl/staff/j.m.lees/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1899,7 +1899,7 @@
           "https://www.rug.nl/staff/j.m.mascareno/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1947,7 +1947,7 @@
           "https://www.rug.nl/staff/h.b.m.molleman/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -1995,7 +1995,7 @@
           "https://www.rug.nl/staff/l.b.mulder/?lang=en"
         ],
         "evidenceText": "Associate Professor (with IUS promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2044,7 +2044,7 @@
           "https://www.rug.nl/staff/n.h.nguyen/?lang=en"
         ],
         "evidenceText": "Assistant Professor in Human Resource Management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2092,7 +2092,7 @@
           "https://www.rug.nl/staff/b.a.nijstad/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2139,7 +2139,7 @@
           "https://www.rug.nl/staff/j.oedzes/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2187,7 +2187,7 @@
           "https://www.rug.nl/staff/f.a.rink/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2235,7 +2235,7 @@
           "https://www.rug.nl/staff/m.ryan/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2283,7 +2283,7 @@
           "https://www.rug.nl/staff/j.i.stoker/?lang=en"
         ],
         "evidenceText": "Professor of Leadership and Organizational Change, Director centre of expertise In the LEAD",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2332,7 +2332,7 @@
           "https://www.rug.nl/staff/g.s.van.der.vegt/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2382,7 +2382,7 @@
           "https://www.rug.nl/staff/thom.de.vries/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2429,7 +2429,7 @@
           "https://www.rug.nl/staff/yingjie.yuan/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -2476,7 +2476,7 @@
           "https://www.rug.nl/staff/t.h.a.bijmolt/?lang=en"
         ],
         "evidenceText": "Full Professor, Chairman of the department",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The main official profile explicitly establishes academic professor rank; head-of-department status alone was not used."
       }
     },
@@ -2522,7 +2522,7 @@
           "https://www.rug.nl/staff/j.van.doorn/?lang=en"
         ],
         "evidenceText": "Professor of Service Marketing",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2569,7 +2569,7 @@
           "https://www.rug.nl/staff/b.m.fennis/?lang=en"
         ],
         "evidenceText": "Full Professor in Consumer Behavior",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2616,7 +2616,7 @@
           "https://www.rug.nl/staff/m.j.gijsenberg/?lang=en"
         ],
         "evidenceText": "Full Professor of Marketing Dynamics",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2662,7 +2662,7 @@
           "https://www.rug.nl/staff/k.van.ittersum/?lang=en"
         ],
         "evidenceText": "Professor of Marketing and Consumer Well-Being",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2756,7 +2756,7 @@
           "https://www.rug.nl/staff/p.c.verhoef/?lang=en"
         ],
         "evidenceText": "Dean, Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2803,7 +2803,7 @@
           "https://www.rug.nl/staff/j.e.wieringa/?lang=en"
         ],
         "evidenceText": "Full professor of Research Methods in Business",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2849,7 +2849,7 @@
           "https://www.rug.nl/staff/j.w.bolderdijk/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2895,7 +2895,7 @@
           "https://www.rug.nl/staff/h.risselada/?lang=en"
         ],
         "evidenceText": "Associate professor (with ius promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2942,7 +2942,7 @@
           "https://www.rug.nl/staff/m.c.leliveld/?lang=en"
         ],
         "evidenceText": "Professor of Consumer Ethics, Aletta Jacobs chair",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -2989,7 +2989,7 @@
           "https://www.rug.nl/staff/m.moeini.jazani/?lang=en"
         ],
         "evidenceText": "Associate Professor of Marketing",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3028,17 +3028,18 @@
       "role": "",
       "publicationPageStatus": 200,
       "publicationPageArticles": 5,
-      "comparisonEligible": true,
+      "comparisonEligible": false,
       "comparisonRole": "Assistant Professor of Marketing",
-      "comparisonRoleCategory": "assistant_professor",
+      "comparisonRoleCategory": "unknown",
       "comparisonRoleEvidence": {
         "evidenceUrls": [
-          "https://www.rug.nl/feb/organization/units/academic-departments/marketing/oc-marketing/?lang=en",
-          "https://www.rug.nl/feb/organization/units/academic-departments/marketing/staff?lang=en"
+          "https://www.rug.nl/feb/organization/departments/marketing/staff?lang=en",
+          "https://www.rug.nl/feb/organization/departments/marketing/oc-marketing/?lang=en",
+          "https://www.rug.nl/staff/sumaya.albalooshi/?lang=en"
         ],
-        "evidenceText": "Current official Programme Committee page names Sumaya Albalooshi as chair and assistant Professor of Marketing.",
-        "checkedOn": "2026-10-29",
-        "reason": "The main profile and CV URL returned 404. Current official programme-committee membership explicitly identifies her assistant-professor role, resolving the mixed roster section."
+        "evidenceText": "Fresh official Marketing staff list and committee no longer list Albalooshi; direct staff page returns 404.",
+        "checkedOn": "2026-11-12",
+        "reason": "Current appointment cannot be verified; excluded pending updated institutional evidence. No conclusion about employment status."
       }
     },
     {
@@ -3271,7 +3272,7 @@
           "https://www.rug.nl/staff/j.holthower/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3317,7 +3318,7 @@
           "https://www.rug.nl/staff/m.keizer/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3364,7 +3365,7 @@
           "https://www.rug.nl/staff/x.luo/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3458,7 +3459,7 @@
           "https://www.rug.nl/staff/j.e.m.van.nierop/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3505,7 +3506,7 @@
           "https://www.rug.nl/staff/s.m.rizio/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3678,7 +3679,7 @@
           "https://www.rug.nl/staff/p.m.m.de.faria/?lang=en"
         ],
         "evidenceText": "Professor of Innovation Management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The main official profile explicitly establishes academic professor rank; head-of-department status alone was not used."
       }
     },
@@ -3726,7 +3727,7 @@
           "https://www.rug.nl/staff/albert.boonstra/?lang=en"
         ],
         "evidenceText": "Professor of Information Management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3775,7 +3776,7 @@
           "https://www.rug.nl/staff/d.j.langley/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3823,7 +3824,7 @@
           "https://www.rug.nl/staff/f.noseleit/?lang=en"
         ],
         "evidenceText": "Professor of Entrepreneurship and Innovation",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3921,7 +3922,7 @@
           "https://www.rug.nl/staff/m.wyrwich/?lang=en"
         ],
         "evidenceText": "Full Professor of Entrepreneurship and Regional Development",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -3970,7 +3971,7 @@
           "https://www.rug.nl/staff/w.g.biemans/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4019,7 +4020,7 @@
           "https://www.rug.nl/staff/m.j.brand/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4068,7 +4069,7 @@
           "https://www.rug.nl/staff/t.l.j.broekhuizen/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4119,7 +4120,7 @@
           "https://www.rug.nl/staff/i.estrada.vaquero/?lang=en"
         ],
         "evidenceText": "Aletta Jacobs Professor Collaboration Strategy; Director MSc BA - Business Administration",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4167,7 +4168,7 @@
           "https://www.rug.nl/staff/m.hanisch/?lang=en"
         ],
         "evidenceText": "Associate Professor (ius promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4217,7 +4218,7 @@
           "https://www.rug.nl/staff/k.r.e.huizingh/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4267,7 +4268,7 @@
           "https://www.rug.nl/staff/b.c.mitzinneck/?lang=en"
         ],
         "evidenceText": "Associate Professor | PhD Coordinator",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4320,7 +4321,7 @@
           "https://www.rug.nl/staff/m.a.g.van.offenbeek/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4369,7 +4370,7 @@
           "https://www.rug.nl/staff/o.p.roemeling/?lang=en"
         ],
         "evidenceText": "Program director BDK, Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4418,7 +4419,7 @@
           "https://www.rug.nl/staff/p.j.steinberg/?lang=en"
         ],
         "evidenceText": "Associate Professor (with ius promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4466,7 +4467,7 @@
           "https://www.rug.nl/staff/s.asad/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4592,7 +4593,7 @@
           "https://www.rug.nl/staff/o.belousova/?lang=en"
         ],
         "evidenceText": "Assistant professor (tenured)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4641,7 +4642,7 @@
           "https://www.rug.nl/staff/c.carroll/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4691,7 +4692,7 @@
           "https://www.rug.nl/staff/s.m.costa/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4740,7 +4741,7 @@
           "https://www.rug.nl/staff/e.p.m.croonen/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4850,7 +4851,7 @@
           "https://www.rug.nl/staff/n.e.fabian/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4898,7 +4899,7 @@
           "https://www.rug.nl/staff/a.fakha/?lang=en"
         ],
         "evidenceText": "Assistant Professor of Innovation Management & Strategy",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4947,7 +4948,7 @@
           "https://www.rug.nl/staff/a.j.frederiks/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -4997,7 +4998,7 @@
           "https://www.rug.nl/staff/m.l.hage/?lang=en"
         ],
         "evidenceText": "Associate professor Change Management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5046,7 +5047,7 @@
           "https://www.rug.nl/staff/k.s.heucher/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5097,7 +5098,7 @@
           "https://www.rug.nl/staff/p.m.infantes.sanchez/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5145,7 +5146,7 @@
           "https://www.rug.nl/staff/m.kleine/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5193,7 +5194,7 @@
           "https://www.rug.nl/staff/i.kozlinska/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5242,7 +5243,7 @@
           "https://www.rug.nl/staff/p.j.o.kuusela/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5404,7 +5405,7 @@
           "https://www.rug.nl/staff/h.m.ortiz.almeyda/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5500,7 +5501,7 @@
           "https://www.rug.nl/staff/e.smailhodzic/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5548,7 +5549,7 @@
           "https://www.rug.nl/staff/d.speldekamp/?lang=en"
         ],
         "evidenceText": "Coordinator external relations FEB Career Services & Corporate Relations, Assistant Professor Innovation Management & Strategy",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "The current official profile explicitly names this role. Cohort includes assistant, associate and full professors and postdocs; lecturers and PhD candidates are excluded."
       }
     },
@@ -5595,7 +5596,7 @@
           "https://www.rug.nl/staff/m.aerts-veenstra/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5641,7 +5642,7 @@
           "https://www.rug.nl/staff/i.bakir/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5688,7 +5689,7 @@
           "https://www.rug.nl/staff/j.a.c.bokhorst/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5734,7 +5735,7 @@
           "https://www.rug.nl/staff/s.boscari/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5782,7 +5783,7 @@
           "https://www.rug.nl/staff/h.broekhuis/?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5828,7 +5829,7 @@
           "https://www.rug.nl/staff/p.buijs/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5874,7 +5875,7 @@
           "https://www.rug.nl/staff/m.dienstknecht/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -5920,7 +5921,7 @@
           "https://www.rug.nl/staff/d.p.van.donk/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6013,7 +6014,7 @@
           "https://www.rug.nl/staff/c.emmanouilidis/?lang=en"
         ],
         "evidenceText": "Associate Professor with Ius Promovendi",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6060,7 +6061,7 @@
           "https://www.rug.nl/staff/n.d.van.foreest/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6107,7 +6108,7 @@
           "https://www.rug.nl/staff/l.m.gelsomino/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6154,7 +6155,7 @@
           "https://www.rug.nl/staff/g.b.huitema/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6200,7 +6201,7 @@
           "https://www.rug.nl/staff/b.de.jonge/?lang=en"
         ],
         "evidenceText": "Associate professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6247,7 +6248,7 @@
           "https://www.rug.nl/staff/o.a.kilic/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6294,7 +6295,7 @@
           "https://www.rug.nl/staff/m.j.land/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6341,7 +6342,7 @@
           "https://www.rug.nl/staff/j.a.lopez.alvarez/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6387,7 +6388,7 @@
           "https://www.rug.nl/staff/l.maruster/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6434,7 +6435,7 @@
           "https://www.rug.nl/staff/e.i.metting/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6483,7 +6484,7 @@
           "https://www.rug.nl/staff/a.c.noort/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6529,7 +6530,7 @@
           "https://www.rug.nl/staff/k.peters/?lang=en"
         ],
         "evidenceText": "Assistant Professor & profile coordinator Technology Management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6625,7 +6626,7 @@
           "https://www.rug.nl/staff/j.riezebos/?lang=en"
         ],
         "evidenceText": "Full Professor Operations and Educational Innovation",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6671,7 +6672,7 @@
           "https://www.rug.nl/staff/a.rijal/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6717,7 +6718,7 @@
           "https://www.rug.nl/staff/w.romeijnders/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6763,7 +6764,7 @@
           "https://www.rug.nl/staff/k.j.roodbergen/?lang=en"
         ],
         "evidenceText": "Professor of Quantitative Logistics",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6809,7 +6810,7 @@
           "https://www.rug.nl/staff/e.rosca/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6903,7 +6904,7 @@
           "https://www.rug.nl/staff/a.p.seepma/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6950,7 +6951,7 @@
           "https://www.rug.nl/staff/r.h.teunter/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -6996,7 +6997,7 @@
           "https://www.rug.nl/staff/e.ursavas/?lang=en"
         ],
         "evidenceText": "Professor of Energy Logistics",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7044,7 +7045,7 @@
           "https://www.rug.nl/staff/j.t.van.der.vaart/?lang=en"
         ],
         "evidenceText": "Professor, Department Chair",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7090,7 +7091,7 @@
           "https://www.rug.nl/staff/j.veldman/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7136,7 +7137,7 @@
           "https://www.rug.nl/staff/i.f.a.vis/?lang=en"
         ],
         "evidenceText": "Professor of Industrial Engineering",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7182,7 +7183,7 @@
           "https://www.rug.nl/staff/jan.de.vries/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7228,7 +7229,7 @@
           "https://www.rug.nl/staff/s.waschull/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7275,7 +7276,7 @@
           "https://www.rug.nl/staff/w.m.c.van.wezel/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7321,7 +7322,7 @@
           "https://www.rug.nl/staff/c.xiao/?lang=en"
         ],
         "evidenceText": "Associate professor of sustainable supply chain management",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7367,7 +7368,7 @@
           "https://www.rug.nl/staff/d.j.van.der.zee/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7416,7 +7417,7 @@
           "https://www.rug.nl/staff/x.zhu/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -7464,7 +7465,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7511,7 +7512,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor of International Economics (with ius promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7559,7 +7560,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7607,7 +7608,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor & Postdoctoral Researcher Centre of Expertise In the LEAD",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7703,7 +7704,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Full Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7750,7 +7751,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7799,7 +7800,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7896,7 +7897,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -7943,7 +7944,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor (ius promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8038,7 +8039,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8132,7 +8133,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8180,7 +8181,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8227,7 +8228,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8278,7 +8279,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8325,7 +8326,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8420,7 +8421,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor of Macro-finance and Sustainability (UD1)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8514,7 +8515,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8563,7 +8564,7 @@
           "https://www.rug.nl/feb/organization/units/academic-departments/global-economics-management/staff?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile role and official department roster checked; explicit appointment mapped to the user-approved cohort."
       }
     },
@@ -8609,7 +8610,7 @@
           "https://www.rug.nl/staff/l.bellora-bienengraeber/?lang=en"
         ],
         "evidenceText": "Associate Professor of Management Accounting and Control",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8656,7 +8657,7 @@
           "https://www.rug.nl/staff/o.p.g.bik/?lang=en"
         ],
         "evidenceText": "Professor of Audit & Assurance",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8703,7 +8704,7 @@
           "https://www.rug.nl/staff/i.j.j.burgers/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8799,7 +8800,7 @@
           "https://www.rug.nl/staff/k.g.k.w.derfuss/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8893,7 +8894,7 @@
           "https://www.rug.nl/staff/j.a.emanuels/?lang=en"
         ],
         "evidenceText": "Professor Accounting Information Systems",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -8939,7 +8940,7 @@
           "https://www.rug.nl/staff/s.firk/?lang=en"
         ],
         "evidenceText": "Associate Professor in Management Accounting & Control (with Ius Promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9032,7 +9033,7 @@
           "https://www.rug.nl/staff/c.p.a.heijes/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9079,7 +9080,7 @@
           "https://www.rug.nl/staff/j.c.hennig/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9126,7 +9127,7 @@
           "https://www.rug.nl/staff/r.l.ter.hoeven/?lang=en"
         ],
         "evidenceText": "Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9220,7 +9221,7 @@
           "https://www.rug.nl/staff/r.b.h.hooghiemstra/?lang=en"
         ],
         "evidenceText": "Professor in Financial Reporting and Corporate Governance",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9267,7 +9268,7 @@
           "https://www.rug.nl/staff/c.a.huijgen/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9313,7 +9314,7 @@
           "https://www.rug.nl/staff/n.hussain/?lang=en"
         ],
         "evidenceText": "Associate Professor of Sustainability Accounting (with Ius Promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9361,7 +9362,7 @@
           "https://www.rug.nl/staff/a.e.m.kamp-roelands/?lang=en"
         ],
         "evidenceText": "Professor non-financial information, integrated reporting and assurance - C.R. Rao foundation",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9407,7 +9408,7 @@
           "https://www.rug.nl/staff/y.karaibrahimoglu/?lang=en"
         ],
         "evidenceText": "Associate Professor (with Ius Promovendi)",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9502,7 +9503,7 @@
           "https://www.rug.nl/staff/k.linke/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9548,7 +9549,7 @@
           "https://www.rug.nl/staff/s.mansouri/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9595,7 +9596,7 @@
           "https://www.rug.nl/staff/t.a.marra/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9641,7 +9642,7 @@
           "https://www.rug.nl/staff/j.offerein/?lang=en"
         ],
         "evidenceText": "Assistant professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9688,7 +9689,7 @@
           "https://www.rug.nl/staff/j.t.reilley/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9782,7 +9783,7 @@
           "https://www.rug.nl/staff/a.c.w.sneller/?lang=en"
         ],
         "evidenceText": "Professor of Digitalization & AI in Accounting, Control, Governance, and Auditing",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9829,7 +9830,7 @@
           "https://www.rug.nl/staff/m.p.van.der.steen/?lang=en"
         ],
         "evidenceText": "Associate Professor of Management Accounting",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9876,7 +9877,7 @@
           "https://www.rug.nl/staff/a.k.tank/?lang=en"
         ],
         "evidenceText": "Assistant Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9922,7 +9923,7 @@
           "https://www.rug.nl/staff/s.tillema/?lang=en"
         ],
         "evidenceText": "Associate Professor",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -9969,7 +9970,7 @@
           "https://www.rug.nl/staff/d.veltrop/?lang=en"
         ],
         "evidenceText": "Professor of Corporate Governance and Behavior",
-        "checkedOn": "2026-11-05",
+        "checkedOn": "2026-11-12",
         "reason": "Current official main profile gives an explicit appointment title."
       }
     },
@@ -96002,33 +96003,6 @@
       "doiTitleCheck": "title-agreement"
     },
     {
-      "id": "doi:10.1016/j.intacc.2016.01.004",
-      "title": "Book Review",
-      "year": 2016,
-      "doi": "10.1016/j.intacc.2016.01.004",
-      "url": "",
-      "journal": "The International Journal of Accounting",
-      "people": [
-        "acc-rbh-hooghiemstra"
-      ],
-      "aip": 54.803,
-      "authors": [
-        "Reggy Hooghiemstra"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "International Journal of Accounting",
-      "aipMatchMethod": "title",
-      "officialProfilePeople": [],
-      "comparisonYear": 2016,
-      "comparisonYearBasis": "publisher-issue",
-      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.intacc.2016.01.004",
-      "doiTitleCheck": "title-agreement"
-    },
-    {
       "id": "doi:10.1002/cb.1570",
       "title": "Boundary research: Tools and rules to impact emerging fields",
       "year": 2016,
@@ -125427,35 +125401,6 @@
       "comparisonYear": 2009,
       "comparisonYearBasis": "publisher-issue",
       "comparisonYearSource": "https://api.crossref.org/works/10.1111%2Fj.1750-4716.2009.00033.x",
-      "doiTitleCheck": "title-agreement"
-    },
-    {
-      "id": "doi:10.1016/j.appet.2009.01.001",
-      "title": "RETRACTED: How negative experiences shape long-term food preferences. Fifty years from the World War II combat front",
-      "year": 2009,
-      "doi": "10.1016/j.appet.2009.01.001",
-      "url": "",
-      "journal": "Appetite",
-      "people": [
-        "mkt-k-van-ittersum"
-      ],
-      "aip": 81.05,
-      "authors": [
-        "Brian Wansink",
-        "Koert van Ittersum",
-        "Carolina Werle"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "comparisonExclusionReason": "",
-      "countedInComparison": true,
-      "aipJournal": "APPETITE",
-      "aipMatchMethod": "issn",
-      "officialProfilePeople": [],
-      "comparisonYear": 2009,
-      "comparisonYearBasis": "publisher-issue",
-      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.appet.2009.01.001",
       "doiTitleCheck": "title-agreement"
     },
     {
@@ -158497,6 +158442,113 @@
       "comparisonYearSource": "https://research.rug.nl/en/publications/4f90ccad-317f-4ab6-8987-09cb53b2992a",
       "aipJournal": "",
       "aipMatchMethod": "unmatched"
+    },
+    {
+      "title": "Banking on Jobs: Impact of a Workfare Program on Formal Credit",
+      "year": 2026,
+      "journal": "Journal of Development Economics",
+      "authors": [
+        "Mayuri Chaturvedi",
+        "Asad Rauf"
+      ],
+      "url": "https://research.rug.nl/en/publications/0e86a031-e605-45c9-8c21-59d11c910c28",
+      "issns": [
+        "0304-3878"
+      ],
+      "publicationKind": "Article",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2026-11-11",
+      "publicationDatePrecision": "day",
+      "yearSource": "official-reference-year",
+      "pureUuid": "0e86a031-e605-45c9-8c21-59d11c910c28",
+      "pureOutputClassification": "Contribution to journal > Academic > peer-review",
+      "id": "doi:10.1016/j.jdeveco.2026.103961",
+      "doi": "10.1016/j.jdeveco.2026.103961",
+      "people": [
+        "eef-a-rauf"
+      ],
+      "aip": 97.122,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/0e86a031-e605-45c9-8c21-59d11c910c28",
+        "https://research.rug.nl/en/publications/banking-on-jobs-impact-of-a-workfare-program-on-formal-credit/",
+        "https://api.crossref.org/works/10.1016%2Fj.jdeveco.2026.103961",
+        "https://www.rug.nl/staff/a.rauf/projects?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-11-12",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-a-rauf"
+      ],
+      "officialProfilePeople": [
+        "eef-a-rauf"
+      ],
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1016%2Fj.jdeveco.2026.103961",
+      "aipJournal": "JOURNAL OF DEVELOPMENT ECONOMICS",
+      "aipMatchMethod": "issn"
+    },
+    {
+      "title": "When children shape their families: Evocative effects analysis of 40,000 trios from the Norwegian Mother, Father and Child Cohort Study",
+      "year": 2026,
+      "journal": "Proceedings of the National Academy of Sciences",
+      "authors": [
+        "Evelina T. Akimova",
+        "Agnes Fauske",
+        "Ruth Eva Jørgensen",
+        "Alexandra Havdahl",
+        "Elizabeth C. Corfield",
+        "Melinda C. Mills",
+        "Torkild Hovde Lyngstad"
+      ],
+      "url": "https://research.rug.nl/en/publications/312f3e89-025b-4ee3-9923-dba148ca2348",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "publicationKind": "Journal",
+      "sourceType": "Official RUG Pure OAI publication record",
+      "publicationDate": "2026-07-28",
+      "publicationDatePrecision": "day",
+      "yearSource": "publisher-issue",
+      "pureUuid": "312f3e89-025b-4ee3-9923-dba148ca2348",
+      "pureOutputClassification": "Contribution to journal > Academic > peer-review",
+      "id": "doi:10.1073/pnas.2532642123",
+      "doi": "10.1073/pnas.2532642123",
+      "people": [
+        "eef-mc-mills"
+      ],
+      "aip": 98.206,
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/312f3e89-025b-4ee3-9923-dba148ca2348",
+        "https://pubmed.ncbi.nlm.nih.gov/42475558/",
+        "https://api.crossref.org/works/10.1073%2Fpnas.2532642123",
+        "https://www.demography.ox.ac.uk/news/can-children-shape-their-parents-lives-new-study-reveals-influence-may-flow-both-ways"
+      ],
+      "curatedSourceCheckedOn": "2026-11-12",
+      "departments": [
+        "EEF"
+      ],
+      "curatedSourcePeople": [
+        "eef-mc-mills"
+      ],
+      "officialProfilePeople": [
+        "eef-mc-mills"
+      ],
+      "rankableJournal": true,
+      "doiTitleCheck": "title-agreement",
+      "comparisonExclusionReason": "",
+      "countedInComparison": true,
+      "comparisonYear": 2026,
+      "comparisonYearBasis": "publisher-issue",
+      "comparisonYearSource": "https://api.crossref.org/works/10.1073%2Fpnas.2532642123",
+      "aipJournal": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA",
+      "aipMatchMethod": "issn"
     }
   ]
 }

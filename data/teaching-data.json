@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-05T10:20:18Z",
+    "generatedOn": "2026-11-12T10:22:53Z",
     "academicYear": "2026-2027",
     "source": "Public Ocasys course search, programme scheme, and course page API records.",
     "notes": [
@@ -34,14 +34,31 @@
       "60645"
     ],
     "candidateCourses": 146,
-    "activityRecords": 43,
-    "courses": 26,
-    "networkCourses": 24,
-    "edges": 14,
-    "durationSeconds": 26.9,
+    "activityRecords": 44,
+    "courses": 27,
+    "networkCourses": 25,
+    "edges": 15,
+    "durationSeconds": 25.5,
     "errors": []
   },
   "records": [
+    {
+      "id": "MA:EBM240A05.2026-2027.1",
+      "personId": "MA",
+      "personDisplay": "Arnold, M.",
+      "code": "EBM240A05",
+      "offeringCode": "EBM240A05.2026-2027.1",
+      "title": "HR Analytics",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc HRM",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM240A05"
+    },
     {
       "id": "MA:EBM072A05.2026-2027.1",
       "personId": "MA",
@@ -88,6 +105,8 @@
       "title": "HR Analytics",
       "kind": "Course",
       "roles": [
+        "COORDINATOR",
+        "EXAMINATOR",
         "LECTURER"
       ],
       "term": "Semester 1b",
@@ -276,6 +295,23 @@
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM011A05"
     },
     {
+      "id": "JL:EBM769D05.2026-2027.1",
+      "personId": "JL",
+      "personDisplay": "Lees, J.M.",
+      "code": "EBM769D05",
+      "offeringCode": "EBM769D05.2026-2027.1",
+      "title": "Advanced Behavioral Science in Management",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "ReMa E&B",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM769D05"
+    },
+    {
       "id": "JL:EBM251A05.2026-2027.1",
       "personId": "JL",
       "personDisplay": "Lees, J.M.",
@@ -327,6 +363,23 @@
       "networkEligible": true,
       "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM226B05",
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM226B05"
+    },
+    {
+      "id": "JMA:EBM243A05.2026-2027.1",
+      "personId": "JMA",
+      "personDisplay": "Mascareño, J.M.",
+      "code": "EBM243A05",
+      "offeringCode": "EBM243A05.2026-2027.1",
+      "title": "Data Analytics for Performance Management",
+      "kind": "Course",
+      "roles": [
+        "LECTURER"
+      ],
+      "term": "Semester 1b",
+      "department": "MSc BA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM243A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM243A05"
     },
     {
       "id": "JMA:EBB617B05.2026-2027.1",
@@ -549,25 +602,6 @@
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBB110A05"
     },
     {
-      "id": "JO:EBM240A05.2026-2027.1",
-      "personId": "JO",
-      "personDisplay": "Oedzes, J.",
-      "code": "EBM240A05",
-      "offeringCode": "EBM240A05.2026-2027.1",
-      "title": "HR Analytics",
-      "kind": "Course",
-      "roles": [
-        "COORDINATOR",
-        "EXAMINATOR",
-        "LECTURER"
-      ],
-      "term": "Semester 1b",
-      "department": "MSc HRM",
-      "networkEligible": true,
-      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
-      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM240A05"
-    },
-    {
       "id": "JO:EBM240A05.2026-2027.2",
       "personId": "JO",
       "personDisplay": "Oedzes, J.",
@@ -602,23 +636,6 @@
       "networkEligible": true,
       "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBP654D05",
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBP654D05"
-    },
-    {
-      "id": "FR:EBM769D05.2026-2027.1",
-      "personId": "FR",
-      "personDisplay": "Rink, F.A.",
-      "code": "EBM769D05",
-      "offeringCode": "EBM769D05.2026-2027.1",
-      "title": "Advanced Behavioral Science in Management",
-      "kind": "Course",
-      "roles": [
-        "LECTURER"
-      ],
-      "term": "Semester 1b",
-      "department": "ReMa E&B",
-      "networkEligible": true,
-      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM769D05",
-      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM769D05"
     },
     {
       "id": "FR:EBM012B05.2026-2027.1",
@@ -832,12 +849,12 @@
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM769D05",
       "staffIds": [
         "JDB",
-        "FR",
+        "JL",
         "YY"
       ],
       "staffDisplays": [
         "Bloom, J. de",
-        "Rink, F.A.",
+        "Lees, J.M.",
         "Yuan, Y."
       ]
     },
@@ -916,6 +933,23 @@
       ]
     },
     {
+      "code": "EBM243A05",
+      "offeringCode": "EBM243A05.2026-2027.1",
+      "title": "Data Analytics for Performance Management",
+      "kind": "Course",
+      "term": "Semester 1b",
+      "department": "MSc BA",
+      "networkEligible": true,
+      "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM243A05",
+      "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM243A05",
+      "staffIds": [
+        "JMA"
+      ],
+      "staffDisplays": [
+        "Mascareño, J.M."
+      ]
+    },
+    {
       "code": "EBM678B05",
       "offeringCode": "EBM678B05.2026-2027.2",
       "title": "Economic Tools for HRM",
@@ -977,12 +1011,12 @@
       "courseUrl": "https://ocasys.rug.nl/current/catalog/course/EBM240A05",
       "sourceUrl": "https://ocasys.rug.nl/api/2026-2027/course/page/EBM240A05",
       "staffIds": [
-        "SB",
-        "JO"
+        "MA",
+        "SB"
       ],
       "staffDisplays": [
-        "Berger, S.",
-        "Oedzes, J."
+        "Arnold, M.",
+        "Berger, S."
       ]
     },
     {
@@ -1299,19 +1333,6 @@
   ],
   "edges": [
     {
-      "source": "FR",
-      "target": "YY",
-      "count": 2,
-      "courseCodes": [
-        "EBM769D05",
-        "EBM012B05"
-      ],
-      "courseTitles": [
-        "Advanced Behavioral Science in Management",
-        "Advanced Organizational Behaviour"
-      ]
-    },
-    {
       "source": "JMA",
       "target": "YY",
       "count": 2,
@@ -1325,16 +1346,16 @@
       ]
     },
     {
-      "source": "JO",
+      "source": "MA",
       "target": "SB",
       "count": 2,
       "courseCodes": [
         "EBM240A05",
-        "EBM240A05"
+        "EBM072A05"
       ],
       "courseTitles": [
         "HR Analytics",
-        "HR Analytics"
+        "Leadership"
       ]
     },
     {
@@ -1361,17 +1382,6 @@
     },
     {
       "source": "FR",
-      "target": "JDB",
-      "count": 1,
-      "courseCodes": [
-        "EBM769D05"
-      ],
-      "courseTitles": [
-        "Advanced Behavioral Science in Management"
-      ]
-    },
-    {
-      "source": "FR",
       "target": "JO",
       "count": 1,
       "courseCodes": [
@@ -1390,6 +1400,28 @@
       ],
       "courseTitles": [
         "Organizational Behaviour for IB"
+      ]
+    },
+    {
+      "source": "FR",
+      "target": "YY",
+      "count": 1,
+      "courseCodes": [
+        "EBM012B05"
+      ],
+      "courseTitles": [
+        "Advanced Organizational Behaviour"
+      ]
+    },
+    {
+      "source": "JDB",
+      "target": "JL",
+      "count": 1,
+      "courseCodes": [
+        "EBM769D05"
+      ],
+      "courseTitles": [
+        "Advanced Behavioral Science in Management"
       ]
     },
     {
@@ -1415,6 +1447,17 @@
       ]
     },
     {
+      "source": "JL",
+      "target": "YY",
+      "count": 1,
+      "courseCodes": [
+        "EBM769D05"
+      ],
+      "courseTitles": [
+        "Advanced Behavioral Science in Management"
+      ]
+    },
+    {
       "source": "JO",
       "target": "MA",
       "count": 1,
@@ -1426,6 +1469,17 @@
       ]
     },
     {
+      "source": "JO",
+      "target": "SB",
+      "count": 1,
+      "courseCodes": [
+        "EBM240A05"
+      ],
+      "courseTitles": [
+        "HR Analytics"
+      ]
+    },
+    {
       "source": "JVB",
       "target": "LM",
       "count": 1,
@@ -1434,17 +1488,6 @@
       ],
       "courseTitles": [
         "Organizational Behaviour & Change Management EMFC"
-      ]
-    },
-    {
-      "source": "MA",
-      "target": "SB",
-      "count": 1,
-      "courseCodes": [
-        "EBM072A05"
-      ],
-      "courseTitles": [
-        "Leadership"
       ]
     },
     {
@@ -1461,18 +1504,18 @@
   ],
   "personCourseCounts": {
     "NN": 2,
-    "MA": 2,
+    "MA": 3,
     "SB": 5,
     "JDB": 3,
     "JVB": 2,
     "CDD": 0,
     "OJ": 1,
-    "JL": 1,
+    "JL": 2,
     "LM": 5,
-    "JMA": 4,
+    "JMA": 5,
     "BN": 3,
-    "JO": 3,
-    "FR": 3,
+    "JO": 2,
+    "FR": 2,
     "MR": 0,
     "JS": 1,
     "GVV": 0,
@@ -1482,18 +1525,18 @@
   },
   "personNetworkCourseCounts": {
     "NN": 2,
-    "MA": 2,
+    "MA": 3,
     "SB": 3,
     "JDB": 3,
     "JVB": 2,
     "CDD": 0,
     "OJ": 1,
-    "JL": 1,
+    "JL": 2,
     "LM": 3,
-    "JMA": 4,
+    "JMA": 5,
     "BN": 3,
-    "JO": 3,
-    "FR": 3,
+    "JO": 2,
+    "FR": 2,
     "MR": 0,
     "JS": 1,
     "GVV": 0,

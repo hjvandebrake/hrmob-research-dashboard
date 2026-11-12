@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedOn": "2026-11-09",
+    "generatedOn": "2026-11-12",
     "retainedPreviouslyVerifiedRecords": 421,
     "sourceRequestErrors": 4,
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-11-09"
+      "to": "2026-11-12"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-11-09"
+      "to": "2026-11-12"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -639,7 +639,7 @@
       "Zeitschrift für Sozialpsychologie",
       "eLife"
     ],
-    "identityReviewedOn": "2026-11-09",
+    "identityReviewedOn": "2026-11-12",
     "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately."
   },
   "people": [
@@ -1261,8 +1261,7 @@
       "counted": true,
       "display": true,
       "aipComparable": false,
-      "aipStatus": "reviewed-not-in-aip-source",
-      "authorCount": 4
+      "aipStatus": "reviewed-not-in-aip-source"
     },
     {
       "id": "doi:10.1007/s11218-026-10232-y",
@@ -1355,6 +1354,9 @@
       "previousIds": [
         "rug:48d6aa7b8e4862cc"
       ],
+      "publicationDate": "2026-08",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F19485506251383988",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "ethics and morality",
         "stress and strain",
@@ -1453,9 +1455,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2026-08",
+      "publicationDate": "2026-07-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs11199-026-01663-0",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:7e46bd0617f86ac5"
       ],
@@ -1575,8 +1577,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 5
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1111/rego.70147",
@@ -1729,8 +1730,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 7
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1177/01461672261437934",
@@ -1883,9 +1883,9 @@
         "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "publicationDate": "2026-03",
+      "publicationDate": "2026-03-10",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs41542-026-00253-6",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:4fcb628dc323e2c2"
       ],
@@ -2662,8 +2662,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 379
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1080/17512786.2024.2441283",
@@ -2706,6 +2705,9 @@
       "previousIds": [
         "rug:d1d0f95317741052"
       ],
+      "publicationDate": "2026-08-03",
+      "publicationDateSource": "https://api.crossref.org/works/10.1080%2F17512786.2024.2441283",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "power and hierarchy",
         "wellbeing",
@@ -2790,9 +2792,9 @@
         "OpenAlex author matched to University of Groningen for Nijstad, B.A."
       ],
       "provisional": true,
-      "publicationDate": "2026-06",
+      "publicationDate": "2026-05-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjocb.70097",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:a17f2b2abeef0ff6"
       ],
@@ -2850,9 +2852,9 @@
         "OpenAlex author matched to University of Groningen for Vries, T.A. de"
       ],
       "provisional": true,
-      "publicationDate": "2026-09",
+      "publicationDate": "2026-07-23",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjoop.70146",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:2027d1667eca2f96"
       ],
@@ -2954,8 +2956,8 @@
       ],
       "provisional": true,
       "publicationDate": "2026-07",
-      "publicationDateSource": "https://research.rug.nl/en/publications/1a304f51-fb3b-4ad6-80b4-1def33a095d8",
-      "publicationDateType": "official-pure-issue-date",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.jesp.2026.104939",
+      "publicationDateType": "published-print",
       "previousIds": [
         "rug:428f4671cadd4e14"
       ],
@@ -2965,8 +2967,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 4
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1016/j.jenvp.2026.103024",
@@ -3007,6 +3008,9 @@
       "previousIds": [
         "rug:b9e49a4b333cfbeb"
       ],
+      "publicationDate": "2026-05",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.jenvp.2026.103024",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "job crafting",
         "motivation and goals"
@@ -3177,7 +3181,7 @@
       ],
       "provisional": true,
       "publicationDate": "2026-07-23",
-      "publicationDateSource": "https://research.rug.nl/en/publications/do-family-rituals-help-or-hurt-the-ripple-effect-of-family-ritual/",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fapl0001410",
       "publicationDateType": "published-online",
       "previousIds": [
         "rug:3067b4c078e94307"
@@ -3331,17 +3335,17 @@
       "source": "Crossref public metadata",
       "evidence": [
         "Crossref ORCID matched for Ryan, M.K.",
-        "OpenAlex author matched to University of Groningen for Ryan, M.K.",
         "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication.",
-        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 9 November 2026. Source: https://research.rug.nl/en/publications/53573913-c0bb-4150-a88e-118fe74fb6a3"
+        "Verified duplicate reconciled: Official Pure record gives the exact retained DOI, title and individual byline; verified 9 November 2026. Source: https://research.rug.nl/en/publications/53573913-c0bb-4150-a88e-118fe74fb6a3",
+        "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2026-06-25",
-      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F02134748261446390",
-      "publicationDateType": "published-online",
       "previousIds": [
         "rug:53c7a24cf4e7f127"
       ],
+      "publicationDate": "2026-06-25",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F02134748261446390",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "stereotypes and bias",
         "gender and leadership"
@@ -3619,8 +3623,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 6
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1080/09540253.2025.2568394",
@@ -3898,8 +3901,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 5
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1007/s12144-025-08973-8",
@@ -3945,9 +3947,9 @@
         "Crossref ORCID matched for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2026-02",
+      "publicationDate": "2026-01-28",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs12144-025-08973-8",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:069dfb1189f76006"
       ],
@@ -4106,9 +4108,9 @@
         "Verified duplicate reconciled: Official Pure work metadata provides exact retained DOI and title, full author byline and Miriam Arnold official ORCID; source checked 22 October 2026. Source: https://research.rug.nl/en/publications/180d2d25-b5d9-4820-85f0-742b29853aa2"
       ],
       "provisional": true,
-      "publicationDate": "2026-08",
+      "publicationDate": "2026-07-20",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fapps.70125",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:57ca06d7c9f7ed13"
       ],
@@ -4119,8 +4121,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 4
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.5465/amj.2024.0176",
@@ -4432,9 +4433,9 @@
         "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
-      "publicationDate": "2025-07",
+      "publicationDate": "2025-07-09",
       "publicationDateSource": "https://api.crossref.org/works/10.1098%2Frspb.2025.0973",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:9ca2e827cfb8a802"
       ],
@@ -4445,8 +4446,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1177/10888683251350913",
@@ -4488,9 +4488,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2025-11",
+      "publicationDate": "2025-09-29",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F10888683251350913",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "gender and leadership",
@@ -4538,9 +4538,9 @@
         "OpenAlex author matched to University of Groningen for Nijstad, B.A."
       ],
       "provisional": true,
-      "publicationDate": "2025-05",
+      "publicationDate": "2025-04-13",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F20413866251333058",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:25292170a6d7892b"
       ],
@@ -4591,9 +4591,9 @@
         "Crossref ORCID matched for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2025-09",
+      "publicationDate": "2025-02-26",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs41542-025-00222-5",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:8a56d3c074cf539a"
       ],
@@ -4651,9 +4651,9 @@
         "OpenAlex author matched to University of Groningen for Jordan, J."
       ],
       "provisional": true,
-      "publicationDate": "2025-06",
+      "publicationDate": "2025-07-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F2694104x251359805",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:0fb711d23b570106"
       ],
@@ -4711,6 +4711,9 @@
       "previousIds": [
         "rug:70bd06a0dcdc6d6f"
       ],
+      "publicationDate": "2025-03-25",
+      "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjscm.12346",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "crisis and resilience"
       ],
@@ -4876,6 +4879,9 @@
       "previousIds": [
         "curated:jom-2025-team-boundary-management"
       ],
+      "publicationDate": "2025-02",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F01492063231206107",
+      "publicationDateType": "published-print",
       "topicFamilies": [
         "teams and groups",
         "boundary spanning and external ties"
@@ -5023,9 +5029,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2025-10",
+      "publicationDate": "2025-03-07",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10869-025-10013-y",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:3c44964a4c891da5"
       ],
@@ -5086,8 +5092,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 2
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1111/jasp.13075",
@@ -5195,8 +5200,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3
+      "aipStatus": "matched"
     },
     {
       "id": "curated:hbr-2025-digital-disruption",
@@ -5282,9 +5286,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2025-06",
+      "publicationDate": "2025-02-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F13684302241311544",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -5533,9 +5537,9 @@
         "RUG staff publication page for Ryan, M.K. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "publicationDate": "2025-04",
+      "publicationDate": "2025-03-21",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10508-025-03114-5",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "stress and strain",
@@ -5595,8 +5599,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.32617/1277-6888bae7e000e",
@@ -5870,9 +5873,9 @@
         "Crossref ORCID matched for Lees, J.M."
       ],
       "provisional": true,
-      "publicationDate": "2024-07",
+      "publicationDate": "2024-06-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fssqu.13395",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:ab834a86c24e20f9"
       ],
@@ -5987,9 +5990,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2024-05",
+      "publicationDate": "2024-05-07",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs11199-024-01453-6",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "wellbeing",
@@ -6051,8 +6054,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 4
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1038/s41597-024-03865-1",
@@ -6920,9 +6922,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2024-09",
+      "publicationDate": "2024-04-30",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjoop.12506",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "wellbeing",
@@ -7130,6 +7132,9 @@
       "previousIds": [
         "rug:9e0055e257bfa077"
       ],
+      "publicationDate": "2024-05",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fapl0001168",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "multiple team membership",
@@ -7227,9 +7232,9 @@
         "OpenAlex author matched to University of Groningen for Berger, S."
       ],
       "provisional": true,
-      "publicationDate": "2024-03",
+      "publicationDate": "2024-01-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fhrm.22203",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:0d10981c655696ea"
       ],
@@ -7419,9 +7424,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2024-03",
+      "publicationDate": "2024-01-23",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.3023",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -7541,8 +7546,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 7
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1017/s0140525x23002698",
@@ -7653,8 +7657,7 @@
       "counted": false,
       "display": false,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 5
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.1186/s12889-024-18646-z",
@@ -7745,14 +7748,224 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2023-06",
+      "publicationDate": "2023-01-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs11218-023-09761-7",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "identity and belonging",
         "gender and leadership",
         "diversity and inclusion"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1177/19485506221129687",
+      "doi": "10.1177/19485506221129687",
+      "title": "Gendered Self-Views across 62 Countries: A Test of Competing Models",
+      "year": 2023,
+      "yearSource": "curated-reference",
+      "journal": "Social Psychological and Personality Science",
+      "issns": [
+        "1948-5506",
+        "1948-5514"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+      "authors": [
+        "Natasza Kosakowska-Berezecka",
+        "Jennifer K. Bosson",
+        "Paweł Jurek",
+        "Tomasz Besta",
+        "Michał Olech",
+        "Joseph A. Vandello",
+        "Michael Bender",
+        "Justine Dandy",
+        "Vera Hoorens",
+        "Inga Jasinskaja-Lahti",
+        "Eric Mankowski",
+        "Satu Venäläinen",
+        "Sami Abuhamdeh",
+        "Collins Badu Agyemang",
+        "Gülçin Akbaş",
+        "Nihan Albayrak-Aydemir",
+        "Soline Ammirati",
+        "Joel Anderson",
+        "Gulnaz Anjum",
+        "Amarina Ariyanto",
+        "John Jamir Benzon R. Aruta",
+        "Mujeeba Ashraf",
+        "Aistė Bakaitytė",
+        "Maja Becker",
+        "Chiara Bertolli",
+        "Dashamir Bërxulli",
+        "Deborah L. Best",
+        "Chongzeng Bi",
+        "Katharina Block",
+        "Mandy Boehnke",
+        "Renata Bongiorno",
+        "Janine Bosak",
+        "Annalisa Casini",
+        "Qingwei Chen",
+        "Peilian Chi",
+        "Vera Cubela Adoric",
+        "Serena Daalmans",
+        "Soledad de Lemus",
+        "Sandesh Dhakal",
+        "Nikolay Dvorianchikov",
+        "Sonoko Egami",
+        "Edgardo Etchezahar",
+        "Carla Sofia Esteves",
+        "Laura Froehlich",
+        "Efrain Garcia-Sanchez",
+        "Alin Gavreliuc",
+        "Dana Gavreliuc",
+        "Ángel Gomez",
+        "Francesca Guizzo",
+        "Sylvie Graf",
+        "Hedy Greijdanus",
+        "Ani Grigoryan",
+        "Joanna Grzymała-Moszczyńska",
+        "Keltouma Guerch",
+        "Marie Gustafsson Sendén",
+        "Miriam-Linnea Hale",
+        "Hannah Hämer",
+        "Mika Hirai",
+        "Lam Hoang Duc",
+        "Martina Hřebíčková",
+        "Paul B. Hutchings",
+        "Dorthe Høj Jensen",
+        "Serdar Karabati",
+        "Kaltrina Kelmendi",
+        "Gabriella Kengyel",
+        "Narine Khachatryan",
+        "Rawan Ghazzawi",
+        "Mary Kinahan",
+        "Teri A. Kirby",
+        "Monika Kovacs",
+        "Desiree Kozlowski",
+        "Vladislav Krivoshchekov",
+        "Kuba Kryś",
+        "Clara Kulich",
+        "Tai Kurosawa",
+        "Nhan Thi Lac An",
+        "Javier Labarthe-Carrara",
+        "Mary Anne Lauri",
+        "Ioana Latu",
+        "Abiodun Musbau Lawal",
+        "Junyi Li",
+        "Jana Lindner",
+        "Anna Lindqvist",
+        "Angela T. Maitner",
+        "Elena Makarova",
+        "Ana Makashvili",
+        "Shera Malayeri",
+        "Sadia Malik",
+        "Tiziana Mancini",
+        "Claudia Manzi",
+        "Silvia Mari",
+        "Sarah E. Martiny",
+        "Claude-Hélène Mayer",
+        "Vladimir Mihić",
+        "Jasna MiloševićĐorđević",
+        "Eva Moreno-Bella",
+        "Silvia Moscatelli",
+        "Andrew Bryan Moynihan",
+        "Dominique Muller",
+        "Erita Narhetali",
+        "Félix Neto",
+        "Kimberly A. Noels",
+        "Boglárka Nyúl",
+        "Emma C. O’Connor",
+        "Danielle P. Ochoa",
+        "Sachiko Ohno",
+        "Sulaiman Olanrewaju Adebayo",
+        "Randall Osborne",
+        "Maria Giuseppina Pacilli",
+        "Jorge Palacio",
+        "Snigdha Patnaik",
+        "Vassilis Pavlopoulos",
+        "Pablo Pérez de León",
+        "Ivana Piterová",
+        "Juliana Barreiros Porto",
+        "Angelica Puzio",
+        "Joanna Pyrkosz-Pacyna",
+        "Erico Rentería Pérez",
+        "Emma Renström",
+        "Tiphaine Rousseaux",
+        "Michelle K. Ryan",
+        "Saba Safdar",
+        "Mario Sainz",
+        "Marco Salvati",
+        "Adil Samekin",
+        "Simon Schindler",
+        "A. Timur Sevincer",
+        "Masoumeh Seydi",
+        "Debra Shepherd",
+        "Sara Sherbaji",
+        "Toni Schmader",
+        "Cláudia Simão",
+        "Rosita Sobhie",
+        "Jurand Sobiecki",
+        "Lucille De Souza",
+        "Emma Sarter",
+        "Dijana Sulejmanović",
+        "Katie E. Sullivan",
+        "Mariko Tatsumi",
+        "Lucy Tavitian-Elmadjian",
+        "Suparna Jain Thakur",
+        "Quang Thi Mong Chi",
+        "Beatriz Torre",
+        "Ana Torres",
+        "Claudio V. Torres",
+        "Beril Türkoğlu",
+        "Joaquín Ungaretti",
+        "Timothy Valshtein",
+        "Colette Van Laar",
+        "Jolanda van der Noll",
+        "Vadym Vasiutynskyi",
+        "Christin-Melanie Vauclair",
+        "Neharika Vohra",
+        "Marta Walentynowicz",
+        "Colleen Ward",
+        "Anna Włodarczyk",
+        "Yaping Yang",
+        "Vincent Yzerbyt",
+        "Valeska Zanello",
+        "Antonella Ludmila Zapata-Calvente",
+        "Magdalena Zawisza",
+        "Rita Žukauskienė",
+        "Magdalena Żadkowska"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 95.422,
+      "aipJournal": "Social Psychological and Personality Science",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Curated public web seed",
+      "evidence": [
+        "Exact official Pure work with Michelle K. Ryan identified by Pure person UUID and named in the publisher-deposited byline; online 7 November 2022, issue September 2023. Verified 9 November 2026. Source: https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d"
+      ],
+      "provisional": true,
+      "publicationDate": "2023-09",
+      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F19485506221129687",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "identity and belonging",
+        "gender and leadership"
       ],
       "counted": true,
       "display": true,
@@ -8523,9 +8736,9 @@
         "Crossref ORCID matched for Berger, S."
       ],
       "provisional": true,
-      "publicationDate": "2023-09",
+      "publicationDate": "2023-01-18",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.2683",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:ec54805db802a1fc"
       ],
@@ -8943,8 +9156,7 @@
       "counted": true,
       "display": true,
       "aipComparable": true,
-      "aipStatus": "matched",
-      "authorCount": 3
+      "aipStatus": "matched"
     },
     {
       "id": "doi:10.3389/fpsyg.2022.1022299",
@@ -10482,9 +10694,9 @@
         "Crossref ORCID matched for Yuan, Y."
       ],
       "provisional": true,
-      "publicationDate": "2022-06",
+      "publicationDate": "2022-01-18",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjoop.12380",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:2437e426130dc6e1"
       ],
@@ -11996,9 +12208,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2022-03",
+      "publicationDate": "2022-03-21",
       "publicationDateSource": "https://api.crossref.org/works/10.1136%2Fbmjopen-2021-054769",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -12197,9 +12409,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2021-10",
+      "publicationDate": "2021-03-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fsmi.3041",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "stress and strain",
@@ -12309,9 +12521,9 @@
         "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
-      "publicationDate": "2021-11",
+      "publicationDate": "2021-10-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F09567976211015942",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "prosocial behavior"
@@ -12986,9 +13198,9 @@
         "RUG staff publication page for Berger, S. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "publicationDate": "2021-09",
+      "publicationDate": "2021-05-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.2521",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -13037,9 +13249,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2021-05",
+      "publicationDate": "2021-02-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.2507",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:3edd7b81b7a18a74"
       ],
@@ -13345,9 +13557,9 @@
         "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
-      "publicationDate": "2021-08",
+      "publicationDate": "2021-04-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10726-021-09739-w",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -13404,9 +13616,9 @@
       "outputType": "Editorial",
       "counted": false,
       "display": false,
-      "publicationDate": "2021-05",
+      "publicationDate": "2021-03-24",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F23970022211004598",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "people management practices"
@@ -13461,9 +13673,9 @@
       "reviewHold": true,
       "counted": false,
       "display": false,
-      "publicationDate": "2021-05",
+      "publicationDate": "2021-03-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F23970022211004599",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -14741,9 +14953,9 @@
         "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
-      "publicationDate": "2020-06",
+      "publicationDate": "2020-04-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1038%2Fs41593-020-0630-x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -14903,9 +15115,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2020-12",
+      "publicationDate": "2020-07-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjoop.12326",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -15071,9 +15283,9 @@
         "Crossref ORCID matched for Mulder, L.B."
       ],
       "provisional": true,
-      "publicationDate": "2020-04",
+      "publicationDate": "2020-01-23",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjep.13353",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "ethics and morality"
@@ -15648,9 +15860,9 @@
         "Crossref ORCID matched for Mascareño, J.M."
       ],
       "provisional": true,
-      "publicationDate": "2020-09",
+      "publicationDate": "2020-07-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fcaim.12390",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:7cca8e2b003ab9e5"
       ],
@@ -15758,9 +15970,9 @@
         "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2020-12",
+      "publicationDate": "2020-01-28",
       "publicationDateSource": "https://api.crossref.org/works/10.1186%2Fs12889-020-8224-9",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -15816,9 +16028,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2020-12",
+      "publicationDate": "2020-08-26",
       "publicationDateSource": "https://api.crossref.org/works/10.1186%2Fs12889-020-09354-5",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -16598,9 +16810,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2019-09",
+      "publicationDate": "2019-02-07",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjoop.12256",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "wellbeing"
@@ -16743,9 +16955,9 @@
         "Crossref ORCID matched for Mulder, L.B."
       ],
       "provisional": true,
-      "publicationDate": "2019-06",
+      "publicationDate": "2019-02-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjan.13939",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "ethics and morality"
@@ -17799,9 +18011,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2018-11",
+      "publicationDate": "2018-01-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.2260",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -18361,9 +18573,9 @@
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2018-09",
+      "publicationDate": "2018-08-23",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F2515245917747646",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "decision making",
@@ -18554,9 +18766,9 @@
         "Crossref ORCID matched for Lees, J.M."
       ],
       "provisional": true,
-      "publicationDate": "2017-08",
+      "publicationDate": "2017-08-03",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fspc3.12327",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
@@ -18757,9 +18969,9 @@
         "OpenAlex author matched to University of Groningen for Dreu, C. de"
       ],
       "provisional": true,
-      "publicationDate": "2017-05",
+      "publicationDate": "2017-04-25",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fncmr.12092",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "negotiation and bargaining",
@@ -19178,9 +19390,9 @@
         "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "publicationDate": "2017-10",
+      "publicationDate": "2017-07-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fapps.12104",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
@@ -19433,9 +19645,9 @@
         "Crossref author affiliation mentions Groningen for Stoker, J.I."
       ],
       "provisional": true,
-      "publicationDate": "2016-04",
+      "publicationDate": "2016-03-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167216634064",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
@@ -19868,9 +20080,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2016-05",
+      "publicationDate": "2016-02-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjan.12906",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -20025,9 +20237,9 @@
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2016-09",
+      "publicationDate": "2016-07-26",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430216638534",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -20233,9 +20445,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2016-10",
+      "publicationDate": "2016-06-21",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.2223",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -20790,9 +21002,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2015-04",
+      "publicationDate": "2015-01-25",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.1994",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -21090,9 +21302,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2015-11",
+      "publicationDate": "2015-03-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs00420-015-1039-9",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -21336,9 +21548,9 @@
         "RUG staff publication page for Jordan, J. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "publicationDate": "2015-06",
+      "publicationDate": "2015-05-15",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.2101",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "rug:c1767600bf9a9282"
       ],
@@ -21888,9 +22100,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2014-08",
+      "publicationDate": "2014-08-06",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fsmi.2600",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "stress and strain",
@@ -21989,9 +22201,9 @@
         "OpenAlex author matched to University of Groningen for Mulder, L.B."
       ],
       "provisional": true,
-      "publicationDate": "2014-09",
+      "publicationDate": "2014-07-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0190272513518803",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "trust and distrust"
@@ -22043,9 +22255,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2014-01",
+      "publicationDate": "2014-01-13",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fsipr.12006",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "gender and leadership"
@@ -22146,9 +22358,9 @@
         "OpenAlex author matched to University of Groningen for Nijstad, B.A."
       ],
       "provisional": true,
-      "publicationDate": "2014-12",
+      "publicationDate": "2014-10-24",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167214554916",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [],
       "counted": true,
@@ -22590,9 +22802,9 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "publicationDate": "2014-12",
+      "publicationDate": "2014-05-22",
       "publicationDateSource": "https://api.crossref.org/works/10.1186%2F1471-2458-14-488",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "creativity",
@@ -22887,9 +23099,9 @@
         "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2013-10",
+      "publicationDate": "2013-04-22",
       "publicationDateSource": "https://api.crossref.org/works/10.3109%2F0142159x.2013.786817",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "occupational health",
@@ -23043,9 +23255,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2013-08",
+      "publicationDate": "2013-07-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.1954",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "leadership",
@@ -23660,9 +23872,9 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "publicationDate": "2012-11",
+      "publicationDate": "2012-10-04",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797612453115",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
@@ -24654,9 +24866,9 @@
         "OpenAlex author matched to University of Groningen for Jordan, J."
       ],
       "provisional": true,
-      "publicationDate": "2011-09",
+      "publicationDate": "2011-07-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797611416252",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
@@ -24754,9 +24966,9 @@
         "OpenAlex author matched to University of Groningen for Jordan, J."
       ],
       "provisional": true,
-      "publicationDate": "2011-05",
+      "publicationDate": "2011-03-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167211400208",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "ethics and morality",
@@ -25344,9 +25556,9 @@
         "OpenAlex author matched to University of Groningen for Jordan, J."
       ],
       "provisional": true,
-      "publicationDate": "2010-02",
+      "publicationDate": "2010-02-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1559-1816.2009.00580.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "decision making"
@@ -25491,9 +25703,9 @@
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2010-05",
+      "publicationDate": "2010-03-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430209344866",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -25786,9 +25998,9 @@
         "Crossref author affiliation mentions Groningen for Stoker, J.I."
       ],
       "provisional": true,
-      "publicationDate": "2009-12",
+      "publicationDate": "2009-12-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1467-9280.2009.02479.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy"
@@ -25835,9 +26047,9 @@
         "Crossref author affiliation mentions Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2009-06",
+      "publicationDate": "2009-03-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167209333177",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -25938,9 +26150,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2009-05",
+      "publicationDate": "2009-04-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1750-4716.2009.00033.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "prosocial behavior",
@@ -26149,9 +26361,9 @@
         "Crossref author affiliation mentions Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2009-08",
+      "publicationDate": "2009-07-30",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1470595809335715",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [],
       "counted": true,
@@ -26197,9 +26409,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2009-10",
+      "publicationDate": "2009-03-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1059601108331239",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups"
@@ -27205,9 +27417,9 @@
         "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2007-06",
+      "publicationDate": "2007-06-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167207301016",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "diversity and inclusion"
@@ -27255,9 +27467,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2007-10",
+      "publicationDate": "2007-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167207305536",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "motivation and goals"
@@ -27305,9 +27517,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2007-02",
+      "publicationDate": "2007-02-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0149206306295307",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -27410,9 +27622,9 @@
         "OpenAlex author matched to University of Groningen for Mulder, L.B."
       ],
       "provisional": true,
-      "publicationDate": "2007-12",
+      "publicationDate": "2007-12-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs11612-007-0036-1",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "ethics and morality",
@@ -27459,9 +27671,9 @@
         "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2007-03",
+      "publicationDate": "2007-02-28",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1467-8551.2007.00523.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "identity and belonging",
@@ -27647,9 +27859,9 @@
         "OpenAlex author matched to University of Groningen for Mulder, L.B."
       ],
       "provisional": true,
-      "publicationDate": "2006-10",
+      "publicationDate": "2006-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167206289978",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "collaboration and coordination",
@@ -27836,9 +28048,9 @@
         "Crossref author affiliation mentions Groningen for Stoker, J.I."
       ],
       "provisional": true,
-      "publicationDate": "2006-09",
+      "publicationDate": "2006-09-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F030630700603200103",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [],
       "counted": true,
@@ -27934,9 +28146,9 @@
         "OpenAlex author matched to University of Groningen for Rink, F.A."
       ],
       "provisional": true,
-      "publicationDate": "2006-10",
+      "publicationDate": "2006-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430206067560",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -28266,9 +28478,9 @@
         "OpenAlex author matched to University of Groningen for Jordan, J."
       ],
       "provisional": true,
-      "publicationDate": "2005-04",
+      "publicationDate": "2005-04-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167204271586",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [],
       "counted": true,
@@ -28956,9 +29168,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2004-07",
+      "publicationDate": "2004-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0170840604045091",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "gender and leadership"
@@ -29109,9 +29321,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2004-03",
+      "publicationDate": "2004-02-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.242",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -29157,9 +29369,9 @@
         "OpenAlex author matched to University of Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2004-03",
+      "publicationDate": "2004-02-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.238",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "innovation",
@@ -29323,7 +29535,7 @@
     {
       "id": "doi:10.5465/20159587",
       "doi": "10.5465/20159587",
-      "title": "Employees' Goal Orientations, the Quality of Leader-Member Exchange, and the Outcomes of Job Performance and Job Satisfaction",
+      "title": "EMPLOYEES' GOAL ORIENTATIONS, THE QUALITY OF LEADER-MEMBER EXCHANGE, AND THE OUTCOMES OF JOB PERFORMANCE AND JOB SATISFACTION.",
       "year": 2004,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -29592,9 +29804,9 @@
         "Crossref author affiliation mentions Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2002-07",
+      "publicationDate": "2002-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F00222102033004002",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "wellbeing"
@@ -29642,9 +29854,9 @@
         "Crossref author affiliation mentions Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "2002-11",
+      "publicationDate": "2002-11-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F106939702237305",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "gender and leadership",
@@ -29658,7 +29870,7 @@
     {
       "id": "doi:10.5465/3069431",
       "doi": "10.5465/3069431",
-      "title": "Fatigued and Dissatisfied or Fatigued but Satisfied? Goal Orientations and Responses to High Job Demands",
+      "title": "FATIGUED AND DISSATISFIED OR FATIGUED BUT SATISFIED? GOAL ORIENTATIONS AND RESPONSES TO HIGH JOB DEMANDS.",
       "year": 2002,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -29940,9 +30152,9 @@
         "Verified duplicate reconciled: Publisher migration duplicate: identical Stoker/Van der Heijden byline, Journal of Career Development volume 28 issue 2 pages 97–113 (2001). Fresh Crossref records for both registrations and the current SAGE article confirm the exact work identity; the old Kluwer registration has no deposited title. Source: https://journals.sagepub.com/doi/10.1177/089484530102800202"
       ],
       "provisional": true,
-      "publicationDate": "2001-12",
+      "publicationDate": "2001-12-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F089484530102800202",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [
         "doi:10.1023/a:1012538710018"
       ],
@@ -29958,7 +30170,7 @@
     {
       "id": "doi:10.5465/3069447",
       "doi": "10.5465/3069447",
-      "title": "Fairness Perceptions as a Moderator in the Curvilinear Relationships Between Job Demands, and Job Performance and Job Satisfaction",
+      "title": "FAIRNESS PERCEPTIONS AS A MODERATOR IN THE CURVILINEAR RELATIONSHIPS BETWEEN JOB DEMANDS, AND JOB PERFORMANCE AND JOB SATISFACTION.",
       "year": 2001,
       "yearSource": "openalex",
       "journal": "Academy of Management Journal",
@@ -30183,9 +30395,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "2000-08",
+      "publicationDate": "2000-08-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F014920630002600403",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -30507,9 +30719,9 @@
         "Crossref author affiliation mentions Groningen for Janssen, O."
       ],
       "provisional": true,
-      "publicationDate": "1998-07",
+      "publicationDate": "1998-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F001872679805100705",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "emotions and affect",
@@ -30557,9 +30769,9 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "publicationDate": "1998-06",
+      "publicationDate": "1998-06-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1059601198232003",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
         "teams and groups",
@@ -31776,9 +31988,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2009-01",
+      "publicationDate": "2009-02-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1539%2Fjoh.k8004",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "occupational health",
         "wellbeing",
@@ -31875,9 +32087,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2026-07",
+      "publicationDate": "2026-06-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fcasp.70286",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "identity and belonging"
       ],
@@ -32245,9 +32457,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2025-01",
+      "publicationDate": "2025-01-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fcasp.70037",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "status and prestige",
         "identity and belonging"
@@ -32423,9 +32635,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2025-04",
+      "publicationDate": "2025-01-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs12144-024-06989-0",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "emotions and affect",
         "gender and leadership",
@@ -32475,9 +32687,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2024-06",
+      "publicationDate": "2024-05-27",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs11199-024-01473-2",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [],
       "counted": true,
       "display": true,
@@ -32523,9 +32735,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2024-09",
+      "publicationDate": "2024-05-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F03616843241238176",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "motivation and goals",
         "gender and leadership"
@@ -33443,9 +33655,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2023-10",
+      "publicationDate": "2023-06-30",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.2968",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "learning and feedback"
       ],
@@ -33493,9 +33705,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2022-09",
+      "publicationDate": "2022-04-18",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F03616843221084048",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "decision making",
         "gender and leadership"
@@ -33695,9 +33907,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2022-12",
+      "publicationDate": "2022-02-15",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F08862605211073095",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "identity and belonging",
         "gender and leadership",
@@ -33748,9 +33960,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2022-12",
+      "publicationDate": "2022-03-25",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10869-022-09808-0",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity"
       ],
@@ -34140,9 +34352,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2021-10",
+      "publicationDate": "2021-12-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjts5.121",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [],
       "counted": true,
       "display": true,
@@ -34338,9 +34550,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2021-02",
+      "publicationDate": "2021-03-04",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430220984248",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -34744,9 +34956,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2020-11",
+      "publicationDate": "2020-07-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fgwao.12456",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "gender and leadership"
       ],
@@ -34792,9 +35004,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2019-03",
+      "publicationDate": "2019-02-10",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fspc3.12437",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy"
       ],
@@ -34894,9 +35106,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2019-11",
+      "publicationDate": "2019-03-31",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167219838551",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity",
         "stress and strain",
@@ -35240,9 +35452,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2018-03",
+      "publicationDate": "2018-02-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fspc3.12374",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups"
       ],
@@ -35539,9 +35751,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2018-08",
+      "publicationDate": "2018-07-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430218763272",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -35589,9 +35801,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2018-08",
+      "publicationDate": "2018-07-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430218786079",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -36169,9 +36381,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2017-11",
+      "publicationDate": "2017-02-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fbjop.12242",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "status and prestige",
         "creativity",
@@ -36271,9 +36483,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2016-11",
+      "publicationDate": "2016-07-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1948550616657596",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "emotions and affect"
@@ -36369,9 +36581,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2016-08",
+      "publicationDate": "2016-04-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1093%2Fscan%2Fnsw045",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "emotions and affect",
@@ -36976,9 +37188,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2015-09",
+      "publicationDate": "2015-06-22",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fwcs.1354",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity"
       ],
@@ -37025,9 +37237,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2015-12",
+      "publicationDate": "2015-12-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fgpr0000059",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "motivation and goals"
@@ -37128,9 +37340,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2015-09",
+      "publicationDate": "2015-07-31",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797615588306",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "trust and distrust"
@@ -37274,9 +37486,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2015-11",
+      "publicationDate": "2015-01-15",
       "publicationDateSource": "https://api.crossref.org/works/10.1007%2Fs10726-014-9426-2",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -37807,9 +38019,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2014-11",
+      "publicationDate": "2014-09-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797614547919",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "motivation and goals",
         "stereotypes and bias"
@@ -37951,9 +38163,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2014-10",
+      "publicationDate": "2014-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F2372732214549016",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "negotiation and bargaining",
         "conflict"
@@ -38002,9 +38214,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2014-08",
+      "publicationDate": "2014-04-29",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167214533132",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity",
         "prosocial behavior",
@@ -38256,9 +38468,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2014-04",
+      "publicationDate": "2014-04-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0963721414524224",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "motivation and goals"
       ],
@@ -38454,9 +38666,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-10",
+      "publicationDate": "2013-10-04",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fspc3.12062",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity"
       ],
@@ -38564,9 +38776,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-06",
+      "publicationDate": "2013-04-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167213482984",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "stress and strain",
         "motivation and goals"
@@ -38617,9 +38829,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-09",
+      "publicationDate": "2013-07-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167213490804",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity",
         "emotions and affect"
@@ -38921,9 +39133,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-02",
+      "publicationDate": "2013-01-04",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1059601112472368",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "identity and belonging"
@@ -38970,9 +39182,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-12",
+      "publicationDate": "2013-07-24",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1529100613496959",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "collaboration and coordination",
         "prosocial behavior"
@@ -39121,9 +39333,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2013-07",
+      "publicationDate": "2013-06-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1754073913477512",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "motivation and goals",
         "emotions and affect"
@@ -39278,9 +39490,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2012-11",
+      "publicationDate": "2012-09-18",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797612446026",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [],
       "counted": true,
       "display": true,
@@ -39330,9 +39542,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2012-05",
+      "publicationDate": "2012-02-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167211435795",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity"
       ],
@@ -39485,9 +39697,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2012-10",
+      "publicationDate": "2012-09-19",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1365-2923.2012.04321.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "conflict",
@@ -39789,9 +40001,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2012-01",
+      "publicationDate": "2012-01-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1174%2F021347412802845603",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "leadership",
         "power and hierarchy",
@@ -39938,9 +40150,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2012-09",
+      "publicationDate": "2012-09-12",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430212454588",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -40333,9 +40545,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2011-11",
+      "publicationDate": "2011-10-17",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0956797611418677",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "stress and strain",
         "motivation and goals",
@@ -40489,9 +40701,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2011-02",
+      "publicationDate": "2011-01-07",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1750-4716.2010.00071.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "prosocial behavior",
@@ -40901,9 +41113,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2011-11",
+      "publicationDate": "2011-11-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1559-1816.2011.00844.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "prosocial behavior",
         "stress and strain"
@@ -41000,9 +41212,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2011-05",
+      "publicationDate": "2011-03-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430210384417",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -41397,9 +41609,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-03",
+      "publicationDate": "2010-03-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1471-6402.2009.01541.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "gender and leadership",
         "competition"
@@ -41499,9 +41711,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-11",
+      "publicationDate": "2010-09-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167210383698",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "negotiation and bargaining",
         "motivation and goals"
@@ -41897,9 +42109,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-11",
+      "publicationDate": "2010-10-28",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430210377332",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -41949,9 +42161,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-11",
+      "publicationDate": "2010-10-28",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430210379462",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -42100,9 +42312,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-03",
+      "publicationDate": "2010-07-09",
       "publicationDateSource": "https://api.crossref.org/works/10.1080%2F10463281003765323",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "creativity",
         "work design"
@@ -42149,9 +42361,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2010-12",
+      "publicationDate": "2010-11-24",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.763",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "decision making",
@@ -42565,9 +42777,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2009-08",
+      "publicationDate": "2009-04-15",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1046496409333724",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups"
       ],
@@ -42665,9 +42877,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2009-12",
+      "publicationDate": "2009-11-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1540-4560.2009.01625.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "collaboration and coordination",
@@ -43159,9 +43371,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2009-12",
+      "publicationDate": "2009-12-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1467-8551.2008.00604.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "gender and leadership",
         "social networks"
@@ -43485,9 +43697,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2008-12",
+      "publicationDate": "2008-10-31",
       "publicationDateSource": "https://api.crossref.org/works/10.1080%2F15534510802341157",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "decision making",
@@ -43790,9 +44002,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2008-07",
+      "publicationDate": "2008-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430208090646",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -43840,9 +44052,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2008-10",
+      "publicationDate": "2008-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430208095404",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -43891,9 +44103,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2008-07",
+      "publicationDate": "2008-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430208090648",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -43944,9 +44156,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2008-12",
+      "publicationDate": "2008-12-03",
       "publicationDateSource": "https://api.crossref.org/works/10.1080%2F09687590802469198",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "careers and employability"
       ],
@@ -44352,9 +44564,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2007-11",
+      "publicationDate": "2007-10-11",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1751-9004.2007.00007.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "leadership",
         "gender and leadership"
@@ -44405,9 +44617,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2007-06",
+      "publicationDate": "2007-06-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167207301017",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "creativity",
@@ -44743,9 +44955,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2007-10",
+      "publicationDate": "2007-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430207081541",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -44989,9 +45201,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2007-10",
+      "publicationDate": "2007-10-29",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1464-0597.2007.00305.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "leadership",
         "gender and leadership"
@@ -45446,9 +45658,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2006-08",
+      "publicationDate": "2006-08-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1207%2Fs15327957pspr1003_1",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "creativity",
@@ -45601,9 +45813,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2006-08",
+      "publicationDate": "2006-06-21",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.370",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "identity and belonging"
       ],
@@ -45648,9 +45860,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2006-02",
+      "publicationDate": "2006-02-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0149206305277795",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "innovation",
@@ -45984,9 +46196,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2006-07",
+      "publicationDate": "2006-07-17",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.320",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "negotiation and bargaining",
@@ -46709,9 +46921,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2005-09",
+      "publicationDate": "2005-09-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.292",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "status and prestige",
@@ -46851,9 +47063,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2005-06",
+      "publicationDate": "2005-02-09",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1467-8551.2005.00433.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "leadership",
         "gender and leadership"
@@ -46901,9 +47113,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2004-09",
+      "publicationDate": "2004-09-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fj.1471-6402.2004.00142.x",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "ethics and morality",
         "identity and belonging",
@@ -47048,9 +47260,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2004-03",
+      "publicationDate": "2004-02-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.236",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "innovation"
       ],
@@ -47340,9 +47552,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2004-09",
+      "publicationDate": "2004-08-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fejsp.218",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "negotiation and bargaining",
         "stress and strain"
@@ -47634,9 +47846,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2003-10",
+      "publicationDate": "2003-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F13684302030064004",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -47777,9 +47989,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2002-10",
+      "publicationDate": "2002-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F014616702236819",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "power and hierarchy",
         "decision making",
@@ -47878,9 +48090,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2002-03",
+      "publicationDate": "2002-01-16",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.136",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "decision making",
         "prosocial behavior",
@@ -48127,9 +48339,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2002-07",
+      "publicationDate": "2002-06-14",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2F1464-0597.00984",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "creativity",
@@ -48317,9 +48529,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2001-05",
+      "publicationDate": "2001-04-20",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.71",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "conflict"
@@ -48369,9 +48581,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2001-09",
+      "publicationDate": "2001-08-17",
       "publicationDateSource": "https://api.crossref.org/works/10.1002%2Fjob.107",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "conflict"
       ],
@@ -48684,9 +48896,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "2001-07",
+      "publicationDate": "2001-07-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F1368430201004003002",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "intergroup relations",
@@ -49389,9 +49601,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "1999-03",
+      "publicationDate": "1999-03-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167299025003007",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "negotiation and bargaining",
         "motivation and goals"
@@ -49439,9 +49651,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "1999-04",
+      "publicationDate": "1999-04-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F014920639902500201",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "teams and groups",
         "collaboration and coordination",
@@ -49740,9 +49952,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "1998-10",
+      "publicationDate": "1998-10-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0265407598155004",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "decision making",
         "conflict",
@@ -50522,9 +50734,9 @@
       ],
       "provisional": true,
       "previousIds": [],
-      "publicationDate": "1995-11",
+      "publicationDate": "1995-11-01",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F01461672952111006",
-      "publicationDateType": "published-print",
+      "publicationDateType": "published-online",
       "topicFamilies": [
         "prosocial behavior"
       ],
@@ -52081,215 +52293,6 @@
       "aipStatus": "matched",
       "previousIds": [],
       "reviewHold": true
-    },
-    {
-      "id": "doi:10.1177/19485506221129687",
-      "doi": "10.1177/19485506221129687",
-      "title": "Gendered Self-Views across 62 Countries: A Test of Competing Models",
-      "year": 2023,
-      "yearSource": "curated-reference",
-      "journal": "Social Psychological and Personality Science",
-      "issns": [
-        "1948-5506",
-        "1948-5514"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
-      "authors": [
-        "Natasza Kosakowska-Berezecka",
-        "Jennifer K. Bosson",
-        "Paweł Jurek",
-        "Tomasz Besta",
-        "Michał Olech",
-        "Joseph A. Vandello",
-        "Michael Bender",
-        "Justine Dandy",
-        "Vera Hoorens",
-        "Inga Jasinskaja-Lahti",
-        "Eric Mankowski",
-        "Satu Venäläinen",
-        "Sami Abuhamdeh",
-        "Collins Badu Agyemang",
-        "Gülçin Akbaş",
-        "Nihan Albayrak-Aydemir",
-        "Soline Ammirati",
-        "Joel Anderson",
-        "Gulnaz Anjum",
-        "Amarina Ariyanto",
-        "John Jamir Benzon R. Aruta",
-        "Mujeeba Ashraf",
-        "Aistė Bakaitytė",
-        "Maja Becker",
-        "Chiara Bertolli",
-        "Dashamir Bërxulli",
-        "Deborah L. Best",
-        "Chongzeng Bi",
-        "Katharina Block",
-        "Mandy Boehnke",
-        "Renata Bongiorno",
-        "Janine Bosak",
-        "Annalisa Casini",
-        "Qingwei Chen",
-        "Peilian Chi",
-        "Vera Cubela Adoric",
-        "Serena Daalmans",
-        "Soledad de Lemus",
-        "Sandesh Dhakal",
-        "Nikolay Dvorianchikov",
-        "Sonoko Egami",
-        "Edgardo Etchezahar",
-        "Carla Sofia Esteves",
-        "Laura Froehlich",
-        "Efrain Garcia-Sanchez",
-        "Alin Gavreliuc",
-        "Dana Gavreliuc",
-        "Ángel Gomez",
-        "Francesca Guizzo",
-        "Sylvie Graf",
-        "Hedy Greijdanus",
-        "Ani Grigoryan",
-        "Joanna Grzymała-Moszczyńska",
-        "Keltouma Guerch",
-        "Marie Gustafsson Sendén",
-        "Miriam-Linnea Hale",
-        "Hannah Hämer",
-        "Mika Hirai",
-        "Lam Hoang Duc",
-        "Martina Hřebíčková",
-        "Paul B. Hutchings",
-        "Dorthe Høj Jensen",
-        "Serdar Karabati",
-        "Kaltrina Kelmendi",
-        "Gabriella Kengyel",
-        "Narine Khachatryan",
-        "Rawan Ghazzawi",
-        "Mary Kinahan",
-        "Teri A. Kirby",
-        "Monika Kovacs",
-        "Desiree Kozlowski",
-        "Vladislav Krivoshchekov",
-        "Kuba Kryś",
-        "Clara Kulich",
-        "Tai Kurosawa",
-        "Nhan Thi Lac An",
-        "Javier Labarthe-Carrara",
-        "Mary Anne Lauri",
-        "Ioana Latu",
-        "Abiodun Musbau Lawal",
-        "Junyi Li",
-        "Jana Lindner",
-        "Anna Lindqvist",
-        "Angela T. Maitner",
-        "Elena Makarova",
-        "Ana Makashvili",
-        "Shera Malayeri",
-        "Sadia Malik",
-        "Tiziana Mancini",
-        "Claudia Manzi",
-        "Silvia Mari",
-        "Sarah E. Martiny",
-        "Claude-Hélène Mayer",
-        "Vladimir Mihić",
-        "Jasna MiloševićĐorđević",
-        "Eva Moreno-Bella",
-        "Silvia Moscatelli",
-        "Andrew Bryan Moynihan",
-        "Dominique Muller",
-        "Erita Narhetali",
-        "Félix Neto",
-        "Kimberly A. Noels",
-        "Boglárka Nyúl",
-        "Emma C. O’Connor",
-        "Danielle P. Ochoa",
-        "Sachiko Ohno",
-        "Sulaiman Olanrewaju Adebayo",
-        "Randall Osborne",
-        "Maria Giuseppina Pacilli",
-        "Jorge Palacio",
-        "Snigdha Patnaik",
-        "Vassilis Pavlopoulos",
-        "Pablo Pérez de León",
-        "Ivana Piterová",
-        "Juliana Barreiros Porto",
-        "Angelica Puzio",
-        "Joanna Pyrkosz-Pacyna",
-        "Erico Rentería Pérez",
-        "Emma Renström",
-        "Tiphaine Rousseaux",
-        "Michelle K. Ryan",
-        "Saba Safdar",
-        "Mario Sainz",
-        "Marco Salvati",
-        "Adil Samekin",
-        "Simon Schindler",
-        "A. Timur Sevincer",
-        "Masoumeh Seydi",
-        "Debra Shepherd",
-        "Sara Sherbaji",
-        "Toni Schmader",
-        "Cláudia Simão",
-        "Rosita Sobhie",
-        "Jurand Sobiecki",
-        "Lucille De Souza",
-        "Emma Sarter",
-        "Dijana Sulejmanović",
-        "Katie E. Sullivan",
-        "Mariko Tatsumi",
-        "Lucy Tavitian-Elmadjian",
-        "Suparna Jain Thakur",
-        "Quang Thi Mong Chi",
-        "Beatriz Torre",
-        "Ana Torres",
-        "Claudio V. Torres",
-        "Beril Türkoğlu",
-        "Joaquín Ungaretti",
-        "Timothy Valshtein",
-        "Colette Van Laar",
-        "Jolanda van der Noll",
-        "Vadym Vasiutynskyi",
-        "Christin-Melanie Vauclair",
-        "Neharika Vohra",
-        "Marta Walentynowicz",
-        "Colleen Ward",
-        "Anna Włodarczyk",
-        "Yaping Yang",
-        "Vincent Yzerbyt",
-        "Valeska Zanello",
-        "Antonella Ludmila Zapata-Calvente",
-        "Magdalena Zawisza",
-        "Rita Žukauskienė",
-        "Magdalena Żadkowska"
-      ],
-      "matchedPeople": [
-        "MR"
-      ],
-      "sourcePeople": [
-        "MR"
-      ],
-      "aip": 95.422,
-      "aipJournal": "Social Psychological and Personality Science",
-      "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "Curated public web seed",
-      "evidence": [
-        "Exact official Pure work with Michelle K. Ryan identified by Pure person UUID and named in the publisher-deposited byline; online 7 November 2022, issue September 2023. Verified 9 November 2026. Source: https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d"
-      ],
-      "provisional": true,
-      "topicFamilies": [
-        "identity and belonging",
-        "gender and leadership"
-      ],
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "counted": true,
-      "display": true,
-      "publicationDate": "2023-09",
-      "publicationDateSource": "https://api.crossref.org/works/10.1177%2F19485506221129687",
-      "publicationDateType": "published-print"
     }
   ]
 }

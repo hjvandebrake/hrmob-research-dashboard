@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261109-refresh2";
+const DATA_VERSION = "20261112-refresh";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -5054,7 +5054,7 @@ function grantFitReasons(personId, call) {
   if (call.manualReason && Array.isArray(call.includePersonIds) && call.includePersonIds.includes(personId)) {
     reasons.push(call.manualReason);
   }
-  if (profile.phdYear) reasons.push(window ? `Assumes PhD ${profile.phdYear}; window ${window.label}` : `Public CV/profile: PhD ${profile.phdYear}`);
+  if (profile.phdYear) reasons.push(window ? `Assumes PhD ${profile.phdYear}; window ${window.label}` : `Public degree evidence: PhD ${profile.phdYear}`);
   else if (!window && profile.firstYear) reasons.push(`Weak proxy: first counted publication ${profile.firstYear}`);
   if (profile.highAip) reasons.push(`${profile.highAip} AIP >= 95 publication${profile.highAip === 1 ? "" : "s"}`);
   if (profile.grants) reasons.push(`${profile.grants} recorded grant${profile.grants === 1 ? "" : "s"}`);

@@ -10,7 +10,7 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-11-09",
+    "generatedOn": "2026-11-12",
     "people": 528,
     "publicationsChecked": 4317,
     "ambiguousNames": 0,
@@ -84076,6 +84076,38 @@
       ]
     },
     {
+      "id": "doi:10.1177/19485506221129687",
+      "doi": "10.1177/19485506221129687",
+      "publicationIds": [
+        "doi:10.1177/19485506221129687"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "hrmob-mk-ryan",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai%3Apure.rug.nl%3Apublications%2F91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+            "https://api.crossref.org/works/10.1177%2F19485506221129687"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai%3Apure.rug.nl%3Apublications%2F91edc6fa-c00e-4f9a-99ac-0465c26c858d",
+        "https://api.crossref.org/works/10.1177%2F19485506221129687"
+      ],
+      "curatedSourceCheckedOn": "2026-11-09"
+    },
+    {
       "id": "doi:10.1038/s41598-023-29512-0",
       "doi": "10.1038/s41598-023-29512-0",
       "publicationIds": [
@@ -92113,38 +92145,6 @@
       ]
     },
     {
-      "id": "doi:10.1177/19485506221129687",
-      "doi": "10.1177/19485506221129687",
-      "publicationIds": [
-        "doi:10.1177/19485506221129687"
-      ],
-      "people": [
-        "hrmob-mk-ryan"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-mk-ryan",
-          "author": "Michelle K. Ryan",
-          "method": "unique compatible author name"
-        },
-        {
-          "personId": "hrmob-mk-ryan",
-          "method": "exact work on official institutional publication record",
-          "sources": [
-            "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
-            "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai%3Apure.rug.nl%3Apublications%2F91edc6fa-c00e-4f9a-99ac-0465c26c858d",
-            "https://api.crossref.org/works/10.1177%2F19485506221129687"
-          ]
-        }
-      ],
-      "curatedSourceEvidence": [
-        "https://research.rug.nl/en/publications/91edc6fa-c00e-4f9a-99ac-0465c26c858d",
-        "https://pure.rug.nl/ws/oai?verb=GetRecord&metadataPrefix=oai_cerif_openaire&identifier=oai%3Apure.rug.nl%3Apublications%2F91edc6fa-c00e-4f9a-99ac-0465c26c858d",
-        "https://api.crossref.org/works/10.1177%2F19485506221129687"
-      ],
-      "curatedSourceCheckedOn": "2026-11-09"
-    },
-    {
       "id": "doi:10.1016/j.jrurstud.2022.10.027",
       "doi": "10.1016/j.jrurstud.2022.10.027",
       "publicationIds": [
@@ -98448,6 +98448,64 @@
         "https://www.rug.nl/staff/j.ross/research?lang=en"
       ],
       "curatedSourceCheckedOn": "2026-11-09"
+    },
+    {
+      "id": "doi:10.1016/j.jdeveco.2026.103961",
+      "doi": "10.1016/j.jdeveco.2026.103961",
+      "publicationIds": [
+        "doi:10.1016/j.jdeveco.2026.103961"
+      ],
+      "people": [
+        "eef-a-rauf"
+      ],
+      "matches": [
+        {
+          "personId": "eef-a-rauf",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/0e86a031-e605-45c9-8c21-59d11c910c28",
+            "https://research.rug.nl/en/publications/banking-on-jobs-impact-of-a-workfare-program-on-formal-credit/",
+            "https://api.crossref.org/works/10.1016%2Fj.jdeveco.2026.103961",
+            "https://www.rug.nl/staff/a.rauf/projects?lang=en"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/0e86a031-e605-45c9-8c21-59d11c910c28",
+        "https://research.rug.nl/en/publications/banking-on-jobs-impact-of-a-workfare-program-on-formal-credit/",
+        "https://api.crossref.org/works/10.1016%2Fj.jdeveco.2026.103961",
+        "https://www.rug.nl/staff/a.rauf/projects?lang=en"
+      ],
+      "curatedSourceCheckedOn": "2026-11-12"
+    },
+    {
+      "id": "doi:10.1073/pnas.2532642123",
+      "doi": "10.1073/pnas.2532642123",
+      "publicationIds": [
+        "doi:10.1073/pnas.2532642123"
+      ],
+      "people": [
+        "eef-mc-mills"
+      ],
+      "matches": [
+        {
+          "personId": "eef-mc-mills",
+          "method": "exact work on official institutional publication record",
+          "sources": [
+            "https://research.rug.nl/en/publications/312f3e89-025b-4ee3-9923-dba148ca2348",
+            "https://pubmed.ncbi.nlm.nih.gov/42475558/",
+            "https://api.crossref.org/works/10.1073%2Fpnas.2532642123",
+            "https://www.demography.ox.ac.uk/news/can-children-shape-their-parents-lives-new-study-reveals-influence-may-flow-both-ways"
+          ]
+        }
+      ],
+      "curatedSourceEvidence": [
+        "https://research.rug.nl/en/publications/312f3e89-025b-4ee3-9923-dba148ca2348",
+        "https://pubmed.ncbi.nlm.nih.gov/42475558/",
+        "https://api.crossref.org/works/10.1073%2Fpnas.2532642123",
+        "https://www.demography.ox.ac.uk/news/can-children-shape-their-parents-lives-new-study-reveals-influence-may-flow-both-ways"
+      ],
+      "curatedSourceCheckedOn": "2026-11-12"
     }
   ]
 }

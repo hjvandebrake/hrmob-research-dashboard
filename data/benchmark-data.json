@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-09",
+    "generatedOn": "2026-11-12",
     "source": "publication-dashboard/benchmark/benchmark_index.json",
     "publicationSource": "OpenAlex public metadata matched to accepted OpenAlex author profiles; RUG staff profile URLs are retained for audit.",
     "benchmarkSourceMethod": "openalex-author-id",
@@ -18,7 +18,7 @@
       "associate_professor",
       "full_professor"
     ],
-    "identityReviewedOn": "2026-11-09",
+    "identityReviewedOn": "2026-11-12",
     "identityConflictPeople": [
       "acc-da-de-waard",
       "gem-x-ye",
@@ -37,12 +37,13 @@
     ],
     "excludedReviewedRolePeople": [
       "mkt-a-minnema",
-      "mkt-jim-de-groot"
+      "mkt-jim-de-groot",
+      "mkt-saeg-albalooshi"
     ],
-    "professorRoleReviewCheckedOn": "2026-10-29",
+    "professorRoleReviewCheckedOn": "2026-11-12",
     "denominatorRosterCheckedOn": "2026-09-07",
     "quarantinedPublications": 682,
-    "excludedNonArticleOutputs": 142,
+    "excludedNonArticleOutputs": 144,
     "uncorroboratedAuthorLinks": 177,
     "unmatchedRankableJournals": [
       "ACM SIGMIS Database the DATABASE for Advances in Information Systems",
@@ -416,10 +417,10 @@
       "family": "Albalooshi",
       "given": "Sumaya",
       "department": "Marketing",
-      "rank": "assistant_professor",
+      "rank": "unknown",
       "decision": "include",
-      "includedInDenominator": true,
-      "denominatorExclusion": "",
+      "includedInDenominator": false,
+      "denominatorExclusion": "reviewed current role is not an eligible professor appointment",
       "identityReview": "author links checked"
     },
     {
@@ -20042,8 +20043,7 @@
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "mkt-m-moeini-jazani",
-        "mkt-saeg-albalooshi"
+        "mkt-m-moeini-jazani"
       ],
       "departments": [
         "Marketing"
@@ -21888,12 +21888,8 @@
       "aip": 99.353,
       "aipComparable": true,
       "aipStatus": "matched",
-      "people": [
-        "mkt-saeg-albalooshi"
-      ],
-      "departments": [
-        "Marketing"
-      ],
+      "people": [],
+      "departments": [],
       "allPeople": [
         "mkt-saeg-albalooshi"
       ],
@@ -39601,8 +39597,7 @@
       "aipComparable": true,
       "aipStatus": "matched",
       "people": [
-        "mkt-m-moeini-jazani",
-        "mkt-saeg-albalooshi"
+        "mkt-m-moeini-jazani"
       ],
       "departments": [
         "Marketing"
@@ -39741,8 +39736,7 @@
       "aipStatus": "matched",
       "people": [
         "mkt-bm-fennis",
-        "mkt-m-moeini-jazani",
-        "mkt-saeg-albalooshi"
+        "mkt-m-moeini-jazani"
       ],
       "departments": [
         "Marketing"
@@ -55159,31 +55153,6 @@
       ],
       "allDepartments": [
         "Marketing"
-      ]
-    },
-    {
-      "id": "doi:10.1016/j.intacc.2016.01.004",
-      "year": 2016,
-      "title": "Book Review",
-      "doi": "10.1016/j.intacc.2016.01.004",
-      "journal": "The International Journal of Accounting",
-      "authors": [
-        "Reggy Hooghiemstra"
-      ],
-      "aip": 54.803,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "acc-rbh-hooghiemstra"
-      ],
-      "departments": [
-        "Accounting"
-      ],
-      "allPeople": [
-        "acc-rbh-hooghiemstra"
-      ],
-      "allDepartments": [
-        "Accounting"
       ]
     },
     {
@@ -76634,33 +76603,6 @@
       ]
     },
     {
-      "id": "doi:10.1016/j.appet.2009.01.001",
-      "year": 2009,
-      "title": "RETRACTED: How negative experiences shape long-term food preferences. Fifty years from the World War II combat front",
-      "doi": "10.1016/j.appet.2009.01.001",
-      "journal": "Appetite",
-      "authors": [
-        "Brian Wansink",
-        "Koert van Ittersum",
-        "Carolina Werle"
-      ],
-      "aip": 81.05,
-      "aipComparable": true,
-      "aipStatus": "matched",
-      "people": [
-        "mkt-k-van-ittersum"
-      ],
-      "departments": [
-        "Marketing"
-      ],
-      "allPeople": [
-        "mkt-k-van-ittersum"
-      ],
-      "allDepartments": [
-        "Marketing"
-      ]
-    },
-    {
       "id": "doi:10.1080/13603100902805409",
       "year": 2009,
       "title": "Restructuring research support offices",
@@ -87318,7 +87260,7 @@
     }
   ],
   "qualitySummary": {
-    "generatedOn": "2026-11-09",
+    "generatedOn": "2026-11-12",
     "scope": "Benchmark departments excluding HRM&OB",
     "people": 170,
     "qualityDecisionCounts": {

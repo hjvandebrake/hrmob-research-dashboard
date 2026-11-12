@@ -4,9 +4,9 @@
     "updatedLabel": "26 March 2026",
     "sourceUpdatedDate": "2026-03-26",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "generatedDate": "2026-11-05",
-    "deadlineStatusAsOf": "2026-11-05",
-    "recentCallsChecked": "2026-11-05",
+    "generatedDate": "2026-11-12",
+    "deadlineStatusAsOf": "2026-11-12",
+    "recentCallsChecked": "2026-11-12",
     "officialDeadlinesChecked": "2026-09-25",
     "deadlineStatusValues": {
       "upcoming": "Upcoming",
@@ -16,7 +16,7 @@
       "date-unconfirmed": "Date not confirmed"
     },
     "deadlineStatusRule": "Exact dates within 120 days are upcoming; later exact dates are later; elapsed dates are passed; vague timing remains date-unconfirmed.",
-    "researchNewsResourcesChecked": "2026-11-05"
+    "researchNewsResourcesChecked": "2026-11-12"
   },
   "opportunities": [
     {
@@ -35,7 +35,7 @@
       "timing": "Pre-proposal stage closed 1 September 2026; invited full proposals close 26 January 2027 at 14:00 CET.",
       "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2026",
       "sourceLabel": "NWO Veni SSH 2026 call",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2027-01-26",
       "nextDeadlineDate": "2027-01-26",
       "deadlineDates": [
@@ -55,7 +55,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": 2026,
       "fitStage": "early",
       "fitNote": "Possible early-career fit signal only; the pre-proposal stage has closed and only invited applicants can submit a full proposal."
@@ -176,7 +176,7 @@
       "funder": "NWO",
       "amount": "€50,000",
       "duration": "6-24 months",
-      "eligibility": "Researchers holding a PhD and a paid position at an eligible research organisation for the application process and project duration; check the official call for permitted appointments.",
+      "eligibility": "One applicant with a PhD and a paid position at an eligible institution throughout the application and project. Prior and concurrent NWO/ZonMw applications or awards can restrict eligibility.",
       "successRate": "Variable",
       "deadline": "Explore is the new name of SSH Open Competition XS. 2027 rounds close 19 January, 6 April, and 14 September 2027, each at 14:00. The last 2026 XS round closed 15 September 2026 (its call summary lists 25 September 2026, 14:00).",
       "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
@@ -186,7 +186,7 @@
       "timing": "Explore is the new name of SSH Open Competition XS. The 2027 rounds close 19 January, 6 April, and 14 September 2027, each at 14:00.",
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-explore-2027-round-1",
       "sourceLabel": "NWO SSH Open Competition Explore 2027",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2027-01-19",
       "nextDeadlineDate": "2027-01-19",
       "deadlineDates": [
@@ -216,10 +216,10 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": "",
       "fitStage": "all-phd",
-      "fitNote": "Possible exploratory-project fit across post-PhD career stages; verify appointment and institutional conditions."
+      "fitNote": "Possible exploratory-project fit across post-PhD career stages; check appointment and NWO/ZonMw application rules."
     },
     {
       "stage": "Mid-Career",
@@ -227,17 +227,17 @@
       "funder": "NWO",
       "amount": "€850,000",
       "duration": "5 years",
-      "eligibility": "PhD obtained within eight years before 1 October 2026, with permitted extensions; eligible host and embedding guarantee required. Full proposals by invitation only after a submitted pre-proposal.",
+      "eligibility": "PhD obtained max 8 years ago",
       "successRate": "15-20%",
-      "deadline": "Pre-proposals close 3 November 2026, 14:00 CET; full proposals close 6 April 2027, 14:00 CEST.",
+      "deadline": "Pre-proposals closed 3 November 2026; invited full proposals close 6 April 2027, 14:00 CEST.",
       "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
       "link": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2025",
       "workbookDeadline": "Full proposal: 9 April 2026",
       "workbookName": "NWO Vidi SSH 2025",
-      "timing": "Pre-proposal stage closed 3 November 2026, 14:00 CET; invited full proposals close 6 April 2027, 14:00 CEST.",
+      "timing": "Pre-proposals closed 3 November 2026; invited full proposals close 6 April 2027, 14:00 CEST.",
       "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2026",
       "sourceLabel": "NWO Vidi SSH 2026 call",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "",
       "deadlineDate": "2027-04-06",
       "nextDeadlineDate": "2027-04-06",
       "deadlineDates": [
@@ -248,7 +248,7 @@
         },
         {
           "date": "2027-04-06",
-          "label": "Full proposal",
+          "label": "Invited full proposal",
           "status": "later"
         }
       ],
@@ -257,10 +257,7 @@
       "deadlineStatus": "later",
       "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
-      "eligibilityReferenceYear": 2026,
-      "fitStage": "mid",
-      "fitNote": "Possible mid-career fit signal only; pre-proposals have closed and the full-proposal stage requires an invitation. Verify the 1 October 2026 PhD reference date, extensions and embedding conditions."
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "stage": "Mid-Career",
@@ -277,7 +274,7 @@
       "timing": "2027 call opened 24 September 2026; deadline 12 January 2027.",
       "sourceUrl": "https://erc.europa.eu/apply-grant/consolidator-grant",
       "sourceLabel": "ERC Consolidator Grant 2027 call",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2027-01-12",
       "nextDeadlineDate": "2027-01-12",
       "deadlineDates": [
@@ -292,7 +289,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": "",
       "fitStage": "mid",
       "fitNote": "Possible mid-career fit signal only; verify PhD defence date, extensions, and host commitment."
@@ -303,17 +300,17 @@
       "funder": "NWO",
       "amount": "€400,000",
       "duration": "~4 years",
-      "eligibility": "PhD obtained at least 10 years ago",
+      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
       "successRate": "~20%",
       "deadline": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
       "tips": "Funds one PhD or postdoc position alongside your own research time. Medium-scale independent programme. Alternates annually with the L scheme. Check NWO for call opening.",
       "link": "https://www.nwo.nl/en/calls/ssh-open-competition-m-2024",
       "workbookDeadline": "Expected mid-2026 (alternates with L)",
       "workbookName": "NWO SSH Open Competition M",
-      "timing": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
+      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
-      "sourceLabel": "NWO SSH Open Competition Expand 2026",
-      "sourceNote": "",
+      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2026-11-17",
       "nextDeadlineDate": "2026-11-17",
       "deadlineDates": [
@@ -333,7 +330,10 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-10-28"
+      "sourceCheckedDate": "2026-11-12",
+      "eligibilityReferenceYear": "",
+      "fitStage": "established",
+      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer."
     },
     {
       "stage": "Senior",
@@ -363,7 +363,7 @@
         {
           "date": "2027-03-09",
           "label": "Pre-proposal (provisional)",
-          "status": "later"
+          "status": "upcoming"
         },
         {
           "date": "2027-09-07",
@@ -373,8 +373,8 @@
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "later",
-      "deadlineStatusLabel": "Later",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-10-28"
     },
@@ -410,17 +410,17 @@
       "funder": "NWO",
       "amount": "€800,000",
       "duration": "Up to 6 years",
-      "eligibility": "PhD obtained at least 15 years ago",
+      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
       "successRate": "~15%",
       "deadline": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
       "tips": "Largest NWO SSH individual grant. Funds a substantial research programme with multiple positions. Runs biennially. The 2025 round closed Feb 2026 and is now in assessment.",
       "link": "https://www.nwo.nl/en/calls/ssh-open-competition-l-2025",
       "workbookDeadline": "Next round ~2027 (2025 round in assessment)",
       "workbookName": "NWO SSH Open Competition L",
-      "timing": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
+      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
-      "sourceLabel": "NWO SSH Open Competition Expand 2026",
-      "sourceNote": "",
+      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2026-11-17",
       "nextDeadlineDate": "2026-11-17",
       "deadlineDates": [
@@ -440,7 +440,10 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-10-28"
+      "sourceCheckedDate": "2026-11-12",
+      "eligibilityReferenceYear": "",
+      "fitStage": "established",
+      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer."
     },
     {
       "stage": "Senior",
@@ -465,7 +468,7 @@
         {
           "date": "2027-03-10",
           "label": "Cut-off 1",
-          "status": "later"
+          "status": "upcoming"
         },
         {
           "date": "2027-09-16",
@@ -475,8 +478,8 @@
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "later",
-      "deadlineStatusLabel": "Later",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-09-25"
     },
@@ -752,7 +755,7 @@
       "timing": "Pre-proposal stage closed 1 September 2026; invited full proposals close 26 January 2027 at 14:00 CET.",
       "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2026",
       "sourceLabel": "NWO Veni SSH 2026 call",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2027-01-26",
       "nextDeadlineDate": "2027-01-26",
       "deadlineDates": [
@@ -772,7 +775,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": 2026,
       "fitStage": "early",
       "fitNote": "Possible early-career fit signal only; the pre-proposal stage has closed and only invited applicants can submit a full proposal."
@@ -783,17 +786,17 @@
       "funder": "NWO",
       "amount": "€400,000",
       "duration": "~4 years",
-      "eligibility": "PhD obtained at least 10 years ago",
+      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
       "successRate": "",
       "deadline": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
       "tips": "Alternates with L round. Monitor NWO announcements.",
       "link": "https://www.nwo.nl/en/researchprogrammes/open-competition-ssh",
       "workbookDeadline": "Expected late 2026 or 2027",
       "workbookName": "NWO SSH Open Competition M (next round)",
-      "timing": "Expand is the new name of the former SSH Open Competition M and L. Pre-proposals close 17 November 2026, 14:00 CET; full proposals close 10 June 2027, 14:00 CEST.",
+      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
-      "sourceLabel": "NWO SSH Open Competition Expand 2026",
-      "sourceNote": "",
+      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "deadlineDate": "2026-11-17",
       "nextDeadlineDate": "2026-11-17",
       "deadlineDates": [
@@ -813,7 +816,10 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-10-28"
+      "sourceCheckedDate": "2026-11-12",
+      "eligibilityReferenceYear": "",
+      "fitStage": "established",
+      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer."
     },
     {
       "stage": "Watch List",
@@ -1243,48 +1249,40 @@
   ],
   "recentCalls": [
     {
-      "name": "NWO Vidi SSH",
+      "name": "NWO SSH Open Competition Expand 2026",
       "funder": "NWO",
-      "stage": "Mid-Career",
-      "amount": "€850,000",
-      "duration": "5 years",
-      "eligibility": "PhD obtained within eight years before 1 October 2026, with permitted extensions; eligible host and embedding guarantee required. Full proposals by invitation only after a submitted pre-proposal.",
-      "deadline": "2026-11-03",
-      "timing": "Pre-proposal stage closed 3 November 2026, 14:00 CET; invited full proposals close 6 April 2027, 14:00 CEST.",
-      "why": "Prepare the full proposal if invited; this round is closed to new pre-proposals.",
-      "tips": "Can hire PhD candidates and postdocs. Pre-proposal, full proposal, then interview. Strategically crucial career grant. Coordinate with the dean well in advance given the embedding guarantee requirement.",
-      "fitStage": "mid",
-      "fitNote": "Possible mid-career fit signal only; pre-proposals have closed and the full-proposal stage requires an invitation. Verify the 1 October 2026 PhD reference date, extensions and embedding conditions.",
-      "sourceLabel": "NWO Vidi SSH 2026 call",
-      "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-vidi-social-sciences-and-humanities-ssh-2026",
-      "sourceCallStatus": "invited-stage",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
-      "openDate": "",
-      "includePersonIds": [],
-      "excludePersonIds": [],
-      "manualReason": "",
-      "candidateMode": "",
-      "deadlineDate": "2027-04-06",
-      "nextDeadlineDate": "2027-04-06",
+      "stage": "Established",
+      "amount": "€350,000–€800,000",
+      "duration": "Up to 6 years",
+      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
+      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
+      "why": "Supports larger social science projects that need multiple years, staff, or collaboration.",
+      "fitStage": "established",
+      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer.",
+      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
+      "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
+      "sourceCallStatus": "open",
       "deadlineDates": [
         {
-          "date": "2026-11-03",
+          "date": "2026-11-17",
           "label": "Pre-proposal",
-          "status": "passed"
+          "status": "upcoming"
         },
         {
-          "date": "2027-04-06",
-          "label": "Full proposal",
+          "date": "2027-06-10",
+          "label": "Invited full proposal",
           "status": "later"
         }
       ],
+      "sourceCheckedDate": "2026-11-12",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
+      "deadlineDate": "2026-11-17",
+      "nextDeadlineDate": "2026-11-17",
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "later",
-      "deadlineStatusLabel": "Later",
-      "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
-      "eligibilityReferenceYear": 2026
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source"
     },
     {
       "name": "NWO Veni SSH",
@@ -1302,12 +1300,12 @@
       "sourceLabel": "NWO Veni SSH 2026 call",
       "sourceUrl": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-social-sciences-and-humanities-ssh-2026",
       "sourceCallStatus": "invited-stage",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
       "manualReason": "",
-      "candidateMode": "",
+      "candidateMode": "none",
       "deadlineDate": "2027-01-26",
       "nextDeadlineDate": "2027-01-26",
       "deadlineDates": [
@@ -1327,7 +1325,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": 2026
     },
     {
@@ -1336,17 +1334,17 @@
       "stage": "Early Career",
       "amount": "€50,000",
       "duration": "6-24 months",
-      "eligibility": "Researchers holding a PhD and a paid position at an eligible research organisation for the application process and project duration; check the official call for permitted appointments.",
+      "eligibility": "One applicant with a PhD and a paid position at an eligible institution throughout the application and project. Prior and concurrent NWO/ZonMw applications or awards can restrict eligibility.",
       "deadline": "2027-01-19",
       "timing": "Explore is the new name of SSH Open Competition XS. The 2027 rounds close 19 January, 6 April, and 14 September 2027, each at 14:00.",
       "why": "Good fit for a compact pilot, method test, or new research direction that can seed a larger proposal.",
       "tips": "Anonymous peer review by fellow applicants. Ideal for pilot studies, exploring new directions, or seed funding that strengthens a subsequent larger application.",
       "fitStage": "all-phd",
-      "fitNote": "Possible exploratory-project fit across post-PhD career stages; verify appointment and institutional conditions.",
+      "fitNote": "Possible exploratory-project fit across post-PhD career stages; check appointment and NWO/ZonMw application rules.",
       "sourceLabel": "NWO SSH Open Competition Explore 2027",
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-explore-2027-round-1",
       "sourceCallStatus": "upcoming",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
@@ -1376,7 +1374,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "name": "MSCA Doctoral Networks 2026",
@@ -1386,7 +1384,7 @@
       "duration": "Doctoral training networks",
       "eligibility": "International consortia of universities, research institutions, businesses, and other organisations; confirm consortium composition in the call text.",
       "deadline": "2026-11-24",
-      "timing": "Open; proposals close 24 November 2026. Confirm submission time in the Funding & Tenders portal.",
+      "timing": "Proposals close 24 November 2026, 17:00 CET.",
       "why": "A route to build an international doctoral training network around a coherent HRM&OB theme.",
       "tips": "Consortium design and doctoral training plan are central; check the current call text and UG support process.",
       "fitStage": "Consortium",
@@ -1394,7 +1392,7 @@
       "sourceLabel": "European Research Executive Agency: MSCA Doctoral Networks 2026",
       "sourceUrl": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-doctoral-networks_en",
       "sourceCallStatus": "open",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "includePersonIds": [],
       "excludePersonIds": [],
       "deadlineDate": "2026-11-24",
@@ -1410,7 +1408,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "deadlineMonth": null
     },
     {
@@ -1429,7 +1427,7 @@
       "sourceLabel": "ERC Consolidator Grant 2027 call",
       "sourceUrl": "https://erc.europa.eu/apply-grant/consolidator-grant",
       "sourceCallStatus": "open",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "includePersonIds": [],
       "excludePersonIds": [],
       "deadlineDate": "2027-01-12",
@@ -1445,7 +1443,7 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source",
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "deadlineMonth": null
     },
     {
@@ -1464,7 +1462,7 @@
       "sourceLabel": "KHMW Stimulus Mens en Organisatie",
       "sourceUrl": "https://khmw.nl/prijzen/stimulus-mens-en-organisatie/",
       "sourceCallStatus": "open",
-      "sourceNote": "Official funder page checked 5 November 2026. Possible-fit signal only.",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
       "openDate": "",
       "includePersonIds": [],
       "excludePersonIds": [],
@@ -1477,7 +1475,7 @@
           "status": "upcoming"
         }
       ],
-      "sourceCheckedDate": "2026-11-05",
+      "sourceCheckedDate": "2026-11-12",
       "deadlineDate": "2027-01-15",
       "nextDeadlineDate": "2027-01-15",
       "deadlineMonth": null,
@@ -1766,7 +1764,7 @@
       "timing": "8 October 2026 (past event; resource archive)",
       "sourceLabel": "FEB Research News, 28 September 2026; UG DCC event page",
       "sourceUrl": "https://www.rug.nl/digital-competence-centre/calendar/2026/workshop-part-1-introduction-git-github-08-10-2026?lang=en",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "name": "Publishing Research Software",
@@ -1774,7 +1772,7 @@
       "timing": "29 October 2026 (past event; resource archive)",
       "sourceLabel": "FEB Research News, 28 September 2026; UG DCC event page",
       "sourceUrl": "https://www.rug.nl/digital-competence-centre/calendar/2026/workshop-publishing-research-software-29-10-2026?lang=en",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "name": "Reproducible Software - Container Approach",
@@ -1782,7 +1780,7 @@
       "timing": "20 November 2026",
       "sourceLabel": "FEB Research News, 28 September 2026; UG DCC event page",
       "sourceUrl": "https://www.rug.nl/digital-competence-centre/calendar/2026/workshop-reproducible-software-container-approach-20-11-2026?lang=en",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "name": "VS Code for Research with Python and R - Part 1",
@@ -1790,7 +1788,7 @@
       "timing": "25 November 2026",
       "sourceLabel": "FEB Research News, 28 September 2026; UG DCC event page",
       "sourceUrl": "https://www.rug.nl/digital-competence-centre/calendar/2026/workshop-part-1-vs-code-for-research-with-phyton-and-r-25-11-2026?lang=en",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     },
     {
       "name": "UG survey software and Qualtrics update",
@@ -1798,7 +1796,7 @@
       "timing": "Current institutional update",
       "sourceLabel": "FEB Research News, 28 September 2026; UG DCC news",
       "sourceUrl": "https://www.rug.nl/digital-competence-centre/contact/news/2026/de-rijksuniversiteit-groningen-onderzoekt-alternatieven-voor-qualtrics",
-      "sourceCheckedDate": "2026-11-05"
+      "sourceCheckedDate": "2026-11-12"
     }
   ]
 }
