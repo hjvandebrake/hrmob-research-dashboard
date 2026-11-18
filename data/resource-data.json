@@ -4,9 +4,9 @@
     "updatedLabel": "26 March 2026",
     "sourceUpdatedDate": "2026-03-26",
     "generatedFrom": "hrmob-grant-opportunities-2026-2027.xlsx",
-    "generatedDate": "2026-11-12",
-    "deadlineStatusAsOf": "2026-11-12",
-    "recentCallsChecked": "2026-11-12",
+    "generatedDate": "2026-11-18",
+    "deadlineStatusAsOf": "2026-11-18",
+    "recentCallsChecked": "2026-11-18",
     "officialDeadlinesChecked": "2026-09-25",
     "deadlineStatusValues": {
       "upcoming": "Upcoming",
@@ -311,13 +311,13 @@
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
       "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
       "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
-      "deadlineDate": "2026-11-17",
-      "nextDeadlineDate": "2026-11-17",
+      "deadlineDate": "2027-06-10",
+      "nextDeadlineDate": "2027-06-10",
       "deadlineDates": [
         {
           "date": "2026-11-17",
           "label": "Pre-proposal",
-          "status": "upcoming"
+          "status": "passed"
         },
         {
           "date": "2027-06-10",
@@ -327,8 +327,8 @@
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": "",
@@ -421,13 +421,13 @@
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
       "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
       "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
-      "deadlineDate": "2026-11-17",
-      "nextDeadlineDate": "2026-11-17",
+      "deadlineDate": "2027-06-10",
+      "nextDeadlineDate": "2027-06-10",
       "deadlineDates": [
         {
           "date": "2026-11-17",
           "label": "Pre-proposal",
-          "status": "upcoming"
+          "status": "passed"
         },
         {
           "date": "2027-06-10",
@@ -437,8 +437,8 @@
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": "",
@@ -797,13 +797,13 @@
       "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
       "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
       "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
-      "deadlineDate": "2026-11-17",
-      "nextDeadlineDate": "2026-11-17",
+      "deadlineDate": "2027-06-10",
+      "nextDeadlineDate": "2027-06-10",
       "deadlineDates": [
         {
           "date": "2026-11-17",
           "label": "Pre-proposal",
-          "status": "upcoming"
+          "status": "passed"
         },
         {
           "date": "2027-06-10",
@@ -813,8 +813,8 @@
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-11-12",
       "eligibilityReferenceYear": "",
@@ -985,18 +985,18 @@
       "sourceLabel": "NWO KIC Demand-driven Consortia XL",
       "sourceNote": "",
       "deadlineDate": "2026-11-12",
-      "nextDeadlineDate": "2026-11-12",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-11-12",
           "label": "Full proposal",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "official-source",
       "sourceCheckedDate": "2026-09-25"
     },
@@ -1249,42 +1249,6 @@
   ],
   "recentCalls": [
     {
-      "name": "NWO SSH Open Competition Expand 2026",
-      "funder": "NWO",
-      "stage": "Established",
-      "amount": "€350,000–€800,000",
-      "duration": "Up to 6 years",
-      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
-      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
-      "why": "Supports larger social science projects that need multiple years, staff, or collaboration.",
-      "fitStage": "established",
-      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer.",
-      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
-      "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
-      "sourceCallStatus": "open",
-      "deadlineDates": [
-        {
-          "date": "2026-11-17",
-          "label": "Pre-proposal",
-          "status": "upcoming"
-        },
-        {
-          "date": "2027-06-10",
-          "label": "Invited full proposal",
-          "status": "later"
-        }
-      ],
-      "sourceCheckedDate": "2026-11-12",
-      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
-      "deadlineDate": "2026-11-17",
-      "nextDeadlineDate": "2026-11-17",
-      "deadlineMonth": null,
-      "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
-      "deadlineSource": "official-source"
-    },
-    {
       "name": "NWO Veni SSH",
       "funder": "NWO",
       "stage": "Early Career",
@@ -1483,6 +1447,80 @@
       "deadlineStatus": "upcoming",
       "deadlineStatusLabel": "Upcoming",
       "deadlineSource": "official-source"
+    },
+    {
+      "name": "KHMW Bate Interdisciplinariteit 2027",
+      "funder": "KHMW",
+      "stage": "Early career",
+      "amount": "Up to €25,000",
+      "duration": "",
+      "eligibility": "Early-career researchers (PhD candidate, postdoc or assistant professor) employed at a Dutch research institution. One application per person.",
+      "deadline": "2027-01-31",
+      "timing": "Open; applications before 1 February 2027 (so by 31 January), only via the form on the KHMW website. Award ceremony 30 June 2027.",
+      "why": "New annual €25,000 research grant for early-career work that bridges the humanities, natural sciences and social sciences.",
+      "tips": "Dutch or English. Include CV and publication list, the purpose of the grant, and a plan and budget. The committee looks for innovation across fields and societal relevance; work in related fields, or using a standard auxiliary method from another discipline, counts as too narrow. Annual progress reports required. Funded by the Dr. Elizabeth Schram-Mulley Stichting.",
+      "fitStage": "early",
+      "fitNote": "Possible fit signal for PhD candidates, postdocs and assistant professors with genuinely cross-domain projects; check the circulaire.",
+      "sourceLabel": "KHMW Bate Interdisciplinariteit",
+      "sourceUrl": "https://khmw.nl/prijzen/khmw-bate-interdisciplinariteit/",
+      "sourceCallStatus": "open",
+      "sourceNote": "Official funder page and circulaire (November 2026) checked 18 November 2026. Possible-fit signal only.",
+      "openDate": "2026-11",
+      "includePersonIds": [],
+      "excludePersonIds": [],
+      "manualReason": "",
+      "candidateMode": "",
+      "deadlineDates": [
+        {
+          "date": "2027-01-31",
+          "label": "Application",
+          "status": "upcoming"
+        }
+      ],
+      "sourceCheckedDate": "2026-11-18",
+      "deadlineDate": "2027-01-31",
+      "nextDeadlineDate": "2027-01-31",
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "upcoming",
+      "deadlineStatusLabel": "Upcoming",
+      "deadlineSource": "official-source"
+    },
+    {
+      "name": "NWO SSH Open Competition Expand 2026",
+      "funder": "NWO",
+      "stage": "Established",
+      "amount": "€350,000–€800,000",
+      "duration": "Up to 6 years",
+      "eligibility": "Applicants must hold a PhD and a permanent or tenure-track appointment at an eligible Dutch research institution. Check the official call for details.",
+      "timing": "Pre-proposals close 17 November 2026, 14:00 CET. Invited full proposals close 10 June 2027, 14:00 CEST.",
+      "why": "Supports larger social science projects that need multiple years, staff, or collaboration.",
+      "fitStage": "established",
+      "fitNote": "Possible fit for an established research programme. Verify appointment and call conditions with the funding officer.",
+      "sourceLabel": "NWO SSH Open Competition Expand 2026 call",
+      "sourceUrl": "https://www.nwo.nl/en/calls/ssh-open-competition-expand-2026",
+      "sourceCallStatus": "open",
+      "deadlineDates": [
+        {
+          "date": "2026-11-17",
+          "label": "Pre-proposal",
+          "status": "passed"
+        },
+        {
+          "date": "2027-06-10",
+          "label": "Invited full proposal",
+          "status": "later"
+        }
+      ],
+      "sourceCheckedDate": "2026-11-12",
+      "sourceNote": "Official funder page checked 12 November 2026. Possible-fit signal only.",
+      "deadlineDate": "2027-06-10",
+      "nextDeadlineDate": "2027-06-10",
+      "deadlineMonth": null,
+      "deadlinePrecision": "day",
+      "deadlineStatus": "later",
+      "deadlineStatusLabel": "Later",
+      "deadlineSource": "official-source"
     }
   ],
   "additionalCalls": [
@@ -1549,18 +1587,18 @@
       "sourceCheckedDate": "2026-10-28",
       "deadline": "Applications close 12 November 2026, 14:00 CET.",
       "deadlineDate": "2026-11-12",
-      "nextDeadlineDate": "2026-11-12",
+      "nextDeadlineDate": null,
       "deadlineDates": [
         {
           "date": "2026-11-12",
           "label": "Application",
-          "status": "upcoming"
+          "status": "passed"
         }
       ],
       "deadlineMonth": null,
       "deadlinePrecision": "day",
-      "deadlineStatus": "upcoming",
-      "deadlineStatusLabel": "Upcoming",
+      "deadlineStatus": "passed",
+      "deadlineStatusLabel": "Passed",
       "deadlineSource": "official-source"
     },
     {
