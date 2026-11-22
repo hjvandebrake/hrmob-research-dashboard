@@ -59,7 +59,7 @@ const state = {
 const GRANT_FIT_EXCLUDED_PEOPLE = new Set(["OJ"]);
 
 const els = {};
-const DATA_VERSION = "20261118-khmw";
+const DATA_VERSION = "20261122-journals";
 // Convenience gate only: the hash and all data files are publicly served by the static host.
 const AUTH_PASSWORD_HASH = "394e6fe9365dd9be351b59af1a1c179028543c85dca2f6ffe78395da59b5434a";
 const AUTH_STORAGE_KEY = "hrmob-dashboard-access-v1";
@@ -646,6 +646,11 @@ function cacheElements() {
   els.topicOverlaySummary = document.getElementById("topic-overlay-summary");
   els.topicOverlayStaff = document.getElementById("topic-overlay-staff");
   els.topicOverlayPublications = document.getElementById("topic-overlay-publications");
+  els.topicOverlayStaffTitle = document.getElementById("topic-overlay-staff-title");
+  els.topicOverlayPublicationsTitle = document.getElementById("topic-overlay-publications-title");
+  els.topicOverlayScore = document.getElementById("topic-overlay-score");
+  els.topicOverlayFaculty = document.getElementById("topic-overlay-faculty");
+  els.topicOverlayFacultyList = document.getElementById("topic-overlay-faculty-list");
   els.publicationTable = document.getElementById("publication-table");
   els.pubSearch = document.getElementById("pub-search");
   els.aipFilter = document.getElementById("aip-filter");
@@ -1148,7 +1153,28 @@ function attachEvents() {
     button.addEventListener("click", closeTopicOverlay);
   });
   els.topicOverlay.addEventListener("click", (event) => {
-    if (event.target === els.topicOverlay) closeTopicOverlay();
+    if (event.target === els.topicOverlay) {
+      closeTopicOverlay();
+      return;
+    }
+    const staffButton = event.target.closest("[data-overlay-staff-id]");
+    if (staffButton) {
+      event.preventDefault();
+      const personId = staffButton.dataset.overlayStaffId || "";
+      topicOverlayOpener = null;
+      closeTopicOverlay();
+      clearStaffSearchState();
+      state.selectedStaffId = personId;
+      state.staffSubpage = "publications";
+      setTab("staff", { focusView: false });
+      requestAnimationFrame(focusStaffProfileHeading);
+    }
+  });
+  document.addEventListener("click", (event) => {
+    const journalButton = event.target.closest("[data-journal-key]");
+    if (!journalButton || journalButton.closest("#topic-overlay")) return;
+    event.preventDefault();
+    showJournalOverlay(journalButton.dataset.journalKey || "", journalButton.textContent.trim());
   });
   document.addEventListener("keydown", (event) => {
     if (els.topicOverlay.hidden) return;
@@ -3770,6 +3796,7 @@ function showTopicOverlay(query, mode = "query") {
     .sort((a, b) => b.topicPubPct - a.topicPubPct || b.topicPubs - a.topicPubs || a.person.display.localeCompare(b.person.display));
   const pubs = topicPublicationMatches(bundle);
 
+  resetDetailOverlay("Researchers", "Example papers");
   els.topicOverlayTitle.textContent = query;
   els.topicOverlaySummary.textContent = `${pubs.length} counted publication${pubs.length === 1 ? "" : "s"} and ${rows.length} staff member${rows.length === 1 ? "" : "s"} match this topic under the current filters.`;
   els.topicOverlayStaff.innerHTML = rows.length ? rows.slice(0, 8).map((row) => `
@@ -3795,8 +3822,180 @@ function showTopicOverlay(query, mode = "query") {
   requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
 }
 
+/* ---------- Journal detail: who published there and its AIP ---------- */
+
+let journalAipIndexPromise = null;
+let journalOverlayKey = "";
+
+function journalButtonHtml(key, label) {
+  if (!key) return escapeHtml(label);
+  return `<button type="button" class="journal-link" data-journal-key="${escapeHtml(key)}">${escapeHtml(label)}</button>`;
+}
+
+function publicationJournalCell(pub) {
+  const key = pub.aipJournal || pub.journal || "";
+  const label = displayJournalName(pub.journal || pub.aipJournal || "Unknown");
+  return pub.publicationKind && pub.publicationKind !== "Journal" && !pub.aipJournal ? escapeHtml(label) : journalButtonHtml(key, label);
+}
+
+function sameJournal(pub, key) {
+  const target = String(key || "").trim();
+  if (!target) return false;
+  if (pub.aipJournal && String(pub.aipJournal).toLowerCase() === target.toLowerCase()) return true;
+  const normalized = normalizeJournalName(target);
+  return Boolean(normalized) && [pub.journal, pub.aipJournal].some((value) => value && normalizeJournalName(value) === normalized);
+}
+
+function resetDetailOverlay(staffTitle, publicationsTitle) {
+  journalOverlayKey = "";
+  if (els.topicOverlayStaffTitle) els.topicOverlayStaffTitle.textContent = staffTitle;
+  if (els.topicOverlayPublicationsTitle) els.topicOverlayPublicationsTitle.textContent = publicationsTitle;
+  if (els.topicOverlayScore) {
+    els.topicOverlayScore.hidden = true;
+    els.topicOverlayScore.innerHTML = "";
+  }
+  if (els.topicOverlayFaculty) els.topicOverlayFaculty.hidden = true;
+  if (els.topicOverlayFacultyList) els.topicOverlayFacultyList.innerHTML = "";
+}
+
+function loadJournalAipIndex() {
+  if (!journalAipIndexPromise) {
+    journalAipIndexPromise = fetchDataFile("journal-aip.json").then((payload) => {
+      if (!payload || !Array.isArray(payload.journals) || !Array.isArray(payload.annualYears)) throw new Error("Journal index unavailable");
+      const byTitle = new Map(payload.journals.map((row) => [String(row[0]).toLowerCase(), row]));
+      return { years: payload.annualYears, byTitle };
+    }).catch(() => {
+      journalAipIndexPromise = null;
+      return null;
+    });
+  }
+  return journalAipIndexPromise;
+}
+
+function journalTrendSvg(years, values) {
+  const points = years.map((year, index) => ({ year, value: values[index] })).filter((point) => isNumber(point.value));
+  if (points.length < 2) return "";
+  const width = 220;
+  const height = 44;
+  const pad = 4;
+  const min = Math.min(...points.map((point) => point.value));
+  const max = Math.max(...points.map((point) => point.value));
+  const span = Math.max(max - min, 1);
+  const x = (year) => pad + ((year - years[0]) / Math.max(years[years.length - 1] - years[0], 1)) * (width - pad * 2);
+  const y = (value) => height - pad - ((value - min) / span) * (height - pad * 2);
+  const path = points.map((point, index) => `${index ? "L" : "M"}${x(point.year).toFixed(1)},${y(point.value).toFixed(1)}`).join(" ");
+  const dots = points.map((point) => `<circle cx="${x(point.year).toFixed(1)}" cy="${y(point.value).toFixed(1)}" r="2.4"><title>${point.year}: ${point.value.toFixed(1)}</title></circle>`).join("");
+  const label = `Annual AIP ${points[0].year} to ${points[points.length - 1].year}: ${points.map((point) => `${point.year} ${point.value.toFixed(1)}`).join(", ")}`;
+  return `<figure class="journal-trend"><svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(label)}"><path d="${path}"/>${dots}</svg><figcaption><span>${points[0].year}</span><span>${points[points.length - 1].year}</span></figcaption></figure>`;
+}
+
+function renderJournalScore(key, pubs, index) {
+  if (!els.topicOverlayScore) return;
+  const withScore = pubs.find((pub) => isNumber(pub.aip));
+  const row = index?.byTitle.get(String(key).toLowerCase())
+    || (withScore?.aipJournal ? index?.byTitle.get(String(withScore.aipJournal).toLowerCase()) : null);
+  const score = isNumber(withScore?.aip) ? withScore.aip : (isNumber(row?.[1]) ? row[1] : null);
+  const category = pubs.find((pub) => pub.aipCategory)?.aipCategory || "";
+  const unranked = pubs.length && pubs.every((pub) => pub.rankableJournal === false);
+  const value = isNumber(score) ? score.toFixed(1) : "–";
+  const note = isNumber(score)
+    ? (category ? displayJournalName(category).replace(/,\s*/g, ", ") : "")
+    : unranked ? "Not a ranked journal" : "Not in the AIP workbook";
+  els.topicOverlayScore.innerHTML = `
+    <div class="journal-score-main">
+      <span class="journal-score-label">AIP 2020–2024</span>
+      <strong>${escapeHtml(value)}</strong>
+      ${note ? `<span class="journal-score-note">${escapeHtml(note)}</span>` : ""}
+    </div>
+    ${row ? journalTrendSvg(index.years, row[2] || []) : ""}`;
+  els.topicOverlayScore.hidden = false;
+}
+
+function renderJournalFaculty(key) {
+  if (!els.topicOverlayFaculty || journalOverlayKey !== key) return;
+  const data = state.departmentData;
+  if (!data?.publications) {
+    els.topicOverlayFaculty.hidden = true;
+    return;
+  }
+  const [fromYear, toYear] = activeWindowYears();
+  const peopleMap = new Map((data.people || []).map((person) => [person.id, person]));
+  const counts = new Map();
+  data.publications.forEach((pub) => {
+    if (pub.countedInComparison === false || !sameJournal(pub, key)) return;
+    const year = Number(pub.comparisonYear || pub.year);
+    if ((fromYear && year < fromYear) || (toYear && year > toYear)) return;
+    (pub.people || []).forEach((id) => {
+      const person = peopleMap.get(id);
+      if (!person || person.department === "HRM&OB" || person.coreId) return;
+      counts.set(id, (counts.get(id) || 0) + 1);
+    });
+  });
+  const rows = Array.from(counts.entries())
+    .map(([id, count]) => ({ person: peopleMap.get(id), count }))
+    .sort((a, b) => b.count - a.count || String(a.person.name).localeCompare(String(b.person.name)));
+  const shown = rows.slice(0, 8);
+  els.topicOverlayFacultyList.innerHTML = rows.length
+    ? shown.map(({ person, count }) => `
+      <div class="topic-detail-row topic-detail-pair">
+        <strong>${escapeHtml(person.name || person.display || person.id)}</strong>
+        <span>${escapeHtml(person.department || "")} · ${count}</span>
+      </div>`).join("") + (rows.length > shown.length ? `<p class="small-muted topic-detail-more">and ${rows.length - shown.length} more</p>` : "")
+    : `<p class="small-muted">No one in other FEB departments, ${escapeHtml(activeWindowLabel())}.</p>`;
+  els.topicOverlayFaculty.hidden = false;
+}
+
+function showJournalOverlay(key, label = "") {
+  if (!els.topicOverlay || !key || !state.data) return;
+  if (els.topicOverlay.hidden) topicOverlayOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  resetDetailOverlay("HRM&OB researchers", "Papers");
+  journalOverlayKey = key;
+  const people = peopleById();
+  const activeIds = activePeopleSet();
+  const pubs = activeOutletPublications()
+    .filter((pub) => sameJournal(pub, key))
+    .sort((a, b) => publicationDateValue(b) - publicationDateValue(a));
+  const display = label || (pubs.length ? journalDisplayName({ journal: key, journalDisplay: pubs.reduce((name, pub) => preferredJournalDisplay(name, pub.journal || key), "") }) : displayJournalName(key));
+  const staffCounts = new Map();
+  pubs.forEach((pub) => activeMatchedPeople(pub, activeIds).forEach((id) => staffCounts.set(id, (staffCounts.get(id) || 0) + 1)));
+  const staff = Array.from(staffCounts.entries())
+    .sort((a, b) => b[1] - a[1] || String(people.get(a[0])?.display || a[0]).localeCompare(String(people.get(b[0])?.display || b[0])));
+
+  els.topicOverlayTitle.textContent = display;
+  els.topicOverlaySummary.textContent = `${pubs.length} paper${pubs.length === 1 ? "" : "s"} by ${staff.length} HRM&OB researcher${staff.length === 1 ? "" : "s"}, ${activeWindowLabel()}.`;
+  renderJournalScore(key, pubs, null);
+  els.topicOverlayStaff.innerHTML = staff.length ? staff.map(([id, count]) => `
+    <div class="topic-detail-row topic-detail-pair">
+      <strong><button type="button" class="overlay-person" data-overlay-staff-id="${escapeHtml(id)}">${escapeHtml(people.get(id)?.name || people.get(id)?.display || id)}</button></strong>
+      <span>${count}</span>
+    </div>`).join("") : `<p class="small-muted">No HRM&OB papers here, ${escapeHtml(activeWindowLabel())}.</p>`;
+  const shownPubs = pubs.slice(0, 15);
+  els.topicOverlayPublications.innerHTML = shownPubs.length ? shownPubs.map((pub) => {
+    const names = activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.name || id).join(", ");
+    const link = publicationLink(pub);
+    const title = link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(pub.title)}</a>` : escapeHtml(pub.title);
+    return `<div class="topic-detail-row"><strong>${title}</strong><span>${escapeHtml([pub.year, names].filter(Boolean).join(" · "))}</span></div>`;
+  }).join("") + (pubs.length > shownPubs.length ? `<p class="small-muted topic-detail-more">and ${pubs.length - shownPubs.length} more on the Publications page</p>` : "")
+    : `<p class="small-muted">No papers in this window.</p>`;
+
+  els.topicOverlay.hidden = false;
+  document.body.classList.add("overlay-open");
+  els.topicOverlay.querySelector(".topic-dialog")?.scrollTo?.(0, 0);
+  requestAnimationFrame(() => els.topicOverlay.querySelector("[data-topic-overlay-close]")?.focus());
+
+  loadJournalAipIndex().then((index) => {
+    if (index && journalOverlayKey === key) renderJournalScore(key, pubs, index);
+  });
+  if (state.departmentData) {
+    renderJournalFaculty(key);
+  } else {
+    loadDeferredData(["department"]).then(() => renderJournalFaculty(key));
+  }
+}
+
 function closeTopicOverlay() {
   if (!els.topicOverlay) return;
+  journalOverlayKey = "";
   els.topicOverlay.hidden = true;
   document.body.classList.remove("overlay-open");
   if (topicOverlayOpener?.isConnected) topicOverlayOpener.focus();
@@ -3871,9 +4070,10 @@ function topStaffJournals(pubs) {
     .sort((a, b) => b.count - a.count || (b.aip || -1) - (a.aip || -1) || a.journal.localeCompare(b.journal))
     .slice(0, 6)
     .map((row) => ({
-      type: `${row.count} ${row.count === 1 ? "pub" : "pubs"}`,
+      type: `${row.count} ${row.count === 1 ? "paper" : "papers"}`,
       year: "",
       title: journalDisplayName(row),
+      journalKey: row.journal,
     }));
 }
 
@@ -3920,7 +4120,7 @@ function relatedSection(title, items) {
       ${items.map((item) => `
         <div class="related-row">
           <span>${escapeHtml(item.type)} ${escapeHtml(item.year)}</span>
-          <p>${escapeHtml(item.title)}</p>
+          <p>${item.journalKey ? journalButtonHtml(item.journalKey, item.title) : escapeHtml(item.title)}</p>
           ${item.sourceUrl ? `<a class="source-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(item.sourceLabel || "Source")}</a>` : ""}
         </div>
       `).join("")}
@@ -3958,7 +4158,7 @@ function renderStaffPublications(personId, bundle, row) {
   const rows = pubs.map((pub) => [
     pub.year,
     publicationCell(pub),
-    escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
+    publicationJournalCell(pub),
   ]);
   setTable(els.staffPublicationTable, ["Year", "Publication", "Journal"], rows, [true, false, false]);
 }
@@ -4296,7 +4496,7 @@ function renderOverviewPreviews(pubs, grants, projects) {
     {href:"#grants",title:"Grants",lead:`${openCalls} open grant call${openCalls===1?"":"s"}`},
     {href:"#faq",title:"FAQ",lead:`${faqCount||4} common questions answered`},
   ];
-  container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong><span>Explore →</span></a>`).join("");
+  container.innerHTML=cards.map(c=>`<a class="overview-preview" href="${c.href}"><h2>${escapeHtml(c.title)}</h2><strong>${escapeHtml(c.lead)}</strong></a>`).join("");
 }
 
 // Overview network: every HRM&OB researcher with every coauthor who shares at least
@@ -6241,7 +6441,7 @@ function renderJournalItem(journal) {
     : "";
   return `
     <div class="list-row">
-      <p class="list-title">${escapeHtml(journalDisplayName(journal))}</p>
+      <p class="list-title">${journalButtonHtml(journal.journal, journalDisplayName(journal))}</p>
       <p class="list-meta">${journal.count} outlet record${journal.count === 1 ? "" : "s"}${escapeHtml(countedMeta)}, ${escapeHtml(yearSetLabel(journal.years))}${isNumber(journal.aip) ? `, AIP ${journal.aip.toFixed(1)}` : ""}</p>
     </div>
   `;
@@ -6749,7 +6949,7 @@ function renderPublications() {
   const rows = pubs.slice(start, start + TABLE_PAGE_SIZE).map((pub) => [
     `${pub.year}${pub.publicationDate ? `<br><span class="publication-date-detail">${escapeHtml(publicationMonthDay(pub))}</span>` : '<br><span class="publication-date-detail">Year only</span>'}`,
     publicationCell(pub, { report: true }),
-    escapeHtml(displayJournalName(pub.journal || pub.aipJournal || "Unknown")),
+    publicationJournalCell(pub),
     aipBadge(pub.aip, pub),
     escapeHtml(activeMatchedPeople(pub, activeIds).map((id) => people.get(id)?.display || id).sort().join(", ")),
   ]);
@@ -9169,6 +9369,7 @@ function showClusterOverlay(index) {
     .sort((a, b) => b[1] - a[1] || String(people.get(a[0])?.display || a[0]).localeCompare(String(people.get(b[0])?.display || b[0])))
     .slice(0, 8);
   const recent = pubs.slice().sort((a, b) => publicationDateValue(b) - publicationDateValue(a)).slice(0, 8);
+  resetDetailOverlay("Researchers", "Recent papers");
   els.topicOverlayTitle.textContent = cluster.label;
   els.topicOverlaySummary.textContent = `${pubs.length} paper${pubs.length === 1 ? "" : "s"}, ${publicationWindowLabel()}. Topics: ${cluster.families.join(", ")}.`;
   els.topicOverlayStaff.innerHTML = staff.length ? staff.map(([id, count]) => `
@@ -9512,7 +9713,7 @@ function quickFindCandidates() {
   });
   aggregateJournals(activeOutletPublications()).forEach((journal) => {
     const name = journalDisplayName(journal);
-    add("Journals", name, `${journal.count} publication${journal.count === 1 ? "" : "s"}`, journal.journal, () => searchPublicationsFor(name));
+    add("Journals", name, `${journal.count} publication${journal.count === 1 ? "" : "s"}`, journal.journal, () => showJournalOverlay(journal.journal, name));
   });
   activePublications().forEach((pub) => {
     add("Publications", pub.title || "Untitled publication", String(pub.year || ""), `${pub.journal || ""} ${(pub.authors || []).join(" ")}`, () => searchPublicationsFor(pub.title || ""));

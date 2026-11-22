@@ -465,7 +465,7 @@
           <span>${esc(page.blurb)}</span>
           <div class="rp-dl-actions">
             <a class="rp-dl-excel" href="${href}" download>Excel</a>
-            <a class="rp-journal-open" href="${pageHref(page.key)}">Journal finder <span aria-hidden="true">&rarr;</span></a>
+            <a class="rp-journal-open" href="${pageHref(page.key)}">Journal finder</a>
           </div>
         </div>
       </article>`;

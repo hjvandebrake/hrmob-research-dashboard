@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261118-khmw">
+  <link rel="stylesheet" href="styles.css?v=20261122-journals">
 </head>
 <body>
   <div id="auth-gate" class="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
@@ -246,13 +246,10 @@
             <h2 class="h2">Grants</h2>
           </div>
         </div>
-        <p class="section-intro page-intro">Use this section to move from call scanning to possible collaboration and proposal preparation.</p>
         <a class="grant-steps-callout" href="#faq/grant-steps">
-          <span class="rp-card-icon" aria-hidden="true"><svg class="rp-icon" viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V8.5Z" fill="currentColor" fill-opacity=".06"/><path d="M14 3v5.5h5.5M8 11h4M8 14h3M12 17l2 2 4-4"/></svg></span>
           <span class="grant-steps-copy">
             <strong>What steps do I take when applying for a grant?</strong>
           </span>
-          <span class="grant-steps-arrow" aria-hidden="true">&rarr;</span>
         </a>
         <div class="resource-grid">
           <section class="overview-panel resource-panel-wide call-calendar-panel" aria-labelledby="call-calendar-title">
@@ -402,7 +399,7 @@
             <div id="benchmark-unique-trend" class="metric-chart"></div>
           </section>
         </div>
-        <p id="metric-subgroup-link" class="small-muted metric-subgroup-link">Explore the same plots <a href="#metrics/subgroups">by academic rank →</a></p>
+        <p id="metric-subgroup-link" class="small-muted metric-subgroup-link">Explore the same plots <a href="#metrics/subgroups">by academic rank</a></p>
         <details id="metric-coverage" class="overview-panel benchmark-panel-wide"><summary>Data coverage</summary><div id="benchmark-summary"></div></details>
         <details class="overview-panel benchmark-panel-wide"><summary>How it works</summary><div id="benchmark-method-note" class="method-note"></div></details>
       </div>
@@ -413,7 +410,7 @@
         <div class="sec-head compact">
           <div>
             <p class="eye">Publications</p>
-            <h2 class="h2">Publication records</h2>
+            <h2 class="h2">Publications</h2>
           </div>
         </div>
         <div class="publication-layout">
@@ -461,7 +458,7 @@
             <div class="overview-panel-head">
               <div>
                 <p class="eye">Journals</p>
-                <h3 id="publication-journals-title" class="overview-h3">Where we have published most</h3>
+                <h3 id="publication-journals-title" class="overview-h3">Most frequent journals</h3>
               </div>
             </div>
             <div id="journal-published-list" class="list-stack"></div>
@@ -499,7 +496,7 @@
         <div class="sec-head compact">
           <div>
             <p class="eye">Staff and expertise</p>
-            <h2 class="h2">People, expertise, and publication records</h2>
+            <h2 class="h2">Staff and expertise</h2>
           </div>
         </div>
         <div class="staff-search-panel" role="search" aria-label="Find staff expertise">
@@ -517,9 +514,9 @@
             <div id="staff-profile"></div>
             <nav id="staff-subnav" class="staff-subnav" aria-label="Staff profile sections"></nav>
             <section id="staff-subpage-research" class="staff-subpage">
-              <h3 class="sub-h2">Topic signals</h3>
+              <h3 class="sub-h2">Topics</h3>
               <div id="staff-topics" class="topic-cloud"></div>
-              <h3 class="sub-h2">Possible research links</h3>
+              <h3 class="sub-h2">Colleagues with overlapping topics</h3>
               <div id="staff-suggestions" class="suggestion-list"></div>
               <details id="staff-grant-fit-panel" class="staff-owned-panel" hidden>
                 <summary>Possible grant fits</summary>
@@ -528,7 +525,7 @@
               </details>
               <div class="staff-self-reported">
                 <h3 class="sub-h2">Added by the staff member</h3>
-                <p class="small-muted">Colleagues fill in these sections themselves through the Contact page, so some are still empty.</p>
+                <p class="small-muted">Each colleague fills these in through the Contact page.</p>
                 <div class="staff-owned-grid">
                   <div id="staff-current-work" class="staff-owned-panel"></div>
                   <div id="staff-collaboration-interests" class="staff-owned-panel"></div>
@@ -806,16 +803,20 @@
   <div id="topic-overlay" class="topic-overlay" hidden>
     <div class="topic-dialog" role="dialog" aria-modal="true" aria-labelledby="topic-overlay-title" aria-describedby="topic-overlay-summary">
       <button class="topic-close" type="button" data-topic-overlay-close>Close</button>
-      <p class="eye">Topic detail</p>
       <h2 id="topic-overlay-title" class="h2">Topic</h2>
       <p id="topic-overlay-summary" class="topic-summary"></p>
+      <div id="topic-overlay-score" class="journal-score" hidden></div>
       <div class="topic-overlay-grid">
         <section>
-          <h3 class="sub-h2">Staff alignment</h3>
+          <h3 id="topic-overlay-staff-title" class="sub-h2">Researchers</h3>
           <div id="topic-overlay-staff" class="topic-detail-list"></div>
+          <div id="topic-overlay-faculty" hidden>
+            <h3 class="sub-h2">Elsewhere at FEB</h3>
+            <div id="topic-overlay-faculty-list" class="topic-detail-list"></div>
+          </div>
         </section>
         <section>
-          <h3 class="sub-h2">Example publications</h3>
+          <h3 id="topic-overlay-publications-title" class="sub-h2">Papers</h3>
           <div id="topic-overlay-publications" class="topic-detail-list"></div>
         </section>
       </div>
@@ -841,7 +842,7 @@
       <p class="quick-find-foot">Use the arrow keys to move, Enter to open, and Esc to close.</p>
     </div>
   </div>
-  <script src="resources/pages/resources.js?v=20261118-khmw"></script>
-  <script src="app.js?v=20261118-khmw"></script>
+  <script src="resources/pages/resources.js?v=20261122-journals"></script>
+  <script src="app.js?v=20261122-journals"></script>
 </body>
 </html>
