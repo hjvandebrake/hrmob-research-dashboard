@@ -17,7 +17,7 @@
       icon: "grant",
       group: "faq",
       title: "What steps do I take when applying for a grant?",
-      summary: "Three steps: the department, the funding officer, and project control. Also for teaching grants.",
+      summary: "Tell the research director as soon as you start preparing, then see the funding officer and project control. Also for teaching grants.",
       note: "Checked with Lars van den Brink, FEB funding officer, in October 2026.",
       checked: true,
     },
@@ -108,7 +108,7 @@
         kind: "start",
         map: "You want to apply",
         title: "You want to apply for a grant",
-        body: "Applying takes three steps: the department, the funding officer, and project control. A few questions then show what the grant means for your teaching and for new positions, and you get a checklist of who to contact.",
+        body: "Applying takes three steps: the department, the funding officer, and project control. The first comes early: tell the research director as soon as you start preparing an application. A few questions then show what the grant means for your teaching and for new positions, and you get a checklist of who to contact.",
         question: "What kind of grant is it?",
         answers: [
           { label: "Research grant", next: "department", record: { start: "research" } },
@@ -128,11 +128,12 @@
       },
       department: {
         kind: "decision",
-        map: "Department",
-        title: "First, discuss it with the department",
-        body: "Before you invest serious time, talk to the department chair and the research director. The chair looks at what the application means for our teaching capacity, and at its content. The research director looks at the academic side: the topic, and whether it fits.",
-        contact: "Department chair and research director",
-        question: "Do the chair and the research director support the application?",
+        map: "Tell the research director",
+        title: "First, tell the research director",
+        body: "Do this as soon as you start preparing an application, before you start writing. The research director keeps an overview of all submissions for the faculty, so that applications do not overlap and other problems come up in time. The research director also looks at the topic and whether it fits. Discuss the application with the department chair as well, who looks at what it means for our teaching capacity.",
+        contact: "Research director",
+        email: "h.j.van.de.brake@rug.nl",
+        question: "Do the research director and the chair support the application?",
         answers: [
           { label: "Yes", next: "funding", record: { department: "yes" } },
           { label: "Not yet", next: "rework", record: { department: "not-yet" } },
@@ -945,7 +946,7 @@
   function renderChecklist() {
     const r = state.grantRecord;
     const items = [
-      { done: true, who: "Department chair and research director", what: "Support the application." },
+      { done: true, who: "Research director and department chair", what: "Told when you started preparing, and support the application." },
       r.start === "teaching"
         ? { who: "Lars van den Brink, FEB funding officer", what: "Handles teaching grants and coordinates Comenius with the vice-dean for education. Contact him early.", email: "l.h.van.den.brink@rug.nl" }
         : { who: "Lars van den Brink, FEB funding officer", what: "Funder rules, internal approval, and guarantees. Contact him early.", email: "l.h.van.den.brink@rug.nl" },
