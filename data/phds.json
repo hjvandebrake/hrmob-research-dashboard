@@ -7,7 +7,7 @@
     "currentProjectsSourceNote": "Current/ongoing PhD status and supervisor mappings are based on the local workbook overzicht OB PhDs_Joost.xlsx provided on 2026-06-23 and subsequent staff-submitted corrections. Public RUG PhD candidate pages provide source support for candidate and project-title details.",
     "currentProjectsScope": "Current/ongoing PhD projects supervised by supplied department members; defended theses remain in theses[].",
     "reviewedOn": "2026-11-12",
-    "currentProjectsReviewedOn": "2026-11-05"
+    "currentProjectsReviewedOn": "2026-11-24"
   },
   "theses": [
     {
@@ -1150,8 +1150,8 @@
       "id": "current-phd-xiaowen-tang",
       "candidate": "Xiaowen Tang",
       "displayCandidate": "Tang, Xiaowen",
-      "title": "Project title to be announced",
-      "titleStatus": "to_be_confirmed",
+      "title": "Highly skilled immigrants' career outcomes and consequences: The perspective of social networks",
+      "titleStatus": "listed",
       "status": "ongoing",
       "roles": [
         {
@@ -1165,7 +1165,7 @@
           "slot": "Supervisor 2"
         },
         {
-          "name": "Wendy Smits (cbs)",
+          "name": "Wendy Smits (CBS, Maastricht University)",
           "role": "Co-supervisor",
           "slot": "Supervisor 3",
           "kind": "external"
@@ -1175,7 +1175,7 @@
       "sourceUrl": "https://www.rug.nl/research/hrm-ob/people/hrmobphdcandidates?lang=en",
       "profileUrl": "https://www.rug.nl/staff/xiaowen.tang/",
       "notes": [
-        "Project title from the RUG OB PhD candidates page.",
+        "Project title and supervisors confirmed by Xiaowen Tang through dashboard feedback on 2026-11-23.",
         "Current-project indication and supervisor mapping from overzicht OB PhDs_Joost.xlsx, with explicit completed-candidate exclusions applied."
       ]
     },
