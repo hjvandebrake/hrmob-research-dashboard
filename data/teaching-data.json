@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-12T10:22:53Z",
+    "generatedOn": "2026-11-26T10:23:26Z",
     "academicYear": "2026-2027",
     "source": "Public Ocasys course search, programme scheme, and course page API records.",
     "notes": [
@@ -38,7 +38,7 @@
     "courses": 27,
     "networkCourses": 25,
     "edges": 15,
-    "durationSeconds": 25.5,
+    "durationSeconds": 25.3,
     "errors": []
   },
   "records": [

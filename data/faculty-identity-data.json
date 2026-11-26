@@ -10,9 +10,9 @@
       "Accounting": 71,
       "EEF": 138
     },
-    "generatedOn": "2026-11-12",
+    "generatedOn": "2026-11-26",
     "people": 528,
-    "publicationsChecked": 4317,
+    "publicationsChecked": 4319,
     "ambiguousNames": 0,
     "benchmarkLinksNotCorroborated": 588,
     "additionalBenchmarkLinks": 38,
@@ -48788,13 +48788,8 @@
           "method": "unique compatible author name"
         },
         {
-          "personId": "gem-jh-garretsen",
-          "author": "Garretsen, H.",
-          "method": "unique compatible author name"
-        },
-        {
           "personId": "hrmob-ji-stoker",
-          "author": "Stoker, J. I.",
+          "author": "Janka I Stoker",
           "method": "unique compatible author name"
         }
       ]
@@ -83363,6 +83358,29 @@
       ]
     },
     {
+      "id": "rug:e48952c51da49003",
+      "doi": "",
+      "publicationIds": [
+        "rug:e48952c51da49003"
+      ],
+      "people": [
+        "hrmob-ji-stoker",
+        "gem-jh-garretsen"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Stoker, J. I.",
+          "method": "unique compatible author name"
+        },
+        {
+          "personId": "gem-jh-garretsen",
+          "author": "Garretsen, H.",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
       "id": "doi:10.1111/joop.70146",
       "doi": "10.1111/joop.70146",
       "publicationIds": [
@@ -83644,6 +83662,23 @@
         {
           "personId": "hrmob-j-de-bloom",
           "author": "de Bloom, J.",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1002/ejsp.70140",
+      "doi": "10.1002/ejsp.70140",
+      "publicationIds": [
+        "doi:10.1002/ejsp.70140"
+      ],
+      "people": [
+        "hrmob-mk-ryan"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-mk-ryan",
+          "author": "Michelle K. Ryan",
           "method": "unique compatible author name"
         }
       ]
@@ -84143,23 +84178,6 @@
         {
           "personId": "hrmob-core-cdd",
           "author": "Carsten K. W. De Dreu",
-          "method": "unique compatible author name"
-        }
-      ]
-    },
-    {
-      "id": "rug:6d37a18df79b728c",
-      "doi": "",
-      "publicationIds": [
-        "rug:6d37a18df79b728c"
-      ],
-      "people": [
-        "hrmob-m-arnold"
-      ],
-      "matches": [
-        {
-          "personId": "hrmob-m-arnold",
-          "author": "Arnold, M.",
           "method": "unique compatible author name"
         }
       ]
@@ -86691,6 +86709,23 @@
         {
           "personId": "hrmob-o-janssen",
           "author": "Onne Janssen",
+          "method": "unique compatible author name"
+        }
+      ]
+    },
+    {
+      "id": "openalex:W2498438054",
+      "doi": "",
+      "publicationIds": [
+        "openalex:W2498438054"
+      ],
+      "people": [
+        "hrmob-ji-stoker"
+      ],
+      "matches": [
+        {
+          "personId": "hrmob-ji-stoker",
+          "author": "Janka Ireen Stoker",
           "method": "unique compatible author name"
         }
       ]

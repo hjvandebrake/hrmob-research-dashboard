@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedOn": "2026-11-12",
+    "generatedOn": "2026-11-26",
     "source": "Public RUG staff profiles, CVs, and independently reviewed degree records.",
     "people": 19,
     "peopleWithRole": 19,
@@ -176,7 +176,7 @@
       "phdEvidenceSourceUrl": "https://www.rug.nl/news/2010/11/101124janssen?lang=en",
       "phdConfidence": 1.0,
       "externalCvLinks": [],
-      "lastModified": "01 March 2024 11.23 a.m.",
+      "lastModified": "24 November 2026 3.11 p.m.",
       "sourceStatus": "fetched",
       "errors": [],
       "profileSourceStatus": "web",
@@ -328,7 +328,7 @@
       "phdEvidenceSourceUrl": "https://www.rug.nl/staff/f.a.rink/cv?lang=en",
       "phdConfidence": 0.9,
       "externalCvLinks": [],
-      "lastModified": "12 November 2026 07.33 a.m.",
+      "lastModified": "24 November 2026 07.33 a.m.",
       "sourceStatus": "fetched",
       "errors": [],
       "profileSourceStatus": "web",

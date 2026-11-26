@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedOn": "2026-11-12",
-    "retainedPreviouslyVerifiedRecords": 421,
+    "generatedOn": "2026-11-26",
+    "retainedPreviouslyVerifiedRecords": 422,
     "sourceRequestErrors": 4,
     "publicationWindow": {
       "from": "1976-01-01",
-      "to": "2026-11-12"
+      "to": "2026-11-26"
     },
     "recentWindow": {
       "from": "2022-01-01",
-      "to": "2026-11-12"
+      "to": "2026-11-26"
     },
     "aipSourceFile": "2025-11-average-aip-20-24-without-formulas.xlsx",
     "aipMetric": "average AIP 2020-2024",
@@ -638,9 +638,7 @@
       "Trends in Psychology",
       "Zeitschrift für Sozialpsychologie",
       "eLife"
-    ],
-    "identityReviewedOn": "2026-11-12",
-    "identityMethod": "Stored source author lists, roster aliases, curated corrections, and stable DOI identifiers; source capture dates are reported separately."
+    ]
   },
   "people": [
     {
@@ -1351,12 +1349,12 @@
         "Crossref ORCID matched for Lees, J.M."
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:48d6aa7b8e4862cc"
-      ],
       "publicationDate": "2026-08",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F19485506251383988",
       "publicationDateType": "published-print",
+      "previousIds": [
+        "rug:48d6aa7b8e4862cc"
+      ],
       "topicFamilies": [
         "ethics and morality",
         "stress and strain",
@@ -1880,7 +1878,8 @@
         "Crossref ORCID matched for Bloom, J. de",
         "RUG staff publication page for Brake, H.J. van de lists this as a peer-reviewed journal publication.",
         "Crossref ORCID matched for Brake, H.J. van de",
-        "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication."
+        "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication.",
+        "OpenAlex author matched to University of Groningen for Vries, T.A. de"
       ],
       "provisional": true,
       "publicationDate": "2026-03-10",
@@ -2665,6 +2664,49 @@
       "aipStatus": "matched"
     },
     {
+      "id": "rug:e48952c51da49003",
+      "doi": "",
+      "title": "The dual challenge of contextualization in leadership research: A systematic review, critical assessment and future research agenda",
+      "year": 2026,
+      "yearSource": "rug-reference",
+      "journal": "Leadership Quarterly",
+      "issns": [],
+      "sourceType": "RUG staff page",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://research.rug.nl/en/publications/54c01528-b434-477b-be56-d9780acfd15c",
+      "authors": [
+        "Stoker, J. I.",
+        "Garretsen, H."
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": 97.556,
+      "aipJournal": "LEADERSHIP QUARTERLY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "title",
+      "subjects": [],
+      "source": "University of Groningen staff publication page",
+      "evidence": [
+        "RUG staff publication page for Stoker, J.I. lists this as a peer-reviewed journal publication."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "leadership",
+        "selection and recruitment"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1080/17512786.2024.2441283",
       "doi": "10.1080/17512786.2024.2441283",
       "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
@@ -2702,12 +2744,12 @@
         "OpenAlex author matched to University of Groningen for Ryan, M.K."
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:d1d0f95317741052"
-      ],
       "publicationDate": "2026-08-03",
       "publicationDateSource": "https://api.crossref.org/works/10.1080%2F17512786.2024.2441283",
       "publicationDateType": "published-print",
+      "previousIds": [
+        "rug:d1d0f95317741052"
+      ],
       "topicFamilies": [
         "power and hierarchy",
         "wellbeing",
@@ -3005,12 +3047,12 @@
         "OpenAlex author matched to University of Groningen for Bloom, J. de"
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:b9e49a4b333cfbeb"
-      ],
       "publicationDate": "2026-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.jenvp.2026.103024",
       "publicationDateType": "published-print",
+      "previousIds": [
+        "rug:b9e49a4b333cfbeb"
+      ],
       "topicFamilies": [
         "job crafting",
         "motivation and goals"
@@ -3780,6 +3822,58 @@
       "topicFamilies": [
         "gender and leadership",
         "careers and employability"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1002/ejsp.70140",
+      "doi": "10.1002/ejsp.70140",
+      "title": "Threatened, Distressed, Aggrieved: Experimental Evidence That Masculinity Threat Produces Manosphere Grievance Among High‐Identifying Men",
+      "year": 2026,
+      "yearSource": "crossref-other",
+      "journal": "European Journal of Social Psychology",
+      "issns": [
+        "0046-2772",
+        "1099-0992"
+      ],
+      "sourceType": "journal-article",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "Wiley",
+      "url": "https://doi.org/10.1002/ejsp.70140",
+      "authors": [
+        "Brooke Franklin‐Paddock",
+        "Isabella Gilbert",
+        "Kaitlyn Davidson",
+        "Michael J. Platow",
+        "Tegan Cruwys",
+        "Michelle K. Ryan",
+        "Denise Ruggieri"
+      ],
+      "matchedPeople": [
+        "MR"
+      ],
+      "sourcePeople": [
+        "MR"
+      ],
+      "aip": 90.98,
+      "aipJournal": "EUROPEAN JOURNAL OF SOCIAL PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "Crossref public metadata",
+      "evidence": [
+        "Crossref ORCID matched for Ryan, M.K."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [
+        "stress and strain",
+        "gender and leadership",
+        "crisis and resilience"
       ],
       "counted": true,
       "display": true,
@@ -4708,12 +4802,12 @@
         "OpenAlex author matched to University of Groningen for Vries, T.A. de"
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:70bd06a0dcdc6d6f"
-      ],
       "publicationDate": "2025-03-25",
       "publicationDateSource": "https://api.crossref.org/works/10.1111%2Fjscm.12346",
       "publicationDateType": "published-online",
+      "previousIds": [
+        "rug:70bd06a0dcdc6d6f"
+      ],
       "topicFamilies": [
         "crisis and resilience"
       ],
@@ -4876,12 +4970,12 @@
         "RUG staff publication page for Vries, T.A. de lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
-      "previousIds": [
-        "curated:jom-2025-team-boundary-management"
-      ],
       "publicationDate": "2025-02",
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F01492063231206107",
       "publicationDateType": "published-print",
+      "previousIds": [
+        "curated:jom-2025-team-boundary-management"
+      ],
       "topicFamilies": [
         "teams and groups",
         "boundary spanning and external ties"
@@ -7129,12 +7223,12 @@
         "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
       ],
       "provisional": true,
-      "previousIds": [
-        "rug:9e0055e257bfa077"
-      ],
       "publicationDate": "2024-05",
       "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fapl0001168",
       "publicationDateType": "published-online",
+      "previousIds": [
+        "rug:9e0055e257bfa077"
+      ],
       "topicFamilies": [
         "teams and groups",
         "multiple team membership",
@@ -8185,22 +8279,25 @@
       "aipStatus": "reviewed-not-in-aip-source"
     },
     {
-      "id": "rug:6d37a18df79b728c",
-      "doi": "",
+      "id": "doi:10.1026/0033-3042/a000627",
+      "doi": "10.1026/0033-3042/a000627",
       "title": "Paradigmen der psychologischen Resilienzforschung: Eine kleine Inventur und ein Ausblick",
       "year": 2023,
       "yearSource": "rug-reference",
       "journal": "Psychologische Rundschau",
-      "issns": [],
-      "sourceType": "RUG staff page",
-      "publicationKind": "Verified duplicate source representation",
-      "rankableJournal": false,
+      "issns": [
+        "0033-3042",
+        "2190-6238"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
       "publisher": "",
       "url": "https://research.rug.nl/en/publications/c80a228e-cc85-458c-8cff-e2cb4418489d",
       "authors": [
-        "Arnold, M.",
-        "Schilbach, M.",
-        "Rigotti, T."
+        "Miriam Arnold",
+        "Miriam Schilbach",
+        "Thomas Rigotti"
       ],
       "matchedPeople": [
         "MA"
@@ -8216,62 +8313,22 @@
       "source": "University of Groningen staff publication page",
       "evidence": [
         "RUG staff publication page for Arnold, M. lists this as a peer-reviewed journal publication.",
-        "Public-source review: Verified duplicate representation of DOI10.1026/0033-3042/a000627. The official Pure page has the exact stored UUID c80a228e-cc85-458c-8cff-e2cb4418489d and explicitly supplies that DOI; publisher authors, year, journal, volume, issue and pages agree. Preserve this raw no-DOI representation, but count the existing DOI record once. Source: https://research.rug.nl/en/publications/paradigmen-der-psychologischen-resilienzforschung-eine-kleine-inv/"
+        "Public-source review: Verified duplicate representation of DOI10.1026/0033-3042/a000627. The official Pure page has the exact stored UUID c80a228e-cc85-458c-8cff-e2cb4418489d and explicitly supplies that DOI; publisher authors, year, journal, volume, issue and pages agree. Preserve this raw no-DOI representation, but count the existing DOI record once. Source: https://research.rug.nl/en/publications/paradigmen-der-psychologischen-resilienzforschung-eine-kleine-inv/",
+        "OpenAlex author matched to University of Groningen for Arnold, M.",
+        "Public-source review: Canonical DOI record for Arnold's 2023 Psychologische Rundschau article. On 26 November 2026 the raw RUG representation (rug:6d37a18df79b728c) was merged into this record as a verified duplicate, which carried its duplicate-hold fields onto the canonical record. This rule restores the canonical record so the article is counted exactly once. Source: https://research.rug.nl/en/publications/paradigmen-der-psychologischen-resilienzforschung-eine-kleine-inv/"
       ],
       "provisional": true,
-      "duplicateOf": "doi:10.1026/0033-3042/a000627",
-      "reviewHold": true,
-      "counted": false,
-      "display": false,
-      "previousIds": [],
-      "topicFamilies": [],
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1026/0033-3042/a000627",
-      "doi": "10.1026/0033-3042/a000627",
-      "title": "Paradigmen der psychologischen Resilienzforschung",
-      "year": 2023,
-      "yearSource": "openalex",
-      "journal": "Psychologische Rundschau",
-      "issns": [
-        "0033-3042",
-        "2190-6238"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W4367298238",
-      "authors": [
-        "Miriam Arnold",
-        "Miriam Schilbach",
-        "Thomas Rigotti"
-      ],
-      "matchedPeople": [
-        "MA"
-      ],
-      "sourcePeople": [
-        "MA"
-      ],
-      "aip": 33.416,
-      "aipJournal": "PSYCHOLOGISCHE RUNDSCHAU",
-      "aipCategory": "PSYCHOLOGY, MULTIDISCIPLINARY",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Arnold, M."
-      ],
-      "provisional": true,
+      "duplicateOf": null,
+      "reviewHold": false,
+      "counted": true,
+      "display": true,
       "publicationDate": "2023-07",
       "publicationDateSource": "https://api.crossref.org/works/10.1026%2F0033-3042%2Fa000627",
       "publicationDateType": "published-print",
-      "previousIds": [],
+      "previousIds": [
+        "rug:6d37a18df79b728c"
+      ],
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
       "aipComparable": true,
       "aipStatus": "matched"
     },
@@ -10195,67 +10252,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1016/j.shaw.2021.12.936",
-      "doi": "10.1016/j.shaw.2021.12.936",
-      "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
-      "year": 2022,
-      "yearSource": "openalex",
-      "journal": "Safety and Health at Work",
-      "issns": [
-        "2093-7911",
-        "2093-7997"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W4210250036",
-      "authors": [
-        "Jessica de Bloom",
-        "Miika Kujanpää",
-        "Merly Kosenkranius",
-        "Ulla M. Kinnunen",
-        "Floor A. Rink",
-        "Christine Julia Syrek",
-        "Hoda Vaziri",
-        "Louis Tay",
-        "Georg Friedrich Bauer",
-        "Akihito Shimazu"
-      ],
-      "matchedPeople": [
-        "JDB",
-        "FR"
-      ],
-      "sourcePeople": [
-        "JDB",
-        "FR"
-      ],
-      "aip": 69.599,
-      "aipJournal": "Safety and Health at Work",
-      "aipCategory": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de",
-        "OpenAlex author matched to University of Groningen for Rink, F.A."
-      ],
-      "provisional": true,
-      "publicationDate": "2022-01",
-      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.shaw.2021.12.936",
-      "publicationDateType": "published-print",
-      "previousIds": [],
-      "topicFamilies": [
-        "occupational health",
-        "recovery and leisure",
-        "job crafting"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1073/pnas.2204045119",
       "doi": "10.1073/pnas.2204045119",
       "title": "Political violence and inaccurate metaperceptions",
@@ -11022,7 +11018,7 @@
     {
       "id": "doi:10.1002/ijop.12761",
       "doi": "10.1002/ijop.12761",
-      "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+      "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID ‐19) pandemic",
       "year": 2022,
       "yearSource": "crossref-print",
       "journal": "International Journal of Psychology",
@@ -16273,7 +16269,7 @@
     {
       "id": "doi:10.1027/1864-9335/a000359",
       "doi": "10.1027/1864-9335/a000359",
-      "title": "You Can Leave Your Glasses on",
+      "title": "You Can Leave Your Glasses on: Glasses Can Increase Electoral Success",
       "year": 2019,
       "yearSource": "crossref-print",
       "journal": "Social Psychology",
@@ -18081,6 +18077,59 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1037/ocp0000083",
+      "doi": "10.1037/ocp0000083",
+      "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
+      "year": 2018,
+      "yearSource": "openalex",
+      "journal": "Journal of Occupational Health Psychology",
+      "issns": [
+        "1076-8998",
+        "1939-1307"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2603810356",
+      "authors": [
+        "Marjaana Sianoja",
+        "Christine Julia Syrek",
+        "Jessica de Bloom",
+        "Kalevi Korpela",
+        "Ulla M. Kinnunen"
+      ],
+      "matchedPeople": [
+        "JDB"
+      ],
+      "sourcePeople": [
+        "JDB"
+      ],
+      "aip": 96.526,
+      "aipJournal": "Journal of Occupational Health Psychology",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Bloom, J. de"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2018-07",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Focp0000083",
+      "publicationDateType": "published-online",
+      "topicFamilies": [
+        "occupational health",
+        "wellbeing",
+        "recovery and leisure"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.5117/2018.031.003.003",
       "doi": "10.5117/2018.031.003.003",
       "title": "Het verbeteren van de beeldvorming aangaande de competentie van minderheden: een theoretische verkenning",
@@ -18333,20 +18382,23 @@
       "doi": "10.1093/cjres/rsx031",
       "title": "Brexit and the relevance of regional personality traits: more psychological Openness could have swung the regional vote",
       "year": 2018,
-      "yearSource": "rug-reference",
+      "yearSource": "crossref-print",
       "journal": "Cambridge Journal of Regions, Economy and Society",
-      "issns": [],
-      "sourceType": "RUG staff page",
+      "issns": [
+        "1752-1378",
+        "1752-1386"
+      ],
+      "sourceType": "journal-article",
       "publicationKind": "Journal",
       "rankableJournal": true,
-      "publisher": "",
-      "url": "https://research.rug.nl/en/publications/8f876a12-1bd4-44fd-a637-e27b7649324a",
+      "publisher": "Oxford University Press (OUP)",
+      "url": "https://doi.org/10.1093/cjres/rsx031",
       "authors": [
-        "Garretsen, H.",
-        "Stoker, J. I.",
-        "Soudis, D.",
-        "Martin, R.",
-        "Rentfrow, P. J."
+        "Harry Garretsen",
+        "Janka I Stoker",
+        "Dimitrios Soudis",
+        "Ron L Martin",
+        "Peter Jason Rentfrow"
       ],
       "matchedPeople": [
         "JS"
@@ -18357,12 +18409,12 @@
       "aip": 95.161,
       "aipJournal": "Cambridge Journal of Regions Economy and Society",
       "aipCategory": "DEVELOPMENT STUDIES",
-      "aipMatchMethod": "title",
+      "aipMatchMethod": "issn",
       "subjects": [],
-      "source": "University of Groningen staff publication page",
+      "source": "Crossref public metadata",
       "evidence": [
-        "RUG staff publication page for Stoker, J.I. lists this as a peer-reviewed journal publication.",
-        "Crossref ORCID matched for Stoker, J.I."
+        "Crossref ORCID matched for Stoker, J.I.",
+        "RUG staff publication page for Stoker, J.I. lists this as a peer-reviewed journal publication."
       ],
       "provisional": true,
       "publicationDate": "2018-03-10",
@@ -18690,7 +18742,7 @@
       "title": "But the memories last forever.... Vacation Reminiscence and Recovery from Job Stress: A Psychological Needs Perspective",
       "year": 2017,
       "yearSource": "openalex",
-      "journal": "Tampere University Institutional Repository (Tampere University)",
+      "journal": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
       "issns": [],
       "sourceType": "repository",
       "publicationKind": "Repository / preprint / non-journal source",
@@ -18723,7 +18775,8 @@
       "topicFamilies": [
         "stress and strain",
         "recovery and leisure",
-        "motivation and goals"
+        "motivation and goals",
+        "technology and AI"
       ],
       "counted": false,
       "display": true,
@@ -19033,9 +19086,9 @@
       "aipStatus": "reviewed-not-in-aip-source"
     },
     {
-      "id": "doi:10.1037/ocp0000083",
-      "doi": "10.1037/ocp0000083",
-      "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
+      "id": "doi:10.1037/ocp0000037",
+      "doi": "10.1037/ocp0000037",
+      "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
       "year": 2017,
       "yearSource": "openalex",
       "journal": "Journal of Occupational Health Psychology",
@@ -19047,13 +19100,14 @@
       "publicationKind": "Journal",
       "rankableJournal": true,
       "publisher": "",
-      "url": "https://openalex.org/W2603810356",
+      "url": "https://openalex.org/W2344667695",
       "authors": [
-        "Marjaana Sianoja",
-        "Christine Julia Syrek",
+        "Ulla M. Kinnunen",
+        "Taru Feldt",
         "Jessica de Bloom",
+        "Marjaana Sianoja",
         "Kalevi Korpela",
-        "Ulla M. Kinnunen"
+        "Sabine A. E. Geurts"
       ],
       "matchedPeople": [
         "JDB"
@@ -19072,10 +19126,12 @@
       ],
       "provisional": true,
       "previousIds": [],
+      "publicationDate": "2017-10",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Focp0000037",
+      "publicationDateType": "published-online",
       "topicFamilies": [
-        "occupational health",
-        "wellbeing",
-        "recovery and leisure"
+        "boundary spanning and external ties",
+        "occupational health"
       ],
       "counted": true,
       "display": true,
@@ -19864,56 +19920,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1037/ocp0000037",
-      "doi": "10.1037/ocp0000037",
-      "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
-      "year": 2016,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational Health Psychology",
-      "issns": [
-        "1076-8998",
-        "1939-1307"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2344667695",
-      "authors": [
-        "Ulla M. Kinnunen",
-        "Taru Feldt",
-        "Jessica de Bloom",
-        "Marjaana Sianoja",
-        "Kalevi Korpela",
-        "Sabine A. E. Geurts"
-      ],
-      "matchedPeople": [
-        "JDB"
-      ],
-      "sourcePeople": [
-        "JDB"
-      ],
-      "aip": 96.526,
-      "aipJournal": "Journal of Occupational Health Psychology",
-      "aipCategory": "PSYCHOLOGY, APPLIED",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "boundary spanning and external ties",
-        "occupational health"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1016/j.jesp.2015.10.001",
       "doi": "10.1016/j.jesp.2015.10.001",
       "title": "The pipeline project: Pre-publication independent replications of a single laboratory's research pipeline",
@@ -20090,6 +20096,60 @@
         "stress and strain",
         "wellbeing",
         "emotions and affect"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1037/a0039730",
+      "doi": "10.1037/a0039730",
+      "title": "The role of work–nonwork boundary management in work stress recovery.",
+      "year": 2016,
+      "yearSource": "openalex",
+      "journal": "International Journal of Stress Management",
+      "issns": [
+        "1072-5245",
+        "1573-3424"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2345611044",
+      "authors": [
+        "Ulla M. Kinnunen",
+        "Johanna Rantanen",
+        "Jessica de Bloom",
+        "Saija Mauno",
+        "Taru Feldt",
+        "Kalevi Korpela"
+      ],
+      "matchedPeople": [
+        "JDB"
+      ],
+      "sourcePeople": [
+        "JDB"
+      ],
+      "aip": 83.663,
+      "aipJournal": "INTERNATIONAL JOURNAL OF STRESS MANAGEMENT",
+      "aipCategory": "PSYCHOLOGY, APPLIED",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Bloom, J. de"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2016-05",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fa0039730",
+      "publicationDateType": "published-online",
+      "topicFamilies": [
+        "boundary spanning and external ties",
+        "stress and strain",
+        "recovery and leisure"
       ],
       "counted": true,
       "display": true,
@@ -21019,7 +21079,7 @@
     {
       "id": "doi:10.1097/jom.0000000000000475",
       "doi": "10.1097/jom.0000000000000475",
-      "title": "Recovery Processes During and After Work",
+      "title": "Recovery Processes During and After Work: Associations With Health, Work Engagement, and Job Performance",
       "year": 2015,
       "yearSource": "openalex",
       "journal": "Journal of Occupational and Environmental Medicine",
@@ -21058,7 +21118,10 @@
       "publicationDateType": "published-print",
       "previousIds": [],
       "topicFamilies": [
-        "recovery and leisure"
+        "occupational health",
+        "wellbeing",
+        "recovery and leisure",
+        "performance management"
       ],
       "counted": true,
       "display": true,
@@ -21107,57 +21170,6 @@
       "previousIds": [],
       "topicFamilies": [
         "leadership"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1037/a0039730",
-      "doi": "10.1037/a0039730",
-      "title": "The role of work–nonwork boundary management in work stress recovery.",
-      "year": 2015,
-      "yearSource": "openalex",
-      "journal": "International Journal of Stress Management",
-      "issns": [
-        "1072-5245",
-        "1573-3424"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2345611044",
-      "authors": [
-        "Ulla M. Kinnunen",
-        "Johanna Rantanen",
-        "Jessica de Bloom",
-        "Saija Mauno",
-        "Taru Feldt",
-        "Kalevi Korpela"
-      ],
-      "matchedPeople": [
-        "JDB"
-      ],
-      "sourcePeople": [
-        "JDB"
-      ],
-      "aip": 83.663,
-      "aipJournal": "INTERNATIONAL JOURNAL OF STRESS MANAGEMENT",
-      "aipCategory": "PSYCHOLOGY, APPLIED",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Bloom, J. de"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "boundary spanning and external ties",
-        "stress and strain",
-        "recovery and leisure"
       ],
       "counted": true,
       "display": true,
@@ -22167,7 +22179,7 @@
     {
       "id": "doi:10.1177/0190272513518803",
       "doi": "10.1177/0190272513518803",
-      "title": "The Detrimental Effects of Sanctions on Intragroup Trust",
+      "title": "The Detrimental Effects of Sanctions on Intragroup Trust: Comparing Punishments and Rewards",
       "year": 2014,
       "yearSource": "openalex",
       "journal": "Social Psychology Quarterly",
@@ -22321,7 +22333,7 @@
     {
       "id": "doi:10.1177/0146167214554916",
       "doi": "10.1177/0146167214554916",
-      "title": "Tell Me the Gossip",
+      "title": "Tell Me the Gossip: The Self-Evaluative Function of Receiving Gossip About Others",
       "year": 2014,
       "yearSource": "openalex",
       "journal": "Personality and Social Psychology Bulletin",
@@ -22362,7 +22374,9 @@
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0146167214554916",
       "publicationDateType": "published-online",
       "previousIds": [],
-      "topicFamilies": [],
+      "topicFamilies": [
+        "identity and belonging"
+      ],
       "counted": true,
       "display": true,
       "aipComparable": true,
@@ -23165,7 +23179,7 @@
     {
       "id": "doi:10.5117/2013.026.003.277",
       "doi": "10.5117/2013.026.003.277",
-      "title": "Initiatiefrijk en functie-inhoudelijk presteren",
+      "title": "Initiatiefrijk en functie-inhoudelijk presteren: De regulatiestrategieën van leiders in relatie tot het functioneren van medewerkers",
       "year": 2013,
       "yearSource": "openalex",
       "journal": "Gedrag & Organisatie",
@@ -23830,7 +23844,7 @@
     {
       "id": "doi:10.1177/0956797612453115",
       "doi": "10.1177/0956797612453115",
-      "title": "Influence in Times of Crisis",
+      "title": "Influence in Times of Crisis: How Social and Financial Resources Affect Men’s and Women’s Evaluations of Glass-Cliff Positions",
       "year": 2012,
       "yearSource": "crossref-print",
       "journal": "Psychological Science",
@@ -23878,6 +23892,8 @@
       "previousIds": [],
       "topicFamilies": [
         "power and hierarchy",
+        "emotions and affect",
+        "gender and leadership",
         "crisis and resilience"
       ],
       "counted": true,
@@ -24980,9 +24996,60 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1348/096317910x516372",
+      "doi": "10.1348/096317910x516372",
+      "title": "Feedback type as a moderator of the relationship between achievement goals and feedback reactions",
+      "year": 2011,
+      "yearSource": "openalex",
+      "journal": "Journal of Occupational and Organizational Psychology",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2145693586",
+      "authors": [
+        "Frederik Anseel",
+        "Nico W. Van Yperen",
+        "Onne Janssen",
+        "Wouter Duyck"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 93.287,
+      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2011-04-07",
+      "publicationDateSource": "https://api.crossref.org/works/10.1348%2F096317910x516372",
+      "publicationDateType": "published-online",
+      "topicFamilies": [
+        "motivation and goals",
+        "learning and feedback"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1177/0149206311398136",
       "doi": "10.1177/0149206311398136",
-      "title": "Someone to Look Up To",
+      "title": "Someone to Look Up To: Executive–Follower Ethical Reasoning and Perceptions of Ethical Leadership",
       "year": 2011,
       "yearSource": "openalex",
       "journal": "Journal of Management",
@@ -25021,7 +25088,10 @@
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0149206311398136",
       "publicationDateType": "published-online",
       "previousIds": [],
-      "topicFamilies": [],
+      "topicFamilies": [
+        "leadership",
+        "ethics and morality"
+      ],
       "counted": true,
       "display": true,
       "aipComparable": true,
@@ -25180,9 +25250,59 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1037/a0021882",
+      "doi": "10.1037/a0021882",
+      "title": "Harming high performers: A social comparison perspective on interpersonal harming in work teams.",
+      "year": 2011,
+      "yearSource": "openalex",
+      "journal": "Journal of Applied Psychology",
+      "issns": [
+        "0021-9010",
+        "1939-1854"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2097313071",
+      "authors": [
+        "Catherine K. Lam",
+        "Gerben S. van der Vegt",
+        "Frank H. Walter",
+        "Xu Huang"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 98.367,
+      "aipJournal": "JOURNAL OF APPLIED PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2011-05",
+      "publicationDateSource": "https://api.crossref.org/works/10.1037%2Fa0021882",
+      "publicationDateType": "published-online",
+      "topicFamilies": [
+        "teams and groups"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1177/0001839212441928",
       "doi": "10.1177/0001839212441928",
-      "title": "Something to Lose and Nothing to Gain",
+      "title": "Something to Lose and Nothing to Gain: The Role of Stress in the Interactive Effect of Power and Stability on Risk Taking",
       "year": 2011,
       "yearSource": "openalex",
       "journal": "Administrative Science Quarterly",
@@ -25220,7 +25340,11 @@
       "publicationDateSource": "https://api.crossref.org/works/10.1177%2F0001839212441928",
       "publicationDateType": "published-print",
       "previousIds": [],
-      "topicFamilies": [],
+      "topicFamilies": [
+        "power and hierarchy",
+        "decision making",
+        "stress and strain"
+      ],
       "counted": true,
       "display": true,
       "aipComparable": true,
@@ -25422,54 +25546,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1348/096317910x516372",
-      "doi": "10.1348/096317910x516372",
-      "title": "Feedback type as a moderator of the relationship between achievement goals and feedback reactions",
-      "year": 2010,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational and Organizational Psychology",
-      "issns": [
-        "0963-1798",
-        "2044-8325"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2145693586",
-      "authors": [
-        "Frederik Anseel",
-        "Nico W. Van Yperen",
-        "Onne Janssen",
-        "Wouter Duyck"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 93.287,
-      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "motivation and goals",
-        "learning and feedback"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1007/s10551-011-0795-z",
       "doi": "10.1007/s10551-011-0795-z",
       "title": "When Rules Really Make a Difference: The Effect of Cooperation Rules and Self-Sacrificing Leadership on Moral Norms in Social Dilemmas",
@@ -25562,53 +25638,6 @@
       "previousIds": [],
       "topicFamilies": [
         "decision making"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1037/a0021882",
-      "doi": "10.1037/a0021882",
-      "title": "Harming high performers: A social comparison perspective on interpersonal harming in work teams.",
-      "year": 2010,
-      "yearSource": "openalex",
-      "journal": "Journal of Applied Psychology",
-      "issns": [
-        "0021-9010",
-        "1939-1854"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2097313071",
-      "authors": [
-        "Catherine K. Lam",
-        "Gerben S. van der Vegt",
-        "Frank H. Walter",
-        "Xu Huang"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 98.367,
-      "aipJournal": "JOURNAL OF APPLIED PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "teams and groups"
       ],
       "counted": true,
       "display": true,
@@ -26217,6 +26246,55 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1348/096317908x342909",
+      "doi": "10.1348/096317908x342909",
+      "title": "What's the difference? Insider perspectives on the importance, content, and meaning of interpersonal differences",
+      "year": 2009,
+      "yearSource": "openalex",
+      "journal": "Journal of Occupational and Organizational Psychology",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2126715409",
+      "authors": [
+        "Aad Oosterhof",
+        "Gerben S. van der Vegt",
+        "Evert Van de Vliert",
+        "Karin Sanders",
+        "Henk A. L. Kiers"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 93.287,
+      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2009-09",
+      "publicationDateSource": "https://api.crossref.org/works/10.1348%2F096317908x342909",
+      "publicationDateType": "published-print",
+      "topicFamilies": [],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1177/0149206309344117",
       "doi": "10.1177/0149206309344117",
       "title": "Why Turnover Matters in Self-Managing Work Teams: Learning, Social Integration, and Task Flexibility",
@@ -26374,7 +26452,7 @@
     {
       "id": "doi:10.1177/1059601108331239",
       "doi": "10.1177/1059601108331239",
-      "title": "Valuing Skill Differences",
+      "title": "Valuing Skill Differences: Perceived Skill Complementarity and Dyadic Helping Behavior in Teams",
       "year": 2009,
       "yearSource": "openalex",
       "journal": "Group & Organization Management",
@@ -26414,7 +26492,8 @@
       "publicationDateType": "published-online",
       "previousIds": [],
       "topicFamilies": [
-        "teams and groups"
+        "teams and groups",
+        "prosocial behavior"
       ],
       "counted": true,
       "display": true,
@@ -27004,52 +27083,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1348/096317908x342909",
-      "doi": "10.1348/096317908x342909",
-      "title": "What's the difference? Insider perspectives on the importance, content, and meaning of interpersonal differences",
-      "year": 2008,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational and Organizational Psychology",
-      "issns": [
-        "0963-1798",
-        "2044-8325"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2126715409",
-      "authors": [
-        "Aad Oosterhof",
-        "Gerben S. van der Vegt",
-        "Evert Van de Vliert",
-        "Karin Sanders",
-        "Henk A. L. Kiers"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 93.287,
-      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1177/0149206307309263",
       "doi": "10.1177/0149206307309263",
       "title": "Us and Me: Team Identification and Individual Differentiation as Complementary Drivers of Team Members' Citizenship and Creative Behaviors",
@@ -27480,6 +27513,101 @@
       "aipStatus": "matched"
     },
     {
+      "id": "doi:10.1348/096317906x154469",
+      "doi": "10.1348/096317906x154469",
+      "title": "The performance evaluation of novices: The importance of competence in specific work activity clusters",
+      "year": 2007,
+      "yearSource": "openalex",
+      "journal": "Journal of Occupational and Organizational Psychology",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2004953711",
+      "authors": [
+        "Eric Molleman",
+        "Gerben S. van der Vegt"
+      ],
+      "matchedPeople": [
+        "GVV"
+      ],
+      "sourcePeople": [
+        "GVV"
+      ],
+      "aip": 93.287,
+      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2007-09",
+      "publicationDateSource": "https://api.crossref.org/works/10.1348%2F096317906x154469",
+      "publicationDateType": "published-print",
+      "topicFamilies": [],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1348/096317906x103410",
+      "doi": "10.1348/096317906x103410",
+      "title": "Goal orientations and the seeking of different types of feedback information",
+      "year": 2007,
+      "yearSource": "openalex",
+      "journal": "Journal of Occupational and Organizational Psychology",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2110926910",
+      "authors": [
+        "Onne Janssen",
+        "Jelle Prins"
+      ],
+      "matchedPeople": [
+        "OJ"
+      ],
+      "sourcePeople": [
+        "OJ"
+      ],
+      "aip": 93.287,
+      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
+      "aipCategory": "MANAGEMENT",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Janssen, O."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2007-06",
+      "publicationDateSource": "https://api.crossref.org/works/10.1348%2F096317906x103410",
+      "publicationDateType": "published-print",
+      "topicFamilies": [
+        "motivation and goals",
+        "learning and feedback"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
       "id": "doi:10.1177/0149206306295307",
       "doi": "10.1177/0149206306295307",
       "title": "The Effects of Diversity Faultlines and Team Task Autonomy on Decision Quality and Social Integration",
@@ -27629,6 +27757,54 @@
       "topicFamilies": [
         "ethics and morality",
         "motivation and goals"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1348/014466606x154872",
+      "doi": "10.1348/014466606x154872",
+      "title": "Defining the common feature: Task‐related differences as the basis for dyadic identity",
+      "year": 2007,
+      "yearSource": "openalex",
+      "journal": "British Journal of Social Psychology",
+      "issns": [
+        "0144-6665",
+        "2044-8309"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W2145081288",
+      "authors": [
+        "Floor A. Rink",
+        "Naomi Ellemers"
+      ],
+      "matchedPeople": [
+        "FR"
+      ],
+      "sourcePeople": [
+        "FR"
+      ],
+      "aip": 92.38,
+      "aipJournal": "BRITISH JOURNAL OF SOCIAL PSYCHOLOGY",
+      "aipCategory": "PSYCHOLOGY, SOCIAL",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Rink, F.A."
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "publicationDate": "2007-09",
+      "publicationDateSource": "https://api.crossref.org/works/10.1348%2F014466606x154872",
+      "publicationDateType": "published-print",
+      "topicFamilies": [
+        "identity and belonging"
       ],
       "counted": true,
       "display": true,
@@ -27924,95 +28100,6 @@
       "aipStatus": "matched"
     },
     {
-      "id": "doi:10.1348/096317906x154469",
-      "doi": "10.1348/096317906x154469",
-      "title": "The performance evaluation of novices: The importance of competence in specific work activity clusters",
-      "year": 2006,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational and Organizational Psychology",
-      "issns": [
-        "0963-1798",
-        "2044-8325"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2004953711",
-      "authors": [
-        "Eric Molleman",
-        "Gerben S. van der Vegt"
-      ],
-      "matchedPeople": [
-        "GVV"
-      ],
-      "sourcePeople": [
-        "GVV"
-      ],
-      "aip": 93.287,
-      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Vegt, G.S. van der"
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1348/096317906x103410",
-      "doi": "10.1348/096317906x103410",
-      "title": "Goal orientations and the seeking of different types of feedback information",
-      "year": 2006,
-      "yearSource": "openalex",
-      "journal": "Journal of Occupational and Organizational Psychology",
-      "issns": [
-        "0963-1798",
-        "2044-8325"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2110926910",
-      "authors": [
-        "Onne Janssen",
-        "Jelle Prins"
-      ],
-      "matchedPeople": [
-        "OJ"
-      ],
-      "sourcePeople": [
-        "OJ"
-      ],
-      "aip": 93.287,
-      "aipJournal": "JOURNAL OF OCCUPATIONAL AND ORGANIZATIONAL PSYCHOLOGY",
-      "aipCategory": "MANAGEMENT",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Janssen, O."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "motivation and goals",
-        "learning and feedback"
-      ],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
       "id": "doi:10.1177/030630700603200103",
       "doi": "10.1177/030630700603200103",
       "title": "Leading Middle Management: Consequences of Organisational Changes for Tasks and Behaviours of Middle Managers",
@@ -28205,51 +28292,6 @@
       "publicationDateType": "published-print",
       "previousIds": [],
       "topicFamilies": [],
-      "counted": true,
-      "display": true,
-      "aipComparable": true,
-      "aipStatus": "matched"
-    },
-    {
-      "id": "doi:10.1348/014466606x154872",
-      "doi": "10.1348/014466606x154872",
-      "title": "Defining the common feature: Task‐related differences as the basis for dyadic identity",
-      "year": 2006,
-      "yearSource": "openalex",
-      "journal": "British Journal of Social Psychology",
-      "issns": [
-        "0144-6665",
-        "2044-8309"
-      ],
-      "sourceType": "journal",
-      "publicationKind": "Journal",
-      "rankableJournal": true,
-      "publisher": "",
-      "url": "https://openalex.org/W2145081288",
-      "authors": [
-        "Floor A. Rink",
-        "Naomi Ellemers"
-      ],
-      "matchedPeople": [
-        "FR"
-      ],
-      "sourcePeople": [
-        "FR"
-      ],
-      "aip": 92.38,
-      "aipJournal": "BRITISH JOURNAL OF SOCIAL PSYCHOLOGY",
-      "aipCategory": "PSYCHOLOGY, SOCIAL",
-      "aipMatchMethod": "issn",
-      "subjects": [],
-      "source": "OpenAlex public metadata",
-      "evidence": [
-        "OpenAlex author matched to University of Groningen for Rink, F.A."
-      ],
-      "provisional": true,
-      "previousIds": [],
-      "topicFamilies": [
-        "identity and belonging"
-      ],
       "counted": true,
       "display": true,
       "aipComparable": true,
@@ -29631,6 +29673,48 @@
       "aipStatus": "matched"
     },
     {
+      "id": "openalex:W2498438054",
+      "doi": "",
+      "title": "Participatie na De Sitter en In ’t Veld. De sociotechniek als oerstructuur.",
+      "year": 2003,
+      "yearSource": "openalex",
+      "journal": "Bedrijfskunde : Tijdschrift voor Modern Management",
+      "issns": [],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / possible same-name record",
+      "rankableJournal": false,
+      "publisher": "",
+      "url": "https://openalex.org/W2498438054",
+      "authors": [
+        "Janka Ireen Stoker",
+        "Maurits Verweij"
+      ],
+      "matchedPeople": [
+        "JS"
+      ],
+      "sourcePeople": [
+        "JS"
+      ],
+      "aip": null,
+      "aipJournal": "",
+      "aipCategory": "",
+      "aipMatchMethod": "unmatched",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Stoker, J.I.",
+        "Public-source review: Identity hold: this 2003 Bedrijfskunde article is linked to Janka Stoker only through an OpenAlex author/affiliation match, with no DOI, publisher, Pure or ORCID evidence of her authorship. Bedrijfskunde is also absent from the 2020-2024 AIP workbook. Not counted until source evidence confirms the author. Source: https://openalex.org/W2498438054"
+      ],
+      "provisional": true,
+      "previousIds": [],
+      "topicFamilies": [],
+      "counted": false,
+      "display": false,
+      "aipComparable": true,
+      "aipStatus": "unresolved-aip-match",
+      "reviewHold": true
+    },
+    {
       "id": "openalex:W2514815842",
       "doi": "",
       "title": "Onderzoek naar conflict en welzijn in de sector verpleging en verzorging.",
@@ -29722,7 +29806,7 @@
     {
       "id": "doi:10.1108/02683940210415924",
       "doi": "10.1108/02683940210415924",
-      "title": "Intragroup interdependence and effectiveness",
+      "title": "Intragroup interdependence and effectiveness: Review and proposed directions for theory and practice",
       "year": 2002,
       "yearSource": "openalex",
       "journal": "Journal of Managerial Psychology",
@@ -30223,10 +30307,13 @@
       "title": "De samenhang tussen werkstress, coping en burn-out bij fysiotherapeuten. / The relationship between work stress and concomitant symptoms of burn-out in physiotherapists.",
       "year": 2000,
       "yearSource": "openalex",
-      "journal": "UvA-DARE (University of Amsterdam)",
-      "issns": [],
-      "sourceType": "repository",
-      "publicationKind": "Repository / preprint / non-journal source",
+      "journal": "gedrag en gezondheid",
+      "issns": [
+        "0921-5360",
+        "1876-8733"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Out-of-scope / possible same-name record",
       "rankableJournal": false,
       "publisher": "",
       "url": "https://openalex.org/W1797865479",
@@ -30247,7 +30334,8 @@
       "subjects": [],
       "source": "OpenAlex public metadata",
       "evidence": [
-        "OpenAlex author matched to University of Groningen for Vries, T.A. de"
+        "OpenAlex author matched to University of Groningen for Vries, T.A. de",
+        "Public-source review: Identity hold: this 2000 gedrag en gezondheid article on burnout in physiotherapists is linked to Thom de Vries only through an OpenAlex author/affiliation match. No publisher, Pure or ORCID evidence identifies the HRM&OB researcher as its author, and earlier builds stored it as an uncounted non-journal record. Not counted under the strict author-identity rule. Source: https://openalex.org/W1797865479"
       ],
       "provisional": true,
       "previousIds": [],
@@ -30256,9 +30344,10 @@
         "crisis and resilience"
       ],
       "counted": false,
-      "display": true,
-      "aipComparable": false,
-      "aipStatus": "not-rankable"
+      "display": false,
+      "aipComparable": true,
+      "aipStatus": "unresolved-aip-match",
+      "reviewHold": true
     },
     {
       "id": "doi:10.1348/096317900167038",
@@ -30915,6 +31004,67 @@
       "topicFamilies": [
         "conflict",
         "motivation and goals"
+      ],
+      "counted": true,
+      "display": true,
+      "aipComparable": true,
+      "aipStatus": "matched"
+    },
+    {
+      "id": "doi:10.1016/j.shaw.2021.12.936",
+      "doi": "10.1016/j.shaw.2021.12.936",
+      "title": "Crafting work and leisure for recovery and optimal functioning across life domains",
+      "year": 2022,
+      "yearSource": "openalex",
+      "journal": "Safety and Health at Work",
+      "issns": [
+        "2093-7911",
+        "2093-7997"
+      ],
+      "sourceType": "journal",
+      "publicationKind": "Journal",
+      "rankableJournal": true,
+      "publisher": "",
+      "url": "https://openalex.org/W4210250036",
+      "authors": [
+        "Jessica de Bloom",
+        "Miika Kujanpää",
+        "Merly Kosenkranius",
+        "Ulla M. Kinnunen",
+        "Floor A. Rink",
+        "Christine Julia Syrek",
+        "Hoda Vaziri",
+        "Louis Tay",
+        "Georg Friedrich Bauer",
+        "Akihito Shimazu"
+      ],
+      "matchedPeople": [
+        "JDB",
+        "FR"
+      ],
+      "sourcePeople": [
+        "JDB",
+        "FR"
+      ],
+      "aip": 69.599,
+      "aipJournal": "Safety and Health at Work",
+      "aipCategory": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
+      "aipMatchMethod": "issn",
+      "subjects": [],
+      "source": "OpenAlex public metadata",
+      "evidence": [
+        "OpenAlex author matched to University of Groningen for Bloom, J. de",
+        "OpenAlex author matched to University of Groningen for Rink, F.A."
+      ],
+      "provisional": true,
+      "publicationDate": "2022-01",
+      "publicationDateSource": "https://api.crossref.org/works/10.1016%2Fj.shaw.2021.12.936",
+      "publicationDateType": "published-print",
+      "previousIds": [],
+      "topicFamilies": [
+        "occupational health",
+        "recovery and leisure",
+        "job crafting"
       ],
       "counted": true,
       "display": true,

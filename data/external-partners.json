@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedOn": "2026-11-12",
+    "generatedOn": "2026-11-26",
     "source": "OpenAlex authorship institutions for counted dashboard publications",
-    "eligiblePublications": 781,
+    "eligiblePublications": 782,
     "cacheHits": 780,
-    "fetched": 1,
-    "coveredPublications": 777,
+    "fetched": 2,
+    "coveredPublications": 778,
     "missingCacheRecords": 0,
     "offline": false,
     "partnerCount": 850,
@@ -2547,7 +2547,7 @@
         {
           "id": "doi:10.5117/2013.026.003.277",
           "year": 2013,
-          "title": "Initiatiefrijk en functie-inhoudelijk presteren",
+          "title": "Initiatiefrijk en functie-inhoudelijk presteren: De regulatiestrategieën van leiders in relatie tot het functioneren van medewerkers",
           "staffIds": [
             "FR"
           ],
@@ -2713,6 +2713,17 @@
           ]
         },
         {
+          "id": "doi:10.1348/014466606x154872",
+          "year": 2007,
+          "title": "Defining the common feature: Task‐related differences as the basis for dyadic identity",
+          "staffIds": [
+            "FR"
+          ],
+          "authors": [
+            "Naomi Ellemers"
+          ]
+        },
+        {
           "id": "doi:10.1111/j.1467-8551.2007.00523.x",
           "year": 2007,
           "title": "Diversity as a Basis for Shared Organizational Identity: The Norm Congruity Principle",
@@ -2749,17 +2760,6 @@
           "id": "doi:10.1177/0146167207301016",
           "year": 2007,
           "title": "The Role of Expectancies in Accepting Task-Related Diversity: Do Disappointment and Lack of Commitment Stem From Actual Differences or Violated Expectations?",
-          "staffIds": [
-            "FR"
-          ],
-          "authors": [
-            "Naomi Ellemers"
-          ]
-        },
-        {
-          "id": "doi:10.1348/014466606x154872",
-          "year": 2006,
-          "title": "Defining the common feature: Task‐related differences as the basis for dyadic identity",
           "staffIds": [
             "FR"
           ],
@@ -4092,7 +4092,7 @@
         {
           "id": "doi:10.5117/2013.026.003.277",
           "year": 2013,
-          "title": "Initiatiefrijk en functie-inhoudelijk presteren",
+          "title": "Initiatiefrijk en functie-inhoudelijk presteren: De regulatiestrategieën van leiders in relatie tot het functioneren van medewerkers",
           "staffIds": [
             "FR"
           ],
@@ -4623,6 +4623,19 @@
           ]
         },
         {
+          "id": "doi:10.1037/ocp0000083",
+          "year": 2018,
+          "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Marjaana Sianoja",
+            "Kalevi Korpela",
+            "Ulla Kinnunen"
+          ]
+        },
+        {
           "id": "doi:10.1080/01490400.2017.1356254",
           "year": 2018,
           "title": "Longitudinal Leisure Activity Profiles and Their Associations with Recovery Experiences and Job Performance",
@@ -4649,19 +4662,6 @@
           ]
         },
         {
-          "id": "doi:10.1037/ocp0000083",
-          "year": 2017,
-          "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Marjaana Sianoja",
-            "Kalevi Korpela",
-            "Ulla Kinnunen"
-          ]
-        },
-        {
           "id": "doi:10.1080/1359432x.2017.1314265",
           "year": 2017,
           "title": "Identifying long-term patterns of work-related rumination: associations with job demands and well-being outcomes",
@@ -4672,6 +4672,21 @@
             "Ulla Kinnunen",
             "Marjaana Sianoja",
             "Kalevi Korpela"
+          ]
+        },
+        {
+          "id": "doi:10.1037/ocp0000037",
+          "year": 2017,
+          "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Ulla Kinnunen",
+            "Taru Feldt",
+            "Marjaana Sianoja",
+            "Kalevi Korpela",
+            "Sabine A. E. Geurts"
           ]
         },
         {
@@ -4750,21 +4765,6 @@
           ]
         },
         {
-          "id": "doi:10.1037/ocp0000037",
-          "year": 2016,
-          "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ulla Kinnunen",
-            "Taru Feldt",
-            "Marjaana Sianoja",
-            "Kalevi Korpela",
-            "Sabine A. E. Geurts"
-          ]
-        },
-        {
           "id": "doi:10.1016/j.landurbplan.2016.12.005",
           "year": 2016,
           "title": "Nature at home and at work: Naturally good? Links between window views, indoor plants, outdoor activities and employee well-being over one year",
@@ -4779,6 +4779,17 @@
           ]
         },
         {
+          "id": "doi:10.1037/a0039730",
+          "year": 2016,
+          "title": "The role of work–nonwork boundary management in work stress recovery.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Ulla Kinnunen"
+          ]
+        },
+        {
           "id": "doi:10.1007/s00420-015-1039-9",
           "year": 2015,
           "title": "Patterns of daily energy management at work: relations to employee well-being and job characteristics",
@@ -4788,17 +4799,6 @@
           "authors": [
             "Ulla Kinnunen",
             "Kalevi Korpela"
-          ]
-        },
-        {
-          "id": "doi:10.1037/a0039730",
-          "year": 2015,
-          "title": "The role of work–nonwork boundary management in work stress recovery.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ulla Kinnunen"
           ]
         },
         {
@@ -5618,6 +5618,370 @@
       ]
     },
     {
+      "id": "au:australian national university",
+      "institution": "Australian National University",
+      "country": "AU",
+      "type": "education",
+      "publicationCount": 26,
+      "staffIds": [
+        "JL",
+        "MR"
+      ],
+      "authors": [
+        "Alexandra N. Fisher",
+        "Alexandra Noelle Fisher",
+        "Barbara Dávid",
+        "Boris Bizumić",
+        "Brooke Franklin-Paddock",
+        "Colin Klein",
+        "Craig McGarty",
+        "Denise Ruggieri",
+        "Diana M. Grace",
+        "Elise Stephenson",
+        "Emina Subašić",
+        "Emmaline A. Monteith",
+        "Gosia Mikołajczak",
+        "Isabella Gilbert",
+        "Jack Hayes",
+        "John Turner",
+        "Kaitlyn Davidson",
+        "Kate A. B. Western",
+        "Katherine J. Reynolds",
+        "Kristine E. Veenstra",
+        "Ligia Oliveria‐Silva",
+        "Lígia Carolina Oliveira-Silva",
+        "Michael J. Platow",
+        "Olivia Evans",
+        "Penélope J. Oakes",
+        "S. Alexander Haslam",
+        "Samantha K. Stanley",
+        "Susan Johnson",
+        "Tegan Cruwys",
+        "Veljko Jovanović"
+      ],
+      "publications": [
+        {
+          "id": "doi:10.1080/17512786.2024.2441283",
+          "year": 2026,
+          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra N. Fisher",
+            "Gosia Mikołajczak",
+            "Emmaline A. Monteith"
+          ]
+        },
+        {
+          "id": "doi:10.1177/09593535251344621",
+          "year": 2026,
+          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1111/pops.70084",
+          "year": 2026,
+          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1080/09540253.2025.2568394",
+          "year": 2026,
+          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Gosia Mikołajczak"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.70140",
+          "year": 2026,
+          "title": "Threatened, Distressed, Aggrieved: Experimental Evidence That Masculinity Threat Produces Manosphere Grievance Among High‐Identifying Men",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Brooke Franklin-Paddock",
+            "Isabella Gilbert",
+            "Kaitlyn Davidson",
+            "Michael J. Platow",
+            "Tegan Cruwys",
+            "Denise Ruggieri"
+          ]
+        },
+        {
+          "id": "doi:10.1108/gm-03-2025-0173",
+          "year": 2026,
+          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70286",
+          "year": 2026,
+          "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys",
+            "Olivia Evans"
+          ]
+        },
+        {
+          "id": "doi:10.1177/10888683251350913",
+          "year": 2025,
+          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s10508-025-03114-5",
+          "year": 2025,
+          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Brooke Franklin-Paddock",
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1002/casp.70037",
+          "year": 2025,
+          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Ligia Oliveria‐Silva"
+          ]
+        },
+        {
+          "id": "doi:10.1177/13684302241311544",
+          "year": 2025,
+          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher"
+          ]
+        },
+        {
+          "id": "doi:10.1177/13563890241284626",
+          "year": 2024,
+          "title": "A framework for evaluating women’s leadership programmes",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Elise Stephenson",
+            "Gosia Mikołajczak",
+            "Alexandra N. Fisher",
+            "Jack Hayes"
+          ]
+        },
+        {
+          "id": "doi:10.3390/bs14040275",
+          "year": 2024,
+          "title": "The Impact of Motherhood on Women’s Career Progression: A Scoping Review of Evidence-Based Interventions",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Lígia Carolina Oliveira-Silva",
+            "Alexandra N. Fisher"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41597-024-03865-1",
+          "year": 2024,
+          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
+          "staffIds": [
+            "JL"
+          ],
+          "authors": [
+            "Colin Klein",
+            "Samantha K. Stanley"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s11199-024-01453-6",
+          "year": 2024,
+          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Alexandra Noelle Fisher",
+            "Gosia Mikołajczak",
+            "Veljko Jovanović"
+          ]
+        },
+        {
+          "id": "doi:10.1177/08862605211073095",
+          "year": 2022,
+          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Kate A. B. Western",
+            "Tegan Cruwys"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430218763272",
+          "year": 2018,
+          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.leaqua.2014.05.002",
+          "year": 2014,
+          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
+          "year": 2008,
+          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Diana M. Grace",
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1348/014466606x153080",
+          "year": 2006,
+          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "Boris Bizumić",
+            "Emina Subašić"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.292",
+          "year": 2005,
+          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow"
+          ]
+        },
+        {
+          "id": "doi:10.1002/ejsp.293",
+          "year": 2005,
+          "title": "Non‐instrumental voice and extra‐role behaviour",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Michael J. Platow",
+            "Diana M. Grace"
+          ]
+        },
+        {
+          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
+          "year": 2004,
+          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid",
+            "Katherine J. Reynolds"
+          ]
+        },
+        {
+          "id": "doi:10.1023/b:sers.0000003342.16137.32",
+          "year": 2003,
+          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Barbara Dávid"
+          ]
+        },
+        {
+          "id": "doi:10.1177/1368430201004003002",
+          "year": 2001,
+          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "John Turner",
+            "Katherine J. Reynolds",
+            "Craig McGarty",
+            "Penélope J. Oakes",
+            "Susan Johnson",
+            "Kristine E. Veenstra"
+          ]
+        },
+        {
+          "id": "doi:10.1006/jesp.2000.1473",
+          "year": 2001,
+          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
+          "staffIds": [
+            "MR"
+          ],
+          "authors": [
+            "Katherine J. Reynolds",
+            "John Turner",
+            "S. Alexander Haslam"
+          ]
+        }
+      ]
+    },
+    {
       "id": "nl:tilburg university",
       "institution": "Tilburg University",
       "country": "NL",
@@ -5961,351 +6325,6 @@
           ],
           "authors": [
             "David De Cremer"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "au:australian national university",
-      "institution": "Australian National University",
-      "country": "AU",
-      "type": "education",
-      "publicationCount": 25,
-      "staffIds": [
-        "JL",
-        "MR"
-      ],
-      "authors": [
-        "Alexandra N. Fisher",
-        "Alexandra Noelle Fisher",
-        "Barbara Dávid",
-        "Boris Bizumić",
-        "Brooke Franklin-Paddock",
-        "Colin Klein",
-        "Craig McGarty",
-        "Diana M. Grace",
-        "Elise Stephenson",
-        "Emina Subašić",
-        "Emmaline A. Monteith",
-        "Gosia Mikołajczak",
-        "Jack Hayes",
-        "John Turner",
-        "Kate A. B. Western",
-        "Katherine J. Reynolds",
-        "Kristine E. Veenstra",
-        "Ligia Oliveria‐Silva",
-        "Lígia Carolina Oliveira-Silva",
-        "Michael J. Platow",
-        "Olivia Evans",
-        "Penélope J. Oakes",
-        "S. Alexander Haslam",
-        "Samantha K. Stanley",
-        "Susan Johnson",
-        "Tegan Cruwys",
-        "Veljko Jovanović"
-      ],
-      "publications": [
-        {
-          "id": "doi:10.1080/17512786.2024.2441283",
-          "year": 2026,
-          "title": "Does Gender Influence Media Engagement? Attitudes and Experiences of Australian Media Sources",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra N. Fisher",
-            "Gosia Mikołajczak",
-            "Emmaline A. Monteith"
-          ]
-        },
-        {
-          "id": "doi:10.1177/09593535251344621",
-          "year": 2026,
-          "title": "Feminist career mentoring for women in STEAM+: An evolving model and recommendations from a Brasilian practice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1111/pops.70084",
-          "year": 2026,
-          "title": "Should “sisters” be doing it by themselves?: Leadership, allyship, and mobilization for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1080/09540253.2025.2568394",
-          "year": 2026,
-          "title": "The impact of gender-sensitive career counselling on the self-perception of Brazilian women in STEM",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva",
-            "Gosia Mikołajczak"
-          ]
-        },
-        {
-          "id": "doi:10.1108/gm-03-2025-0173",
-          "year": 2026,
-          "title": "Unpacking career aspirations: a critical scoping review of undergraduate women’s career development",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.70286",
-          "year": 2026,
-          "title": "‘It Completely Demolished My Sense of Who I Was’: Navigating Identity in the Aftermath of Sexual Violence",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kate A. B. Western",
-            "Tegan Cruwys",
-            "Olivia Evans"
-          ]
-        },
-        {
-          "id": "doi:10.1177/10888683251350913",
-          "year": 2025,
-          "title": "Decolonizing Interventions for Workplace Gender Equity: An Intersectional and Latin American Lens",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s10508-025-03114-5",
-          "year": 2025,
-          "title": "From Privilege to Threat: Unraveling Psychological Pathways to the Manosphere",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Brooke Franklin-Paddock",
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1002/casp.70037",
-          "year": 2025,
-          "title": "Further Disadvantages of Socioeconomic Status: The Role of Subjective Social Status in University Students' Sense of Belonging",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Ligia Oliveria‐Silva"
-          ]
-        },
-        {
-          "id": "doi:10.1177/13684302241311544",
-          "year": 2025,
-          "title": "Intergroup contact in the context of gender. A critical review of the literature and opportunities for future research",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher"
-          ]
-        },
-        {
-          "id": "doi:10.1177/13563890241284626",
-          "year": 2024,
-          "title": "A framework for evaluating women’s leadership programmes",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Elise Stephenson",
-            "Gosia Mikołajczak",
-            "Alexandra N. Fisher",
-            "Jack Hayes"
-          ]
-        },
-        {
-          "id": "doi:10.3390/bs14040275",
-          "year": 2024,
-          "title": "The Impact of Motherhood on Women’s Career Progression: A Scoping Review of Evidence-Based Interventions",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Lígia Carolina Oliveira-Silva",
-            "Alexandra N. Fisher"
-          ]
-        },
-        {
-          "id": "doi:10.1038/s41597-024-03865-1",
-          "year": 2024,
-          "title": "The International Climate Psychology Collaboration: Climate change-related data collected from 63 countries",
-          "staffIds": [
-            "JL"
-          ],
-          "authors": [
-            "Colin Klein",
-            "Samantha K. Stanley"
-          ]
-        },
-        {
-          "id": "doi:10.1007/s11199-024-01453-6",
-          "year": 2024,
-          "title": "The Precarity of Progress: Implications of a Shifting Gendered Division of Labor for Relationships and Well-Being as a Function of Country-Level Gender Equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Alexandra Noelle Fisher",
-            "Gosia Mikołajczak",
-            "Veljko Jovanović"
-          ]
-        },
-        {
-          "id": "doi:10.1177/08862605211073095",
-          "year": 2022,
-          "title": "What Does it Mean to be a Woman? How the Content of Gender Identity May Facilitate Women’s Coping with Sexual Harassment",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Kate A. B. Western",
-            "Tegan Cruwys"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430218763272",
-          "year": 2018,
-          "title": "“We for She”: Mobilising men and women to act in solidarity for gender equality",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1016/j.leaqua.2014.05.002",
-          "year": 2014,
-          "title": "Leadership as social identity management: Introducing the Identity Leadership Inventory (ILI) to assess and validate a four-dimensional model",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1467-8624.2008.01234.x",
-          "year": 2008,
-          "title": "Investigating Preschoolers’ Categorical Thinking About Gender Through Imitation, Attention, and the Use of Self-Categories",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Diana M. Grace",
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1348/014466606x153080",
-          "year": 2006,
-          "title": "Does personality explain in‐group identification and discrimination? Evidence from the minimal group paradigm",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "Boris Bizumić",
-            "Emina Subašić"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.292",
-          "year": 2005,
-          "title": "Experimentally manipulated high in‐group status can buffer personal self‐esteem against discrimination",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow"
-          ]
-        },
-        {
-          "id": "doi:10.1002/ejsp.293",
-          "year": 2005,
-          "title": "Non‐instrumental voice and extra‐role behaviour",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Michael J. Platow",
-            "Diana M. Grace"
-          ]
-        },
-        {
-          "id": "doi:10.1111/j.1471-6402.2004.00142.x",
-          "year": 2004,
-          "title": "Who Cares? The Effect of Gender and Context on the Self and Moral Reasoning",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid",
-            "Katherine J. Reynolds"
-          ]
-        },
-        {
-          "id": "doi:10.1023/b:sers.0000003342.16137.32",
-          "year": 2003,
-          "title": "Gender Differences in Ways of Knowing: The Context Dependence of the Attitudes Toward Thinking and Learning Survey",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Barbara Dávid"
-          ]
-        },
-        {
-          "id": "doi:10.1177/1368430201004003002",
-          "year": 2001,
-          "title": "Social Identity and the Romance of Leadership: The Importance of being Seen to be ‘Doing it for Us’",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "John Turner",
-            "Katherine J. Reynolds",
-            "Craig McGarty",
-            "Penélope J. Oakes",
-            "Susan Johnson",
-            "Kristine E. Veenstra"
-          ]
-        },
-        {
-          "id": "doi:10.1006/jesp.2000.1473",
-          "year": 2001,
-          "title": "The Role of Personality and Group Factors in Explaining Prejudice",
-          "staffIds": [
-            "MR"
-          ],
-          "authors": [
-            "Katherine J. Reynolds",
-            "John Turner",
-            "S. Alexander Haslam"
           ]
         }
       ]
@@ -6764,19 +6783,8 @@
           ]
         },
         {
-          "id": "doi:10.1080/09669582.2016.1229323",
-          "year": 2016,
-          "title": "Holiday travel, staycations, and subjective well-being",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Sabine A. E. Geurts"
-          ]
-        },
-        {
           "id": "doi:10.1037/ocp0000037",
-          "year": 2016,
+          "year": 2017,
           "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
           "staffIds": [
             "JDB"
@@ -6786,6 +6794,17 @@
             "Taru Feldt",
             "Marjaana Sianoja",
             "Kalevi Korpela",
+            "Sabine A. E. Geurts"
+          ]
+        },
+        {
+          "id": "doi:10.1080/09669582.2016.1229323",
+          "year": 2016,
+          "title": "Holiday travel, staycations, and subjective well-being",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
             "Sabine A. E. Geurts"
           ]
         },
@@ -8895,7 +8914,7 @@
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -12411,6 +12430,17 @@
           ]
         },
         {
+          "id": "doi:10.1037/a0021882",
+          "year": 2011,
+          "title": "Harming high performers: A social comparison perspective on interpersonal harming in work teams.",
+          "staffIds": [
+            "GVV"
+          ],
+          "authors": [
+            "Xu Huang"
+          ]
+        },
+        {
           "id": "doi:10.1037/a0017869",
           "year": 2010,
           "title": "Contextualizing emotional exhaustion and positive emotional display: The signaling effects of supervisors’ emotional exhaustion and service climate.",
@@ -12419,17 +12449,6 @@
           ],
           "authors": [
             "Catherine K. Lam",
-            "Xu Huang"
-          ]
-        },
-        {
-          "id": "doi:10.1037/a0021882",
-          "year": 2010,
-          "title": "Harming high performers: A social comparison perspective on interpersonal harming in work teams.",
-          "staffIds": [
-            "GVV"
-          ],
-          "authors": [
             "Xu Huang"
           ]
         },
@@ -13401,7 +13420,7 @@
         {
           "id": "doi:10.1027/1864-9335/a000359",
           "year": 2019,
-          "title": "You Can Leave Your Glasses on",
+          "title": "You Can Leave Your Glasses on: Glasses Can Increase Electoral Success",
           "staffIds": [
             "JS"
           ],
@@ -14625,7 +14644,7 @@
         {
           "id": "doi:10.1177/0001839212441928",
           "year": 2011,
-          "title": "Something to Lose and Nothing to Gain",
+          "title": "Something to Lose and Nothing to Gain: The Role of Stress in the Interactive Effect of Power and Stability on Risk Taking",
           "staffIds": [
             "JJ"
           ],
@@ -15320,6 +15339,21 @@
           ]
         },
         {
+          "id": "doi:10.1037/ocp0000037",
+          "year": 2017,
+          "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
+          "staffIds": [
+            "JDB"
+          ],
+          "authors": [
+            "Ulla Kinnunen",
+            "Taru Feldt",
+            "Marjaana Sianoja",
+            "Kalevi Korpela",
+            "Sabine A. E. Geurts"
+          ]
+        },
+        {
           "id": "doi:10.1080/02678373.2017.1303761",
           "year": 2017,
           "title": "Rumination for innovation? Analysing the longitudinal effects of work-related rumination on creativity at work and off-job recovery",
@@ -15339,21 +15373,6 @@
           ],
           "authors": [
             "Saija Mauno"
-          ]
-        },
-        {
-          "id": "doi:10.1037/ocp0000037",
-          "year": 2016,
-          "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
-          "staffIds": [
-            "JDB"
-          ],
-          "authors": [
-            "Ulla Kinnunen",
-            "Taru Feldt",
-            "Marjaana Sianoja",
-            "Kalevi Korpela",
-            "Sabine A. E. Geurts"
           ]
         },
         {
@@ -15550,7 +15569,7 @@
         {
           "id": "doi:10.1177/1059601108331239",
           "year": 2009,
-          "title": "Valuing Skill Differences",
+          "title": "Valuing Skill Differences: Perceived Skill Complementarity and Dyadic Helping Behavior in Teams",
           "staffIds": [
             "GVV"
           ],
@@ -15560,7 +15579,7 @@
         },
         {
           "id": "doi:10.1348/096317908x342909",
-          "year": 2008,
+          "year": 2009,
           "title": "What's the difference? Insider perspectives on the importance, content, and meaning of interpersonal differences",
           "staffIds": [
             "GVV"
@@ -16427,7 +16446,7 @@
         {
           "id": "doi:10.1026/0033-3042/a000627",
           "year": 2023,
-          "title": "Paradigmen der psychologischen Resilienzforschung",
+          "title": "Paradigmen der psychologischen Resilienzforschung: Eine kleine Inventur und ein Ausblick",
           "staffIds": [
             "MA"
           ],
@@ -16537,7 +16556,7 @@
         {
           "id": "doi:10.1026/0033-3042/a000627",
           "year": 2023,
-          "title": "Paradigmen der psychologischen Resilienzforschung",
+          "title": "Paradigmen der psychologischen Resilienzforschung: Eine kleine Inventur und ein Ausblick",
           "staffIds": [
             "MA"
           ],
@@ -18491,7 +18510,7 @@
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -18928,7 +18947,7 @@
         },
         {
           "id": "doi:10.1037/a0021882",
-          "year": 2010,
+          "year": 2011,
           "title": "Harming high performers: A social comparison perspective on interpersonal harming in work teams.",
           "staffIds": [
             "GVV"
@@ -22081,9 +22100,9 @@
           ]
         },
         {
-          "id": "doi:10.1080/02678373.2017.1367736",
+          "id": "doi:10.1037/ocp0000083",
           "year": 2018,
-          "title": "Share, like, twitter, and connect: Ecological momentary assessment to examine the relationship between non-work social media use at work and work engagement",
+          "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
           "staffIds": [
             "JDB"
           ],
@@ -22092,9 +22111,9 @@
           ]
         },
         {
-          "id": "doi:10.1037/ocp0000083",
-          "year": 2017,
-          "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
+          "id": "doi:10.1080/02678373.2017.1367736",
+          "year": 2018,
+          "title": "Share, like, twitter, and connect: Ecological momentary assessment to examine the relationship between non-work social media use at work and work engagement",
           "staffIds": [
             "JDB"
           ],
@@ -22775,6 +22794,18 @@
           ]
         },
         {
+          "id": "doi:10.1348/096317910x516372",
+          "year": 2011,
+          "title": "Feedback type as a moderator of the relationship between achievement goals and feedback reactions",
+          "staffIds": [
+            "OJ"
+          ],
+          "authors": [
+            "Frederik Anseel",
+            "Wouter Duyck"
+          ]
+        },
+        {
           "id": "doi:10.1007/s10551-011-1005-8",
           "year": 2011,
           "title": "Perverse Effects of Other-Referenced Performance Goals in an Information Exchange Context",
@@ -22783,18 +22814,6 @@
           ],
           "authors": [
             "Frederik Anseel"
-          ]
-        },
-        {
-          "id": "doi:10.1348/096317910x516372",
-          "year": 2010,
-          "title": "Feedback type as a moderator of the relationship between achievement goals and feedback reactions",
-          "staffIds": [
-            "OJ"
-          ],
-          "authors": [
-            "Frederik Anseel",
-            "Wouter Duyck"
           ]
         }
       ]
@@ -23463,7 +23482,7 @@
         {
           "id": "doi:10.1177/0149206311398136",
           "year": 2011,
-          "title": "Someone to Look Up To",
+          "title": "Someone to Look Up To: Executive–Follower Ethical Reasoning and Perceptions of Ethical Leadership",
           "staffIds": [
             "JJ"
           ],
@@ -23651,7 +23670,7 @@
         {
           "id": "doi:10.1002/ijop.12761",
           "year": 2022,
-          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus ( COVID ‐19) pandemic",
+          "title": "Being an accountant, cook, entertainer and teacher—all at the same time: Changes in employees' work and work‐related well‐being during the coronavirus (COVID ‐19) pandemic",
           "staffIds": [
             "JDB"
           ],
@@ -28001,7 +28020,7 @@
         },
         {
           "id": "doi:10.1037/ocp0000083",
-          "year": 2017,
+          "year": 2018,
           "title": "Enhancing daily well-being at work through lunchtime park walks and relaxation exercises: Recovery experiences as mediators.",
           "staffIds": [
             "JDB"
@@ -29838,7 +29857,7 @@
         {
           "id": "doi:10.1177/0190272513518803",
           "year": 2014,
-          "title": "The Detrimental Effects of Sanctions on Intragroup Trust",
+          "title": "The Detrimental Effects of Sanctions on Intragroup Trust: Comparing Punishments and Rewards",
           "staffIds": [
             "LM"
           ],
@@ -31342,7 +31361,7 @@
         {
           "id": "doi:10.1177/0190272513518803",
           "year": 2014,
-          "title": "The Detrimental Effects of Sanctions on Intragroup Trust",
+          "title": "The Detrimental Effects of Sanctions on Intragroup Trust: Comparing Punishments and Rewards",
           "staffIds": [
             "LM"
           ],
@@ -32620,7 +32639,7 @@
         {
           "id": "doi:10.1177/0149206311398136",
           "year": 2011,
-          "title": "Someone to Look Up To",
+          "title": "Someone to Look Up To: Executive–Follower Ethical Reasoning and Perceptions of Ethical Leadership",
           "staffIds": [
             "JJ"
           ],
@@ -32646,7 +32665,7 @@
         {
           "id": "doi:10.1177/0149206311398136",
           "year": 2011,
-          "title": "Someone to Look Up To",
+          "title": "Someone to Look Up To: Executive–Follower Ethical Reasoning and Perceptions of Ethical Leadership",
           "staffIds": [
             "JJ"
           ],
@@ -35736,7 +35755,7 @@
         {
           "id": "doi:10.1177/0001839212441928",
           "year": 2011,
-          "title": "Something to Lose and Nothing to Gain",
+          "title": "Something to Lose and Nothing to Gain: The Role of Stress in the Interactive Effect of Power and Stability on Risk Taking",
           "staffIds": [
             "JJ"
           ],
@@ -37529,7 +37548,7 @@
         {
           "id": "doi:10.1097/jom.0000000000000475",
           "year": 2015,
-          "title": "Recovery Processes During and After Work",
+          "title": "Recovery Processes During and After Work: Associations With Health, Work Engagement, and Job Performance",
           "staffIds": [
             "JDB"
           ],
@@ -37965,7 +37984,7 @@
       "publications": [
         {
           "id": "doi:10.1037/ocp0000037",
-          "year": 2016,
+          "year": 2017,
           "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
           "staffIds": [
             "JDB"
@@ -37999,7 +38018,7 @@
       "publications": [
         {
           "id": "doi:10.1037/ocp0000037",
-          "year": 2016,
+          "year": 2017,
           "title": "Linking boundary crossing from work to nonwork to work-related rumination across time: A variable- and person-oriented approach.",
           "staffIds": [
             "JDB"
